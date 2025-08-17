@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-iosxr-scp-inject-QwZOCv2",
+  "title": "Cisco IOS XR Software Arbitrary File Read and Write Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2021-09-08T16:00:00.000+0000",
+  "lastPublished": "2022-02-18T14:38:20.283+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-scp-inject-QwZOCv2",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-88",
+  "erpPubIds": "ERP-74637",
+  "cve": "CVE-2021-34718",
+  "ciscoBugId": "CSCvx48017",
+  "status": "",
+  "summary": "A vulnerability in the SSH Server process of Cisco&nbsp;IOS XR Software could allow an authenticated, remote attacker to overwrite and read arbitrary files on the local device.This vulnerability is due to insufficient input validation of arguments that are supplied by the user for a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September  2021 Semiannual Cisco IOS XR  Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74637&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

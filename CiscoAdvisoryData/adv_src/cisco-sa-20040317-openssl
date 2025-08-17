@@ -1,0 +1,42 @@
+{
+  "identifier": "cisco-sa-20040317-openssl",
+  "title": "Cisco OpenSSL Implementation Vulnerability",
+  "version": "1.6",
+  "firstPublished": "2004-03-17T13:00:00.000+0000",
+  "lastPublished": "2004-03-17T13:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040317-openssl",
+  "cwe": "CWE-399",
+  "erpPubIds": "7396",
+  "cve": "CVE-2004-0079,CVE-2004-0081,CVE-2004-0112",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   A new vulnerability in the OpenSSL implementation for SSL has been announced on March 17, 2004.   An affected network device ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL Multiple Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=7396&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "OpenSSL  SSL OR TLS Malformed Handshake DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5403&signatureSubId=0&releaseVersion=S790&softwareVersion=6.0"
+        },
+        {
+          "name": "OpenSSL SSL/TLS Malformed Handshake DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5403&signatureSubId=1&releaseVersion=S404&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20120229-cucm",
+  "title": "Cisco Unified Communications Manager Skinny Client Control Protocol Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2012-02-29T16:00:00.000+0000",
+  "lastPublished": "2012-04-02T14:07:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-cucm",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "Cisco-SA-20120229-CVE-2011-4487,25246,cisco-amb-20120229-cucm",
+  "cve": "CVE-2011-4486,CVE-2011-4487",
+  "ciscoBugId": "CSCtu73538",
+  "status": "",
+  "summary": "Cisco Unified Communications Manager devices may allow a remote, unauthenticated attacker with the ability to send crafted Skinny Client Control Protocol (SCCP) messages to an affected ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager SCCP Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25246&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager Skinny Client Control Protocol Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-cucm"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Device Registration SQL Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20120229-CVE-2011-4487"
+        }
+      ]
+    }
+  ]
+}

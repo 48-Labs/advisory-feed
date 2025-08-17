@@ -1,0 +1,46 @@
+{
+  "identifier": "cisco-sa-20100922-cucmsip",
+  "title": "Cisco Unified Communications Manager Session Initiation Protocol Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2010-09-22T16:00:00.000+0000",
+  "lastPublished": "2010-09-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100922-cucmsip",
+  "erpPubIds": "cisco-sa-20100922-sip,cisco-amb-20100922-voice,21382",
+  "cve": "CVE-2010-2834,CVE-2010-2835",
+  "ciscoBugId": "CSCta20040,CSCtf72678",
+  "status": "",
+  "summary": "Cisco Unified Communications Manager contains two denial of service (DoS) vulnerabilities that affect the processing of Session Initiation Protocol (SIP) messages. Exploitation of these vulnerabilities could cause an interruption of voice services.   To address these ",
+  "totalCount": 3,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Unified Communications Manager Session Initiation Protocol Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21382&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Voice Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100922-voice"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100922-sip"
+        }
+      ]
+    }
+  ]
+}

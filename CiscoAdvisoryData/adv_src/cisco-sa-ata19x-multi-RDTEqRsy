@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-ata19x-multi-RDTEqRsy",
+  "title": "Cisco ATA 190 Series Analog Telephone Adapter Firmware Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2024-10-16T16:00:00.000+0000",
+  "lastPublished": "2024-10-24T11:47:37.450+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ata19x-multi-RDTEqRsy",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-250, CWE-257, CWE-305, CWE-352, CWE-78, CWE-80",
+  "cve": "CVE-2024-20420,CVE-2024-20421,CVE-2024-20458,CVE-2024-20459,CVE-2024-20460,CVE-2024-20461,CVE-2024-20462,CVE-2024-20463",
+  "ciscoBugId": "CSCwf28037,CSCwf28041,CSCwf28048,CSCwf28097,CSCwf28102,CSCwf28188,CSCwf28191,CSCwf28345,CSCwf28348,CSCwf28378,CSCwf28398,CSCwf28421,CSCwf28426,CSCwf28499,CSCwf30963",
+  "status": "",
+  "summary": "Multiple vulnerabilities in Cisco ATA 190 Series Analog Telephone Adapter firmware, both on-premises and multiplatform, could allow a remote attacker to delete or change the configuration, execute commands as the root user, conduct a cross-site scripting (XSS) attack ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

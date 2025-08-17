@@ -1,0 +1,33 @@
+{
+  "identifier": "cisco-sa-20010227-ios-snmp-ilmi",
+  "title": "Cisco IOS Software SNMP Read-Write ILMI Community String Vulnerability",
+  "version": "1.5",
+  "firstPublished": "2001-02-27T09:00:00.000+0000",
+  "lastPublished": "2001-02-27T09:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20010227-ios-snmp-ilmi",
+  "status": "",
+  "summary": "   Cisco IOS&reg; Software releases based on versions 11.x and 12.0 contain a defect that allows a limited number of SNMP objects to be viewed and modified without authorization using a undocumented ILMI community string. Some of the modifiable objects are confined to the MIB-II system ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Embedded SNMP Community Names",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4500&signatureSubId=0&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS Embedded SNMP Community Names",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4500&signatureSubId=1&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP IOS Configuration Retrieval",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4504&signatureSubId=0&releaseVersion=S453&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

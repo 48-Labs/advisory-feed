@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20110126-csg2",
+  "title": "Cisco Content Services Gateway Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2011-01-26T16:00:00.000+0000",
+  "lastPublished": "2011-01-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110126-csg2",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "22259,22260",
+  "cve": "CVE-2011-0348,CVE-2011-0349,CVE-2011-0350",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "A service policy bypass vulnerability exists in the Cisco Content Services Gateway - Second Generation (CSG2), which runs on the Cisco Service and Application Module for IP (SAMI). Under certain configurations this vulnerability could allow:       Customers to access sites ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Content Services Gateway Second Generation Service Policy Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22259&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Content Services Gateway Second Generation TCP Packet Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22260&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "TCP Drop - Bad Option Length",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1330&signatureSubId=4&releaseVersion=S739&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

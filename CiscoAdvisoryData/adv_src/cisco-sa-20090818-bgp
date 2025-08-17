@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20090818-bgp",
+  "title": "Cisco IOS XR Software Border Gateway Protocol Vulnerabilities",
+  "version": "2.6",
+  "firstPublished": "2009-08-18T15:00:00.000+0000",
+  "lastPublished": "2009-08-18T15:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090818-bgp",
+  "severity": "Medium",
+  "cwe": "CWE-399",
+  "erpPubIds": "18866,18906,18907",
+  "cve": "CVE-2009-1154,CVE-2009-2055,CVE-2009-2056",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco IOS XR Software contains multiple vulnerabilities in the Border Gateway Protocol (BGP) feature. These vulnerabilities include:        Cisco IOS XR Software will reset a BGP peering session when receivinga specific invalid BGP update.  The vulnerability ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS XR Software Invalid BGP Update Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18866&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS XR BGP Long Update Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18906&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS XR Software Border Gateway Protocol Configuration Denial of Service Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18907&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

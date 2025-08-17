@@ -1,0 +1,67 @@
+{
+  "identifier": "cisco-sa-20191016-sbss-csrf",
+  "title": "Cisco Small Business Smart and Managed Switches Cross-Site Request Forgery Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2019-10-16T16:00:00.000+0000",
+  "lastPublished": "2020-01-27T14:22:59.247+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20191016-sbss-csrf",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-352",
+  "cve": "CVE-2019-12636",
+  "ciscoBugId": "CSCvo26471,CSCvp35677",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Small Business Smart and Managed Switches could allow an unauthenticated, remote attacker to conduct a cross-site request forgery (CSRF) attack on an affected system.The vulnerability is due to insufficient CSRF ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "51900",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51901",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51902",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51903",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51904",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51905",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51906",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51907",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Small Business Smart and Managed Switches Cross-Site Request Forgery",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8357&signatureSubId=0&releaseVersion=S1034&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

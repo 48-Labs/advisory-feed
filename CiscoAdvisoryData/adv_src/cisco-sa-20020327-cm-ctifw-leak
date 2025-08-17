@@ -1,0 +1,29 @@
+{
+  "identifier": "cisco-sa-20020327-cm-ctifw-leak",
+  "title": "LDAP Connection Leak in CTI when User Authentication Fails",
+  "version": "1.1",
+  "firstPublished": "2002-03-27T17:00:00.000+0000",
+  "lastPublished": "2002-03-27T17:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020327-cm-ctifw-leak",
+  "cwe": "CWE-399",
+  "erpPubIds": "3527",
+  "cve": "CVE-2002-0505",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   The Cisco CallManager, running certain software releases, has a vulnerability wherein a memory leak in the CTI Framework authentication can cause the server to crash and result in a reload. This vulnerability can be exploited to initiate a denial of service (DoS) attack.    ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco CallManager LDAP Connection Memory Leak Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=3527&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

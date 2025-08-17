@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20200122-uc-xss",
+  "title": "Cisco Unity Connection Stored Cross-Site Scripting Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2020-01-22T16:00:00.000+0000",
+  "lastPublished": "2020-01-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200122-uc-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2020-3129",
+  "ciscoBugId": "CSCvq97490",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Unity Connection Software could allow an authenticated, remote attacker to perform a stored cross-site scripting (XSS) attack.The vulnerability is due to insufficient input validation by the web-based management ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "identifier": "cisco-sa-20120711-ctsman",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence Manager",
+  "version": "1.0",
+  "firstPublished": "2012-07-11T16:00:00.000+0000",
+  "lastPublished": "2012-07-11T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctsman",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "cisco-sa-20120711-cts,cisco-sa-20120711-ctrs,26341,26342,cisco-sa-20120711-ctms",
+  "cve": "CVE-2012-2486,CVE-2012-3073",
+  "ciscoBugId": "CSCti21830,CSCti21851,CSCtj19078,CSCtj19086,CSCtj19100,CSCty11219,CSCty11299,CSCty11323,CSCty11338,CSCtz40941,CSCtz40947,CSCtz40953,CSCtz40965",
+  "status": "",
+  "summary": "Cisco TelePresence Manager contains the following vulnerabilities:     Cisco TelePresence Malformed IP Packets Denial of Service Vulnerability    Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability Exploitation of the Cisco ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence Manager, Multipoint Switch, and Recording Server Crafted TCP/IP Traffic Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26341&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence Multipoint Switch Cisco Discovery Protocol Remote Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26342&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Multiple Vulnerabilities in Cisco TelePresence Immersive Endpoint Devices",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts"
+        },
+        {
+          "name": "Multiple Vulnerabilities in Cisco TelePresence Recording Server",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctrs"
+        },
+        {
+          "name": "Multiple Vulnerabilities in Cisco TelePresence Multipoint Switch",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctms"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=5.1"
+        },
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMP Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2152&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Queso Sweep",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3045&signatureSubId=0&releaseVersion=S507&softwareVersion=6.0"
+        },
+        {
+          "name": "Half-open SYN Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3050&signatureSubId=0&releaseVersion=S774&softwareVersion=6.0"
+        },
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

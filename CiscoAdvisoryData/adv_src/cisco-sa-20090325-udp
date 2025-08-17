@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20090325-udp",
+  "title": "Cisco IOS Software Multiple Features Crafted UDP Packet Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2009-03-25T16:00:00.000+0000",
+  "lastPublished": "2009-03-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090325-udp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "17765,cisco-amb-20090325-sip-and-udp",
+  "cve": "CVE-2009-0631",
+  "ciscoBugId": "CSCsk64158",
+  "status": "",
+  "summary": "Several features within Cisco IOS Software are affected by a craftedUDP packet vulnerability. If any of the affected features are enabled, asuccessful attack will result in a blocked input queue on the inboundinterface. Only crafted UDP packets destined for the device could result in ",
+  "totalCount": 8,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software UDP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17765&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS Software Session Initiation Protocol and Crafted UDP Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090325-sip-and-udp"
+        }
+      ]
+    }
+  ]
+}

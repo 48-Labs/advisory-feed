@@ -1,0 +1,65 @@
+{
+  "identifier": "cisco-sa-20160817-asa-cli",
+  "title": "Cisco Adaptive Security Appliance CLI Remote Code Execution Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2016-08-17T18:45:00.000+0000",
+  "lastPublished": "2016-08-18T21:12:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160817-asa-cli",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-119",
+  "erpPubIds": "ERP-56516",
+  "cve": "CVE-2016-6367",
+  "ciscoBugId": "CSCtu74257",
+  "status": "",
+  "summary": "A vulnerability in the command-line interface (CLI) parser of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, local attacker to create a denial of service (DoS) condition or potentially execute arbitrary code. An attacker could exploit this vulnerability by invoking ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "39983",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39984",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39985",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39986",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39987",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Cisco ASA and IOS Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-56516&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Adaptive Security Appliance CLI Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7744&signatureSubId=0&releaseVersion=S952&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

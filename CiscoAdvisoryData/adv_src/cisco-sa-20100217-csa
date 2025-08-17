@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20100217-csa",
+  "title": "Multiple Vulnerabilities in Cisco Security Agent",
+  "version": "1.2",
+  "firstPublished": "2010-02-17T16:00:00.000+0000",
+  "lastPublished": "2010-02-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100217-csa",
+  "severity": "Critical",
+  "cwe": "CWE-22, CWE-399, CWE-94",
+  "erpPubIds": "19911,19912,19913,cisco-amb-20100217-csa",
+  "cve": "CVE-2010-0146,CVE-2010-0147,CVE-2010-0148",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The Management Center for Cisco Security Agents is affected by a directory traversal vulnerability and a SQL injection vulnerability. Successful exploitation of the directory traversal vulnerability may allow an authenticated attacker to view and download arbitrary files from the server hosting ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Security Agent Remote Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19911&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Security Agent Remote SQL Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19912&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Security Agent Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19913&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Security Agent",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100217-csa"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "WWW Directory Traversal ../..",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3216&signatureSubId=0&releaseVersion=S2&softwareVersion=5.1"
+        },
+        {
+          "name": "WWW Directory Traversal ../..",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3216&signatureSubId=0&releaseVersion=S2&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

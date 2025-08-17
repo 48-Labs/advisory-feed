@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180620-nx-os-api-execution",
+  "title": "Cisco NX-OS Software NX-API Arbitrary Command Execution Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2018-06-20T16:00:00.000+0000",
+  "lastPublished": "2018-07-05T21:11:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180620-nx-os-api-execution",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-74",
+  "erpPubIds": "ERP-67770",
+  "cve": "CVE-2018-0313",
+  "ciscoBugId": "CSCvd47415,CSCve03216,CSCve03224,CSCve03234",
+  "status": "",
+  "summary": "A vulnerability in the NX-API feature of Cisco NX-OS Software could allow an authenticated, remote attacker to send a malicious packet to the management interface on an affected system and execute a command-injection exploit. The vulnerability is due to incorrect input ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: June 2018 Cisco FXOS and NX-OS Software Security Advisory Collection",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-67770&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco NX-OS Software NX-API Arbitrary Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8238&signatureSubId=0&releaseVersion=S1020&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

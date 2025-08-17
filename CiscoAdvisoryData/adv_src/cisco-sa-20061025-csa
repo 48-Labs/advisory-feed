@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20061025-csa",
+  "title": "Cisco Security Agent for Linux Port Scan Denial of Service",
+  "version": "1.0",
+  "firstPublished": "2006-10-25T16:00:00.000+0000",
+  "lastPublished": "2006-10-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20061025-csa",
+  "severity": "Low",
+  "cwe": "CWE-399",
+  "erpPubIds": "11968,cisco-amb-20061101-csa",
+  "cve": "CVE-2006-5553",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Security Agent (CSA) for Linux contains a denial of service vulnerability involving port scans. By performing a port scan against a system running a vulnerable version of CSA, it is possible to cause the system to become unresponsive. Cisco Unified CallManager (CUCM) and Cisco ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Security Agent for Linux Network Port Scan Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11968&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the CSA for Linux DoS Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20061101-csa"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "TCP SYN Port Sweep",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3002&signatureSubId=0&releaseVersion=S630&softwareVersion=6.0"
+        },
+        {
+          "name": "Nmap UDP Port Sweep",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4003&signatureSubId=0&releaseVersion=S423&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

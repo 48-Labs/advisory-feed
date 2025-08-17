@@ -1,0 +1,76 @@
+{
+  "identifier": "cisco-sa-20100804-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances",
+  "version": "1.0",
+  "firstPublished": "2010-08-04T16:00:00.000+0000",
+  "lastPublished": "2010-08-04T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100804-asa",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "20997,20998,20999,21000,cisco-amb-20100804-asa",
+  "cve": "CVE-2010-1578,CVE-2010-1579,CVE-2010-1580,CVE-2010-1581,CVE-2010-2814,CVE-2010-2815,CVE-2010-2816,CVE-2010-2817",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco ASA 5500 Series Adaptive Security Appliances are affected by multiple vulnerabilities as follows:                                    Three SunRPC Inspection Denial of Service Vulnerabilities                                        Three Transport Layer ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Adaptive Security Appliance Software SunRPC Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20997&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware Transport Layer Security Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20998&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware Session Initiation Protocol Network Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20999&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware Internet Key Exchange Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21000&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100804-asa"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA RPC Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24120&signatureSubId=0&releaseVersion=S778&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA RPC Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24140&signatureSubId=0&releaseVersion=S778&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA RPC Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24159&signatureSubId=0&releaseVersion=S778&softwareVersion=6.0"
+        },
+        {
+          "name": "Crafted IKE Message Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=27219&signatureSubId=0&releaseVersion=S779&softwareVersion=6.0"
+        },
+        {
+          "name": "SIP Inspection Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=28139&signatureSubId=0&releaseVersion=S803&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

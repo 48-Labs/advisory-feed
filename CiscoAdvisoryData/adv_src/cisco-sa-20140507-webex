@@ -1,0 +1,67 @@
+{
+  "identifier": "cisco-sa-20140507-webex",
+  "title": "Multiple Vulnerabilities in the Cisco WebEx Recording Format and Advanced Recording Format Players",
+  "version": "1.0",
+  "firstPublished": "2014-05-07T16:00:00.000+0000",
+  "lastPublished": "2014-05-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140507-webex",
+  "severity": "Critical",
+  "cwe": "CWE-20",
+  "erpPubIds": "34033,34032,34031,34030,34029",
+  "cve": "CVE-2014-2132,CVE-2014-2133,CVE-2014-2134,CVE-2014-2135,CVE-2014-2136",
+  "ciscoBugId": "CSCuc39458,CSCuh52768,CSCui72223,CSCuj07603,CSCuj87565,CSCul01163,CSCul01166,CSCul87216",
+  "status": "",
+  "summary": "Multiple buffer overflow vulnerabilities exist in the Cisco WebEx Recording Format (WRF) and Advanced Recording Format (ARF) Players. Exploitation of these vulnerabilities could allow a remote attacker to cause an affected player to crash and, in some cases, could allow a remote attacker to execute ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco WebEx ARF Player Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34033&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx ARF Player Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34032&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx Player WRF File Audio Channel Parsing Heap Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34031&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx ARF Player LZW Decompress Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34030&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx WRF and ARF Players Out-of-Bounds Memory Read Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34029&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Webex Player Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4299&signatureSubId=0&releaseVersion=S795&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Webex WRF and ARF Player Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4300&signatureSubId=0&releaseVersion=S795&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Webex WRF Player Memory Corruption Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4302&signatureSubId=0&releaseVersion=S795&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx ARF Player Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4306&signatureSubId=0&releaseVersion=S795&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

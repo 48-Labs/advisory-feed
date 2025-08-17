@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers Command Injection Vulnerabilities</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-sb-rv32x-cmdinject-cKQsZpxL</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2023-04-05T15:47:18</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2023-04-05T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2023-04-05T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Multiple vulnerabilities in the web-based management interface of Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers could allow an authenticated, remote attacker to inject and execute arbitrary commands on the underlying operating system of an affected device.
+
+These vulnerabilities are due to insufficient validation of user-supplied input. An attacker could exploit these vulnerabilities by sending malicious input to an affected device. A successful exploit could allow the attacker to execute arbitrary commands as the root user on the underlying Linux operating system of the affected device. To exploit these vulnerabilities, an attacker would need to have valid Administrator credentials on the affected device.
+
+Cisco has not released software updates to address these vulnerabilities. There are no workarounds that address these vulnerabilities.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-rv32x-cmdinject-cKQsZpxL ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-rv32x-cmdinject-cKQsZpxL"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">These vulnerabilities affect Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by these vulnerabilities.
+
+Cisco has confirmed that these vulnerabilities do not affect the following Cisco Small Business Routers:
+RV016 Multi-WAN VPN Routers
+RV042 Dual WAN VPN Routers
+RV042G Dual Gigabit WAN VPN Routers
+RV082 Dual WAN VPN Routers
+RV160 VPN Routers
+RV160W Wireless-AC VPN Routers
+RV260 VPN Routers
+RV260P VPN Routers with PoE
+RV260W Wireless-AC VPN Routers
+RV340 Dual WAN Gigabit VPN Routers
+RV340W Dual WAN Gigabit Wireless-AC VPN Routers
+RV345 Dual WAN Gigabit VPN Routers
+RV345P Dual WAN Gigabit PoE VPN Routers</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address these vulnerabilities.
+
+If the Remote Management feature is enabled, Cisco recommends disabling it to reduce exposure to these vulnerabilities. The feature is disabled by default.
+
+To determine the setting of the Remote Management feature, choose Firewall &gt; General and review the status of the Remote Management check box. If Remote Management is enabled, uncheck the check box. This will disable the web-based management interface on the WAN IP address, which is reachable through the WAN ports to the internet. The web-based management interface will continue to be available on the LAN IP address, which is reachable through the LAN ports.
+
+While this mitigation has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco has not released and will not release software updates to address the vulnerabilities described in this advisory.
+
+Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers have entered the end-of-life process. Customers are advised to refer to the end-of-life notices for these products:
+
+End-of-Sale and End-of-Life Announcement for the Cisco RV320 and RV325 Dual Gigabit WAN VPN Router ["https://www.cisco.com/c/en/us/products/collateral/routers/small-business-rv-series-routers/eos-eol-notice-c51-743069.html"]
+
+When considering a device migration, customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the new products will be sufficient for their network needs, that the new devices contain sufficient memory, and that current hardware and software configurations will continue to be supported properly by the new product. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank Wu Yuze and Wang Jincheng for reporting CVE-2023-20117.
+
+Cisco would like to thank Wang Jincheng from X1cT34m Laboratory of Nanjing University of Posts and Telecommunications for reporting CVE-2023-20128.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-rv32x-cmdinject-cKQsZpxL</cvrf:URL>
+      <cvrf:Description>Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers Command Injection Vulnerabilities</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Small Business RV Series Router Firmware" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-183630">Cisco Small Business RV Series Router Firmware </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers Command Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwe57193</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwe57193</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-20117</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-183630</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>7.2</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address these vulnerabilities.
+
+If the Remote Management feature is enabled, Cisco recommends disabling it to reduce exposure to these vulnerabilities. The feature is disabled by default.
+
+To determine the setting of the Remote Management feature, choose Firewall &gt; General and review the status of the Remote Management check box. If Remote Management is enabled, uncheck the check box. This will disable the web-based management interface on the WAN IP address, which is reachable through the WAN ports to the internet. The web-based management interface will continue to be available on the LAN IP address, which is reachable through the LAN ports.
+
+While this mitigation has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-rv32x-cmdinject-cKQsZpxL</URL>
+        <Description>Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers Command Injection Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers Command Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwe63677</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwe63677</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-20128</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-183630</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>6.5</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address these vulnerabilities.
+
+If the Remote Management feature is enabled, Cisco recommends disabling it to reduce exposure to these vulnerabilities. The feature is disabled by default.
+
+To determine the setting of the Remote Management feature, choose Firewall &gt; General and review the status of the Remote Management check box. If Remote Management is enabled, uncheck the check box. This will disable the web-based management interface on the WAN IP address, which is reachable through the WAN ports to the internet. The web-based management interface will continue to be available on the LAN IP address, which is reachable through the LAN ports.
+
+While this mitigation has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-rv32x-cmdinject-cKQsZpxL</URL>
+        <Description>Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers Command Injection Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20150710-openssl",
+  "title": "OpenSSL Alternative Chains Certificate Forgery Vulnerability (July 2015) Affecting Cisco Products",
+  "version": "1.23",
+  "firstPublished": "2015-07-10T16:00:00.000+0000",
+  "lastPublished": "2015-09-16T16:54:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150710-openssl",
+  "severity": "Medium",
+  "cwe": null,
+  "erpPubIds": "39851",
+  "cve": "CVE-2015-1793",
+  "ciscoBugId": "CSCuu82763,CSCuv26099,CSCuv26109,CSCuv26150,CSCuv26164,CSCuv26167,CSCuv26168,CSCuv26172,CSCuv26183,CSCuv26185,CSCuv26209,CSCuv26213,CSCuv26243,CSCuv26259,CSCuv26279,CSCuv26283,CSCuv26293,CSCuv26303,CSCuv26316,CSCuv26844,CSCuv33644,CSCuv46148",
+  "status": "",
+  "summary": "On July 9, 2015, the OpenSSL Project released a security advisory detailing a vulnerability affecting applications that verify certificates, including SSL/Transport Layer Security (TLS)/Datagram Transport Layer Security (DTLS) clients and SSL/TLS/DTLS servers using client authentication.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL Alternative Chains Certificate Forgery Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=39851&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "35111",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "35307",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

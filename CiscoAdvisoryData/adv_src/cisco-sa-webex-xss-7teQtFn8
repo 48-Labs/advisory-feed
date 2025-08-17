@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-webex-xss-7teQtFn8",
+  "title": "Cisco Webex Services Cross-Site Scripting Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2025-05-21T16:00:00.000+0000",
+  "lastPublished": "2025-05-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-webex-xss-7teQtFn8",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "cve": "CVE-2025-20246,CVE-2025-20247,CVE-2025-20250",
+  "ciscoBugId": "CSCwo64686,CSCwo64795,CSCwo64799",
+  "status": "New",
+  "summary": "Multiple vulnerabilities in Cisco Webex could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack.These vulnerabilities are due to improper filtering of user-supplied input. An attacker could exploit these vulnerabilities by persuading a user to ",
+  "totalCount": 5079,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

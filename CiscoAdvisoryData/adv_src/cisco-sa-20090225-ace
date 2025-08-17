@@ -1,0 +1,72 @@
+{
+  "identifier": "cisco-sa-20090225-ace",
+  "title": "Multiple Vulnerabilities in the Cisco ACE Application Control Engine Module and Cisco ACE 4710 Application Control Engine",
+  "version": "1.1",
+  "firstPublished": "2009-02-25T16:00:00.000+0000",
+  "lastPublished": "2009-02-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090225-ace",
+  "severity": "Critical",
+  "cwe": "CWE-264, CWE-399",
+  "erpPubIds": "17641,17642,17643,17644,17645,17646,cisco-amb-20090225-ace",
+  "cve": "CVE-2009-0620,CVE-2009-0621,CVE-2009-0622,CVE-2009-0623,CVE-2009-0624,CVE-2009-0625",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The Cisco ACE Application Control Engine Module and Cisco ACE 4710 Application Control Engine contain multiple vulnerabilities that, if exploited, can result in any of the following impacts:      Administrative level access via default user names andpasswords    ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Application Control Engine Appliance and Application Control Engine Module Default Credential Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17641&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Control Engine Appliance Device Manager Default Credentials Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17642&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Control Engine Module and Application Control Engine Appliance Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17643&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Control Engine Module and Appliance Processing SSH Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17644&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Control Engine Module and Appliance Processing SNMPv2 Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17645&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Control Engine Module and Appliance Processing SNMPv3 Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17646&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in the Cisco ACE Application Control Engine Module and Cisco ACE 4710 Application Control Engine",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090225-ace"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ACE Crafted SSH Packet Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=15634&signatureSubId=0&releaseVersion=S797&softwareVersion=6.0"
+        },
+        {
+          "name": "Crafted SNMPv3 packet may crash ACE appliance",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=15653&signatureSubId=0&releaseVersion=S758&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

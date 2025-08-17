@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20170201-prime-home",
+  "title": "Cisco Prime Home Authentication Bypass Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-02-01T16:00:00.000+0000",
+  "lastPublished": "2017-02-01T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170201-prime-home",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-287",
+  "cve": "CVE-2017-3791",
+  "ciscoBugId": "CSCvb49837",
+  "status": "",
+  "summary": "A vulnerability in the web-based GUI of Cisco Prime Home could allow an unauthenticated, remote attacker to bypass authentication and execute actions with administrator privileges.&nbsp;The vulnerability is due to a processing error in the role-based access control (RBAC) ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "41487",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-02-01-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Prime Home Authentication Bypass",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7825&signatureSubId=0&releaseVersion=S964&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

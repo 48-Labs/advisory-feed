@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20120229-wlc",
+  "title": "Multiple Vulnerabilities in Cisco Wireless LAN Controllers",
+  "version": "1.2",
+  "firstPublished": "2012-02-29T16:00:00.000+0000",
+  "lastPublished": "2012-03-16T20:46:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-wlc",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "25248,25249,25250,25251,cisco-amb-20120229-wlc",
+  "cve": "CVE-2012-0368,CVE-2012-0369,CVE-2012-0370,CVE-2012-0371",
+  "ciscoBugId": "CSCts81997,CSCtt07949,CSCtt47435,CSCtu56709",
+  "status": "",
+  "summary": "The Cisco Wireless LAN Controller (WLC) product family is affected by the following vulnerabilities:    Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability    Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability    Cisco ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controllers HTTP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25248&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controllers IPv6 Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25249&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controllers WebAuth Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25250&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controllers Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25251&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Wireless LAN Controllers",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120229-wlc"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controller DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=41446&signatureSubId=0&releaseVersion=S629&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

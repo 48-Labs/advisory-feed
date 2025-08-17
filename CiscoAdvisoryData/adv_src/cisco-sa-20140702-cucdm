@@ -1,0 +1,56 @@
+{
+  "identifier": "cisco-sa-20140702-cucdm",
+  "title": "Multiple Vulnerabilities in Cisco Unified Communications Domain Manager",
+  "version": "3.0",
+  "firstPublished": "2014-07-02T16:00:00.000+0000",
+  "lastPublished": "2014-10-13T15:55:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140702-cucdm",
+  "severity": "Critical",
+  "cwe": "CWE-255, CWE-264",
+  "erpPubIds": "34792,34791,34790,34689",
+  "cve": "CVE-2014-2197,CVE-2014-2198,CVE-2014-3300",
+  "ciscoBugId": "CSCud41130,CSCum77041,CSCun49862",
+  "status": "",
+  "summary": "Cisco Unified Communications Domain Manager (Cisco Unified CDM) is affected by the following vulnerabilities:    Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability    Cisco Unified Communications Domain Manager Default SSH Key Vulnerability ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34792&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Domain Manager Default SSH Key Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34791&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34790&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Unified Communications Domain Manager",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Domain Manager Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4462&signatureSubId=0&releaseVersion=S809&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

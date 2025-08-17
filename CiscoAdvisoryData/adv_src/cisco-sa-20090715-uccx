@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20090715-uccx",
+  "title": "Vulnerabilities in Unified Contact Center Express Administration Pages",
+  "version": "1.1",
+  "firstPublished": "2009-07-15T16:00:00.000+0000",
+  "lastPublished": "2009-07-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090715-uccx",
+  "severity": "Critical",
+  "cwe": "CWE-22, CWE-79",
+  "erpPubIds": "18623,18624,cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2009-2047,CVE-2009-2048",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Unified Contact Center Express (Cisco Unified CCX) server contains both a directory traversal vulnerability and a script injection vulnerability in the administration pages of the Customer Response Solutions (CRS) and Cisco Unified IP Interactive Voice Response (Cisco Unified IP ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Contact Center Express Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18623&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Contact Center Express Cross-Site Scripting Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18624&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco UCCX XSS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=19001&signatureSubId=0&releaseVersion=S769&softwareVersion=6.0"
+        },
+        {
+          "name": "WWW Directory Traversal ../..",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3216&signatureSubId=0&releaseVersion=S2&softwareVersion=5.1"
+        },
+        {
+          "name": "WWW Directory Traversal ../..",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3216&signatureSubId=0&releaseVersion=S2&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "identifier": "cisco-sa-20070808-IOS-voice",
+  "title": "Voice Vulnerabilities in Cisco IOS and Cisco Unified Communications Manager",
+  "version": "2.0",
+  "firstPublished": "2007-08-08T16:00:00.000+0000",
+  "lastPublished": "2007-08-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070808-IOS-voice",
+  "severity": "Critical",
+  "cwe": "CWE-399, CWE-94",
+  "erpPubIds": "13860,13864,13866,13870,13907,cisco-amb-20070808-IOS-voice",
+  "cve": "CVE-2007-4291,CVE-2007-4292,CVE-2007-4294,CVE-2007-4295",
+  "ciscoBugId": "CSCeb21064,CSCsd81407,CSCse05642,CSCse40276,CSCse68355,CSCsf08998,CSCsf30058,CSCsi60004,CSCsi80749,CSCsb24007,CSCsc60249,CSCse68138,CSCsf11855,CSCsg70474",
+  "status": "",
+  "summary": " Multiple voice-related vulnerabilities are identified in Cisco IOSsoftware, one of which is also shared with Cisco Unified CommunicationsManager. These vulnerabilities pertain to the following protocols or features:        Session Initiation Protocol (SIP)    ",
+  "totalCount": 4,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software SIP Packet Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13860&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco CallManager and Cisco IOS SIP Packet Denial of Service and Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13864&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS MGCP Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13866&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS H.323 Packet Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13870&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS RTP Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13907&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Voice Vulnerabilities in Cisco IOS and Cisco Unified Communications Manager",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070808-IOS-voice"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=0&releaseVersion=S464&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=1&releaseVersion=S645&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=2&releaseVersion=S731&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=3&releaseVersion=S464&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=4&releaseVersion=S790&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=5&releaseVersion=S464&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=6&releaseVersion=S466&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5684&signatureSubId=7&releaseVersion=S550&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=0&releaseVersion=S469&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=1&releaseVersion=S449&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=2&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=3&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=4&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=5&releaseVersion=S449&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=6&releaseVersion=S449&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5835&signatureSubId=7&releaseVersion=S449&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Invite Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6177&signatureSubId=0&releaseVersion=S339&softwareVersion=6.0"
+        },
+        {
+          "name": "SIP Message DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6178&signatureSubId=0&releaseVersion=S624&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed MGCP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6179&signatureSubId=0&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SIP DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6181&signatureSubId=0&releaseVersion=S617&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

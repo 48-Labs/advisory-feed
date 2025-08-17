@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20190828-nxos-ntp-dos",
+  "title": "Cisco NX-OS Software Network Time Protocol Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2019-08-28T16:00:00.000+0000",
+  "lastPublished": "2019-10-08T14:45:52.550+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190828-nxos-ntp-dos",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": "CWE-400",
+  "cve": "CVE-2019-1967",
+  "ciscoBugId": "CSCvm35740,CSCvm51138,CSCvm51139,CSCvm51142",
+  "status": "",
+  "summary": "A vulnerability in the Network Time Protocol (NTP) feature of Cisco&nbsp;NX-OS Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.The vulnerability is due to excessive use of system resources when the affected ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "29393",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-08-29-new.html"
+        }
+      ]
+    }
+  ]
+}

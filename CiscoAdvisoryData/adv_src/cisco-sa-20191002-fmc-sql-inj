@@ -1,0 +1,108 @@
+{
+  "identifier": "cisco-sa-20191002-fmc-sql-inj",
+  "title": "Cisco Firepower Management Center SQL Injection Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2019-10-02T16:00:00.000+0000",
+  "lastPublished": "2019-10-02T23:28:50.647+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20191002-fmc-sql-inj",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-89",
+  "erpPubIds": "ERP-72541",
+  "cve": "CVE-2019-12679,CVE-2019-12680,CVE-2019-12681,CVE-2019-12682,CVE-2019-12683,CVE-2019-12684,CVE-2019-12685,CVE-2019-12686",
+  "ciscoBugId": "CSCvh03939,CSCvh03949,CSCvh03955,CSCvh77430,CSCvh77441,CSCvh77600,CSCvh77847,CSCvn69019",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Firepower Management Center (FMC) Software could allow an authenticated, remote attacker to execute arbitrary SQL injections on an affected device.These vulnerabilities exist due to improper input validation. An ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "51687",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51688",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51689",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51690",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51691",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51692",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51693",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51694",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51695",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51696",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51697",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51698",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51699",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51700",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51701",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51702",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51703",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "51704",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2019 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-72541&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

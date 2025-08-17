@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20150612-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL (June 2015) Affecting Cisco Products",
+  "version": "1.18",
+  "firstPublished": "2015-06-12T16:00:00.000+0000",
+  "lastPublished": "2018-04-24T13:29:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-openssl",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-119, CWE-20, CWE-399",
+  "erpPubIds": "39320,39209,39318,39319,39322",
+  "cve": "CVE-2014-8176,CVE-2015-1788,CVE-2015-1789,CVE-2015-1790,CVE-2015-1791,CVE-2015-1792",
+  "ciscoBugId": "CSCuu74320,CSCuu82329,CSCuu82330,CSCuu82332,CSCuu82335,CSCuu82343,CSCuu82350,CSCuu82353,CSCuu82360,CSCuu82362,CSCuu82364,CSCuu82370,CSCuu82372,CSCuu82378,CSCuu82381,CSCuu82382,CSCuu82386,CSCuu82402,CSCuu82403,CSCuu82408,CSCuu82409,CSCuu82411,CSCuu82412,CSCuu82416,CSCuu82419,CSCuu82420,CSCuu82429,CSCuu82431,CSCuu82435,CSCuu82436,CSCuu82437,CSCuu82441,CSCuu82442,CSCuu82447,CSCuu82449,CSCuu82450,CSCuu82452,CSCuu82459,CSCuu82461,CSCuu82474,CSCuu82475,CSCuu82476,CSCuu82478,CSCuu82480,CSCuu82481,CSCuu82486,CSCuu82497,CSCuu82518,CSCuu82523,CSCuu82525,CSCuu82529,CSCuu82530,CSCuu82533,CSCuu82540,CSCuu82547,CSCuu82553,CSCuu82554,CSCuu82555,CSCuu82558,CSCuu82560,CSCuu82561,CSCuu82563,CSCuu82570,CSCuu82571,CSCuu82576,CSCuu82579,CSCuu82580,CSCuu82593,CSCuu82594,CSCuu82607,CSCuu82678,CSCuu82681,CSCuu82682,CSCuu82683,CSCuu82686,CSCuu82689,CSCuu82698,CSCuu82717,CSCuu82729,CSCuu82733,CSCuu82735,CSCuu82737,CSCuu82738,CSCuu82739,CSCuu82742,CSCuu82746,CSCuu82763,CSCuu83280,CSCuu83297,CSCuu83317,CSCuu83326,CSCuu83328,CSCuu83341,CSCuu83343,CSCuu83352,CSCuu83358,CSCuu83360,CSCuu83363,CSCuu83371,CSCuu83373,CSCuu83383,CSCuu83386,CSCuu83398,CSCuu83410,CSCuu83413,CSCuu83416,CSCuu83421,CSCuu83426,CSCuu83429,CSCuu83433,CSCuu86705,CSCuu86854,CSCuv32694",
+  "status": "",
+  "summary": "On June 11, 2015, the OpenSSL Project released a security advisory detailing six distinct vulnerabilities, and another fix that provides hardening protections against exploits as described in the Logjam research.Multiple Cisco products incorporate a version of the OpenSSL package ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL Missing EnvelopedContent PKCS #7 Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=39320&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL NewSessionTicket Double-Free Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=39209&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Malformed ECParameters Infinite Loop Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=39318&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL X509_cmp_time Read Out-of-Bounds Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=39319&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Datagram Transport Layer Security Invalid Free Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=39322&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

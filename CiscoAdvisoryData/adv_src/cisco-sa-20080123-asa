@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20080123-asa",
+  "title": "Cisco PIX and ASA Time-to-Live Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2008-01-23T16:00:00.000+0000",
+  "lastPublished": "2008-01-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080123-asa",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "14946",
+  "cve": "CVE-2008-0028",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   A crafted IP packet vulnerability exists in the Cisco PIX 500 Series Security Appliance (PIX) and the Cisco 5500 Series Adaptive Security Appliance (ASA) that may result in a reload of the device. This vulnerability is triggered during processing of a crafted IP packet when the ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco PIX and Adaptive Security Appliance Time-to-Live Decrement Feature Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14946&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco PIX and ASA Time-to-Live DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6764&signatureSubId=0&releaseVersion=S314&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco PIX and ASA Time-to-Live DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6764&signatureSubId=1&releaseVersion=S314&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

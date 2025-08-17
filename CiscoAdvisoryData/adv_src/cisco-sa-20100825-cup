@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20100825-cup",
+  "title": "Cisco Unified Presence Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2010-08-25T16:00:00.000+0000",
+  "lastPublished": "2010-08-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100825-cup",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "21181,21182,cisco-amb-20100825-cucm-cup",
+  "cve": "CVE-2010-2839,CVE-2010-2840",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco Unified Presence contains two denial of service (DoS) vulnerabilities that affect the processing of Session Initiation Protocol (SIP) messages. Exploitation of these vulnerabilities could cause an interruption of presence services.   Cisco has released software updates that ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Presence Stack Corruption Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21181&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Presence Subscribe Message Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21182&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple DoS Vulnerabilities in Cisco Unified Communications Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100825-cucm-cup"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco CUP Memory Corruption Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=29239&signatureSubId=0&releaseVersion=S796&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Unified Presence and Jabber Extensible Communications Platform Stream Header Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20120912-cupxcp</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2012-09-12T15:03:56</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2012-09-12T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-09-12T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A denial of service (DoS) vulnerability exists in Cisco Unified Presence and Jabber Extensible Communications Platform (Jabber XCP). An unauthenticated, remote attacker could exploit this vulnerability by sending a specially crafted Extensible Messaging and Presence Protocol (XMPP) stream header to an affected server. Successful exploitation of this vulnerability could cause the Connection Manager process to crash.  Repeated exploitation could result in a sustained DoS condition.
+
+
+
+There are no workarounds available to mitigate exploitation of this vulnerability.
+
+
+
+Cisco has released software updates that address this vulnerability.  This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-cupxcp["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-cupxcp"]
+</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2"></cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">The following versions of Cisco Unified Presence and Jabber Extensible Communications Platform (Jabber XCP) are affected by the vulnerability in this advisory. JabberNow appliances are also affected if they are running a vulnerable version of Jabber XCP software.
+
+
+
+Cisco Unified Presence
+
+
+
+All versions of Cisco Unified Presence prior to 8.6(3) are affected by the vulnerability in this advisory.
+
+
+
+Jabber XCP and JabberNow Appliances
+
+
+
+All versions of Jabber XCP software prior to 5.3 are affected by the vulnerability in this advisory.
+
+
+
+Determining Cisco Unified Presence Software Versions
+
+
+
+To determine the running version of Cisco Unified Presence software, issue the show version active command from the command line interface.
+
+
+
+The following example shows Cisco Unified Presence software version 8.6.0:
+
+admin: show version active
+Active Master Version: 8.6.0.97041-43
+
+
+
+ Determining Jabber XCP Software Versions
+
+
+
+To determine the running version of Jabber XCP software, find the JABBER_VERSION in the [JABBER_HOME]/var/cache/xcp_vars.sh file.
+
+
+
+The following example shows Jabber XCP software version 5.8.1.17421:
+
+
+$ cat [JABBER_HOME]/var/cache/xcp_var.sh | grep JABBER_VERSION
+JABBER_VERSION=5.8.1.17421
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">Cisco Unified Presence and Jabber XCP provide an open and extensible platform that facilitates the secure exchange of availability and instant messaging (IM) information.
+
+
+
+Cisco Unified Presence contains a vulnerability that could allow an unauthenticated, remote attacker to cause a DoS condition.
+
+
+
+Jabber Extensible Communications Platform, including JabberNow Appliance, contains a vulnerability that could allow an unauthenticated, remote attacker to cause a DoS condition.
+
+
+
+XMPP clients initiate communication with an XMPP server by sending a stream header using IP version 4 (IPv4) or IP version 6 (IPv6). The vulnerability is due to the incorrect handling of stream headers. An attacker could exploit this vulnerability by sending a specially crafted XMPP stream header to an affected system. A successful exploit could cause the Connection Manager processes to terminate, resulting in dropped connections for existing clients and preventing new clients from connecting. The Connection Manager processes will restart automatically. However, repeated exploitation could create a sustained DoS condition.
+
+
+
+More information about XMPP stream headers is available in RFC 6120.
+
+
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtu32832["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtu32832"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2012-3935.
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">There are no available workarounds to mitigate this vulnerability.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this Advisory: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=26732["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=26732"]
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+
+
+
+    
+        
+            
+            
+            Cisco Unified Presence Software
+            Version
+            
+
+            
+            
+            
+            First Fixed Release
+            
+
+            
+        
+        
+            
+            All versions prior to 8.6(3)
+
+            
+            
+            Upgrade to 8.6(3) or higher
+
+            
+        
+    
+
+
+
+
+
+
+    
+        
+            
+            Jabber XCP Software Version, Including JabberNow Appliances
+
+            
+            
+            First Fixed Release
+            
+
+            
+        
+        
+            
+            All versions prior to 5.3
+
+            
+            
+            Upgrade to 5.3 or higher
+
+            
+        
+    
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory. 
+
+The vulnerability described in this advisory was found during internal testing.
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=26732</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Cisco Unified Presence and Jabber Extensible Communications Platform Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-cupxcp</cvrf:URL>
+      <cvrf:Description>Cisco Unified Presence and Jabber Extensible Communications Platform Stream Header Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unified Presence Server" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7333">Cisco Unified Presence Server </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Jabber Extensible Communications Platform (Jabber XCP)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-111959">Cisco Jabber Extensible Communications Platform (Jabber XCP) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Presence and Jabber Extensible Communications Platform Stream Header Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtu32832</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtu32832</Note>
+    </Notes>
+    <CVE>CVE-2012-3935</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-7333</ProductID>
+        <ProductID>CVRFPID-111959</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.1</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:POC/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no available workarounds to mitigate this vulnerability.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this Advisory: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=26732["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=26732"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120912-cupxcp</URL>
+        <Description>Cisco Unified Presence and Jabber Extensible Communications Platform Stream Header Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20200102-dcnm-comm-inject",
+  "title": "Cisco Data Center Network Manager Command Injection Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2020-01-02T16:00:00.000+0000",
+  "lastPublished": "2020-01-15T15:58:02.303+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200102-dcnm-comm-inject",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-78",
+  "cve": "CVE-2019-15978,CVE-2019-15979",
+  "ciscoBugId": "CSCvr44798,CSCvr46507",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the REST and SOAP API endpoints of Cisco&nbsp;Data Center Network Manager (DCNM) could allow an authenticated, remote attacker with administrative privileges on the DCNM application to inject arbitrary commands on the underlying operating system (OS).For more ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "52546",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52547",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "identifier": "cisco-sa-20170907-struts2",
+  "title": "Multiple Vulnerabilities in Apache Struts 2 Affecting Cisco Products: September 2017",
+  "version": "1.12",
+  "firstPublished": "2017-09-07T21:00:00.000+0000",
+  "lastPublished": "2017-10-23T20:27:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170907-struts2",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20, CWE-399",
+  "erpPubIds": "55119,55118,55117",
+  "cve": "CVE-2017-9793,CVE-2017-9804,CVE-2017-9805",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "On September 5, 2017, the Apache Software Foundation released security bulletins that disclosed three vulnerabilities in the Apache Struts 2 package. Of these vulnerabilities, the Apache Software Foundation classifies one as Critical Severity, one as Medium Severity, and one as ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Apache Struts REST Plug-in XML Processing Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=55119&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Apache Struts URLValidator Resource Exhaustion Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=55118&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Apache Struts REST Plug-In Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=55117&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "44315",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-06-new.html"
+        },
+        {
+          "name": "44327",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        },
+        {
+          "name": "44328",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        },
+        {
+          "name": "44329",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        },
+        {
+          "name": "44330",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        },
+        {
+          "name": "44373",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51020",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Apache Struts REST Plug-in XML Processing Arbitrary Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8054&signatureSubId=0&releaseVersion=S995&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

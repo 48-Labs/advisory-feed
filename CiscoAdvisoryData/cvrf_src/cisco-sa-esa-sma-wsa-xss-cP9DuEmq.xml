@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Secure Email Gateway, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Cross-Site Scripting Vulnerabilities</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-esa-sma-wsa-xss-cP9DuEmq</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2023-06-21T16:03:35</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2023-06-26T19:12:02</cvrf:Date>
+        <cvrf:Description>Updated the fixed releases for Secure Email and Web Manager and Secure Email Gateway.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2023-07-11T16:43:10</cvrf:Date>
+        <cvrf:Description>Updated the fixed releases information for Cisco Secure Email Cloud Gateway.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2023-06-21T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2023-07-11T16:43:10</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2023-07-11T16:43:12.8054059Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Multiple vulnerabilities in the web-based management interface of Cisco AsyncOS Software for Cisco Secure Email and Web Manager; Cisco Secure Email Gateway, formerly Cisco Email Security Appliance (ESA); and Cisco Secure Web Appliance, formerly Cisco Web Security Appliance (WSA), could allow a remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface.
+
+For more information about these vulnerabilities, see the Details ["#details"] section of this advisory.
+
+Cisco has released software updates that address these vulnerabilities. There are no workarounds that address these vulnerabilities.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-cP9DuEmq ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-cP9DuEmq"]
+
+Attention: Simplifying the Cisco portfolio includes the renaming of security products under one brand: Cisco Secure. For more information, see Meet Cisco Secure ["https://www.cisco.com/c/en/us/products/security/secure-names.html"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, CVE-2023-20028 affected the following Cisco products:
+
+Secure Email and Web Manager, both virtual and hardware appliances
+Secure Web Appliance, both virtual and hardware appliances
+
+At the time of publication, CVE-2023-20119 affected Cisco Secure Email and Web Manager, both virtual and hardware appliances.
+
+At the time of publication, CVE-2023-20120 affected the following Cisco products:
+
+Secure Email and Web Manager, both virtual and hardware appliances
+Secure Email Gateway, both virtual and hardware appliances
+Secure Web Appliance, both virtual and hardware appliances
+
+For information about which Cisco software releases were vulnerable at the time of publication, see the Fixed Software ["#fs"] section of this advisory. See the Details section in the bug ID(s) at the top of this advisory for the most complete and current information.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that CVE-2023-20028 does not affect Cisco Secure Email Gateway, both virtual and hardware appliances.
+
+Cisco has confirmed that CVE-2023-20119 does not affect the following Cisco products:
+
+Secure Email Gateway, both virtual and hardware appliances
+Secure Web Appliance, both virtual and hardware appliances</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The vulnerabilities are not dependent on one another. Exploitation of one of the vulnerabilities is not required to exploit another vulnerability. In addition, a software release that is affected by one of the vulnerabilities may not be affected by the other vulnerabilities.
+
+Details about the vulnerabilities are as follows:
+
+CVE-2023-20119: Cisco Secure Email and Web Manager Reflected XSS Vulnerability
+
+A vulnerability in the web-based management interface of Cisco AsyncOS Software for Cisco Secure Email and Web Manager could allow an unauthenticated, remote attacker to conduct an XSS attack against a user of the interface.
+
+This vulnerability is due to insufficient validation of user input. An attacker could exploit this vulnerability by persuading a user of an affected interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+Bug ID(s): CSCwe12624 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe12624"]
+CVE ID: CVE-2023-20119
+Security Impact Rating (SIR): Medium
+CVSS Base Score: 6.1
+CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+
+CVE-2023-20120: Cisco Secure Email and Web Manager, Cisco Secure Email Gateway, and Cisco Secure Web Appliance Stored XSS Vulnerability
+
+A vulnerability in the web-based management interface of Cisco AsyncOS Software for Cisco Secure Email and Web Manager, Cisco Secure Email Gateway, and Cisco Secure Web Appliance could allow an authenticated, remote attacker to conduct an XSS attack against a user of the interface.
+
+This vulnerability is due to insufficient validation of user input. An attacker could exploit this vulnerability by persuading a user of an affected interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+Bug ID(s): CSCwe14247 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe14247"], CSCwe14250 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe14250"], CSCwe18586 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe18586"]
+CVE ID: CVE-2023-20120
+Security Impact Rating (SIR): Medium
+CVSS Base Score: 5.4
+CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+
+CVE-2023-20028: Cisco Secure Email and Web Manager and Cisco Secure Web Appliance Stored XSS Vulnerability
+
+A vulnerability in the web-based management interface of Cisco AsyncOS Software for Cisco Secure Email and Web Manager and Cisco Secure Web Appliance could allow an authenticated, remote attacker to conduct an XSS attack against a user of the interface.
+
+This vulnerability is due to insufficient validation of user input. An attacker could exploit this vulnerability by persuading a user of an affected interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+Bug ID(s): CSCwd50087 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd50087"], CSCwd50094 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwd50094"]
+CVE ID: CVE-2023-20028
+Security Impact Rating (SIR): Medium
+CVSS Base Score: 4.8
+CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+      Fixed Releases
+At the time of publication, the release information in the following tables was accurate. See the Details section in the bug ID(s) at the top of this advisory for the most complete and current information.
+
+The left column lists Cisco software releases, and the right column indicates whether a release was affected by the vulnerabilities that are described in this advisory and which release included the fix for these vulnerabilities.
+
+Secure Email and Web Manager
+           Cisco AsyncOS Release  First Fixed Release for CVE-2023-20028, CVE-2023-20119, and CVE-2023-20120          14.3 and earlier  Migrate to a fixed release.      15.0  15.0.01 (Jul 2023)
+Secure Email Gateway
+           Cisco AsyncOS Release  First Fixed Release for CVE-2023-20120          14.3 and earlier2  Migrate to a fixed release.      15.0  15.0.01 (Jul 2023)
+Secure Web Appliance
+           Cisco AsyncOS Release  First Fixed Release for CVE-2023-20028 and CVE-2023-20120          14.5 and earlier  Migrate to a fixed release.      15.0  15.0.0-3321
+1. This release is a Limited Deployment (LD) release. Customers who wish to upgrade to this release can contact Cisco TAC to provision this release to their appliances. The General Deployment (GD) release is currently under review and will be available in the future.
+2. For customers using Cisco Secure Email Cloud Gateway, no action is required. Cisco has taken actions to protect the infrastructure from this vulnerability, and upgrades to fixed releases will be deployed as part of the standard upgrade processes for the environment.
+In most cases, the software can be upgraded over the network by using the System Upgrade options in the web interface of the appliance. To upgrade a device by using the web interface, do the following:
+
+Choose System Administration &gt; System Upgrade.
+Click Upgrade Options.
+Choose Download and Install.
+Choose the release to upgrade to.
+In the Upgrade Preparation area, choose the appropriate options.
+Click Proceed to begin the upgrade. A progress bar displays the status of the upgrade.
+
+After the upgrade is complete, the device reboots.
+
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerabilities that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">CVE-2023-20028 was found by Roberto Petrillo of Cisco during internal security testing.
+
+CVE-2023-20119 and CVE-2023-20120 were found during the resolution of a Cisco TAC support case.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-cP9DuEmq</cvrf:URL>
+      <cvrf:Description>Cisco Secure Email Gateway, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Cross-Site Scripting Vulnerabilities</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco Secure Web Appliance">
+        <FullProductName ProductID="CVRFPID-189789">Cisco Secure Web Appliance </FullProductName>
+      </Branch>
+      <Branch Type="Product Name" Name="Cisco Secure Email">
+        <FullProductName ProductID="CVRFPID-189790">Cisco Secure Email </FullProductName>
+      </Branch>
+      <Branch Type="Product Name" Name="Cisco Secure Email and Web Manager">
+        <FullProductName ProductID="CVRFPID-189791">Cisco Secure Email and Web Manager </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Secure Email Gateway, Cisco Secure Email and Web Manager and Cisco Secure Web Appliance Stored Cross-Site Scripting Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwe14247</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwe14247,CSCwe18586,CSCwe14250</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-20120</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189791</ProductID>
+        <ProductID>CVRFPID-189789</ProductID>
+        <ProductID>CVRFPID-189790</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>5.4</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-cP9DuEmq</URL>
+        <Description>Cisco Secure Email Gateway, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Cross-Site Scripting Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Secure Email and Web Manager and Cisco Secure Web Appliance Stored Cross-Site Scripting Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwd50087</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwd50087,CSCwd50094</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-20028</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189789</ProductID>
+        <ProductID>CVRFPID-189791</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>4.8</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-cP9DuEmq</URL>
+        <Description>Cisco Secure Email Gateway, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Cross-Site Scripting Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Secure Email and Web Manager Reflected Cross-Site Scripting Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwe12624</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwe12624</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-20119</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189791</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>6.1</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-cP9DuEmq</URL>
+        <Description>Cisco Secure Email Gateway, Cisco Secure Email and Web Manager, and Cisco Secure Web Appliance Cross-Site Scripting Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-iosxe-utd-cmd-JbL8KvHT</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2024-03-27T15:55:18</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2024-04-02T20:11:04</cvrf:Date>
+        <cvrf:Description>Updated advisory link.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2024-03-27T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2024-04-02T20:11:04</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2024-04-02T20:11:05.5960797Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the Unified Threat Defense (UTD) configuration CLI of Cisco IOS XE Software could allow an authenticated, local attacker to execute arbitrary commands as root on the underlying host operating system. To exploit this vulnerability, an attacker must have level 15 privileges on the affected device.
+
+This vulnerability is due to insufficient input validation. An attacker could exploit this vulnerability by submitting a crafted CLI command to an affected device. A successful exploit could allow the attacker to execute arbitrary commands as root on the underlying operating system.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT"]
+
+This advisory is part of the March 2024 release of the Cisco IOS and IOS XE Software Security Advisory Bundled Publication. For a complete list of the advisories and links to them, see Cisco Event Response: March 2024 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication ["https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75056"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this vulnerability affected Cisco devices if they were running a vulnerable release of Cisco IOS XE Software and supported the utd engine standard unified-policy configuration command.
+
+Note: Devices are not considered vulnerable if they do not support the utd engine standard unified-policy configuration command or if the configuration command returns an error.
+
+For information about which Cisco software releases were vulnerable at the time of publication, see the Fixed Software ["#fs"] section of this advisory.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+IOS Software
+IOS XR Software
+Meraki products
+NX-OS Software</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+  Cisco IOS and IOS XE Software
+To help customers determine their exposure to vulnerabilities in Cisco IOS and IOS XE Software, Cisco provides the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"]. This tool identifies any Cisco security advisories that impact a specific software release and the earliest release that fixes the vulnerabilities that are described in each advisory (“First Fixed”). If applicable, the tool also returns the earliest release that fixes all the vulnerabilities that are described in all the advisories that the Software Checker identifies (“Combined First Fixed”).
+
+To use the tool, go to the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"] page and follow the instructions. Alternatively, use the following form to determine whether a release is affected by any Cisco Security Advisory. To use the form, follow these steps:
+
+Choose which advisories the tool will search—only this advisory, only advisories with a Critical or High Security Impact Rating (SIR) ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#asr"], or all advisories.
+Enter a release number—for example, 15.9(3)M2 or 17.3.3.
+Click Check.
+
+       Only this advisory  All Critical and High advisories  All advisories</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="6">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="7">This vulnerability was found during internal security testing by X.B. of the Cisco Advanced Security Initiatives Group (ASIG).</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="8">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75056</cvrf:URL>
+      <cvrf:Description>Cisco Event Response: March 2024 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco IOS XE Software">
+        <Branch Type="Product Version" Name="17.10">
+          <Branch Type="Service Pack" Name="17.10.1">
+            <FullProductName ProductID="CVRFPID-278018">Cisco IOS XE Software 17.10.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.10.1a">
+            <FullProductName ProductID="CVRFPID-290580">Cisco IOS XE Software 17.10.1a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.10.1b">
+            <FullProductName ProductID="CVRFPID-292650">Cisco IOS XE Software 17.10.1b</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.11">
+          <Branch Type="Service Pack" Name="17.11.1">
+            <FullProductName ProductID="CVRFPID-286799">Cisco IOS XE Software 17.11.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.11.1a">
+            <FullProductName ProductID="CVRFPID-294838">Cisco IOS XE Software 17.11.1a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.12">
+          <Branch Type="Service Pack" Name="17.12.1">
+            <FullProductName ProductID="CVRFPID-286801">Cisco IOS XE Software 17.12.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1w">
+            <FullProductName ProductID="CVRFPID-296763">Cisco IOS XE Software 17.12.1w</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1a">
+            <FullProductName ProductID="CVRFPID-300012">Cisco IOS XE Software 17.12.1a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.11SW">
+          <Branch Type="Service Pack" Name="17.11.99SW">
+            <FullProductName ProductID="CVRFPID-296860">Cisco IOS XE Software 17.11.99SW</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwh05263</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwh05263</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2024-20306</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-278018</ProductID>
+        <ProductID>CVRFPID-286799</ProductID>
+        <ProductID>CVRFPID-286801</ProductID>
+        <ProductID>CVRFPID-290580</ProductID>
+        <ProductID>CVRFPID-292650</ProductID>
+        <ProductID>CVRFPID-294838</ProductID>
+        <ProductID>CVRFPID-296763</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+        <ProductID>CVRFPID-300012</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>6.0</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT</URL>
+        <Description>Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

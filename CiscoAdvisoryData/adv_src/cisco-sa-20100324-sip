@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20100324-sip",
+  "title": "Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2010-03-24T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:11:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100324-sip",
+  "severity": "Critical",
+  "cwe": "CWE-399, CWE-94",
+  "erpPubIds": "20063,20064,20065",
+  "cve": "CVE-2010-0579,CVE-2010-0580,CVE-2010-0581",
+  "ciscoBugId": "CSCsz48680,CSCsz89904,CSCtb93416",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Session Initiation Protocol (SIP)implementation in Cisco IOS&reg; Software that couldallow an unauthenticated, remote attacker to cause a reload of an affecteddevice when SIP operation is enabled. Remote code execution may also ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software SIP Message Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20063&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software SIP Message Processing Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20064&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software SIP Packet Parsing Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20065&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco CUBE SIP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24119&signatureSubId=0&releaseVersion=S778&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24600&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24760&signatureSubId=0&releaseVersion=S479&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "identifier": "cisco-sa-20011114-gsr-unreachable",
+  "title": "ICMP Unreachable Vulnerability in Cisco 12000 Series Internet Router",
+  "version": "1.2",
+  "firstPublished": "2001-11-14T16:00:00.000+0000",
+  "lastPublished": "2001-11-14T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20011114-gsr-unreachable",
+  "cwe": "CWE-399",
+  "erpPubIds": "2835",
+  "cve": "CVE-2001-0863",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   The performance of Cisco 12000 series routers can be degraded when they have to send a large number of ICMP unreachable packets. This situation usually can occur during heavy network scanning. This vulnerability is tracked by three different bug IDs: ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco 12000 Series Internet Router Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=2835&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

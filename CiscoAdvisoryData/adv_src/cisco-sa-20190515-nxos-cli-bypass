@@ -1,0 +1,20 @@
+{
+  "identifier": "cisco-sa-20190515-nxos-cli-bypass",
+  "title": "Cisco NX-OS Software CLI Bypass to Internal Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2019-05-16T16:00:00.000+0000",
+  "lastPublished": "2021-05-19T20:31:16.453+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190515-nxos-cli-bypass",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-78",
+  "cve": "CVE-2019-1726",
+  "ciscoBugId": "CSCvh24771,CSCvi99247,CSCvi99248,CSCvi99250,CSCvi99251,CSCvi99252,CSCvn11851",
+  "status": "",
+  "summary": "A vulnerability in the CLI of Cisco&nbsp;NX-OS Software could allow an authenticated, local attacker to access internal services that should be restricted on an affected device, such as the NX-API.The vulnerability is due to insufficient validation of arguments passed to a certain CLI ",
+  "totalCount": 1,
+  "relatedResource": []
+}

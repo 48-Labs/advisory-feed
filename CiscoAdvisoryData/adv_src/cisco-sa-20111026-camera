@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20111026-camera",
+  "title": "Denial of Service Vulnerability in Cisco Video Surveillance IP Cameras",
+  "version": "1.0",
+  "firstPublished": "2011-10-26T16:00:00.000+0000",
+  "lastPublished": "2011-10-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111026-camera",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "24437,cisco-amb-20111026-camera",
+  "cve": "CVE-2011-3318",
+  "ciscoBugId": "CSCtj39462,CSCtj96312,CSCtl80175",
+  "status": "",
+  "summary": "A denial of service (DoS) vulnerability exists in the Cisco Video Surveillance IP Cameras 2421, 2500 series and 2600 series of devices. An unauthenticated, remote attacker could exploit this vulnerability by sending crafted RTSP TCP packets to an affected device. Successful exploitation prevents ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Video Surveillance IP Cameras RTSP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24437&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Denial of Service Vulnerability in Cisco Video Surveillance IP Cameras",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20111026-camera"
+        }
+      ]
+    }
+  ]
+}

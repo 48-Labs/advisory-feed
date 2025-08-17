@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20090923-auth-proxy",
+  "title": "Cisco IOS Software Authentication Proxy Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2009-09-23T16:00:00.000+0000",
+  "lastPublished": "2009-09-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090923-auth-proxy",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "18882",
+  "cve": "CVE-2009-2863",
+  "ciscoBugId": "CSCsy15227",
+  "status": "",
+  "summary": "Cisco IOS&reg; Software configured with Authentication Proxy for HTTP(S), Web Authentication or the consent feature, contains a vulnerability that may allow an unauthenticated session to bypass the authentication proxy server or bypass the consent webpage.   Cisco has ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Authentication Proxy Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18882&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "43514",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

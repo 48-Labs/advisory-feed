@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20100908-wlc",
+  "title": "Multiple Vulnerabilities in Cisco Wireless LAN Controllers",
+  "version": "1.1",
+  "firstPublished": "2010-09-08T16:00:00.000+0000",
+  "lastPublished": "2010-09-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100908-wlc",
+  "severity": "Critical",
+  "cwe": "CWE-264, CWE-399",
+  "erpPubIds": "21287,21288,21290,21291,cisco-amb-20100908-wlc",
+  "cve": "CVE-2010-0574,CVE-2010-0575,CVE-2010-2841,CVE-2010-2842,CVE-2010-2843,CVE-2010-3033,CVE-2010-3034",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The Cisco Wireless LAN Controller (WLC) product family is affected by these vulnerabilities:      Two denial of service (DoS) vulnerabilities      Three privilege escalation vulnerabilities      Two access control list (ACL) bypass ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controller Internet Key Exchange Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21287&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Invalid Arguments HTTP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21288&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Privilege Escalation Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21290&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Software Access Control List Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21291&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Wireless LAN Controllers",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100908-wlc"
+        }
+      ]
+    }
+  ]
+}

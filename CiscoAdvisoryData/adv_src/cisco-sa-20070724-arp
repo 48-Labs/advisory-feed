@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20070724-arp",
+  "title": "Wireless ARP Storm Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2007-07-24T16:00:00.000+0000",
+  "lastPublished": "2007-07-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070724-arp",
+  "severity": "Medium",
+  "cwe": "CWE-399",
+  "erpPubIds": "13817,13818,13819",
+  "cve": "CVE-2007-4011,CVE-2007-4012",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "    Cisco Wireless LAN Controllers (WLC) contain multiple vulnerabilities in the handling of Address Resolution Protocol (ARP) packets that could result in a denial of service (DoS) in certain environments.    Cisco is notifying customers and partners and has made free software ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controller ARP Broadcast Storm Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13817&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Unicast ARP Request Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13818&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Unicast ARP Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13819&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "ARP Inbalance-of-Requests",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7105&signatureSubId=0&releaseVersion=S663&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

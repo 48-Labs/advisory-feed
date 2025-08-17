@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20190123-rv-inject",
+  "title": "Cisco Small Business RV320 and RV325 Routers Command Injection Vulnerability",
+  "version": "2.2",
+  "firstPublished": "2019-01-23T16:00:00.000+0000",
+  "lastPublished": "2019-04-04T14:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190123-rv-inject",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2019-1652",
+  "ciscoBugId": "CSCvm78058",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers could allow an authenticated, remote attacker with administrative privileges on an affected device to execute arbitrary commands.The vulnerability is due to ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "48946",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-01-24-seu.html"
+        },
+        {
+          "name": "48947",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-01-24-seu.html"
+        },
+        {
+          "name": "48948",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-01-24-seu.html"
+        }
+      ]
+    }
+  ]
+}

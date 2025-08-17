@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20080604-asa",
+  "title": "Multiple Vulnerabilities in Cisco PIX and Cisco ASA",
+  "version": "1.0",
+  "firstPublished": "2008-06-04T16:00:00.000+0000",
+  "lastPublished": "2008-06-04T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080604-asa",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "15972,15973,15976,15978,15980,cisco-amb-20080604-asa",
+  "cve": "CVE-2008-2055,CVE-2008-2056,CVE-2008-2057,CVE-2008-2058,CVE-2008-2059",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Multiple vulnerabilities exist in the Cisco ASA 5500 Series Adaptive Security Appliances and Cisco PIX Security Appliances. This security advisory outlines details of these vulnerabilities:      Crafted TCP ACK Packet Vulnerability       Crafted TLS ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco PIX and Cisco ASA TLS Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15972&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX and Cisco ASA TCP ACK Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15973&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX and Cisco ASA Instant Messenger Inspection Action Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15976&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX and Cisco ASA Port Scan Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15978&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX and Cisco ASA Improperly Implemented Control-Plane Access Control List Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15980&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco PIX and Cisco ASA",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080604-asa"
+        }
+      ]
+    }
+  ]
+}

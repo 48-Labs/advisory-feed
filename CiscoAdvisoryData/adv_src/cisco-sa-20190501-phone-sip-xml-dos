@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20190501-phone-sip-xml-dos",
+  "title": "Cisco IP Phone 7800 Series and 8800 Series Session Initiation Protocol XML Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-05-01T16:00:00.000+0000",
+  "lastPublished": "2019-05-01T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-phone-sip-xml-dos",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2019-1635",
+  "ciscoBugId": "CSCvm39405,CSCvo19825,CSCvo21348,CSCvo23532",
+  "status": "",
+  "summary": "A vulnerability in the call-handling functionality of Session Initiation Protocol (SIP) Software for Cisco&nbsp;IP Phone 7800 Series and 8800 Series could allow an unauthenticated, remote attacker to cause an affected phone to reload unexpectedly, resulting in a temporary denial of service (DoS) ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "49990",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-05-02-seu.html"
+        }
+      ]
+    }
+  ]
+}

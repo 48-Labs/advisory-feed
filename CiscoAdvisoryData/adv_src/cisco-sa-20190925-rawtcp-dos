@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20190925-rawtcp-dos",
+  "title": "Cisco IOS XE Software Raw Socket Transport Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-09-25T16:00:00.000+0000",
+  "lastPublished": "2019-09-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190925-rawtcp-dos",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-72547",
+  "cve": "CVE-2019-12653",
+  "ciscoBugId": "CSCvj91021",
+  "status": "",
+  "summary": "A vulnerability in the Raw Socket Transport feature of Cisco IOS XE Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition.The vulnerability is due to improper parsing of Raw Socket ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2019 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-72547&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

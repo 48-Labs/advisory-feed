@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20160323-sip",
+  "title": "Cisco IOS and IOS XE and Cisco Unified Communications Manager Software Session Initiation Protocol Memory Leak Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2016-03-23T18:30:00.000+0000",
+  "lastPublished": "2016-05-09T12:46:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160323-sip",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2016-1350",
+  "ciscoBugId": "CSCuj23293,CSCuv39370",
+  "status": "",
+  "summary": "A vulnerability in the Session Initiation Protocol (SIP) gateway implementation in Cisco IOS, IOS XE, and Cisco Unified Communications Manager Software could allow an unauthenticated, remote attacker to cause a memory leak and eventual reload of an affected device.The vulnerability ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "36246",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-03-23-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2016 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/c/en/us/about/security-center/event-response/cisco-erp-march-2016.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Memory Leak",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7180&signatureSubId=0&releaseVersion=S913&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20110223-telepresence-ctms",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence Multipoint Switch",
+  "version": "1.1",
+  "firstPublished": "2011-02-23T16:00:00.000+0000",
+  "lastPublished": "2011-02-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110223-telepresence-ctms",
+  "severity": "High",
+  "cwe": "CWE-264, CWE-399",
+  "erpPubIds": "22489,22494,22496,cisco-amb-20110223-telepresence",
+  "cve": "CVE-2011-0387,CVE-2011-0388,CVE-2011-0389",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist within the Cisco TelePresence Multipoint Switch. This security advisory outlines details of the following vulnerabilities:      Unauthenticated Java Servlet Access      Unauthenticated Arbitrary File Upload     ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence System Software Java Remote Method Invocation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22489&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Unauthorized Servlet Access Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22494&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence Real-Time Transport Control Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22496&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco TelePresence Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20110223-telepresence"
+        }
+      ]
+    }
+  ]
+}

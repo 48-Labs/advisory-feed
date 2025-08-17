@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-ise-priv-esc-UwqPrBM3",
+  "title": "Cisco Identity Services Engine Privilege Escalation Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2021-10-06T16:00:00.000+0000",
+  "lastPublished": "2021-10-11T16:18:56.297+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-priv-esc-UwqPrBM3",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-266",
+  "cve": "CVE-2021-1594",
+  "ciscoBugId": "CSCvy11976",
+  "status": "",
+  "summary": "A vulnerability in the REST API of Cisco&nbsp;Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to perform a command injection attack and elevate privileges to root.This vulnerability is due to insufficient input validation for specific API ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "58254",
+          "url": ""
+        }
+      ]
+    }
+  ]
+}

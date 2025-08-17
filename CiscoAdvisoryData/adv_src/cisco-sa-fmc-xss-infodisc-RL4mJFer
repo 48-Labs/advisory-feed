@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-fmc-xss-infodisc-RL4mJFer",
+  "title": "Cisco Secure Firewall Management Center Software Cross-Site Scripting and Information Disclosure Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2024-10-23T16:00:00.000+0000",
+  "lastPublished": "2024-10-24T11:52:38.743+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-xss-infodisc-RL4mJFer",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-202, CWE-79",
+  "erpPubIds": "ERP-75300",
+  "cve": "CVE-2024-20377,CVE-2024-20387,CVE-2024-20388",
+  "ciscoBugId": "CSCwi99692,CSCwj01321,CSCwj03056",
+  "status": "",
+  "summary": "Multiple vulnerabilities in Cisco Secure Firewall Management Center (FMC) Software, formerly Firepower Management Center Software, could allow an attacker to conduct cross-site scripting (XSS) attacks or access unauthorized information on an affected device.&nbsp;For more information ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2024 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75300&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

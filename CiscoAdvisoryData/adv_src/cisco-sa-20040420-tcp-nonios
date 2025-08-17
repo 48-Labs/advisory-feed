@@ -1,0 +1,90 @@
+{
+  "identifier": "cisco-sa-20040420-tcp-nonios",
+  "title": "TCP Vulnerabilities in Multiple Non-IOS Cisco Products",
+  "version": "2.10",
+  "firstPublished": "2004-04-20T21:00:00.000+0000",
+  "lastPublished": "2014-10-23T12:53:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-tcp-nonios",
+  "severity": "Medium",
+  "cwe": "CWE-399",
+  "cve": "CVE-2004-0230",
+  "ciscoBugId": "CSCuq38097",
+  "status": "",
+  "summary": " A vulnerability in the Transmission Control Protocol (TCP)specification (RFC793) has been discovered by an external researcher. Thesuccessful exploitation enables an adversary to reset any established TCPconnection in a much shorter time than was previously discussed publicly.Depending ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "2523",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=5.1"
+        },
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "Multiple Vendor TCP Connection Reset Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20499&signatureSubId=0&releaseVersion=S455&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMP Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2152&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Queso Sweep",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3045&signatureSubId=0&releaseVersion=S507&softwareVersion=6.0"
+        },
+        {
+          "name": "TCP Connection Window Size RST DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3051&signatureSubId=0&releaseVersion=S591&softwareVersion=6.0"
+        },
+        {
+          "name": "TCP Connection Window Size RST DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3051&signatureSubId=1&releaseVersion=S591&softwareVersion=6.0"
+        },
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

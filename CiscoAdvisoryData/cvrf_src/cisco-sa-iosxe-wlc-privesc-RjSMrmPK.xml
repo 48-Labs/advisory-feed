@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS XE Software for Wireless LAN Controllers Privilege Escalation Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-iosxe-wlc-privesc-RjSMrmPK</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2024-03-27T15:55:14</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2024-03-27T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2024-03-27T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2024-03-27T15:55:43.1980371Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the CLI of Cisco IOS XE Software could allow an authenticated, low-privileged, local attacker to access WLAN configuration details including passwords.
+
+This vulnerability is due to improper privilege checks. An attacker could exploit this vulnerability by using the show and show tech wireless CLI commands to access configuration details, including passwords. A successful exploit could allow the attacker to access configuration details that they are not authorized to access.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-wlc-privesc-RjSMrmPK ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-wlc-privesc-RjSMrmPK"]
+
+This advisory is part of the March 2024 release of the Cisco IOS and IOS XE Software Security Advisory Bundled Publication. For a complete list of the advisories and links to them, see Cisco Event Response: March 2024 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication ["https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75056"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this vulnerability affected all releases of Cisco IOS XE Software that were managing Cisco Wireless LAN Controllers (WLCs).
+
+For information about which Cisco software releases were vulnerable at the time of publication, see the Fixed Software ["#fs"] section of this advisory.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+IOS Software
+IOS XR Software
+Meraki products
+NX-OS Software</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.
+
+However, if a preshared key (PSK) is being used and password encryption is not enabled, the WLAN PSK can be exposed to unauthorized users. To prevent exposure of the WLAN PSK to unauthorized users, enable password encryption. However, other configuration details may still be accessible to unauthorized users.
+
+While this mitigation has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+        Cisco IOS and IOS XE Software
+To help customers determine their exposure to vulnerabilities in Cisco IOS and IOS XE Software, Cisco provides the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"]. This tool identifies any Cisco security advisories that impact a specific software release and the earliest release that fixes the vulnerabilities that are described in each advisory (“First Fixed”). If applicable, the tool also returns the earliest release that fixes all the vulnerabilities that are described in all the advisories that the Software Checker identifies (“Combined First Fixed”).
+
+To use the tool, go to the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"] page and follow the instructions. Alternatively, use the following form to determine whether a release is affected by any Cisco Security Advisory. To use the form, follow these steps:
+
+Choose which advisories the tool will search—only this advisory, only advisories with a Critical or High Security Impact Rating (SIR) ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#asr"], or all advisories.
+Enter a release number—for example, 15.9(3)M2 or 17.3.3.
+Click Check.
+
+       Only this advisory  All Critical and High advisories  All advisories</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">This vulnerability was found during internal security testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-wlc-privesc-RjSMrmPK</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software for Wireless LAN Controllers Privilege Escalation Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75056</cvrf:URL>
+      <cvrf:Description>Cisco Event Response: March 2024 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco IOS XE Software">
+        <Branch Type="Product Version" Name="16.10">
+          <Branch Type="Service Pack" Name="16.10.1">
+            <FullProductName ProductID="CVRFPID-225858">Cisco IOS XE Software 16.10.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.10.1s">
+            <FullProductName ProductID="CVRFPID-252913">Cisco IOS XE Software 16.10.1s</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.10.1e">
+            <FullProductName ProductID="CVRFPID-257955">Cisco IOS XE Software 16.10.1e</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="16.11">
+          <Branch Type="Service Pack" Name="16.11.1">
+            <FullProductName ProductID="CVRFPID-227918">Cisco IOS XE Software 16.11.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.11.1a">
+            <FullProductName ProductID="CVRFPID-252271">Cisco IOS XE Software 16.11.1a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.11.1b">
+            <FullProductName ProductID="CVRFPID-260741">Cisco IOS XE Software 16.11.1b</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.11.1c">
+            <FullProductName ProductID="CVRFPID-264096">Cisco IOS XE Software 16.11.1c</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="16.12">
+          <Branch Type="Service Pack" Name="16.12.1">
+            <FullProductName ProductID="CVRFPID-227920">Cisco IOS XE Software 16.12.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.1s">
+            <FullProductName ProductID="CVRFPID-265735">Cisco IOS XE Software 16.12.1s</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.3">
+            <FullProductName ProductID="CVRFPID-273445">Cisco IOS XE Software 16.12.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.8">
+            <FullProductName ProductID="CVRFPID-273448">Cisco IOS XE Software 16.12.8</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.2s">
+            <FullProductName ProductID="CVRFPID-273509">Cisco IOS XE Software 16.12.2s</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.1t">
+            <FullProductName ProductID="CVRFPID-274832">Cisco IOS XE Software 16.12.1t</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.2t">
+            <FullProductName ProductID="CVRFPID-275538">Cisco IOS XE Software 16.12.2t</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.4">
+            <FullProductName ProductID="CVRFPID-277147">Cisco IOS XE Software 16.12.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.3s">
+            <FullProductName ProductID="CVRFPID-277255">Cisco IOS XE Software 16.12.3s</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.4a">
+            <FullProductName ProductID="CVRFPID-278881">Cisco IOS XE Software 16.12.4a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.5">
+            <FullProductName ProductID="CVRFPID-280463">Cisco IOS XE Software 16.12.5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.6">
+            <FullProductName ProductID="CVRFPID-280937">Cisco IOS XE Software 16.12.6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.6a">
+            <FullProductName ProductID="CVRFPID-285325">Cisco IOS XE Software 16.12.6a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.7">
+            <FullProductName ProductID="CVRFPID-286031">Cisco IOS XE Software 16.12.7</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.10">
+            <FullProductName ProductID="CVRFPID-295421">Cisco IOS XE Software 16.12.10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.10a">
+            <FullProductName ProductID="CVRFPID-300877">Cisco IOS XE Software 16.12.10a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.11">
+            <FullProductName ProductID="CVRFPID-300935">Cisco IOS XE Software 16.12.11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.12">
+            <FullProductName ProductID="CVRFPID-301728">Cisco IOS XE Software 16.12.12</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="16.12.13">
+            <FullProductName ProductID="CVRFPID-303041">Cisco IOS XE Software 16.12.13</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.1">
+          <Branch Type="Service Pack" Name="17.1.1">
+            <FullProductName ProductID="CVRFPID-245377">Cisco IOS XE Software 17.1.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.1.1s">
+            <FullProductName ProductID="CVRFPID-274818">Cisco IOS XE Software 17.1.1s</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.1.2">
+            <FullProductName ProductID="CVRFPID-277338">Cisco IOS XE Software 17.1.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.1.1t">
+            <FullProductName ProductID="CVRFPID-277348">Cisco IOS XE Software 17.1.1t</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.1.3">
+            <FullProductName ProductID="CVRFPID-280652">Cisco IOS XE Software 17.1.3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.2">
+          <Branch Type="Service Pack" Name="17.2.1">
+            <FullProductName ProductID="CVRFPID-251225">Cisco IOS XE Software 17.2.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.2.1a">
+            <FullProductName ProductID="CVRFPID-277343">Cisco IOS XE Software 17.2.1a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.3">
+          <Branch Type="Service Pack" Name="17.3.1">
+            <FullProductName ProductID="CVRFPID-254712">Cisco IOS XE Software 17.3.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.2">
+            <FullProductName ProductID="CVRFPID-277099">Cisco IOS XE Software 17.3.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.3">
+            <FullProductName ProductID="CVRFPID-278019">Cisco IOS XE Software 17.3.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.2a">
+            <FullProductName ProductID="CVRFPID-280555">Cisco IOS XE Software 17.3.2a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.4">
+            <FullProductName ProductID="CVRFPID-282028">Cisco IOS XE Software 17.3.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.5">
+            <FullProductName ProductID="CVRFPID-282115">Cisco IOS XE Software 17.3.5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.6">
+            <FullProductName ProductID="CVRFPID-284331">Cisco IOS XE Software 17.3.6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.4c">
+            <FullProductName ProductID="CVRFPID-285327">Cisco IOS XE Software 17.3.4c</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.5a">
+            <FullProductName ProductID="CVRFPID-286498">Cisco IOS XE Software 17.3.5a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.5b">
+            <FullProductName ProductID="CVRFPID-287125">Cisco IOS XE Software 17.3.5b</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.7">
+            <FullProductName ProductID="CVRFPID-290671">Cisco IOS XE Software 17.3.7</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.8">
+            <FullProductName ProductID="CVRFPID-295398">Cisco IOS XE Software 17.3.8</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.3.8a">
+            <FullProductName ProductID="CVRFPID-300847">Cisco IOS XE Software 17.3.8a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.4">
+          <Branch Type="Service Pack" Name="17.4.1">
+            <FullProductName ProductID="CVRFPID-262588">Cisco IOS XE Software 17.4.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.4.1c">
+            <FullProductName ProductID="CVRFPID-282116">Cisco IOS XE Software 17.4.1c</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.5">
+          <Branch Type="Service Pack" Name="17.5.1">
+            <FullProductName ProductID="CVRFPID-262590">Cisco IOS XE Software 17.5.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.5.1b">
+            <FullProductName ProductID="CVRFPID-290596">Cisco IOS XE Software 17.5.1b</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.5.1c">
+            <FullProductName ProductID="CVRFPID-292698">Cisco IOS XE Software 17.5.1c</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.6">
+          <Branch Type="Service Pack" Name="17.6.1">
+            <FullProductName ProductID="CVRFPID-262592">Cisco IOS XE Software 17.6.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.2">
+            <FullProductName ProductID="CVRFPID-282117">Cisco IOS XE Software 17.6.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.3">
+            <FullProductName ProductID="CVRFPID-286409">Cisco IOS XE Software 17.6.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.1y">
+            <FullProductName ProductID="CVRFPID-286477">Cisco IOS XE Software 17.6.1y</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.4">
+            <FullProductName ProductID="CVRFPID-287087">Cisco IOS XE Software 17.6.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.5">
+            <FullProductName ProductID="CVRFPID-290660">Cisco IOS XE Software 17.6.5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.6">
+            <FullProductName ProductID="CVRFPID-292656">Cisco IOS XE Software 17.6.6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.6a">
+            <FullProductName ProductID="CVRFPID-300848">Cisco IOS XE Software 17.6.6a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.6.5a">
+            <FullProductName ProductID="CVRFPID-300850">Cisco IOS XE Software 17.6.5a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.7">
+          <Branch Type="Service Pack" Name="17.7.1">
+            <FullProductName ProductID="CVRFPID-277357">Cisco IOS XE Software 17.7.1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.10">
+          <Branch Type="Service Pack" Name="17.10.1">
+            <FullProductName ProductID="CVRFPID-278018">Cisco IOS XE Software 17.10.1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.8">
+          <Branch Type="Service Pack" Name="17.8.1">
+            <FullProductName ProductID="CVRFPID-278023">Cisco IOS XE Software 17.8.1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.9">
+          <Branch Type="Service Pack" Name="17.9.1">
+            <FullProductName ProductID="CVRFPID-278025">Cisco IOS XE Software 17.9.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.9.2">
+            <FullProductName ProductID="CVRFPID-288221">Cisco IOS XE Software 17.9.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.9.3">
+            <FullProductName ProductID="CVRFPID-290674">Cisco IOS XE Software 17.9.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.9.4">
+            <FullProductName ProductID="CVRFPID-295412">Cisco IOS XE Software 17.9.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.9.1y1">
+            <FullProductName ProductID="CVRFPID-299967">Cisco IOS XE Software 17.9.1y1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.9.4a">
+            <FullProductName ProductID="CVRFPID-300845">Cisco IOS XE Software 17.9.4a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.11">
+          <Branch Type="Service Pack" Name="17.11.1">
+            <FullProductName ProductID="CVRFPID-286799">Cisco IOS XE Software 17.11.1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.12">
+          <Branch Type="Service Pack" Name="17.12.1">
+            <FullProductName ProductID="CVRFPID-286801">Cisco IOS XE Software 17.12.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1w">
+            <FullProductName ProductID="CVRFPID-296763">Cisco IOS XE Software 17.12.1w</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1a">
+            <FullProductName ProductID="CVRFPID-300012">Cisco IOS XE Software 17.12.1a</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>WLAN config leak for lower privilege levels</Title>
+    <ID SystemName="Cisco Bug ID">CSCwf36190</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwf36190</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2024-20324</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-225858</ProductID>
+        <ProductID>CVRFPID-227918</ProductID>
+        <ProductID>CVRFPID-227920</ProductID>
+        <ProductID>CVRFPID-245377</ProductID>
+        <ProductID>CVRFPID-251225</ProductID>
+        <ProductID>CVRFPID-252271</ProductID>
+        <ProductID>CVRFPID-252913</ProductID>
+        <ProductID>CVRFPID-254712</ProductID>
+        <ProductID>CVRFPID-257955</ProductID>
+        <ProductID>CVRFPID-260741</ProductID>
+        <ProductID>CVRFPID-262588</ProductID>
+        <ProductID>CVRFPID-262590</ProductID>
+        <ProductID>CVRFPID-262592</ProductID>
+        <ProductID>CVRFPID-264096</ProductID>
+        <ProductID>CVRFPID-265735</ProductID>
+        <ProductID>CVRFPID-273445</ProductID>
+        <ProductID>CVRFPID-273448</ProductID>
+        <ProductID>CVRFPID-273509</ProductID>
+        <ProductID>CVRFPID-274818</ProductID>
+        <ProductID>CVRFPID-274832</ProductID>
+        <ProductID>CVRFPID-275538</ProductID>
+        <ProductID>CVRFPID-277099</ProductID>
+        <ProductID>CVRFPID-277147</ProductID>
+        <ProductID>CVRFPID-277255</ProductID>
+        <ProductID>CVRFPID-277338</ProductID>
+        <ProductID>CVRFPID-277343</ProductID>
+        <ProductID>CVRFPID-277348</ProductID>
+        <ProductID>CVRFPID-277357</ProductID>
+        <ProductID>CVRFPID-278018</ProductID>
+        <ProductID>CVRFPID-278019</ProductID>
+        <ProductID>CVRFPID-278023</ProductID>
+        <ProductID>CVRFPID-278025</ProductID>
+        <ProductID>CVRFPID-278881</ProductID>
+        <ProductID>CVRFPID-280463</ProductID>
+        <ProductID>CVRFPID-280555</ProductID>
+        <ProductID>CVRFPID-280652</ProductID>
+        <ProductID>CVRFPID-280937</ProductID>
+        <ProductID>CVRFPID-282028</ProductID>
+        <ProductID>CVRFPID-282115</ProductID>
+        <ProductID>CVRFPID-282116</ProductID>
+        <ProductID>CVRFPID-282117</ProductID>
+        <ProductID>CVRFPID-284331</ProductID>
+        <ProductID>CVRFPID-285325</ProductID>
+        <ProductID>CVRFPID-285327</ProductID>
+        <ProductID>CVRFPID-286031</ProductID>
+        <ProductID>CVRFPID-286409</ProductID>
+        <ProductID>CVRFPID-286477</ProductID>
+        <ProductID>CVRFPID-286498</ProductID>
+        <ProductID>CVRFPID-286799</ProductID>
+        <ProductID>CVRFPID-286801</ProductID>
+        <ProductID>CVRFPID-287087</ProductID>
+        <ProductID>CVRFPID-287125</ProductID>
+        <ProductID>CVRFPID-288221</ProductID>
+        <ProductID>CVRFPID-290596</ProductID>
+        <ProductID>CVRFPID-290660</ProductID>
+        <ProductID>CVRFPID-290671</ProductID>
+        <ProductID>CVRFPID-290674</ProductID>
+        <ProductID>CVRFPID-292656</ProductID>
+        <ProductID>CVRFPID-292698</ProductID>
+        <ProductID>CVRFPID-295398</ProductID>
+        <ProductID>CVRFPID-295412</ProductID>
+        <ProductID>CVRFPID-295421</ProductID>
+        <ProductID>CVRFPID-296763</ProductID>
+        <ProductID>CVRFPID-299967</ProductID>
+        <ProductID>CVRFPID-300012</ProductID>
+        <ProductID>CVRFPID-300845</ProductID>
+        <ProductID>CVRFPID-300847</ProductID>
+        <ProductID>CVRFPID-300848</ProductID>
+        <ProductID>CVRFPID-300850</ProductID>
+        <ProductID>CVRFPID-300877</ProductID>
+        <ProductID>CVRFPID-300935</ProductID>
+        <ProductID>CVRFPID-301728</ProductID>
+        <ProductID>CVRFPID-303041</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>5.5</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.
+
+However, if a preshared key (PSK) is being used and password encryption is not enabled, the WLAN PSK can be exposed to unauthorized users. To prevent exposure of the WLAN PSK to unauthorized users, enable password encryption. However, other configuration details may still be accessible to unauthorized users.
+
+While this mitigation has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-wlc-privesc-RjSMrmPK</URL>
+        <Description>Cisco IOS XE Software for Wireless LAN Controllers Privilege Escalation Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

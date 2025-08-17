@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20190828-nxos-memleak-dos",
+  "title": "Cisco NX-OS Software Remote Management Memory Leak Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2019-08-28T16:00:00.000+0000",
+  "lastPublished": "2019-10-08T14:45:53.480+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190828-nxos-memleak-dos",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-400",
+  "erpPubIds": "ERP-72243",
+  "cve": "CVE-2019-1965",
+  "ciscoBugId": "CSCvi15409,CSCvn50393,CSCvn50443,CSCvn50446,CSCvn52167",
+  "status": "",
+  "summary": "A vulnerability in the Virtual Shell (VSH) session management for Cisco&nbsp;NX-OS Software could allow an authenticated, remote attacker to cause a VSH process to fail to delete upon termination. This can lead to a build-up of VSH processes that overtime can deplete system memory. When there is ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: August 2019 Cisco FXOS and NX-OS Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-72243&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

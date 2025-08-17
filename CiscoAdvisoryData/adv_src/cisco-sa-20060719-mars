@@ -1,0 +1,33 @@
+{
+  "identifier": "cisco-sa-20060719-mars",
+  "title": "Multiple Vulnerabilities in Cisco Security Monitoring, Analysis and Response System (CS-MARS)",
+  "version": "1.0",
+  "firstPublished": "2006-07-19T16:00:00.000+0000",
+  "lastPublished": "2006-07-19T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060719-mars",
+  "cwe": "CWE-200, CWE-264",
+  "erpPubIds": "11317,11330",
+  "cve": "CVE-2006-3732,CVE-2006-3734",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco Security Monitoring, Analysis and Response System (CS-MARS) software contains vulnerabilities related to third-party software and the command line interface (CLI).      CS-MARS ships with an Oracle database. The database contains severaldefault Oracle accounts which ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Security Monitoring, Analysis and Response System Default Oracle Database Accounts Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11317&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Security Monitoring, Analysis and Response System Command-Line Interface Privilege Escalation Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11330&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

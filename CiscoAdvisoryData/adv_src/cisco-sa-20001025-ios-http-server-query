@@ -1,0 +1,29 @@
+{
+  "identifier": "cisco-sa-20001025-ios-http-server-query",
+  "title": "Cisco IOS HTTP Server Query Vulnerability",
+  "version": "1.6",
+  "firstPublished": "2000-10-25T16:00:00.000+0000",
+  "lastPublished": "2000-10-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20001025-ios-http-server-query",
+  "status": "",
+  "summary": "   A defect in multiple releases of Cisco IOS software will cause a Cisco router or switch to halt and reload if the IOS HTTP service is enabled, browsing to 'http://router-ip/anytext?/' is attempted, and the enable password is supplied when requested. This defect can be exploited to ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Query (?/)",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5324&signatureSubId=0&releaseVersion=S256&softwareVersion=5.1"
+        },
+        {
+          "name": "Cisco IOS Query (?/)",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5324&signatureSubId=0&releaseVersion=S256&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

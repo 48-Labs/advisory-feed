@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS Software Crafted IPv6 Packet Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20140326-ipv6</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2014-03-26T15:22:02</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2014-03-26T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2014-03-26T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the implementation of the IP version 6 (IPv6) protocol stack in Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause I/O memory depletion on an affected device that has IPv6 enabled. The vulnerability is triggered when an affected device processes a malformed IPv6 packet.
+
+
+
+Cisco has released software updates that address this vulnerability. There are no workarounds to mitigate this vulnerability.
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-ipv6["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-ipv6"]
+
+
+
+Note: The March 26, 2014, Cisco IOS Software Security Advisory bundled publication includes six Cisco Security Advisories. All advisories address vulnerabilities in Cisco IOS Software. Each Cisco IOS Software Security Advisory lists the Cisco IOS Software releases that correct the vulnerability or vulnerabilities detailed in the advisory as well as the Cisco IOS Software releases that correct all Cisco IOS Software vulnerabilities in the March 2014 bundled publication. 
+
+Individual publication links are in Cisco Event Response: Semiannual Cisco IOS Software Security Advisory Bundled Publication at the following link: 
+
+http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar14.html["http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar14.html"]
+</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">This vulnerability affects Cisco devices running an affected Cisco IOS Software or Cisco IOS XE Software release and have IPv6 enabled. IPv6 is not enabled by default in Cisco IOS Software and Cisco IOS XE Software.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">A Cisco device running an affected version of Cisco IOS Software or Cisco IOS XE Software release and has IPv6 enabled will show interfaces with assigned IPv6 addresses when the show ipv6 interface brief command is issued.
+
+
+
+The show ipv6 interface brief command will produce an error message if the running version of Cisco IOS Software or Cisco IOS XE Software release does not support IPv6, or will not show any interfaces with IPv6 addresses if IPv6 is disabled. The system is not vulnerable in either scenario.
+
+
+
+The following example shows the output from the show ipv6 interface brief command issued on a device running Cisco IOS Software enabled for IPv6:
+
+router&gt;show ipv6 interface brief 
+FastEthernet0/0            [up/up]
+    FE80::222:90FF:FEB0:1098
+    2001:DB8:2:93::3
+    200A:1::1
+FastEthernet0/1            [up/up]
+    FE80::222:90FF:FEB0:1099
+    2001:DB8:2:94::1
+Serial0/0/0                [down/down]
+    unassigned
+Serial0/0/0.4              [down/down]
+    unassigned
+Serial0/0/0.5              [down/down]
+    unassigned
+Serial0/0/0.6              [down/down]
+    unassigned
+
+The IPv6 protocol is enabled if the interface configuration command ipv6 address  or ipv6 enable is present in the configuration; however, both may be present. The following examples shows a vulnerable configuration with both present:
+
+interface FastEthernet0/1
+ ipv6 address 2001:0DB8:C18:1::/64 eui-64
+!
+interface FastEthernet0/2
+ ipv6 enable
+
+A device running Cisco IOS Software or Cisco IOS XE Software with IPv6 enabled on a physical or logical interface is vulnerable even if ipv6 unicast-routing is globally disabled (that is, the device is not routing IPv6 packets).
+
+
+
+To determine the Cisco IOS Software release that is running on a Cisco product, administrators can log in to the device and issue the show version command to display the system banner. The system banner confirms that the device is running Cisco IOS Software by displaying text similar to "Cisco Internetwork Operating System Software" or "Cisco IOS Software." The image name displays in parentheses, followed by "Version" and the Cisco IOS Software release name. Other Cisco devices do not have the show version command or may provide different output.
+
+The following example identifies a Cisco product that is running Cisco IOS Software Release 15.2(4)M5 with an installed image name of C3900-UNIVERSALK9-M:
+
+
+Router&gt; show version 
+Cisco IOS Software, C3900 Software (C3900-UNIVERSALK9-M), 15.2(4)M5, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2013 by Cisco Systems, Inc.
+Compiled Fri 13-Sep-13 16:44 by prod_rel_team
+!--- output truncated 
+
+Additional information about Cisco IOS Software release naming conventions is available in White Paper: Cisco IOS and NX-OS Software Reference Guide["http://www.cisco.com/web/about/security/intelligence/ios-ref.html"]. 
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">The following products are not affected by this vulnerability:
+
+    Cisco IOS XR Software 
+    Cisco NX-OS Software 
+    Cisco ASA Software 
+
+No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">Designed by the Internet Engineering Task Force (IETF), IPv6 is intended to replace the current IP version (IPv4).
+
+
+
+A vulnerability in the implementation of the IPv6 protocol stack in Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause I/O memory depletion on the affected device.
+
+
+
+The vulnerability is due to incorrect processing of crafted IPv6 packets. An attacker could exploit this vulnerability by sending specially crafted IPv6 packets to the affected device. An exploit could allow the attacker to trigger I/O memory depletion, causing device instability and could cause a device to reload.
+
+
+
+This vulnerability has been documented in Cisco bug ID CSCui59540["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCui59540"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only), and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2014-2113
+
+
+
+The vulnerability is triggered when an affected device processes a malformed IPv6 packet. Transit IPv6 traffic will not trigger this vulnerability.
+
+
+
+Identification of potentially hitting this vulnerability would be via small amounts of I/O memory being available as shown in the following example via the show memory summary CLI command:
+
+Router#show memory summary
+                Head    Total(b)     Used(b)     Free(b)   Lowest(b)  Largest(b)
+Processor   128C7B50   759290240   249009244   510280996   504250376   510241908
+      I/O   3C400000    62914560    62912692        1868        1868         236
+
+Memory will be held by the Pool Manager process as shown in the following example via the show memory debug leaks chunks command:
+
+Router#show memory debug leaks chunks
+Adding blocks for GD...
+
+                 I/O memory                 
+
+
+Address    Size   Alloc_pc  PID  Alloc-Proc       Name
+
+Chunk Elements:
+
+
+AllocPC  Address  Size  Parent   Name
+
+                 Processor memory                 
+
+
+Address    Size   Alloc_pc  PID  Alloc-Proc       Name
+ 1020A20     1244  430FAC8  7    Pool Manager    *Packet Header*
+ 102226C     1244  430FAC8  7    Pool Manager    *Packet Header*
+ 1022C24     1244  430FAC8  7    Pool Manager    *Packet Header*
+ 1023100     1244  430FAC8  7    Pool Manager    *Packet Header*
+ 10235DC     1244  430FAC8  7    Pool Manager    *Packet Header*
+ 1023AB8     1244  430FAC8  7    Pool Manager    *Packet Header*
+ 102494C     1244  430FAC8  7    Pool Manager    *Packet Header*
+
+A reload of the device is required to release the memory. Disabling IPv6 by removing the IPv6 configuration will not release the memory.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">If IPv6 configuration is required, there are no workarounds for this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+
+In February 2014, Cisco announced details of an industry-wide issue with memory components manufactured by a single supplier between 2005 and 2010. Although the majority of Cisco products that use these components are experiencing field failure rates below expected levels, a device reload or power cycle could expose component failures. While there are no known security implications associated with this issue, a subset of the affected products may experience a memory component failure during the software upgrade process. Cisco recommends customers review the related information and product-specific field notices at www.cisco.com/go/memory["http://www.cisco.com/go/memory"] before making upgrade decisions. Each Field Notice indicates whether the product could experience the memory component failure during a software upgrade.
+
+Cisco IOS Software
+The Cisco IOS Software Checker["https://sec.cloudapps.cisco.com/security/center/selectIOSVersion.x"] is the quickest method to determine exposure to vulnerabilities in Cisco IOS Software. The tool allows customers to quickly identify Cisco Security Advisories that impact specific Cisco IOS Software releases. Users can initiate a search by selecting releases from the drop-down menu or uploading a file from their local system. The tool is also capable of parsing show version command output. Results can be customized by searching against all previously published Cisco Security Advisories, a specific publication, or all the advisories in the March 2014 Bundled Publication. 
+
+
+
+Customers can also use the Cisco IOS Software tables below to determine their exposure. Each row corresponds to a Cisco IOS Software release; if a particular release is vulnerable, the earliest releases that contain the fix are listed in the second column. The third column lists the earliest possible releases that correct all vulnerabilities in this Cisco IOS Software Security Advisory bundled publication.
+
+
+
+
+
+["javascript:Toggle(']Expand to View Detailed Fixed Software Information
+
+    
+        
+            Major Release
+            Availability of Repaired Releases
+        
+        
+            Affected 12.X-Based Releases
+            First Fixed Release
+            First Fixed Release for All Advisories in the March 2014 Bundled Publication
+        
+        
+            There are no affected 12.X based releases
+        
+        
+            Affected 15.0-Based Releases
+            First Fixed Release
+            First Fixed Release for All Advisories in the March 2014 Bundled Publication
+        
+        
+            There are no affected 15.0 based releases
+        
+        
+            Affected 15.1-Based Releases
+            First Fixed Release
+            First Fixed Release for All Advisories in the March 2014 Bundled Publication
+        
+        
+            15.1EY
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1GC
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1M
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1MR
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1MRA
+            Not vulnerable
+
+            
+            Releases prior to 15.1(3)MRA3 are vulnerable; Releases 15.1(3)MRA3 and later are not vulnerable.
+
+            
+        
+        
+            15.1S
+            Not vulnerable
+
+            
+            Vulnerable; First fixed in Release 15.3S["#15_3S"]
+
+            
+        
+        
+            15.1SG
+            Not vulnerable
+
+            
+            Releases prior to 15.1(2)SG4 are vulnerable; Releases 15.1(2)SG4 and later are not vulnerable.
+
+            
+        
+        
+            15.1SNG
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1SNH
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1SNI
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1SVD
+            Not vulnerable
+
+            
+            Not vulnerable
+
+            
+        
+        
+            15.1SVE
+            Not vulnerable
+
+            
+            Not vulnerable
+
+            
+        
+        
+            15.1SVF
+            Not vulnerable
+
+            
+            Not vulnerable
+
+            
+        
+        
+            15.1SVG
+            Not vulnerable
+
+            
+            Not vulnerable
+
+            
+        
+        
+            15.1SY
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1T
+            Not vulnerable
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            15.1XO
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+        
+        
+            Affected 15.2-Based Releases
+            First Fixed Release
+            First Fixed Release for All Advisories in the March 2014 Bundled Publication
+        
+        
+            15.2E
+            15.2(1)E2
+
+            
+            15.2(1)E2
+
+            
+        
+        
+            15.2EX
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+            
+        
+        
+            15.2EY
+            Vulnerable; First fixed in Release 15.2E["#15_2E"]
+
+            
+            15.2(1)E2
+
+            
+        
+        
+            15.2GC
+            Releases up to and including 15.2(3)GC1 are not vulnerable. 
+
+            15.2(4)GC1
+
+            
+            15.2(4)GC1
+
+            
+        
+        
+            15.2JA
+            Releases up to and including 15.2(2)JA2 are not vulnerable. 
+
+            
+            
+        
+        
+            15.2JAX
+            Not vulnerable
+
+            
+            
+        
+        
+            15.2JB
+            Only releases 15.2(4)JB through 15.2(4)JB3a are vulnerable.
+
+            
+            15.2(4)JB3h
+
+            
+        
+        
+            15.2JBX
+            Vulnerable; contact your support organization per the instructions in Obtaining Fixed Software["#fixes"] section of this advisory.
+
+            
+            
+        
+        
+            15.2JN
+            Releases up to and including 15.2(2)JN2 are not vulnerable. 
+
+            
+            
+        
+        
+            15.2M
+            15.2(4)M6; Available on 26-MAR-14
+
+            
+            15.2(4)M6; Available on 26-MAR-14
+
+            
+        
+        
+            15.2S
+            Releases up to and including 15.2(2)S2 are not vulnerable. 
+
+            15.2(4)S5
+
+            Cisco IOS XE devices: Please see Cisco IOS XE Software Availability["#iosxe"]
+
+            
+            15.2(4)S5
+
+            
+        
+        
+            15.2SA
+            Not vulnerable
+
+            
+            
+        
+        
+            15.2SNG
+            Not vulnerable
+
+            
+            
+        
+        
+            15.2SNH
+            Not vulnerable
+
+            
+            
+        
+        
+            15.2SNI
+            Not vulnerable
+
+            
+            
+        
+        
+            15.2T
+            Not vulnerable
+
+            
+            
+        
+        
+            Affected 15.3-Based Releases
+            First Fixed Release
+            First Fixed Release for All Advisories in the March 2014 Bundled Publication
+        
+        
+            15.3M
+            15.3(3)M2
+
+            
+            15.3(3)M2
+
+            
+        
+        
+            15.3S
+            15.3(3)S2
+
+            Cisco IOS XE devices: Please see Cisco IOS XE Software Availability["#iosxe"]
+
+            
+            15.3(3)S2
+
+            
+        
+        
+            15.3T
+            15.3(1)T4; Available on 30-MAY-14
+
+            15.3(2)T3
+
+            
+            15.3(2)T3
+
+            
+        
+        
+            Affected 15.4-Based Releases
+            First Fixed Release
+            First Fixed Release for All Advisories in the March 2014 Bundled Publication
+        
+        
+            There are no affected 15.4 based releases
+        
+    
+
+Cisco IOS XE Software
+
+    
+        
+            Cisco IOS XE Software Release 
+            First Fixed Release 
+            First Fixed Release for All Advisories in the March 2014 Cisco IOS Software Security Advisory Bundled Publication 
+        
+        
+            2.1.x 
+            Not vulnerable
+            Not vulnerable
+        
+        
+            2.2.x 
+            Not vulnerable
+            Not vulnerable
+        
+        
+            2.3.x 
+            Not vulnerable
+            Not vulnerable
+        
+        
+            2.4.x 
+            Not vulnerable
+            Not vulnerable
+        
+        
+            2.5.x 
+            Not vulnerable
+            Not vulnerable
+        
+        
+            2.6.x 
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.1.xS 
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.1.xSG
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.2.xS 
+            Not vulnerable
+            Vulnerable; migrate to 3.7.5S or later.
+        
+        
+            3.2xSE
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.2.xSG
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.2.xXO
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.2.xSQ
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.3.xS 
+            Not vulnerable
+            Vulnerable; migrate to 3.7.5S or later.
+        
+        
+            3.3.xSE
+            Not vulnerable
+            Not vulnerable.
+        
+        
+            3.3xSG
+            Not vulnerable
+            Vulnerable; migrate to 3.5.2E.
+        
+        
+            3.3xXO
+            Vulnerable; migrate to 3.6.0E (available May 2014).
+            Vulnerable; migrate to 3.6.0E (available May 2014).
+        
+        
+            3.3xSQ
+            Not vulnerable
+            Not vulnerable
+        
+        
+            3.4.xS 
+            Not vulnerable
+            Vulnerable; migrate to 3.7.5S or later.
+        
+        
+            3.4.xSG
+            Not vulnerable
+            Vulnerable; migrate to 3.5.2E.
+        
+        
+            3.5.xS 
+            Not vulnerable
+            Vulnerable; migrate to 3.7.5S or later.
+        
+        
+            3.5.xE
+            3.5.2E
+            3.5.2E
+        
+        
+            3.6.xS 
+            Not vulnerable
+            Vulnerable; migrate to 3.7.5S or later.
+        
+        
+            3.6.xE
+            Not vulnerable
+            3.6.0E (available May 2014)
+        
+        
+            3.7.xS
+            3.7.5S
+            3.7.5S
+        
+        
+            3.8.xS
+            Vulnerable; migrate to 3.10.2S or later.
+            Vulnerable; migrate to 3.10.2S or later.
+        
+        
+            3.9.xS
+            Vulnerable; migrate to 3.10.2S or later.
+            Vulnerable; migrate to 3.10.2S or later.
+        
+        
+            3.10.xS
+            3.10.2S
+            3.10.2S
+        
+        
+            3.11.xS
+            Not vulnerable
+            Not vulnerable
+        
+    
+
+Cisco IOS XR Software
+Cisco IOS XR Software is not affected by any of the vulnerabilities that are disclosed in the March 2014 Cisco IOS Software Security Advisory Bundled Publication.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.
+
+
+
+This vulnerability was discovered by Cisco during internal testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-ipv6</cvrf:URL>
+      <cvrf:Description>Cisco IOS Software Crafted IPv6 Packet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33351</cvrf:URL>
+      <cvrf:Description>Cisco IOS Software and Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="IOS">
+        <Branch Type="Product Version" Name="15.2S">
+          <Branch Type="Service Pack" Name="15.2(4)S">
+            <FullProductName ProductID="CVRFPID-112424">Cisco IOS 15.2(4)S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S1">
+            <FullProductName ProductID="CVRFPID-183813">Cisco IOS 15.2(4)S1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S4">
+            <FullProductName ProductID="CVRFPID-183835">Cisco IOS 15.2(4)S4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S2">
+            <FullProductName ProductID="CVRFPID-183837">Cisco IOS 15.2(4)S2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S3">
+            <FullProductName ProductID="CVRFPID-183839">Cisco IOS 15.2(4)S3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S0c">
+            <FullProductName ProductID="CVRFPID-184933">Cisco IOS 15.2(4)S0c</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S1c">
+            <FullProductName ProductID="CVRFPID-188198">Cisco IOS 15.2(4)S1c</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S3a">
+            <FullProductName ProductID="CVRFPID-191686">Cisco IOS 15.2(4)S3a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)S4a">
+            <FullProductName ProductID="CVRFPID-195062">Cisco IOS 15.2(4)S4a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.3T">
+          <Branch Type="Service Pack" Name="15.3(1)T">
+            <FullProductName ProductID="CVRFPID-103851">Cisco IOS 15.3(1)T</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(2)T">
+            <FullProductName ProductID="CVRFPID-111023">Cisco IOS 15.3(2)T</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(1)T1">
+            <FullProductName ProductID="CVRFPID-187231">Cisco IOS 15.3(1)T1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(1)T2">
+            <FullProductName ProductID="CVRFPID-187232">Cisco IOS 15.3(1)T2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(1)T3">
+            <FullProductName ProductID="CVRFPID-187425">Cisco IOS 15.3(1)T3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(2)T1">
+            <FullProductName ProductID="CVRFPID-190432">Cisco IOS 15.3(2)T1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(2)T2">
+            <FullProductName ProductID="CVRFPID-190493">Cisco IOS 15.3(2)T2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.2M">
+          <Branch Type="Service Pack" Name="15.2(4)M">
+            <FullProductName ProductID="CVRFPID-106899">Cisco IOS 15.2(4)M</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)M1">
+            <FullProductName ProductID="CVRFPID-116774">Cisco IOS 15.2(4)M1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)M2">
+            <FullProductName ProductID="CVRFPID-117681">Cisco IOS 15.2(4)M2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)M4">
+            <FullProductName ProductID="CVRFPID-117682">Cisco IOS 15.2(4)M4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)M3">
+            <FullProductName ProductID="CVRFPID-117683">Cisco IOS 15.2(4)M3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)M5">
+            <FullProductName ProductID="CVRFPID-117789">Cisco IOS 15.2(4)M5</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.2GC">
+          <Branch Type="Service Pack" Name="15.2(4)GC">
+            <FullProductName ProductID="CVRFPID-193316">Cisco IOS 15.2(4)GC</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.3S">
+          <Branch Type="Service Pack" Name="15.3(1)S">
+            <FullProductName ProductID="CVRFPID-113970">Cisco IOS 15.3(1)S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(2)S">
+            <FullProductName ProductID="CVRFPID-116256">Cisco IOS 15.3(2)S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(3)S">
+            <FullProductName ProductID="CVRFPID-117783">Cisco IOS 15.3(3)S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(1)S2">
+            <FullProductName ProductID="CVRFPID-187962">Cisco IOS 15.3(1)S2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(1)S1">
+            <FullProductName ProductID="CVRFPID-188008">Cisco IOS 15.3(1)S1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(2)S2">
+            <FullProductName ProductID="CVRFPID-191331">Cisco IOS 15.3(2)S2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(2)S1">
+            <FullProductName ProductID="CVRFPID-191336">Cisco IOS 15.3(2)S1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(1)S1e">
+            <FullProductName ProductID="CVRFPID-192443">Cisco IOS 15.3(1)S1e</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(3)S1">
+            <FullProductName ProductID="CVRFPID-193406">Cisco IOS 15.3(3)S1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(3)S1a">
+            <FullProductName ProductID="CVRFPID-197457">Cisco IOS 15.3(3)S1a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.2E">
+          <Branch Type="Service Pack" Name="15.2(1)E">
+            <FullProductName ProductID="CVRFPID-183811">Cisco IOS 15.2(1)E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(1)E1">
+            <FullProductName ProductID="CVRFPID-195469">Cisco IOS 15.2(1)E1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.2JB">
+          <Branch Type="Service Pack" Name="15.2(4)JB">
+            <FullProductName ProductID="CVRFPID-194475">Cisco IOS 15.2(4)JB</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)JB1">
+            <FullProductName ProductID="CVRFPID-195690">Cisco IOS 15.2(4)JB1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)JB2">
+            <FullProductName ProductID="CVRFPID-195894">Cisco IOS 15.2(4)JB2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)JB3">
+            <FullProductName ProductID="CVRFPID-196399">Cisco IOS 15.2(4)JB3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(4)JB3a">
+            <FullProductName ProductID="CVRFPID-197464">Cisco IOS 15.2(4)JB3a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.3M">
+          <Branch Type="Service Pack" Name="15.3(3)M">
+            <FullProductName ProductID="CVRFPID-187412">Cisco IOS 15.3(3)M</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.3(3)M1">
+            <FullProductName ProductID="CVRFPID-193284">Cisco IOS 15.3(3)M1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.2JN">
+          <Branch Type="Service Pack" Name="15.2(4)JN">
+            <FullProductName ProductID="CVRFPID-194433">Cisco IOS 15.2(4)JN</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.2EY">
+          <Branch Type="Service Pack" Name="15.2(1)EY">
+            <FullProductName ProductID="CVRFPID-191928">Cisco IOS 15.2(1)EY</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.3XB">
+          <Branch Type="Service Pack" Name="15.3(3)XB12">
+            <FullProductName ProductID="CVRFPID-195876">Cisco IOS 15.3(3)XB12</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVR">
+          <Branch Type="Service Pack" Name="15.1(3)SVR1">
+            <FullProductName ProductID="CVRFPID-277230">Cisco IOS 15.1(3)SVR1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR2">
+            <FullProductName ProductID="CVRFPID-277253">Cisco IOS 15.1(3)SVR2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR3">
+            <FullProductName ProductID="CVRFPID-279337">Cisco IOS 15.1(3)SVR3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR10">
+            <FullProductName ProductID="CVRFPID-290618">Cisco IOS 15.1(3)SVR10</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVS">
+          <Branch Type="Service Pack" Name="15.1(3)SVS">
+            <FullProductName ProductID="CVRFPID-277232">Cisco IOS 15.1(3)SVS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVS1">
+            <FullProductName ProductID="CVRFPID-279335">Cisco IOS 15.1(3)SVS1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVT">
+          <Branch Type="Service Pack" Name="15.1(3)SVT1">
+            <FullProductName ProductID="CVRFPID-280759">Cisco IOS 15.1(3)SVT1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT2">
+            <FullProductName ProductID="CVRFPID-282026">Cisco IOS 15.1(3)SVT2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT3">
+            <FullProductName ProductID="CVRFPID-284785">Cisco IOS 15.1(3)SVT3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT4">
+            <FullProductName ProductID="CVRFPID-286399">Cisco IOS 15.1(3)SVT4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVU">
+          <Branch Type="Service Pack" Name="15.1(3)SVU1">
+            <FullProductName ProductID="CVRFPID-283833">Cisco IOS 15.1(3)SVU1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU10">
+            <FullProductName ProductID="CVRFPID-284291">Cisco IOS 15.1(3)SVU10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU2">
+            <FullProductName ProductID="CVRFPID-284566">Cisco IOS 15.1(3)SVU2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU11">
+            <FullProductName ProductID="CVRFPID-286400">Cisco IOS 15.1(3)SVU11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU20">
+            <FullProductName ProductID="CVRFPID-289270">Cisco IOS 15.1(3)SVU20</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU21">
+            <FullProductName ProductID="CVRFPID-290557">Cisco IOS 15.1(3)SVU21</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVV">
+          <Branch Type="Service Pack" Name="15.1(3)SVV1">
+            <FullProductName ProductID="CVRFPID-284341">Cisco IOS 15.1(3)SVV1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV2">
+            <FullProductName ProductID="CVRFPID-286029">Cisco IOS 15.1(3)SVV2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV3">
+            <FullProductName ProductID="CVRFPID-286940">Cisco IOS 15.1(3)SVV3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV4">
+            <FullProductName ProductID="CVRFPID-289371">Cisco IOS 15.1(3)SVV4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVW">
+          <Branch Type="Service Pack" Name="15.1(3)SVW">
+            <FullProductName ProductID="CVRFPID-286451">Cisco IOS 15.1(3)SVW</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVW1">
+            <FullProductName ProductID="CVRFPID-286844">Cisco IOS 15.1(3)SVW1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVX">
+          <Branch Type="Service Pack" Name="15.1(3)SVX">
+            <FullProductName ProductID="CVRFPID-286927">Cisco IOS 15.1(3)SVX</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVX1">
+            <FullProductName ProductID="CVRFPID-289301">Cisco IOS 15.1(3)SVX1</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Type="Product Name" Name="Cisco IOS XE Software">
+        <Branch Type="Product Version" Name="3.7S">
+          <Branch Type="Service Pack" Name="3.7.0S">
+            <FullProductName ProductID="CVRFPID-184480">Cisco IOS XE Software 3.7.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.1S">
+            <FullProductName ProductID="CVRFPID-184481">Cisco IOS XE Software 3.7.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.2S">
+            <FullProductName ProductID="CVRFPID-194730">Cisco IOS XE Software 3.7.2S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.3S">
+            <FullProductName ProductID="CVRFPID-194731">Cisco IOS XE Software 3.7.3S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.4S">
+            <FullProductName ProductID="CVRFPID-194732">Cisco IOS XE Software 3.7.4S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.4aS">
+            <FullProductName ProductID="CVRFPID-213798">Cisco IOS XE Software 3.7.4aS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.2tS">
+            <FullProductName ProductID="CVRFPID-213799">Cisco IOS XE Software 3.7.2tS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.0xbS">
+            <FullProductName ProductID="CVRFPID-213848">Cisco IOS XE Software 3.7.0xbS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.0bS">
+            <FullProductName ProductID="CVRFPID-213955">Cisco IOS XE Software 3.7.0bS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.0xaS">
+            <FullProductName ProductID="CVRFPID-213956">Cisco IOS XE Software 3.7.0xaS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.1aS">
+            <FullProductName ProductID="CVRFPID-213957">Cisco IOS XE Software 3.7.1aS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.8S">
+          <Branch Type="Service Pack" Name="3.8.0S">
+            <FullProductName ProductID="CVRFPID-194735">Cisco IOS XE Software 3.8.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.8.1S">
+            <FullProductName ProductID="CVRFPID-194736">Cisco IOS XE Software 3.8.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.8.2S">
+            <FullProductName ProductID="CVRFPID-194737">Cisco IOS XE Software 3.8.2S</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.9S">
+          <Branch Type="Service Pack" Name="3.9.1S">
+            <FullProductName ProductID="CVRFPID-194842">Cisco IOS XE Software 3.9.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.0S">
+            <FullProductName ProductID="CVRFPID-194843">Cisco IOS XE Software 3.9.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.2S">
+            <FullProductName ProductID="CVRFPID-202558">Cisco IOS XE Software 3.9.2S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.0xaS">
+            <FullProductName ProductID="CVRFPID-213815">Cisco IOS XE Software 3.9.0xaS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.1aS">
+            <FullProductName ProductID="CVRFPID-213816">Cisco IOS XE Software 3.9.1aS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.0aS">
+            <FullProductName ProductID="CVRFPID-213825">Cisco IOS XE Software 3.9.0aS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.5E">
+          <Branch Type="Service Pack" Name="3.5.0E">
+            <FullProductName ProductID="CVRFPID-197145">Cisco IOS XE Software 3.5.0E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.5.1E">
+            <FullProductName ProductID="CVRFPID-206168">Cisco IOS XE Software 3.5.1E</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.10S">
+          <Branch Type="Service Pack" Name="3.10.0S">
+            <FullProductName ProductID="CVRFPID-198123">Cisco IOS XE Software 3.10.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.1S">
+            <FullProductName ProductID="CVRFPID-198124">Cisco IOS XE Software 3.10.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.1xcS">
+            <FullProductName ProductID="CVRFPID-213469">Cisco IOS XE Software 3.10.1xcS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.1xbS">
+            <FullProductName ProductID="CVRFPID-213642">Cisco IOS XE Software 3.10.1xbS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.11SW">
+          <Branch Type="Service Pack" Name="17.11.99SW">
+            <FullProductName ProductID="CVRFPID-296860">Cisco IOS XE Software 17.11.99SW</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS Software and Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCui59540</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCui59540</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-2113</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-103851</ProductID>
+        <ProductID>CVRFPID-106899</ProductID>
+        <ProductID>CVRFPID-111023</ProductID>
+        <ProductID>CVRFPID-112424</ProductID>
+        <ProductID>CVRFPID-113970</ProductID>
+        <ProductID>CVRFPID-116256</ProductID>
+        <ProductID>CVRFPID-116774</ProductID>
+        <ProductID>CVRFPID-117681</ProductID>
+        <ProductID>CVRFPID-117682</ProductID>
+        <ProductID>CVRFPID-117683</ProductID>
+        <ProductID>CVRFPID-117783</ProductID>
+        <ProductID>CVRFPID-117789</ProductID>
+        <ProductID>CVRFPID-183811</ProductID>
+        <ProductID>CVRFPID-183813</ProductID>
+        <ProductID>CVRFPID-183835</ProductID>
+        <ProductID>CVRFPID-183837</ProductID>
+        <ProductID>CVRFPID-183839</ProductID>
+        <ProductID>CVRFPID-184933</ProductID>
+        <ProductID>CVRFPID-187231</ProductID>
+        <ProductID>CVRFPID-187232</ProductID>
+        <ProductID>CVRFPID-187412</ProductID>
+        <ProductID>CVRFPID-187425</ProductID>
+        <ProductID>CVRFPID-187962</ProductID>
+        <ProductID>CVRFPID-188008</ProductID>
+        <ProductID>CVRFPID-188198</ProductID>
+        <ProductID>CVRFPID-190432</ProductID>
+        <ProductID>CVRFPID-190493</ProductID>
+        <ProductID>CVRFPID-191331</ProductID>
+        <ProductID>CVRFPID-191336</ProductID>
+        <ProductID>CVRFPID-191686</ProductID>
+        <ProductID>CVRFPID-191928</ProductID>
+        <ProductID>CVRFPID-192443</ProductID>
+        <ProductID>CVRFPID-193284</ProductID>
+        <ProductID>CVRFPID-193316</ProductID>
+        <ProductID>CVRFPID-193406</ProductID>
+        <ProductID>CVRFPID-194433</ProductID>
+        <ProductID>CVRFPID-194475</ProductID>
+        <ProductID>CVRFPID-195062</ProductID>
+        <ProductID>CVRFPID-195469</ProductID>
+        <ProductID>CVRFPID-195690</ProductID>
+        <ProductID>CVRFPID-195876</ProductID>
+        <ProductID>CVRFPID-195894</ProductID>
+        <ProductID>CVRFPID-196399</ProductID>
+        <ProductID>CVRFPID-197457</ProductID>
+        <ProductID>CVRFPID-197464</ProductID>
+        <ProductID>CVRFPID-277230</ProductID>
+        <ProductID>CVRFPID-277232</ProductID>
+        <ProductID>CVRFPID-277253</ProductID>
+        <ProductID>CVRFPID-279335</ProductID>
+        <ProductID>CVRFPID-279337</ProductID>
+        <ProductID>CVRFPID-280759</ProductID>
+        <ProductID>CVRFPID-282026</ProductID>
+        <ProductID>CVRFPID-283833</ProductID>
+        <ProductID>CVRFPID-284291</ProductID>
+        <ProductID>CVRFPID-284341</ProductID>
+        <ProductID>CVRFPID-284566</ProductID>
+        <ProductID>CVRFPID-284785</ProductID>
+        <ProductID>CVRFPID-286029</ProductID>
+        <ProductID>CVRFPID-286399</ProductID>
+        <ProductID>CVRFPID-286400</ProductID>
+        <ProductID>CVRFPID-286451</ProductID>
+        <ProductID>CVRFPID-286844</ProductID>
+        <ProductID>CVRFPID-286927</ProductID>
+        <ProductID>CVRFPID-286940</ProductID>
+        <ProductID>CVRFPID-289270</ProductID>
+        <ProductID>CVRFPID-289301</ProductID>
+        <ProductID>CVRFPID-289371</ProductID>
+        <ProductID>CVRFPID-290557</ProductID>
+        <ProductID>CVRFPID-290618</ProductID>
+        <ProductID>CVRFPID-184480</ProductID>
+        <ProductID>CVRFPID-184481</ProductID>
+        <ProductID>CVRFPID-194730</ProductID>
+        <ProductID>CVRFPID-194731</ProductID>
+        <ProductID>CVRFPID-194732</ProductID>
+        <ProductID>CVRFPID-194735</ProductID>
+        <ProductID>CVRFPID-194736</ProductID>
+        <ProductID>CVRFPID-194737</ProductID>
+        <ProductID>CVRFPID-194842</ProductID>
+        <ProductID>CVRFPID-194843</ProductID>
+        <ProductID>CVRFPID-197145</ProductID>
+        <ProductID>CVRFPID-198123</ProductID>
+        <ProductID>CVRFPID-198124</ProductID>
+        <ProductID>CVRFPID-202558</ProductID>
+        <ProductID>CVRFPID-206168</ProductID>
+        <ProductID>CVRFPID-213469</ProductID>
+        <ProductID>CVRFPID-213642</ProductID>
+        <ProductID>CVRFPID-213798</ProductID>
+        <ProductID>CVRFPID-213799</ProductID>
+        <ProductID>CVRFPID-213815</ProductID>
+        <ProductID>CVRFPID-213816</ProductID>
+        <ProductID>CVRFPID-213825</ProductID>
+        <ProductID>CVRFPID-213848</ProductID>
+        <ProductID>CVRFPID-213955</ProductID>
+        <ProductID>CVRFPID-213956</ProductID>
+        <ProductID>CVRFPID-213957</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>If IPv6 configuration is required, there are no workarounds for this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-ipv6</URL>
+        <Description>Cisco IOS Software Crafted IPv6 Packet Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

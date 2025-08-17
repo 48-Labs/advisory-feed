@@ -1,0 +1,61 @@
+{
+  "identifier": "cisco-sa-20180328-smi2",
+  "title": "Cisco IOS and IOS XE Software Smart Install Remote Code Execution Vulnerability",
+  "version": "1.8",
+  "firstPublished": "2018-03-28T16:00:00.000+0000",
+  "lastPublished": "2022-12-15T22:19:55.007+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi2",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-787",
+  "erpPubIds": "ERP-66682",
+  "cve": "CVE-2018-0171",
+  "ciscoBugId": "CSCvg76186",
+  "status": "",
+  "summary": "A vulnerability in the Smart Install feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition, or to execute arbitrary code on an affected ",
+  "totalCount": 3,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "46096",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-03-29-new.html"
+        },
+        {
+          "name": "46097",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-03-29-new.html"
+        },
+        {
+          "name": "46468",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-66682&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS and IOS XE Software Smart Install Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8190&signatureSubId=0&releaseVersion=S1014&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS XE Software Smart Install Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8190&signatureSubId=1&releaseVersion=S1014&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

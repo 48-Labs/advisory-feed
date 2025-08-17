@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20131002-iosxr",
+  "title": "Cisco IOS XR Software Memory Exhaustion Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2013-10-02T16:00:00.000+0000",
+  "lastPublished": "2013-10-02T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131002-iosxr",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "30978,30921",
+  "cve": "CVE-2013-5503",
+  "ciscoBugId": "CSCue69413",
+  "status": "",
+  "summary": "Cisco IOS XR Software version 4.3.1 contains a vulnerability that could result in complete packet memory exhaustion. &nbsp;Successful exploitation could render critical services on the affected device unable to allocate packets resulting in a denial of service (DoS) condition.Cisco ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS XR Software Memory Exhaustion Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30978&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS XR Software Memory Exhaustion Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30921"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "UDP Host Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4002&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS XR Memory Exhaustion Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4488&signatureSubId=0&releaseVersion=S823&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

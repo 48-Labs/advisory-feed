@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20200122-ios-xr-evpn",
+  "title": "Cisco IOS XR Software BGP EVPN Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2020-01-22T16:00:00.000+0000",
+  "lastPublished": "2020-02-07T16:48:01.160+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200122-ios-xr-evpn",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2019-16019,CVE-2019-16020,CVE-2019-16021,CVE-2019-16022,CVE-2019-16023",
+  "ciscoBugId": "CSCvr74413,CSCvr74986,CSCvr80793,CSCvr83742,CSCvr84254",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the implementation of Border Gateway Protocol (BGP) Ethernet VPN (EVPN) functionality in Cisco&nbsp;IOS XR Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition.The vulnerabilities are due to incorrect ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "52633",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-22-new.html"
+        }
+      ]
+    }
+  ]
+}

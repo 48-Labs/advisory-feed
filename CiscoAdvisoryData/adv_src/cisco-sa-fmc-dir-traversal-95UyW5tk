@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-fmc-dir-traversal-95UyW5tk",
+  "title": "Cisco Firepower Management Center Software Authenticated Directory Traversal Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2021-10-27T16:00:00.000+0000",
+  "lastPublished": "2021-10-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-dir-traversal-95UyW5tk",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-26",
+  "erpPubIds": "ERP-74773",
+  "cve": "CVE-2021-34762",
+  "ciscoBugId": "CSCvy41771",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Firepower Management Center (FMC) Software could allow an authenticated, remote attacker to perform a directory traversal attack on an affected device. The attacker would ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "58446",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2021 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74773&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

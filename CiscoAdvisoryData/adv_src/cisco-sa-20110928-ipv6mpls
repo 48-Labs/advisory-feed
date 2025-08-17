@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20110928-ipv6mpls",
+  "title": "Cisco IOS Software IP Version 6 over Multiprotocol Label Switching Vulnerabilities",
+  "version": "1.2",
+  "firstPublished": "2011-09-28T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:20:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-ipv6mpls",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "Cisco-SA-20110928-CVE-2011-3274,24126",
+  "cve": "CVE-2011-3274,CVE-2011-3282",
+  "ciscoBugId": "CSCtj30155,CSCto07919",
+  "status": "",
+  "summary": "Cisco IOS Software is affected by two vulnerabilities that cause aCisco IOS device to reload when processing IP version 6 (IPv6) packets over aMultiprotocol Label Switching (MPLS) domain. These vulnerabilities are:        Crafted IPv6 Packet May ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software ICMPv6 Packet Multiprotocol Label Switching Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24126&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco IOS Software Crafted IPv6 over MPLS Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20110928-CVE-2011-3274"
+        }
+      ]
+    }
+  ]
+}

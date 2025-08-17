@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20090729-bgp",
+  "title": "Cisco IOS Software Border Gateway Protocol 4-Byte Autonomous System Number Vulnerabilities",
+  "version": "1.2",
+  "firstPublished": "2009-07-29T16:00:00.000+0000",
+  "lastPublished": "2009-07-29T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090729-bgp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "18703,18702",
+  "cve": "CVE-2009-1168,CVE-2009-2049",
+  "ciscoBugId": "CSCta33973",
+  "status": "",
+  "summary": "   Recent versions of Cisco IOS Software support RFC4893 ('BGP Support for Four-octet AS Number Space') and contain two remote denial of service (DoS) vulnerabilities when handling specific Border Gateway Protocol (BGP) updates.    These vulnerabilities affect only devices ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software BGP Autonomous System Path Segments Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18703&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Malformed BGP Update Message Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18702&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

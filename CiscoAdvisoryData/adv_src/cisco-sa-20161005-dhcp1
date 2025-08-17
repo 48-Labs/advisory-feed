@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20161005-dhcp1",
+  "title": "Cisco NX-OS Software Crafted DHCPv4 Packet Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-10-05T16:00:00.000+0000",
+  "lastPublished": "2016-10-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-dhcp1",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2015-6392",
+  "ciscoBugId": "CSCuq24603,CSCur93159,CSCus21693,CSCut76171",
+  "status": "",
+  "summary": "A vulnerability in the&nbsp;implementation of the DHCPv4 relay agent and smart relay agent in Cisco NX-OS Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.The vulnerability is due to improper validation of ",
+  "totalCount": 5,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "37426",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-06-seu.html"
+        }
+      ]
+    }
+  ]
+}

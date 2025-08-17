@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190123-miner-chat-xss",
+  "title": "Cisco SocialMiner Chat Feed Cross-Site Scripting Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2019-01-23T16:00:00.000+0000",
+  "lastPublished": "2019-01-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190123-miner-chat-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2019-1668",
+  "ciscoBugId": "CSCvi52835,CSCvn50066,CSCvn59276",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the chat feed feature of Cisco SocialMiner could allow an unauthenticated, remote attacker to perform cross-site scripting (XSS) attacks against a user of the web-based user interface of an affected system.These vulnerabilities are due to insufficient ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

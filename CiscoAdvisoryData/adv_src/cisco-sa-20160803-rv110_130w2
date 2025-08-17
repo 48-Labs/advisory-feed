@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20160803-rv110_130w2",
+  "title": "Cisco RV110W, RV130W, and RV215W Routers Static Credential Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-08-03T16:00:00.000+0000",
+  "lastPublished": "2016-08-03T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160803-rv110_130w2",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-287",
+  "cve": "CVE-2015-6397",
+  "ciscoBugId": "CSCuv90139,CSCux58175,CSCux73557",
+  "status": "",
+  "summary": "A vulnerability in the default account when used with a specific configuration of the Cisco RV110W Wireless-N VPN Firewall, Cisco RV130W Wireless-N Multifunction VPN Router, and the&nbsp;Cisco RV215W Wireless-N VPN Router&nbsp;could allow an authenticated, remote attacker to gain ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "39795",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-08-04-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco RV110W, RV130W and RV215W Static Credential",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7610&signatureSubId=0&releaseVersion=S932&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

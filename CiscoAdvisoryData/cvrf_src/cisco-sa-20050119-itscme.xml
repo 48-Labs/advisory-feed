@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Vulnerability in Cisco IOS Embedded Call Processing Solutions</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20050119-itscme</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2005-01-19T15:00:00</cvrf:Date>
+        <cvrf:Description>Added Release 12.2ZJ to Software Versions and Fixes
+			 table.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2005-01-19T15:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2005-01-19T15:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">
+ 
+  Cisco Internetwork Operating System (IOS®) Software release trains
+	 12.1YD, 12.2T, 12.3 and 12.3T, when configured for the Cisco IOS Telephony
+	 Service (ITS), Cisco CallManager Express (CME) or Survivable Remote Site
+	 Telephony (SRST) may contain a vulnerability in processing certain malformed
+	 control protocol messages.
+ 
+   A successful exploitation of this vulnerability may cause a reload of
+	 the device and could be exploited repeatedly to produce a Denial of Service
+	 (DoS). This advisory is available at
+	 https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20050119-itscme["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20050119-itscme"]
+
+
+  
+  Cisco has made free software upgrades available to address this
+	 vulnerability for all affected customers. There are workarounds available to
+	 mitigate the effects of the vulnerability.
+ 
+  This vulnerability is documented by Cisco bug ID CSCee08584.
+ 
+ 
+
+</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">
+
+
+
+
+ 
+  This section provides details on affected products.
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">
+
+
+
+ 
+   This issue affects all Cisco devices running any unfixed version of
+	 Cisco IOS code that supports, and is configured for ITS, CME or SRST. 
+ 
+   A Cisco device running ITS or CME will have the following line in the
+	 configuration:
+ 
+  
+telephony-service
+ 
+  A Cisco device running SRST will have the following line in the
+	 configuration:
+ 
+  
+call-manager-fallback
+ 
+  To determine the software running on a Cisco product, log in to the
+	 device and issue the show version command to display
+	 the system banner. Cisco IOS Software will identify itself as "Internetwork
+	 Operating System Software" or simply "IOS." On the next line of output, the
+	 image name will be displayed between parentheses, followed by "Version" and the
+	 IOS release name. Other Cisco devices will not have the show
+	 version command or will give different output. 
+ 
+   The following example identifies a Cisco product running IOS release
+	 12.0(3) with an installed image name of C2500-IS-L:
+ 
+  
+Cisco Internetwork Operating System Software IOS (TM)
+    
+2500 Software (C2500-IS-L), Version 12.0(3), RELEASE SOFTWARE
+
+ 
+  The release train label is "12.0". 
+ 
+  The next example shows a product running IOS release 12.3(6) with an
+	 image name of C2600-JS-MZ: 
+ 
+  
+Cisco Internetwork Operating System Software IOS (tm)
+
+C2600 Software (C2600-JS-MZ), Version 12.3(6), RELEASE SOFTWARE (fc1)
+
+ 
+  Additional information about Cisco IOS release naming can be found at
+	 http://www.cisco.com/warp/public/620/1.html["http://www.cisco.com/warp/public/620/1.html"].
+
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">
+
+
+
+ 
+  ITS, CME and SRST are IOS-only features. Devices that do not run IOS
+	 are not vulnerable.
+
+
+
+
+
+
+ 
+
+</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">
+
+
+
+
+ 
+  More information about Cisco's IOS Telephony Service (ITS) and Cisco
+	 CallManager Express (CME) can be found here:
+ 
+  
+http://www.cisco.com/en/US/products/sw/voicesw/ps4625/index.html["http://www.cisco.com/en/US/products/sw/voicesw/ps4625/index.html"]
+
+
+  
+  More information on Cisco's Survivable Remote Site Telephony (SRST) can
+	 be found here:
+ 
+  
+http://www.cisco.com/en/US/products/sw/voicesw/ps2169/index.html["http://www.cisco.com/en/US/products/sw/voicesw/ps2169/index.html"]
+
+
+  
+  ITS, CME and SRST are features that allow a Cisco device running IOS to
+	 control IP Phones using the Skinny Call Control Protocol (SCCP). SCCP is the
+	 Cisco CallManager native signaling protocol.
+ 
+  Certain malformed packets sent to the SCCP port on an IOS device
+	 configured for ITS, CME or SRST may cause the target device to reload. This
+	 issue is documented in Cisco bug ID CSCee08584.
+ 
+  The following commands can be used to determine if ITS or CME are
+	 running. A device that does not have ITS or CME enabled will display:
+ 
+  
+Router#show telephony-service
+telephony-service is not enabled
+ 
+  A device that has ITS or CME enabled will show something similar
+	 to:
+ 
+  
+Router#show telephony-service
+CONFIG (Version=3.0)                    
+=====================                   
+Cisco CallManager Express               
+ip source-address 192.168.1.1 port 2000
+max-ephones 2                           
+max-dn 2                                
+max-conferences 8                       
+max-redirect 5                          
+time-format 12                          
+date-format mm-dd-yy                    
+keepalive 30                            
+timeout interdigit 10                   
+timeout busy 10                         
+timeout ringing 180                     
+edit DN through Web:  disabled.         
+edit TIME through web:  disabled.       
+Log (table parameters):                 
+     max-size: 150                      
+     retain-timer: 15                   
+create cnf-files version-stamp Jan 01 2002 00:00:00
+auto assign 1 to 2                                 
+local directory service: enabled. 
+ 
+  The following commands can be used to determine if SRST is running. A
+	 device that does not have SRST enabled will display:
+ 
+  
+Router#show call-manager-fallback 
+Call-manager fallback is not enabled
+ 
+  A device that has SRST enabled will show something similar to:
+ 
+  
+Router#show call-manager-fallback 
+CONFIG
+======
+ip source-address 192.168.1.1 port 2000
+max-ephones 2
+max-dn 4
+huntstop
+time-format 12
+date-format mm-dd-yy
+keepalive 30
+interdigit timeout 10
+busy timeout 10
+Limit number of DNs per phone:
+  7910: 34
+  7935: 34
+  7940: 34
+  7960: 34 
+ 
+  Spoofed attacks are impractical since the attacker must pass all of the
+	 TCP/IP integrity checks first, including the initial sequence number and source
+	 TCP port number.
+ 
+
+
+
+ 
+
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">
+
+
+
+
+ 
+  The effectiveness of any workaround is dependent on specific customer
+	 situations such as product mix, network topology, traffic behavior, and
+	 organizational mission. Due to the variety of affected products and releases,
+	 customers should consult with their service provider or support organization to
+	 ensure any applied workaround is the most appropriate for use in the intended
+	 network before it is deployed.
+ 
+  Affected devices that must run ITS, CME or SRST are vulnerable, and
+	 there are not any specific configurations that can be used to protect them.
+	 Applying access lists on interfaces that should not accept ITS, CME or SRST
+	 traffic and putting firewalls in strategic locations may greatly reduce
+	 exposure until an upgrade can be performed.
+ 
+  The IP Telephony Security in Depth SAFE paper at the URL below
+	 discusses a variety of best practices that should keep your voice network
+	 isolated from the Internet. These best practices may help to reduce the risk of
+	 exposure, although attacks from within the local network should always be
+	 considered a potential risk.
+ 
+  
+http://www.cisco.com/en/US/netsol/ns340/ns394/ns171/ns128/networking_solutions_white_papers_list.html["http://www.cisco.com/en/US/netsol/ns744/networking_solutions_program_home.html"]
+
+
+  
+
+Using 'strict-match' 
+  It is possible to restrict SCCP communications to the IP specified in
+	 the ip source-address configuration command by using
+	 the 
+strict-match
+ option. More
+	 information on this command can be found at the following URL:
+ 
+  
+http://www.cisco.com/en/US/netsol/ns340/ns394/ns165/ns391/networking_solutions_design_guidance09186a00801f8e30.html#wp40333["http://www.cisco.com/en/US/netsol/ns340/ns394/ns165/ns391/networking_solutions_design_guidance09186a00801f8e30.html#wp40333"]
+
+
+  
+
+Using Access Lists 
+   Where possible, it is recommended to block SCCP traffic at the network
+	 edge with an Infrastructure Access Control List (iACL) or a Transit Access
+	 Control List (tACL).
+ 
+   For more information on iACLs, refer to "Protecting Your Core:
+	 Infrastructure Protecton Access Control Lists":
+ 
+  
+http://www.cisco.com/warp/public/707/iacl.html["/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"]
+
+
+  
+   For more information on tACLs, refer to 'Transit Access Control Lists:
+	 Filtering at Your Edge":
+ 
+  
+http://www.cisco.com/warp/public/707/tacl.html["/en/US/tech/tk648/tk361/technologies_white_paper09186a00801afc76.shtml"]
+
+
+  
+   Below is an example of an access list to block SCCP traffic from
+	 anywhere but a permitted network.
+ 
+   
+	 
+Note:  In SRST deployments the SCCP packets are not addressed directly to
+		the SRST device. The SCCP packets will be addressed to the call control devices
+		(typically Cisco CallManager). 
+ 
+   
+   In this example, the permitted telephony devices are on the
+	 172.16.0.0/16 network and the SCCP port being used is the default, TCP port
+	 2000. If the specific IP addresses of the telephony devices are known, then the
+	 access list can be made to restrict traffic from only those devices.
+ 
+  
+
+
+!--- Permit access from any IP address in the 172.16.0.0/16 
+!--- to TCP port 2000.
+
+
+access-list 101 permit tcp 172.16.0.0 0.0.255.255 any eq 2000
+
+
+!--- Deny all traffic to port 2000.
+
+
+access-list 101 deny tcp any any eq 2000
+
+
+!--- Permit all other traffic.
+
+
+access-list 101 permit ip any any
+ 
+
+Using Control Plane Policing 
+   The Control Plane Policing (CoPP) feature may be used to mitigate this
+	 vulnerability. In the following example SCCP traffic is permitted to and from
+	 the 192.168.10.0/24 subnet. All other TCP port 2000 traffic destined to the
+	 device is blocked.
+ 
+  
+access-list 140 deny   tcp 192.168.10.0 0.0.0.255 any eq 2000
+access-list 140 deny   tcp any 192.168.10.0 0.0.0.255 eq 2000
+access-list 140 permit tcp any any eq 2000
+access-list 140 deny   ip  any any
+
+class-map match-all sccp-class
+  match access-group 140
+
+policy-map control-plane-policy
+  class sccp-class
+
+     police 8000 1500 1500 conform-action drop exceed-action drop
+
+control-plane
+ service-policy input control-plane-policy
+
+ 
+   CoPP is available in IOS release trains 12.2S and 12.3T. Additional
+	 information on the configuration and use of the CoPP feature can be found at
+	 the following URL:
+ 
+  
+	 http://www.cisco.com/en/US/prod/collateral/iosswrel/ps6537/ps6586/ps6642/prod_white_paper0900aecd804fa16a.html["http://www.cisco.com/en/US/prod/collateral/iosswrel/ps6537/ps6586/ps6642/prod_white_paper0900aecd804fa16a.html"]
+
+
+  
+
+
+
+ 
+
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">
+
+
+
+
+ 
+  Each row of the Cisco IOS software table (below) describes a release
+	 train and the platforms or products for which it is intended. If a given
+	 release train is vulnerable, then the earliest possible releases that contain
+	 the fix (the "First Fixed Release") and the anticipated date of availability
+	 for each are listed in the "Rebuild" and "Maintenance" columns. A device
+	 running a release in the given train that is earlier than the release in a
+	 specific column (less than the First Fixed Release) is known to be vulnerable.
+	 The release should be upgraded at least to the indicated release or a later
+	 version (greater than or equal to the First Fixed Release label). 
+ 
+  For further information on the terms "Rebuild" and "Maintenance" please
+	 consult the following URL:
+ 
+  
+http://www.cisco.com/warp/public/620/1.html["http://www.cisco.com/warp/public/620/1.html"]
+
+
+  
+   When considering software upgrades, please also consult
+	 http://www.cisco.com/en/US/products/products_security_advisories_listing.html["http://www.cisco.com/en/US/products/products_security_advisories_listing.html"]
+	 and any subsequent advisories to determine exposure and a complete upgrade
+	 solution. 
+ 
+   In all cases, customers should exercise caution to be certain the
+	 devices to be upgraded contain sufficient memory and that current hardware and
+	 software configurations will continue to be supported properly by the new
+	 release. If the information is not clear, contact the Cisco Technical
+	 Assistance Center ("TAC") for asssistance. 
+ 
+   
+	 
+ 
+		   Major Release 
+
+
+ 
+		   Availability of Repaired Releases 
+
+ 
+	  
+	 
+ 
+		  
+ Affected 12.1-Based Release 
+
+
+
+ 
+		  
+ Rebuild 
+
+
+
+ 
+		  
+ Maintenance 
+
+
+ 
+	  
+	 
+ 
+		  12.1YD
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.1YE
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.1YI
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  
+ Affected 12.2-Based Release 
+
+
+
+ 
+		  
+ Rebuild 
+
+
+
+ 
+		  
+ Maintenance 
+
+
+ 
+	  
+	 
+ 
+		  12.2B
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2BC
+
+
+ 
+		  Migrate to 12.3(9)BC or later
+
+ 
+	  
+	 
+ 
+		  12.2CZ
+
+
+ 
+		  Migrate to 12.2(15)CZ1 or later
+
+ 
+	  
+	 
+ 
+		  12.2JK
+
+
+ 
+		  12.2(15)JK2
+
+ 
+	  
+	 
+ 
+		  12.2T
+
+
+ 
+		  12.2(13)T14
+
+
+  
+	  
+	 
+ 
+		  12.2(15)T13
+
+
+  
+	  
+	 
+ 
+		  12.2XB
+
+
+ 
+		  Migrate to 12.3(9) or later
+
+ 
+	  
+	 
+ 
+		  12.2XG
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2XM
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2XT
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2XU
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2XW
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2XZ
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2YA
+
+
+ 
+		  12.2(4)YA8
+
+
+  
+	  
+	 
+ 
+		  12.2YB
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2YC
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2YD
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2YF
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2YG
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2YH
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2YJ
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2YL
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2YM
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2YN
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2YQ
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2YR
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2YS
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2ZJ
+
+
+ 
+		  Migrate to 12.3(4)T6 or later
+
+ 
+	  
+	 
+ 
+		  12.2ZK
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.2ZO
+
+
+ 
+		  Migrate to 12.2(15)T13 or later
+
+ 
+	  
+	 
+ 
+		  12.2ZP
+
+
+ 
+		  Migrate to 12.3(4)XN2 or later
+
+ 
+	  
+	 
+ 
+		  
+ Affected 12.3-Based Release 
+
+
+
+ 
+		  
+ Rebuild 
+
+
+
+ 
+		  
+ Maintenance 
+
+
+ 
+	  
+	 
+ 
+		  12.3
+
+
+ 
+		  12.3(5d)
+
+
+  
+	  
+	 
+ 
+		  12.3(6c)
+
+
+  
+	  
+	 
+ 
+ 
+		  12.3(9)
+
+ 
+	  
+	 
+ 
+		  12.3T
+
+
+ 
+		  12.3(2)T7
+
+
+  
+	  
+	 
+ 
+		  12.3(4)T6
+
+
+  
+	  
+	 
+ 
+		  12.3(7)T1
+
+
+  
+	  
+	 
+ 
+ 
+		  12.3(8)T
+
+ 
+	  
+	 
+ 
+		  12.3XA
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.3XB
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.3XC
+
+
+ 
+		  Migrate to 12.3(8)T or later
+
+ 
+	  
+	 
+ 
+		  12.3XD
+
+
+ 
+		  12.3(4)XD3
+
+
+  
+	  
+	 
+ 
+		  12.3XE
+
+
+ 
+		  12.3(2)XE1
+
+
+  
+	  
+	 
+ 
+		  12.3XF
+
+
+ 
+		  Migrate to 12.3(11)T or later
+
+ 
+	  
+	 
+ 
+		  12.3XG
+
+
+ 
+		  12.3(4)XG2
+
+
+  
+	  
+	 
+ 
+		  12.3XH
+
+
+ 
+		  Migrate to 12.3(11)T or later
+
+ 
+	  
+	 
+ 
+		  12.3XI
+
+
+ 
+ 
+		  12.3(7)XI
+
+ 
+	  
+	 
+ 
+		  12.3XJ
+
+
+ 
+		  12.3(7)XJ2
+
+
+  
+	  
+	 
+ 
+		  12.3XK
+
+
+ 
+		  12.3(4)XK1
+
+
+  
+	  
+	 
+ 
+		  12.3XL
+
+
+ 
+ 
+		  12.3(7)XL
+
+ 
+	  
+	 
+ 
+		  12.3XN
+
+
+ 
+		  Contact Cisco TAC
+
+ 
+	  
+	 
+ 
+		  12.3XQ
+
+
+ 
+		  12.3(4)XQ1 Release date not yet determined
+
+
+  
+	  
+  
+ 
+
+
+
+ 
+
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">
+
+
+
+
+ 
+  The vulnerability described by CSCee08584 was originally reported to
+	 Cisco by SecureTest. The Cisco PSIRT is not aware of any public announcements
+	 or malicious use of the vulnerability described in this advisory. 
+ 
+
+
+
+ 
+
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20050119-itscme</cvrf:URL>
+      <cvrf:Description>Vulnerability in Cisco IOS Embedded Call Processing Solutions</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS Embedded Call Processing Solutions Denial of Service Issue</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2005-0186</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>
+
+
+
+
+ 
+  The effectiveness of any workaround is dependent on specific customer
+	 situations such as product mix, network topology, traffic behavior, and
+	 organizational mission. Due to the variety of affected products and releases,
+	 customers should consult with their service provider or support organization to
+	 ensure any applied workaround is the most appropriate for use in the intended
+	 network before it is deployed.
+ 
+  Affected devices that must run ITS, CME or SRST are vulnerable, and
+	 there are not any specific configurations that can be used to protect them.
+	 Applying access lists on interfaces that should not accept ITS, CME or SRST
+	 traffic and putting firewalls in strategic locations may greatly reduce
+	 exposure until an upgrade can be performed.
+ 
+  The IP Telephony Security in Depth SAFE paper at the URL below
+	 discusses a variety of best practices that should keep your voice network
+	 isolated from the Internet. These best practices may help to reduce the risk of
+	 exposure, although attacks from within the local network should always be
+	 considered a potential risk.
+ 
+  
+http://www.cisco.com/en/US/netsol/ns340/ns394/ns171/ns128/networking_solutions_white_papers_list.html["http://www.cisco.com/en/US/netsol/ns744/networking_solutions_program_home.html"]
+
+
+  
+
+Using 'strict-match' 
+  It is possible to restrict SCCP communications to the IP specified in
+	 the ip source-address configuration command by using
+	 the 
+strict-match
+ option. More
+	 information on this command can be found at the following URL:
+ 
+  
+http://www.cisco.com/en/US/netsol/ns340/ns394/ns165/ns391/networking_solutions_design_guidance09186a00801f8e30.html#wp40333["http://www.cisco.com/en/US/netsol/ns340/ns394/ns165/ns391/networking_solutions_design_guidance09186a00801f8e30.html#wp40333"]
+
+
+  
+
+Using Access Lists 
+   Where possible, it is recommended to block SCCP traffic at the network
+	 edge with an Infrastructure Access Control List (iACL) or a Transit Access
+	 Control List (tACL).
+ 
+   For more information on iACLs, refer to "Protecting Your Core:
+	 Infrastructure Protecton Access Control Lists":
+ 
+  
+http://www.cisco.com/warp/public/707/iacl.html["/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"]
+
+
+  
+   For more information on tACLs, refer to 'Transit Access Control Lists:
+	 Filtering at Your Edge":
+ 
+  
+http://www.cisco.com/warp/public/707/tacl.html["/en/US/tech/tk648/tk361/technologies_white_paper09186a00801afc76.shtml"]
+
+
+  
+   Below is an example of an access list to block SCCP traffic from
+	 anywhere but a permitted network.
+ 
+   
+	 
+Note:  In SRST deployments the SCCP packets are not addressed directly to
+		the SRST device. The SCCP packets will be addressed to the call control devices
+		(typically Cisco CallManager). 
+ 
+   
+   In this example, the permitted telephony devices are on the
+	 172.16.0.0/16 network and the SCCP port being used is the default, TCP port
+	 2000. If the specific IP addresses of the telephony devices are known, then the
+	 access list can be made to restrict traffic from only those devices.
+ 
+  
+
+
+!--- Permit access from any IP address in the 172.16.0.0/16 
+!--- to TCP port 2000.
+
+
+access-list 101 permit tcp 172.16.0.0 0.0.255.255 any eq 2000
+
+
+!--- Deny all traffic to port 2000.
+
+
+access-list 101 deny tcp any any eq 2000
+
+
+!--- Permit all other traffic.
+
+
+access-list 101 permit ip any any
+ 
+
+Using Control Plane Policing 
+   The Control Plane Policing (CoPP) feature may be used to mitigate this
+	 vulnerability. In the following example SCCP traffic is permitted to and from
+	 the 192.168.10.0/24 subnet. All other TCP port 2000 traffic destined to the
+	 device is blocked.
+ 
+  
+access-list 140 deny   tcp 192.168.10.0 0.0.0.255 any eq 2000
+access-list 140 deny   tcp any 192.168.10.0 0.0.0.255 eq 2000
+access-list 140 permit tcp any any eq 2000
+access-list 140 deny   ip  any any
+
+class-map match-all sccp-class
+  match access-group 140
+
+policy-map control-plane-policy
+  class sccp-class
+
+     police 8000 1500 1500 conform-action drop exceed-action drop
+
+control-plane
+ service-policy input control-plane-policy
+
+ 
+   CoPP is available in IOS release trains 12.2S and 12.3T. Additional
+	 information on the configuration and use of the CoPP feature can be found at
+	 the following URL:
+ 
+  
+	 http://www.cisco.com/en/US/prod/collateral/iosswrel/ps6537/ps6586/ps6642/prod_white_paper0900aecd804fa16a.html["http://www.cisco.com/en/US/prod/collateral/iosswrel/ps6537/ps6586/ps6642/prod_white_paper0900aecd804fa16a.html"]
+
+
+  
+
+
+
+ 
+
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20050119-itscme</URL>
+        <Description>Vulnerability in Cisco IOS Embedded Call Processing Solutions</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

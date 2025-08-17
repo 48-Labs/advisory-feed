@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20140305-wlc</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2014-03-05T14:39:29</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2014-03-05T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2014-03-05T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">The Cisco Wireless LAN Controller (WLC) product family is affected by the following vulnerabilities:
+
+
+    Cisco Wireless LAN Controller Denial of Service Vulnerability
+    Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+    Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability
+    Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability
+    Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+    Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+
+
+
+Cisco has released software updates that address these vulnerabilities. 
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">The Cisco WLC product family is affected by multiple vulnerabilities. Affected versions of Cisco WLC Software vary depending on the specific vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">For specific version information, see the "Software Versions and Fixes" section of this advisory. 
+
+At least one of the vulnerabilities covered in this security advisory affects each of the following products:
+
+
+
+Stand Alone Controllers
+
+    Cisco 500 Series Wireless Express Mobility Controllers
+    Cisco 2000 Series Wireless LAN Controllers
+    Cisco 2100 Series Wireless LAN Controllers
+    Cisco 2500 Series Wireless Controllers
+    Cisco 4100 Series Wireless LAN Controllers
+    Cisco 4400 Series Wireless LAN Controllers
+    Cisco 5500 Series Wireless Controllers
+    Cisco Flex 7500 Series Wireless Controllers
+    Cisco 8500 Series Wireless Controllers
+    Cisco Virtual Wireless Controller
+
+Modular Controllers
+
+    Cisco Catalyst 6500 Series/7600 Series Wireless Services Module (Cisco WiSM)
+    Cisco Wireless Services Module version 2 (WiSM2)
+    Cisco NME-AIR-WLC Module for Integrated Services Routers (ISRs)
+    Cisco NM-AIR-WLC Module for Integrated Services Routers (ISRs)
+    Cisco Catalyst 3750G Integrated WLC
+    Cisco Wireless Controller Software for Services-Ready Engine (SRE) *
+
+* Covers the Integrated Services Module 300 and Cisco Services-Ready Engine 700, 710, 900, and 910 products.
+
+
+
+
+Note: The Cisco 2000 Series WLC, Cisco 4100 Series WLC, Cisco NM-AIR-WLC, and Cisco 500 Series Wireless Express Mobility Controllers, have reached end-of-software maintenance. The following table includes the end-of-life document URL for each model:
+
+
+
+
+
+
+    
+        
+            
+            
+            Model
+
+            
+            
+            
+            
+            End of Life Document URL
+
+            
+            
+        
+        
+            
+            Cisco 2000 Series WLC
+
+            
+            
+            http://www.cisco.com/en/US/prod/collateral/wireless/ps6302/ps8322/ps6308/prod_end-of-life_notice0900aecd805d22b0.html["http://www.cisco.com/en/US/prod/collateral/wireless/ps6302/ps8322/ps6308/prod_end-of-life_notice0900aecd805d22b0.html"]
+
+            
+        
+        
+            
+            Cisco NM-AIR-WLC Modules for ISR
+
+            
+            
+            http://www.cisco.com/en/US/prod/collateral/modules/ps2797/prod_end-of-life_notice0900aecd806aeb34.html["http://www.cisco.com/en/US/prod/collateral/modules/ps2797/prod_end-of-life_notice0900aecd806aeb34.html"]
+
+            
+        
+        
+            
+            Cisco 500 Series Wireless Express Mobility Controllers
+
+            
+            
+            http://www.cisco.com/en/US/prod/collateral/wireless/ps7306/ps7320/ps7339/end_of_life_c51-568040.html["http://www.cisco.com/en/US/prod/collateral/wireless/ps7306/ps7320/ps7339/end_of_life_c51-568040.html"]
+
+            
+        
+    
+
+To determine the Cisco WLC Software version that is running in a given environment, use one of the following methods:
+
+In the web interface, choose the Monitor tab, click Summary in the left pane, and note the Software Version field.
+
+
+
+In the command-line interface, issue the show sysinfo command as shown in the following example:
+
+(Cisco Controller)&gt; show sysinfo
+
+Manufacturer's Name.............................. Cisco Systems Inc.
+Product Name..................................... Cisco Controller
+Product Version.................................. 7.4.121.0
+Bootloader Version............................... 1.0.16
+Field Recovery Image Version..................... 7.0.112.21
+Firmware Version................................. FPGA 1.7, Env 1.8, USB console 2.2
+
+Cisco Wireless LAN Controller Denial of Service Vulnerability
+To determine if the WebAuth feature has been enabled issue the show wlan  command (X=wlan ID) for each of the configured wireless networks.  The following example shows the feature enabled:
+
+Web Based Authentication...................... Enabled
+Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability
+To determine if the IGMPv3 feature has been enabled issue the show network summary command. The following example shoes the feature enabled:
+
+IGMP snooping............................... Enabled
+
+
+Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability
+To determine if the MLDv2 feature has been enabled issue the show network summary command. The following example shows the feature enabled:
+
+MLD snooping............................... Enabled
+
+
+Summary Table:
+
+    
+        
+             
+            4.x
+            5.x
+            6.x
+            7.0
+            7.1
+            7.2
+            7.3
+            7.4
+            7.5
+            7.6 
+        
+        
+            Cisco Wireless LAN Controller Denial of Service Vulnerability
+
+            CVE-2014-0701
+
+            
+             
+             
+             
+            X
+             
+             X
+             X
+             X
+             
+             
+        
+        
+            Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+
+            CVE-2014-0703
+
+            
+             
+             
+             
+             
+             
+             
+             
+             X
+             
+             
+        
+        
+            Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability
+
+            CVE-2014-0704
+
+            
+            X
+            X
+            X
+            X
+            X
+             X
+             X
+             X
+             
+             
+        
+        
+            Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability
+
+            CVE-2014-0705
+
+            
+             
+             
+             
+             
+             
+             X
+             X
+             X
+            X
+             
+        
+        
+            Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+
+            CVE-2014-0706
+
+            
+             
+             
+             
+             
+             
+             X
+             X
+             X
+            
+
+            
+             
+        
+        
+            Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+
+            CVE-2014-0707
+
+            
+             
+             
+             
+             
+             
+             X
+             X
+             X
+            
+
+            
+             
+        
+        
+            Recommended Release
+            Migrate
+            Migrate
+            Migrate
+            7.0.250.0
+            Migrate
+            Migrate
+            Migrate
+            7.4.121.0
+
+            
+            Migrate
+            7.6.100.0
+
+            
+        
+    
+
+
+    .telerik-reTable-4
+    {
+    border-collapse: collapse;
+    border: solid 0px;
+    font-family: Tahoma;
+    }
+    .telerik-reTable-4 tr.telerik-reTableHeaderRow-4
+    {
+    border-width: 1.0pt 1.0pt 3.0pt 1.0pt;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    line-height: 115%;
+    font-size: 11.0pt;
+    font-family: "Calibri" , "sans-serif";
+    width: 119.7pt;
+    background: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    color: #FFFFFF;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderFirstCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderLastCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderOddCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderEvenCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 tr.telerik-reTableOddRow-4
+    {
+    border-width: 1pt;
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    border-bottom-style: solid;
+    border-bottom-color: #4F81BD;
+    }
+    .telerik-reTable-4 tr.telerik-reTableEvenRow-4
+    {
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    }
+    .telerik-reTable-4 td.telerik-reTableFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 tr.telerik-reTableFooterRow-4
+    {
+    color: #355C8C;
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    vertical-align: top;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">The following IOS-XE based Wireless Controllers are not affected:
+
+
+
+Cisco 5700 Series Wireless Controllers
+
+Cisco 3600 Series Wireless Controllers
+
+Cisco 3800 Series Wireless Controllers
+
+
+
+No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">The Cisco WLCs and Cisco WiSMs are responsible for system-wide wireless LAN functionality, including security policies, intrusion prevention, RF management, quality of service (QoS), and mobility. These devices communicate with controller-based access points over any Layer 2 (Ethernet) or Layer 3 (IP) infrastructure using the Lightweight Access Point Protocol (LWAPP) and the Control and Provisioning of Wireless Access Points (CAPWAP) protocol.
+
+
+
+The Cisco WLC family of devices is affected by the following vulnerabilities:
+
+
+Cisco Wireless LAN Controller Denial of Service Vulnerability
+
+A vulnerability in the WebAuth feature of Cisco Wireless LAN Controllers (WLC) could allow an unauthenticated, remote attacker to cause the device to reload.
+
+
+
+The vulnerability is due to a failure to deallocate memory used during the processing of a WebAuth login. An attacker could exploit this vulnerability by creating a large number of WebAuth requests at a high rate and leave them in an uncompleted state. An exploit could allow the attacker to consume all available memory on the device. This causes a watchdog process to restart the WLC, resulting in a denial of service (DoS) while the device reboots.
+
+
+
+The WebAuth feature must be enabled and configured for a device to be affected by this vulnerability. This feature is disabled by default.
+
+
+
+This vulnerability is documented by Cisco bug ID CSCuf52361["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuf52361"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-0701.
+Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+A vulnerability in the Cisco IOS code that is pushed to Cisco Aironet 1260, 2600, 3500, and 3600 Series access points (AP) by a Cisco Wireless LAN Controller (WLC) could allow an unauthenticated, remote attacker to gain unauthorized, privileged access to the affected device.
+
+
+
+The vulnerability is due to a race condition that could result in the administrative HTTP server of an affected access point being enabled even though it is explicitly disabled by an administrator. An attacker could exploit this vulnerability by attempting to authenticate to an affected device using locally-stored credentials of the AP. A successful attack could allow an attacker to take complete control of the affected AP and make arbitrary changes to the configuration.
+
+
+
+In many deployment scenarios, the locally-stored default AP username and password has not been changed from the factory default. In these zero-touch scenarios, the devices are designed to connect automatically to a WLC and download firmware and configurations.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuf66202["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuf66202"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-0703.
+
+
+Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability
+A vulnerability in the IGMP processing subsystem of Cisco Wireless LAN Controllers (WLC) could allow an unauthenticated, remote attacker to cause a DoS condition.
+
+
+
+The vulnerability is due to improper validation of a specific field in certain IGMP message types. When messages are processed, the IGMP subsystem may perform a memory over-read. When subsequent processing is performed on the extraneous data an error may occur that results in a reload of the device. An attacker could exploit this vulnerability by injecting a malicious IGMP version 3 message onto the network that will be received and processed by an affected WLC. An exploit could allow the attacker to trigger a critical error on the WLC, resulting in a DoS condition while the device restarts.
+
+
+
+The IGMPv3 Snooping feature is disabled by default and must be explicitly configured by an administrator for a device to be vulnerable.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuh33240["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh33240"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-0704.
+
+
+Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability
+A vulnerability in the multicast listener discovery (MLD) service of a Cisco WLC configured for IPv6 could allow an unauthenticated, remote attacker to cause a denial of service condition.
+
+
+
+The vulnerability is due to a failure to properly parse malformed MLD version 2 messages. An attacker could exploit this vulnerability by submitting a malformed MLDv2 packet to a multicast-enabled network that the Cisco WLC is listening for. An exploit could allow the attacker to trigger a critical error on the WLC, resulting in a DoS condition while the device restarts.
+
+
+
+The MLDv2 Snooping feature is disabled by default and must be explicitly configured by an administrator for a device to be vulnerable.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuh74233["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh74233"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-0705.
+
+
+Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+A vulnerability in the Cisco WLC could allow an unauthenticated, remote attacker to trigger a critical error, resulting in a DoS condition while the device restarts.
+
+
+
+This vulnerability is due to a failure to correctly process an Ethernet 802.11 frame. An attacker could exploit this vulnerability by sending a specially crafted Ethernet 802.11 frame. Repeated exploitation may result in a sustained DoS condition.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCue87929["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCue87929"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-0706.
+
+Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+A vulnerability in the Cisco WLC could allow an unauthenticated, remote attacker to trigger a critical error, resulting in a DoS condition while the device restarts.
+
+
+
+This vulnerability is due to a failure to correctly process an Ethernet 802.11 frame. An attacker could exploit this vulnerability by sending a specially crafted Ethernet 802.11 frame. Repeated exploitation may result in a sustained DoS condition.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuf80681["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuf80681"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-0707
+
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+Administrators may mitigate this issue by configuring Global AP Management Credentials on the affected device. This will disable the defaults and help ensure that unauthorized parties are unable to access the AP via the HTTP interface.
+
+
+
+There are no on-device workarounds that mitigate the other vulnerabilities detailed in this document
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830"]
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+
+
+
+    
+        
+             Cisco Wireless LAN Controller Denial of Service Vulnerability
+        
+        
+             Affected Release
+             First Fixed
+            Recommended
+        
+        
+             7.0
+             7.0.250.0
+            7.0.250.0 or 7.4.121.0*
+        
+        
+             7.2
+             N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+             7.3
+
+            
+             N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+             7.4
+             7.4.110.0
+            7.4.121.0
+        
+    
+
+* 4400/WiSM1/3750/2000 controllers can not upgrade beyond 7.0 code
+
+
+
+
+    
+        
+             Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+        
+        
+             Affected Release
+            First Fixed
+            Recommended
+        
+        
+             7.4
+            7.4.110.0
+            7.4.121.0
+        
+    
+
+
+
+
+    
+        
+             Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability
+        
+        
+             Affected Release
+            First Fixed
+            Recommended
+        
+        
+            4.x
+            N/A
+            Migrate to 7.0.250.0
+        
+        
+            5.x
+            N/A
+            Migrate to 7.0.250.0
+        
+        
+            6.x
+            N/A
+            Migrate to 7.0.250.0
+        
+        
+            7.0
+            7.0.250.0
+            Migrate to 7.0.250.0 or 7.4.121.0*
+        
+        
+            7.1
+            N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+            7.2
+            N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+            7.3
+            N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+    
+
+* 4400/WiSM1/3750/2000 controllers can not upgrade beyond 7.0 code
+
+
+
+
+    
+        
+             Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability
+        
+        
+             Affected Release
+             First Fixed
+            Recommended
+        
+        
+            7.2
+            N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+            7.3
+            N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+            7.4
+            7.4.121.0
+            Migrate to 7.4.121.0
+        
+        
+            7.5
+
+            
+            N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+    
+
+
+
+
+    
+        
+            Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+
+            CVE-2014-0706
+
+            
+        
+        
+             Affected Release
+             First Fixed
+            Recommended
+        
+        
+             7.2
+             7.2.115.2
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+             7.3
+
+            
+             N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+             7.4
+             7.4.110.0
+            7.4.121.0
+        
+    
+
+
+
+
+    
+        
+            Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability
+
+            CVE-2014-0707
+
+            
+        
+        
+             Affected Release
+             First Fixed
+            Recommended
+        
+        
+             7.2
+             N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+             7.3
+
+            
+             N/A
+            Migrate to 7.4.121.0 or 7.6.100.0
+        
+        
+             7.4
+             7.4.110.0
+            7.4.121.0
+        
+    
+
+
+
+
+    .telerik-reTable-4
+    {
+    border-collapse: collapse;
+    border: solid 0px;
+    font-family: Tahoma;
+    }
+    .telerik-reTable-4 tr.telerik-reTableHeaderRow-4
+    {
+    border-width: 1.0pt 1.0pt 3.0pt 1.0pt;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    line-height: 115%;
+    font-size: 11.0pt;
+    font-family: "Calibri" , "sans-serif";
+    width: 119.7pt;
+    background: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    color: #FFFFFF;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderFirstCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderLastCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderOddCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderEvenCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 tr.telerik-reTableOddRow-4
+    {
+    border-width: 1pt;
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    border-bottom-style: solid;
+    border-bottom-color: #4F81BD;
+    }
+    .telerik-reTable-4 tr.telerik-reTableEvenRow-4
+    {
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    }
+    .telerik-reTable-4 td.telerik-reTableFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 tr.telerik-reTableFooterRow-4
+    {
+    color: #355C8C;
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    vertical-align: top;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+Cisco Wireless LAN Controller Denial of Service Vulnerability, Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability, and Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability where discovered during internal testing and have not been found in customer deployments.
+
+
+
+Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability, Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability, and Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability were discovered by the Cisco TAC while investigating customer issues.
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers </cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33100</cvrf:URL>
+      <cvrf:Description>Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33101</cvrf:URL>
+      <cvrf:Description>Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33102</cvrf:URL>
+      <cvrf:Description>Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33103</cvrf:URL>
+      <cvrf:Description>Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Wireless LAN Controller (WLC)" Type="Product Name">
+        <Branch Name="4.0" Type="Product Version">
+          <Branch Name="4.0.196" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-61493">Cisco Wireless LAN Controller (WLC) 4.0.196</FullProductName>
+          </Branch>
+          <Branch Name="4.0.108" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-64988">Cisco Wireless LAN Controller (WLC) 4.0.108</FullProductName>
+          </Branch>
+          <Branch Name="4.0.155.5" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-64989">Cisco Wireless LAN Controller (WLC) 4.0.155.5</FullProductName>
+          </Branch>
+          <Branch Name="4.0.179.8" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-64990">Cisco Wireless LAN Controller (WLC) 4.0.179.8</FullProductName>
+          </Branch>
+          <Branch Name="4.0.179.11" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-64991">Cisco Wireless LAN Controller (WLC) 4.0.179.11</FullProductName>
+          </Branch>
+          <Branch Name="4.0.155.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-65081">Cisco Wireless LAN Controller (WLC) 4.0.155.0</FullProductName>
+          </Branch>
+          <Branch Name="4.0.206.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-65082">Cisco Wireless LAN Controller (WLC) 4.0.206.0</FullProductName>
+          </Branch>
+          <Branch Name="4.0.217.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-69370">Cisco Wireless LAN Controller (WLC) 4.0.217.0</FullProductName>
+          </Branch>
+          <Branch Name="4.0.219.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82268">Cisco Wireless LAN Controller (WLC) 4.0.219.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.1" Type="Product Version">
+          <Branch Name="Base" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-69367">Cisco Wireless LAN Controller (WLC) Base</FullProductName>
+          </Branch>
+          <Branch Name="4.1.181.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-69368">Cisco Wireless LAN Controller (WLC) 4.1.181.0</FullProductName>
+          </Branch>
+          <Branch Name="4.1.171.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-69369">Cisco Wireless LAN Controller (WLC) 4.1.171.0</FullProductName>
+          </Branch>
+          <Branch Name="4.1.185.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82267">Cisco Wireless LAN Controller (WLC) 4.1.185.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2" Type="Product Version">
+          <Branch Name="Base" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82270">Cisco Wireless LAN Controller (WLC) Base</FullProductName>
+          </Branch>
+          <Branch Name="4.2.61.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82271">Cisco Wireless LAN Controller (WLC) 4.2.61.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.99.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82272">Cisco Wireless LAN Controller (WLC) 4.2.99.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.112.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82273">Cisco Wireless LAN Controller (WLC) 4.2.112.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.130.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82274">Cisco Wireless LAN Controller (WLC) 4.2.130.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.117.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88663">Cisco Wireless LAN Controller (WLC) 4.2.117.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.173.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88664">Cisco Wireless LAN Controller (WLC) 4.2.173.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.174.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88665">Cisco Wireless LAN Controller (WLC) 4.2.174.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.176.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88666">Cisco Wireless LAN Controller (WLC) 4.2.176.0</FullProductName>
+          </Branch>
+          <Branch Name="4.2.182.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88667">Cisco Wireless LAN Controller (WLC) 4.2.182.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0" Type="Product Version">
+          <Branch Name="5.0.148.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82276">Cisco Wireless LAN Controller (WLC) 5.0.148.0</FullProductName>
+          </Branch>
+          <Branch Name="5.0.148.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82277">Cisco Wireless LAN Controller (WLC) 5.0.148.2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.1" Type="Product Version">
+          <Branch Name="5.1.151.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-82279">Cisco Wireless LAN Controller (WLC) 5.1.151.0</FullProductName>
+          </Branch>
+          <Branch Name="5.1.152.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88661">Cisco Wireless LAN Controller (WLC) 5.1.152.0</FullProductName>
+          </Branch>
+          <Branch Name="5.1.160.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88662">Cisco Wireless LAN Controller (WLC) 5.1.160.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.2" Type="Product Version">
+          <Branch Name="5.2.157.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88659">Cisco Wireless LAN Controller (WLC) 5.2.157.0</FullProductName>
+          </Branch>
+          <Branch Name="5.2.169.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-88660">Cisco Wireless LAN Controller (WLC) 5.2.169.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0" Type="Product Version">
+          <Branch Name="Base" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-100594">Cisco Wireless LAN Controller (WLC) Base</FullProductName>
+          </Branch>
+          <Branch Name="6.0.182.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-100595">Cisco Wireless LAN Controller (WLC) 6.0.182.0</FullProductName>
+          </Branch>
+          <Branch Name="6.0.188.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109053">Cisco Wireless LAN Controller (WLC) 6.0.188.0</FullProductName>
+          </Branch>
+          <Branch Name="6.0.196.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109054">Cisco Wireless LAN Controller (WLC) 6.0.196.0</FullProductName>
+          </Branch>
+          <Branch Name="6.0.199.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109055">Cisco Wireless LAN Controller (WLC) 6.0.199.4</FullProductName>
+          </Branch>
+          <Branch Name="6.0.202.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109056">Cisco Wireless LAN Controller (WLC) 6.0.202.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.0" Type="Product Version">
+          <Branch Name="Base" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109058">Cisco Wireless LAN Controller (WLC) Base</FullProductName>
+          </Branch>
+          <Branch Name="7.0.98.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109059">Cisco Wireless LAN Controller (WLC) 7.0.98.0</FullProductName>
+          </Branch>
+          <Branch Name="7.0.116.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109060">Cisco Wireless LAN Controller (WLC) 7.0.116.0</FullProductName>
+          </Branch>
+          <Branch Name="7.0.98.218" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-109061">Cisco Wireless LAN Controller (WLC) 7.0.98.218</FullProductName>
+          </Branch>
+          <Branch Name="7.0.220.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-114903">Cisco Wireless LAN Controller (WLC) 7.0.220.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.1" Type="Product Version">
+          <Branch Name="Base" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-114900">Cisco Wireless LAN Controller (WLC) Base</FullProductName>
+          </Branch>
+          <Branch Name="7.1.91.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-114904">Cisco Wireless LAN Controller (WLC) 7.1.91.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.2" Type="Product Version">
+          <Branch Name="Base" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-114902">Cisco Wireless LAN Controller (WLC) Base</FullProductName>
+          </Branch>
+          <Branch Name="7.2.103.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-114905">Cisco Wireless LAN Controller (WLC) 7.2.103.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.4" Type="Product Version">
+          <Branch Name="7.4.100.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-194377">Cisco Wireless LAN Controller (WLC) 7.4.100.0</FullProductName>
+          </Branch>
+          <Branch Name="7.4.100.60" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-194378">Cisco Wireless LAN Controller (WLC) 7.4.100.60</FullProductName>
+          </Branch>
+          <Branch Name="7.4.110.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-194379">Cisco Wireless LAN Controller (WLC) 7.4.110.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.3" Type="Product Version">
+          <Branch Name="Base" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-188675">Cisco Wireless LAN Controller (WLC) Base</FullProductName>
+          </Branch>
+          <Branch Name="7.3.101.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-188676">Cisco Wireless LAN Controller (WLC) 7.3.101.0</FullProductName>
+          </Branch>
+          <Branch Name="7.3.112.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-194380">Cisco Wireless LAN Controller (WLC) 7.3.112.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.5" Type="Product Version">
+          <Branch Name="7.5.102.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-194376">Cisco Wireless LAN Controller (WLC) 7.5.102.0</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco Wireless LAN Controller (WLC)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7368">Cisco Wireless LAN Controller (WLC) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Wireless LAN Controller Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuf52361</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuf52361</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0701</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-114902</ProductID>
+        <ProductID>CVRFPID-114905</ProductID>
+        <ProductID>CVRFPID-188675</ProductID>
+        <ProductID>CVRFPID-188676</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+Administrators may mitigate this issue by configuring Global AP Management Credentials on the affected device. This will disable the defaults and help ensure that unauthorized parties are unable to access the AP via the HTTP interface.
+
+
+
+There are no on-device workarounds that mitigate the other vulnerabilities detailed in this document
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuf66202</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuf66202</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0703</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-7368</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>10.0</BaseScoreV2>
+        <TemporalScoreV2>8.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:H/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+Administrators may mitigate this issue by configuring Global AP Management Credentials on the affected device. This will disable the defaults and help ensure that unauthorized parties are unable to access the AP via the HTTP interface.
+
+
+
+There are no on-device workarounds that mitigate the other vulnerabilities detailed in this document
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Wireless LAN Controller IGMP Version 3 Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuh33240</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuh33240</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0704</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-100594</ProductID>
+        <ProductID>CVRFPID-100595</ProductID>
+        <ProductID>CVRFPID-109053</ProductID>
+        <ProductID>CVRFPID-109054</ProductID>
+        <ProductID>CVRFPID-109055</ProductID>
+        <ProductID>CVRFPID-109056</ProductID>
+        <ProductID>CVRFPID-109058</ProductID>
+        <ProductID>CVRFPID-109059</ProductID>
+        <ProductID>CVRFPID-109060</ProductID>
+        <ProductID>CVRFPID-109061</ProductID>
+        <ProductID>CVRFPID-114900</ProductID>
+        <ProductID>CVRFPID-114902</ProductID>
+        <ProductID>CVRFPID-114903</ProductID>
+        <ProductID>CVRFPID-114904</ProductID>
+        <ProductID>CVRFPID-114905</ProductID>
+        <ProductID>CVRFPID-188675</ProductID>
+        <ProductID>CVRFPID-188676</ProductID>
+        <ProductID>CVRFPID-61493</ProductID>
+        <ProductID>CVRFPID-64988</ProductID>
+        <ProductID>CVRFPID-64989</ProductID>
+        <ProductID>CVRFPID-64990</ProductID>
+        <ProductID>CVRFPID-64991</ProductID>
+        <ProductID>CVRFPID-65081</ProductID>
+        <ProductID>CVRFPID-65082</ProductID>
+        <ProductID>CVRFPID-69367</ProductID>
+        <ProductID>CVRFPID-69368</ProductID>
+        <ProductID>CVRFPID-69369</ProductID>
+        <ProductID>CVRFPID-69370</ProductID>
+        <ProductID>CVRFPID-82267</ProductID>
+        <ProductID>CVRFPID-82268</ProductID>
+        <ProductID>CVRFPID-82270</ProductID>
+        <ProductID>CVRFPID-82271</ProductID>
+        <ProductID>CVRFPID-82272</ProductID>
+        <ProductID>CVRFPID-82273</ProductID>
+        <ProductID>CVRFPID-82274</ProductID>
+        <ProductID>CVRFPID-82276</ProductID>
+        <ProductID>CVRFPID-82277</ProductID>
+        <ProductID>CVRFPID-82279</ProductID>
+        <ProductID>CVRFPID-88659</ProductID>
+        <ProductID>CVRFPID-88660</ProductID>
+        <ProductID>CVRFPID-88661</ProductID>
+        <ProductID>CVRFPID-88662</ProductID>
+        <ProductID>CVRFPID-88663</ProductID>
+        <ProductID>CVRFPID-88664</ProductID>
+        <ProductID>CVRFPID-88665</ProductID>
+        <ProductID>CVRFPID-88666</ProductID>
+        <ProductID>CVRFPID-88667</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+Administrators may mitigate this issue by configuring Global AP Management Credentials on the affected device. This will disable the defaults and help ensure that unauthorized parties are unable to access the AP via the HTTP interface.
+
+
+
+There are no on-device workarounds that mitigate the other vulnerabilities detailed in this document
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCue87929</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCue87929</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0706</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-114902</ProductID>
+        <ProductID>CVRFPID-114905</ProductID>
+        <ProductID>CVRFPID-188675</ProductID>
+        <ProductID>CVRFPID-188676</ProductID>
+        <ProductID>CVRFPID-194377</ProductID>
+        <ProductID>CVRFPID-194378</ProductID>
+        <ProductID>CVRFPID-194380</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+Administrators may mitigate this issue by configuring Global AP Management Credentials on the affected device. This will disable the defaults and help ensure that unauthorized parties are unable to access the AP via the HTTP interface.
+
+
+
+There are no on-device workarounds that mitigate the other vulnerabilities detailed in this document
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Wireless LAN Controller Crafted Frame Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuf80681</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuf80681</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0707</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-114902</ProductID>
+        <ProductID>CVRFPID-114905</ProductID>
+        <ProductID>CVRFPID-188675</ProductID>
+        <ProductID>CVRFPID-188676</ProductID>
+        <ProductID>CVRFPID-194377</ProductID>
+        <ProductID>CVRFPID-194378</ProductID>
+        <ProductID>CVRFPID-194380</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+Administrators may mitigate this issue by configuring Global AP Management Credentials on the affected device. This will disable the defaults and help ensure that unauthorized parties are unable to access the AP via the HTTP interface.
+
+
+
+There are no on-device workarounds that mitigate the other vulnerabilities detailed in this document
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="6" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Wireless LAN Controller MLDv2 Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuh74233</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuh74233</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0705</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-194376</ProductID>
+        <ProductID>CVRFPID-194377</ProductID>
+        <ProductID>CVRFPID-194378</ProductID>
+        <ProductID>CVRFPID-194379</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Cisco Wireless LAN Controller Unauthorized Access to Associated Access Points Vulnerability
+Administrators may mitigate this issue by configuring Global AP Management Credentials on the affected device. This will disable the defaults and help ensure that unauthorized parties are unable to access the AP via the HTTP interface.
+
+
+
+There are no on-device workarounds that mitigate the other vulnerabilities detailed in this document
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco Wireless LAN Controllers ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30830"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140305-wlc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Wireless LAN Controllers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

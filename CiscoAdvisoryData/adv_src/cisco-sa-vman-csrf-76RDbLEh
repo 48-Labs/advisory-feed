@@ -1,0 +1,50 @@
+{
+  "identifier": "cisco-sa-vman-csrf-76RDbLEh",
+  "title": "Cisco SD-WAN vManage Software Cluster Mode Cross-Site Request Forgery Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2023-03-22T16:00:00.000+0000",
+  "lastPublished": "2023-03-27T21:11:52.160+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vman-csrf-76RDbLEh",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-352",
+  "cve": "CVE-2023-20113",
+  "ciscoBugId": "CSCwa83035",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco SD-WAN vManage Software when it is operating in cluster mode could allow an unauthenticated, remote attacker to conduct a cross-site request forgery (CSRF) attack on an affected system.This vulnerability is due to ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "61724",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "61725",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "61726",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "61727",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "61728",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "61729",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

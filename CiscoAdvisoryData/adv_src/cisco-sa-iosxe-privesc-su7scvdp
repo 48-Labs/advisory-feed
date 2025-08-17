@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-iosxe-privesc-su7scvdp",
+  "title": "Cisco IOS XE Software Privilege Escalation Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2025-05-07T16:00:00.000+0000",
+  "lastPublished": "2025-05-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-privesc-su7scvdp",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20, CWE-754",
+  "erpPubIds": "ERP-75279",
+  "cve": "CVE-2025-20197,CVE-2025-20198,CVE-2025-20199,CVE-2025-20200,CVE-2025-20201",
+  "ciscoBugId": "CSCwm59330,CSCwm64309,CSCwm66565,CSCwm68661,CSCwm72787",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the CLI of Cisco IOS XE Software could allow an authenticated, local attacker with privilege level 15 to elevate privileges to root on the underlying operating system of an affected device.These vulnerabilities are due to insufficient input ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: May 2025 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75279&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

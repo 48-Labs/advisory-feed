@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20170130-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL Affecting Cisco Products: January and February 2017",
+  "version": "2.9",
+  "firstPublished": "2017-01-30T21:28:00.000+0000",
+  "lastPublished": "2017-07-05T11:43:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170130-openssl",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-310, CWE-399",
+  "erpPubIds": "52676,52438",
+  "cve": "CVE-2017-3730,CVE-2017-3731,CVE-2017-3732,CVE-2017-3733",
+  "ciscoBugId": "CSCvc94556,CSCvc94581,CSCvc94585,CSCvc94589,CSCvc94590,CSCvc94591,CSCvc94595,CSCvc94598,CSCvc94601,CSCvc94602,CSCvc94604,CSCvc94609,CSCvc94616,CSCvc94623,CSCvc94629,CSCvc94632,CSCvc94633,CSCvc94634,CSCvc94636,CSCvc94637,CSCvc94641,CSCvc94648,CSCvc94649,CSCvc94650,CSCvc94651,CSCvc94662,CSCvc94665,CSCvc94669,CSCvc94691,CSCvc94692,CSCvc94716,CSCvc94729,CSCvc94730,CSCvc94735,CSCvc94741,CSCvc94745,CSCvc94749,CSCvc94752,CSCvc94758,CSCvc94759,CSCvc94760,CSCvc94762,CSCvc94765,CSCvc94767,CSCvc94768,CSCvc96092,CSCvc96093,CSCvc96099,CSCvc96106,CSCvc96109,CSCvc96176,CSCvc98361,CSCvc98364,CSCvc98369,CSCvc98372",
+  "status": "",
+  "summary": "On January 26, 2017, the OpenSSL Software Foundation released a security advisory that included three new vulnerabilities. The foundation also released one vulnerability that was already disclosed in the OpenSSL advisory for November 2016 and included in the Cisco Security Advisory ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL Handshake Negotiation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=52676&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Montgomery Squaring Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=52438&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "47820",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "47821",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

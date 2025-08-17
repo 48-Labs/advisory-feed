@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180328-dhcpr3",
+  "title": "Cisco IOS and IOS XE Software DHCP Version 4 Relay Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2018-03-28T16:00:00.000+0000",
+  "lastPublished": "2022-12-15T22:19:57.560+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-dhcpr3",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-66682",
+  "cve": "CVE-2018-0174",
+  "ciscoBugId": "CSCuh91645",
+  "status": "",
+  "summary": "A vulnerability in the DHCP option 82 encapsulation functionality of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "46120",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-03-29-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-66682&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20060823-vpn3k",
+  "title": "Cisco VPN 3000 Concentrator FTP Management Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2006-08-23T16:00:00.000+0000",
+  "lastPublished": "2006-08-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060823-vpn3k",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "11588",
+  "cve": "CVE-2006-4313",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "    The Cisco VPN 3000 series concentrators are affected by two vulnerabilities when file management via File Transfer Protocol (FTP) is enabled that could allow authenticated or unauthenticated attackers to execute certain FTP commands and delete files on the concentrator.     ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco VPN Concentrator 3000 Pre-Authentication FTP Command Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11588&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "VPN3000 Concentrator Unauthenticated FTP  Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5804&signatureSubId=0&releaseVersion=S452&softwareVersion=6.0"
+        },
+        {
+          "name": "VPN3000 Concentrator Unauthenticated FTP  Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5804&signatureSubId=1&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "VPN3000 Concentrator Unauthenticated FTP  Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5804&signatureSubId=2&releaseVersion=S452&softwareVersion=6.0"
+        },
+        {
+          "name": "VPN3000 Concentrator FTP RMD Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5805&signatureSubId=0&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "VPN3000 Concentrator FTP RMD Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5805&signatureSubId=1&releaseVersion=S439&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

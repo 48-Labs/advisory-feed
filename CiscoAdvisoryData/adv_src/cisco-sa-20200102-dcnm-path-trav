@@ -1,0 +1,99 @@
+{
+  "identifier": "cisco-sa-20200102-dcnm-path-trav",
+  "title": "Cisco Data Center Network Manager Path Traversal Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2020-01-02T16:00:00.000+0000",
+  "lastPublished": "2020-01-15T15:58:01.477+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200102-dcnm-path-trav",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-22",
+  "cve": "CVE-2019-15980,CVE-2019-15981,CVE-2019-15982",
+  "ciscoBugId": "CSCvq85957,CSCvq85972,CSCvq85998,CSCvq89422,CSCvq89834,CSCvq89841,CSCvq89878,CSCvq89895,CSCvr05463,CSCvr17970,CSCvr44896,CSCvr46508,CSCvr79240,CSCvs16318,CSCvs16341,CSCvs16350",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the REST and SOAP API endpoints and the Application Framework feature of Cisco&nbsp;Data Center Network Manager (DCNM) could allow an authenticated, remote attacker to conduct directory traversal attacks on an affected device. To exploit these vulnerabilities, an ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "52528",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52529",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52530",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52531",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52532",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52533",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52534",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52535",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52536",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52537",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52538",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52539",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52540",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52541",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52542",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Data Center Network Manager Path Traversal",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8377&signatureSubId=0&releaseVersion=S1037&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Data Center Network Manager Path Traversal",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8378&signatureSubId=0&releaseVersion=S1037&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

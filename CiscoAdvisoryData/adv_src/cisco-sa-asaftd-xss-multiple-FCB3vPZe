@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-asaftd-xss-multiple-FCB3vPZe",
+  "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Web Services Interface Cross-Site Scripting Vulnerabilities",
+  "version": "3.1",
+  "firstPublished": "2020-10-21T16:00:00.000+0000",
+  "lastPublished": "2021-06-28T15:14:27.720+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-xss-multiple-FCB3vPZe",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "cve": "CVE-2020-3580,CVE-2020-3581,CVE-2020-3582,CVE-2020-3583",
+  "ciscoBugId": "CSCvu44910,CSCvu75581,CSCvu83309,CSCvv13835,CSCvw53796",
+  "status": "",
+  "summary": "Update June 28, 2021: Cisco&nbsp;has become aware that public exploit code exists for CVE-2020-3580, and this vulnerability is being actively exploited.Multiple vulnerabilities in the web services interface of Cisco&nbsp;Adaptive Security Appliance (ASA) Software ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "57856",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "57857",
+          "url": "https://snort.org/rule_docs/1-57857"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

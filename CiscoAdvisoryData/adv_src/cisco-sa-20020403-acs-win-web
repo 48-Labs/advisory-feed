@@ -1,0 +1,45 @@
+{
+  "identifier": "cisco-sa-20020403-acs-win-web",
+  "title": "Web Interface Vulnerabilities in Cisco Secure ACS for Windows",
+  "version": "1.1",
+  "firstPublished": "2002-04-03T16:00:00.000+0000",
+  "lastPublished": "2002-04-03T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020403-acs-win-web",
+  "erpPubIds": "3561",
+  "cve": "CVE-2002-0159,CVE-2002-0160",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Secure Access Control Server (ACS) for Windows contains two vulnerabilities. One vulnerability can lead to the execution of an arbitrary code on an ACS server, and the second can lead to an unauthorized disclosure of information. A patch is available for both ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Secure ACS for Windows NT Buffer Overflow and Directory Traversal Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=3561&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "CiscoSecure ACS For Windows NT Server Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=17777&signatureSubId=0&releaseVersion=S425&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Secure ACS CSAdmin Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3540&signatureSubId=0&releaseVersion=S518&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Secure ACS CSAdmin Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3540&signatureSubId=1&releaseVersion=S518&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

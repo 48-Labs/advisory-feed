@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20090923-h323",
+  "title": "Cisco IOS Software H.323 Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2009-09-23T16:00:00.000+0000",
+  "lastPublished": "2009-09-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090923-h323",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "cisco-amb-20090923-voice,18885",
+  "cve": "CVE-2009-2866",
+  "ciscoBugId": "CSCsz38104",
+  "status": "",
+  "summary": "The H.323 implementation in Cisco IOS&reg; Software contains a vulnerability that can be exploited remotely to cause a device that is running Cisco IOS Software to reload.     Cisco has released software updates that address this vulnerability. There are no workarounds to ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software H.323 Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18885&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Denial of Service Vulnerabilities in Cisco Unified Communications Manager and Cisco IOS Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090923-voice"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "H.323 Call Signalling Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=18479&signatureSubId=0&releaseVersion=S769&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

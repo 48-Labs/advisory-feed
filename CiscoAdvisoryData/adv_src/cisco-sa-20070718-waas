@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20070718-waas",
+  "title": "Denial of Service Vulnerability in Cisco Wide Area Application Services (WAAS) Software",
+  "version": "1.1",
+  "firstPublished": "2007-07-18T16:00:00.000+0000",
+  "lastPublished": "2007-07-18T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070718-waas",
+  "severity": "Low",
+  "cwe": "CWE-399",
+  "erpPubIds": "13757,cisco-amb-20070718-waas",
+  "cve": "CVE-2007-3923",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The Cisco Wide Area Application Services (WAAS) software contains a denial of service (DoS) vulnerability that may cause some devices that run WAAS software (WAE appliance and NM-WAE-502 module) to stop processing all types of traffic, including data traffic and management traffic. This ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wide Area Application Services Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13757&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the DoS Vulnerability in Cisco WAAS Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070718-waas"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco NX-OS-Based Products</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20130424-nxosmulti</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2013-04-24T15:41:12</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2013-04-24T19:14:36</cvrf:Date>
+        <cvrf:Description>Clarified affected platforms for certain vulnerabilities.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2013-04-26T19:40:02</cvrf:Date>
+        <cvrf:Description>Updated summary table in Affected Products for clarification. Corrected UCS 6100/6200 information for jumbo frame vulnerability in summary table.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2013-04-24T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2013-04-26T19:40:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco Nexus, Cisco Unified Computing System (UCS), Cisco MDS 9000 Series Multilayer Switches, and Cisco 1000 Series Connected Grid Routers (CGR) are all based on the Cisco NX-OS operating system.  These products are affected by one or more of the following vulnerabilities:
+
+    Multiple Cisco Discovery Protocol Vulnerabilities in Cisco NX-OS-Based Products
+    Cisco NX-OS Software SNMP and License Manager Buffer Overflow Vulnerability
+    Cisco NX-OS Software SNMP Buffer Overflow Vulnerability
+    Cisco NX-OS Software Jumbo Packet Denial of Service Vulnerability
+
+
+
+Cisco has released software updates that address these vulnerabilities. 
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco products running or based on the Cisco NX-OS Software high-speed routing and switching platform are affected by one or more of the vulnerabilities detailed in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">The following products are vulnerable:
+
+
+
+Cisco UCS 6100 = Cisco Unified Computing Server Fabric Interconnect 6100 Series devices
+
+Cisco UCS 6200 = Cisco Unified Computing Server Fabric Interconnect 6200 Series devices
+
+Cisco Nexus 7000 = Cisco Nexus 7000 Series devices
+
+Cisco Nexus 5000 = Cisco Nexus 5010 and Cisco Nexus 5020 devices
+
+Cisco Nexus 5500 = Cisco Nexus 5500 Series devices
+
+Cisco Nexus 4000 = Cisco Nexus 4000 Series blade devices
+
+Cisco Nexus 3000 = Cisco Nexus 3000 Series devices
+
+Cisco Nexus 1000v = Cisco Nexus 1000v virtual switches and 1010 Virtual Service Appliances
+
+Cisco MDS 9000 = Cisco MDS 9000 Multilayer Switch/Director Family devices
+
+Cisco CGR 1000 = Cisco Connected Grid Router 1000 Series devices
+
+
+
+The following table details which products are affected by each vulnerability:
+
+
+    table.tableizer-table {
+    border: 1px solid #CCC; font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    }
+    .tableizer-table td {
+    padding: 4px;
+    margin: 3px;
+    border: 1px solid #ccc;
+    }
+    .tableizer-table th {
+    background-color: #104E8B;
+    color: #FFF;
+    font-weight: bold;
+    }
+
+
+    
+        
+             
+
+            
+            Cisco Nexus 7000
+            Cisco Nexus 5000
+
+            
+            Cisco Nexus 5500
+            Cisco Nexus 4000
+            Cisco Nexus 3000
+            Cisco Nexus 1000V
+            Cisco MDS 9000
+            Cisco UCS 6100
+
+            
+             Cisco UCS 6200
+
+            
+            Cisco CGR 1000
+        
+        
+            Multiple CDP
+
+            Buffer Overflow
+
+            CVE-2013-1178
+
+            
+            X 
+
+            
+            X
+
+            
+            X
+            X
+            X
+            X
+            X
+            X
+             X
+            X
+        
+        
+            SNMP &amp; License Manager
+
+            Buffer Overflow
+
+            CVE-2013-1179
+
+            
+            X
+            
+
+            
+             
+
+            
+             
+
+            
+             
+
+            
+             
+
+            
+             X
+             
+
+            
+             
+             
+
+            
+        
+        
+            SNMP Buffer Overflow
+
+            CVE-2013-1180
+
+            
+            X
+            
+
+            
+             
+
+            
+             
+
+            
+             
+
+            
+             
+
+            
+             X
+             
+
+            
+             
+             
+
+            
+        
+        
+            Jumbo Frame
+
+            Denial of Service
+
+            CVE-2013-1181
+
+            
+             
+            
+
+            
+            X
+             
+
+            
+            X 
+
+            
+             
+
+            
+             
+
+            
+             
+
+            
+             X
+             
+
+            
+        
+        
+             Recommended Software
+
+            
+            5.2(9)/6.1(1)
+
+            
+            5.2(1)N1(4)
+
+            
+            5.2(1)N1(4)
+            4.1(2)E1(1j)
+            5.0(3)U5(1e)
+            4.2(1)SV2(1.1)
+            5.2(8)
+
+            
+            2.1.1e
+
+            
+            2.1.1e 
+
+            
+            CG4(1)
+        
+    
+
+
+    .telerik-reTable-4
+    {
+    border-collapse: collapse;
+    border: solid 0px;
+    font-family: Tahoma;
+    }
+    .telerik-reTable-4 tr.telerik-reTableHeaderRow-4
+    {
+    border-width: 1.0pt 1.0pt 3.0pt 1.0pt;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    line-height: 115%;
+    font-size: 11.0pt;
+    font-family: "Calibri" , "sans-serif";
+    width: 119.7pt;
+    background: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    color: #FFFFFF;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderFirstCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderLastCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderOddCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderEvenCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 tr.telerik-reTableOddRow-4
+    {
+    border-width: 1pt;
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    border-bottom-style: solid;
+    border-bottom-color: #4F81BD;
+    }
+    .telerik-reTable-4 tr.telerik-reTableEvenRow-4
+    {
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    }
+    .telerik-reTable-4 td.telerik-reTableFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 tr.telerik-reTableFooterRow-4
+    {
+    color: #355C8C;
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    vertical-align: top;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+
+
+
+Note: The recommended software releases above resolve all issues impacting each platform in the preceding table.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">The Cisco Nexus 3548 Switch is not affected by the vulnerabilities described in this document.
+
+
+
+The Cisco Nexus 6000 Series of devices is not affected by the vulnerabilities described in this document.
+
+
+
+No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">Multiple Cisco Discovery Protocol Vulnerabilities in Cisco NX-OS-Based Products
+
+
+
+Cisco NX-OS based devices contain multiple buffer overflow vulnerabilities in Cisco Discovery Protocol (CDP) subsystem. These vulnerabilities could allow an unauthenticated, adjacent attacker to execute arbitrary code with elevated privileges. The vulnerabilities are due to a failure to properly handle malformed Cisco Discovery Protocol packets.  An attacker could exploit these vulnerabilities by passing malformed Cisco Discovery Protocol packets to an affected device.  Successful exploitation of these vulnerabilities could allow the attacker to execute arbitrary code with elevated privileges.
+
+
+
+Because Cisco Discovery Protocol works at the data link layer (Layer 2), an attacker must be able to submit an Ethernet frame directly to an affected device to exploit this vulnerability. This action may be possible in situations where the affected system is part of a bridged network or connected to an unpartitioned device, such as a network hub.
+
+
+
+This vulnerability is documented in the following Cisco bug IDs, and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2013-1178.
+
+
+
+Cisco Bug IDs:
+
+
+    UCS 6100/UCS 6200 - CSCtu10630["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtu10630"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+    Nexus 7000/MDS 9000 - CSCtu10551["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtu10551"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+    Nexus 5000/Nexus 5500 - CSCtu10550["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtu10550"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+    Nexus 4000 - CSCtw56581["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtw56581"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) 
+    Nexus 3000 - CSCtu10548["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtu10548"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+    Nexus 1000v - CSCtu10544["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtu10544"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+    CGR 1000 - CSCuf61275["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuf61275"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) 
+
+
+
+Cisco NX-OS Software SNMP and License Manager Buffer Overflow Vulnerability
+
+
+
+
+Cisco NX-OS Software-based devices contain a buffer overflow vulnerability in the SNMP subsystem. An authenticated, remote attacker can exploit the vulnerability by submitting a malicious SNMP query via UDP port 161 to trigger a buffer overflow condition in the SNMP and License Manager components of the device. Successful exploitation could allow the attacker to execute arbitrary code with elevated privileges. 
+
+
+
+SNMP is disabled by default and must be explicitly configured by an administrator. Because SNMP is primarily a UDP-based protocol, no TCP three-way handshake is required to exploit this vulnerability, and the malicious request could contain a spoofed origin. The attacker must know the configured community strings for SNMP version 1 and version 2. Exploitation also requires a valid username and password when a device is configured for SNMP version 3.
+
+
+
+This vulnerability can be triggered via SNMP over IPv4 and SNMP over IPv6.
+
+
+
+This vulnerability is documented by Cisco bug ID CSCtx54830["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtx54830"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2013-1179.
+
+
+
+Cisco NX-OS Software SNMP Buffer Overflow Vulnerability
+
+
+
+Cisco NX-OS based devices contain a buffer overflow vulnerability in the SNMP subsystem.  An authenticated, remote attacker who can submit a malicious SNMP query via UDP port 161 could exploit
+the vulnerability to trigger a buffer overflow condition in the SNMP component of the device.  Successful exploitation could
+allow the attacker to execute arbitrary code with elevated privileges.  
+
+
+
+SNMP
+is disabled by default, and must be explicitly configured by an
+administrator.  Because SNMP is primarily a UDP based protocol, no TCP
+three-way handshake is required to exploit this vulnerability, and the malicious
+request could contain a spoofed origin.  The attacker must know the configured community strings for SNMP version 1 and
+version 2.  Exploitation also requires a valid username and password when a device is
+configured for SNMP version 3.
+
+
+
+This vulnerability can be triggered via SNMP over IPv4 and SNMP over IPv6.
+
+
+
+This vulnerability is documented by Cisco bug ID CSCtx54822["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtx54822"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2013-1180.
+
+
+
+Cisco NX-OS Software Jumbo Packet Denial of Service Vulnerability
+
+
+
+Cisco NX-OS based devices contain a denial of service (DoS) vulnerability.  An unauthenticated, remote attacker who can send a jumbo frame packet to the management interface of an affected device could cause the device to crash and reload.
+
+
+
+The vulnerability is due to improper input validation of jumbo packets.  Large packets that are sent through the switching fabric of the device will not trigger the vulnerability.
+
+
+
+
+This vulnerability is documented in the following Cisco bug IDs, and has been
+assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2013-1181.
+
+
+
+Cisco Bug IDs:
+
+
+    UCS  6200- CSCtx17544["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtx17544"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+    Nexus 5500 - CSCts10593["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCts10593"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+    Nexus 3000 - CSCtx95389["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtx95389"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) 
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">No on-device workarounds exist for any of the vulnerabilities detailed in this advisory.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco NX-OS-Based Products is available at:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+
+
+Nexus 7000
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             4.1(x)
+
+            4.2(x)
+
+            5.0(x)
+
+            5.1(x)
+
+            5.2(3a) and Prior
+
+            6.0(x)
+
+            
+             5.2(4)
+
+            6.1(1)
+
+            
+             5.2(9)
+
+            6.1(1)
+
+            
+        
+        
+            SNMP &amp; License Manager
+
+            CVE-2013-1179 
+             4.1(x)
+
+            4.2(x)
+
+            5.0(x)
+
+            5.1(x)
+
+            5.2(4) and Prior
+
+            6.0(x)
+
+            
+             5.2(5)
+
+            6.1(1)
+
+            
+             5.2(9)
+
+            6.1(1)
+
+            
+        
+        
+            SNMP
+
+            CVE-2013-1180 
+             4.1(x)
+
+            4.2(x)
+
+            5.0(x)
+
+            5.1(x)
+
+            5.2(4) and Prior
+
+            6.0(x)
+
+            
+             5.2(5)
+
+            6.1(1)
+
+            
+             5.2(9)
+
+            6.1(1)
+
+            
+        
+    
+
+
+    .telerik-reTable-4
+    {
+    border-collapse: collapse;
+    border: solid 0px;
+    font-family: Tahoma;
+    }
+    .telerik-reTable-4 tr.telerik-reTableHeaderRow-4
+    {
+    border-width: 1.0pt 1.0pt 3.0pt 1.0pt;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    line-height: 115%;
+    font-size: 11.0pt;
+    font-family: "Calibri" , "sans-serif";
+    width: 119.7pt;
+    background: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    color: #FFFFFF;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderFirstCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderLastCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderOddCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderEvenCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 tr.telerik-reTableOddRow-4
+    {
+    border-width: 1pt;
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    border-bottom-style: solid;
+    border-bottom-color: #4F81BD;
+    }
+    .telerik-reTable-4 tr.telerik-reTableEvenRow-4
+    {
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    }
+    .telerik-reTable-4 td.telerik-reTableFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 tr.telerik-reTableFooterRow-4
+    {
+    color: #355C8C;
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    vertical-align: top;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+
+
+
+Nexus 5000/Nexus 5500
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             4.0(x)
+
+            4.1(x)
+
+            4.2(x)
+
+            5.0(x)
+
+            
+             5.1(3)N1(1)
+
+            
+             5.2(1)N1(4)
+
+            
+        
+        
+            Jumbo Frame - Nexus 5500
+
+            CVE-2013-1181 
+             4.0(x)
+
+            4.1(x)
+
+            4.2(x)
+
+            5.0(3)N2(1) and Prior
+
+            
+             5.0(3)N2(2)
+
+            
+             5.2(1)N1(4)
+
+            
+        
+    
+
+
+
+Nexus 4000
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             4.1(2)E1(1g) and Prior
+
+            
+             4.1(2)E1(1h)
+
+            
+             4.1(2)E1(1j)
+
+            
+        
+    
+
+
+
+Nexus 3000
+
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             5.0(3)U1(1x)
+
+            5.0(3)U1(2x)
+
+            5.0(3)U2(1)
+
+            5.0(3)U2(2x)
+
+            
+             5.0(3)U3(1)
+
+            
+             5.0(3)U5(1e)
+
+            
+        
+        
+            Jumbo Frame
+
+            CVE-2013-1181 
+             5.0(3)U1(1x)
+
+            5.0(3)U1(2x)
+
+            5.0(3)U2(1)
+
+            5.0(3)U2(2x)
+
+            5.0(3)U3(1)
+
+            
+             5.0(3)U3(2)
+
+            
+             5.0(3)U5(1e)
+
+            
+        
+    
+
+
+
+Nexus 1000V
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             4.0(x)
+
+            4.2(1)SV1(4b) and Prior
+
+            
+             4.2(1)SV1(5.1)
+
+            
+             4.2(1)SV2(1.1)
+
+            
+        
+    
+
+
+
+MDS 9000
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             4.1(x)
+
+            4.2(x)
+
+            5.0(x)
+
+            5.2(3) and Prior
+
+            
+             5.2(4)
+
+            
+             5.2(8)
+
+            
+        
+        
+            SNMP &amp; License Manager
+
+            CVE-2013-1179 
+             4.1(x)
+
+            4.2(x)
+
+            5.0(x)
+
+            5.2(4) and Prior
+
+            
+             5.2(5)
+
+            
+             5.2(8)
+
+            
+        
+        
+            SNMP
+
+            CVE-2013-1180 
+             4.1(x)
+
+            4.2(x)
+
+            5.0(x)
+
+            5.2(4) and Prior
+
+            
+             5.2(5)
+
+            
+             5.2(8)
+
+            
+        
+    
+
+
+
+Unified Computing System
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             1.0(x)
+
+            1.1(x)
+
+            1.2(x)
+
+            1.3(x)
+
+            1.4(x)
+
+            2.0(1x) and Prior
+
+            
+             2.0(2m)
+
+            2.1(1a)
+
+            
+             2.1.1e
+
+            
+        
+        
+            Jumbo Frame - UCS 6200
+
+            CVE-2013-1181 
+             1.0(x)
+
+            1.1(x)
+
+            1.2(x)
+
+            1.3(x)
+
+            1.4(x)
+
+            2.0(1t) and prior
+
+            
+             2.0(1w)
+
+            
+             2.1.1e
+
+            
+        
+    
+
+
+
+Connected Grid Router 1000 Series
+
+    
+        
+             
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            Multiple CDP
+
+            CVE-2013-1178 
+             CG1(4)
+
+            CG1(5)
+
+            CG3(1)
+
+            CG3(2)
+
+            CG3(3)
+
+            
+             CG4(1)
+
+            
+             CG4(1)
+
+            
+        
+    
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+
+
+The following vulnerabilities were discovered during an internal security evaluation of NX-OS based products:
+
+    Multiple Cisco Discovery Protocol Vulnerabilities in Cisco NX-OS-Based Products
+    Cisco NX-OS Software SNMP and License Manager Buffer Overflow Vulnerability
+    Cisco NX-OS Software SNMP Buffer Overflow Vulnerability
+
+The Cisco NX-OS Software Jumbo Packet Denial of Service Vulnerability was identified by the Cisco TAC while assisting customers.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco NX-OS-Based Products</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco NX-OS-Based Products</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco NX-OS Software" Type="Product Name">
+        <Branch Name="4.1" Type="Product Version">
+          <Branch Name="4.1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191429">Cisco NX-OS Software 4.1(2)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191430">Cisco NX-OS Software 4.1(3)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191431">Cisco NX-OS Software 4.1(4)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191432">Cisco NX-OS Software 4.1(5)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0" Type="Product Version">
+          <Branch Name="5.0(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191438">Cisco NX-OS Software 5.0(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191439">Cisco NX-OS Software 5.0(3)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191440">Cisco NX-OS Software 5.0(5)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2" Type="Product Version">
+          <Branch Name="4.2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191433">Cisco NX-OS Software 4.2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191434">Cisco NX-OS Software 4.2(3)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191435">Cisco NX-OS Software 4.2(4)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(6)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191436">Cisco NX-OS Software 4.2(6)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(8)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191437">Cisco NX-OS Software 4.2(8)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.1" Type="Product Version">
+          <Branch Name="5.1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191441">Cisco NX-OS Software 5.1(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191442">Cisco NX-OS Software 5.1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191443">Cisco NX-OS Software 5.1(3)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191444">Cisco NX-OS Software 5.1(4)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191445">Cisco NX-OS Software 5.1(5)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(6)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191446">Cisco NX-OS Software 5.1(6)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.2" Type="Product Version">
+          <Branch Name="5.2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191447">Cisco NX-OS Software 5.2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(3a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191448">Cisco NX-OS Software 5.2(3a)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191449">Cisco NX-OS Software 5.2(4)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.0(0)N1" Type="Product Version">
+          <Branch Name="4.0(0)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191394">Cisco NX-OS Software 4.0(0)N1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(0)N1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191395">Cisco NX-OS Software 4.0(0)N1(2)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(0)N1(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191396">Cisco NX-OS Software 4.0(0)N1(2a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.0(1a)N1" Type="Product Version">
+          <Branch Name="4.0(1a)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191397">Cisco NX-OS Software 4.0(1a)N1(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(1a)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191398">Cisco NX-OS Software 4.0(1a)N1(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.0(1a)N2" Type="Product Version">
+          <Branch Name="4.0(1a)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191399">Cisco NX-OS Software 4.0(1a)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(1a)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191400">Cisco NX-OS Software 4.0(1a)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.1(2)E1" Type="Product Version">
+          <Branch Name="4.1(2)E1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191382">Cisco NX-OS Software 4.1(2)E1(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191383">Cisco NX-OS Software 4.1(2)E1(1b)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1d)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191384">Cisco NX-OS Software 4.1(2)E1(1d)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1e)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191385">Cisco NX-OS Software 4.1(2)E1(1e)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1f)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191386">Cisco NX-OS Software 4.1(2)E1(1f)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1g)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191387">Cisco NX-OS Software 4.1(2)E1(1g)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.1(3)N1" Type="Product Version">
+          <Branch Name="4.1(3)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191401">Cisco NX-OS Software 4.1(3)N1(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(3)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191402">Cisco NX-OS Software 4.1(3)N1(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.1(3)N2" Type="Product Version">
+          <Branch Name="4.1(3)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191403">Cisco NX-OS Software 4.1(3)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(3)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191404">Cisco NX-OS Software 4.1(3)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2(1)N1" Type="Product Version">
+          <Branch Name="4.2(1)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191405">Cisco NX-OS Software 4.2(1)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2(1)N2" Type="Product Version">
+          <Branch Name="4.2(1)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191406">Cisco NX-OS Software 4.2(1)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191407">Cisco NX-OS Software 4.2(1)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2(1)SV1" Type="Product Version">
+          <Branch Name="4.2(1)SV1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191557">Cisco NX-OS Software 4.2(1)SV1(4)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(4a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191558">Cisco NX-OS Software 4.2(1)SV1(4a)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(4b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191559">Cisco NX-OS Software 4.2(1)SV1(4b)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(2)N1" Type="Product Version">
+          <Branch Name="5.0(2)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191408">Cisco NX-OS Software 5.0(2)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(2)N2" Type="Product Version">
+          <Branch Name="5.0(2)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191410">Cisco NX-OS Software 5.0(2)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(2)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191411">Cisco NX-OS Software 5.0(2)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)N1" Type="Product Version">
+          <Branch Name="5.0(3)N1(1c)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191409">Cisco NX-OS Software 5.0(3)N1(1c)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)N2" Type="Product Version">
+          <Branch Name="5.0(3)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191412">Cisco NX-OS Software 5.0(3)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)N2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191413">Cisco NX-OS Software 5.0(3)N2(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)N2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191414">Cisco NX-OS Software 5.0(3)N2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)N2(2b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191415">Cisco NX-OS Software 5.0(3)N2(2b)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U1" Type="Product Version">
+          <Branch Name="5.0(3)U1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191391">Cisco NX-OS Software 5.0(3)U1(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191392">Cisco NX-OS Software 5.0(3)U1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191393">Cisco NX-OS Software 5.0(3)U1(1b)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(1d)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191466">Cisco NX-OS Software 5.0(3)U1(1d)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191467">Cisco NX-OS Software 5.0(3)U1(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191468">Cisco NX-OS Software 5.0(3)U1(2a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U2" Type="Product Version">
+          <Branch Name="5.0(3)U2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191469">Cisco NX-OS Software 5.0(3)U2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191470">Cisco NX-OS Software 5.0(3)U2(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191471">Cisco NX-OS Software 5.0(3)U2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191472">Cisco NX-OS Software 5.0(3)U2(2b)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2c)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191473">Cisco NX-OS Software 5.0(3)U2(2c)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2d)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191474">Cisco NX-OS Software 5.0(3)U2(2d)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U3" Type="Product Version">
+          <Branch Name="5.0(3)U3(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191475">Cisco NX-OS Software 5.0(3)U3(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0" Type="Product Version">
+          <Branch Name="6.0(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191453">Cisco NX-OS Software 6.0(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191454">Cisco NX-OS Software 6.0(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191455">Cisco NX-OS Software 6.0(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191456">Cisco NX-OS Software 6.0(4)</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco Unified Computing System (Managed)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-112776">Cisco Unified Computing System (Managed) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco CG-OS" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-190834">Cisco CG-OS </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Multiple Cisco Discovery Protocol Vulnerabilities in Cisco NX-OS-Based Products</Title>
+    <ID SystemName="Cisco Bug ID">CSCtu10630</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtu10630,CSCtu10551,CSCtu10550,CSCtu10548,CSCtu10544,CSCtw56581,CSCuf61275</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1178</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-112776</ProductID>
+        <ProductID>CVRFPID-191429</ProductID>
+        <ProductID>CVRFPID-191430</ProductID>
+        <ProductID>CVRFPID-191431</ProductID>
+        <ProductID>CVRFPID-191432</ProductID>
+        <ProductID>CVRFPID-191433</ProductID>
+        <ProductID>CVRFPID-191434</ProductID>
+        <ProductID>CVRFPID-191435</ProductID>
+        <ProductID>CVRFPID-191436</ProductID>
+        <ProductID>CVRFPID-191437</ProductID>
+        <ProductID>CVRFPID-191438</ProductID>
+        <ProductID>CVRFPID-191439</ProductID>
+        <ProductID>CVRFPID-191440</ProductID>
+        <ProductID>CVRFPID-191441</ProductID>
+        <ProductID>CVRFPID-191442</ProductID>
+        <ProductID>CVRFPID-191443</ProductID>
+        <ProductID>CVRFPID-191444</ProductID>
+        <ProductID>CVRFPID-191445</ProductID>
+        <ProductID>CVRFPID-191446</ProductID>
+        <ProductID>CVRFPID-191447</ProductID>
+        <ProductID>CVRFPID-191448</ProductID>
+        <ProductID>CVRFPID-191453</ProductID>
+        <ProductID>CVRFPID-191454</ProductID>
+        <ProductID>CVRFPID-191455</ProductID>
+        <ProductID>CVRFPID-191456</ProductID>
+        <ProductID>CVRFPID-191394</ProductID>
+        <ProductID>CVRFPID-191395</ProductID>
+        <ProductID>CVRFPID-191396</ProductID>
+        <ProductID>CVRFPID-191397</ProductID>
+        <ProductID>CVRFPID-191398</ProductID>
+        <ProductID>CVRFPID-191399</ProductID>
+        <ProductID>CVRFPID-191400</ProductID>
+        <ProductID>CVRFPID-191401</ProductID>
+        <ProductID>CVRFPID-191402</ProductID>
+        <ProductID>CVRFPID-191403</ProductID>
+        <ProductID>CVRFPID-191404</ProductID>
+        <ProductID>CVRFPID-191405</ProductID>
+        <ProductID>CVRFPID-191406</ProductID>
+        <ProductID>CVRFPID-191407</ProductID>
+        <ProductID>CVRFPID-191408</ProductID>
+        <ProductID>CVRFPID-191409</ProductID>
+        <ProductID>CVRFPID-191410</ProductID>
+        <ProductID>CVRFPID-191411</ProductID>
+        <ProductID>CVRFPID-191412</ProductID>
+        <ProductID>CVRFPID-191413</ProductID>
+        <ProductID>CVRFPID-191414</ProductID>
+        <ProductID>CVRFPID-191415</ProductID>
+        <ProductID>CVRFPID-191391</ProductID>
+        <ProductID>CVRFPID-191392</ProductID>
+        <ProductID>CVRFPID-191393</ProductID>
+        <ProductID>CVRFPID-191466</ProductID>
+        <ProductID>CVRFPID-191467</ProductID>
+        <ProductID>CVRFPID-191468</ProductID>
+        <ProductID>CVRFPID-191469</ProductID>
+        <ProductID>CVRFPID-191470</ProductID>
+        <ProductID>CVRFPID-191471</ProductID>
+        <ProductID>CVRFPID-191472</ProductID>
+        <ProductID>CVRFPID-191473</ProductID>
+        <ProductID>CVRFPID-191474</ProductID>
+        <ProductID>CVRFPID-191557</ProductID>
+        <ProductID>CVRFPID-191558</ProductID>
+        <ProductID>CVRFPID-191559</ProductID>
+        <ProductID>CVRFPID-191382</ProductID>
+        <ProductID>CVRFPID-191383</ProductID>
+        <ProductID>CVRFPID-191384</ProductID>
+        <ProductID>CVRFPID-191385</ProductID>
+        <ProductID>CVRFPID-191386</ProductID>
+        <ProductID>CVRFPID-191387</ProductID>
+        <ProductID>CVRFPID-190834</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>8.3</BaseScoreV2>
+        <TemporalScoreV2>6.9</TemporalScoreV2>
+        <VectorV2>AV:A/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on-device workarounds exist for any of the vulnerabilities detailed in this advisory.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco NX-OS-Based Products is available at:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco NX-OS-Based Products</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco NX-OS Software SNMP and License Manager Buffer Overflow Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtx54830</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtx54830</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1179</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-191429</ProductID>
+        <ProductID>CVRFPID-191430</ProductID>
+        <ProductID>CVRFPID-191431</ProductID>
+        <ProductID>CVRFPID-191432</ProductID>
+        <ProductID>CVRFPID-191433</ProductID>
+        <ProductID>CVRFPID-191434</ProductID>
+        <ProductID>CVRFPID-191435</ProductID>
+        <ProductID>CVRFPID-191436</ProductID>
+        <ProductID>CVRFPID-191437</ProductID>
+        <ProductID>CVRFPID-191438</ProductID>
+        <ProductID>CVRFPID-191439</ProductID>
+        <ProductID>CVRFPID-191440</ProductID>
+        <ProductID>CVRFPID-191441</ProductID>
+        <ProductID>CVRFPID-191442</ProductID>
+        <ProductID>CVRFPID-191443</ProductID>
+        <ProductID>CVRFPID-191444</ProductID>
+        <ProductID>CVRFPID-191445</ProductID>
+        <ProductID>CVRFPID-191446</ProductID>
+        <ProductID>CVRFPID-191447</ProductID>
+        <ProductID>CVRFPID-191448</ProductID>
+        <ProductID>CVRFPID-191449</ProductID>
+        <ProductID>CVRFPID-191453</ProductID>
+        <ProductID>CVRFPID-191454</ProductID>
+        <ProductID>CVRFPID-191455</ProductID>
+        <ProductID>CVRFPID-191456</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on-device workarounds exist for any of the vulnerabilities detailed in this advisory.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco NX-OS-Based Products is available at:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco NX-OS-Based Products</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco NX-OS Software SNMP Buffer Overflow Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtx54822</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtx54822</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1180</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-191429</ProductID>
+        <ProductID>CVRFPID-191430</ProductID>
+        <ProductID>CVRFPID-191431</ProductID>
+        <ProductID>CVRFPID-191432</ProductID>
+        <ProductID>CVRFPID-191433</ProductID>
+        <ProductID>CVRFPID-191434</ProductID>
+        <ProductID>CVRFPID-191435</ProductID>
+        <ProductID>CVRFPID-191436</ProductID>
+        <ProductID>CVRFPID-191437</ProductID>
+        <ProductID>CVRFPID-191438</ProductID>
+        <ProductID>CVRFPID-191439</ProductID>
+        <ProductID>CVRFPID-191440</ProductID>
+        <ProductID>CVRFPID-191441</ProductID>
+        <ProductID>CVRFPID-191442</ProductID>
+        <ProductID>CVRFPID-191443</ProductID>
+        <ProductID>CVRFPID-191444</ProductID>
+        <ProductID>CVRFPID-191445</ProductID>
+        <ProductID>CVRFPID-191446</ProductID>
+        <ProductID>CVRFPID-191447</ProductID>
+        <ProductID>CVRFPID-191448</ProductID>
+        <ProductID>CVRFPID-191449</ProductID>
+        <ProductID>CVRFPID-191453</ProductID>
+        <ProductID>CVRFPID-191454</ProductID>
+        <ProductID>CVRFPID-191455</ProductID>
+        <ProductID>CVRFPID-191456</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on-device workarounds exist for any of the vulnerabilities detailed in this advisory.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco NX-OS-Based Products is available at:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco NX-OS-Based Products</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco NX-OS Software Jumbo Packet Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCts10593</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCts10593,CSCtx95389,CSCtx17544</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1181</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-191394</ProductID>
+        <ProductID>CVRFPID-191395</ProductID>
+        <ProductID>CVRFPID-191396</ProductID>
+        <ProductID>CVRFPID-191397</ProductID>
+        <ProductID>CVRFPID-191398</ProductID>
+        <ProductID>CVRFPID-191399</ProductID>
+        <ProductID>CVRFPID-191400</ProductID>
+        <ProductID>CVRFPID-191401</ProductID>
+        <ProductID>CVRFPID-191402</ProductID>
+        <ProductID>CVRFPID-191403</ProductID>
+        <ProductID>CVRFPID-191404</ProductID>
+        <ProductID>CVRFPID-191405</ProductID>
+        <ProductID>CVRFPID-191406</ProductID>
+        <ProductID>CVRFPID-191407</ProductID>
+        <ProductID>CVRFPID-191408</ProductID>
+        <ProductID>CVRFPID-191409</ProductID>
+        <ProductID>CVRFPID-191410</ProductID>
+        <ProductID>CVRFPID-191411</ProductID>
+        <ProductID>CVRFPID-191412</ProductID>
+        <ProductID>CVRFPID-191391</ProductID>
+        <ProductID>CVRFPID-191392</ProductID>
+        <ProductID>CVRFPID-191393</ProductID>
+        <ProductID>CVRFPID-191466</ProductID>
+        <ProductID>CVRFPID-191467</ProductID>
+        <ProductID>CVRFPID-191468</ProductID>
+        <ProductID>CVRFPID-191469</ProductID>
+        <ProductID>CVRFPID-191470</ProductID>
+        <ProductID>CVRFPID-191471</ProductID>
+        <ProductID>CVRFPID-191472</ProductID>
+        <ProductID>CVRFPID-191473</ProductID>
+        <ProductID>CVRFPID-191474</ProductID>
+        <ProductID>CVRFPID-191475</ProductID>
+        <ProductID>CVRFPID-112776</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on-device workarounds exist for any of the vulnerabilities detailed in this advisory.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco NX-OS-Based Products is available at:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco NX-OS-Based Products</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

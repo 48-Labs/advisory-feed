@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Secure Desktop Cache Cleaner Command Execution Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20150415-csd</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2015-04-15T15:34:02</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2015-04-15T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2015-04-15T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in a Cisco-signed Java Archive (JAR)
+executable Cache Cleaner component of Cisco Secure Desktop could allow an
+unauthenticated, remote attacker to execute arbitrary commands on the
+client host where the affected .jar file is executed. Command execution would
+occur with the privileges of the user.
+
+
+
+The Cache Cleaner feature has been deprecated since November 2012. 
+
+
+
+There is no fixed software for this vulnerability. Cisco Secure Desktop packages that include the affected .jar files have been removed and are no longer available for download. 
+
+
+
+Because Cisco does not control all existing Cisco Secure Desktop packages, customers are advised to ensure that their Java blacklist controls have been updated to avoid potential exploitation. Refer to the "Workarounds" section of this advisory for additional information on how to mitigate this vulnerability.
+
+
+
+Customers using Cisco Secure Desktop should migrate to the Cisco Host Scan standalone package. 
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-csd["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-csd"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Cisco Secure Desktop is available for Cisco ASA Software and for Cisco IOS Software SSL VPN services.
+
+
+
+To verify whether the Cisco ASA Software is configured with the Cisco Secure Desktop feature enabled, use the show webvpn csd command and verify that Secure Desktop is installed and enabled. The following example shows a Cisco ASA device with Cisco Secure Desktop version 3.6.6249 enabled:
+
+
+ciscoasa# show webvpn csd
+Secure Desktop version 3.6.6249.0 is currently installed and enabled.
+
+
+
+To verify whether the Cisco IOS Software  is configured with the Cisco Secure Desktop feature enabled, use the show webvpn install status csd command and verify that Secure Desktop is installed. The following example shows a Cisco IOS device with Cisco Secure Desktop version 3.1.0.9 enabled:
+
+
+
+router#show webvpn install status csd
+SSLVPN Package Cisco-Secure-Desktop version installed:
+CISCO CSD CAT6K
+3,1,0,9 
+  
+
+
+
+
+This vulnerability affects the host that executes the malicious .jar
+file. Cisco ASA Software and Cisco IOS Software are not affected by this vulnerability. 
+
+
+
+Because the attacker can exploit a vulnerability in the .jar file, which is
+signed by Cisco, this vulnerability can be exploited against any users
+and not just against consumers of Cisco Secure Desktop. 
+
+
+
+Cisco has provided
+the SHA-1 hashes for the affected version of the .jar file that can be used to prevent the exploit via the Java Blacklist Jar feature. Cisco has also requested Java to blacklist the affected .jar file by default. This change will be available in Java SE 8 Update 45. See the "Workarounds" section of this advisory for additional details.
+
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Cisco Host Scan standalone and CiscoAnyConnect Secure Mobility Client do not include the affected .jar file and are not affected by this vulnerability.
+
+
+
+No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The Cisco Secure Desktop suite enhances the Cisco ASA and Cisco IOS Clientless and AnyConnect SSL VPN capabilities by providing additional security services.
+
+The Cache Cleaner feature is used to eliminate the information from the browser cache at the end of a clientless SSL VPN session.
+
+
+
+A vulnerability in a Cisco-signed Java Archive (JAR)
+executable included in the Cache Cleaner component of Cisco Secure Desktop could allow an
+unauthenticated, remote attacker to execute arbitrary commands on the
+client host where the affected .jar file is executed. Command execution would
+occur with the privileges of the user executing the affected file.
+
+
+
+The vulnerability is due to insufficient controls while executing the cache.jar
+file. An attacker could exploit
+this vulnerability by redirecting users to a malicious website that can serve a crafted package that includes the affected .jar file and additional malicious executables.
+
+
+
+Note: This vulnerability affects the host that executes the malicious .jar
+file. Cisco ASA Software and Cisco IOS Software are not affected by this vulnerability. 
+
+
+
+Because the attacker can exploit a vulnerability in the .jar file, which is
+signed by Cisco, this vulnerability can be exploited against any users
+and not just against consumers of Cisco Secure Desktop. 
+
+
+
+Cisco has provided
+the SHA-1 hashes for the affected version of the .jar file that
+can be used to prevent the exploit via the Java Blacklist Jar feature.
+Cisco has also requested Java to blacklist the affected .jar file
+by default. This change will be available in Java SE 8 Update 45. See
+the "Workarounds" section of this advisory for additional details.
+
+
+
+This vulnerability is documented in Cisco bug IDs CSCup83001["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCup83001"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2015-0691</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">An exploit of this vulnerability can be prevented by preventing the execution of the cache.jar file. This can be done by using the Java Blacklist Jar feature introduced with Java SE 6 Update 14. For information on this feature refer to the Java SE 6 Update 14 release notes, available
+at http://www.oracle.com/technetwork/java/javase/6u14-137039.html["http://www.oracle.com/technetwork/java/javase/6u14-137039.html"].
+
+The .jar files to be blacklisted are identified by the following SHA-1
+message digests:
+
+
+#Cisco - CSCup83001
+mF8yk1Hxc1uH9UorvfG2GJ+ScqY=
+yUcLgsHB7H6rf04gLNe0ikKrmfI=
+UcdnWBajIuVvJjoGHAPA11Gkg7E=
+
+Cisco has also requested that Java add these hashes to the blacklist by default. This change will be available in Java SE 8 Update 45.
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Alerts archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+There is no fixed software for this vulnerability. Cisco Secure Desktop packages that include the affected .jar files have been removed and are no longer available for download. 
+
+
+
+Customers using Cisco Secure Desktop should migrate to the Cisco Host Scan standalone package. 
+
+
+
+Note: The Cache Cleaner feature has been deprecated since November 2012. Additional information can be found at
+
+http://www.cisco.com/c/en/us/td/docs/security/csd/csd36/public_notices/vault_cc_ksl_host_emulation_deprecat_notice.html
+
+
+
+This vulnerability affects the host that executes the malicious .jar
+file. Cisco ASA Software and Cisco IOS Software are not affected by this vulnerability. 
+
+
+
+Because the attacker can exploit a vulnerability in the .jar file, which is
+signed by Cisco, this vulnerability can be exploited against any users
+and not just against consumers of Cisco Secure Desktop. 
+
+
+
+Cisco has provided
+the SHA-1 hashes for the affected version of the .jar file that
+can be used to prevent the exploit via the Java Blacklist Jar feature.
+Cisco has also requested Java to blacklist the affected .jar file
+by default. This change will be available in Java SE 8 Update 45. See
+the "Workarounds" section of this advisory for additional details.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory. 
+
+This vulnerability was reported to Cisco by Jason Sinchak.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-csd</cvrf:URL>
+      <cvrf:Description>Cisco Secure Desktop Cache Cleaner Command Execution Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=38330</cvrf:URL>
+      <cvrf:Description>Cisco Secure Desktop Cache Cleaner Command Execution Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Secure Desktop" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7307">Cisco Secure Desktop </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Secure Desktop Cache Cleaner Command Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCup83001</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCup83001</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0691</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-7307</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.3</BaseScoreV2>
+        <TemporalScoreV2>8.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:C/I:C/A:C/E:F/RL:W/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>An exploit of this vulnerability can be prevented by preventing the execution of the cache.jar file. This can be done by using the Java Blacklist Jar feature introduced with Java SE 6 Update 14. For information on this feature refer to the Java SE 6 Update 14 release notes, available
+at http://www.oracle.com/technetwork/java/javase/6u14-137039.html["http://www.oracle.com/technetwork/java/javase/6u14-137039.html"].
+
+The .jar files to be blacklisted are identified by the following SHA-1
+message digests:
+
+
+#Cisco - CSCup83001
+mF8yk1Hxc1uH9UorvfG2GJ+ScqY=
+yUcLgsHB7H6rf04gLNe0ikKrmfI=
+UcdnWBajIuVvJjoGHAPA11Gkg7E=
+
+Cisco has also requested that Java add these hashes to the blacklist by default. This change will be available in Java SE 8 Update 45.
+
+
+
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-csd</URL>
+        <Description>Cisco Secure Desktop Cache Cleaner Command Execution Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

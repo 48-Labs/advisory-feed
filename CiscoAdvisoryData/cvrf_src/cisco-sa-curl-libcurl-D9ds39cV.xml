@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>cURL and libcurl  Vulnerability Affecting Cisco Products: October 2023</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-curl-libcurl-D9ds39cV</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.7</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2023-10-12T22:17:57</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2023-10-13T19:29:19</cvrf:Date>
+        <cvrf:Description>Updated the list of products that are under investigation and the list of products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2023-10-20T17:27:14</cvrf:Date>
+        <cvrf:Description>Updated the list of products that are under investigation and the list of products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2023-10-31T18:13:48</cvrf:Date>
+        <cvrf:Description>Removed the Products Under Investigation section and updated the list of products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.4</cvrf:Number>
+        <cvrf:Date>2023-11-08T20:18:04</cvrf:Date>
+        <cvrf:Description>Changed the advisory status to Final. Updated Affected Products to indicate that the investigation is closed.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.5</cvrf:Number>
+        <cvrf:Date>2024-02-21T17:47:35</cvrf:Date>
+        <cvrf:Description>Updated the list of products that are not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.6</cvrf:Number>
+        <cvrf:Date>2024-03-05T18:03:27</cvrf:Date>
+        <cvrf:Description>Updated the list of products that are not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.7</cvrf:Number>
+        <cvrf:Date>2024-08-27T18:06:16</cvrf:Date>
+        <cvrf:Description>Updated the list of products that are not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2023-10-12T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2024-08-27T18:06:16</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2024-08-27T18:06:19.095276Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">On October 11, 2023, cURL released Version 8.4.0 of the cURL utility and the libcurl library. This release addressed two security vulnerabilities:
+
+CVE-2023-38545 – High Security Impact Rating (SIR)
+CVE-2023-38546 – Low SIR
+
+This advisory covers CVE-2023-38545 only. For more information about this vulnerability, see the cURL advisory ["https://curl.se/docs/CVE-2023-38545.html"].
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-curl-libcurl-D9ds39cV ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-curl-libcurl-D9ds39cV"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco investigated its product line to determine which products may be affected by this vulnerability.
+
+This advisory only lists Cisco products and services that are known to include the impacted software component and thus may be vulnerable. Products and services that do not contain the impacted software component are not vulnerable and therefore are not listed in this advisory. Any Cisco product or service that is not explicitly listed in the Affected Products section of this advisory is not affected by the vulnerability described.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">Currently, no products are known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+Endpoint Clients and Client Software
+
+AnyConnect Secure Mobility Client
+
+Network and Content Security Devices
+
+Adaptive Security Appliance (ASA) Software
+Firepower Threat Defense (FTD) Software
+Identity Services Engine (ISE)
+Secure Email, formerly Email Security Appliance (ESA)
+Secure Email and Web Manager
+Secure Web Appliance
+
+Routing and Switching - Enterprise and Service Provider
+
+Catalyst SD-WAN Controller, formerly SD-WAN vSmart
+Catalyst SD-WAN Manager, formerly SD-WAN vManage
+Catalyst SD-WAN Validator, formerly SD-WAN vBond
+IOS and IOS XE Software
+IOS XR Software
+MDS 9000 Series Multilayer Switches
+Nexus 3000 Series Switches
+Nexus 5500 Platform Switches
+Nexus 5600 Platform Switches
+Nexus 6000 Series Switches
+Nexus 7000 Series Switches
+Nexus 9000 Series Fabric Switches in Application Centric Infrastructure (ACI) mode
+Nexus 9000 Series Switches in standalone NX-OS mode
+SD-WAN vEdge 100 Series Routers
+SD-WAN vEdge 1000 Series Routers
+SD-WAN vEdge 2000 Series Routers
+SD-WAN vEdge 5000 Series Routers
+SD-WAN vEdge Cloud Router Platforms
+
+Network Management and Provisioning
+
+Application Policy Infrastructure Controller (APIC)
+Secure Network Analytics
+Telemetry Broker
+ThousandEyes Enterprise and Endpoint Agents
+
+Voice and Unified Communications Devices
+
+Unified Contact Center Express
+
+Video, Streaming, TelePresence, and Transcoding Devices
+
+Cisco Expressway Series
+
+Unified Computing
+
+HyperFlex Storage Replication Adapter
+HyperFlex System</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories ["https://www.cisco.com/go/psirt"] page, to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">This vulnerability was publicly disclosed by cURL maintainers on October 11, 2023.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-curl-libcurl-D9ds39cV</cvrf:URL>
+      <cvrf:Description>cURL and libcurl  Vulnerability Affecting Cisco Products: October 2023</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco Adaptive Security Appliance (ASA) Software">
+        <FullProductName ProductID="CVRFPID-6588">Cisco Adaptive Security Appliance (ASA) Software </FullProductName>
+      </Branch>
+      <Branch Type="Product Name" Name="Cisco Crosswork Network Change Automation">
+        <FullProductName ProductID="CVRFPID-273559">Cisco Crosswork Network Change Automation </FullProductName>
+      </Branch>
+      <Branch Type="Product Name" Name="Cisco Secure Network Analytics">
+        <FullProductName ProductID="CVRFPID-285963">Cisco Secure Network Analytics </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>SOCKS5 heap buffer overflow</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-38545</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-285963</ProductID>
+        <ProductID>CVRFPID-6588</ProductID>
+        <ProductID>CVRFPID-273559</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>7.5</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-curl-libcurl-D9ds39cV</URL>
+        <Description>cURL and libcurl  Vulnerability Affecting Cisco Products: October 2023</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

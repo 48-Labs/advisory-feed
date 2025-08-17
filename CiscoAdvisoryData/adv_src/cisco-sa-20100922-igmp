@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20100922-igmp",
+  "title": "Cisco IOS Software Internet Group Management Protocol Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2010-09-22T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:13:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100922-igmp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "21378",
+  "cve": "CVE-2010-2830",
+  "ciscoBugId": "CSCte14603",
+  "status": "",
+  "summary": "A vulnerability in the Internet Group Management Protocol (IGMP)version 3 implementation of Cisco IOS&reg; Software and Cisco IOS XE Softwareallows a remote unauthenticated attacker to cause a reload of an affecteddevice. Repeated attempts to exploit this vulnerability could result in ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Internet Group Management Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21378&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malicious IGMP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=28819&signatureSubId=0&releaseVersion=S514&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

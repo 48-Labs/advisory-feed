@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20100922-sslvpn",
+  "title": "Cisco IOS SSL VPN Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2010-09-22T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:17:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100922-sslvpn",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "21383",
+  "cve": "CVE-2010-2836",
+  "ciscoBugId": "CSCtg21685",
+  "status": "",
+  "summary": "Cisco IOS&reg; Software contains a vulnerability when the Cisco IOS SSL VPNfeature is configured with an HTTP redirect. Exploitation could allow a remote,unauthenticated user to cause a memory leak on the affected devices, that couldresult in a memory exhaustion condition that may cause ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software SSL Virtual Private Network Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21383&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

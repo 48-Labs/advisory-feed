@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20160928-dns",
+  "title": "Cisco IOS and IOS XE Software DNS Forwarder Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-09-28T16:00:00.000+0000",
+  "lastPublished": "2016-09-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160928-dns",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-56513",
+  "cve": "CVE-2016-6380",
+  "ciscoBugId": "CSCup90532",
+  "status": "",
+  "summary": "A vulnerability in the DNS forwarder functionality of Cisco IOS and IOS XE Software could allow an unauthenticated, remote attacker to cause the device to reload, corrupt the information present in the device's local DNS cache, or read part of the process memory.The vulnerability is ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2016 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-56513&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS and IOS-XE Software Domain Name System Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7651&signatureSubId=0&releaseVersion=S945&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

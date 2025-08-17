@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20140115-csacs",
+  "title": "Multiple Vulnerabilities in Cisco Secure Access Control System",
+  "version": "1.0",
+  "firstPublished": "2014-01-15T16:00:00.000+0000",
+  "lastPublished": "2014-01-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140115-csacs",
+  "severity": "High",
+  "cwe": "CWE-20, CWE-287",
+  "erpPubIds": "32120,32380,32379,32378",
+  "cve": "CVE-2014-0648,CVE-2014-0649,CVE-2014-0650",
+  "ciscoBugId": "CSCud75180,CSCud75187,CSCue65962",
+  "status": "",
+  "summary": "Cisco Secure Access Control System (ACS) is affected by the following vulnerabilities:        Cisco Secure ACS RMI Privilege Escalation Vulernability        Cisco Secure ACS RMI Unauthenticated User Access Vulnerability    Cisco Secure ACS Operating System ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Secure Access Control System Operating System Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=32380&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Secure Access Control System RMI Unauthenticated User Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=32379&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Secure Access Control System RMI Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=32378&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating the Multiple Vulnerabilities in Cisco Secure Access Control System",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32120"
+        }
+      ]
+    }
+  ]
+}

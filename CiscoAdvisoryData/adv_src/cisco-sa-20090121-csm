@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20090121-csm",
+  "title": "Cisco Security Manager Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2009-01-21T16:00:00.000+0000",
+  "lastPublished": "2009-01-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090121-csm",
+  "severity": "High",
+  "cwe": "CWE-287",
+  "erpPubIds": "17414,cisco-amb-20090121-csm",
+  "cve": "CVE-2008-3820",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Security Manager contains a vulnerability when it is used with Cisco IPS Event Viewer (IEV) that results in open TCP ports on both the Cisco Security Manager server and IEV client. An unauthenticated, remote attacker could leverage this vulnerability to access the MySQL ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Security Manager IPS Event Viewer Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17414&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Security Manager Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090121-csm"
+        }
+      ]
+    }
+  ]
+}

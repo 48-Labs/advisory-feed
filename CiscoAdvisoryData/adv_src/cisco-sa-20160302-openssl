@@ -1,0 +1,68 @@
+{
+  "identifier": "cisco-sa-20160302-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL Affecting Cisco Products: March 2016",
+  "version": "2.2",
+  "firstPublished": "2016-03-02T12:30:00.000+0000",
+  "lastPublished": "2016-05-23T14:04:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160302-openssl",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-119, CWE-200, CWE-310, CWE-399",
+  "erpPubIds": "43834,43838,43835,43840,43841,43836,43839,43837",
+  "cve": "CVE-2016-0702,CVE-2016-0703,CVE-2016-0704,CVE-2016-0705,CVE-2016-0797,CVE-2016-0798,CVE-2016-0799,CVE-2016-0800,CVE-2016-2842",
+  "ciscoBugId": "CSCuy53654,CSCuy53668,CSCuy54433,CSCuy54436,CSCuy54451,CSCuy54452,CSCuy54453,CSCuy54455,CSCuy54457,CSCuy54458,CSCuy54460,CSCuy54463,CSCuy54465,CSCuy54472,CSCuy54473,CSCuy54474,CSCuy54478,CSCuy54479,CSCuy54485,CSCuy54488,CSCuy54492,CSCuy54499,CSCuy54500,CSCuy54502,CSCuy54504,CSCuy54505,CSCuy54506,CSCuy54508,CSCuy54510,CSCuy54512,CSCuy54513,CSCuy54514,CSCuy54516,CSCuy54517,CSCuy54518,CSCuy54520,CSCuy54521,CSCuy54522,CSCuy54524,CSCuy54525,CSCuy54527,CSCuy54529,CSCuy54532,CSCuy54533,CSCuy54534,CSCuy54535,CSCuy54536,CSCuy54537,CSCuy54539,CSCuy54540,CSCuy54541,CSCuy54542,CSCuy54545,CSCuy54546,CSCuy54547,CSCuy54549,CSCuy54551,CSCuy54558,CSCuy54560,CSCuy54564,CSCuy54567,CSCuy54569,CSCuy54575,CSCuy54576,CSCuy54577,CSCuy54579,CSCuy54580,CSCuy54584,CSCuy54585,CSCuy54586,CSCuy54587,CSCuy54595,CSCuy54599,CSCuy54600,CSCuy54601,CSCuy54611,CSCuy54612,CSCuy54616,CSCuy54623,CSCuy54626,CSCuy54628,CSCuy54630,CSCuy54631,CSCuy54636,CSCuy54637,CSCuy54639,CSCuy54640,CSCuy54645,CSCuy54646,CSCuy54652,CSCuy54654,CSCuy54655,CSCuy54657,CSCuy54659,CSCuy54660,CSCuy54662,CSCuy54665,CSCuy54668,CSCuy54672,CSCuy54674,CSCuy54676,CSCuy54679,CSCuy54687,CSCuy54688,CSCuy54696,CSCuy58090,CSCuy58091,CSCuy58094,CSCuy58096,CSCuy58727,CSCuy58728,CSCuy59818,CSCuy62564,CSCuy74294,CSCuy74297,CSCuy74298",
+  "status": "",
+  "summary": "On March 1, 2016, the OpenSSL Software Foundation released a security advisory detailing seven vulnerabilities and a new attack, referred to as the Decrypting RSA with Obsolete and Weakened eNcryption (DROWN) attack. A total of eight Common Vulnerabilities and Exposures (CVEs) were ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Multiple Vendor SSL/TLS Implementation DROWN Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43834&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL BIO_*printf Functions Out of Bounds Memory Read Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43838&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Digital Signature Algorithm Private Key Processing Double Free Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43835&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL SSLv2 master-key Recovery Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43840&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Bleichenbacher Protection Security Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43841&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL SRP_VBASE_get_by_user Method Memory Leak Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43836&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL RSA Cryptographic Key Recovery Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43839&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL BN_hex2bn and BN_dec2bn Functions NULL Pointer Dereference Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43837&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "38060",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-03-03-seu.html"
+        }
+      ]
+    }
+  ]
+}

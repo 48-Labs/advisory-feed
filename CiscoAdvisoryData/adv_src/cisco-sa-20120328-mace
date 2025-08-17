@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20120328-mace",
+  "title": "Multiple Vulnerabilities in Cisco IOS Software Traffic Optimization Features",
+  "version": "1.0",
+  "firstPublished": "2012-03-28T16:00:00.000+0000",
+  "lastPublished": "2012-03-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120328-mace",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "25370,25371",
+  "cve": "CVE-2012-1312,CVE-2012-1314",
+  "ciscoBugId": "CSCtq64987,CSCtt45381,CSCtu57226",
+  "status": "",
+  "summary": "Cisco IOS Software contains a denial of service (DoS) vulnerability in the Wide Area Application Services (WAAS) Express feature that could allow an unauthenticated, remote attacker to cause the router to leak memory or to reload.Cisco IOS Software also contains a DoS vulnerability ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Measurement, Aggregation, and Correlation Engine Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25370&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Wide Area Application Services Express Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25371&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Half-open SYN Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3050&signatureSubId=0&releaseVersion=S774&softwareVersion=6.0"
+        },
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

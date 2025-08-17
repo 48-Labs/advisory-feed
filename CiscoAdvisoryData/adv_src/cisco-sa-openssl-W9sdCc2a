@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-openssl-W9sdCc2a",
+  "title": "Vulnerabilities in OpenSSL Affecting Cisco Products: November 2022",
+  "version": "1.6",
+  "firstPublished": "2022-10-28T16:00:00.000+0000",
+  "lastPublished": "2022-11-23T20:23:17.760+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": null,
+  "cve": "CVE-2022-3602,CVE-2022-3786",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "On November 1, 2022, the OpenSSL Project announced the following vulnerabilities:CVE-2022-3602 - X.509 Email Address 4-byte Buffer OverflowCVE-2022-3786 - X.509 Email Address Variable Length Buffer OverflowFor a description ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "300306",
+          "url": "https://www.snort.org/advisories/talos-rules-2022-11-01"
+        },
+        {
+          "name": "300307",
+          "url": "https://www.snort.org/advisories/talos-rules-2022-11-01"
+        },
+        {
+          "name": "60790",
+          "url": "https://www.snort.org/rule_docs/1-60790"
+        }
+      ]
+    }
+  ]
+}

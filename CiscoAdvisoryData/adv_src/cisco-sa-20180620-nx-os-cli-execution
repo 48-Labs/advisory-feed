@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20180620-nx-os-cli-execution",
+  "title": "Cisco NX-OS Software CLI Arbitrary Command Execution Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2018-06-20T16:00:00.000+0000",
+  "lastPublished": "2020-08-26T20:48:53.523+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180620-nx-os-cli-execution",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-67770",
+  "cve": "CVE-2018-0306",
+  "ciscoBugId": "CSCve51693,CSCve91634,CSCve91659,CSCve91663,CSCvj76209",
+  "status": "",
+  "summary": "A vulnerability in the CLI parser of Cisco&nbsp;NX-OS Software could allow an authenticated, local attacker to perform a command-injection attack on an affected device.The vulnerability is due to insufficient input validation of command arguments. An attacker could exploit this ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: June 2018 Cisco FXOS and NX-OS Software Security Advisory Collection",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-67770&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

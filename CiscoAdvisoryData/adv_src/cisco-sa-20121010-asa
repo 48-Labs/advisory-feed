@@ -1,0 +1,76 @@
+{
+  "identifier": "cisco-sa-20121010-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module ",
+  "version": "1.0",
+  "firstPublished": "2012-10-10T16:00:00.000+0000",
+  "lastPublished": "2012-10-10T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-asa",
+  "severity": "Critical",
+  "cwe": "CWE-119",
+  "erpPubIds": "27108,27107,27106,27105,27104,cisco-sa-20121010-fwsm",
+  "cve": "CVE-2012-4643,CVE-2012-4659,CVE-2012-4660,CVE-2012-4661,CVE-2012-4662,CVE-2012-4663",
+  "ciscoBugId": "CSCtr21346,CSCtr21359,CSCtr21376,CSCtr27521,CSCtr27522,CSCtr27524,CSCtr63728,CSCtw84068,CSCtz04566",
+  "status": "",
+  "summary": "Cisco ASA 5500 Series Adaptive Security Appliances (ASA) and CiscoCatalyst 6500 Series ASA Services Module (ASASM) may be affected by thefollowing vulnerabilities:    DHCP Memory Allocation Denial of Service Vulnerability    SSL VPN Authentication Denial of Service ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Firewall Services Module and Cisco ASA 5500 Series Adaptive Security Appliance DCERPC Inspection Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=27108&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Firewall Services Module and Cisco ASA 5500 Series Adaptive Security Appliance DCERPC Inspection Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=27107&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Adaptive Security Appliance Software and Cisco ASA Services Module Software SIP Inspection Media Update Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=27106&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Adaptive Security Appliance Software and Cisco ASA Services Module Software SSL VPN Authentication Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=27105&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Adaptive Security Appliance Software and Cisco ASA Services Module Software DHCP Memory Allocation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=27104&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Multiple Vulnerabilities in Cisco Firewall Services Module",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA and FWSM DCERPC Inspection DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1476&signatureSubId=0&releaseVersion=S674&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA PIX Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1478&signatureSubId=0&releaseVersion=S674&softwareVersion=6.0"
+        },
+        {
+          "name": "CISCO ASA DCERPC Inspection Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1492&signatureSubId=0&releaseVersion=S674&softwareVersion=6.0"
+        },
+        {
+          "name": "CISCO ASA DCERPC Inspection Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1492&signatureSubId=1&releaseVersion=S674&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

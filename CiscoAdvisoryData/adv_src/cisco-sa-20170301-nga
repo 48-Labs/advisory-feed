@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20170301-nga",
+  "title": "Cisco NetFlow Generation Appliance Stream Control Transmission Protocol Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-03-01T16:00:00.000+0000",
+  "lastPublished": "2017-03-01T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170301-nga",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2017-3826",
+  "ciscoBugId": "CSCvc83320",
+  "status": "",
+  "summary": "A vulnerability in the Stream Control Transmission Protocol (SCTP) decoder of the Cisco NetFlow Generation Appliance (NGA) could allow an unauthenticated, remote attacker to cause the device to hang or unexpectedly reload, causing a denial of service (DoS) condition.The ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "41786",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-03-02-seu.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Unified MeetingPlace Web Conferencing</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20121031-mp</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2012-10-31T14:32:18</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2012-11-27T14:16:40</cvrf:Date>
+        <cvrf:Description>Updated the "Vulnerable Products" section to indicate that versions prior to 7.0 are not affected by the SQL injection vulnerability.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2012-10-31T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-11-27T14:29:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco Unified MeetingPlace Web Conferencing is affected by two vulnerabilities:
+
+
+    Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability
+    Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability
+
+
+
+Exploitation of the Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability may allow an unauthenticated, remote attacker to send Structured Query Language (SQL) commands to manipulate the MeetingPlace database stores information about server
+configuration, meetings, and users. These commands may be used to create,
+delete, or alter some of the information in the Cisco Unified
+MeetingPlace Web Conferencing database.
+
+
+
+Exploitation of the Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability may allow an unauthenticated, remote attacker to create a buffer overrun condition that may cause the Web Conferencing server to become unresponsive.
+
+
+
+Cisco has released software updates that address these vulnerabilities. There are no workarounds that mitigate these vulnerabilities.
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121031-mp["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121031-mp"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following versions of Cisco Unified MeetingPlace Web Conferencing are vulnerable to Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability:
+
+
+
+
+    
+        
+            Version
+            
+            
+            Affected 
+        
+        
+            
+            Prior to 7.0 
+            No 
+        
+        
+            7.0 
+            Yes
+        
+        
+            7.1
+            Yes
+        
+        
+            8.0
+            Yes 
+        
+        
+            8.5
+            Yes 
+        
+    
+
+
+
+
+
+The following versions of Cisco Unified MeetingPlace Web Conferencing are vulnerable to Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability:
+
+
+
+
+    
+        
+            Version
+            
+            
+            Affected 
+        
+        
+            
+            Prior to 7.0 
+            Yes 
+        
+        
+            7.0 
+            Yes
+        
+        
+            7.1
+            Yes
+        
+        
+            8.0
+            Yes 
+        
+        
+            8.5
+            Yes 
+        
+    
+
+
+
+Note: Cisco Unified MeetingPlace Web Conferencing versions prior to 7.0
+reached end of software maintenance. Customers running versions prior to
+7.0 should contact their Cisco support team for assistance in
+upgrading to a supported version of Cisco Unified MeetingPlace.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The Cisco Unified MeetingPlace conferencing solution provides functionality that allows organizations to host integrated voice, video, and web conferencing. The solution is deployed on network and integrated directly into an organization's private voice/data networks and enterprise applications. Cisco Unified MeetingPlace servers can be deployed so that the server is accessible from the Internet, allowing external parties to participate in meetings.
+
+
+
+Web Conferencing is a core component of the Cisco
+Unified MeetingPlace conferencing solution that allows users to share
+applications and presentations and manage meetings.
+
+
+
+Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability
+
+
+
+The Cisco Unified MeetingPlace Web Conferencing service contains a vulnerability that could allow an unauthenticated, remote attacker to inject Structured Query Language (SQL) commands, that may affect the integrity and availability of the data stored in the MeetingPlace Web Conferencing internal database. This data may include server configurations, meetings, and users. 
+
+The vulnerability is due to insufficient validation of some of the parameters passed through the HTTP POST method. An attacker could exploit this vulnerability by inserting malicious SQL commands in the HTTP POST request directed to the affected system. An exploit could allow the attacker to modify or delete data from the Web Conferencing database.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtx08939["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtx08939"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2012-0337
+
+
+
+Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability
+
+
+
+The Cisco Unified MeetingPlace Web Conferencing service contains a vulnerability that could allow an unauthenticated, remote attacker to create a buffer overrun condition that may cause the Web Conferencing server to become unresponsive.
+
+The vulnerability is due to insufficient validation of some parameter values of an HTTP POST request. An attacker may be able to exploit this vulnerability by crafting the value of the vulnerable parameters in an HTTP POST request directed to the affected system. An exploit could allow the attacker to cause the Web Conferencing server to become unresponsive.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCua66341["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCua66341"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2012-5416</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">No workarounds are available to mitigate these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">Cisco has released software updates that address these vulnerabilities.
+
+
+
+The following table contains the first fixed releases of software:
+
+
+
+Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+             Vulnerability
+
+            
+            Major Release
+            
+            
+            First Fix In 
+        
+        
+             Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability - CSCtx08939
+
+            
+            
+            7.0 
+            7.1MR1
+
+            
+        
+        
+            7.1 
+            7.1MR1
+        
+        
+            8.0 
+             8.0MR1 Patch 1
+
+            
+        
+        
+            8.5 
+             8.5MR3
+
+            
+        
+    
+
+
+
+
+Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability
+
+
+    
+        
+             Vulnerability
+
+            
+            Major Release
+            
+            
+            First Fix In 
+        
+        
+             Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability - CSCua66341
+
+            
+            
+            7.0 
+            7.1MR1 Patch 1
+
+            
+        
+        
+            7.1 
+            7.1MR1 Patch 1
+
+            
+        
+        
+            8.0 
+             8.0MR1 Patch 1 
+        
+        
+            8.5 
+             8.5MR3 
+        
+    
+
+
+
+
+ 
+Recommended Releases
+The following table lists all recommended releases. These recommended
+releases contain the fixes for all vulnerabilities in this advisory.
+Cisco recommends upgrading to a release that is equal to or later than
+these recommended releases.
+
+
+    
+    
+    
+    
+        
+            
+            Major Release
+
+            
+            
+            Recommended Release
+
+            
+        
+        
+            7.0 
+            Migrate to 7.1MR1 Patch 1 
+        
+        
+            7.1 
+            7.1MR1 Patch 1
+        
+        
+            8.0
+
+            
+            8.0MR1 Patch 1 
+        
+        
+            8.5 
+            8.5MR3 
+        
+    
+
+
+
+
+
+When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory. 
+
+Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability was reported to Cisco by Daniel Mende from ERNW GmbH.
+
+Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability was found during internal tests.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121031-mp</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Unified MeetingPlace Web Conferencing</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unified MeetingPlace Web Conferencing" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-186354">Cisco Unified MeetingPlace Web Conferencing </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified MeetingPlace Web Conferencing SQL Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtx08939</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtx08939</Note>
+    </Notes>
+    <CVE>CVE-2012-0337</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-186354</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>8.5</BaseScoreV2>
+        <TemporalScoreV2>7.0</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:P/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available to mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121031-mp</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified MeetingPlace Web Conferencing</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified MeetingPlace Web Conferencing Buffer Overrun Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCua66341</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCua66341</Note>
+    </Notes>
+    <CVE>CVE-2012-5416</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-186354</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available to mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121031-mp</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified MeetingPlace Web Conferencing</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

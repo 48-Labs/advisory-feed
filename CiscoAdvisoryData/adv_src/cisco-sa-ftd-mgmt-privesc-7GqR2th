@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-ftd-mgmt-privesc-7GqR2th",
+  "title": "Cisco Firepower Threat Defense Software Privilege Escalation Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2022-11-09T16:00:00.000+0000",
+  "lastPublished": "2022-11-09T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-mgmt-privesc-7GqR2th",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "erpPubIds": "ERP-74838",
+  "cve": "CVE-2022-20949",
+  "ciscoBugId": "CSCwb52401",
+  "status": "",
+  "summary": "A vulnerability in the management web server of Cisco Firepower Threat Defense (FTD) Software could allow an authenticated, remote attacker with high privileges to execute configuration commands on an affected system.This vulnerability exists because access to HTTPS endpoints is not ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: November 2022 Semiannual Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74838&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20170607-tele",
+  "title": "Cisco TelePresence Endpoint Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-06-07T16:00:00.000+0000",
+  "lastPublished": "2017-06-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170607-tele",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2017-6648",
+  "ciscoBugId": "CSCux94002",
+  "status": "",
+  "summary": "A vulnerability in the Session Initiation Protocol (SIP) of the Cisco TelePresence Codec (TC) and Collaboration Endpoint (CE) Software could allow an unauthenticated, remote attacker to cause a TelePresence endpoint to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "20396",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20080610-snmpv3",
+  "title": "SNMP Version 3 Authentication Vulnerabilities",
+  "version": "1.9",
+  "firstPublished": "2008-06-10T00:00:00.000+0000",
+  "lastPublished": "2012-11-16T15:40:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080610-snmpv3",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "16040,cisco-amb-20080610-SNMPv3",
+  "cve": "CVE-2008-0960",
+  "ciscoBugId": "CSCsf04754",
+  "status": "",
+  "summary": "Multiple Cisco products contain either of two authenticationvulnerabilities in the Simple Network Management Protocol version 3 (SNMPv3)feature. These vulnerabilities can be exploited when processing a malformedSNMPv3 message. These vulnerabilities could allow the disclosure of ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Multiple SNMPv3 Implementations Hash-Based Message Authentication Code Manipulation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16040&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the SNMP Version 3 Authentication Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080610-SNMPv3"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "SNMPv3 Malformed Authentication Attempt",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6546&signatureSubId=0&releaseVersion=S464&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

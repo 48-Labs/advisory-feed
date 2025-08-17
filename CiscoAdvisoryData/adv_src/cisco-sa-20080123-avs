@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20080123-avs",
+  "title": "Default Passwords in the Application Velocity System",
+  "version": "1.0",
+  "firstPublished": "2008-01-23T16:00:00.000+0000",
+  "lastPublished": "2008-01-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080123-avs",
+  "severity": "Critical",
+  "cwe": "CWE-264",
+  "erpPubIds": "14942",
+  "cve": "CVE-2008-0029",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Versions of the Cisco Application Velocity System (AVS) prior to software version AVS 5.1.0 do not prompt users to modify system account passwords during the initial configuration process. Because there is no requirement to change these credentials during the initial configuration ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Application Velocity System Default Password Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14942&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Application Velocity System Default Passwords",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6765&signatureSubId=0&releaseVersion=S619&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

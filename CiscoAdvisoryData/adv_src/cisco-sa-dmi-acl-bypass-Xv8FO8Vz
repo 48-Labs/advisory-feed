@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
+  "title": "Cisco IOS XE Software NETCONF/RESTCONF IPv4 Access Control List Bypass Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2024-03-27T16:00:00.000+0000",
+  "lastPublished": "2024-03-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": "CWE-390",
+  "erpPubIds": "ERP-75056",
+  "cve": "CVE-2024-20316",
+  "ciscoBugId": "CSCwf92391,CSCwe12169",
+  "status": "",
+  "summary": "A vulnerability in the data model interface (DMI) services of Cisco IOS XE Software could allow an unauthenticated, remote attacker to access resources that should have been protected by a configured IPv4 access control list (ACL).This vulnerability is due to improper handling of ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2024 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75056&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

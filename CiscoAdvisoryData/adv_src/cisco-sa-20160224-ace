@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160224-ace",
+  "title": "Cisco ACE 4710 Application Control Engine Command Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-02-24T16:00:00.000+0000",
+  "lastPublished": "2016-02-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160224-ace",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-78",
+  "cve": "CVE-2016-1297",
+  "ciscoBugId": "CSCul84801",
+  "status": "",
+  "summary": "A vulnerability in the Device Manager GUI of the Cisco ACE 4710 Application Control Engine could allow an authenticated, remote attacker to execute any command-line interface (CLI) command on the ACE with admin user privileges. The vulnerability is due to insufficient ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "37853",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-02-25-seu.html"
+        }
+      ]
+    }
+  ]
+}

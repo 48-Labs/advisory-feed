@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Web Security Appliance</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20130626-wsa</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2013-06-26T14:09:13</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2013-06-26T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2013-06-26T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco IronPort AsyncOS Software for Cisco Web Security Appliance is affected by the following vulnerabilities:
+
+
+    Two authenticated command injection vulnerabilities
+    Management GUI Denial of Service Vulnerability 
+
+
+
+These vulnerabilities are independent of each other; a release that is
+affected by one of the vulnerabilities may not be affected by the
+others.
+
+
+
+Successful exploitation of any of the two command injection vulnerabilities could allow an authenticated,
+remote attacker to execute arbitrary commands on the underlying
+operating system with elevated privileges. 
+
+Successful exploitation of the Management GUI Denial of Service Vulnerability could cause several critical processes to become
+unresponsive and make the affected system unstable.
+
+
+
+
+
+Cisco has released software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are available.
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-wsa["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-wsa"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">All models of
+Cisco Web Security Appliance running a vulnerable version of Cisco IronPort
+AsyncOS Software are affected by one or more of the vulnerabilities
+described in this advisory.
+
+
+
+Some of the vulnerabilities described in this advisory affect
+Cisco IronPort Async OS for Cisco Content Security Management and Cisco Email Security
+Appliance.
+
+Consult the Cisco security advisory Multiple Vulnerabilities in Cisco Content Security Management Appliance at https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-sma["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-sma"] for additional information about the
+vulnerabilities affecting Cisco Content Security Management Appliance  and Cisco
+security advisory Multiple Vulnerabilities in Cisco Email Security
+Appliance at https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-esa["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-esa"] for
+additional information about the vulnerabilities affecting Cisco Email
+Security Appliance.
+
+
+
+
+
+
+Determining the Running Software Version
+To determine whether a vulnerable version of Cisco IronPort AsyncOS
+Software for Cisco Web Security is running on an appliance, administrators can issue the version command. The following example shows a device running Cisco IronPort AsyncOS Software version 7.5.1-079:
+
+
+ciscowsa&gt; version
+Current Version
+===============
+Product: Cisco IronPort S670 Web Security Appliance
+Model: S670
+Version: 7.5.1-079
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">With the exception of Cisco Content Security Management and Cisco Email Security
+Appliance, no other Cisco products are currently known to be affected
+by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The Cisco Web Security Appliance is a secure web gateway that combines advanced malware protection, application visibility and control (AVC), acceptable use policy controls, reporting, and secure mobility on a single platform.
+
+
+
+Authenticated Command Injection Vulnerabilities
+
+
+
+Two vulnerabilities in the web framework code could allow an authenticated, remote attacker to  to execute arbitrary
+commands on the underlying operating system with elevated privileges. 
+
+
+
+The vulnerabilities are due to the failure to properly sanitize user
+supplied input that is utilized to perform actions that
+leverage the underlying command-line interface of the device. An
+authenticated, unprivileged attacker could exploit this vulnerability
+by sending a crafted URL to the affected system or convince a
+valid user to click on a malicious URL. An successful exploit could allow the
+attacker to take complete
+control of the affected device.
+
+These vulnerabilities can only be triggered by IPv4 traffic directed to the management IP addresses of the affected system.
+
+These vulnerabilities can be exploited over the default management ports, TCP port 8080 or TCP port 8443. 
+
+Note: The default management ports can be reconfigured on the system. 
+
+These vulnerabilities are documented by Cisco bug IDs CSCzv69294["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCzv69294"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and CSCzv85726["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCzv85726"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and have been assigned Common Vulnerabilities and Exposures (CVE) IDs CVE-2013-3383 and CVE-2013-3384.
+
+
+
+Management GUI Denial of Service Vulnerability
+
+
+
+A vulnerability in the Graphical User Interface (GUI) function in the web framework  code could allow an unauthenticated,
+remote attacker to cause multiple processes to become unresponsive, resulting in a denial of service condition.
+
+
+
+The vulnerability is due to
+improper handling, processing and termination of HTTP and HTTPS connections. An attacker could exploit this vulnerability by
+sending multiple HTTP or HTTPS requests to any management enabled interfaces of
+the affected system. A full TCP three-way handshake is required to
+exploit this vulnerability. An exploit could allow the attacker prevent management access via the GUI and cause other critical process to become unresponsive, resulting in a denial of service condition. A hard reboot of the affected system is needed to restore full functionality.
+
+
+
+This vulnerability can only be triggered by IPv4 traffic directed to the
+management IP addresses of the affected system. This vulnerability can
+be exploited over the default management ports, TCP port 8080 or TCP port 8443. 
+Note: The default management ports can be reconfigured on the system.
+
+This vulnerability is documented by Cisco bug ID CSCzv58669["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCzv58669"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2013-3385.
+
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">All the vulnerabilities described in this security advisory can be mitigated by
+disabling management access to the affected system GUI. 
+
+Administrators can use the interfaceconifg command to disable appliance management via the GUI. Alternatively, this can be done via the
+GUI by editing the management interface properties under Network-&gt;IP
+interfaces-&gt; Edit and then selecting Disable Appliance Management.
+
+
+
+Note: Administrators can manage the affected system via SSH and command-line interface while GUI access is
+disabled. However, not all commands and features may be available via command-line interface.
+
+
+
+Administrators can also limit the attack surface by restricting IP
+addresses that can access the management interface. This can be
+done using the adminaccessconfig command and selecting IPACCESS from the menu.
+
+
+
+Administrator should also implement Cross-Site Request Forgery protection if available on their platform and software release. This will help limit the attack surface of the command injection vulnerabilities, although will not completely eliminate them.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452"]
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+The following table lists the first fixed releases that contain fixes for the two authenticated command injection vulnerabilities:
+
+
+
+
+    
+        
+             Major Release
+
+            
+             First Fixed In 
+
+            
+        
+        
+             7.1 and prior
+
+            
+             7.1.3-033 and 7.1.4-101
+
+            
+        
+        
+             7.5
+             7.5.0-838
+
+            
+        
+        
+             7.7
+             7.7.0-550
+        
+    
+
+
+
+The following table list the first fixed releases that contain fixes
+for the Management GUI Denial of Service Vulnerability:
+
+
+
+
+    
+        
+             Major Release
+
+            
+             First Fixed In 
+
+            
+        
+        
+             7.1 and prior
+
+            
+             7.1.3-033 and 7.1.4-101
+
+            
+        
+        
+             7.5
+             7.5.0-838 and 7.5.1-201
+
+            
+        
+        
+             7.7
+             7.7.0-602
+        
+    
+
+
+
+The following table lists the recommended releases that include fixes for all the vulnerabilities in described in this security advisory:
+
+
+
+
+    
+        
+             Major Release
+
+            
+             Recommended 
+
+            
+        
+        
+             7.1 and prior
+
+            
+             7.5.1-201 or later
+
+            
+        
+        
+             7.5
+             7.5.1-201 or later
+
+            
+        
+        
+             7.7
+             7.7.0-602 or later
+
+            
+        
+    
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+These vulnerabilities were identified during an internal security review of the affected products.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Content Security Management, Web Security, and Email Security Appliances</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-wsa</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Web Security Appliance</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Web Security Appliance (WSA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189789">Cisco Web Security Appliance (WSA) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Email Security Appliance (ESA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189790">Cisco Email Security Appliance (ESA) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Content Security Management Appliance (SMA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189791">Cisco Content Security Management Appliance (SMA) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Web Framework Authenticated Command Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCzv85726</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCzv85726,CSCzv44633,CSCzv24579</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3384</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189789</ProductID>
+        <ProductID>CVRFPID-189790</ProductID>
+        <ProductID>CVRFPID-189791</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>All the vulnerabilities described in this security advisory can be mitigated by
+disabling management access to the affected system GUI. 
+
+Administrators can use the interfaceconifg command to disable appliance management via the GUI. Alternatively, this can be done via the
+GUI by editing the management interface properties under Network-&gt;IP
+interfaces-&gt; Edit and then selecting Disable Appliance Management.
+
+
+
+Note: Administrators can manage the affected system via SSH and command-line interface while GUI access is
+disabled. However, not all commands and features may be available via command-line interface.
+
+
+
+Administrators can also limit the attack surface by restricting IP
+addresses that can access the management interface. This can be
+done using the adminaccessconfig command and selecting IPACCESS from the menu.
+
+
+
+Administrator should also implement Cross-Site Request Forgery protection if available on their platform and software release. This will help limit the attack surface of the command injection vulnerabilities, although will not completely eliminate them.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-wsa</URL>
+        <Description>Multiple Vulnerabilities in Cisco Web Security Appliance</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Security Services Authenticated Command Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCzv69294</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCzv69294</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3383</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189789</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>All the vulnerabilities described in this security advisory can be mitigated by
+disabling management access to the affected system GUI. 
+
+Administrators can use the interfaceconifg command to disable appliance management via the GUI. Alternatively, this can be done via the
+GUI by editing the management interface properties under Network-&gt;IP
+interfaces-&gt; Edit and then selecting Disable Appliance Management.
+
+
+
+Note: Administrators can manage the affected system via SSH and command-line interface while GUI access is
+disabled. However, not all commands and features may be available via command-line interface.
+
+
+
+Administrators can also limit the attack surface by restricting IP
+addresses that can access the management interface. This can be
+done using the adminaccessconfig command and selecting IPACCESS from the menu.
+
+
+
+Administrator should also implement Cross-Site Request Forgery protection if available on their platform and software release. This will help limit the attack surface of the command injection vulnerabilities, although will not completely eliminate them.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-wsa</URL>
+        <Description>Multiple Vulnerabilities in Cisco Web Security Appliance</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Management GUI Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCzv78669</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCzv78669,CSCzv63329,CSCzv58669</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3385</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189791</ProductID>
+        <ProductID>CVRFPID-189790</ProductID>
+        <ProductID>CVRFPID-189789</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>All the vulnerabilities described in this security advisory can be mitigated by
+disabling management access to the affected system GUI. 
+
+Administrators can use the interfaceconifg command to disable appliance management via the GUI. Alternatively, this can be done via the
+GUI by editing the management interface properties under Network-&gt;IP
+interfaces-&gt; Edit and then selecting Disable Appliance Management.
+
+
+
+Note: Administrators can manage the affected system via SSH and command-line interface while GUI access is
+disabled. However, not all commands and features may be available via command-line interface.
+
+
+
+Administrators can also limit the attack surface by restricting IP
+addresses that can access the management interface. This can be
+done using the adminaccessconfig command and selecting IPACCESS from the menu.
+
+
+
+Administrator should also implement Cross-Site Request Forgery protection if available on their platform and software release. This will help limit the attack surface of the command injection vulnerabilities, although will not completely eliminate them.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location:
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-wsa</URL>
+        <Description>Multiple Vulnerabilities in Cisco Web Security Appliance</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,101 @@
+{
+  "identifier": "cisco-sa-20100217-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances",
+  "version": "1.1",
+  "firstPublished": "2010-02-17T16:00:00.000+0000",
+  "lastPublished": "2010-02-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100217-asa",
+  "severity": "High",
+  "cwe": "CWE-287, CWE-399",
+  "erpPubIds": "19914,19915,19916,19917,19918,19919,19920,19921,cisco-amb-20100217-asa",
+  "cve": "CVE-2010-0149,CVE-2010-0150,CVE-2010-0151,CVE-2010-0565,CVE-2010-0566,CVE-2010-0567,CVE-2010-0568,CVE-2010-0569",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco ASA 5500 Series Adaptive Security Appliances are affected by the following vulnerabilities:      TCP Connection Exhaustion Denial of Service Vulnerability      Session Initiation Protocol (SIP) Inspection Denial of ServiceVulnerabilities  ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco ASA 5500 Series Adaptive Security Appliances Remote TCP Connection Exhaustion Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19914&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA 5500 Series Adaptive Security Appliances Remote SIP Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19915&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA 5500 Series Adaptive Security Appliances Remote SCCP Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19916&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA 5500 Series Adaptive Security Appliances Remote WebVPN DTLS Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19917&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA 5500 Series Adaptive Security Appliances Remote TCP Segment Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19918&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA 5500 Series Adaptive Security Appliances Remote Crafted IKE Message Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19919&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Adaptive Security Appliances NTLMv1 Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19920&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Firewall Services Module SCCP Inspection Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19921&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100217-asa"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "26590",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "26601",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "43297",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "43525",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Long SIP REGISTER Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24219&signatureSubId=0&releaseVersion=S470&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24279&signatureSubId=0&releaseVersion=S470&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

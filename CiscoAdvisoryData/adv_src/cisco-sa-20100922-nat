@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20100922-nat",
+  "title": "Cisco IOS Software Network Address Translation Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2010-09-22T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:14:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100922-nat",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "21380,21379,21381",
+  "cve": "CVE-2010-2831,CVE-2010-2832,CVE-2010-2833",
+  "ciscoBugId": "CSCtd86472,CSCtf17624,CSCtf91428",
+  "status": "",
+  "summary": "The Cisco IOS&reg; Software Network Address Translation functionalitycontains three denial of service (DoS) vulnerabilities. The first vulnerabilityis in the translation of Session Initiation Protocol (SIP) packets, the secondvulnerability in the translation of H.323 packets and the third ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software NAT for H.323 Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21380&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software NAT for Session Initiation Protocol Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21379&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software NAT for H.225.0 Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21381&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IOS SIP Translation DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=27000&signatureSubId=0&releaseVersion=S803&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

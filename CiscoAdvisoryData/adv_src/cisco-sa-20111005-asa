@@ -1,0 +1,59 @@
+{
+  "identifier": "cisco-sa-20111005-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module",
+  "version": "1.2",
+  "firstPublished": "2011-10-05T16:00:00.000+0000",
+  "lastPublished": "2012-07-14T09:38:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-asa",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "24241,24242,24243,24244",
+  "cve": "CVE-2011-3298,CVE-2011-3299,CVE-2011-3300,CVE-2011-3301,CVE-2011-3302,CVE-2011-3303,CVE-2011-3304",
+  "ciscoBugId": "CSCtq57697",
+  "status": "",
+  "summary": "'font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-family: arial,helvetica,sans-serif; color: #000000;' ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware Microsoft Network Instant Messenger Packet Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24241&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software TACACS+ Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24242&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software SunRPC Packet Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24243&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software Internet Locator Service Packet Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24244&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA TACACS+ Authentication Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=38406&signatureSubId=0&releaseVersion=S600&softwareVersion=6.0"
+        },
+        {
+          "name": "SunRPC Arithmetic Inspection  Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=38446&signatureSubId=0&releaseVersion=S600&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA SunRPC Inspection Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=39366&signatureSubId=0&releaseVersion=S600&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

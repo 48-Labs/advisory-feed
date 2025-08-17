@@ -1,0 +1,49 @@
+{
+  "identifier": "cisco-sa-ioxPE-KgGvCAf9",
+  "title": "Cisco IOx for IOS XE Software Privilege Escalation Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2020-06-03T16:00:00.000+0000",
+  "lastPublished": "2020-06-03T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ioxPE-KgGvCAf9",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "erpPubIds": "ERP-73388",
+  "cve": "CVE-2020-3227",
+  "ciscoBugId": "CSCvq18527,CSCvq83400",
+  "status": "",
+  "summary": "A vulnerability in the authorization controls for the Cisco&nbsp;IOx application hosting infrastructure in Cisco&nbsp;IOS XE Software could allow an unauthenticated, remote attacker to execute Cisco IOx API commands without proper authorization.The vulnerability is due to incorrect ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "54161",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-04-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: June 2020 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-73388&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOx for IOS XE Software Privilege Escalation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8424&signatureSubId=0&releaseVersion=S1041&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

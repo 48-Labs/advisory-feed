@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Cisco Products Confidential Information Decryption Man-in-the-Middle Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20151125-ci</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.4</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2015-11-25T21:27:58</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2015-11-26T20:48:33</cvrf:Date>
+        <cvrf:Description>Updated the Summary, Exploitation and Public Announcements, and Workarounds sections to clarify the details.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2016-09-13T23:29:40</cvrf:Date>
+        <cvrf:Description>Updated Fixed Software to include information on new software updates.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.4</cvrf:Number>
+        <cvrf:Date>2016-09-20T21:24:48</cvrf:Date>
+        <cvrf:Description>Updated Fixed Software to include information on an Engineering Special (ES).</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2015-11-25T21:30:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2016-09-20T21:24:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the cryptographic implementation of multiple Cisco products could allow an unauthenticated, remote attacker to make use of hard-coded certificate and keys embedded within the firmware of the affected device.
+
+
+
+The vulnerability is due to the lack of unique key and certificate generation within affected appliances. An attacker could exploit this vulnerability by using the static information to conduct man-in-the-middle attacks to decrypt confidential information on user connections.
+
+
+
+This is an attack on the client attempting to access the device and does not compromise the device itself. To exploit the issue, an attacker needs not only the public and private key pair, but also a privileged position in the network that would allow the attacker to monitor the traffic between client and server, intercept the traffic, and modify or inject the attacker's own traffic. There are no workarounds that address this vulnerability. 
+
+
+
+Cisco has not released software updates that address this vulnerability.  
+
+
+
+This advisory is available at the following link: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151125-ci["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151125-ci"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following products are vulnerable:
+
+
+    RV320 Dual Gigabit WAN VPN Router
+    RV325 Dual Gigabit WAN VPN Router
+    RVS4000 4-port Gigabit Security Router - VPN
+    WRV210 Wireless-G VPN Router - RangeBooster
+    WAP4410N Wireless-N Access Point - PoE/Advanced Security
+    WRV200 Wireless-G VPN Router - RangeBooster
+    WRVS4400N Wireless-N Gigabit Security Router - VPN V2.0
+    WAP200 Wireless-G Access Point - PoE/Rangebooster
+    WVC2300 Wireless-G Business Internet Video Camera - Audio
+    PVC2300 Business Internet Video Camera - Audio/PoE
+    SRW224P 24-port 10/100 + 2-port Gigabit Switch - WebView/PoE
+    WET200 Wireless-G Business Ethernet Bridge
+    WAP2000 Wireless-G Access Point - PoE
+    WAP4400N Wireless-N Access Point - PoE
+    RV120W Wireless-N VPN Firewall
+    RV180 VPN Router
+    RV180W Wireless-N Multifunction VPN Router
+    RV315W Wireless-N VPN Router
+    Small Business SRP520 Models
+    Small Business SRP520-U Models
+    WRP500 Wireless-AC Broadband Router with 2 Phone Ports
+    SPA400 Internet Telephony Gateway with 4 FXO Ports
+    RTP300 Broadband Router
+    RV220W Wireless Network Security Firewall
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability. As a mitigation, customers may want to restrict access to the device's administrative interfaces over SSH and HTTPS to a known, trusted subset of IP addresses.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco provides information about fixed software in Cisco bugs, which are accessible through the Cisco Bug Search Tool["https://bst.cloudapps.cisco.com/bugsearch/bug/BUGID"].
+
+
+
+When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+
+
+In all cases, customers should ensure that the devices to upgrade contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+    ���    RV320 Dual Gigabit WAN VPN Router: Firmware version 1.3.1.12 available
+
+    ���    RV325 Dual Gigabit WAN VPN Router: Firmware version 1.3.1.12 available 
+
+    ���    RVS4000 4-port Gigabit Security Router - VPN: No fix will be provided
+
+    ���    WRV210 Wireless-G VPN Router - RangeBooster: No fix will be provided
+
+    ���    WAP4410N Wireless-N Access Point - PoE/Advanced Security: No fix will be provided
+
+    ���    WRV200 Wireless-G VPN Router - RangeBooster: No fix will be provided
+
+    ���    WRVS4400N Wireless-N Gigabit Security Router - VPN V2.0: No fix will be provided
+
+    ���    WAP200 Wireless-G Access Point - PoE/Rangebooster: No fix will be provided
+
+    ���    WVC2300 Wireless-G Business Internet Video Camera - Audio: No fix will be provided
+
+    ���    PVC2300 Business Internet Video Camera - Audio/PoE: No fix will be provided
+
+    ���    SRW224P 24-port 10/100 + 2-port Gigabit Switch - WebView/PoE: No fix will be provided
+
+    ���    WET200 Wireless-G Business Ethernet Bridge: No fix will be provided
+
+    ���    WAP2000 Wireless-G Access Point - PoE: No fix will be provided
+
+    ���    WAP4400N Wireless-N Access Point - PoE: No fix will be provided
+
+    ���    RV120W Wireless-N VPN Firewall: No fix will be provided
+
+    ���    RV180 VPN Router: No fix will be provided: No fix will be provided
+
+    ���    RV180W Wireless-N Multifunction VPN Router: No fix will be provided
+
+    ���    RV315W Wireless-N VPN Router: No fix will be provided
+
+    ���    Small Business SRP520 Models: No fix will be provided
+
+    ���    Small Business SRP520-U Models: No fix will be provided
+
+    ���    WRP500 Wireless-AC Broadband Router: Fix resolved in an Engineering Special (ES). Cisco TAC should be contacted for further information. 
+
+    ���    SPA400 Internet Telephony Gateway with 4 FXO Ports: No fix will be provided
+
+    ���    RTP300 Broadband Router: No fix will be provided
+
+    ���    RV220W Wireless Network Security Firewall: No fix will be provided</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.
+</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco Product Security Incident Response Team (PSIRT) is aware the vulnerability described in this advisory has been publicly disclosed by Stefan Viehb��ck from SEC Consult Vulnerability Lab. The Cisco PSIRT is not aware of any malicious exploitation of this vulnerability.
+</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank Stefan Viehb��ck from SEC Consult Vulnerability Lab for discovering and reporting this vulnerability.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151125-ci</cvrf:URL>
+      <cvrf:Description>Multiple Cisco Products Confidential Information Decryption Man-in-the-Middle Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco WVC2300 Wireless-G Business Internet Video Camera - Audio Firmware" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-98899">Cisco WVC2300 Wireless-G Business Internet Video Camera - Audio Firmware </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Small Business SRP500 Series Services Ready Platforms" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-112731">Cisco Small Business SRP500 Series Services Ready Platforms </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Small Business Wireless Access Points Firmware" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-183614">Cisco Small Business Wireless Access Points Firmware </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Small Business RV Series Router Firmware" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-183630">Cisco Small Business RV Series Router Firmware </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Small Business Video Surveillance Cameras Firmware" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-211646">Cisco Small Business Video Surveillance Cameras Firmware </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Small Business IP Phones" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-211649">Cisco Small Business IP Phones </FullProductName>
+      </Branch>
+      <Branch Name="SPA400 Internet Telephony Gateway with 4FXO Ports" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-211722">Cisco SPA400 Internet Telephony Gateway with 4FXO Ports </FullProductName>
+      </Branch>
+      <Branch Name="Cisco WRP500 Wireless-AC Broadband Router with 2 Phone Ports" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-211726">Cisco WRP500 Wireless-AC Broadband Router with 2 Phone Ports </FullProductName>
+      </Branch>
+      <Branch Name="Cisco SRW224P 24-port 10 100 + 2-port Gigabit Switch - WebView PoE" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-211734">Cisco SRW224P 24-port 10 100 + 2-port Gigabit Switch - WebView PoE </FullProductName>
+      </Branch>
+      <Branch Name="Cisco WRV210 Wireless-G VPN Router with RangeBooster" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-211738">Cisco WRV210 Wireless-G VPN Router with RangeBooster </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Multiple Products Confidential Information Decryption Man-in-the-Middle Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuw46672</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuw46672,CSCuw47040,CSCuw90860,CSCuw46677,CSCuw47061,CSCuw47028,CSCuw47005,CSCuw90881,CSCuw90875,CSCuw46665,CSCuw46637,CSCuw46620,CSCuw46610,CSCuw90899,CSCuw46979,CSCuw46705,CSCuw90913,CSCuw47048,CSCuw46716,CSCuw90869,CSCuw46654,CSCuw46682</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-6358</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-183614</ProductID>
+        <ProductID>CVRFPID-183630</ProductID>
+        <ProductID>CVRFPID-112731</ProductID>
+        <ProductID>CVRFPID-211646</ProductID>
+        <ProductID>CVRFPID-211649</ProductID>
+        <ProductID>CVRFPID-211722</ProductID>
+        <ProductID>CVRFPID-211726</ProductID>
+        <ProductID>CVRFPID-98899</ProductID>
+        <ProductID>CVRFPID-211734</ProductID>
+        <ProductID>CVRFPID-211738</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>5.0</BaseScoreV2>
+        <TemporalScoreV2>4.3</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:N/A:N/E:F/RL:U/RC:UC</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability. As a mitigation, customers may want to restrict access to the device's administrative interfaces over SSH and HTTPS to a known, trusted subset of IP addresses.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151125-ci</URL>
+        <Description>Multiple Cisco Products Confidential Information Decryption Man-in-the-Middle Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

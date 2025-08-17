@@ -1,0 +1,305 @@
+{
+  "identifier": "cisco-sa-20140409-heartbleed",
+  "title": "OpenSSL Heartbeat Extension Vulnerability in Multiple Cisco Products",
+  "version": "1.26",
+  "firstPublished": "2014-04-09T03:00:00.000+0000",
+  "lastPublished": "2014-10-29T16:11:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140409-heartbleed",
+  "severity": "Medium",
+  "cwe": "CWE-200",
+  "erpPubIds": "Cisco-SA-20140408-CVE-2014-0160",
+  "cve": "CVE-2014-0160",
+  "ciscoBugId": "CSCuo17488",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the OpenSSL package affected by a vulnerability that could allow an unauthenticated, remote attacker to retrieve memory in chunks of 64 kilobytes from a connected client or server.The vulnerability is due to a missing bounds check in ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "OpenSSL TLS/DTLS Heartbeat Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20140408-CVE-2014-0160"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "30510",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30511",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30512",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30513",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30514",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30515",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30516",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30517",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30520",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30521",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30522",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30523",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30524",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30525",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30549",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30711",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30712",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30713",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30714",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30715",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30716",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30717",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30718",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30719",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30720",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30721",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30722",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30723",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30724",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30725",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30726",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30727",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30728",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30729",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30730",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30731",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30732",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30733",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30734",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30735",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30736",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30737",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30738",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30739",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30740",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30741",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30742",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30777",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30778",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30779",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30780",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30781",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30782",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30783",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30784",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30785",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30786",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30787",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "30788",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: OpenSSL Heartbleed Vulnerability",
+          "url": "http://www.cisco.com/web/about/security/intelligence/ERP-Heartbleed.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "OpenSSL Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4187&signatureSubId=0&releaseVersion=S786&softwareVersion=6.0"
+        },
+        {
+          "name": "OpenSSL Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4187&signatureSubId=1&releaseVersion=S786&softwareVersion=6.0"
+        },
+        {
+          "name": "OpenSSL Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4187&signatureSubId=2&releaseVersion=S786&softwareVersion=6.0"
+        },
+        {
+          "name": "OpenSSL Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4187&signatureSubId=3&releaseVersion=S787&softwareVersion=6.0"
+        },
+        {
+          "name": "OpenSSL Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4187&signatureSubId=4&releaseVersion=S788&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

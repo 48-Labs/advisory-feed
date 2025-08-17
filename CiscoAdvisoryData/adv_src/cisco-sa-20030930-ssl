@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20030930-ssl",
+  "title": "SSL Implementation Vulnerabilities",
+  "version": "2.2",
+  "firstPublished": "2003-09-30T23:30:00.000+0000",
+  "lastPublished": "2003-09-30T23:30:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20030930-ssl",
+  "severity": "Medium",
+  "cwe": "CWE-399",
+  "erpPubIds": "6719,6908",
+  "cve": "CVE-2003-0543,CVE-2003-0544,CVE-2003-0545,CVE-2003-0851,CVE-2005-1247",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   On September 30, 2003, new vulnerabilities in the OpenSSL implementation for SSL were announced. This is referred to as the 'first' ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL Multiple ASN.1 Parsing Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=6719&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL ASN.1 Parsing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=6908&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "51027",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

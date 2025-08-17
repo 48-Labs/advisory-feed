@@ -1,0 +1,64 @@
+{
+  "identifier": "cisco-sa-20090727-wlc",
+  "title": "Multiple Vulnerabilities in Cisco Wireless LAN Controllers",
+  "version": "1.1",
+  "firstPublished": "2009-07-27T16:00:00.000+0000",
+  "lastPublished": "2009-07-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090727-wlc",
+  "severity": "Critical",
+  "cwe": "CWE-399, CWE-94",
+  "erpPubIds": "18543,18564,18583,18584,cisco-amb-20090727-wlc",
+  "cve": "CVE-2009-1164,CVE-2009-1165,CVE-2009-1166,CVE-2009-1167",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Multiple vulnerabilities exist in the Cisco Wireless LAN Controller (WLC) platforms. This security advisory outlines the details of the following vulnerabilities:       Malformed HTTP or HTTPS authentication response denial of servicevulnerability     ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controller Unauthorized Configuration Change Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18543&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Web Management Interface Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18564&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller SSH Connection Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18583&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Web Management Interface Malicious HTTP or HTTPS Request Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18584&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Wireless LAN Controllers",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090727-wlc"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Legacy Interface Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=19279&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        },
+        {
+          "name": "HTTP Basic Authentication Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5055&signatureSubId=0&releaseVersion=S581&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

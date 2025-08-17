@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS XE Wireless Controller Software Unauthorized User Deletion Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-ewlc-user-del-hQxMpUDj</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2025-05-07T15:53:11</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2025-05-07T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2025-05-07T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2025-05-07T15:59:16.8979751Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the lobby ambassador web interface of Cisco IOS XE Wireless Controller Software could allow an authenticated, remote attacker to remove arbitrary users that are defined on an affected device.
+
+This vulnerability is due to insufficient access control of actions executed by lobby ambassador users. An attacker could exploit this vulnerability by logging in to an affected device with a lobby ambassador user account and sending crafted HTTP requests to the API. A successful exploit could allow the attacker to delete arbitrary user accounts on the device, including users with administrative privileges.
+
+Note: This vulnerability is exploitable only if the attacker obtains the credentials for a lobby ambassador account. This account is not configured by default.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ewlc-user-del-hQxMpUDj ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ewlc-user-del-hQxMpUDj"]
+
+This advisory is part of the May 2025 release of the Cisco IOS and IOS XE Software Security Advisory Bundled Publication. For a complete list of the advisories and links to them, see Cisco Event Response: May 2025 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication ["https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75279"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this vulnerability affected the following Cisco products if they were running a vulnerable release of Cisco IOS XE Wireless Controller Software and had lobby ambassador user accounts enabled:
+
+Catalyst 9800-CL Wireless Controllers for Cloud
+Catalyst 9800 Embedded Wireless Controllers for Catalyst 9300, 9400, and 9500 Series Switches
+Catalyst 9800 Series Wireless Controllers
+Embedded Wireless Controllers on Catalyst Access Points
+
+For information about which Cisco software releases were vulnerable at the time of publication, see the Fixed Software ["#fs"] section of this advisory.
+  Determine the Device Configuration
+To determine whether a lobby ambassador account and the HTTP server feature are configured on a device, use the following instructions.
+  Determine the Lobby Ambassador Account Configuration
+To determine how many lobby ambassador accounts are configured on a device, log in to the device and run the show running-config | count type lobby-admin CLI command. The following example shows the CLI output on a device with one lobby ambassador account configured:
+
+
+Router#show running-config | count type lobby-admin
+Number of lines which match regexp = 1
+
+The number at the end of the line indicates how many lobby ambassador accounts are configured on the device.
+
+Note: The lobby ambassador role can be associated with a user account that is using RADIUS or TACACS+. Customers who are using an authentication, authorization, and accounting (AAA) server such as Cisco Identity Services Engine (ISE) to manage user accounts that are accessing their device should check for the presence of users that have the cisco-av-pair=lobby-admin attribute set. For an example of how to configure a lobby ambassador account on Cisco ISE, see Configure 9800 WLC Lobby Ambassador with RADIUS and TACACS+ Authentication ["https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/215552-9800-wlc-lobby-ambassador-with-radius-an.html"].
+
+Determine the HTTP Server Configuration
+
+To determine whether the HTTP Server feature is enabled for a device, log in to the device and use the show running-config | include ip http server|secure|active command in the CLI to check for the presence of the ip http server command or the ip http secure-server command in the global configuration. If either command is present, the HTTP Server feature is enabled for the device.
+
+The following example shows the output of the show running-config | include ip http server|secure|active command for a device that has the HTTP Server feature enabled:
+
+
+Router# show running-config | include ip http server|secure|active
+ip http server
+ip http secure-server
+
+Note: The presence of either command or both commands in the device configuration indicates that the web UI feature is enabled.
+
+If the ip http server command is present and the configuration also contains ip http active-session-modules none, the vulnerability is not exploitable over HTTP.
+
+If the ip http secure-server command is present and the configuration also contains ip http secure-active-session-modules none, the vulnerability is not exploitable over HTTPS.
+
+Cisco IOS XE Wireless Controller Software is affected by this vulnerability only if the device is configured with a lobby ambassador account. This is not a default configuration and must be added by an administrator.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+IOS Software
+IOS XR Software
+Meraki products
+NX-OS Software
+Wireless LAN Controller (WLC) AireOS Software</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+        Cisco IOS and IOS XE Software
+To help customers determine their exposure to vulnerabilities in Cisco IOS and IOS XE Software, Cisco provides the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"]. This tool identifies any Cisco security advisories that impact a specific software release and the earliest release that fixes the vulnerabilities that are described in each advisory (���First Fixed���). If applicable, the tool also returns the earliest release that fixes all the vulnerabilities that are described in all the advisories that the Software Checker identifies (���Combined First Fixed���).
+
+To use the tool, go to the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"] page and follow the instructions. Alternatively, use the following form to determine whether a release is affected by any Cisco Security Advisory. To use the form, follow these steps:
+
+Choose which advisories the tool will search���only this advisory, only advisories with a Critical or High Security Impact Rating (SIR) ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#asr"], or all advisories.
+Enter a release number���for example, 15.9(3)M2 or 17.3.3.
+Click Check.
+
+       Only this advisory  All Critical and High advisories  All advisories</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">This vulnerability was found during internal security testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ewlc-user-del-hQxMpUDj</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Wireless Controller Software Unauthorized User Deletion Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75279</cvrf:URL>
+      <cvrf:Description>Cisco Event Response: May 2025 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco IOS XE Software">
+        <Branch Type="Product Version" Name="17.6">
+          <Branch Type="Service Pack" Name="17.6.8">
+            <FullProductName ProductID="CVRFPID-301722">Cisco IOS XE Software 17.6.8</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.9">
+          <Branch Type="Service Pack" Name="17.9.6">
+            <FullProductName ProductID="CVRFPID-301723">Cisco IOS XE Software 17.9.6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.9.6a">
+            <FullProductName ProductID="CVRFPID-302891">Cisco IOS XE Software 17.9.6a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.9.6b">
+            <FullProductName ProductID="CVRFPID-303015">Cisco IOS XE Software 17.9.6b</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.12">
+          <Branch Type="Service Pack" Name="17.12.1z2">
+            <FullProductName ProductID="CVRFPID-302964">Cisco IOS XE Software 17.12.1z2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1z3">
+            <FullProductName ProductID="CVRFPID-303324">Cisco IOS XE Software 17.12.1z3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.15">
+          <Branch Type="Service Pack" Name="17.15.1">
+            <FullProductName ProductID="CVRFPID-300938">Cisco IOS XE Software 17.15.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.15.1x">
+            <FullProductName ProductID="CVRFPID-302851">Cisco IOS XE Software 17.15.1x</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software for Embedded Wireless Controllers Unauthorized User Deletion Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwm35433</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwm35433</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2025-20190</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-300938</ProductID>
+        <ProductID>CVRFPID-301722</ProductID>
+        <ProductID>CVRFPID-301723</ProductID>
+        <ProductID>CVRFPID-302851</ProductID>
+        <ProductID>CVRFPID-302891</ProductID>
+        <ProductID>CVRFPID-302964</ProductID>
+        <ProductID>CVRFPID-303015</ProductID>
+        <ProductID>CVRFPID-303324</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>6.5</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ewlc-user-del-hQxMpUDj</URL>
+        <Description>Cisco IOS XE Wireless Controller Software Unauthorized User Deletion Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

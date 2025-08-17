@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20170512-intelamt",
+  "title": "Intel Active Management Technology Privilege Escalation Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-05-12T18:30:00.000+0000",
+  "lastPublished": "2017-05-12T18:30:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170512-intelamt",
+  "severity": "Informational",
+  "cwe": "CWE-264",
+  "erpPubIds": "53677",
+  "cve": "CVE-2017-5689",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "On May 1st, 2017, Intel released a security advisory titled&nbsp;Intel Active Management Technology, Intel Small Business Technology, and Intel Standard Manageability Escalation of Privilege, also known as&nbsp;INTEL-SA-00075. The advisory details a vulnerability ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Intel Active Management Technology Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=53677&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "42805",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-05-09-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Intel AMT Remote Administration Tool Authentication Bypass",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7951&signatureSubId=0&releaseVersion=S983&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel AMT Remote Administration Tool Authentication Bypass",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7951&signatureSubId=1&releaseVersion=S983&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

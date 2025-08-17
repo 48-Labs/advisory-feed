@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-iosxr-priv-esc-GFQjxvOF",
+  "title": "Cisco IOS XR Software CLI Privilege Escalation Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2025-03-12T16:00:00.000+0000",
+  "lastPublished": "2025-03-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-priv-esc-GFQjxvOF",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-78",
+  "erpPubIds": "ERP-75548",
+  "cve": "CVE-2025-20138",
+  "ciscoBugId": "CSCwj33398,CSCwm56977,CSCwm85670,CSCwm85686",
+  "status": "",
+  "summary": "A vulnerability in the CLI of Cisco IOS XR Software could allow an authenticated, local attacker to execute arbitrary commands as root on the underlying operating system of an affected device.This vulnerability is due to insufficient validation of user arguments that are ",
+  "totalCount": 5079,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2025 Semiannual Cisco IOS XR Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75548&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

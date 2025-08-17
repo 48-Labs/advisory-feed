@@ -1,0 +1,92 @@
+{
+  "identifier": "cisco-sa-20110223-telepresence-ctrs",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence Recording Server",
+  "version": "1.0",
+  "firstPublished": "2011-02-23T16:00:00.000+0000",
+  "lastPublished": "2011-02-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110223-telepresence-ctrs",
+  "severity": "Critical",
+  "cwe": "CWE-264, CWE-287, CWE-399",
+  "erpPubIds": "22483,22484,22485,22486,22488,22490,cisco-amb-20110223-telepresence",
+  "cve": "CVE-2011-0382,CVE-2011-0383,CVE-2011-0384,CVE-2011-0385,CVE-2011-0386,CVE-2011-0391,CVE-2011-0392",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist within the Cisco TelePresence Recording Server. This security advisory outlines details of the following vulnerabilities:      Unauthenticated Java Servlet Access         Common Gateway Interface (CGI) Command ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence System Software Unauthorized Java Applet Servlet Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22483&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Unauthenticated Common Gateway Interface Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22484&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Arbitrary File Upload Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22485&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Arbitrary XML-Remote Procedure Call File Overwrite Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22486&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Ad Hoc Recording Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22488&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Unauthorized XML-Remote Procedure Call Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22490&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco TelePresence Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20110223-telepresence"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco TelePresence Multipoint Switch Java Servlet Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33860&signatureSubId=0&releaseVersion=S587&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Multipoint Switch Java Servlet Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33860&signatureSubId=1&releaseVersion=S587&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Recording Server Command Execution Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33861&signatureSubId=0&releaseVersion=S854&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Recording Server Command Execution Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33861&signatureSubId=1&releaseVersion=S854&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Recording Server Command Execution Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33861&signatureSubId=2&releaseVersion=S854&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Recording Server Command Execution Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33861&signatureSubId=3&releaseVersion=S854&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Recording Server Command Execution Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33861&signatureSubId=4&releaseVersion=S854&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

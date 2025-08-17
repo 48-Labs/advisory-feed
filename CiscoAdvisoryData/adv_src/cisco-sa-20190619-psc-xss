@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190619-psc-xss",
+  "title": "Cisco Prime Service Catalog Cross-Site Scripting Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2019-06-19T16:00:00.000+0000",
+  "lastPublished": "2019-06-20T15:39:29.283+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190619-psc-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2019-1875",
+  "ciscoBugId": "CSCvo33891",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Prime Service Catalog could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based interface.The vulnerability is due to insufficient validation of ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

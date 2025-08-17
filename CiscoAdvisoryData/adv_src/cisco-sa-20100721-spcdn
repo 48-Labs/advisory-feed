@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20100721-spcdn",
+  "title": "CDS Internet Streamer: Web Server Directory Traversal Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2010-07-21T16:00:00.000+0000",
+  "lastPublished": "2010-07-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100721-spcdn",
+  "severity": "High",
+  "cwe": "CWE-22",
+  "erpPubIds": "20853",
+  "cve": "CVE-2010-1577",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The Cisco Internet Streamer application, part of the Cisco Content Delivery System, contains a directory traversal vulnerability on its web server component that allows for arbitrary file access. By exploiting this vulnerability, an attacker may be able to read arbitrary files on the ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Internet Streamer Content Delivery System Web Server Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20853&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Internet Streamer Directory Traversal",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=27199&signatureSubId=0&releaseVersion=S803&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

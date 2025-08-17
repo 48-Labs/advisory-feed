@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-asaftd-ac-acl-bypass-bwd7q6Gb",
+  "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software AnyConnect Access Control List Bypass Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2023-11-01T16:00:00.000+0000",
+  "lastPublished": "2023-11-01T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ac-acl-bypass-bwd7q6Gb",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-290",
+  "erpPubIds": "ERP-74985",
+  "cve": "CVE-2023-20245,CVE-2023-20256",
+  "ciscoBugId": "CSCwd30856,CSCwe45093",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the per-user-override feature of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to bypass a configured access control list (ACL) and allow traffic that should be denied ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: November 2023 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74985&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

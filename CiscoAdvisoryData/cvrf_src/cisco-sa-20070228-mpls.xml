@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Catalyst 6000, 6500 and Cisco 7600 Series MPLS Packet Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20070228-mpls</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory />
+    <cvrf:InitialReleaseDate>2007-02-28T00:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2007-02-28T00:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco Catalyst 6500 series systems that are running certain versions of Cisco Internetwork Operating System (IOS) are vulnerable to an attack from a Multi Protocol Label Switching (MPLS) packet. Only the systems that are running in Hybrid Mode (Catalyst OS (CatOS) software on the Supervisor Engine and IOS Software on the Multilayer Switch Feature Card (MSFC)) or running with Cisco IOS Software Modularity are affected.
+
+MPLS packets can only be sent from the local network segment.
+
+This advisory is posted at https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070228-mpls ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070228-mpls"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following products are affected by this vulnerability:
+
+Cisco Catalyst 6500 systems that run 12.2(18)SXF4 with Cisco IOS Software Modularity are affected.
+
+Images that support Cisco IOS Software Modularity have a "-vz" suffix in their image name.
+
+The following is a conclusive list of all image names that are running with Cisco IOS Software Modularity and are affected by this vulnerability.
+
+- s72033-adventerprisek9_wan-vz.122-18.SXF4.bin
+- s72033-advipservicesk9_wan-vz.122-18.SXF4.bin
+- s72033-entservicesk9_wan-vz.122-18.SXF4.bin
+- s72033-ipservices_wan-vz.122-18.SXF4.bin
+- s72033-ipservicesk9_wan-vz.122-18.SXF4.bin
+- s72033-ipservicesk9-vz.122-18.SXF4.bin
+
+Cisco Catalyst 6000, 6500 and Cisco 7600 series systems with an MSFC2 or MSFC3 that run in Hybrid Mode are affected.
+
+In Hybrid Mode, Catalyst OS (CatOS) software runs on the Supervisor Engine and IOS runs on the MSFC. It is different from the Native Mode in which IOS runs both on the Supervisor Engine and MSFC
+
+This vulnerability affects MSFC2, MSFC2a and MSFC3 that run certain images in Hybrid mode.
+
+In Hybrid Mode, IOS images that run on MSFC start with "c6msfc2", "c6msfc2a" or "c6msfc3". Several image names that run on MSFC in hybrid mode are provided below for reference:
+
+- c6msfc2a-adventerprisek9_wan-mz.122-18.SXF
+- c6msfc3-jsv-mz.122-14.SX2</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">These products are not vulnerable:
+
+Systems that are running in Native Mode without Cisco IOS Software Modularity are not affected.
+Systems without an MSFC2, MSFC2a or MSFC3 are not affected
+  No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Cisco IOS Software Modularity combines subsystems into individual  processes and enhances the Cisco IOS Software memory architecture to provide  process-level fault isolation and subsystem "In Service Software Upgrade"  (ISSU) capability. These enhancements are delivered in Cisco IOS Software for  the Catalyst 6500 Series Supervisor Engine 720 and Supervisor Engine 32. Cisco  IOS Software Modularity was first delivered as an option in a Cisco IOS  Software Release 12.2(18)SXF4. More information on Modular IOS can be found at  the following URL:
+
+  http://www.cisco.com/en/US/prod/collateral/switches/ps5718/ps708/prod_bulletin0900aecd80313e15.html ["http://www.cisco.com/en/US/prod/collateral/switches/ps5718/ps708/prod_bulletin0900aecd80313e15.html"]
+
+ Not all 12.2(18)SXF4 images support Modular IOS. Only the images with  a "-vz" in the image name support Modular IOS and are affected by this  vulnerability. A conclusive list of all affected image names that support Cisco  IOS Software Modularity is provided in the Affected Products section.
+
+ In Hybrid Mode, a CatOS image is used as the system software to run  the Supervisor Engine on the Catalyst systems. If an MSFC is installed, a  separate IOS Software image is used in order to run the MSFC. CatOS provides  the Layer 2 (L2) switching functionality. The Cisco IOS on the MSFC provides  the Layer 3 (L3) routing functionality. It differs from the Native Mode, in  which a single Cisco IOS Software image is used as the system software to run  both the Supervisor Engine and MSFC on the Catalyst systems. IOS software that  runs on MSFC in Hybrid Mode is also affected by this vulnerability. More  information about the differences between Hybrid and Native Modes can be found  at the following URL:
+
+  http://www.cisco.com/en/US/prod/collateral/switches/ps5718/ps708/prod_white_paper09186a00800c8441.html ["http://www.cisco.com/en/US/prod/collateral/switches/ps5718/ps708/prod_white_paper09186a00800c8441.html"]
+
+ MPLS packets received by a Route Processor (MSFC) Layer 3 interface  can potentially trigger this vulnerability. The system in question does not  need to be configured for MPLS to be vulnerable. MPLS packets can only be sent  from the local network segment, limiting the scope of the exploitation.
+
+ This issue is documented in bug IDs  CSCsd37415 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCsd37415"]  (  registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)  and  CSCef90002 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCef90002"]  (  registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)  .</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds for this vulnerability.
+
+Additional mitigations that can be deployed on Cisco devices within the  network are available in the Cisco Applied Mitigation Bulletin companion  document for this advisory:  https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070228-mpls ["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070228-mpls"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, also consult  http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"]  and any subsequent advisories to determine exposure and a complete upgrade  solution.
+
+  In all cases, customers should exercise caution to be  certain the devices to be upgraded contain sufficient memory and that current  hardware and software configurations will continue to be supported properly by  the new release. If the information is not clear, contact the Cisco Technical  Assistance Center (TAC) or your contracted maintenance provider for assistance.
+
+Each row of the Cisco IOS software table (below) describes a release  train and the platforms or products for which it is intended. If a given  release train is vulnerable, then the earliest possible releases that contain  the fix (the "First Fixed Release") and the anticipated date of availability  for each are listed in the "Rebuild" and "Maintenance" columns. A device  running a release in the given train that is earlier than the release in a  specific column (less than the First Fixed Release) is known to be vulnerable.  The release should be upgraded at least to the indicated release or a later  version (greater than or equal to the First Fixed Release label).
+
+For more information on the terms "Rebuild" and "Maintenance," consult  the following URL: http://www.cisco.com/web/about/security/intelligence/ios-ref.html ["http://www.cisco.com/web/about/security/intelligence/ios-ref.html"].
+
+Trains
+
+Availability of Fixed Releases
+
+Rebuild
+
+Maintenance
+
+12.1E
+
+Not vulnerable
+
+12.2SXA
+
+Vulnerable. Migrate to 12.2(17d)SXB5 or later
+
+12.2SXB
+
+12.2(17d)SXB5
+
+12.2SXD
+
+12.2(18)SXD3
+
+12.2SXE
+
+Not vulnerable
+
+12.2SXF (*)
+
+12.2(18)SXF5
+
+
+
+* Only 12.2(18)SXF4 with IOS Software Modularity is affected. 12.2SXF  releases that run in Hybrid Mode are not affected. Please see the Affected  Products section for more information.
+
+A special patch for 12.2(18)SXF4 with Cisco IOS Software Modularity is  also available.
+
+ Patch Name: MA0045
+
+ Image Name: s72033-AMA0045-patch.122-18.SXF4
+
+The above patch can be downloaded from the Cisco IOS Software  Modularity Patch Navigator at  https://sec.cloudapps.cisco.com/swdf/ionpn/jsp/main.jsp ["https://sec.cloudapps.cisco.com/swdf/ionpn/jsp/main.jsp"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerability described in this advisory.
+
+This vulnerability was reported by a customer.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070228-mpls</cvrf:URL>
+      <cvrf:Description>Cisco Catalyst 6000, 6500 and Cisco 7600 Series MPLS Packet Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>DO NOT PUBLISH Until 2/28 -- Cisco Catalyst MPLS Packet Handling Remote Denial of Service Vulnerability</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2007-1258</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for this vulnerability.
+
+Additional mitigations that can be deployed on Cisco devices within the  network are available in the Cisco Applied Mitigation Bulletin companion  document for this advisory:  https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070228-mpls ["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070228-mpls"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070228-mpls</URL>
+        <Description>Cisco Catalyst 6000, 6500 and Cisco 7600 Series MPLS Packet Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-fmc-xss-LATZYzxs",
+  "title": "Cisco Firepower Management Center Software Cross-Site Scripting Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2022-11-09T16:00:00.000+0000",
+  "lastPublished": "2022-11-09T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-xss-LATZYzxs",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "ERP-74838",
+  "cve": "CVE-2022-20831,CVE-2022-20832,CVE-2022-20833,CVE-2022-20834,CVE-2022-20835,CVE-2022-20836,CVE-2022-20838,CVE-2022-20839,CVE-2022-20840,CVE-2022-20843,CVE-2022-20872,CVE-2022-20905,CVE-2022-20932,CVE-2022-20935,CVE-2022-20936",
+  "ciscoBugId": "CSCwa64739,CSCwa93499,CSCwb01976,CSCwb01983,CSCwb01990,CSCwb01995,CSCwb02006,CSCwb02018,CSCwb02020,CSCwb02026,CSCwb61901,CSCwb61908,CSCwb61919,CSCwb88587,CSCwc10037",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Firepower Management Center (FMC) Software could allow an authenticated, remote attacker to conduct a stored cross-site scripting (XSS) attack against a user of the interface of an affected device.&nbsp; &nbsp; ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: November 2022 Semiannual Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74838&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

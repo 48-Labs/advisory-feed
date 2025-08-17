@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS cTCP Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20090325-ctcp</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2009-03-25T16:00:00</cvrf:Date>
+        <cvrf:Description>Removed references to the March/09 combined fixed software
+			 table.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2009-03-25T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2009-03-25T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="1">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090325-ctcp</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Cisco IOS cTCP Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090325-ctcp</cvrf:URL>
+      <cvrf:Description>Cisco IOS cTCP Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="IOS" Type="Product Name">
+        <Branch Name="12.4MR" Type="Product Version">
+          <Branch Name="12.4(16)MR1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-104138">Cisco IOS 12.4(16)MR1</FullProductName>
+          </Branch>
+          <Branch Name="12.4(19)MR" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105060">Cisco IOS 12.4(19)MR</FullProductName>
+          </Branch>
+          <Branch Name="12.4(16)MR2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106096">Cisco IOS 12.4(16)MR2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.4T" Type="Product Version">
+          <Branch Name="12.4(15)T" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-69764">Cisco IOS 12.4(15)T</FullProductName>
+          </Branch>
+          <Branch Name="12.4(20)T" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-81746">Cisco IOS 12.4(20)T</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T8" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-103946">Cisco IOS 12.4(15)T8</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-104190">Cisco IOS 12.4(15)T2</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105358">Cisco IOS 12.4(15)T3</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105662">Cisco IOS 12.4(15)T4</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T5" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106387">Cisco IOS 12.4(15)T5</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T7" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106839">Cisco IOS 12.4(15)T7</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107173">Cisco IOS 12.4(15)T6</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)T1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107277">Cisco IOS 12.4(15)T1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.4XV " Type="Product Version">
+          <Branch Name="12.4(11)XV" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-69756">Cisco IOS 12.4(11)XV</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XV1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106757">Cisco IOS 12.4(11)XV1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.4XW" Type="Product Version">
+          <Branch Name="12.4(11)XW" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-66056">Cisco IOS 12.4(11)XW</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-103926">Cisco IOS 12.4(11)XW3</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW7" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-104134">Cisco IOS 12.4(11)XW7</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW10" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-104839">Cisco IOS 12.4(11)XW10</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW8" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105481">Cisco IOS 12.4(11)XW8</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105743">Cisco IOS 12.4(11)XW9</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106057">Cisco IOS 12.4(11)XW6</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106340">Cisco IOS 12.4(11)XW4</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106653">Cisco IOS 12.4(11)XW1</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW5" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107081">Cisco IOS 12.4(11)XW5</FullProductName>
+          </Branch>
+          <Branch Name="12.4(11)XW2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107428">Cisco IOS 12.4(11)XW2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.4XF" Type="Product Version">
+          <Branch Name="12.4(15)XF" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-69484">Cisco IOS 12.4(15)XF</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.4XY" Type="Product Version">
+          <Branch Name="12.4(15)XY4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-103564">Cisco IOS 12.4(15)XY4</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)XY5" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-103869">Cisco IOS 12.4(15)XY5</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)XY1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105150">Cisco IOS 12.4(15)XY1</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)XY" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105469">Cisco IOS 12.4(15)XY</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)XY2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105930">Cisco IOS 12.4(15)XY2</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)XY3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107014">Cisco IOS 12.4(15)XY3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.4XZ" Type="Product Version">
+          <Branch Name="12.4(15)XZ" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-104125">Cisco IOS 12.4(15)XZ</FullProductName>
+          </Branch>
+          <Branch Name="12.4(15)XZ1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-104734">Cisco IOS 12.4(15)XZ1</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS Software cTCP Packet Processing Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCsr16693</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCsr16693,CSCsu21828</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2009-0635</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-103564</ProductID>
+        <ProductID>CVRFPID-103869</ProductID>
+        <ProductID>CVRFPID-103926</ProductID>
+        <ProductID>CVRFPID-103946</ProductID>
+        <ProductID>CVRFPID-104125</ProductID>
+        <ProductID>CVRFPID-104134</ProductID>
+        <ProductID>CVRFPID-104138</ProductID>
+        <ProductID>CVRFPID-104190</ProductID>
+        <ProductID>CVRFPID-104734</ProductID>
+        <ProductID>CVRFPID-104839</ProductID>
+        <ProductID>CVRFPID-105060</ProductID>
+        <ProductID>CVRFPID-105150</ProductID>
+        <ProductID>CVRFPID-105358</ProductID>
+        <ProductID>CVRFPID-105469</ProductID>
+        <ProductID>CVRFPID-105481</ProductID>
+        <ProductID>CVRFPID-105662</ProductID>
+        <ProductID>CVRFPID-105743</ProductID>
+        <ProductID>CVRFPID-105930</ProductID>
+        <ProductID>CVRFPID-106057</ProductID>
+        <ProductID>CVRFPID-106096</ProductID>
+        <ProductID>CVRFPID-106340</ProductID>
+        <ProductID>CVRFPID-106387</ProductID>
+        <ProductID>CVRFPID-106653</ProductID>
+        <ProductID>CVRFPID-106757</ProductID>
+        <ProductID>CVRFPID-106839</ProductID>
+        <ProductID>CVRFPID-107014</ProductID>
+        <ProductID>CVRFPID-107081</ProductID>
+        <ProductID>CVRFPID-107173</ProductID>
+        <ProductID>CVRFPID-107277</ProductID>
+        <ProductID>CVRFPID-107428</ProductID>
+        <ProductID>CVRFPID-66056</ProductID>
+        <ProductID>CVRFPID-69484</ProductID>
+        <ProductID>CVRFPID-69756</ProductID>
+        <ProductID>CVRFPID-69764</ProductID>
+        <ProductID>CVRFPID-81746</ProductID>
+      </Status>
+    </ProductStatuses>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090325-ctcp</URL>
+        <Description>Cisco IOS cTCP Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20140326-nat",
+  "title": "Cisco IOS Software Network Address Translation Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2014-03-26T16:00:00.000+0000",
+  "lastPublished": "2014-03-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-nat",
+  "severity": "High",
+  "cwe": "CWE-20, CWE-399",
+  "erpPubIds": "33349,33347",
+  "cve": "CVE-2014-2109,CVE-2014-2111",
+  "ciscoBugId": "CSCue00996,CSCuj41494,CSCuh33843",
+  "status": "",
+  "summary": "The Cisco IOS Software implementation of the Network Address Translation (NAT) feature contains two vulnerabilities when translating IP packets that could allow an unauthenticated, remote attacker to cause a denial of service condition.Cisco has released software updates that ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software NAT DNS Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33349&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software TCP Input Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33347&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Cisco IOS Software Security Advisory Bundled Publication March 2014",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar14.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Router DNS Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3879&signatureSubId=0&releaseVersion=S781&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

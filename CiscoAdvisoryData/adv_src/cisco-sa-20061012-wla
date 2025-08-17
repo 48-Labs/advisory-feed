@@ -1,0 +1,36 @@
+{
+  "identifier": "cisco-sa-20061012-wla",
+  "title": "Default Password in Wireless Location Appliance",
+  "version": "1.0",
+  "firstPublished": "2006-10-12T16:00:00.000+0000",
+  "lastPublished": "2006-10-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20061012-wla",
+  "cwe": "CWE-16",
+  "erpPubIds": "11875,cisco-amb-20061013-wla",
+  "status": "",
+  "summary": "   The Cisco Wireless Location Appliance software contains a default password for the 'root' administrative account. A user who logs in using this username has complete control of the device.    This password is the same in all installations of the product prior to version ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless Location Appliance Default Account Credentials Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11875&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Default Password in Wireless Location Appliance",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20061013-wla"
+        }
+      ]
+    }
+  ]
+}

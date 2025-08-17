@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20120126-ironport",
+  "title": "Cisco IronPort Appliances Telnet Remote Code Execution Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2012-01-26T17:00:00.000+0000",
+  "lastPublished": "2014-12-08T21:21:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120126-ironport",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "cisco-amb-20120126-ironport",
+  "cve": "CVE-2011-4862",
+  "ciscoBugId": "CSCuo90523,CSCzv32432,CSCzv44580",
+  "status": "",
+  "summary": "Cisco AsyncOS Software for Cisco Web Security Appliance (WSA), Cisco Email Security Appliance (ESA), and Cisco Content Security Management Appliance (SMA) contain a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IronPort Appliances Telnet Remote Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120126-ironport"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "20812",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "20813",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "krb5-telnet Encryption Key ID Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=41506&signatureSubId=0&releaseVersion=S622&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

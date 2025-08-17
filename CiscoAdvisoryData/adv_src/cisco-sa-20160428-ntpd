@@ -1,0 +1,42 @@
+{
+  "identifier": "cisco-sa-20160428-ntpd",
+  "title": "Multiple Vulnerabilities in Network Time Protocol Daemon Affecting Cisco Products: April 2016",
+  "version": "1.10",
+  "firstPublished": "2016-04-28T09:00:00.000+0000",
+  "lastPublished": "2016-05-13T15:48:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160428-ntpd",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": null,
+  "cve": "CVE-2015-7704,CVE-2015-8138,CVE-2016-1547,CVE-2016-1548,CVE-2016-1549,CVE-2016-1550,CVE-2016-1551,CVE-2016-2516,CVE-2016-2517,CVE-2016-2518,CVE-2016-2519",
+  "ciscoBugId": "CSCuz44082,CSCuz44085,CSCuz44088,CSCuz44101,CSCuz44110,CSCuz44113,CSCuz44114,CSCuz44116,CSCuz44119,CSCuz44136,CSCuz44140,CSCuz44142,CSCuz44144,CSCuz44145,CSCuz44147,CSCuz44149,CSCuz44152,CSCuz44158,CSCuz44160,CSCuz44169,CSCuz44175,CSCuz44185,CSCuz44186,CSCuz44194,CSCuz44196,CSCuz44201,CSCuz44204,CSCuz44208,CSCuz44220,CSCuz44221,CSCuz44222,CSCuz44223,CSCuz44225,CSCuz44228,CSCuz44232,CSCuz44235,CSCuz44236,CSCuz44237,CSCuz44246,CSCuz44250,CSCuz44253,CSCuz44257,CSCuz44259,CSCuz44263,CSCuz44269,CSCuz44271,CSCuz44289,CSCuz44290,CSCuz44292,CSCuz44297,CSCuz44298,CSCuz44332,CSCuz44348,CSCuz44356,CSCuz44368,CSCuz44380,CSCuz44381,CSCuz44383,CSCuz44388,CSCuz44390,CSCuz44391,CSCuz44393,CSCuz44394,CSCuz44403,CSCuz44415,CSCuz44439,CSCuz45517,CSCuz46598,CSCuz47492",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the Network Time Protocol daemon (ntpd) package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or modify the time being ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "37841",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "37842",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "37843",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "40811",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20190515-pi-sqlinject",
+  "title": "Cisco Prime Infrastructure and Evolved Programmable Network Manager SQL Injection Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2019-05-15T16:00:00.000+0000",
+  "lastPublished": "2019-05-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190515-pi-sqlinject",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-89",
+  "cve": "CVE-2019-1824,CVE-2019-1825",
+  "ciscoBugId": "CSCvo23576,CSCvo28734,CSCvo62268,CSCvo62275",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco&nbsp;Prime Infrastructure (PI) and Cisco&nbsp;Evolved Programmable Network (EPN) Manager could allow an authenticated, remote attacker to execute arbitrary SQL queries.These vulnerabilities exist because the ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "49984",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-05-16-new.html"
+        },
+        {
+          "name": "49985",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-05-16-new.html"
+        }
+      ]
+    }
+  ]
+}

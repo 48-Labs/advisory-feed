@@ -1,0 +1,72 @@
+{
+  "identifier": "cisco-sa-20090408-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA Adaptive Security Appliance and Cisco PIX Security Appliances",
+  "version": "1.2",
+  "firstPublished": "2009-04-08T16:00:00.000+0000",
+  "lastPublished": "2009-04-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090408-asa",
+  "severity": "High",
+  "cwe": "CWE-264, CWE-399",
+  "erpPubIds": "17925,17926,17927,17928,17929,17930,cisco-amb-20090408-asa",
+  "cve": "CVE-2009-1155,CVE-2009-1156,CVE-2009-1157,CVE-2009-1158,CVE-2009-1159,CVE-2009-1160",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Multiple vulnerabilities exist in the Cisco ASA 5500 Series Adaptive Security Appliances and Cisco PIX Security Appliances. This security advisory outlines the details of these vulnerabilities:        VPN Authentication Bypass when Account Override Feature is ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco ASA and Cisco PIX VPN Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17925&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Crafted HTTP Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17926&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA and Cisco PIX Security Appliances TCP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17927&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA and Cisco PIX Security Appliances H.323 Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17928&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA and Cisco PIX Security Appliances SQL*Net Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17929&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA and Cisco PIX Security Appliances Access Control List Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17930&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco ASA Adaptive Security Appliance and Cisco PIX Security Appliances",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090408-asa"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "ASA Crafted H.323 Packet DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=16294&signatureSubId=0&releaseVersion=S797&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA Crafted TCP Packet DoS Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=16393&signatureSubId=0&releaseVersion=S409&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

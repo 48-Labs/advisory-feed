@@ -1,0 +1,33 @@
+{
+  "identifier": "cisco-sa-20121108-sophos",
+  "title": "Cisco IronPort Appliances Sophos Anti-Virus Vulnerabilities",
+  "version": "1.3",
+  "firstPublished": "2012-11-09T03:00:00.000+0000",
+  "lastPublished": "2012-11-13T23:16:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121108-sophos",
+  "severity": "Critical",
+  "cwe": null,
+  "cve": "--",
+  "ciscoBugId": "CSCud10546,CSCud10556",
+  "status": "",
+  "summary": "Cisco IronPort Email Security Appliances (ESA) and Cisco IronPort Web Security Appliances (WSA) include versions of Sophos Anti-Virus that contain multiple vulnerabilities that could allow an unauthenticated, remote attacker to gain control of the system, escalate privileges, or cause a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "PNG Embedded File Type",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1654&signatureSubId=0&releaseVersion=S692&softwareVersion=6.0"
+        },
+        {
+          "name": "Sophos Anti-virus Memory Corruption Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1670&signatureSubId=0&releaseVersion=S746&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

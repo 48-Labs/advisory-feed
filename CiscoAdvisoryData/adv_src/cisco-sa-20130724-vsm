@@ -1,0 +1,64 @@
+{
+  "identifier": "cisco-sa-20130724-vsm",
+  "title": "Multiple Vulnerabilities in the Cisco Video Surveillance Manager",
+  "version": "1.0",
+  "firstPublished": "2013-07-24T16:00:00.000+0000",
+  "lastPublished": "2013-07-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130724-vsm",
+  "severity": "Critical",
+  "cwe": "CWE-22, CWE-287",
+  "erpPubIds": "30093,30132,30131,30130",
+  "cve": "CVE-2013-3429,CVE-2013-3430,CVE-2013-3431",
+  "ciscoBugId": "CSCsv37163,CSCsv37288,CSCsv40169",
+  "status": "",
+  "summary": "The Cisco Video Surveillance Manager (VSM) allows operations managers and system integrators to build customized video surveillance networks to meet their needs. Cisco VSM provides centralized configuration, management, display, and control of video from Cisco and third-party surveillance ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Video Surveillance Manager Insufficient Authentication Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30132&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Video Surveillance Manager Insufficient Authentication Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30131&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Video Surveillance Manager Directory Traversal Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30130&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in the Cisco Video Surveillance Manager",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30093"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "39170",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39171",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39172",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

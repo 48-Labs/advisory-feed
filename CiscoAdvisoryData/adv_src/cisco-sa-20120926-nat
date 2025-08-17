@@ -1,0 +1,96 @@
+{
+  "identifier": "cisco-sa-20120926-nat",
+  "title": "Cisco IOS Software Network Address Translation Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2012-09-26T16:00:00.000+0000",
+  "lastPublished": "2012-09-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120926-nat",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "26897,26896",
+  "cve": "CVE-2012-4618,CVE-2012-4619",
+  "ciscoBugId": "CSCtn76183,CSCtr46123",
+  "status": "",
+  "summary": "The Cisco IOS Software Network Address Translation (NAT) feature contains two denial of service (DoS) vulnerabilities in the translation of IP packets.The vulnerabilities are caused when packets in transit on the vulnerable device require translation.Cisco has ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software IP NAT Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26897&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software NAT SIP ALG Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26896&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco_ERP_sep12",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep12.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=5.1"
+        },
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMP Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2152&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Queso Sweep",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3045&signatureSubId=0&releaseVersion=S507&softwareVersion=6.0"
+        },
+        {
+          "name": "Half-open SYN Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3050&signatureSubId=0&releaseVersion=S774&softwareVersion=6.0"
+        },
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

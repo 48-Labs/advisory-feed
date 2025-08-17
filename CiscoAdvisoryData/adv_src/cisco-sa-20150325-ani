@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20150325-ani",
+  "title": "Multiple Vulnerabilities in Cisco IOS Software and IOS XE Software Autonomic Networking Infrastructure",
+  "version": "1.2",
+  "firstPublished": "2015-03-25T16:00:00.000+0000",
+  "lastPublished": "2016-01-14T17:11:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-ani",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "37813,37812,37811",
+  "cve": "CVE-2015-0635,CVE-2015-0636,CVE-2015-0637",
+  "ciscoBugId": "CSCup62191,CSCup62293,CSCup62315",
+  "status": "",
+  "summary": "The Autonomic Networking Infrastructure (ANI) feature of Cisco IOS Software and IOS XE Software has multiple vulnerabilities which could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or gain limited command and control of the device.    ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and IOS XE Software Autonomic Networking Infrastructure Device Reload Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37813&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software and IOS XE Software Autonomic Networking Infrastructure Spoofed Autonomic Networking Messages Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37812&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software and IOS XE Software Autonomic Networking Registration Authority Spoofing Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37811&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2015 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar15.html"
+        }
+      ]
+    }
+  ]
+}

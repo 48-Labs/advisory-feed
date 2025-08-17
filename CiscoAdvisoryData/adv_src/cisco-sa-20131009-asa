@@ -1,0 +1,71 @@
+{
+  "identifier": "cisco-sa-20131009-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA Software",
+  "version": "2.2",
+  "firstPublished": "2013-10-09T16:00:00.000+0000",
+  "lastPublished": "2013-12-13T05:29:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-asa",
+  "severity": "Critical",
+  "cwe": "CWE-20, CWE-264, CWE-399",
+  "erpPubIds": "Cisco-SA-20131009-CVE-2013-5510,31351,31106,31105,31104,31103,31101,31100,31098,cisco-sa-20131009-fwsm",
+  "cve": "CVE-2013-3415,CVE-2013-5507,CVE-2013-5508,CVE-2013-5509,CVE-2013-5510,CVE-2013-5511,CVE-2013-5512,CVE-2013-5513,CVE-2013-5515,CVE-2013-5542",
+  "ciscoBugId": "CSCtt36737,CSCua22709,CSCub98434,CSCud37992,CSCue18975,CSCuf52468,CSCug03975,CSCug83401,CSCuh44815,CSCui34914,CSCui77398",
+  "status": "",
+  "summary": "Cisco Adaptive Security Appliance (ASA) Software is affected by the following vulnerabilities:    IPsec VPN Crafted ICMP Packet Denial of Service Vulnerability    SQL*Net Inspection Engine Denial of Service Vulnerability    Digital Certificate Authentication ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Adaptive Security Appliance Software Crafted ICMP Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31351&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance AnyConnect SSL VPN Memory Exhaustion Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31106&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Software DNS Inspection Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31105&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Software HTTP Deep Packet Inspection Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31104&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Software Digital Certificate HTTP Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31103&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Software Digital Certificate Authentication Bypass Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31101&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Software IPsec VPN Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31100&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Multiple Cisco Products SQL*Net Inspection Engine Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=31098&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco Adaptive Security Appliance Software Remote Access VPN Authentication Bypass Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20131009-CVE-2013-5510"
+        },
+        {
+          "name": "Multiple Vulnerabilities in Cisco Firewall Services Module Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-fwsm"
+        }
+      ]
+    }
+  ]
+}

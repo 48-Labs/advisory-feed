@@ -1,0 +1,77 @@
+{
+  "identifier": "cisco-sa-20170310-struts2",
+  "title": "Apache Struts2 Jakarta Multipart Parser File Upload Code Execution Vulnerability Affecting Cisco Products",
+  "version": "1.12",
+  "firstPublished": "2017-03-10T19:30:00.000+0000",
+  "lastPublished": "2017-05-05T17:02:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170310-struts2",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "52972",
+  "cve": "CVE-2017-5638",
+  "ciscoBugId": "CSCvd49788,CSCvd49817,CSCvd49829,CSCvd49841,CSCvd51283,CSCvd51442,CSCvd51443,CSCvd56191,CSCvd56593,CSCvd63318,CSCvd63322,CSCvd63325,CSCvd63328",
+  "status": "",
+  "summary": "On March 6, 2017, Apache disclosed a vulnerability in the Jakarta Multipart parser used in Apache Struts2 that could allow an attacker to execute commands remotely on a targeted system by using a crafted Content-Type, Content-Disposition, or ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Apache Struts Jakarta Multipart Parser File Upload Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=52972&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "41818",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-03-07-seu.html"
+        },
+        {
+          "name": "41819",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-03-07-seu.html"
+        },
+        {
+          "name": "41922",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-03-09-seu.html"
+        },
+        {
+          "name": "41923",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-03-09-seu.html"
+        },
+        {
+          "name": "49376",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "49377",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Apache Struts Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7872&signatureSubId=0&releaseVersion=S974&softwareVersion=6.0"
+        },
+        {
+          "name": "Apache Struts Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7872&signatureSubId=1&releaseVersion=S974&softwareVersion=6.0"
+        },
+        {
+          "name": "Apache Struts Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7872&signatureSubId=2&releaseVersion=S983&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

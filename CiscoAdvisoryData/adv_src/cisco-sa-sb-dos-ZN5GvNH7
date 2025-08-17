@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-sb-dos-ZN5GvNH7",
+  "title": "Cisco RV340, RV340W, RV345, and RV345P Dual WAN Gigabit VPN Routers SSL Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2020-07-15T16:00:00.000+0000",
+  "lastPublished": "2020-07-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-dos-ZN5GvNH7",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2020-3358",
+  "ciscoBugId": "CSCvu36544",
+  "status": "",
+  "summary": "A vulnerability in the Secure Sockets Layer (SSL) VPN feature for Cisco Small Business RV VPN Routers could allow an unauthenticated, remote attacker to cause the device to unexpectedly restart, causing a denial of service (DoS) condition.The vulnerability is due to a lack of proper ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "54552",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-07-16-new.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Bypassing Tunnels: Leaking VPN Client Traffic by Abusing Routing Tables Affecting Cisco AnyConnect Secure Mobility Client and Cisco Secure Client</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-ac-leak-Sew6g2kd</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2023-08-08T15:03:09</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2023-08-08T15:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2023-08-08T15:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2023-08-08T15:24:29.2554599Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">On August 8, 2023, the paper Bypassing Tunnels: Leaking VPN Client Traffic by Abusing Routing Tables was made public. The paper discusses two attacks that can cause VPN clients to leak traffic outside the protected VPN tunnel. In both instances, an attacker can manipulate routing exceptions that are maintained by the client to redirect traffic to a device that they control without the benefit of the VPN tunnel encryption.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ac-leak-Sew6g2kd ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ac-leak-Sew6g2kd"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">These attacks affect Cisco Secure Client AnyConnect VPN for iOS regardless of client configuration.
+
+These attacks affect the following products if they are deployed with an affected configuration:
+
+Cisco AnyConnect Secure Mobility Client for Linux
+Cisco AnyConnect Secure Mobility Client for MacOS
+Cisco AnyConnect Secure Mobility Client for Windows
+Cisco Secure Client for Linux
+Cisco Secure Client for MacOS
+Cisco Secure Client for Windows
+
+For information about affected configurations, see the Details ["#details"] section of this advisory.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Cisco has confirmed that these attacks do not affect Cisco Secure Client AnyConnect for Android.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">CVE-2023-36672
+
+For the LocalNet attacks to be successful, a client must be configured to allow local LAN access. The default policy for clients is to deny local LAN access. As a result, clients in a default configuration are not affected by the LocalNet attacks.
+
+CVE-2023-36673
+
+For the ServerIP attacks, customers who use the Umbrella Roaming Security module are protected against DNS spoofing attacks like the one described by CVE-2023-36673.</cvrf:Note>
+    <cvrf:Note Title="Recommendations" Type="General" Ordinal="5">For customers who have configured clients to allow local LAN access, Cisco recommends applying client firewall rules to allow access to necessary resources only. For example, customers who need to allow access to printers on a client local LAN can enable Client Firewall for Local Printer Support, as outlined in the General VPN Setup chapter of the ASDM Book 3: Cisco ASA Series VPN ASDM Configuration Guide ["https://www.cisco.com/c/en/us/td/docs/security/asa/asa915/asdm715/vpn/asdm-715-vpn-config/vpn-asdm-setup.html#ID-2188-000002c3__ID-2188-000002e5"]. Similar firewall rules can be created for other local services that require access.
+
+For customers who have not deployed the Umbrella Roaming Security Module, more information is available in the AnyConnect OpenDNS Roaming Security Module Deployment Guide ["https://www.cisco.com/c/en/us/support/docs/security/anyconnect-secure-mobility-client/200940-Anyconnect-OpenDNS-Roaming-Security-Modu.html#anc18"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco Product Security Incident Response Team is aware that proof-of-concept exploit code is available for the attacks that are described in this advisory. This was made available by the researcher at the following link: https://tunnelcrack.mathyvanhoef.com ["https://tunnelcrack.mathyvanhoef.com"]</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">These attacks were reported to Cisco by Dr. Mathy Vanhoef of New York University Abu Dhabi. Cisco would like to thank Dr. Vanhoef for his continued help and support.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ac-leak-Sew6g2kd</cvrf:URL>
+      <cvrf:Description>Bypassing Tunnels: Leaking VPN Client Traffic by Abusing Routing Tables Affecting Cisco AnyConnect Secure Mobility Client and Cisco Secure Client</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco Secure Client">
+        <FullProductName ProductID="CVRFPID-109810">Cisco Secure Client </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Bypassing Tunnels: Leaking VPN Client Traffic by Abusing LocalNet Routing Tables Affecting Cisco AnyConnect Secure Mobility Client Software and Cisco Secure Client Software</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-36672</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-109810</ProductID>
+      </Status>
+    </ProductStatuses>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ac-leak-Sew6g2kd</URL>
+        <Description>Bypassing Tunnels: Leaking VPN Client Traffic by Abusing Routing Tables Affecting Cisco AnyConnect Secure Mobility Client and Cisco Secure Client</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Bypassing Tunnels: Leaking VPN Client Traffic by Abusing Routing Tables Affecting Cisco AnyConnect Secure Mobility Client Software and Cisco Secure Client Software</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-36673</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-109810</ProductID>
+      </Status>
+    </ProductStatuses>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ac-leak-Sew6g2kd</URL>
+        <Description>Bypassing Tunnels: Leaking VPN Client Traffic by Abusing Routing Tables Affecting Cisco AnyConnect Secure Mobility Client and Cisco Secure Client</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

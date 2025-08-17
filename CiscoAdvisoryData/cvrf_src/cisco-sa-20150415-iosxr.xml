@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS XR Software BVI Routed Packet Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20150415-iosxr</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2015-04-15T15:03:41</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2015-04-17T13:44:03</cvrf:Date>
+        <cvrf:Description>Modified affected releases</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2015-04-15T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2015-04-17T13:44:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the packet-processing code of Cisco IOS XR Software for Cisco ASR 9000 Series Aggregation Services Routers (ASR) could allow an unauthenticated, remote attacker to cause a lockup and eventual reload of a network processor chip and the line card that is processing traffic. Only Typhoon-based line cards on Cisco ASR 9000 Series Aggregation Services Routers are affected by this vulnerability.
+
+
+
+The vulnerability is due to improper processing of packets that are routed via the bridge-group virtual interface (BVI) when any of the following features are configured: Unicast Reverse Path Forwarding (uRPF), policy-based routing (PBR), quality of service (QoS), or access control lists (ACLs). An attacker could exploit this vulnerability by sending IPv4 packets through an affected device that is configured to route them via the BVI interface. A successful exploit could allow the attacker to cause a lockup and eventual reload of a network processor chip and the line card that is processing traffic, leading to a denial of service (DoS) condition.
+
+
+
+Cisco has released software updates that address this vulnerability. There are no workarounds to address this vulnerability.
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-iosxr["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-iosxr"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Cisco ASR 9000 Series Routers with Typhoon-based line cards are affected by this vulnerability. To be affected by this vulnerability, the device must be configured to route traffic via the BVI and must also have any of the following features configured: uRPF, PBR, QoS, or ACLs.
+
+
+
+This vulnerability can be exploited only with IPv4 packets that are further routed via BVI. IPv6 packets, or IPv4 packets directed to an affected device, cannot be used to trigger this vulnerability.
+
+
+
+By default BVI, uRPF, PBR, QoS, and ACLs are not enabled in Cisco IOS XR Software.
+
+
+
+To determine whether BVI is configured on a device, use the show running-config | include bvi privileged EXEC command. The presence of interface bvi in the output of show running-config | include bvi indicates that BVI is configured.
+
+
+
+The following is the output of the show running-config | include bvi command on a device that is running Cisco IOS XR Software with the BVI configured:
+
+
+
+
+
+RP/0/RSP0/CPU0:router(admin)# show running-config | include bvi
+ interface bvi 50
+
+
+To determine whether uRPF is enabled on an interface, use the show running-config | include verify privileged EXEC command. The presence of ipv4 verify unicast source reachable-via rx in the output of show running-config | include verify indicates that uRPF is enabled.
+
+
+
+The following is the output of the show running-config | include "verify source" command on a device that is running Cisco IOS XR Software with the uRPF feature enabled:
+
+
+
+
+
+RP/0/RSP0/CPU0:router(admin)# show running-config | include "verify source"
+ ipv4 verify unicast source reachable-via rx
+
+
+To determine whether PBR is configured on a device, use the show running-config policy-map | include pbr privileged EXEC command. The presence of policy-map type pbr in the output of show running-config policy-map | include pbr indicates that PBR is configured.
+
+
+
+The following is the output of the show running-config policy-map | include pbr command on a device that is running Cisco IOS XR Software with the PBR feature enabled:
+
+
+
+
+
+RP/0/RSP0/CPU0:router(admin)# show running-config policy-map | include pbr
+ policy-map type pbr TEST_PBR
+
+
+To determine whether ACLs are enabled on an interface, use the show running-config | include access-group privileged EXEC command. The presence of ipv4 access-group in the output of show running-config | include access-group indicates that ACLs are configured.
+
+
+
+The following is the output of the show running-config | include access-group command on a device that is running Cisco IOS XR Software with the ACL feature enabled:
+
+
+
+
+
+RP/0/RSP0/CPU0:router(admin)# show running-config | include access-group
+ ipv4 access-group TEST_IN ingress
+
+
+To determine whether QoS is enabled on an interface, use the show running-config | include service-policy privileged EXEC command. The presence of service-policy input or service-policy output in the output of show running-config | include service-policy indicates that QoS is configured.
+
+
+
+The following is the output of the show running-config | include service-policy command on a device that is running Cisco IOS XR Software with the QoS feature configured:
+
+
+
+
+
+RP/0/RSP0/CPU0:router(admin)# show running-config | include service-policy
+ service-policy input test_in
+ service-policy output test_out
+
+
+
+
+The second generation of the Cisco ASR 9000 Series Ethernet line cards is referred to as Typhoon-based line cards. The term comes from the network processors (NPs) that are used on these line cards.
+
+
+
+The following line cards are Typhoon based:
+
+
+
+
+    A9K-MOD80-SE
+    A9K-MOD80-TR
+    A9K-MOD160-SE
+    A9K-MOD160-TR
+    A9K-24X10GE-SE
+    A9K-24X10GE-TR
+    A9K-36X10GE-SE
+    A9K-36X10GE-TR
+    A9K-2X100GE-SE
+    A9K-2X100GE-TR
+    A9K-1X100GE-SE
+    A9K-1X100GE-TR
+
+
+
+To determine whether the line card on an ASR 9000 Series Router is Typhoon based, the administrator can use the show diag command. Affected devices will include the product ID (PID) for at least one of the Typhoon-based cards. The following example shows a device on which an A9K-24X10GE-SE card is active: 
+
+
+
+
+
+
+
+RP/0/RSP0/CPU0:router(admin)# show diag
+
+Mon Jun 22 12:55:10.554 PST
+
+NODE module 0/RSP0/CPU0 : 
+
+  MAIN:  board type 0x100302
+
+!--- output truncated
+
+NODE module 0/1/CPU0 :  
+
+  MAIN:  board type 0x20207
+  S/N:   FOC123081J6
+  Top Assy. Number:   68-3182-03
+  PID:   A9K-24X10GE-SE
+  UDI_VID:   V1D
+  HwRev: V0.0
+  New Deviation Number: 0
+  CLEI:   
+  Board State : IOS XR RUN
+  PLD:    Motherboard: N/A, Processor: 0x8004 (rev: 2.2), Power: N/A
+  ROMMON: Version 1.0(20081208:174521) [ASR9K ROMMON]
+
+!--- output truncated
+
+
+
+
+Note: Releases of Cisco IOS XR Software prior to 4.3.1 are not affected by this vulnerability.
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only Cisco ASR 9000 Series Routers with Typhoon-based line cards are affected by this vulnerability.
+
+Cisco ASR 9001 and Cisco ASR 9001-S Routers are affected by this vulnerability.
+
+
+
+Note: Releases of Cisco IOS XR Software prior to 4.3.1 are not affected by this vulnerability.
+
+
+
+Cisco ASR 9000 Series Routers with Trident-based line cards are not affected by this vulnerability. The first generation of the ASR 9000 Series Ethernet line cards is often referred to as Trident-based line cards.
+
+
+
+The following line cards are Trident based:
+
+
+
+
+    A9K-40GE-L
+    A9K-40GE-B
+    A9K-40GE-E
+    A9K-4T-L
+    A9K-4T-B
+    A9K-4T-E
+    A9K-8T/4-L
+    A9K-8T/4-B
+    A9K-8T/4-E
+    A9K-2T20GE-L
+    A9K-2T20GE-B
+    A9K-2T20GE-E
+    A9K-8T-L
+    A9K-8T-B
+    A9K-8T-E
+    A9K-16T/8-B
+
+
+
+No other Cisco products are currently known to be affected by this vulnerability.
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">A vulnerability in the packet-processing code of Cisco IOS XR Software for Cisco ASR 9000 Series Aggregation Services Routers (ASR) could allow an unauthenticated, remote attacker to cause a lockup and eventual reload of a network processor chip and the line card that is processing traffic. Only Typhoon-based line cards on Cisco ASR 9000 Series Aggregation Services Routers are affected by this vulnerability.
+
+
+
+The vulnerability is due to improper processing of packets that are routed via the bridge-group virtual interface (BVI) when any of the following features are configured: Unicast Reverse Path Forwarding (uRPF), policy-based routing (PBR), quality of service (QoS), or access control lists (ACLs). An attacker could exploit this vulnerability by sending IPv4 packets through an affected device that is configured to route them via the BVI interface. A successful exploit could allow the attacker to cause a lockup and eventual reload of a network processor chip and the line card that is processing traffic, leading to a denial of service (DoS) condition.
+
+
+
+To be affected by this vulnerability, the device must be configured to route traffic via the BVI and must also have any of the following features configured: uRPF, PBR, QoS, or ACLs.
+
+
+
+This vulnerability could be exploited repeatedly to cause an extended DoS condition.
+
+
+
+This vulnerability has been documented in Cisco bug ID CSCur62957["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCur62957"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the Common Vulnerabilities and Exposures (CVE) ID CVE-2015-0695.
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds for this vulnerability.
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Alerts archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+This vulnerability is corrected in the following Cisco IOS XR Software software maintenance updates (SMUs):
+
+
+
+
+
+
+    asr9k-px-4.3.4.CSCur62957.pie for version 4.3.4
+    asr9k-px-5.1.2.CSCur62957.pie for version 5.1.2
+    asr9k-px-5.1.3.CSCur62957.pie for version 5.1.3
+    asr9k-px-5.2.2.CSCur62957.pie for version 5.2.2
+    asr9k-px-5.3.0.CSCur62957.pie for version 5.3.0
+
+
+
+Note: Releases of Cisco IOS XR Software prior to 4.3.1 are not affected by this vulnerability.
+
+
+
+Note: Cisco IOS XR Software SMUs for additional versions will be published when available.
+
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory. 
+
+This vulnerability was discovered by Cisco TAC during the investigation of customer cases.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-iosxr</cvrf:URL>
+      <cvrf:Description>Cisco IOS XR Software BVI Routed Packet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco IOS XR Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5834">Cisco IOS XR Software </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XR Software BVI Routed Packet Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCur62957</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCur62957</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0695</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5834</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for this vulnerability.
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150415-iosxr</URL>
+        <Description>Cisco IOS XR Software BVI Routed Packet Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

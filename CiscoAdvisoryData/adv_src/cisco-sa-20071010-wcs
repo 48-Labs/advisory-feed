@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20071010-wcs",
+  "title": "Cisco Wireless Control System Conversion Utility Adds Default Password",
+  "version": "1.1",
+  "firstPublished": "2007-10-10T16:00:00.000+0000",
+  "lastPublished": "2007-10-10T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20071010-wcs",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "14244",
+  "cve": "CVE-2007-5382",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Customers who use the CiscoWorks Wireless LAN Solution Engine (WLSE) may use a conversion utility to convert over to a Cisco Wireless Control System (WCS). This conversion utility creates and uses administrative accounts with default credentials. Because there is no requirement to change ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless Control System Default Configuration Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14244&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Wireless Control System Administrative Default Password",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6068&signatureSubId=0&releaseVersion=S618&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

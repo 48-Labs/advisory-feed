@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20141015-vcs",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence Video Communication Server and Cisco Expressway Software",
+  "version": "1.0",
+  "firstPublished": "2014-10-15T16:00:00.000+0000",
+  "lastPublished": "2014-10-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141015-vcs",
+  "severity": "High",
+  "cwe": "CWE-20, CWE-399",
+  "erpPubIds": "35829,35828,35827",
+  "cve": "CVE-2014-3368,CVE-2014-3369,CVE-2014-3370",
+  "ciscoBugId": "CSCui06507,CSCum60442,CSCum60447,CSCuo42252",
+  "status": "",
+  "summary": "Cisco TelePresence Video Communication Server (VCS) and Cisco Expressway Software includes the following vulnerabilities:    Cisco TelePresence VCS and Cisco Expressway Crafted Packets Denial of Service Vulnerability    Cisco TelePresence VCS and Cisco Expressway SIP IX ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence VCS and Cisco Expressway SIP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35829&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence VCS and Cisco Expressway SIP IX Filter Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35828&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence VCS and Cisco Expressway Crafted Packets Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35827&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco TelePresence Video Communication Server (VCS) crash",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4668&signatureSubId=0&releaseVersion=S829&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

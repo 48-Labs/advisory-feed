@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-ios-xe-sdwan-VQAhEjYw",
+  "title": "Cisco IOS XE SD-WAN Software Command Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2023-03-22T16:00:00.000+0000",
+  "lastPublished": "2023-03-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-xe-sdwan-VQAhEjYw",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-146",
+  "erpPubIds": "ERP-74842",
+  "cve": "CVE-2023-20035",
+  "ciscoBugId": "CSCwc41942,CSCvx72976",
+  "status": "",
+  "summary": "A vulnerability in the CLI of Cisco IOS XE SD-WAN Software could allow an authenticated, local attacker to execute arbitrary commands with elevated privileges.This vulnerability is due to insufficient input validation by the system CLI. An attacker with privileges to run commands ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2023 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74842&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

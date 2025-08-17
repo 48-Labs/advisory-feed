@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-fmc-file-download-7js4ug2J",
+  "title": "Cisco Firepower Management Center Software Arbitrary File Download Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2023-11-01T16:00:00.000+0000",
+  "lastPublished": "2023-11-01T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-file-download-7js4ug2J",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-73",
+  "erpPubIds": "ERP-74985",
+  "cve": "CVE-2023-20114",
+  "ciscoBugId": "CSCwe11263",
+  "status": "",
+  "summary": "A vulnerability in the file download feature&nbsp;of Cisco Firepower Management Center (FMC) Software could allow an authenticated, remote attacker to download arbitrary files from an affected system.This vulnerability is due to a lack of input sanitation. An attacker could exploit ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: November 2023 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74985&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

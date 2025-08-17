@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Prime Infrastructure Command Execution Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20140226-pi</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2014-02-26T15:41:10</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2014-03-13T19:31:36</cvrf:Date>
+        <cvrf:Description>Updated Fixed Software section to include a link to upgrade information.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2014-02-26T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2014-03-13T19:31:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in Cisco Prime Infrastructure could allow an authenticated, remote attacker to execute arbitrary commands with root-level privileges.
+
+
+
+The vulnerability is due to improper validation of URL requests. An attacker could exploit this vulnerability by requesting an unauthorized command via a specific URL. Successful exploitation could allow an authenticated attacker to execute system commands with root-level privileges.
+
+
+
+Cisco has released software updates that address this vulnerability. A software patch that addresses this vulnerability in all affected versions is also available. Workarounds that mitigate this vulnerability are not available.
+
+
+
+This advisory is available at the following link: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140226-pi["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140226-pi"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Cisco Prime Infrastructure software versions 1.2, 1.3, 1.4, and 2.0 are affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Cisco Prime Infrastructure is a single integrated solution for comprehensive lifecycle management and application performance visibility that helps enable network managers to maintain, operate, and deliver applications and services that meet the demands for a quality end-user experience.
+
+Cisco Prime Infrastructure Command Execution Vulnerability
+A vulnerability in Cisco Prime Infrastructure could allow an authenticated, remote attacker to execute arbitrary commands with root-level privileges.
+
+
+
+The vulnerability is due to improper validation of URL requests. An attacker could exploit this vulnerability by requesting an unauthorized command via a specific URL. Successful exploitation could allow an authenticated attacker to execute system commands with root-level privileges.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCum71308["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCum71308"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the Common Vulnerabilities and Exposures (CVE) ID CVE-2014-0679.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">Workarounds that mitigate this vulnerability are not available.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+
+
+
+Fixed Software
+The following table provides information on the first release that fixed this vulnerability for each major version of Cisco Prime Infrastructure:
+
+
+
+
+    
+        
+             Major Version
+
+            
+             First Fixed In 
+
+            
+        
+        
+             1.2
+
+            
+             Upgrade to a fixed release of 1.3 or higher
+        
+        
+             1.3
+             1.3.0.20-2
+
+            
+        
+        
+             1.4
+             1.4.0.45-2
+
+            
+        
+        
+             2.0
+             2.0.0.0.294-2
+        
+    
+
+
+
+For more information about upgrading Cisco Prime Infrastructure software, see the Readme for Installing Security Fix Software for the Cisco Prime Infrastructure Appliance["http://www.cisco.com/c/en/us/support/cloud-systems-management/prime-infrastructure/products-release-notes-list.html"].
+
+
+
+Note: Customers that use Cisco Prime Infrastructure software version 1.2 can apply the patch below or upgrade to a fixed release of 1.3 or higher.
+
+
+
+Example of Affected Version
+To determine the version of software that is running on the device, administrators can issue the show version command from the command-line interface (CLI). The following output is from an affected device running Cisco Prime Infrastructure software version 1.4.0.45. This version does not include the fix for Cisco bug ID CSCum71308.
+
+NCS1-2-1-12/admin# show version 
+
+Cisco Application Deployment Engine OS Release: 2.0
+ADE-OS Build Version: 2.0.1.038
+ADE-OS System Architecture: x86_64
+
+Copyright (c) 2005-2010 by Cisco Systems, Inc.
+All rights reserved.
+Hostname: NCS1-2-1-12
+
+
+Version information of installed applications
+---------------------------------------------
+
+Cisco Prime Network Control System
+------------------------------------------
+
+Version : 1.4.0.45
+
+Example of Unaffected Version
+The following show version output is from an unaffected device running Cisco Prime Infrastructure software version 1.4.0.45-2. This version includes the fix for Cisco bug ID CSCum71308.
+
+NCS1-2-1-12/admin# show version 
+
+Cisco Application Deployment Engine OS Release: 2.0
+ADE-OS Build Version: 2.0.1.038
+ADE-OS System Architecture: x86_64
+
+Copyright (c) 2005-2010 by Cisco Systems, Inc.
+All rights reserved.
+Hostname: NCS1-2-1-12
+
+
+Version information of installed applications
+---------------------------------------------
+
+Cisco Prime Network Control System
+------------------------------------------
+
+Version : 1.4.0.45-2
+
+Patch for Existing Software
+For existing installations, a software patch is available that fixes this vulnerability in all affected versions of Cisco Prime Infrastructure. Customers who elect to use the software patch, should apply the patch regardless of other Cisco Prime Infrastructure patches that are applied.
+
+
+
+Customers can download the software patch from the "Download Software" page on Cisco.com by selecting:
+
+
+
+Downloads Home &gt; Products &gt; Cloud and Systems Management &gt; Routing and Switching Management &gt; Network Management Solutions &gt; Cisco Prime Infrastructure
+
+
+
+The filename for this patch is PI-CSCum71308-0.tar.gz. The patch can be installed by issuing the application install PI-CSCum71308-0.tar.gz  command from the CLI.
+
+
+
+For details on this command, see Command Reference Guide for Cisco Prime Infrastructure.
+
+
+
+Note: Customers that use Cisco Prime Infrastructure software version 1.2 can apply the patch or upgrade to a fixed release of 1.3 or higher.
+
+
+
+Example of Patched Version
+The following show version output is from a patched device running Cisco Prime Infrastructure software version 1.4.0.45. The fix for Cisco bug ID CSCum71308 has been applied as indicated by the presence of the "SecurityFix_CSCum71308" section in the output.
+
+pi146/admin# show version
+
+Cisco Application Deployment Engine OS Release: 2.0
+ADE-OS Build Version: 2.0.1.038
+ADE-OS System Architecture: x86_64
+
+Copyright (c) 2005-2010 by Cisco Systems, Inc.
+All rights reserved.
+Hostname: pi146
+
+
+Version information of installed applications
+---------------------------------------------
+
+Cisco Prime Network Control System
+------------------------------------------
+Version : 1.4.0.45
+
+SecurityFix_CSCum71308 VERSION INFORMATION
+-----------------------------------
+Version     : 1.0.0                             Vendor: Cisco Systems, Inc.
+Build Date  : January 23 2014  01:24PST
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.
+
+
+
+Cisco discovered the vulnerability during internal testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140226-pi</cvrf:URL>
+      <cvrf:Description>Cisco Prime Infrastructure Command Execution Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=32703</cvrf:URL>
+      <cvrf:Description>Cisco Prime Infrastructure Authenticated Command Execution Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Prime Infrastructure" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-190324">Cisco Prime Infrastructure </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Prime Infrastructure Command Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCum71308</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCum71308</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0679</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-190324</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.0</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Workarounds that mitigate this vulnerability are not available.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140226-pi</URL>
+        <Description>Cisco Prime Infrastructure Command Execution Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

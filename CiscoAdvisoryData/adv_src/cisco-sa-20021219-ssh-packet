@@ -1,0 +1,37 @@
+{
+  "identifier": "cisco-sa-20021219-ssh-packet",
+  "title": "SSH Malformed Packet Vulnerabilities",
+  "version": "1.7",
+  "firstPublished": "2002-12-19T23:00:00.000+0000",
+  "lastPublished": "2002-12-19T23:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20021219-ssh-packet",
+  "erpPubIds": "5179",
+  "cve": "CVE-2002-1357,CVE-2002-1358,CVE-2002-1359,CVE-2002-1360",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Certain Cisco products containing support for the Secure Shell (SSH) server are vulnerable to a Denial of Service (DoS) if the SSH server is enabled on the device. A malformed SSH packet directed at the affected device can cause a reload of the device. No authentication is necessary ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "SSHv2 Multiple Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=5179&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "10010",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

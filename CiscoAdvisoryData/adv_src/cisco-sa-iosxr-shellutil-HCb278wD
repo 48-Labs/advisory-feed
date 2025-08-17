@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-iosxr-shellutil-HCb278wD",
+  "title": "Cisco IOS XR Software CLI Arbitrary File Read Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2024-09-11T16:00:00.000+0000",
+  "lastPublished": "2024-09-11T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-shellutil-HCb278wD",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-284",
+  "erpPubIds": "ERP-75416",
+  "cve": "CVE-2024-20343",
+  "ciscoBugId": "CSCwi71881",
+  "status": "",
+  "summary": "A vulnerability in the CLI of Cisco IOS XR Software could allow an authenticated, local attacker to read any file in the file system of the underlying Linux operating system. The attacker must have valid credentials on the affected device.This vulnerability is due to incorrect ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2024 Semiannual Cisco IOS XR Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75416&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

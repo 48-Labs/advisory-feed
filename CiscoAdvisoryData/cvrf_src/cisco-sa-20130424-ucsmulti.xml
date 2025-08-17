@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Unified Computing System</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20130424-ucsmulti</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2013-04-24T15:39:36</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2013-04-30T14:19:29</cvrf:Date>
+        <cvrf:Description>Updated software availability status of EOL devices in Fixed Software section.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2013-06-06T20:24:59</cvrf:Date>
+        <cvrf:Description>Updated software availability status for first generation (C200/C2210/C250) UCS Stand Alone servers.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2013-04-24T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2013-06-06T20:24:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Managed and standalone Cisco Unified Computing System (UCS) deployments contain one or more of the vulnerabilities:
+
+    Cisco Unified Computing System LDAP User Authentication Bypass Vulnerability
+    Cisco Unified Computing System IPMI Buffer Overflow Vulnerability
+    Cisco Unified Computing Management API Denial of Service Vulnerability
+    Cisco Unified Computing System Information Disclosure Vulnerability
+    Cisco Unified Computing System KVM Authentication Bypass Vulnerability
+
+Cisco has released software updates that address these vulnerabilities.  These vulnerabilities affect only Cisco UCS.  Additional vulnerabilities that affect the NX-OS base operating system of UCS are described in Multiple Vulnerabilities in Cisco NX-OS-Based Products.
+
+
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following products are affected by one or more of the vulnerabilities detailed in this advisory:
+
+
+
+Cisco Unified Computing System 6100 Series Fabric Interconnect
+
+Cisco Unified Computing System 6200 Series Fabric Interconnect
+
+Cisco Unified Computing System Cisco Integrated Management Controllers</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The Cisco Unified Computing System Fabric Interconnect is the switching fabric and management component of an integrated Cisco UCS platform.  Certain vulnerabilities detailed in this section are related to protocols, and while the service is hosted on the Fabric Interconnect the protocols may interact with other components in the Cisco UCS platform such as the Cisco Integrated Management Controller (Cisco IMC) on a Cisco UCS C-Series or B-Series server.
+
+
+
+Cisco Unified Computing System LDAP User Authentication Bypass Vulnerability
+
+
+
+Cisco UCS Manager contains an LDAP authentication bypass vulnerability. This vulnerability could allow an unauthenticated, remote attacker who can access the Cisco UCS Manager Web Console to authenticate as a specific user without providing valid authentication credentials. To exploit the vulnerability the attacker would need to submit a malformed request to a Cisco UCS Manager login page designed to leverage this vulnerability. 
+
+
+
+Only Cisco UCS systems that have been configured for direct LDAP integration are affected and certain LDAP options must be enabled on the LDAP server the Cisco UCS Manager is authenticating against. The vulnerability does not affect other authentication methods such as local, RADIUS, authentication, authorization, and accounting (AAA), or TACACS+.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtc91207["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtc91207"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the Common Vulnerabilities and Exposures (CVE) ID CVE-2013-1182.
+
+
+
+Cisco Unified Computing System IPMI Buffer Overflow Vulnerability
+
+
+
+Cisco UCS Manager contains a buffer overflow vulnerability in the Intelligent Platform Management Interface (IPMI) implementation that is hosted on the Cisco UCS Fabric Interconnect. An unauthenticated, remote attacker who can submit a properly malformed request to the IPMI service via UDP port 623 could trigger a buffer overflow. This could allow the attacker to execute arbitrary code with elevated privileges.
+
+
+
+This vulnerability does not require a TCP three-way handshake to exploit because the service runs over UDP.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtd32371["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtd32371"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the CVE ID CVE-2013-1183.
+
+
+
+Cisco Unified Computing Management API Denial of Service Vulnerability
+
+Cisco UCS Manager contains a denial of service vulnerability in the management API. An unauthenticated, remote attacker who can submit a properly malformed request to the XML API management service of the Cisco UCS Manager could cause the service to stop responding. As a result, administrators could not make configuration changes or perform management actions on the Fabric Interconnect and computing resources managed by the device. A restart of the Fabric Interconnect is required to restore functionality.
+
+
+
+This vulnerability is documented by Cisco bug ID CSCtg48206["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtg48206"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the CVE ID CVE-2013-1184.
+
+
+
+Cisco Unified Computing System Information Disclosure Vulnerability
+
+
+
+Cisco UCS Manager contains an information disclosure vulnerability. An unauthenticated, remote attacker could access technical support or local backup files that were created by a device administrator. The attacker would need to access the web interface of the Cisco UCS Manager to exploit this vulnerability. 
+
+
+
+The files that the attacker could access contain sensitive information that could lead to the complete compromise of an affected Cisco UCS platform. The attacker must know the naming convention used by the administrator as well as the date that the files were created. These files are not automatically created on a device, but occur when an administrator creates a tech support bundle file or performs an on-device configuration backup.
+
+
+
+This vulnerability is documented by Cisco bug ID CSCtq86543["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtq86543"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the CVE ID CVE-2013-1185
+
+
+
+Cisco Unified Computing System KVM Authentication Bypass Vulnerability
+
+
+
+Cisco UCS platforms contain an IP keyboard, video, mouse (KVM) authentication bypass vulnerability. An unauthenticated, remote attacker who can send a malicious KVM authentication request to the Cisco IMC of a managed computing resource could bypass authentication and access to the IP KVM console of the physical or virtual device. This vulnerability could also allow an unauthenticated, remote attacker to join an existing, active IP KVM session if the active owner confirms the request or fails to respond to the request within 60 seconds.
+
+
+
+This vulnerability is documented by Cisco bug ID CSCts53746["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCts53746"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the CVE ID CVE-2013-1186.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">No on device workarounds are available to mitigate these vulnerabilities.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB, Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System, is available at: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+Managed Cisco Unified Computing System - System Software
+
+
+    
+        
+            
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            LDAP Authentication Bypass
+
+            CVE-2013-1182 
+            Prior to 1.0(2h)
+
+            Prior to 1.1(1j)
+
+            1.3(x)
+
+            
+            1.0(2h)
+
+            1.1(1j)
+
+            1.4(1i)
+
+            
+            2.1.1e
+
+            
+        
+        
+            IPMI Buffer Overflow
+
+            CVE-2013-1183 
+            1.0(x)
+
+            Prior to 1.1(1j)
+
+            Prior to 1.2(1b)
+
+            
+            1.1(1j)
+
+            1.2(1b)
+
+            
+            2.1.1e
+
+            
+        
+        
+            API Denial of Service
+
+            CVE-2013-1184 
+            1.0(x)
+
+            1.1(x)
+
+            Prior to 1.2(1b)
+
+            
+            1.2(1b)
+
+            
+            2.1.1e
+
+            
+        
+        
+            Information Disclosure
+
+            CVE-2013-1185 
+            1.0(x)
+
+            1.1(x)
+
+            1.2(x)
+
+            1.3(x)
+
+            1.4(x)
+
+            2.0(1x) and Prior
+
+            
+            2.0(2m)
+
+            2.1(1a)
+
+            
+            2.1.1e
+
+            
+        
+        
+            KVM Authentication Bypass
+
+            CVE-2013-1186 
+            1.0(x)
+
+            1.1(x)
+
+            1.2(x)
+
+            1.3(x)
+
+            1.4(x)
+
+            2.0(1x) and Prior
+
+            
+            2.0(2m)
+
+            
+            2.1.1e
+
+            
+        
+    
+
+
+
+Standalone Cisco Unified Computing System - Server Software
+
+
+    
+        
+            
+
+            
+            Affected
+            First Fixed
+            Recommended
+        
+        
+            KVM Authentication Bypass - Generation 2 and later UCS Servers
+
+            CVE-2013-1186 
+            1.0(x)
+
+            1.1(x)
+
+            1.2(x)
+
+            1.3(x)
+
+            1.4(3s) and prior
+
+            
+            1.4(4)
+
+            
+            1.5(1f)
+
+            
+        
+        
+            KVM Authentication Bypass - Generation 1 UCS Servers (C200/C210/C250)
+
+            CVE-2013-1186 
+            1.0(x)
+
+            1.1(x)
+
+            1.2(x)
+
+            1.3(x)
+
+            1.4(3s) and prior
+            1.4(3t)
+            1.4(3t)
+        
+    
+
+
+    .telerik-reTable-4
+    {
+    border-collapse: collapse;
+    border: solid 0px;
+    font-family: Tahoma;
+    }
+    .telerik-reTable-4 tr.telerik-reTableHeaderRow-4
+    {
+    border-width: 1.0pt 1.0pt 3.0pt 1.0pt;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    line-height: 115%;
+    font-size: 11.0pt;
+    font-family: "Calibri" , "sans-serif";
+    width: 119.7pt;
+    background: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    color: #FFFFFF;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderFirstCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderLastCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderOddCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableHeaderEvenCol-4
+    {
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 tr.telerik-reTableOddRow-4
+    {
+    border-width: 1pt;
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    border-bottom-style: solid;
+    border-bottom-color: #4F81BD;
+    }
+    .telerik-reTable-4 tr.telerik-reTableEvenRow-4
+    {
+    color: #666666;
+    font-size: 10pt;
+    vertical-align: top;
+    }
+    .telerik-reTable-4 td.telerik-reTableFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 td.telerik-reTableEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    padding: 0in 5.4pt 0in 5.4pt;
+    border-bottom-style: solid;
+    }
+    .telerik-reTable-4 tr.telerik-reTableFooterRow-4
+    {
+    color: #355C8C;
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    vertical-align: top;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterFirstCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterLastCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterOddCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+    .telerik-reTable-4 td.telerik-reTableFooterEvenCol-4
+    {
+    border-width: 1pt;
+    border-color: #4F81BD;
+    border-bottom-style: solid;
+    padding: 0in 5.4pt 0in 5.4pt;
+    }
+
+
+
+Note: Fixed software for Cisco C-Series C200 M1/M2, C210 M1/M2, and C250 M1/M2 servers is now available.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+
+
+These vulnerabilities were identified during an internal security audit of the Cisco UCS Fabric Interconnect and related devices.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Unified Computing System</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unified Computing System (Managed)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-112776">Cisco Unified Computing System (Managed) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Computing System (Standalone)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-191638">Cisco Unified Computing System (Standalone) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Computing System LDAP User Authentication Bypass Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtc91207</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtc91207</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1182</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-112776</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.3</BaseScoreV2>
+        <TemporalScoreV2>7.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on device workarounds are available to mitigate these vulnerabilities.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB, Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System, is available at: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Computing System</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Computing System IPMI Buffer Overflow Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtd32371</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtd32371</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1183</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-112776</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>10.0</BaseScoreV2>
+        <TemporalScoreV2>8.3</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on device workarounds are available to mitigate these vulnerabilities.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB, Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System, is available at: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Computing System</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Computing Management API Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtg48206</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtg48206</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1184</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-112776</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on device workarounds are available to mitigate these vulnerabilities.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB, Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System, is available at: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Computing System</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Computing System Information Disclosure Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtq86543</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtq86543</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1185</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-112776</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.3</BaseScoreV2>
+        <TemporalScoreV2>7.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on device workarounds are available to mitigate these vulnerabilities.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB, Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System, is available at: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Computing System</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Computing System KVM Authentication Bypass Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCts53746</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCts53746</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-1186</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-112776</ProductID>
+        <ProductID>CVRFPID-191638</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.5</BaseScoreV2>
+        <TemporalScoreV2>6.2</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No on device workarounds are available to mitigate these vulnerabilities.
+
+
+
+Cisco has released an Applied Mitigation Bulletin (AMB) that explains how to detect and mitigate potential exploitation of these vulnerabilities. The AMB, Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System, is available at: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Computing System</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

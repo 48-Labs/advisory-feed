@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20070815-vpnclient",
+  "title": "Local Privilege Escalation Vulnerabilities in Cisco VPN Client",
+  "version": "1.3",
+  "firstPublished": "2007-08-15T16:00:00.000+0000",
+  "lastPublished": "2007-08-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070815-vpnclient",
+  "severity": "Medium",
+  "cwe": "CWE-264",
+  "erpPubIds": "13913,13924",
+  "cve": "CVE-2007-4414,CVE-2007-4415",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": " Two vulnerabilities exist in the Cisco VPN Client for Microsoft Windows that may allow unprivileged users to elevate their privileges to those of the LocalSystem account.     A workaround exists for one of the two vulnerabilities disclosed in this advisory.     Cisco has ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco VPN Client for Windows Insecure File Permissions Local Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13913&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco VPN Client for Windows Microsoft Windows Dial-Up Networking Interface Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13924&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

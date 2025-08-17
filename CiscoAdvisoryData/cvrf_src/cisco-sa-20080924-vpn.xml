@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS MPLS VPN May Leak Information</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20080924-vpn</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2008-09-24T16:00:00</cvrf:Date>
+        <cvrf:Description>Removed references to the combined software table, as it is now
+			 outdated.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2008-09-24T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2008-09-24T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Devices running Cisco IOS versions 12.0S, 12.2, 12.3 or 12.4 and  configured for Multiprotocol Label Switching (MPLS) Virtual Private Networks  (VPNs) or VPN Routing and Forwarding Lite (VRF Lite) and using Border Gateway  Protocol (BGP) between Customer Edge (CE) and Provider Edge (PE) devices may  permit information to propagate between VPNs.
+
+Workarounds are available to help mitigate this  vulnerability.
+
+ This issue is triggered by a logic error when processing  extended communities on the PE device.
+
+ This issue cannot be deterministically exploited by an  attacker.
+
+
+
+ Cisco has released software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are  available.
+
+This advisory is posted at  https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-vpn ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-vpn"].
+
+
+
+The September 24, 2008 IOS Advisory bundled publication includes twelve  Security Advisories. Eleven of the advisories address vulnerabilities in  Cisco's IOS software, and one advisory addresses vulnerabilities in Cisco  Unified Communications Manager. Each Advisory lists the releases that correct  the vulnerability described in the Advisory.
+
+ Individual publication links are listed below:
+
+
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-iosips ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-iosips"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ssl ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ssl"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-sip ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-sip"]
+
+    https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-cucm ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-cucm"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-mfi ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-mfi"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ipc ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ipc"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ubr ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ubr"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-multicast ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-multicast"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-sccp ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-sccp"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-iosfw ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-iosfw"]
+
+   https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-l2tp ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-l2tp"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Products running Cisco IOS versions 12.0S, 12.2, 12.3 or 12.4 and  configured for MPLS VPNs or VRF Lite are potentially affected.
+
+ Cisco IOS releases based on 12.1 are not affected.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">Cisco IOS devices are vulnerable if they are configured for MPLS VPN or  VRF Lite and have a BGP session between the CE and PE devices, and process  extended communities. If a device is configured for MPLS VPN or VRF Lite the  command address-family ipv4 vrf  &lt;vrf-name&gt; or  address-family ipv6 vrf  &lt;vrf-name&gt; will be present in the  device configuration.
+
+ The following shows a command executed on a device  configured for MPLS VPN:
+
+
+router#show running-config | include address-family [ipv4|ipv6]
+ address-family ipv4 vrf &lt;vrf-name&gt;
+
+The following shows a PE device configured for an IPv4 BGP session  between the PE and the CE:
+
+
+router bgp &lt;Local AS&gt;
+ address-family ipv4 vrf one  neighbor &lt;neighbor IP&gt; remote-as &lt; Remote AS&gt;  neighbor &lt;neighbor IP&gt; activate
+
+To determine the software running on a Cisco product, log in to the  device and issue the "show version" command to display the system banner. Cisco  IOS software will identify itself as "Internetwork Operating System Software"  or simply "IOS". On the next line of output, the image name will be displayed  between parentheses, followed by "Version" and the IOS release name. Other  Cisco devices will not have the "show version" command or will give different  output.
+
+ The following example identifies a Cisco product that is  running Cisco IOS release 12.4(11)T2:
+
+
+Router#show version
+Cisco IOS Software, 7200 Software (C7200-ADVSECURITYK9-M), Version 12.4(11)T2, RELEASE SOFTWARE (fc4) Technical Support: http://www.cisco.com/techsupport Copyright (c) 1986-2007 by Cisco Systems, Inc. Compiled Tue 01-May-07 04:19 by prod_rel_team  &lt;output truncated&gt;
+
+Additional information on the Cisco IOS release naming conventions can  be found on the document entitled "White Paper: Cisco IOS Reference Guide",  which is available at http://www.cisco.com/web/about/security/intelligence/ios-ref.html ["http://www.cisco.com/web/about/security/intelligence/ios-ref.html"]</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Cisco products not configured for MPLS VPNs or VRF Lite are unaffected  by this vulnerability.
+
+ Cisco products that do not run IOS are unaffected by this  vulnerability.
+
+ Cisco IOS-XR is not affected.
+
+ No other Cisco products are currently known to be affected  by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">MPLS VPNs allow for the creation of 'virtual networks' that customers  can use to segregate traffic into multiple, isolated VPNs. Traffic within each  MPLS VPN is kept separate from the others, thereby maintaining a virtual  private network.
+
+ More information on MPLS and MPLS VPNs is available at the  following link:
+
+  http://www.cisco.com/en/US/products/ps6557/products_ios_technology_home.html ["http://www.cisco.com/en/US/products/ps6557/products_ios_technology_home.html"]
+
+ A bug exists when processing extended communities with MPLS  VPNs. If extended communities are used, MPLS VPN may incorrectly use a  corrupted route target (RT) to forward traffic. If this occurs, traffic can  leak from one MPLS VPN to another.
+
+ This vulnerability exists whenever an affected PE device  has a BGP session running in the MPLS VPN Virtual Routing and Forwarding (VRF).  The following two examples of this scenario are the most common:
+
+ 1) MPLS VPN configuration with BGP running inside the VRF  between the PE and CE devices.
+
+ 2) MPLS Inter-AS option A with BGP running between the  Autonomous System Border Routers (ASBR).
+
+ The mitigation in the Workarounds section filters extended  communities on a PE device, preventing them from being received by devices  configured for MPLS VPN.
+
+ This vulnerability was introduced with Cisco bug ID  CSCee83237. Cisco IOS images that do not include CSCee83237 are not vulnerable  to this issue.
+
+ It is important to note that this condition cannot be  triggered by an attacker and that the condition does not provide ways to  determine the flow of traffic between VPNs.
+
+
+
+ This vulnerability is documented in the Cisco Bug ID   CSCec12299  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCec12299"]            ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)          and has been assigned  Common Vulnerabilities and Exposures (CVE) ID CVE-2008-3803.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">Customers running versions of Cisco IOS that support filtering of  extended communities can prevent the corruption of the route target (RT) by  applying a BGP route-map that removes RT entries on inbound BGP  sessions.
+
+The following configuration example applied in the ipv4  address family of a PE device removes extended communities from the CE  router:
+
+
+router bgp &lt;Local AS&gt;
+ address-family ipv4 vrf one  neighbor &lt;neighbor IP&gt; remote-as &lt;Remote AS&gt;  neighbor &lt;neighbor IP&gt; activate  neighbor &lt;neighbor IP&gt; route-map FILTER in  exit-address-family ! ip extcommunity-list 100 permit _RT.*_ ! ! route-map FILTER permit 10  set extcomm-list 100 delete !
+
+The following configuration example applied in the ipv6 address family  of a PE device removes extended communities from the CE router:
+
+
+router bgp &lt;Local AS&gt;
+ address-family ipv6 vrf one  neighbor &lt;neighbor IP&gt; remote-as &lt;Remote AS&gt;  neighbor &lt;neighbor IP&gt; activate  neighbor &lt;neighbor IP&gt; route-map FILTER in  exit-address-family ! ip extcommunity-list 100 permit _RT.*_ ! ! route-map FILTER permit 10  set extcomm-list 100 delete !
+
+ Note:  The capability of filtering extended communities is only available in certain 12.0S and 12.2S based Cisco IOS releases.
+
+
+
+BGP session between the PE and the CE needs to cleared to  make this configuration change effective.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, also consult  http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"]  and any subsequent advisories to determine exposure and a complete upgrade  solution.
+
+
+
+In all cases, customers should exercise caution to be  certain the devices to be upgraded contain sufficient memory and that current  hardware and software configurations will continue to be supported properly by  the new release. If the information is not clear, contact the Cisco Technical  Assistance Center (TAC) or your contracted maintenance provider for assistance.
+
+
+
+Each row of the Cisco IOS software table (below) names a  Cisco IOS release train. If a given release train is vulnerable, then the  earliest possible releases that contain the fix (along with the anticipated  date of availability for each, if applicable) are listed in the "First Fixed  Release" column of the table. The "Recommended Release" column indicates the  releases which have fixes for all the published vulnerabilities at the time of  this Advisory. A device running a release in the given train that is earlier  than the release in a specific column (less than the First Fixed Release) is  known to be vulnerable. Cisco recommends upgrading to a release equal to or  later than the release in the "Recommended Releases" column of the table.
+
+
+
+  Major Release
+
+ Availability of Repaired Releases
+
+ Affected 12.0-Based Releases
+
+ First Fixed Release
+
+ Recommended Release
+
+ 12.0
+
+Not Vulnerable
+
+ 12.0DA
+
+Not Vulnerable
+
+ 12.0DB
+
+Not Vulnerable
+
+ 12.0DC
+
+Not Vulnerable
+
+ 12.0S
+
+12.0(30)S5
+
+12.0(31)S3
+
+12.0(32)S
+
+12.0(32)S11
+
+12.0(33)S1
+
+ 12.0SC
+
+Not Vulnerable
+
+ 12.0SL
+
+Not Vulnerable
+
+ 12.0SP
+
+Not Vulnerable
+
+ 12.0ST
+
+Not Vulnerable
+
+ 12.0SX
+
+Vulnerable; first fixed in 12.0S ["#12_0S"]
+
+12.0(32)S11
+
+12.0(33)S1
+
+ 12.0SY
+
+Not Vulnerable
+
+ 12.0SZ
+
+12.0(30)SZ4
+
+12.0(32)S11
+
+12.0(33)S1
+
+ 12.0T
+
+Not Vulnerable
+
+ 12.0W
+
+Not Vulnerable
+
+ 12.0WC
+
+Not Vulnerable
+
+ 12.0WT
+
+Not Vulnerable
+
+ 12.0XA
+
+Not Vulnerable
+
+ 12.0XB
+
+Not Vulnerable
+
+ 12.0XC
+
+Not Vulnerable
+
+ 12.0XD
+
+Not Vulnerable
+
+ 12.0XE
+
+Not Vulnerable
+
+ 12.0XF
+
+Not Vulnerable
+
+ 12.0XG
+
+Not Vulnerable
+
+ 12.0XH
+
+Not Vulnerable
+
+ 12.0XI
+
+Not Vulnerable
+
+ 12.0XJ
+
+Not Vulnerable
+
+ 12.0XK
+
+Not Vulnerable
+
+ 12.0XL
+
+Not Vulnerable
+
+ 12.0XM
+
+Not Vulnerable
+
+ 12.0XN
+
+Not Vulnerable
+
+ 12.0XQ
+
+Not Vulnerable
+
+ 12.0XR
+
+Not Vulnerable
+
+ 12.0XS
+
+Not Vulnerable
+
+ 12.0XT
+
+Not Vulnerable
+
+ 12.0XV
+
+Not Vulnerable
+
+ Affected 12.1-Based Releases
+
+ First Fixed Release
+
+ Recommended Release
+
+There are no affected 12.1 based releases
+
+ Affected 12.2-Based Releases
+
+ First Fixed Release
+
+ Recommended Release
+
+ 12.2
+
+Not Vulnerable
+
+ 12.2B
+
+Not Vulnerable
+
+ 12.2BC
+
+Not Vulnerable
+
+ 12.2BW
+
+Not Vulnerable
+
+ 12.2BX
+
+Not Vulnerable
+
+ 12.2BY
+
+Not Vulnerable
+
+ 12.2BZ
+
+Not Vulnerable
+
+ 12.2CX
+
+Not Vulnerable
+
+ 12.2CY
+
+Not Vulnerable
+
+ 12.2CZ
+
+Not Vulnerable
+
+ 12.2DA
+
+Not Vulnerable
+
+ 12.2DD
+
+Not Vulnerable
+
+ 12.2DX
+
+Not Vulnerable
+
+ 12.2EW
+
+Not Vulnerable
+
+ 12.2EWA
+
+Not Vulnerable
+
+ 12.2EX
+
+Not Vulnerable
+
+ 12.2EY
+
+Not Vulnerable
+
+ 12.2EZ
+
+Not Vulnerable
+
+ 12.2FX
+
+Not Vulnerable
+
+ 12.2FY
+
+Not Vulnerable
+
+ 12.2FZ
+
+Not Vulnerable
+
+ 12.2IRB
+
+Not Vulnerable
+
+ 12.2IXA
+
+Vulnerable; migrate to any release in 12.2IXD
+
+12.2(18)IXG
+
+ 12.2IXB
+
+Vulnerable; migrate to any release in 12.2IXD
+
+12.2(18)IXG
+
+ 12.2IXC
+
+Vulnerable; migrate to any release in 12.2IXD
+
+12.2(18)IXG
+
+ 12.2IXD
+
+Not Vulnerable
+
+ 12.2IXE
+
+Not Vulnerable
+
+ 12.2IXF
+
+Not Vulnerable
+
+ 12.2IXG
+
+Not Vulnerable
+
+ 12.2JA
+
+Not Vulnerable
+
+ 12.2JK
+
+Not Vulnerable
+
+ 12.2MB
+
+Not Vulnerable
+
+ 12.2MC
+
+Not Vulnerable
+
+ 12.2S
+
+12.2(30)S and later are vulnerable. 12.2(25)S and before are not  vulnerable
+
+12.2(33)SB2; Available on 26-SEP-08
+
+ 12.2SB
+
+12.2(28)SB5
+
+12.2(31)SB2
+
+12.2(31)SB3x
+
+12.2(33)SB2; Available on 26-SEP-08
+
+ 12.2SBC
+
+Vulnerable; first fixed in 12.2SB ["#12_2SB"]
+
+12.2(33)SB2; Available on 26-SEP-08
+
+ 12.2SCA
+
+Not Vulnerable
+
+ 12.2SE
+
+Not Vulnerable
+
+ 12.2SEA
+
+Not Vulnerable
+
+ 12.2SEB
+
+Not Vulnerable
+
+ 12.2SEC
+
+Not Vulnerable
+
+ 12.2SED
+
+Not Vulnerable
+
+ 12.2SEE
+
+Not Vulnerable
+
+ 12.2SEF
+
+Not Vulnerable
+
+ 12.2SEG
+
+Not Vulnerable
+
+ 12.2SG
+
+12.2(37)SG
+
+12.2(46)SG1
+
+ 12.2SGA
+
+12.2(31)SGA8
+
+12.2(31)SGA8
+
+ 12.2SL
+
+Not Vulnerable
+
+ 12.2SM
+
+12.2(29)SM2
+
+12.2(29)SM4
+
+ 12.2SO
+
+Not Vulnerable
+
+ 12.2SRA
+
+Not Vulnerable
+
+ 12.2SRB
+
+Not Vulnerable
+
+ 12.2SRC
+
+Not Vulnerable
+
+ 12.2SU
+
+Not Vulnerable
+
+ 12.2SV
+
+12.2(29b)SV1
+
+ 12.2SVA
+
+Not Vulnerable
+
+ 12.2SVC
+
+Not Vulnerable
+
+ 12.2SVD
+
+Not Vulnerable
+
+ 12.2SW
+
+Not Vulnerable
+
+ 12.2SX
+
+Not Vulnerable
+
+ 12.2SXA
+
+Not Vulnerable
+
+ 12.2SXB
+
+Not Vulnerable
+
+ 12.2SXD
+
+Not Vulnerable
+
+ 12.2SXE
+
+Vulnerable; first fixed in 12.2SXF ["#12_2SXF"]
+
+12.2(18)SXF15
+
+ 12.2SXF
+
+12.2(18)SXF3
+
+12.2(18)SXF15
+
+ 12.2SXH
+
+Not Vulnerable
+
+ 12.2SY
+
+Not Vulnerable
+
+ 12.2SZ
+
+Not Vulnerable
+
+ 12.2T
+
+Not Vulnerable
+
+ 12.2TPC
+
+Not Vulnerable
+
+ 12.2XA
+
+Not Vulnerable
+
+ 12.2XB
+
+Not Vulnerable
+
+ 12.2XC
+
+Not Vulnerable
+
+ 12.2XD
+
+Not Vulnerable
+
+ 12.2XE
+
+Not Vulnerable
+
+ 12.2XF
+
+Not Vulnerable
+
+ 12.2XG
+
+Not Vulnerable
+
+ 12.2XH
+
+Not Vulnerable
+
+ 12.2XI
+
+Not Vulnerable
+
+ 12.2XJ
+
+Not Vulnerable
+
+ 12.2XK
+
+Not Vulnerable
+
+ 12.2XL
+
+Not Vulnerable
+
+ 12.2XM
+
+Not Vulnerable
+
+ 12.2XN
+
+Not Vulnerable
+
+ 12.2XNA
+
+Not Vulnerable
+
+ 12.2XNB
+
+Not Vulnerable
+
+ 12.2XO
+
+Not Vulnerable
+
+ 12.2XQ
+
+Not Vulnerable
+
+ 12.2XR
+
+Not Vulnerable
+
+ 12.2XS
+
+Not Vulnerable
+
+ 12.2XT
+
+Not Vulnerable
+
+ 12.2XU
+
+Not Vulnerable
+
+ 12.2XV
+
+Not Vulnerable
+
+ 12.2XW
+
+Not Vulnerable
+
+ 12.2YA
+
+Not Vulnerable
+
+ 12.2YB
+
+Not Vulnerable
+
+ 12.2YC
+
+Not Vulnerable
+
+ 12.2YD
+
+Not Vulnerable
+
+ 12.2YE
+
+Not Vulnerable
+
+ 12.2YF
+
+Not Vulnerable
+
+ 12.2YG
+
+Not Vulnerable
+
+ 12.2YH
+
+Not Vulnerable
+
+ 12.2YJ
+
+Not Vulnerable
+
+ 12.2YK
+
+Not Vulnerable
+
+ 12.2YL
+
+Not Vulnerable
+
+ 12.2YM
+
+Not Vulnerable
+
+ 12.2YN
+
+Not Vulnerable
+
+ 12.2YO
+
+Not Vulnerable
+
+ 12.2YP
+
+Not Vulnerable
+
+ 12.2YQ
+
+Not Vulnerable
+
+ 12.2YR
+
+Not Vulnerable
+
+ 12.2YS
+
+Not Vulnerable
+
+ 12.2YT
+
+Not Vulnerable
+
+ 12.2YU
+
+Not Vulnerable
+
+ 12.2YV
+
+Not Vulnerable
+
+ 12.2YW
+
+Not Vulnerable
+
+ 12.2YX
+
+Not Vulnerable
+
+ 12.2YY
+
+Not Vulnerable
+
+ 12.2YZ
+
+Not Vulnerable
+
+ 12.2ZA
+
+Not Vulnerable
+
+ 12.2ZB
+
+Not Vulnerable
+
+ 12.2ZC
+
+Not Vulnerable
+
+ 12.2ZD
+
+Not Vulnerable
+
+ 12.2ZE
+
+Not Vulnerable
+
+ 12.2ZF
+
+Not Vulnerable
+
+ 12.2ZG
+
+Not Vulnerable
+
+ 12.2ZH
+
+Not Vulnerable
+
+ 12.2ZJ
+
+Not Vulnerable
+
+ 12.2ZL
+
+Not Vulnerable
+
+ 12.2ZP
+
+Not Vulnerable
+
+ 12.2ZU
+
+Not Vulnerable
+
+ 12.2ZX
+
+Vulnerable; first fixed in 12.2SB ["#12_2SB"]
+
+12.2(33)SB2; Available on 26-SEP-08
+
+ 12.2ZY
+
+Not Vulnerable
+
+ 12.2ZYA
+
+Not Vulnerable
+
+ Affected 12.3-Based Releases
+
+ First Fixed Release
+
+ Recommended Release
+
+ 12.3
+
+Not Vulnerable
+
+ 12.3B
+
+Not Vulnerable
+
+ 12.3BC
+
+Not Vulnerable
+
+ 12.3BW
+
+Not Vulnerable
+
+ 12.3EU
+
+Not Vulnerable
+
+ 12.3JA
+
+Not Vulnerable
+
+ 12.3JEA
+
+Not Vulnerable
+
+ 12.3JEB
+
+Not Vulnerable
+
+ 12.3JEC
+
+Not Vulnerable
+
+ 12.3JK
+
+Not Vulnerable
+
+ 12.3JL
+
+Not Vulnerable
+
+ 12.3JX
+
+Not Vulnerable
+
+ 12.3T
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+12.4(15)T7
+
+12.4(18c)
+
+ 12.3TPC
+
+Not Vulnerable
+
+ 12.3VA
+
+Not Vulnerable
+
+ 12.3XA
+
+Not Vulnerable
+
+ 12.3XB
+
+Not Vulnerable
+
+ 12.3XC
+
+Not Vulnerable
+
+ 12.3XD
+
+Not Vulnerable
+
+ 12.3XE
+
+Not Vulnerable
+
+ 12.3XF
+
+Not Vulnerable
+
+ 12.3XG
+
+Not Vulnerable
+
+ 12.3XI
+
+Not Vulnerable
+
+ 12.3XJ
+
+Not Vulnerable
+
+ 12.3XK
+
+Not Vulnerable
+
+ 12.3XL
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+12.4(15)T7
+
+12.4(18c)
+
+ 12.3XQ
+
+Not Vulnerable
+
+ 12.3XR
+
+Not Vulnerable
+
+ 12.3XS
+
+Not Vulnerable
+
+ 12.3XU
+
+Not Vulnerable
+
+ 12.3XW
+
+Not Vulnerable
+
+ 12.3XX
+
+Not Vulnerable
+
+ 12.3XY
+
+Not Vulnerable
+
+ 12.3XZ
+
+Not Vulnerable
+
+ 12.3YA
+
+Not Vulnerable
+
+ 12.3YD
+
+Not Vulnerable
+
+ 12.3YF
+
+Vulnerable; first fixed in 12.3YX ["#12_3YX"]
+
+12.3(14)YX13
+
+12.4(15)T7
+
+ 12.3YG
+
+Not Vulnerable
+
+ 12.3YH
+
+Not Vulnerable
+
+ 12.3YI
+
+Not Vulnerable
+
+ 12.3YJ
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+12.4(15)T7
+
+ 12.3YK
+
+12.3(11)YK3
+
+12.4(15)T7
+
+ 12.3YM
+
+12.3(14)YM10
+
+12.3(14)YM13; Available on 30-SEP-08
+
+ 12.3YQ
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+12.4(15)T7
+
+ 12.3YS
+
+12.3(11)YS2
+
+12.4(15)T7
+
+ 12.3YT
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+12.4(15)T7
+
+ 12.3YU
+
+Vulnerable; first fixed in 12.4XB ["#12_4XB"]
+
+12.4(2)XB10
+
+12.4(9)XG3
+
+12.4(15)T7
+
+ 12.3YX
+
+12.3(14)YX7
+
+12.3(14)YX13
+
+ 12.3YZ
+
+12.3(11)YZ2
+
+ 12.3ZA
+
+Not Vulnerable
+
+ Affected 12.4-Based Releases
+
+ First Fixed Release
+
+ Recommended Release
+
+ 12.4
+
+12.4(10c)
+
+12.4(12a)
+
+12.4(13)
+
+12.4(3h)
+
+12.4(5c)
+
+12.4(7e)
+
+12.4(8d)
+
+12.4(18c)
+
+ 12.4JA
+
+Not Vulnerable
+
+ 12.4JK
+
+Not Vulnerable
+
+ 12.4JL
+
+Not Vulnerable
+
+ 12.4JMA
+
+Not Vulnerable
+
+ 12.4JMB
+
+Not Vulnerable
+
+ 12.4JMC
+
+Not Vulnerable
+
+ 12.4JX
+
+Not Vulnerable
+
+ 12.4MD
+
+Not Vulnerable
+
+ 12.4MR
+
+Not Vulnerable
+
+ 12.4SW
+
+12.4(11)SW1
+
+12.4(15)SW2; Available on 28-SEP-08
+
+ 12.4T
+
+12.4(11)T2
+
+12.4(15)T
+
+12.4(2)T6
+
+12.4(4)T8
+
+12.4(6)T7
+
+12.4(9)T3
+
+12.4(15)T7
+
+ 12.4XA
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+12.4(15)T7
+
+ 12.4XB
+
+12.4(2)XB6
+
+12.4(2)XB10
+
+ 12.4XC
+
+12.4(4)XC7
+
+12.4(15)T7
+
+ 12.4XD
+
+12.4(4)XD7
+
+12.4(4)XD11; Available on 26-SEP-08
+
+ 12.4XE
+
+12.4(6)XE3
+
+12.4(15)T7
+
+ 12.4XF
+
+Not Vulnerable
+
+ 12.4XG
+
+12.4(9)XG2
+
+12.4(9)XG3
+
+ 12.4XJ
+
+12.4(11)XJ2
+
+12.4(15)T7
+
+ 12.4XK
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+12.4(15)T7
+
+ 12.4XL
+
+Not Vulnerable
+
+ 12.4XM
+
+Not Vulnerable
+
+ 12.4XN
+
+Not Vulnerable
+
+ 12.4XP
+
+Vulnerable; contact TAC
+
+ 12.4XQ
+
+Not Vulnerable
+
+ 12.4XR
+
+Not Vulnerable
+
+ 12.4XT
+
+12.4(6)XT1
+
+12.4(15)T7
+
+ 12.4XV
+
+Not Vulnerable
+
+ 12.4XW
+
+Not Vulnerable
+
+ 12.4XY
+
+Not Vulnerable
+
+ 12.4XZ
+
+Not Vulnerable
+
+ 12.4YA
+
+Not Vulnerable</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco PSIRT is not aware of any public announcements or malicious  use of the vulnerability described in this advisory.
+
+This vulnerability was reported to Cisco by a  customer.
+
+This vulnerability cannot be deterministically triggered by  an attacker.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-vpn</cvrf:URL>
+      <cvrf:Description>Cisco IOS MPLS VPN May Leak Information</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS Multiprotocol Label Switching Virtual Private Network Information Disclosure Issue</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2008-3803</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Customers running versions of Cisco IOS that support filtering of  extended communities can prevent the corruption of the route target (RT) by  applying a BGP route-map that removes RT entries on inbound BGP  sessions.
+
+The following configuration example applied in the ipv4  address family of a PE device removes extended communities from the CE  router:
+
+
+router bgp &lt;Local AS&gt;
+ address-family ipv4 vrf one  neighbor &lt;neighbor IP&gt; remote-as &lt;Remote AS&gt;  neighbor &lt;neighbor IP&gt; activate  neighbor &lt;neighbor IP&gt; route-map FILTER in  exit-address-family ! ip extcommunity-list 100 permit _RT.*_ ! ! route-map FILTER permit 10  set extcomm-list 100 delete !
+
+The following configuration example applied in the ipv6 address family  of a PE device removes extended communities from the CE router:
+
+
+router bgp &lt;Local AS&gt;
+ address-family ipv6 vrf one  neighbor &lt;neighbor IP&gt; remote-as &lt;Remote AS&gt;  neighbor &lt;neighbor IP&gt; activate  neighbor &lt;neighbor IP&gt; route-map FILTER in  exit-address-family ! ip extcommunity-list 100 permit _RT.*_ ! ! route-map FILTER permit 10  set extcomm-list 100 delete !
+
+ Note:  The capability of filtering extended communities is only available in certain 12.0S and 12.2S based Cisco IOS releases.
+
+
+
+BGP session between the PE and the CE needs to cleared to  make this configuration change effective.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-vpn</URL>
+        <Description>Cisco IOS MPLS VPN May Leak Information</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

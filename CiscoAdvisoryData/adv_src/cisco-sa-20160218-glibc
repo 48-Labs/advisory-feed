@@ -1,0 +1,44 @@
+{
+  "identifier": "cisco-sa-20160218-glibc",
+  "title": "Vulnerability in GNU glibc Affecting Cisco Products: February 2016",
+  "version": "1.17",
+  "firstPublished": "2016-02-18T20:22:00.000+0000",
+  "lastPublished": "2017-02-13T18:20:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160218-glibc",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-119",
+  "erpPubIds": "43583",
+  "cve": "CVE-2015-7547",
+  "ciscoBugId": "CSCuy32284,CSCuy34700,CSCuy34875,CSCuy35251,CSCuy35261,CSCuy35262,CSCuy35265,CSCuy35268,CSCuy35269,CSCuy35276,CSCuy36412,CSCuy36413,CSCuy36427,CSCuy36433,CSCuy36443,CSCuy36513,CSCuy36531,CSCuy36539,CSCuy36546,CSCuy36547,CSCuy36548,CSCuy36549,CSCuy36564,CSCuy36566,CSCuy36568,CSCuy36572,CSCuy36594,CSCuy36597,CSCuy36602,CSCuy36603,CSCuy36606,CSCuy36610,CSCuy36612,CSCuy36613,CSCuy36619,CSCuy36620,CSCuy37090,CSCuy38921,CSCuy38924,CSCuy38927,CSCuy38943,CSCuy47726,CSCuy51595,CSCuy74698,CSCuy74701,CSCuy74702,CSCuy74706",
+  "status": "",
+  "summary": "On February 16, 2016, an industry-wide, critical vulnerability in the GNU C library (glibc) was publicly disclosed.Multiple Cisco products incorporate a version of glibc that may be&nbsp;affected by the vulnerability. The vulnerability could allow an ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Glibc libresolv Library Stack-Based Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=43583&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "37730",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-02-18-seu.html"
+        },
+        {
+          "name": "37731",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-02-18-seu.html"
+        }
+      ]
+    }
+  ]
+}

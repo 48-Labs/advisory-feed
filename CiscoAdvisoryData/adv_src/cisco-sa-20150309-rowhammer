@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20150309-rowhammer",
+  "title": "Row Hammer Privilege Escalation Vulnerability",
+  "version": "1.4",
+  "firstPublished": "2015-03-09T21:50:00.000+0000",
+  "lastPublished": "2016-09-08T19:07:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150309-rowhammer",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "erpPubIds": "37780",
+  "cve": "--",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "On March 9, 2015, new research was published that takes advantage of a flaw in double data rate type 3 (DDR3) synchronous dynamic random-access memory (SDRAM) to perform privilege escalation attacks on systems that contain the affected hardware. The flaw is known as Row Hammer. To attempt an ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Row Hammer Memory Error Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37780&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Row Hammer Privilege Escalation Vulnerability",
+          "url": "http://www.cisco.com/web/about/security/intelligence/ERP_RowHammer_20150309.html"
+        }
+      ]
+    }
+  ]
+}

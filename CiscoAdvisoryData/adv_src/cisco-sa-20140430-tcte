@@ -1,0 +1,72 @@
+{
+  "identifier": "cisco-sa-20140430-tcte",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence TC and TE Software ",
+  "version": "1.0",
+  "firstPublished": "2014-04-30T16:00:00.000+0000",
+  "lastPublished": "2014-04-30T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140430-tcte",
+  "severity": "Critical",
+  "cwe": "CWE-119, CWE-20, CWE-264, CWE-399, CWE-78",
+  "erpPubIds": "Cisco-SA-20140430-CVE-2014-2172,33899,33897,33895,33894,33893,33892,33891",
+  "cve": "CVE-2014-2162,CVE-2014-2163,CVE-2014-2164,CVE-2014-2165,CVE-2014-2166,CVE-2014-2167,CVE-2014-2168,CVE-2014-2169,CVE-2014-2170,CVE-2014-2171,CVE-2014-2172,CVE-2014-2173,CVE-2014-2175",
+  "ciscoBugId": "CSCto70562,CSCtq72699,CSCtq78849,CSCty44804,CSCua64961,CSCua86589,CSCub67692,CSCub67693,CSCud29566,CSCud81796,CSCue60202,CSCue60211,CSCuj94651",
+  "status": "",
+  "summary": "Cisco TelePresence TC and TE Software are affected by the following vulnerabilities:    Six Session Initiation Protocol (SIP) denial of service vulnerabilities    Cisco TelePresence TC and TE Software DNS Buffer Overflow Vulnerability    Cisco TelePresence TC ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence TC Software H.225 Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33899&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software Unauthenticated Serial Port Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33897&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software Heap Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33895&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software tshell Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33894&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software Input Validation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33893&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software DNS Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33892&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software SIP Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33891&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco TelePresence TC and TE Software u-boot Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20140430-CVE-2014-2172"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco TelePresence SIP Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4252&signatureSubId=0&releaseVersion=S793&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

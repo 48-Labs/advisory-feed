@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Unified Communications Manager</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20130717-cucm</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2013-07-17T14:10:23</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2013-07-17T18:00:16</cvrf:Date>
+        <cvrf:Description>Corrected CVSS score to correct the remediation level for privilege escalation vulnerabilities CSCuh73454 and CSCuh87042 (CVE-2013-3403). Two minor wording corrections for clarity.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2013-07-17T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2013-07-17T18:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco Unified Communications Manager (Unified CM) contains multiple vulnerabilities that could be used together to allow an unauthenticated, remote attacker to gather user credentials, escalate privileges, and execute commands to gain full control of the vulnerable system. A successful attack could allow an unauthenticated attacker to access, create or modify information in Cisco Unified CM. 
+
+
+
+On June 6, 2013, a French security firm, Lexfo, delivered a public presentation on VoIP security that included a demonstration of multiple vulnerabilities used to compromise Cisco Unified CM. During the presentation, the researchers demonstrated a multistaged attack that chained a number of vulnerabilities, which resulted in a complete compromise of the Cisco Unified CM server. The attack chain used the following types of vulnerabilities:
+
+    Blind Structured Query Language (SQL) injection
+    Command injection
+    Privilege escalation
+
+Cisco PSIRT greatly appreciates the opportunity to work with researchers on security vulnerabilities and welcomes the opportunity to review and assist in product reports.
+
+
+
+Cisco has released a Cisco Options Package (COP) file that addresses three of the vulnerabilities documented in this advisory. Cisco is currently investigating the remaining vulnerabilities. Workarounds that mitigate these vulnerabilities are not available.
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following products are affected by the vulnerabilities that are described in this advisory:
+
+    Cisco Unified Communications Manager 7.1(x)
+    Cisco Unified Communications Manager 8.5(x)
+    Cisco Unified Communications Manager 8.6(x)
+    Cisco Unified Communications Manager 9.0(x)
+    Cisco Unified Communications Manager 9.1(x)
+
+Note: Cisco Unified CM version 8.0 reached the End of Software Maintenance on October 23, 2012. Customers using Cisco Unified CM 8.0(x) versions should contact their Cisco support team for assistance in upgrading to a supported version of Cisco Unified CM.
+
+
+
+Cisco Unified CM is the only product confirmed to be vulnerable to the documented attack. Additional voice products may be affected by one or more of the individual vulnerabilities that are described in this advisory. The following products are being investigated but have not yet been confirmed as vulnerable:
+
+    Cisco Emergency Responder
+    Cisco Unified Contact Center Express
+    Cisco Unified Customer Voice Portal
+    Cisco Unified Presence Server/Cisco IM and Presence Service
+    Cisco Unity Connection
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Cisco Unified CM is the call processing component of the Cisco IP Telephony solution that extends enterprise telephony features and functions to packet telephony network devices, such as IP phones, media processing devices, VoIP gateways, and multimedia applications. 
+
+
+
+Blind Structured Query Language Injection Vulnerabilities
+
+
+
+Cisco Unified CM and associated products may contain one or more of the following blind SQL injection vulnerabilities. The vulnerabilities may be exploited from an authenticated or unauthenticated context depending on the particular vulnerability.
+
+
+
+SQL injection vulnerabilities are due to a failure to perform proper validation of user-supplied requests prior to being used to form an SQL query. An attacker could exploit this behavior by injecting SQL commands. An exploit could allow the attacker to disclose or modify arbitrary information in the database.
+
+
+
+The first of the identified vulnerabilities could be exploited by an unauthenticated, remote attacker. An exploit could allow the attacker to use metadata to recreate encrypted information in the database. This metadata could be used to reconstruct encrypted credentials.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuh01051["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh01051"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2013-3404. This vulnerability applies to Cisco Unified CM versions 9.1(1a) and prior.
+
+
+
+The second vulnerability could be exploited by an authenticated, remote attacker. An exploit could allow the attacker to modify or insert additional data into certain tables in the database.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuh81766["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh81766"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2013-3412. This vulnerability applies to Cisco Unified CM versions 9.1(2) and prior.
+
+
+
+These vulnerabilities can be exploited over the default management ports, TCP ports 8080 or 8443. 
+
+
+
+Hard-Coded Encryption Key
+
+
+
+Cisco Unified Communications Manager (Unified CM) contains  a hard-coded encryption key used for the encryption of sensitive data stored within the database, and securing computer telephony integration (CTI) communications.
+
+
+
+The issue is due to the use of a static symmetric encryption key in all Cisco Unified CM versions. An attacker could exploit this issue by using the secret key to decrypt sensitive data including user credentials. An exploit could allow the attacker to decrypt sensitive system information such as user credentials gained when using other attacks. This issue is documented in Cisco bug ID CSCsc69187["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCsc69187"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only). This issue applies to Cisco Unified CM versions 9.1(2) and prior.
+
+
+
+Cisco Unified Presence Server/IM &amp; Presence Service versions 9.1(2) and prior are also affected by this issue. This issue is documented in Cisco bug ID CSCui01756["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCui01756"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only).
+
+
+
+Command Injection Vulnerability
+
+
+
+A vulnerability in Cisco Unified Communications Manager (Unified CM) could allow an authenticated, remote attacker to execute commands on the underlying operating system with the privileges of the database user.
+
+
+
+The vulnerability is due to improper validation of user-supplied input. An attacker could exploit this vulnerability by submitting malicious input to the affected function.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuh73440["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh73440"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2013-3402. This vulnerability applies to Cisco Unified CM versions 9.1(2) and prior.
+
+
+
+Privilege Escalation Vulnerability
+
+
+
+Vulnerabilities in Cisco Unified Communications Manager could allow an authenticated, local attacker to escalate privileges on the system.
+
+
+
+The vulnerabilities are due to improper file permissions, environment variables and relative paths in a privileged system script or binary. An attacker could exploit these vulnerabilities by modifying certain system scripts. This could allow the attacker to gain complete control of the affected system.
+
+
+
+This first two privilege escalation vulnerabilities are documented in Cisco bug ID CSCuh73454["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh73454"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and CSCuh87042["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh87042"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and have been assigned CVE ID CVE-2013-3403. 
+
+
+
+A third privilege escalation vulnerability is documented in Cisco bug ID CSCui02242["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCui02242"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2013-3434.
+
+
+
+A fourth privilege escalation vulnerability is documented in Cisco bug ID CSCui02276["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCui02276"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2013-3433.
+
+
+
+These vulnerabilities apply to Cisco Unified CM versions 9.1(1a) and prior.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+There are no Cisco Unified CM versions currently available that contain software fixes for the vulnerabilities described in this advisory. This advisory will be updated as fixed software is made available. In the interim, Cisco has released a Cisco Options Package (COP) file that addresses the following vulnerabilities: CSCuh01051, CSCuh87042 and CSCuh73454.
+
+
+
+Customers can download and install the COP file as a solution for the previous vulnerabilities while awaiting fixed software versions. 
+
+
+
+This package will install on the following system versions:
+
+    7.1.3
+    7.1.5
+    8.5.1
+    8.6.2
+    9.1.1
+
+The COP file, cmterm-CSCuh01051-2.cop.sgn, is located in the Utilities section of the software downloads page["http://software.cisco.com/download/navigator.html?a=a&amp;i=rpm"] for each of the versions in the preceding list. For instance, the file for 9.1(x) versions would be located by navigating the following path on the software downloads page:
+
+
+
+Products -&gt; Voice and Unified Communications -&gt; IP Telephony -&gt; Unified Communications Platform -&gt; Cisco Unified Communications Manager -&gt; Cisco Unified Communications Manager Version 9.1 -&gt; Unified Communications Manager / CallManager / Cisco Unity Connection Utilities-COP-Files
+
+
+
+The COP file mitigates the initial attack vector (CSCuh01051) and reduces the documented attack surface. Application of the COP file is highly recommended for all affected Cisco Unified CM product versions.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The blind SQL injection vulnerability (CSCuh01051) was initially reported to Cisco by Emerging Defense, LLC.
+
+
+
+These vulnerabilities were demonstrated during the SSTIC 2013 IT security conference in Rennes, France on June 6, 2013, by a French security firm, Lexfo. The Cisco Product Security Incident Response Team (PSIRT) is not aware of any malicious use of the vulnerabilities that are described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Unified Communications Manager</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unified Presence Server" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7333">Cisco Unified Presence Server </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-88444">Cisco Unified Communications Manager </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager CCMEncryption Contains Static Key</Title>
+    <ID SystemName="Cisco Bug ID">CSCsc69187</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCsc69187,CSCui01756</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+        <ProductID>CVRFPID-7333</ProductID>
+      </Status>
+    </ProductStatuses>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Command Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuh73440</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuh73440</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3402</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.5</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:U/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Blind SQL Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuh01051</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuh01051</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3404</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.4</BaseScoreV2>
+        <TemporalScoreV2>5.5</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:P/A:N/E:F/RL:TF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Blind Structured Query Language Injection Vulnerabilities</Title>
+    <ID SystemName="Cisco Bug ID">CSCuh81766</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuh81766</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3412</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>5.5</BaseScoreV2>
+        <TemporalScoreV2>5.2</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:P/I:P/A:N/E:F/RL:U/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Privilege Escalation Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCui02242</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCui02242</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3434</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.8</BaseScoreV2>
+        <TemporalScoreV2>6.1</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:U/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="6" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Privilege Escalation Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCui02276</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCui02276</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3433</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.8</BaseScoreV2>
+        <TemporalScoreV2>6.1</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:U/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="7" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Privilege Escalation Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuh73454</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuh73454,CSCuh87042</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3403</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.8</BaseScoreV2>
+        <TemporalScoreV2>5.5</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:TF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds for the vulnerabilities described in this document.
+
+
+
+Additional workaround details are available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

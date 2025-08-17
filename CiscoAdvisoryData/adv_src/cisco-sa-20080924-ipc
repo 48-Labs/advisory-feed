@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20080924-ipc",
+  "title": "Cisco 10000, uBR10012, uBR7200 Series Devices IPC Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2008-09-24T16:00:00.000+0000",
+  "lastPublished": "2008-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ipc",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "16646,cisco-amb-20080924-ipc-and-ubr",
+  "cve": "CVE-2008-3805,CVE-2008-3806",
+  "ciscoBugId": "CSCsg15342,CSCsh29217",
+  "status": "",
+  "summary": "   Cisco 10000, uBR10012 and uBR7200 series devices use a User Datagram Protocol (UDP) based Inter-Process Communication (IPC) channel that is externally reachable. An attacker could exploit this vulnerability to cause a denial of service (DoS) condition on affected devices. No other ",
+  "totalCount": 11,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS IPC Message Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16646&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco 10000, uBR10012, and uBR7200 Series Devices IPC Vulnerability and the Cisco uBR10012 Series Devices SNMP Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080924-ipc-and-ubr"
+        }
+      ]
+    }
+  ]
+}

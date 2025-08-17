@@ -1,0 +1,42 @@
+{
+  "identifier": "cisco-sa-20040408-vpnsm",
+  "title": "Cisco IPSec Malformed IKE Packet Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2004-04-08T16:00:00.000+0000",
+  "lastPublished": "2004-04-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040408-vpnsm",
+  "cwe": "CWE-399",
+  "erpPubIds": "7518",
+  "cve": "CVE-2004-0710",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   A malformed Internet Key Exchange (IKE) packet may cause the Cisco Catalyst 6500 Series Switch or the Cisco 7600 Series Internet Router to reload. Only devices running Cisco IOS software with Crypto support are affected.   This vulnerability is documented as Cisco bug ID ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Catalyst 6500 Switch and 7600 Router Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=7518&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed IKE Packet DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4067&signatureSubId=0&releaseVersion=S901&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed IKE Packet DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5508&signatureSubId=0&releaseVersion=S901&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

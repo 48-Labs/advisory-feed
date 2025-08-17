@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20161005-dhcp2",
+  "title": "Cisco NX-OS Software Malformed DHCPv4 Packet Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-10-05T16:00:00.000+0000",
+  "lastPublished": "2016-10-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-dhcp2",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2015-6393",
+  "ciscoBugId": "CSCuq39250,CSCus21733,CSCus21739,CSCut76171,CSCux67182",
+  "status": "",
+  "summary": "A vulnerability in the implementation of the DHCPv4 relay agent in Cisco NX-OS Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.The vulnerability is due to improper validation of malformed DHCPv4 ",
+  "totalCount": 5,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "37414",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-06-seu.html"
+        }
+      ]
+    }
+  ]
+}

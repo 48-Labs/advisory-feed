@@ -1,0 +1,29 @@
+{
+  "identifier": "cisco-sa-20020227-ios-cef",
+  "title": "Data Leak with Cisco Express Forwarding Enabled",
+  "version": "1.3",
+  "firstPublished": "2002-02-27T16:00:00.000+0000",
+  "lastPublished": "2002-02-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020227-ios-cef",
+  "cwe": "CWE-200",
+  "erpPubIds": "3387",
+  "cve": "CVE-2002-0339",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Excluding Cisco 12000 Series Internet Routers, all Cisco devices running Cisco IOS&reg; software that have Cisco Express Forwarding (CEF) enabled can leak information from previous packets that have been handled by the device. This can happen if the packet length described in the IP ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS with Cisco Express Forwarding Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=3387&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

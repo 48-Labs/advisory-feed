@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20070124-crafted-ip-option",
+  "title": "Crafted IP Option Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2007-01-24T16:00:00.000+0000",
+  "lastPublished": "2007-01-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070124-crafted-ip-option",
+  "severity": "Critical",
+  "cwe": "CWE-94",
+  "erpPubIds": "12530",
+  "cve": "CVE-2007-0480",
+  "ciscoBugId": "CSCec71950",
+  "status": "",
+  "summary": "Cisco routers and switches running Cisco IOS&reg; or Cisco IOS XR softwaremay be vulnerable to a remotely exploitable crafted IP option Denial of Service(DoS) attack. Exploitation of the vulnerability may potentially allow forarbitrary code execution. The vulnerability may be exploited after ",
+  "totalCount": 3,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Cisco IOS XR Software Crafted IP Option Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12530&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IOS Crafted IP Option Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5832&signatureSubId=0&releaseVersion=S663&softwareVersion=6.0"
+        },
+        {
+          "name": "IOS Crafted IP Option Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5832&signatureSubId=1&releaseVersion=S663&softwareVersion=6.0"
+        },
+        {
+          "name": "IOS Crafted IP Option Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5832&signatureSubId=2&releaseVersion=S663&softwareVersion=6.0"
+        },
+        {
+          "name": "IOS Crafted IP Option Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5832&signatureSubId=3&releaseVersion=S663&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20080521-sce",
+  "title": "Cisco Service Control Engine Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2008-05-21T16:00:00.000+0000",
+  "lastPublished": "2008-05-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080521-sce",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "15887,15888,15889",
+  "cve": "CVE-2008-0534,CVE-2008-0535,CVE-2008-0536",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Three Secure Shell (SSH) vulnerabilities exist in the Cisco Service Control Engine (SCE) that may result in system instability or a reload of the SCE. The first vulnerability may be triggered during SSH login activity that is conducted within aggressive time frames. The second ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Service Control Engine SSH Login Activity Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15887&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Multiple Vendor SSH Server Implementation Login Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15888&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Service Control Engine SSH Authentication Method Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15889&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

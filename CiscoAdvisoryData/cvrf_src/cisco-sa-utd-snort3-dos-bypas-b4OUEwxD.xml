@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Unified Threat Defense Snort Intrusion Prevention System Engine for Cisco IOS XE Software Security Policy Bypass and Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-utd-snort3-dos-bypas-b4OUEwxD</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2024-09-25T15:46:58</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2024-09-25T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2024-09-25T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2024-09-25T15:49:33.9301904Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in Cisco Unified Threat Defense (UTD) Snort Intrusion Prevention System (IPS) Engine for Cisco IOS XE Software could allow an unauthenticated, remote attacker to bypass configured security policies or cause a denial of service (DoS) condition on an affected device.
+
+This vulnerability is due to insufficient validation of HTTP requests when they are processed by Cisco UTD Snort IPS Engine. An attacker could exploit this vulnerability by sending a crafted HTTP request through an affected device. A successful exploit could allow the attacker to trigger a reload of the Snort process.  If the action in case of Cisco UTD Snort IPS Engine failure is set to the default, fail-open, successful exploitation of this vulnerability could allow the attacker to bypass configured security policies. If the action in case of Cisco UTD Snort IPS Engine failure is set to fail-close, successful exploitation of this vulnerability could cause traffic that is configured to be inspected by Cisco UTD Snort IPS Engine to be dropped.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-utd-snort3-dos-bypas-b4OUEwxD ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-utd-snort3-dos-bypas-b4OUEwxD"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this vulnerability affected the following Cisco products if they were running a vulnerable release of Cisco UTD Snort IPS Engine for Cisco IOS XE Software and had the Web Filtering feature, the Multi-Tenancy feature, or both enabled:
+
+1000 Series Integrated Services Routers (ISRs)
+4000 Series ISRs
+Catalyst 8000V Edge Software
+Catalyst 8200 Series Edge Platforms
+Catalyst 8300 Series Edge Platforms
+Catalyst 8500L Series Edge Platforms
+Catalyst IR8300 Rugged Series Routers
+
+For information about which Cisco software releases were vulnerable at the time of publication, see the Fixed Software ["#fs"] section of this advisory. See the Details section in the bug ID(s) at the top of this advisory for the most complete and current information.
+  Determine the Device Configuration
+For information about how to determine the device configuration, see the following sections.
+
+Determine Whether Cisco UTD Snort IPS Engine Is Enabled
+
+To determine whether Cisco UTD Snort IPS Engine is enabled on a device, use the show utd engine standard status command on the device CLI. If there is no output, Cisco UTD Snort IPS Engine is not enabled, and the device is not affected by this vulnerability. If the output shows Yes under Running, Cisco UTD Snort IPS Engine is enabled and the device is affected, as shown in the following example:
+
+
+Router#show utd engine standard status
+
+Profile              : Cloud-Low
+System memory        :
+             Usage  : 6.00 %
+             Status : Green
+Number of engines    : 1
+
+Engine        Running    Health     Reason
+=======================================================
+Engine(#1):   Yes        Green      None
+=======================================================
+.
+.
+.
+
+Determine Whether Multi-Tenancy Is Enabled
+
+To determine whether Multi-Tenancy is enabled on Cisco UTD Snort IPS Engine, use the show utd engine standard config | include Multi-tenancy command on the device CLI. If there is no output, Multi-Tenancy is disabled, and the device is affected by this vulnerability only if Web Filtering is enabled. If the output shows Enabled under Multi-tenancy, Multi-Tenancy is enabled, and the device is affected regardless of the Web Filtering configuration, as shown in the following example:
+
+
+Router#show utd engine standard config | include Multi-tenancy
+Multi-tenancy: Enabled
+
+Determine Whether Web Filtering Is Enabled
+
+To determine whether Web Filtering is enabled on Cisco UTD Snort IPS Engine, use the show utd engine standard config | include Web-Filter command on the device CLI. If the output shows Disabled or there is no output, Web Filtering is disabled, and the device is affected by this vulnerability only if Multi-Tenancy is enabled. If the output shows Enabled under Web-Filter, Web Filtering is enabled, and the device is affected regardless of the Multi-Tenancy configuration, as shown in the following example:
+
+
+Router#show utd engine standard config | include Web-Filter
+Web-Filter    : Enabled
+
+
+Determine the Configured Fail Policy
+
+To determine the configured action in case of Cisco UTD Snort IPS Engine failure, use the show platform software utd global | include Fail Policy command on the device CLI. The following example shows the output of the show platform software utd global | include Fail Policy command on a device that has the action in case of Cisco UTD Snort IPS Engine failure set to Fail-open:
+
+
+Router# show platform software utd global | include Fail Policy
+Fail Policy          : Fail-open</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following products:
+
+Cisco Adaptive Security Appliance (ASA) Software
+Cisco Catalyst 8500 Series Edge Platforms
+Cisco Cloud Services Routers 1000V
+Cisco Firepower Threat Defense (FTD) Software
+Cisco Integrated Services Virtual Routers (ISRv)
+Cisco Secure Firewall Management Center (FMC) Software, formerly Firepower Management Center Software
+Open Source Snort</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+      Fixed Releases
+At the time of publication, the release information in the following table was accurate. See the Details section in the bug ID(s) at the top of this advisory for the most complete and current information.
+
+The left column lists Cisco software releases, and the right column indicates whether a release was affected by the vulnerability that is described in this advisory and which release included the fix for this vulnerability.
+        Cisco UTD Snort IPS Engine Release  First Fixed Release          Earlier than 17.12  Not vulnerable.      17.12  17.12.4      17.13  Migrate to a fixed release.      17.14  Not vulnerable.
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">This vulnerability was found during the resolution of a Cisco TAC support case.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-utd-snort3-dos-bypas-b4OUEwxD</cvrf:URL>
+      <cvrf:Description>Cisco Unified Threat Defense Snort Intrusion Prevention System Engine for Cisco IOS XE Software Security Policy Bypass and Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco UTD SNORT IPS Engine Software">
+        <FullProductName ProductID="CVRFPID-279755">Cisco UTD SNORT IPS Engine Software </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco UTD Snort IPS Engine Software for Cisco IOS XE Software Security Policy Bypass and Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwj21273</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwj21273</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2024-20508</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-279755</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>5.8</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-utd-snort3-dos-bypas-b4OUEwxD</URL>
+        <Description>Cisco Unified Threat Defense Snort Intrusion Prevention System Engine for Cisco IOS XE Software Security Policy Bypass and Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

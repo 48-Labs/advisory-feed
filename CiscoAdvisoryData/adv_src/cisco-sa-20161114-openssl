@@ -1,0 +1,65 @@
+{
+  "identifier": "cisco-sa-20161114-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL Affecting Cisco Products: November 2016",
+  "version": "1.9",
+  "firstPublished": "2016-11-14T16:00:00.000+0000",
+  "lastPublished": "2017-01-11T13:45:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161114-openssl",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-119, CWE-310",
+  "erpPubIds": "49664,49663,49662",
+  "cve": "CVE-2016-7053,CVE-2016-7054,CVE-2016-7055",
+  "ciscoBugId": "CSCvc08529,CSCvc08539,CSCvc08542,CSCvc08554,CSCvc08555,CSCvc08559,CSCvc08567,CSCvc08570,CSCvc08607,CSCvc08612,CSCvc08614,CSCvc08623,CSCvc08627,CSCvc08628,CSCvc08629,CSCvc08648,CSCvc08657,CSCvc08663,CSCvc08680,CSCvc08689,CSCvc08697,CSCvc08700,CSCvc08715,CSCvc08749,CSCvc08750,CSCvc08759,CSCvc08779,CSCvc08781,CSCvc08820,CSCvc08828,CSCvc13497",
+  "status": "",
+  "summary": "On November 10, 2016, the OpenSSL Software Foundation released a security advisory that describes three vulnerabilities. Of these vulnerabilities, the OpenSSL Software Foundation classifies one as &ldquo;Critical Severity,&rdquo; one as &ldquo;Moderate Severity,&rdquo; and one as &ldquo;Low ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL Montgomery Multiplication Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=49664&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL CMS Null Dereference Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=49663&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL ChaCha20/Poly1305 Heap Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=49662&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40844",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "40845",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "41118",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "OpenSSL Invalid CMS Structure Null Pointer Dereference",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7953&signatureSubId=0&releaseVersion=S997&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-cisco-sb-rv-overflow-htpymMB5",
+  "title": "Cisco Small Business RV110W, RV130, RV130W, and RV215W Routers Remote Command Execution and Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2021-08-18T16:00:00.000+0000",
+  "lastPublished": "2021-08-18T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cisco-sb-rv-overflow-htpymMB5",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-121",
+  "cve": "CVE-2021-34730",
+  "ciscoBugId": "CSCvz05607",
+  "status": "",
+  "summary": "A vulnerability in the Universal Plug-and-Play (UPnP) service of Cisco&nbsp;Small Business RV110W, RV130, RV130W, and RV215W Routers could allow an unauthenticated, remote attacker to execute arbitrary code or cause an affected device to restart unexpectedly, resulting in a denial of service ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "42493",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-05-04-seu.html"
+        }
+      ]
+    }
+  ]
+}

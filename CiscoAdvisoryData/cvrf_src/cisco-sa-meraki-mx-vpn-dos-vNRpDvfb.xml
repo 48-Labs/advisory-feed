@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Meraki MX and Z Series AnyConnect VPN Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-meraki-mx-vpn-dos-vNRpDvfb</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2025-04-02T15:57:58</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2025-04-02T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2025-04-02T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2025-04-02T15:58:01.2484391Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series devices could allow an authenticated, remote attacker to cause a denial of service (DoS) condition in the Cisco AnyConnect service on an affected device. To exploit this vulnerability, the attacker must have valid VPN user credentials on the affected device.
+
+This vulnerability exists because a variable is not initialized when an SSL VPN session is established. An attacker could exploit this vulnerability by supplying crafted attributes while establishing an SSL VPN session with an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN sessions and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.
+
+Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers without manual intervention.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-vNRpDvfb ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-vNRpDvfb"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This vulnerability affects the following Cisco Meraki products if they are running a vulnerable release of Cisco Meraki MX firmware and have Cisco AnyConnect VPN enabled:
+
+MX64
+MX64W
+MX65
+MX65W
+MX67
+MX67C
+MX67W
+
+MX68
+MX68CW
+MX68W
+MX75
+MX84
+MX85
+MX95
+
+MX100
+MX105
+MX250
+MX400
+MX450
+MX600
+vMX
+
+Z3
+Z3C
+Z4
+Z4C
+
+Note: Cisco AnyConnect VPN is supported on Cisco Meraki MX and Cisco Meraki Z Series devices that run Cisco Meraki MX firmware releases 16.2 and later, except for Cisco Meraki MX64 and MX65, which support Cisco AnyConnect VPN only if they are running Cisco Meraki MX firmware releases 17.6 and later.
+
+For information about which Cisco software releases are vulnerable, see the Fixed Software ["#fs"] section of this advisory.
+  Determine Whether Cisco AnyConnect VPN Is Enabled
+To determine whether Cisco AnyConnect VPN is enabled on a Cisco Meraki MX or Cisco Meraki Z Series device, complete the following steps:
+
+Log in to the Dashboard.
+The second step differs slightly between platforms and license levels.
+For Cisco Meraki MX devices, choose Security &amp; SD-WAN &gt; Configure &gt; Client VPN in the combined view.
+For Cisco Meraki Z Series devices, choose Teleworker Gateway &gt; Configure &gt; Client VPN in the combined view.
+
+Choose the AnyConnect Settings tab.
+
+If the Enabled radio button is selected, the device is configured to support Cisco AnyConnect VPN.
+
+If the Cisco AnyConnect Settings tab is not displayed, or if the Disabled radio button is selected, the device is not impacted by the vulnerability that is described in this advisory.
+  Additional Information
+Cisco Meraki MX and Cisco Meraki Z Series devices support the following two VPN services for remote network access:
+
+Client VPN, which uses Layer 2 Tunneling Protocol (L2TP) or IPsec tunneling protocols
+Cisco AnyConnect VPN, which uses TLS and Datagram TLS (DTLS) protocols and is commonly referred to as SSL VPN
+
+On both Cisco Meraki MX and Cisco Meraki Z Series devices, Client VPN (L2TP/IPsec) and Cisco AnyConnect VPN (SSL) services can be enabled simultaneously.
+
+Note: This vulnerability resides in the establishment of SSL VPN sessions, so it affects only devices that are configured with Cisco AnyConnect VPN. Devices that are configured to provide remote network access exclusively through Client VPN (L2TP/IPsec) are not affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+Adaptive Security Appliance (ASA) Software
+Firepower Threat Defense (FTD) Software
+IOS Software
+IOS XE Software
+Meraki Z1</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco Meraki has released free software updates that address the vulnerability that is described in this advisory. Cisco Meraki recommends that customers upgrade to a fixed release.
+
+Customers may only install and expect support for software releases and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco End User License Agreement and applicable Product Specific Terms:
+https://www.cisco.com/c/en/us/products/end-user-license-agreement.html ["https://www.cisco.com/c/en/us/about/legal/cloud-and-software/end_user_license_agreement.html"]
+
+Additionally, customers may only download software for which they have a valid license, procured from Cisco Meraki directly, or through a Cisco Meraki authorized reseller or partner. In most cases, this will be a maintenance upgrade to software that was previously purchased. Free security software updates do not entitle customers to a new software license, additional software feature sets, or major revision upgrades.
+
+Customers are advised to regularly consult the advisories for Cisco Meraki products, which are available from the Cisco Security Advisories page ["https://sec.cloudapps.cisco.com/security/center/publicationListing.x"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. Cisco Meraki recommends utilizing firmware best practices ["https://documentation.meraki.com/Architectures_and_Best_Practices/Cisco_Meraki_Best_Practice_Design/Best_Practices_for_Meraki_Firmware"] for firmware updates. If the information is not clear, customers are advised to contact Cisco Meraki Support ["https://documentation.meraki.com/General_Administration/Support/Contacting_Support"].
+      Fixed Releases
+At the time of publication, the release information in the following table was accurate. Cisco Meraki will update this advisory as required.
+
+In the following table, the left column lists Cisco Meraki firmware releases. The right column indicates whether a release is affected by the vulnerability that is described in this advisory and the first release that includes the fix for this vulnerability. Customers are advised to upgrade to an appropriate fixed software release ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"] as indicated in this section.
+        Cisco Meraki MX Firmware Release  First Fixed Release          Earlier than 16.2  Not affected.      16.2  Migrate to a fixed release.      17  Migrate to a fixed release.      18.1  18.107.12      18.2  18.211.4      19.1  19.1.4
+Notes:
+
+Cisco Meraki MX64 and MX65 are affected only when they are running Cisco Meraki MX firmware releases 17.6 and later.
+Cisco Meraki MX400 and MX600 support only firmware releases 16.2 and earlier. These models have entered the end-of-life process and will not receive a fix for this vulnerability.
+
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">This vulnerability was found during internal security testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-vNRpDvfb</cvrf:URL>
+      <cvrf:Description>Cisco Meraki MX and Z Series AnyConnect VPN Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco Meraki MX Firmware">
+        <FullProductName ProductID="CVRFPID-204724">Cisco Meraki MX Firmware </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Meraki MX and Z Series Teleworker Gateway AnyConnect VPN Denial of Service Vulnerabilities</Title>
+    <ID SystemName="Cisco Bug ID">CSCwk81017</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwk81017</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2025-20212</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-204724</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>7.7</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-vNRpDvfb</URL>
+        <Description>Cisco Meraki MX and Z Series AnyConnect VPN Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20151021-asa-dhcp1",
+  "title": "Cisco ASA Software DHCPv6 Relay Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2015-10-21T16:00:00.000+0000",
+  "lastPublished": "2015-11-12T14:15:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-dhcp1",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2015-6324",
+  "ciscoBugId": "CSCus56252,CSCus57142",
+  "status": "",
+  "summary": "A vulnerability in the DHCPv6 relay feature of CiscoAdaptive Security Appliance (ASA) software could allow anunauthenticated, remote attacker to cause an affecteddevice to reload.The vulnerability is due to insufficient validation of DHCPv6packets. Cisco ",
+  "totalCount": 5,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "36557",
+          "url": "https://www.snort.org/advisories"
+        }
+      ]
+    }
+  ]
+}

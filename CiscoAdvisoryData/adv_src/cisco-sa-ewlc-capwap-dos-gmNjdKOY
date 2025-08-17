@@ -1,0 +1,44 @@
+{
+  "identifier": "cisco-sa-ewlc-capwap-dos-gmNjdKOY",
+  "title": "Cisco IOS XE Software for Catalyst 9000 Family Wireless Controllers CAPWAP Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2021-09-22T16:00:00.000+0000",
+  "lastPublished": "2021-09-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ewlc-capwap-dos-gmNjdKOY",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-415, CWE-476, CWE-690",
+  "erpPubIds": "ERP-74581",
+  "cve": "CVE-2021-1565,CVE-2021-34768,CVE-2021-34769",
+  "ciscoBugId": "CSCvv76805,CSCvw03037,CSCvw53824,CSCvu73277",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the Control and Provisioning of Wireless Access Points (CAPWAP) protocol processing of Cisco&nbsp;IOS XE Software for Cisco&nbsp;Catalyst 9000 Family Wireless Controllers could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "58187-58188",
+          "url": ""
+        },
+        {
+          "name": "58191",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2021 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74581&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20070905-video",
+  "title": "Cisco Video Surveillance IP Gateway and Services Platform Authentication Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2007-09-05T16:00:00.000+0000",
+  "lastPublished": "2007-09-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070905-video",
+  "severity": "Critical",
+  "cwe": "CWE-264",
+  "erpPubIds": "14067,14068,cisco-amb-20070905-video",
+  "cve": "CVE-2007-4746,CVE-2007-4747",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco Video Surveillance IP Gateway video encoder and decoder, Services Platform (SP), and Integrated Services Platform (ISP) devices contain authentication vulnerabilities that allow remote users with network connectivity to gain the complete administrative control of vulnerable ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Video Surveillance IP Gateway Encoder/Decoder Telnet Authentication Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14067&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Video Surveillance Services Platforms and Integrated Services Platforms Default Authentication Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14068&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Video Surveillance Authentication Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070905-video"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Video Surveillance IP Gateway Encoder/Decoder Telnet  Authentication Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5703&signatureSubId=0&releaseVersion=S509&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

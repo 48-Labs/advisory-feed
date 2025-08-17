@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20080924-multicast",
+  "title": "Multiple Multicast Vulnerabilities in Cisco IOS Software",
+  "version": "1.3",
+  "firstPublished": "2008-09-24T16:00:00.000+0000",
+  "lastPublished": "2008-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-multicast",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "cisco-amb-20080924-multicast,16636,16638",
+  "cve": "CVE-2008-3808,CVE-2008-3809",
+  "ciscoBugId": "CSCsl34355,CSCsd95616",
+  "status": "",
+  "summary": "   Two crafted Protocol Independent Multicast (PIM) packet vulnerabilities exist in Cisco IOS software that may lead to a denial of service (DoS) condition. Cisco has released software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are ",
+  "totalCount": 11,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS PIM Packet Reload Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16636&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Gigabit Switch Router PIM Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16638&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Multicast Vulnerabilities in Cisco IOS Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080924-multicast"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco PIM Multicast Denial of Service Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6999&signatureSubId=0&releaseVersion=S620&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

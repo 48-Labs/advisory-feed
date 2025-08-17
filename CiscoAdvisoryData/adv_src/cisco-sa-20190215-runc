@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190215-runc",
+  "title": "Container Privilege Escalation Vulnerability Affecting Cisco Products: February 2019",
+  "version": "1.6",
+  "firstPublished": "2019-02-15T17:00:00.000+0000",
+  "lastPublished": "2019-03-15T19:59:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190215-runc",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "erpPubIds": "59636",
+  "cve": "CVE-2019-5736",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "A vulnerability in the Open Container Initiative runc CLI tool used by multiple products could allow an unauthenticated, remote attacker to escalate privileges on a targeted system.The vulnerability exists because the affected software improperly handles file descriptors ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "runc System File Descriptors Handling Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=59636&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "49195",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

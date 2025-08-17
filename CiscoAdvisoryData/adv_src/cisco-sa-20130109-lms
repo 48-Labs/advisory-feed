@@ -1,0 +1,33 @@
+{
+  "identifier": "cisco-sa-20130109-lms",
+  "title": "Cisco Prime LAN Management Solution Command Execution Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2013-01-09T16:00:00.000+0000",
+  "lastPublished": "2013-01-23T20:31:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130109-lms",
+  "severity": "Critical",
+  "cwe": "CWE-264",
+  "cve": "CVE-2012-6392",
+  "ciscoBugId": "CSCuc79779",
+  "status": "",
+  "summary": "Cisco Prime LAN Management Solution (LMS) Virtual Appliancecontains a vulnerability that could allow an unauthenticated, remoteattacker to execute arbitrary commands with the privileges of the root user. Thevulnerability is due to improper validation of authentication andauthorization ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "25535",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "610",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20150325-iosxe</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2015-03-25T15:31:56</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2015-04-01T01:04:06</cvrf:Date>
+        <cvrf:Description>Edited Fixed Software section.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2018-02-23T17:52:51</cvrf:Date>
+        <cvrf:Description>Updated to include additional bug ID.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2015-03-25T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2018-02-23T17:52:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco IOS XE Software for Cisco ASR 1000 Series Aggregation Services Routers (ASR), Cisco 4400 Series Integrated Services Routers (ISR), and Cisco Cloud Services Routers (CSR) 1000v Series contains the following vulnerabilities:
+
+Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability
+Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability
+Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability
+Cisco IOS XE Software Layer 4 Redirect Crafted Packet Denial of Service Vulnerability
+Cisco IOS XE Software Common Flow Table Crafted Packet Denial of Service Vulnerability
+These vulnerabilities are independent of each other; a release that is affected by one of the vulnerabilities may not be affected by the others.
+
+Successful exploitation of any of these vulnerabilities could allow an unauthenticated, remote attacker to trigger a reload of the forwarding plane, causing an interruption of services. Repeated exploitation could result in a sustained denial of service (DoS) condition.
+
+Successful exploitation of Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability could allow an unauthenticated remote attacker to execute malicious code on the affected device.
+
+Cisco has released software updates that address these vulnerabilities. This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe"]
+
+Note: The March 25, 2015, Cisco IOS &amp; XE Software Security Advisory bundled publication includes seven Cisco Security Advisories. The advisories address vulnerabilities in Cisco IOS Software and Cisco IOS XE Software. Individual publication links are in Cisco Event Response: Semiannual Cisco IOS &amp; XE Software Security Advisory Bundled Publication at the following link:
+http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar15.html ["http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar15.html"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco IOS XE Software for Cisco ASR 1000 Series Routers, Cisco 4400 Series ISRs, and Cisco CSR 1000v Series contains multiple DoS vulnerabilities and a remote code execution vulnerability. Affected versions of Cisco IOS XE Software will vary depending on the specific vulnerability. Consult the "Software Versions and Fixes" section of this security advisory for more information about the affected versions.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">For specific version information, refer to the Software Versions and Fixes section of this advisory.
+
+Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability
+
+Cisco IOS XE Software contains a vulnerability that may cause an affected device to reload while processing fragmented IP version 4 (IPv4) packets that undergo Network Address Translation (NAT) and high-speed logging (HSL). Additionally, application layer gateway (ALG) or zone-based policy firewall inspection of such packets may be needed to exploit this vulnerability.
+
+This vulnerability can be exploited only with transit IPv4 packets. Packets destined to an affected device or IP version 6 (IPv6) packets cannot be used to trigger this vulnerability.
+
+An attacker could exploit this vulnerability by sending large IPv4 packets that require fragmentation and reassembly when packets requiring ALG inspection traverse a device that is configured for NAT and HSL.
+
+Cisco IOS XE Software may be affected by this vulnerability if NAT, HSL and ALG are enabled on an affected device; these services are not enabled by default.
+
+ALG inspection is enabled on a device when NAT is enabled. ALG inspection engines available on Cisco IOS XE depend on the software version and may include Session Initiation Protocol (SIP), H.323, Skinny, Point-to-Point Tunneling Protocol (PPTP), and other protocols.
+
+Administrators can choose to disable any ALG inspection under the NAT configuration.
+
+If the packet used in an exploit attempt does not require ALG inspection, this vulnerability can still be exploited if the zone-based policy firewall is configured, in addition to NAT and HSL, and processing such packets.
+
+The following matrix shows the potential impact for a combination of enabled features and packets that may require ALG:
+
+
+  Fragmented packets that may need ALG
+
+  Fragmented packets that do not need ALG
+
+NAT/HSL
+
+  Vulnerable
+
+  Not Vulnerable
+
+NAT/HSL/zone-based policy firewall
+
+  Vulnerable
+
+  Vulnerable
+
+
+To determine whether NAT has been enabled in the Cisco IOS XE Software configuration, the ip nat inside or ip nat outside commands must be on different interfaces and at least one ip nat global configuration command must be in the configuration.
+
+The show running-config | include ip nat command can be used to determine whether NAT is in the configuration, as illustrated in the following example of a vulnerable configuration:
+Router#show running-config | include ip nat
+ ip nat inside
+ ip nat outside
+ ip nat inside source static 192.168.1.100 10.0.0.1
+To determine whether ALG is disabled in the NAT configuration, use the show running-config | include ip nat privileged EXEC command. The presence of no ip nat service in the output of show run | include ip nat indicates that ALG is disabled in the NAT configuration.
+
+The following is the output of show running-config | include ip nat in Cisco IOS XE Software that has the SIP ALG disabled in the NAT configuration:
+Router#show running-config | include ip nat
+ip nat inside
+ip nat outside
+ip nat inside source static 192.168.1.100 10.0.0.1 vrf sip
+no ip nat service sip udp port 5060
+no ip nat service sip tcp port 5060
+If no ip nat service is not in the output of show running-config | include ip nat, the Cisco IOS XE Software release running on the device is vulnerable.
+
+To determine whether HSL has been enabled in the Cisco IOS XE Software configuration, the ip nat log translations flow-export command must be in the configuration.
+
+The show running-config | include ip nat command can be used to determine whether HSL is in the configuration, as illustrated in the following example of a vulnerable configuration:
+Router#show running-config | include ip nat
+ ip nat inside
+ ip nat outside
+ ip nat inside source static 192.168.1.100 10.0.0.1
+ ip nat log translations flow-export v9 udp destination 10.10.0.1 1020 source GigabitEthernet 0/0/0
+
+
+Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability
+
+Cisco IOS XE Software contains a vulnerability that could cause an affected device to reload or execute arbitrary code when processing crafted TCP packets that belong to a connection that is inspected by an AppNav-XE controller component. A device is vulnerable only if multiple AppNav-XE controllers are configured.
+
+This vulnerability can be exploited only with transit IPv4 TCP packets. Packets destined to an affected device or IPv6 packets cannot be used to trigger this vulnerability.
+
+The AppNav-XE controller component is not enabled by default.
+
+To determine whether AppNav-XE with multiple controllers is configured on a device, use the show service-insertion appnav-controller-group privileged EXEC command. The presence of multiple IP addresses under the configured appnav-controller-group in the output of show service-insertion appnav-controller-group indicates that AppNav-XE with multiple controllers is configured on a device.
+
+The following output is for AppNav-XE on Cisco IOS XE Software configured with multiple controllers:
+Router# show service-insertion appnav-controller-group
+All AppNav Controller Groups in service context
+Appnav Controller Group : acg
+Member Appnav Controller Count : 2
+Members:
+IP Address
+ 21.0.0.36
+21.0.0.160
+
+AppNav Controller : 21.0.0.36
+Local AppNav Controller : Yes
+Current status of AppNav Controller : Alive
+  &lt;output suppressed&gt;
+Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability
+
+Cisco IOS XE Software contains a vulnerability that may cause an affected device to reload while processing crafted IPv6 packets when IPv6 is configured on an affected device.
+
+This vulnerability can be exploited only with IPv6 packets destined to an affected device. Packets transiting an affected device or IPv4 packets cannot be used to trigger this vulnerability.
+
+An attacker could exploit this vulnerability by sending a number of crafted IPv6 packets that require punt operations when a device is configured for IPv6.
+
+Cisco IOS XE Software may be affected if IPv6 is enabled on an interface that is processing traffic. IPv6 is not enabled by default.
+
+To determine whether IPv6 is enabled on an interface, use the show running-config | include ipv6.(enable|address) privileged EXEC command. The presence of ipv6 enable and ipv6 address in the output of show running-config | include ipv6.(enable|address) indicates that IPv6 is enabled.
+
+The following is the output of the show running-config | include ipv6.(enable|address) in Cisco IOS XE Software that shows the device is configured for IPv6:
+Router# show running-config | include ipv6.(enable|address) ipv6 enable  ipv6 address dhcp rapid-commit ipv6 address autoconfig  ipv6 address MANAGEMENT ::1FFF:0:0:0:3560/128 ipv6 address 2001:DB8::1/64
+
+Cisco IOS XE Software Layer 4 Redirect Crafted Packet Denial of Service Vulnerability
+
+Cisco IOS XE Software contains a vulnerability that may cause an affected device to reload while processing crafted IPv4 or IPv6 packets when Layer 4 Redirect (L4R) is configured on an affected device.
+
+This vulnerability can be exploited only with IPv4 or IPv6 subscriber packets transiting an affected device. In normal operation, those packets are redirected to specified servers when a device running Cisco IOS XE Software is configured for L4R functionality. Packets destined to an affected device cannot be used to trigger this vulnerability.
+
+An attacker could exploit this vulnerability by sending a number of crafted IPv4 or IPv6 packets that require Layer 4 redirection when a device that is configured for L4R.
+
+Cisco IOS XE Software may be affected if L4R is configured. L4R is not enabled by default.
+
+To determine whether L4R is configured on a device, use the show running-config | include redirect privileged EXEC command. The presence of redirect server-group and redirect to group in the output of show running-config | include redirect indicates that L4R is enabled.
+
+The following is the output of show running-config | include redirect in Cisco IOS XE Software that shows the device is configured for L4R:
+Router# show running-config | include redirect
+  redirect server-group TEST_SERVER
+  	redirect to group TEST_SERVER
+Cisco IOS XE Software Common Flow Table Crafted Packet Denial of Service Vulnerability
+
+Cisco IOS XE Software contains a vulnerability that could cause an affected device to reload when processing crafted IPv6 packets encapsulated in UDP IPv4 packets. A device is vulnerable only if Media Monitoring (MMON) traffic inspection or Network-Based Application Recognition (NBAR) inspection of tunneled IPv6 traffic is configured.
+
+This vulnerability can be exploited only with transit IPv4 UDP packets that are carrying IPv6 packets. Packets destined to an affected device, TCP IPv4 packets, or unencapsulated IPv6 packets cannot be used to trigger this vulnerability.
+
+MMON or NBAR traffic inspection is not enabled by default.
+
+To determine whether MMON inspection of traffic is configured on a device, use the show policy-map type performance-monitor privileged EXEC command. The presence of service-policy in the output of show policy-map type performance-monitor interface indicates that MMON is configured on a device.
+The following output is for a device running Cisco IOS XE Software that is configured with MMON:
+Router#show policy-map type performance-monitor
+  Service-policy performance-monitor input: mmon_policy
+
+    Class-map: class-default (match-any)
+      0 packets, 0 bytes
+      5 minute offered rate 0000 bps, drop rate 0000 bps
+      Match: any
+      Total Packets classified: 0
+      Total Bytes classified: 0
+      Monitor AOR: disabled
+
+  Service-policy performance-monitor output: mmon_policy
+
+    Class-map: class-default (match-any)
+      0 packets, 0 bytes
+      5 minute offered rate 0000 bps, drop rate 0000 bps
+      Match: any
+      Total Packets classified: 0
+      Total Bytes classified: 0
+      Monitor AOR: disabled ethernet 0/0
+NBAR inspection of IPv6 tunneled traffic on devices running Cisco IOS XE Software is supported for Teredo and IPv6INIP tunnel types.
+
+To determine whether NBAR inspection of tunneled IPv6 traffic is configured on a device, use the show running-config | include nbar.+(teredo|ipv6inip) privileged EXEC command. The presence of either ip nbar classification tunneled-traffic ipv6inip or ip nbar classification tunneled-traffic teredo in the output of show running-config | include nbar.+(teredo|ipv6inip) indicates that the NBAR inspection of tunneled IPv6 traffic is configured on a device.
+
+The following output is for a device running Cisco IOS XE Software that is configured with NBAR traffic inspection for both Teredo and IPv6INIP tunnel types:
+Router# show run | include nbar.+(teredo|ipv6inip)
+ ip nbar classification tunneled-traffic ipv6inip
+ ip nbar classification tunneled-traffic teredo
+Determine the Running Software Version  The Cisco ASR 1000 Series Aggregation Services Routers IOS XE releases correspond to the Cisco IOS Software releases. For example, Cisco IOS XE Release 3.6.2S is the software release for Cisco ASR 1000 Series Aggregation Services Routers IOS Release 15.2(2)S2. For more information about mappings between the Cisco IOS XE releases and their associated Cisco IOS releases, see the following:
+http://www.cisco.com/en/US/docs/routers/asr1000/release/notes/asr1k_rn_intro.html ["http://www.cisco.com/en/US/docs/routers/asr1000/release/notes/asr1k_rn_intro.html"]
+
+To determine whether a vulnerable version of Cisco IOS XE Software is running on a device, administrators can issue the show version command. The following example shows Cisco IOS XE Software that is running IOS XE Software version 3.6.2S, which maps to Cisco IOS Software version 15.2(2)S2:
+
+Router#show version
+Cisco IOS Software, IOS-XE Software (PPC_LINUX_IOSD-ADVENTERPRISEK9-M), Version 15.2(2)S2, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Tue 07-Aug-12 13:40 by mcpre
+&lt;output suppressed&gt;
+Note: A Cisco IOS XE Software image consists of seven individual modules, also referred to as packages. The packages are designed to use the In-Service Software Upgrade (ISSU) capability of Cisco IOS XE Software. Customers can choose to upgrade only those packages that need to be upgraded. For more information about the Cisco IOS XE Software packaging, see the following:
+http://www.cisco.com/en/US/partner/prod/collateral/routers/ps9343/product_bulletin_c25-448387.html ["http://www.cisco.com/en/US/partner/prod/collateral/routers/ps9343/product_bulletin_c25-448387.html"]
+
+If the packages were upgraded individually, the output of the show version command refers only to the IOS daemon (in the rpios package). Instead, you should use the show version running command because the vulnerabilities in this advisory belong to the espbase package. The version of the espbase package can be obtained using the show version running | section espbase command:
+
+Router#show version running | section espbase
+Package: espbase, version: 03.10.03.S.153-3.S3-ext, status: active
+  File: bootflash:packages/asr1001-espbase.03.10.03.S.153-3.S3-ext.pkg, on: ESP0
+  Built: 2014-06-01_11.45, by: mcpre
+  File SHA1 checksum: f07a15e85bdd0c23603504ea56994924ec9c0ea6</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Products running Cisco IOS Software or Cisco IOS XR Software are not affected by any of these vulnerabilities.
+
+Cisco ASR 900 Series Routers are not affected by this vulnerability.
+
+The Cisco 4300 Series ISRs are not affected because all Cisco IOS XE Software releases for that product already include the fixes for the vulnerabilities.
+
+With the exception of Cisco ASR 1000 Series Routers, Cisco 4400 Series ISRs, and Cisco CSR 1000v Series, no other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">The following section provides additional information about each vulnerability.
+
+Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability
+
+A vulnerability in the high-speed logging (HSL) functionality of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition.
+
+The vulnerability is due to improper processing of fragmented IP packets. An attacker could exploit this vulnerability by sending a large amount of oversized IP packets that need to be fragmented and processed by the Network Address Translation (NAT) and HSL functionality on an affected device. An exploit could allow the attacker to cause an affected device to reload, resulting in a DoS condition.
+
+This vulnerability is documented in Cisco bug ID CSCuo25741 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuo25741"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2015-0640.
+
+Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability
+
+A vulnerability in the AppNav component of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload and may allow arbitrary code execution on the affected system.
+
+The vulnerability is due to improper processing of crafted TCP packets. An attacker could exploit this vulnerability by sending a crafted TCP packet that needs to be processed by the AppNav component configured on an affected device. An exploit could allow the attacker to cause an affected device to reload or execute arbitrary code in the forwarding engine.
+
+This vulnerability is documented in Cisco bug ID CSCuo53622 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuo53622"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2015-0644.
+
+Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability
+
+A vulnerability in IP version 6 (IPv6) parsing of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition.
+
+The vulnerability is due to improper parsing of crafted IPv6 packets. An attacker could exploit this vulnerability by sending crafted IPv6 packets destined to an affected device. An exploit could allow the attacker to cause an affected device to reload, resulting in a DoS condition.
+
+This vulnerability is documented in Cisco bug ID CSCvc98209 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCvc98209"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and CSCub68073 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCub68073"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2015-0641.
+
+Cisco IOS XE Software Layer 4 Redirect Crafted Packet Denial of Service Vulnerability
+
+A vulnerability in the Layer 4 Redirect (L4R) processing code of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a reload of the affected device.
+
+The vulnerability is due to improper processing of malformed packets by the configured L4R feature. An attacker could exploit this vulnerability by sending a number of malformed IP version 4 (IPv4) or IP version 6 (IPv6) packets to be processed by the L4R functionality on a device running Cisco IOS XE Software. An exploit could allow the attacker to cause a reload of the affected device.
+
+This vulnerability is documented in Cisco bug ID CSCuq59131 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuq59131"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2015-0645.
+
+Cisco IOS XE Software Common Flow Table Crafted Packet Denial of Service Vulnerability
+
+A vulnerability in the Common Flow Table (CFT) processing of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a reload of the affected device.
+
+The vulnerability is due to improper processing of IP version 6 (IPv6) packets encapsulated in IP version 4 (IPv4) UDP packets. An attacker could exploit this vulnerability by sending a number of malformed IPv6 packets encapsulated in IPv4 UDP packets when either Media Monitoring (MMON) or Network-Based Application Recognition (NBAR) are configured. An exploit could allow the attacker to cause a reload of the affected device.
+
+This vulnerability is documented in Cisco bug ID CSCua79665 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCua79665"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2015-0639.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">No workarounds are available to mitigate these vulnerabilities.
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+
+Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability
+
+                              Vulnerability
+Major Release
+
+Extended Release
+
+First Fixed Release
+                                                 CSCuo25741
+
+ 2.x
+
+ --
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.1
+
+ Yes
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.2
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.3
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.4
+
+ Yes
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.5
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.6
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.7
+
+ Yes
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.8
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.9
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.10
+
+ Yes
+
+ 3.10.4S
+
+ 3.11
+
+ No
+
+ 3.11.3S
+
+ 3.12
+
+ No
+
+ 3.12.1S
+
+ 3.13
+
+ Yes
+
+ 3.13.0S
+
+ 3.14
+
+               No               3.14.0S
+
+3.15
+
+               No               3.15.0S
+
+Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability
+
+
+Vulnerability
+
+
+
+Major Release
+
+
+
+Extended Release
+
+
+
+First Fixed Release
+
+
+
+ CSCuo53622
+
+
+
+ 2.x
+
+
+
+ --
+
+
+
+ N/A
+
+
+
+ 3.1
+
+
+
+ Yes
+
+
+
+ N/A
+
+
+
+ 3.2
+
+
+
+ No
+
+
+
+ N/A
+
+
+
+ 3.3
+
+
+
+ No
+
+
+
+ N/A
+
+
+
+ 3.4
+
+
+
+ Yes
+
+
+
+ N/A
+
+
+
+ 3.5
+
+
+
+ No
+
+
+
+ N/A
+
+
+
+ 3.6
+
+
+
+ No
+
+
+
+ N/A
+
+
+
+ 3.7
+
+
+
+ Yes
+
+
+
+ N/A
+
+
+
+ 3.8
+
+
+
+ No
+
+
+
+ Vulnerable; migrate to 3.10.3S or one of fixed extended releases
+
+
+
+ 3.9
+
+
+
+ No
+
+
+
+ Vulnerable; migrate to 3.10.3S or one of fixed extended releases
+
+
+
+ 3.10
+
+
+
+ Yes
+
+
+
+ 3.10.3S
+
+
+
+ 3.11
+
+
+
+ No
+
+
+
+ 3.11.3S
+
+
+
+ 3.12
+
+
+
+ No
+
+
+
+ 3.12.1S
+
+
+
+ 3.13
+
+
+
+ Yes
+
+
+
+ 3.13.0S
+
+
+
+ 3.14
+
+               No               3.14.0S
+ 3.15
+
+               No               3.15.0S
+
+Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability
+
+
+Vulnerability
+
+Major Release
+
+Extended Release
+
+First Fixed Release
+
+ CSCub68073
+
+CSCvc89209
+
+ 2.x
+
+ --
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.1
+
+ Yes
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.2
+
+ No
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.3
+
+ No
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.4
+
+ Yes
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.5
+
+ No
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.6
+
+ No
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.7
+
+ Yes
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.8
+
+ No
+
+ Vulnerable; migrate to 3.10.0S or one of fixed extended releases
+
+ 3.9
+
+ No
+
+ 3.9.0S
+
+ 3.10
+
+ Yes
+
+ 3.10.0S
+
+ 3.11
+
+ No
+
+ 3.11.0S
+
+ 3.12
+
+ No
+
+ 3.12.0S
+
+ 3.13
+
+ Yes
+
+ 3.13.0S
+
+ 3.14
+
+               No               3.14.0S
+3.15
+
+               No               3.15.0S
+
+Cisco IOS XE Software Layer 4 Redirect Crafted Packet Denial of Service Vulnerability
+
+
+Vulnerability
+
+Major Release
+
+Extended Release
+
+First Fixed Release
+
+  CSCuq59131
+
+ 2.x
+
+ --
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.1
+
+ Yes
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.2
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.3
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.4
+
+ Yes
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.5
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.6
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.7
+
+ Yes
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.8
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.9
+
+ No
+
+ Vulnerable; migrate to 3.10.4S or one of fixed extended releases
+
+ 3.10
+
+ Yes
+
+ 3.10.4S
+
+ 3.11
+
+ No
+
+ 3.11.3S
+
+ 3.12
+
+ No
+
+ 3.12.2S
+
+ 3.13
+
+ Yes
+
+ 3.13.1S
+
+ 3.14
+
+               No               3.14.0S
+ 3.15
+
+               No               3.15.0S
+
+Cisco IOS XE Software Common Flow Table Crafted Packet Denial of Service Vulnerability
+
+
+Vulnerability
+
+Major Release
+
+Extended Release
+
+First Fixed Release
+
+ CSCua79665
+
+ 2.x
+
+ --
+
+ N/A
+
+ 3.1
+
+ Yes
+
+ N/A
+
+ 3.2
+
+ No
+
+ N/A
+
+ 3.3
+
+ No
+
+ N/A
+
+ 3.4
+
+ Yes
+
+ N/A
+
+ 3.5
+
+ No
+
+ N/A
+
+ 3.6
+
+ No
+
+ None
+
+ 3.7
+
+ Yes
+
+ 3.7.1S
+
+ 3.8
+
+ No
+
+ 3.8.0S
+
+ 3.9
+
+ No
+
+ 3.9.0S
+
+ 3.10
+
+ Yes
+
+ 3.10.0S
+
+ 3.11
+
+ No
+
+ 3.11.0S
+
+ 3.12
+
+ No
+
+ 3.12.0S
+
+ 3.13
+
+ Yes
+
+ 3.13.0S
+                                                 3.14
+
+               No
+ 3.14.0S
+
+
+ 3.15
+
+               No
+ 3.15.0S
+
+
+For a mapping of Cisco IOS XE Software releases to Cisco IOS Software releases, refer to Cisco IOS XE 2 Release Notes ["http://www.cisco.com/c/en/us/td/docs/ios/ios_xe/2/release/notes/rnasr21/rnasr21_gen.html#wp3000032"], Cisco IOS XE 3S Release Notes ["http://www.cisco.com/c/en/us/td/docs/ios/ios_xe/3/release/notes/asr1k_rn_3s_rel_notes/asr1k_rn_3s_sys_req.html#wp3069754"], and Cisco IOS XE 3SG Release Notes ["http://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/release/note/OL_24726.html#pgfId-2570252"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.
+
+All vulnerabilities in this publication were discovered during internal investigation.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000, Cisco ISR 4400, and Cisco Cloud Services 1000v Series Routers</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37822</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37823</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37824</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37825</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software Layer 4 Redirect Crafted Packet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37826</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software Common Flow Table Crafted Packet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco IOS XE Software">
+        <Branch Type="Product Version" Name="3.7S">
+          <Branch Type="Service Pack" Name="3.7.0S">
+            <FullProductName ProductID="CVRFPID-184480">Cisco IOS XE Software 3.7.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.1S">
+            <FullProductName ProductID="CVRFPID-184481">Cisco IOS XE Software 3.7.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.2S">
+            <FullProductName ProductID="CVRFPID-194730">Cisco IOS XE Software 3.7.2S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.3S">
+            <FullProductName ProductID="CVRFPID-194731">Cisco IOS XE Software 3.7.3S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.4S">
+            <FullProductName ProductID="CVRFPID-194732">Cisco IOS XE Software 3.7.4S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.5S">
+            <FullProductName ProductID="CVRFPID-202541">Cisco IOS XE Software 3.7.5S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.6S">
+            <FullProductName ProductID="CVRFPID-202542">Cisco IOS XE Software 3.7.6S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.7S">
+            <FullProductName ProductID="CVRFPID-206188">Cisco IOS XE Software 3.7.7S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.4aS">
+            <FullProductName ProductID="CVRFPID-213798">Cisco IOS XE Software 3.7.4aS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.2tS">
+            <FullProductName ProductID="CVRFPID-213799">Cisco IOS XE Software 3.7.2tS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.0xbS">
+            <FullProductName ProductID="CVRFPID-213848">Cisco IOS XE Software 3.7.0xbS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.0bS">
+            <FullProductName ProductID="CVRFPID-213955">Cisco IOS XE Software 3.7.0bS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.0xaS">
+            <FullProductName ProductID="CVRFPID-213956">Cisco IOS XE Software 3.7.0xaS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.7.1aS">
+            <FullProductName ProductID="CVRFPID-213957">Cisco IOS XE Software 3.7.1aS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.8S">
+          <Branch Type="Service Pack" Name="3.8.0S">
+            <FullProductName ProductID="CVRFPID-194735">Cisco IOS XE Software 3.8.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.8.1S">
+            <FullProductName ProductID="CVRFPID-194736">Cisco IOS XE Software 3.8.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.8.2S">
+            <FullProductName ProductID="CVRFPID-194737">Cisco IOS XE Software 3.8.2S</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.9S">
+          <Branch Type="Service Pack" Name="3.9.1S">
+            <FullProductName ProductID="CVRFPID-194842">Cisco IOS XE Software 3.9.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.0S">
+            <FullProductName ProductID="CVRFPID-194843">Cisco IOS XE Software 3.9.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.2S">
+            <FullProductName ProductID="CVRFPID-202558">Cisco IOS XE Software 3.9.2S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.0xaS">
+            <FullProductName ProductID="CVRFPID-213815">Cisco IOS XE Software 3.9.0xaS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.1aS">
+            <FullProductName ProductID="CVRFPID-213816">Cisco IOS XE Software 3.9.1aS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.9.0aS">
+            <FullProductName ProductID="CVRFPID-213825">Cisco IOS XE Software 3.9.0aS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.10S">
+          <Branch Type="Service Pack" Name="3.10.0S">
+            <FullProductName ProductID="CVRFPID-198123">Cisco IOS XE Software 3.10.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.1S">
+            <FullProductName ProductID="CVRFPID-198124">Cisco IOS XE Software 3.10.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.2S">
+            <FullProductName ProductID="CVRFPID-198125">Cisco IOS XE Software 3.10.2S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.3S">
+            <FullProductName ProductID="CVRFPID-202539">Cisco IOS XE Software 3.10.3S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.1xcS">
+            <FullProductName ProductID="CVRFPID-213469">Cisco IOS XE Software 3.10.1xcS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.2aS">
+            <FullProductName ProductID="CVRFPID-213470">Cisco IOS XE Software 3.10.2aS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.2tS">
+            <FullProductName ProductID="CVRFPID-213471">Cisco IOS XE Software 3.10.2tS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.10.1xbS">
+            <FullProductName ProductID="CVRFPID-213642">Cisco IOS XE Software 3.10.1xbS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.11S">
+          <Branch Type="Service Pack" Name="3.11.1S">
+            <FullProductName ProductID="CVRFPID-200768">Cisco IOS XE Software 3.11.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.11.2S">
+            <FullProductName ProductID="CVRFPID-200771">Cisco IOS XE Software 3.11.2S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.11.0S">
+            <FullProductName ProductID="CVRFPID-203353">Cisco IOS XE Software 3.11.0S</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.12S">
+          <Branch Type="Service Pack" Name="3.12.0S">
+            <FullProductName ProductID="CVRFPID-200770">Cisco IOS XE Software 3.12.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.12.1S">
+            <FullProductName ProductID="CVRFPID-206161">Cisco IOS XE Software 3.12.1S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.12.0aS">
+            <FullProductName ProductID="CVRFPID-213473">Cisco IOS XE Software 3.12.0aS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.13S">
+          <Branch Type="Service Pack" Name="3.13.0S">
+            <FullProductName ProductID="CVRFPID-201495">Cisco IOS XE Software 3.13.0S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.13.0aS">
+            <FullProductName ProductID="CVRFPID-213781">Cisco IOS XE Software 3.13.0aS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.11SW">
+          <Branch Type="Service Pack" Name="17.11.99SW">
+            <FullProductName ProductID="CVRFPID-296860">Cisco IOS XE Software 17.11.99SW</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuo25741</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuo25741</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0640</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-194730</ProductID>
+        <ProductID>CVRFPID-194731</ProductID>
+        <ProductID>CVRFPID-194732</ProductID>
+        <ProductID>CVRFPID-194735</ProductID>
+        <ProductID>CVRFPID-194736</ProductID>
+        <ProductID>CVRFPID-194737</ProductID>
+        <ProductID>CVRFPID-194842</ProductID>
+        <ProductID>CVRFPID-194843</ProductID>
+        <ProductID>CVRFPID-198123</ProductID>
+        <ProductID>CVRFPID-198124</ProductID>
+        <ProductID>CVRFPID-198125</ProductID>
+        <ProductID>CVRFPID-200768</ProductID>
+        <ProductID>CVRFPID-200770</ProductID>
+        <ProductID>CVRFPID-200771</ProductID>
+        <ProductID>CVRFPID-202539</ProductID>
+        <ProductID>CVRFPID-202541</ProductID>
+        <ProductID>CVRFPID-202542</ProductID>
+        <ProductID>CVRFPID-202558</ProductID>
+        <ProductID>CVRFPID-203353</ProductID>
+        <ProductID>CVRFPID-206188</ProductID>
+        <ProductID>CVRFPID-213469</ProductID>
+        <ProductID>CVRFPID-213470</ProductID>
+        <ProductID>CVRFPID-213471</ProductID>
+        <ProductID>CVRFPID-213473</ProductID>
+        <ProductID>CVRFPID-213642</ProductID>
+        <ProductID>CVRFPID-213798</ProductID>
+        <ProductID>CVRFPID-213799</ProductID>
+        <ProductID>CVRFPID-213815</ProductID>
+        <ProductID>CVRFPID-213816</ProductID>
+        <ProductID>CVRFPID-213825</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available to mitigate these vulnerabilities.
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe</URL>
+        <Description>Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuo53622</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuo53622</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0644</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-194842</ProductID>
+        <ProductID>CVRFPID-194843</ProductID>
+        <ProductID>CVRFPID-198123</ProductID>
+        <ProductID>CVRFPID-198124</ProductID>
+        <ProductID>CVRFPID-198125</ProductID>
+        <ProductID>CVRFPID-200768</ProductID>
+        <ProductID>CVRFPID-200770</ProductID>
+        <ProductID>CVRFPID-200771</ProductID>
+        <ProductID>CVRFPID-202558</ProductID>
+        <ProductID>CVRFPID-203353</ProductID>
+        <ProductID>CVRFPID-213469</ProductID>
+        <ProductID>CVRFPID-213470</ProductID>
+        <ProductID>CVRFPID-213471</ProductID>
+        <ProductID>CVRFPID-213473</ProductID>
+        <ProductID>CVRFPID-213642</ProductID>
+        <ProductID>CVRFPID-213815</ProductID>
+        <ProductID>CVRFPID-213816</ProductID>
+        <ProductID>CVRFPID-213825</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>8.3</BaseScoreV2>
+        <TemporalScoreV2>6.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:P/I:P/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available to mitigate these vulnerabilities.
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe</URL>
+        <Description>Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software Layer 4 Redirect Crafted Packet Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuq59131</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuq59131</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0645</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-184480</ProductID>
+        <ProductID>CVRFPID-184481</ProductID>
+        <ProductID>CVRFPID-194730</ProductID>
+        <ProductID>CVRFPID-194731</ProductID>
+        <ProductID>CVRFPID-194732</ProductID>
+        <ProductID>CVRFPID-194735</ProductID>
+        <ProductID>CVRFPID-194736</ProductID>
+        <ProductID>CVRFPID-194737</ProductID>
+        <ProductID>CVRFPID-194842</ProductID>
+        <ProductID>CVRFPID-194843</ProductID>
+        <ProductID>CVRFPID-198123</ProductID>
+        <ProductID>CVRFPID-198124</ProductID>
+        <ProductID>CVRFPID-198125</ProductID>
+        <ProductID>CVRFPID-200768</ProductID>
+        <ProductID>CVRFPID-200770</ProductID>
+        <ProductID>CVRFPID-200771</ProductID>
+        <ProductID>CVRFPID-201495</ProductID>
+        <ProductID>CVRFPID-202539</ProductID>
+        <ProductID>CVRFPID-202541</ProductID>
+        <ProductID>CVRFPID-202542</ProductID>
+        <ProductID>CVRFPID-202558</ProductID>
+        <ProductID>CVRFPID-203353</ProductID>
+        <ProductID>CVRFPID-206161</ProductID>
+        <ProductID>CVRFPID-213469</ProductID>
+        <ProductID>CVRFPID-213470</ProductID>
+        <ProductID>CVRFPID-213471</ProductID>
+        <ProductID>CVRFPID-213473</ProductID>
+        <ProductID>CVRFPID-213642</ProductID>
+        <ProductID>CVRFPID-213781</ProductID>
+        <ProductID>CVRFPID-213798</ProductID>
+        <ProductID>CVRFPID-213799</ProductID>
+        <ProductID>CVRFPID-213815</ProductID>
+        <ProductID>CVRFPID-213816</ProductID>
+        <ProductID>CVRFPID-213825</ProductID>
+        <ProductID>CVRFPID-213848</ProductID>
+        <ProductID>CVRFPID-213955</ProductID>
+        <ProductID>CVRFPID-213956</ProductID>
+        <ProductID>CVRFPID-213957</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available to mitigate these vulnerabilities.
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe</URL>
+        <Description>Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software Common Flow Table Crafted Packet Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCua79665</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCua79665</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0639</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-184480</ProductID>
+        <ProductID>CVRFPID-213955</ProductID>
+        <ProductID>CVRFPID-213956</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available to mitigate these vulnerabilities.
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe</URL>
+        <Description>Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCub68073</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCub68073,CSCvc98209</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0641</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-184480</ProductID>
+        <ProductID>CVRFPID-184481</ProductID>
+        <ProductID>CVRFPID-194730</ProductID>
+        <ProductID>CVRFPID-194731</ProductID>
+        <ProductID>CVRFPID-194732</ProductID>
+        <ProductID>CVRFPID-194735</ProductID>
+        <ProductID>CVRFPID-194736</ProductID>
+        <ProductID>CVRFPID-194737</ProductID>
+        <ProductID>CVRFPID-202541</ProductID>
+        <ProductID>CVRFPID-202542</ProductID>
+        <ProductID>CVRFPID-213798</ProductID>
+        <ProductID>CVRFPID-213799</ProductID>
+        <ProductID>CVRFPID-213848</ProductID>
+        <ProductID>CVRFPID-213955</ProductID>
+        <ProductID>CVRFPID-213956</ProductID>
+        <ProductID>CVRFPID-213957</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available to mitigate these vulnerabilities.
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Mitigation Bulletin companion document for this advisory, which is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe</URL>
+        <Description>Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

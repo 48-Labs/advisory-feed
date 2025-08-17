@@ -1,0 +1,49 @@
+{
+  "identifier": "cisco-sa-20050712-ccm",
+  "title": "Cisco CallManager Memory Handling Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2005-07-12T15:00:00.000+0000",
+  "lastPublished": "2005-07-12T15:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20050712-ccm",
+  "erpPubIds": "9449",
+  "cve": "CVE-2005-2241,CVE-2005-2242,CVE-2005-2243,CVE-2005-2244",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco CallManager (CCM) is the software-based call-processing component of the Cisco IP telephony solution which extends enterprise telephony features and functions to packet telephony network devices such as IP phones, media processing devices, voice-over-IP (VoIP) gateways, and ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco CallManger Multiple Memory Handling Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=9449&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Long SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6520&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Call Manager Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6521&signatureSubId=0&releaseVersion=S555&softwareVersion=6.0"
+        },
+        {
+          "name": "Failed HTTP Login HTTP 401",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6522&signatureSubId=0&releaseVersion=S654&softwareVersion=6.0"
+        },
+        {
+          "name": "Failed HTTP Login HTTP 401",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6522&signatureSubId=1&releaseVersion=S654&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "identifier": "cisco-sa-20161026-linux",
+  "title": "Vulnerability in Linux Kernel Affecting Cisco Products: October 2016",
+  "version": "1.9",
+  "firstPublished": "2016-10-26T15:00:00.000+0000",
+  "lastPublished": "2018-08-16T13:48:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161026-linux",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "erpPubIds": "49385",
+  "cve": "CVE-2016-5195",
+  "ciscoBugId": "CSCvb85490,CSCvb85516,CSCvb85528,CSCvb85529,CSCvb85547,CSCvb85559,CSCvb85564,CSCvb85571,CSCvb85583,CSCvb85587,CSCvb85595,CSCvb85606,CSCvb85607,CSCvb85609,CSCvb85616,CSCvb85633,CSCvb85647,CSCvb85649,CSCvb85679,CSCvb85713,CSCvb85719,CSCvb85723,CSCvb85725,CSCvb87054,CSCvb96355",
+  "status": "",
+  "summary": "On October 19, 2016, a new vulnerability related to a race condition in the memory manager of the Linux Kernel was disclosed.  This vulnerability could allow unprivileged, local users to gain write access to otherwise read-only memory mappings to increase their privileges on the ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Linux Kernel Memory Subsystem Copy-on-Write Privilege Escalation Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=49385&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40542",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "40543",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "40560",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "40561",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "40562",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "40563",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "40564",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "40565",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "40566",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "49542",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "49543",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        }
+      ]
+    }
+  ]
+}

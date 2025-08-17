@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20130129-upnp",
+  "title": "Portable SDK for UPnP Devices Contains Buffer Overflow Vulnerabilities",
+  "version": "1.2",
+  "firstPublished": "2013-01-29T20:00:00.000+0000",
+  "lastPublished": "2013-02-13T22:34:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130129-upnp",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "28005",
+  "cve": "CVE-2012-5958",
+  "ciscoBugId": "CSCue19318,CSCue20997,CSCue21009,CSCue21031,CSCue21578",
+  "status": "",
+  "summary": "The Portable Software Developer Kit (SDK) for Universal Plug-n-Play (UPnP) Devices contains a libupnp library, originally known as the Intel SDK for UPnP Devices, which is vulnerable to multiple stack-based buffer overflows when handling malicious Simple Service Discovery Protocol (SSDP) requests. ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Portable SDK for UPnP Devices Contains Buffer Overflow Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28005"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "25589",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "44743",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

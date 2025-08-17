@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20100210-ironport",
+  "title": "Multiple Vulnerabilities in Cisco IronPort Encryption Appliance",
+  "version": "1.2",
+  "firstPublished": "2010-02-10T16:00:00.000+0000",
+  "lastPublished": "2015-10-03T06:52:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport",
+  "severity": "Critical",
+  "workarounds": "Yes",
+  "cwe": "CWE-200, CWE-94",
+  "erpPubIds": "19879,19880,19881,cisco-amb-20100210-ironport",
+  "cve": "CVE-2010-0143,CVE-2010-0144,CVE-2010-0145",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco IronPort Encryption Appliance devices contain two vulnerabilitiesthat allow remote, unauthenticated access to any file on the device and onevulnerability that allows remote, unauthenticated users to execute arbitrarycode with elevated privileges. There are workarounds available to ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IronPort Encryption Appliance Remote Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19879&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IronPort Encryption Appliance WebSafe Servlet Remote Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19880&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IronPort Encryption Appliance Administration Interface Remote Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19881&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in IronPort Encryption Appliance",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"
+        }
+      ]
+    }
+  ]
+}

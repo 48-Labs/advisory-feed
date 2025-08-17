@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20140709-struts2",
+  "title": "Apache Struts 2 Command Execution Vulnerability in Multiple Cisco Products",
+  "version": "1.2",
+  "firstPublished": "2014-07-09T16:00:00.000+0000",
+  "lastPublished": "2014-12-17T18:47:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140709-struts2",
+  "severity": "Critical",
+  "cwe": "CWE-94",
+  "erpPubIds": "21731",
+  "cve": "CVE-2010-1870",
+  "ciscoBugId": "CSCun25241,CSCun31197,CSCun31301,CSCun31314",
+  "status": "",
+  "summary": "Multiple Cisco products include an implementation of the Apache Struts 2component that is affected by a remote command execution vulnerability identified by Apache with Common Vulnerabilities and Exposures ID CVE-2010-1870.The vulnerability is due to insufficient sanitization on ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Apache Struts ParameterInterceptors Remote Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21731&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "18931",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Apache Struts2 Remote Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=31319&signatureSubId=0&releaseVersion=S577&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

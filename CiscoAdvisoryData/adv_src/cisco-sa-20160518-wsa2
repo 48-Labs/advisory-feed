@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160518-wsa2",
+  "title": "Cisco Web Security Appliance Cached Range Request Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-05-18T16:00:00.000+0000",
+  "lastPublished": "2016-05-18T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160518-wsa2",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": null,
+  "cve": "CVE-2016-1381",
+  "ciscoBugId": "CSCuw97270",
+  "status": "",
+  "summary": "A vulnerability in the cached file-range request functionality of Cisco AsyncOS for Cisco Web Security Appliance (WSA) could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an appliance due to the appliance running out of system memory.The ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "36649",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-05-19-seu.html"
+        }
+      ]
+    }
+  ]
+}

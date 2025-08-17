@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20170530-samba",
+  "title": "Vulnerability in Samba Affecting Cisco Products: May 2017",
+  "version": "1.5",
+  "firstPublished": "2017-05-30T19:30:00.000+0000",
+  "lastPublished": "2017-07-11T13:47:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170530-samba",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-20",
+  "cve": "CVE-2017-7494",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "On May 24, 2017, the Samba team disclosed a vulnerability in Samba server software that could allow an authenticated attacker to execute arbitrary code remotely on a targeted system.This vulnerability has been assigned CVE ID CVE-2017-7494This advisory is available ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "43004",
+          "url": "https://www.snort.org/advisories/"
+        },
+        {
+          "name": "49090",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Samba Insecure Library Loading Arbitrary Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7968&signatureSubId=0&releaseVersion=S984&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

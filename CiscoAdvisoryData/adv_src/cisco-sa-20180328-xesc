@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180328-xesc",
+  "title": "Cisco IOS XE Software Static Credential Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2018-03-28T16:00:00.000+0000",
+  "lastPublished": "2018-09-19T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-xesc",
+  "severity": "Critical",
+  "workarounds": "Yes",
+  "cwe": "CWE-798",
+  "erpPubIds": "ERP-66682",
+  "cve": "CVE-2018-0150",
+  "ciscoBugId": "CSCve76719,CSCve89880",
+  "status": "",
+  "summary": "A vulnerability in Cisco&nbsp;IOS XE Software could allow an unauthenticated, remote attacker to log in to a device running an affected release of Cisco&nbsp;IOS XE Software with the default username and password that are used at initial boot.The vulnerability is due to an ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "46095",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-03-29-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-66682&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

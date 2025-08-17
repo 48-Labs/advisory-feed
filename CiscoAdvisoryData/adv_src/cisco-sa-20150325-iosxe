@@ -1,0 +1,74 @@
+{
+  "identifier": "cisco-sa-20150325-iosxe",
+  "title": "Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000 Series, Cisco ISR 4400 Series, and Cisco Cloud Services 1000v Series Routers",
+  "version": "1.2",
+  "firstPublished": "2015-03-25T16:00:00.000+0000",
+  "lastPublished": "2018-02-23T17:52:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-iosxe",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "erpPubIds": "37825,37823,37822,37826,37824,37486",
+  "cve": "CVE-2015-0639,CVE-2015-0640,CVE-2015-0641,CVE-2015-0644,CVE-2015-0645",
+  "ciscoBugId": "CSCua79665,CSCub68073,CSCuo25741,CSCuo53622,CSCuq59131,CSCvc98209",
+  "status": "",
+  "summary": "Cisco IOS XE Software for Cisco ASR 1000 Series Aggregation Services Routers (ASR), Cisco 4400 Series Integrated Services Routers (ISR), and Cisco Cloud Services Routers (CSR) 1000v Series contains the following vulnerabilities:    Cisco IOS XE Software Fragmented Packet Denial of ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS XE Software Layer 4 Redirect Crafted Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37825&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS XE Software Crafted TCP Packet Remote Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37823&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37822&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS XE Software Common Flow Table Crafted Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37826&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37824&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco IOS XE Software for Cisco ASR 1000, Cisco ISR 4400, and Cisco Cloud Services 1000v Series Routers",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37486"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2015 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar15.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS XE Software Crafted TCP Packet Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5094&signatureSubId=0&releaseVersion=S858&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

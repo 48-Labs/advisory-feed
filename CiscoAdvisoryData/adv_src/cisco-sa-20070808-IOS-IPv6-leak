@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20070808-IOS-IPv6-leak",
+  "title": "Information Leakage Using IPv6 Routing Header in Cisco IOS and Cisco IOS-XR",
+  "version": "1.1",
+  "firstPublished": "2007-08-08T16:00:00.000+0000",
+  "lastPublished": "2007-08-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070808-IOS-IPv6-leak",
+  "severity": "High",
+  "cwe": "CWE-200",
+  "erpPubIds": "13849",
+  "cve": "CVE-2007-4285",
+  "ciscoBugId": "CSCef77013",
+  "status": "",
+  "summary": "    Cisco IOS and Cisco IOS XR contain a vulnerability when processing specially crafted IPv6 packets with a Type 0 Routing Header present. Exploitation of this vulnerability can lead to information leakage on affected IOS and IOS XR devices, and may also result in a crash of the ",
+  "totalCount": 4,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS and IOS XR IPv6 Header Information Disclosure and Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13849&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco UCS Director Default Credentials Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20140219-ucsd</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2014-02-19T15:59:34</cvrf:Date>
+        <cvrf:Description>Initial Public Release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2014-02-26T14:23:46</cvrf:Date>
+        <cvrf:Description>Updated advisory metadata.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2014-02-19T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2014-02-26T14:23:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in Cisco Unified Computing System (UCS) Director could allow an unauthenticated, remote attacker to take complete control of the affected device.
+
+The vulnerability is due to a default root user account created during installation. An attacker could exploit this vulnerability by accessing the server command-line interface (CLI) remotely using the default account credentials. An exploit could allow the attacker to log in with the default credentials, which provide full administrative rights to the system.
+
+Cisco has released software updates that address this vulnerability.
+
+Workarounds that mitigate this vulnerability are not available.
+
+ This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140219-ucsd ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140219-ucsd"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Cisco UCS Director Software versions prior to Cisco UCS Director Release 4.0.0.3 HOTFIX are affected by this vulnerability.
+
+To determine the version of software that is running on the device, administrators can log in to the CLI and issue the show version command from the shell menu. The following information is displayed:
+
+Cisco UCS-D
+-----------
+Version      : 4.0.0.2
+Build Number : 22
+Press return to continue ...
+
+Administrators can also log in to Administrative Portal to determine the software version by selecting Administration &gt; System Administration &gt; Support Information &gt; System Information and Logs.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Cisco UCS Director (formerly Cisco Cloupia) delivers unified converged infrastructure management for administering computing, network, virtualization, and storage solutions based on Cisco UCS and Cisco Nexus solutions, or multivendor infrastructures from one self-service web interface.
+
+A vulnerability in Cisco Unified Computing System (UCS) Director could allow an unauthenticated, remote attacker to take complete control of the affected device.
+
+The vulnerability is due to a default root user account created during installation. An attacker could exploit this vulnerability by accessing the server command-line interface (CLI) remotely using the default account credentials. An exploit could allow the attacker to log in with the default credentials, which provide full administrative rights to the system.
+
+The Cisco UCS Director CLI can be accessed via Secure Shell (SSH).
+
+This vulnerability is documented in Cisco bug ID CSCui73930 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCui73930"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the Common Vulnerabilities and Exposures (CVE) ID CVE-2014-0709.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There is no workaround that mitigates this vulnerability. It is not possible to disable the default credentials or change the default password.
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32757 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32757"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+
+This vulnerability is fixed in Cisco UCS Director Release Hotfix 4.0.0.3 and above.
+
+Cisco UCS Director Release hotfix 4.0.0.3 can be downloaded from the Software Center on Cisco.com by visiting http://www.cisco.com/cisco/software/navigator.html. To access the files, select Products &gt; Servers - Unified Computing &gt; Cisco UCS Director &gt; Cisco UCS Director 4.0 &gt; UCS Director Virtual Appliance Software-4
+
+Cisco UCS Director Release Hotfix 4.0.0.3 and above will prompt to change the password for the default credentials.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.
+
+This vulnerability was discovered during internal security testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32757</cvrf:URL>
+      <cvrf:Description>Mitigation of the Cisco UCS Director Default Credentials Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140219-ucsd</cvrf:URL>
+      <cvrf:Description>Cisco UCS Director Default Credentials Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=32826</cvrf:URL>
+      <cvrf:Description>Cisco UCS Director Default Credentials Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco UCS Director" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-197112">Cisco UCS Director </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco UCS Director Default Credentials Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCui73930</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCui73930</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-0709</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-197112</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.3</BaseScoreV2>
+        <TemporalScoreV2>7.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There is no workaround that mitigates this vulnerability. It is not possible to disable the default credentials or change the default password.
+
+Mitigation information for the vulnerability described in this advisory is available in the companion Applied Mitigation Bulletin (AMB) at the following location: https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32757 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32757"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140219-ucsd</URL>
+        <Description>Cisco UCS Director Default Credentials Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

@@ -1,0 +1,44 @@
+{
+  "identifier": "cisco-sa-webui-cmdinj-zM283Zdw",
+  "title": "Cisco IOS XE Software Web UI Command Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2020-06-03T16:00:00.000+0000",
+  "lastPublished": "2020-06-03T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-webui-cmdinj-zM283Zdw",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-77",
+  "erpPubIds": "ERP-73388",
+  "cve": "CVE-2020-3224",
+  "ciscoBugId": "CSCvq32584",
+  "status": "",
+  "summary": "A vulnerability in the web-based user interface (web UI) of Cisco&nbsp;IOS XE Software could allow an authenticated, remote attacker with read-only privileges to inject IOS commands to an affected device. The injected commands should require a higher privilege level in order to be executed. ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "53501",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-04-new.html"
+        },
+        {
+          "name": "53502",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-04-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: June 2020 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-73388&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

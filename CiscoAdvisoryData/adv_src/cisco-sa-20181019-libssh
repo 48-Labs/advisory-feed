@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20181019-libssh",
+  "title": "libssh Authentication Bypass Vulnerability Affecting Cisco Products: October 2018",
+  "version": "1.8",
+  "firstPublished": "2018-10-19T16:00:00.000+0000",
+  "lastPublished": "2018-11-05T20:29:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181019-libssh",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-287",
+  "erpPubIds": "59018",
+  "cve": "CVE-2018-10933",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "A vulnerability in libssh could allow an unauthenticated, remote attacker to bypass authentication on a targeted system.The vulnerability is due to improper authentication operations by the server-side state machine of the affected software. An attacker could exploit this vulnerability ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "libssh Server-Side State Machine Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=59018&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-fxos-arbitrary-file-BLk6YupL",
+  "title": "Cisco FXOS  Software Arbitrary File Write Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2023-08-23T16:00:00.000+0000",
+  "lastPublished": "2023-08-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fxos-arbitrary-file-BLk6YupL",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-73",
+  "erpPubIds": "ERP-75058",
+  "cve": "CVE-2023-20234",
+  "ciscoBugId": "CSCwb91812,CSCwd05772,CSCwd35722,CSCwd35726",
+  "status": "",
+  "summary": "A vulnerability in the CLI of Cisco FXOS Software could allow an authenticated, local attacker to create a file or overwrite any file on the filesystem of an affected device, including system files.The vulnerability occurs because there is no validation of parameters when a specific ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: August 2023 Semiannual Cisco FXOS and NX-OS Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75058&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20150506-ucsc",
+  "title": "Cisco UCS Central Software Arbitrary Command Execution Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2015-05-06T16:00:00.000+0000",
+  "lastPublished": "2015-05-06T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150506-ucsc",
+  "severity": "Critical",
+  "cwe": "CWE-78",
+  "erpPubIds": "38591",
+  "cve": "CVE-2015-0701",
+  "ciscoBugId": "CSCut46961",
+  "status": "",
+  "summary": "A vulnerability in the web framework of Cisco UCS Central Software could allow an unauthenticated, remote attacker to execute arbitrary commands on an affected device.The vulnerability is due to improper input validation. An attacker could exploit this vulnerability by sending a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco UCS Central Software Arbitrary Command Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=38591&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Unified Communicating Systems Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6292&signatureSubId=0&releaseVersion=S887&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

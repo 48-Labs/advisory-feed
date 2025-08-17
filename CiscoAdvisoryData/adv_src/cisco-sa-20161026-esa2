@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20161026-esa2",
+  "title": "Cisco Email Security Appliance Advanced Malware Protection Attachment Scanning Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-10-26T16:00:00.000+0000",
+  "lastPublished": "2016-10-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161026-esa2",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-119",
+  "cve": "CVE-2016-1486",
+  "ciscoBugId": "CSCuy99453",
+  "status": "",
+  "summary": "A vulnerability in the email attachment scanning functionality of the Advanced Malware Protection&nbsp;(AMP) feature of Cisco&nbsp;AsyncOS Software for Cisco&nbsp;Email Security Appliances could allow an unauthenticated, remote attacker to cause an affected device to stop scanning and forwarding ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40553",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        },
+        {
+          "name": "40554",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        }
+      ]
+    }
+  ]
+}

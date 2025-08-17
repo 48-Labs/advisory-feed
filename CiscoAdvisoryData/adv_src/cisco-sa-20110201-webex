@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20110201-webex",
+  "title": "Multiple Cisco WebEx Player Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2011-02-01T16:00:00.000+0000",
+  "lastPublished": "2011-02-01T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110201-webex",
+  "severity": "Critical",
+  "cwe": "CWE-94",
+  "erpPubIds": "22016",
+  "cve": "CVE-2010-3041,CVE-2010-3042,CVE-2010-3043,CVE-2010-3044,CVE-2010-3269",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple buffer overflow vulnerabilities exist in the Cisco WebEx Recording Format (WRF) and Advanced Recording Format (ARF) Players. In some cases, exploitation of the vulnerabilities could allow a remote attacker to execute arbitrary code on the system of a targeted user.     ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco WebEx Player Multiple Buffer Overflow Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22016&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "19226",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WebEx Player WRF Stack Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=36910&signatureSubId=0&releaseVersion=S682&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

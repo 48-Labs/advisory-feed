@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20160603-ntpd",
+  "title": "Multiple Vulnerabilities in Network Time Protocol Daemon Affecting Cisco Products: June 2016",
+  "version": "1.8",
+  "firstPublished": "2016-06-03T16:00:00.000+0000",
+  "lastPublished": "2016-07-15T15:14:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160603-ntpd",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": null,
+  "cve": "CVE-2016-4953,CVE-2016-4954,CVE-2016-4955,CVE-2016-4956,CVE-2016-4957",
+  "ciscoBugId": "CSCuz92606,CSCuz92609,CSCuz92629,CSCuz92631,CSCuz92632,CSCuz92637,CSCuz92638,CSCuz92646,CSCuz92650,CSCuz92653,CSCuz92656,CSCuz92658,CSCuz92661,CSCuz92663,CSCuz92666,CSCuz92669,CSCuz92671,CSCuz92673,CSCuz92682,CSCuz92683,CSCuz92684,CSCuz92686,CSCuz92687,CSCuz92688,CSCuz92689,CSCuz92691,CSCuz92694,CSCuz92696,CSCuz92697,CSCuz92698,CSCuz92699,CSCuz92700,CSCuz92702,CSCuz92705,CSCuz92707,CSCuz92709,CSCuz92710,CSCuz92711,CSCuz92712,CSCuz92715,CSCuz92716,CSCuz92725,CSCuz92727,CSCuz92731,CSCuz92733,CSCuz92735,CSCuz92744,CSCuz92747,CSCuz92748,CSCuz92749,CSCuz92751,CSCuz92752,CSCuz92762,CSCuz92781,CSCuz92785,CSCuz92791,CSCuz92792,CSCuz92793,CSCuz92795,CSCuz92796,CSCuz92797,CSCuz92798,CSCuz92799,CSCuz92800,CSCuz92803,CSCuz96408,CSCuz98063",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the Network Time Protocol daemon (ntpd) package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or modify the time being ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "44756",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "45693",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

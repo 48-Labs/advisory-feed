@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20071205-csa",
+  "title": "Cisco Security Agent for Windows System Driver Remote Buffer Overflow Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2007-12-05T16:00:00.000+0000",
+  "lastPublished": "2007-12-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20071205-csa",
+  "severity": "Critical",
+  "cwe": "CWE-119",
+  "erpPubIds": "14655,14677,cisco-amb-20071205-csa",
+  "cve": "CVE-2007-5580,CVE-2007-5582",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   A buffer overflow vulnerability exists in a system driver used by the Cisco Security Agent for Microsoft Windows. This buffer overflow can be exploited remotely and causes corruption of kernel memory, which leads to a Windows stop error (blue screen) or to arbitrary code ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Security Agent Windows System Driver Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14655&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "CiscoWorks Common Services Server Login Page Cross-Site Scripting Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14677&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the CSA for Windows System Driver Remote Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20071205-csa"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "CSA for Windows System Driver Remote Buffer Overflow Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5928&signatureSubId=0&releaseVersion=S618&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

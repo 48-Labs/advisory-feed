@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20120620-ac</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>2.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2012-06-20T03:31:35</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2012-07-06T15:12:41</cvrf:Date>
+        <cvrf:Description>Clarified versions by including build numbers next to Maintenance Release (MR) numbers.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2012-07-18T15:49:09</cvrf:Date>
+        <cvrf:Description>Added an additional Java hash to the Blacklist table for Linux version 2.0.0343.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2012-09-07T14:24:58</cvrf:Date>
+        <cvrf:Description>Detailed future updates from Microsoft and Oracle which will disable vulnerable WebLaunch controls without requiring the deployment of fixed Cisco software.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.0</cvrf:Number>
+        <cvrf:Date>2012-09-19T16:01:27</cvrf:Date>
+        <cvrf:Description>Corrected an inadvertent omission in the original advisory, which failed to list that the fixes also address a vulnerability in Cisco Secure Desktop, described by CVE-2012-4655.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.1</cvrf:Number>
+        <cvrf:Date>2012-10-18T15:31:58</cvrf:Date>
+        <cvrf:Description>Included details on Oracle Java SE 6u37 and Java SE 7u9, which will disable vulnerable WebLaunch controls without requiring the deployment of fixed Cisco software.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2012-06-20T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-10-18T15:31:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">The Cisco AnyConnect Secure Mobility Client is affected by the following vulnerabilities:
+
+
+    Cisco AnyConnect Secure Mobility Client VPN Downloader Arbitrary Code Execution Vulnerability 
+    Cisco AnyConnect Secure Mobility Client VPN Downloader Software Downgrade Vulnerability 
+    Cisco AnyConnect Secure Mobility Client and Cisco Secure Desktop Hostscan Downloader Software Downgrade Vulnerability 
+    Cisco AnyConnect Secure Mobility Client 64-bit Java VPN Downloader Arbitrary Code Execution Vulnerability 
+    Cisco Secure Desktop Arbitrary Code Execution Vulnerability 
+
+Cisco has released software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are available. This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2"></cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">The vulnerabilities described in this document apply to the Cisco AnyConnect Secure Mobility Client. The affected versions are included in the following table:
+
+
+
+
+    
+        
+            
+            Vulnerability
+
+            
+            
+            Platform
+
+            
+            
+            Affected Versions
+
+            
+        
+        
+            
+            Cisco AnyConnect Secure Mobility Client VPN Downloader Arbitrary Code Execution Vulnerability
+
+            
+            
+            Microsoft Windows
+
+            
+            
+            
+                2.x releases prior to 2.5 MR6 (2.5.6005) 
+            
+            
+        
+        
+            
+            Linux, Apple MacOS
+
+            
+            
+            
+                2.x releases prior to 2.5 MR6 (2.5.6005) 
+                3.0.x releases prior to 3.0 MR8 (3.0.08057) 
+            
+            
+        
+        
+            
+            Cisco AnyConnect Secure Mobility Client VPN Downloader Software Downgrade Vulnerability
+
+            
+            
+            Microsoft Windows
+
+            
+            
+             
+
+            
+                2.x releases prior to 2.5 MR6 (2.5.6005) 
+                3.0.x releases prior to 3.0 MR8 (3.0.08057) 
+            
+            
+        
+        
+            
+            Linux, Apple MacOS X
+
+            
+            
+            
+                2.x releases prior to 2.5 MR6 (2.5.6005) 
+                3.0.x releases prior to 3.0 MR8 (3.0.08057) 
+            
+            
+        
+        
+            Cisco AnyConnect Secure Mobility Client and Cisco Secure Desktop Hostscan Downloader Software Downgrade Vulnerability
+
+            
+            Microsoft Windows
+
+            
+            
+            
+                AnyConnect 3.0.x releases prior to 3.0 MR8 (3.0.08057) 
+                Hostscan 3.0.x releases prior to 3.0MR8 (3.0.08062) 
+                Cisco Secure Desktop releases prior to 3.6.6020 
+            
+            
+        
+        
+            Linux, Apple MacOS X
+
+            
+            
+            
+                AnyConnect 3.0.x releases prior to 3.0 MR8 (3.0.08057) 
+                Hostscan 3.0.x releases prior to 3.0MR8 (3.0.08062) 
+                Cisco Secure Desktop releases prior to 3.6.6020 
+            
+            
+        
+        
+            Cisco AnyConnect Secure Mobility Client 64-bit Java VPN Downloader Arbitrary Code Execution Vulnerability
+
+            
+            Linux 64-bit
+
+            
+             
+            
+                3.0.x releases prior to 3.0 MR7 (3.0.7059) 
+            
+            
+        
+        
+            Cisco Secure Desktop Arbitrary Code Execution Vulnerability 
+            Microsoft Windows, Linux, Apple Mac OS X 
+            
+            
+                Cisco Secure Desktop releases prior to 3.6.6020
+            
+            
+        
+    
+
+
+
+Note: Microsoft Windows Mobile versions of Cisco AnyConnect Secure Mobility Client are affected by the Arbitrary Code Execution Vulnerability. No fixed versions of the Cisco AnyConnect Secure Mobility Client for Windows Mobile are planned.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">These vulnerabilities do not affect Cisco AnyConnect client software that runs on Apple iOS, Cisco Cius, or Google Android. Those versions do not support the self-updating download mechanisms that contain these vulnerabilities.
+
+
+
+No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">The Cisco AnyConnect Secure Mobility Client is the Cisco next-generation VPN client, which provides remote users with secure IPsec (IKEv2) or SSL Virtual Private Network (VPN) connections to Cisco 5500 Series Adaptive Security Appliances (ASA) and devices that are running Cisco IOS Software.
+
+
+
+Cisco AnyConnect Secure Mobility Client can be deployed in two ways: pre-deploy and web-deploy. In a pre-deploy scenario, the Cisco AnyConnect Secure Mobility Client is installed or upgraded as traditional desktop software by an end-user or possibly via an enterprise deployment tool. In a web-deploy scenario, the Cisco AnyConnect Secure Mobility Client is installed or upgraded via packages installed on the headend. Further, the web-deploy scenario can be initiated in two ways: standalone initiation and WebLaunch initiation. During standalone initiation, an end-user system will contact the headend via the AnyConnect client to receive deployed packages. During a WebLaunch initiation, any end-user system that visits a website which attempts to instantiate a downloader component will be prompted to install or upgrade Cisco AnyConnect Secure Mobility Client. In normal operation, this website would be a clientless portal; during a malicious attack, any website that hosted a copy of the vulnerable component could masquerade as a trustworthy site and attempt to convince the user to instantiate the vulnerable component. 
+
+
+
+The vulnerabilities described in this advisory all are exploited via the software update mechanisms used to perform WebLaunch-initiated web deployment. All affected versions of Cisco AnyConnect Secure Mobility Client, regardless of how they were deployed onto end-user systems, are susceptible to exploitation. In addition, because the WebLaunch components are signed by Cisco and because of these vulnerabilities can allow for the arbitrary installation of malicious software, any end-user system that instantiates the vulnerable WebLaunch downloader components may be impacted, including systems that have never installed Cisco AnyConnect Secure Mobility Client. 
+
+
+
+Systems that may lack fixed Cisco software could be impacted by this vulnerability. Cisco has requested Microsoft and Oracle to blacklist ActiveX controls and Java applets through their software update channels. Microsoft released a Windows security advisory (2736233["http://technet.microsoft.com/en-us/security/advisory/2736233"]) that will set the system-wide kill-bit for vulnerable ActiveX controls, and Oracle released updates to Java SE 6 (Update 37["http://www.oracle.com/technetwork/java/javase/6u37-relnotes-1863283.html"]) and Java SE 7 (Update 9["http://www.oracle.com/technetwork/java/javase/7u9-relnotes-1863279.html"]) that blacklist the vulnerable signed Java applets. Please refer to the "Workarounds" section for details concerning the functionality changes encountered by blacklisting signed Java applets.
+
+
+
+The Cisco AnyConnect Secure Mobility Client is affected by the following vulnerabilities:
+
+Cisco AnyConnect Secure Mobility Client VPN Downloader Arbitrary Code Execution Vulnerability:
+Cisco AnyConnect Secure Mobility Client contains an arbitrary code execution vulnerability. An unauthenticated, remote attacker could execute arbitrary code on systems that have received the ActiveX or Java components that perform the WebLaunch functionality for Cisco AnyConnect Secure Mobility Client. The attacker may supply vulnerable ActiveX or Java components for execution by an end-user. The affected ActiveX and Java components do not perform sufficient input validation and, as a result, may allow an attacker to deliver arbitrary code to an affected system and execute the code with the privileges of the user's web browser session. To exploit this vulnerability, an attacker must convince a user to visit a malicious web page and execute the vulnerable ActiveX control or Java applet. Depending on the user's browser configuration, the process of executing the control or applet may require little or no user interaction because the vulnerable ActiveX controls and Java applets are cryptographically signed by Cisco.
+
+
+
+Fixed versions of Cisco AnyConnect Secure Mobility Client correct this vulnerability by ensuring that the downloader process does not support the execution of arbitrary binaries that are specified during WebLaunch initiation.
+
+
+
+This vulnerability is documented in Cisco Bug ID CSCtw47523["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtw47523"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerability and Exposure (CVE) ID CVE-2012-2493.
+
+Cisco AnyConnect Secure Mobility Client VPN Downloader Software Downgrade Vulnerability: 
+Cisco
+AnyConnect Secure Mobility Client contains a vulnerability that could allow an attacker to downgrade the Cisco AnyConnect Secure Mobility Client software version to a prior software version. An unauthenticated, remote
+attacker could cause systems that have installed affected versions of the Cisco AnyConnect Secure Mobility client to download and install an older version of the client software. The affected ActiveX and Java
+components used for WebLaunch do not perform sufficient input validation and, as a result, may
+allow an attacker to deliver prior versions of code signed by Cisco. Older versions of Cisco AnyConnect Secure Mobility Client software could contain vulnerabilities that were not present in the system's initial software version, and expose the system to additional vulnerabilities. To exploit this vulnerability, an attacker must convince a
+user to visit a malicious web page and execute the vulnerable ActiveX
+control or Java applet. Depending on the user's browser configuration,
+the process of executing the control or applet may require little or no
+user interaction because the vulnerable ActiveX controls and Java applets are
+cryptographically signed by Cisco.
+
+
+
+Fixed versions of Cisco AnyConnect Secure Mobility Client correct this vulnerability by ensuring that the timestamp of signed code that is downloaded during WebLaunch initiation is not older than the timestamp of the installed software.
+
+
+
+This vulnerability is documented in Cisco Bug ID CSCtw48681["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtw48681"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerability and Exposure (CVE) ID CVE-2012-2494.
+
+Cisco AnyConnect Secure Mobility Client and Cisco Secure Desktop Hostscan Downloader Software Downgrade Vulnerability: 
+Cisco AnyConnect Secure Mobility Client contains a vulnerability that could allow an attacker to downgrade the affected software to a prior software version. This vulnerability is also present in Cisco Secure Desktop. An unauthenticated, remote attacker could cause systems that have installed affected versions of the Cisco AnyConnect Secure Mobility client or Cisco Secure Desktop to download and install an older version of the client software. The affected ActiveX and Java components of these affected software programs do not perform sufficient input validation and, as a result, may allow an attacker to deliver prior versions of code signed by Cisco. Older versions of Cisco AnyConnect Secure Mobility Client software or Cisco Secure Desktop software could contain vulnerabilities that were not present in the system's initial software version, thus exposing the system to additional vulnerabilities. To exploit this vulnerability, an attacker must convince a user to visit a malicious web page and execute the vulnerable ActiveX control or Java applet. Depending on the user's browser configuration, the process of executing the control or applet may require little or no user interaction because the vulnerable ActiveX controls and Java applets are cryptographically signed by Cisco.
+
+
+
+Fixed versions of Cisco AnyConnect Secure Mobility Client correct this vulnerability by ensuring that the timestamp of signed code that is downloaded during WebLaunch initiation is not older than the timestamp of the installed software.
+
+
+
+This vulnerability is documented in Cisco Bug ID CSCtx74235["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtx74235"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerability and Exposure (CVE) ID CVE-2012-2495.
+
+Cisco AnyConnect Secure Mobility Client 64-bit Java VPN Downloader Arbitrary Code Execution Vulnerability:
+Cisco
+AnyConnect Secure Mobility Client contains an
+arbitrary code execution vulnerability. An unauthenticated, remote
+attacker could execute arbitrary code on systems that have received the
+64-bit Java applet that performs the WebLaunch VPN downloader functionality for
+Cisco AnyConnect Secure Mobility Client. The attacker may supply vulnerable Java components for execution by an end-user. The affected Java
+component does not perform sufficient input validation and as a result
+could allow an attacker to deliver arbitrary code to an affected system
+and
+execute the code with the privileges of the user's web browser session. To exploit this vulnerability, an attacker must convince a
+user to visit a malicious web page and execute the vulnerable Java
+applet. The affected Java applets are
+not cryptographically signed by Cisco.
+
+
+
+The Java applet affected by this vulnerability is not signed by Cisco and was previously distributed as unsupported code. This code has been removed from Release 3.0 MR7 (3.0.7059).
+
+
+
+This vulnerability is documented in Cisco Bug ID CSCty45925["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCty45925"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerability and Exposure (CVE) ID CVE-2012-2496.
+
+Cisco Secure Desktop Arbitrary Code Execution Vulnerability
+Cisco Secure Desktop contains an arbitrary code execution vulnerability. An unauthenticated, remote attacker could execute arbitrary code on systems that have received the ActiveX or Java components that perform the WebLaunch functionality for Cisco Secure Desktop. The attacker may supply vulnerable ActiveX or Java components for execution by an end-user. The affected ActiveX and Java components do not perform sufficient input validation and, as a result, may allow an attacker to deliver arbitrary code to an affected system and execute the code with the privileges of the user's web browser session. To exploit this vulnerability, an attacker must convince a user to visit a malicious web page and execute the vulnerable ActiveX control or Java applet. Depending on the user's browser configuration, the process of executing the control or applet may require little or no user interaction because the vulnerable ActiveX controls and Java applets are cryptographically signed by Cisco.
+
+
+
+Fixed versions of Cisco Secure Desktop correct this vulnerability by ensuring that the downloader process does not support the execution of arbitrary binaries that are specified during WebLaunch initiation.
+
+
+
+This vulnerability is documented in Cisco Bug IDs CSCtz76128["https://bst.cloudapps.cisco.com/bugsearch/bug/%7B%7Bvalue%7D%7D"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and CSCtz78204["https://bst.cloudapps.cisco.com/bugsearch/bug/%7B%7Bvalue%7D%7D"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerability and Exposure (CVE) ID CVE-2012-4655.
+
+Additional Considerations for Cisco AnyConnect VPN, Cisco Secure Desktop and Cisco Hostscan Downloader Vulnerabilities:
+New versions of the ActiveX control and Java applet that ship with the Cisco AnyConnect Secure Mobility Client make use of code signing to validate the authenticity of components that are downloaded from the headend; however, older versions do not validate downloaded components. An attacker may engineer a web page to supply an affected version of the ActiveX control or Java applet and still accomplish arbitrary program execution because of the lack of authenticity validation.
+
+
+
+Mitigating the risk of older versions of the ActiveX control can be accomplished in the following ways:
+
+
+    Load a fixed version of Cisco AnyConnect Secure Mobility Client on the headend and initiate an upgrade by means of a web browser or standalone client. This action will cause the new version of the Cisco AnyConnect Secure Mobility Client, including a new version of the ActiveX control to install. When this installation occurs, Cisco AnyConnect Secure Mobility Client will no longer permit older versions of the ActiveX control to execute on the system. 
+    Pre-deploy a fixed version of Cisco AnyConnect Secure Mobility Client through enterprise software upgrade infrastructure. This action accomplishes the same result as the previous recommendation and deploys new, fixed versions of the ActiveX control. When this installation occurs, Cisco AnyConnect Secure Mobility Client will no longer permit older versions of the ActiveX control to execute on the system. 
+    If deploying the client from the headend is not needed, then the kill-bit for the Cisco AnyConnect Secure Mobility Client ActiveX control can be set locally. This action prevents the ActiveX control from being instantiated under any scenario. Instructions for setting the kill-bit are beyond the scope of this document. Refer to the Microsoft Support article "How to stop an ActiveX control from running in Internet Explorer" at http://support.microsoft.com/kb/240797["http://support.microsoft.com/kb/240797"] and the Microsoft Security Vulnerability Research &amp; Defense's "Kill-Bit FAQ" blog posts referenced in the Microsoft Support article for more information. See the "Workarounds" section of this document for details about the functionality changes encountered by setting kill-bits. 
+
+The CLSIDs (Class Identifiers) for the vulnerable VPN downloader ActiveX controls used by the Cisco AnyConnect Secure Mobility Client are (CSCtw47523 and CSCtw48681):
+
+
+    
+        
+             Cisco AnyConnect VPN Version
+
+            
+            CLSID
+
+            
+        
+        
+            
+
+            &lt;= 2.5.3046,
+
+            3.0.0629 - 3.0.2052
+
+            
+
+            
+             55963676-2F5E-4BAF-AC28-CF26AA587566
+        
+        
+            
+
+            2.5.3051 - 2.5.3055,
+
+            3.0.3050 - 3.0.7059
+
+            
+
+            
+             CC679CB8-DC4B-458B-B817-D447B3B6AC31
+        
+    
+
+The CLSIDs (Class Identifiers) for the vulnerable Cisco Secure Desktop and Hostscan ActiveX controls used by the Cisco AnyConnect Secure Mobility Client are (Cisco Secure Desktop: CSCtz76128 and CSCtz78204 and Hostscan: CSCtx74235):
+
+
+    
+        
+            Cisco Secure Desktop Hostscan Version
+
+            
+            Cisco AnyConnect Hostscan Version
+
+            
+            CLSID 
+
+            
+        
+        
+            3.1.1.45 - 3.5.841
+
+            
+             -
+             705EC6D4-B138-4079-A307-EF13E4889A82 
+        
+        
+            3.5.1077 - 3.5.2008 
+             3.0.0629 - 3.0.1047
+
+            
+             F8FC1530-0608-11DF-2008-0800200C9A66
+        
+        
+            3.6.181 - 3.6.5005 
+             3.0.2052 - 3.0.7059
+
+            
+             E34F52FE-7769-46ce-8F8B-5E8ABAD2E9FC
+        
+    
+
+Mitigating the risk of executing old versions of the signed Java applets can be accomplished by blacklisting vulnerable versions using the JAR blacklist feature introduced with Java SE 6 Update 14. For information on the JAR blacklist feature refer to the Java SE 6 Update 14 release notes, available at http://www.oracle.com/technetwork/java/javase/6u14-137039.html["http://www.oracle.com/technetwork/java/javase/6u14-137039.html"]. Note that the unsigned Java applet described in Cisco defect CSCty45925 cannot be blacklisted because this mitigation is only relevant for signed applets. See the "Workarounds" section for details about the functionality changes encountered by blacklisting signed Java applets.
+
+
+
+The SHA-1 message digests for the Cisco AnyConnect Secure Mobility Client JAR files affected by the VPN downloader vulnerabilities (CSCtw47523 and CSCtw48681) are as follows:
+
+
+    
+        
+            Cisco AnyConnect VPN Software Versions
+
+            
+            Java SHA-1 Message Digest
+
+            
+        
+        
+             2.0.0343 - Windows
+             L0l3WOuMNWujmXo5+O/GtmGyyYk=
+        
+        
+             2.0.0343 - Linux
+             uWffvhFaWVw3lrER/SJH7Hl4yFg=
+        
+        
+             2.1.0148
+             YwuPyF/KMcxcQhgxilzNybFM2+8=
+        
+        
+             2.2.0133 - 2.2.0140
+             ya6YNTzMCFYUO4lwhmz9OWhhIz8=
+        
+        
+             2.3.0185 - 2.3.1003
+             D/TyRle6Sl+CDuBFmdOPy03ERaw=
+        
+        
+             2.3.2016 - 2.5.2019
+             x17xGEFzBRXY2pLtXiIbp8J7U9M=
+        
+        
+             2.5.3046 - 2.5.3055
+             0CUppG7J6IL8xHqPCnA377Koahw=
+        
+        
+             3.0.0629
+             nv5+0eBNHpRIsB9D6TmEbWoNCTs=
+        
+        
+             3.0.1047 - 3.0.5080
+             qMVUh9i3yJcTKpuZYSFZH9dspqE=
+        
+    
+
+ 
+
+
+
+The SHA-1 message digests for the Cisco AnyConnect Secure Mobility Client and Cisco Secure Desktop JAR files affected by the Cisco Secure Desktop and Hostscan vulnerabilities (Cisco Secure Desktop: CSCtz76128 and CSCtz78204 and Hostscan: CSCtx74235) are as follows:
+
+
+
+
+    
+        
+            Cisco Secure Desktop Hostscan Version
+
+            
+            Cisco AnyConnect Hostscan Version 
+
+            
+            Java SHA-1 Message Digest 
+        
+        
+             3.1.1.45
+             -
+             3aJU1qSK6IYmt5MSh2IIIj5G1XE=
+        
+        
+             3.2.0.136
+             -
+             l93uYyDZGyynzYTknp31yyuNivU=
+        
+        
+             3.2.1.103
+             -
+             eJfWm86yHp2Oz5U8WrMKbpv6GGA=
+        
+        
+             3.2.1.126
+             -
+             Q9HXbUcSCjhwkgpk5NNVG/sArVA=
+        
+        
+             3.3.0.118
+             -
+             cO2ccW2cckTvpR0HVgQa362PyHI=
+        
+        
+             3.3.0.151
+             -
+             cDXEH+bR01R8QVxL+KFKYqFgsR0=
+        
+        
+             3.4.373
+
+            
+             -
+
+            
+             lbhLWSopUIqPQ08UVIA927Y7jZQ=
+        
+        
+             3.4.1108
+
+            
+             -
+
+            
+             vSd+kv1p+3jrVK9FjDCBJcoy5us=
+
+            
+        
+        
+             3.4.2048
+
+            
+             -
+
+            
+             TFYT30IirbYk89l/uKykM6g2cVQ=
+
+            
+        
+        
+             3.5.841
+
+            
+             -
+
+            
+             Y82nn7CFTu1XAOCDjemWwyPLssg=
+
+            
+        
+        
+             3.5.1077
+
+            
+             -
+
+            
+             PVAkXuUCgiDQI19GPrw01Vz4rGQ=
+
+            
+        
+        
+             3.5.2001
+
+            
+             -
+
+            
+             C4mtepHAyIKiAjjqOm6xYMo8TkM=
+
+            
+        
+        
+             3.5.2003
+
+            
+             -
+
+            
+             l4meuozuSFLkTZTS6xW3sixdlBI=
+
+            
+        
+        
+             3.5.2008
+
+            
+             -
+
+            
+             B1NaDg834Bgg+VE9Ca+tDZOd2BI=
+
+            
+        
+        
+             3.6.181
+
+            
+             -
+
+            
+             odqJCMnKdgvQLOCAMSWEj1EPQTc=
+
+            
+        
+        
+             3.6.185
+
+            
+             -
+
+            
+             WyqHV02O4PYZkcbidH4HKlp/8hY=
+
+            
+        
+        
+             3.6.1001
+
+            
+             -
+
+            
+             HSPXCvBNG/PaSXg8thDGqSeZlR8=
+
+            
+        
+        
+             -
+
+            
+             3.0.0629 - 3.0.1047
+
+            
+             OfQZHjo8GK14bHD4z4dDIp4ZFjE=
+
+            
+        
+        
+             -
+
+            
+             3.0.2052
+
+            
+             8F4F0TXA4ureZbfEXWIFm76QGg4=
+
+            
+        
+        
+             - 
+             3.0.3054 - 3.0.4016 
+             bOoQga+XxC3j0HiP552+fYCdswo= 
+        
+        
+             - 
+             3.0.4216 - 3.0.4235 
+             WX77FlRyFyeUriu+xi/PE1uLALU= 
+        
+        
+             3.6.2002
+
+            
+             3.0.5009
+
+            
+             g3mA5HqcRBlKaUVQsapnKhOSEas=
+
+            
+        
+        
+             3.6.3002
+
+            
+             -
+
+            
+             trhKo6XiSGxRrS//rCL9e3Ca6D4=
+
+            
+        
+        
+             3.6.4021
+
+            
+             3.0.5075 - 3.0.5080
+
+            
+             obWCTaz3uOZwDBDZUsbrrTKoDig=
+
+            
+        
+        
+             3.6.5005
+
+            
+             3.0.7042 - 3.0.7059
+
+            
+             iMHjGyv5gEnTi8uj68yzalml8XQ=
+
+            
+        
+    
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">Blacklists can be enforced manually, based on the instructions provided in the ���Details��� section, or by applying updates from Microsoft (2736233["http://technet.microsoft.com/en-us/security/advisory/2736233"]) or Oracle (Java SE 6 Update 37["http://www.oracle.com/technetwork/java/javase/6u37-relnotes-1863283.html"] and Java SE 7 Update 9["http://www.oracle.com/technetwork/java/javase/7u9-relnotes-1863279.html"]) that include ActiveX CLSIDs or Java applet Message Digests.  Anyone opting to enforce blacklists of the vulnerable ActiveX control CLSIDs and Java applet Message Digests can prevent the vulnerable code from instantiating. As a result, WebLaunch initiation of vulnerable software installation and upgrades will be prevented; however, pre-deployed software initiated through standalone methods and WebLaunch initiation of fixed software will continue to function. 
+
+
+
+Note: For any of the vulnerabilities in cryptographically signed controls or applets, any system that trusts Cisco's signing certificate chain may be impacted, even if Cisco AnyConnect Secure Mobility Client has never been installed on the system. Using the ActiveX Control kill-bit and Java Message Digest workarounds will protect systems on which Cisco AnyConnect Secure Mobility Client is not or will not be installed.
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac"]
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+    
+        
+            
+            Vulnerability
+
+            
+            
+            Platform
+
+            
+            
+            First Fixed Release
+
+            
+        
+        
+            
+            Cisco AnyConnect Secure Mobility Client VPN Downloader Arbitrary Code Execution Vulnerability
+
+            
+            
+            Microsoft Windows
+
+            
+            
+            2.5 MR6 (2.5.6005)
+
+            
+        
+        
+            
+            Linux, Apple Mac OS X
+
+            
+            
+            2.5 MR6* (2.5.6005), 3.0 MR8 (3.0.08057)
+
+            
+        
+        
+            
+            Cisco AnyConnect Secure Mobility Client VPN Downloader Software Downgrade Vulnerability
+
+            
+            
+            Microsoft Windows
+
+            
+            
+            2.5 MR6 (2.5.6005), 3.0 MR8 (3.0.08057)
+
+            
+        
+        
+            
+            Linux, Apple Mac OS X
+
+            
+            
+            2.5 MR6* (2.5.6005), 3.0 MR8 (3.0.08057)
+
+            
+        
+        
+             Cisco AnyConnect Secure Mobility Client and Cisco Secure Desktop Hostscan Downloader Software Downgrade Vulnerability
+             Microsoft Windows
+
+            
+            
+            
+                 AnyConnect 3.0 MR8 (3.0.08057) 
+                Hostscan 3.0 MR8 (3.0.08062) 
+                Cisco Secure Desktop 3.6.6020 
+            
+            
+        
+        
+             Linux, Apple Mac OS X
+
+            
+            
+            
+                 AnyConnect 3.0 MR8 (3.0.08057) 
+                Hostscan 3.0 MR8 (3.0.08062) 
+                Cisco Secure Desktop 3.6.6020 
+            
+            
+        
+        
+             Cisco AnyConnect Secure Mobility Client 64-bit Java VPN Downloader Arbitrary Code Execution Vulnerability
+             Microsoft Windows
+
+            
+             Not affected
+
+            
+        
+        
+             Linux 64-bit
+
+            
+             3.0 MR7 (3.0.7059)
+
+            
+        
+        
+            Cisco Secure Desktop Arbitrary Code Execution Vulnerability 
+            Microsoft Windows, Linux, Apple Mac OS X
+
+            
+            Cisco Secure Desktop 3.6.6020 
+        
+    
+
+* NOTE: Cisco AnyConnect Secure Mobility Client 2.5 MR6 for Mac OS X, which contains fixes for the VPN downloader vulnerabilities in this advisory, will no longer support OS X 10.4.
+
+Recommended Releases
+The following table lists all recommended releases. These recommended releases contain the fixes for all vulnerabilities in this advisory. Cisco recommends upgrading to a release that is equal to or later than these recommended releases.
+
+
+
+
+
+
+    
+        
+            Software Name 
+            
+            Major Release
+
+            
+            
+            Recommended Release
+
+            
+        
+        
+            Cisco AnyConnect Secure Mobility Client 
+            
+            2.5.x
+
+            
+            
+            2.5 MR6 (2.5.6005)
+
+            
+        
+        
+            Cisco AnyConnect Secure Mobility Client 
+            
+            3.0.x
+
+            
+            
+            3.0 MR8 (3.0.08057)
+
+            
+        
+        
+            Hostscan 
+            3.0.x 
+            3.0 MR8 (3.0.08062) 
+        
+        
+            Cisco Secure Desktop 
+            3.x 
+            3.6.6020 
+        
+    
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.
+The vulnerabilities documented in defects CSCtw47523 and CSCtw48681 were discovered by gwslabs.com and reported to Cisco by HP's Zero Day Initiative.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Secure Desktop" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7307">Cisco Secure Desktop </FullProductName>
+      </Branch>
+      <Branch Name="Cisco AnyConnect Secure Mobility Client" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-109810">Cisco AnyConnect Secure Mobility Client </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco AnyConnect Secure Mobility Client VPN Downloader Arbitrary Code Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtw47523</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtw47523</Note>
+    </Notes>
+    <CVE>CVE-2012-2493</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-109810</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.3</BaseScoreV2>
+        <TemporalScoreV2>7.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Blacklists can be enforced manually, based on the instructions provided in the ���Details��� section, or by applying updates from Microsoft (2736233["http://technet.microsoft.com/en-us/security/advisory/2736233"]) or Oracle (Java SE 6 Update 37["http://www.oracle.com/technetwork/java/javase/6u37-relnotes-1863283.html"] and Java SE 7 Update 9["http://www.oracle.com/technetwork/java/javase/7u9-relnotes-1863279.html"]) that include ActiveX CLSIDs or Java applet Message Digests.  Anyone opting to enforce blacklists of the vulnerable ActiveX control CLSIDs and Java applet Message Digests can prevent the vulnerable code from instantiating. As a result, WebLaunch initiation of vulnerable software installation and upgrades will be prevented; however, pre-deployed software initiated through standalone methods and WebLaunch initiation of fixed software will continue to function. 
+
+
+
+Note: For any of the vulnerabilities in cryptographically signed controls or applets, any system that trusts Cisco's signing certificate chain may be impacted, even if Cisco AnyConnect Secure Mobility Client has never been installed on the system. Using the ActiveX Control kill-bit and Java Message Digest workarounds will protect systems on which Cisco AnyConnect Secure Mobility Client is not or will not be installed.
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac</URL>
+        <Description>Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco AnyConnect Secure Mobility Client VPN Downloader Software Downgrade Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtw48681</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtw48681</Note>
+    </Notes>
+    <CVE>CVE-2012-2494</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-109810</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>4.3</BaseScoreV2>
+        <TemporalScoreV2>3.6</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:P/A:N/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Blacklists can be enforced manually, based on the instructions provided in the ���Details��� section, or by applying updates from Microsoft (2736233["http://technet.microsoft.com/en-us/security/advisory/2736233"]) or Oracle (Java SE 6 Update 37["http://www.oracle.com/technetwork/java/javase/6u37-relnotes-1863283.html"] and Java SE 7 Update 9["http://www.oracle.com/technetwork/java/javase/7u9-relnotes-1863279.html"]) that include ActiveX CLSIDs or Java applet Message Digests.  Anyone opting to enforce blacklists of the vulnerable ActiveX control CLSIDs and Java applet Message Digests can prevent the vulnerable code from instantiating. As a result, WebLaunch initiation of vulnerable software installation and upgrades will be prevented; however, pre-deployed software initiated through standalone methods and WebLaunch initiation of fixed software will continue to function. 
+
+
+
+Note: For any of the vulnerabilities in cryptographically signed controls or applets, any system that trusts Cisco's signing certificate chain may be impacted, even if Cisco AnyConnect Secure Mobility Client has never been installed on the system. Using the ActiveX Control kill-bit and Java Message Digest workarounds will protect systems on which Cisco AnyConnect Secure Mobility Client is not or will not be installed.
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac</URL>
+        <Description>Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco AnyConnect Secure Mobility Client 64-bit Java VPN Downloader Arbitrary Code Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCty45925</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCty45925</Note>
+    </Notes>
+    <CVE>CVE-2012-2496</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-109810</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.8</BaseScoreV2>
+        <TemporalScoreV2>5.6</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:P/I:P/A:P/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Blacklists can be enforced manually, based on the instructions provided in the ���Details��� section, or by applying updates from Microsoft (2736233["http://technet.microsoft.com/en-us/security/advisory/2736233"]) or Oracle (Java SE 6 Update 37["http://www.oracle.com/technetwork/java/javase/6u37-relnotes-1863283.html"] and Java SE 7 Update 9["http://www.oracle.com/technetwork/java/javase/7u9-relnotes-1863279.html"]) that include ActiveX CLSIDs or Java applet Message Digests.  Anyone opting to enforce blacklists of the vulnerable ActiveX control CLSIDs and Java applet Message Digests can prevent the vulnerable code from instantiating. As a result, WebLaunch initiation of vulnerable software installation and upgrades will be prevented; however, pre-deployed software initiated through standalone methods and WebLaunch initiation of fixed software will continue to function. 
+
+
+
+Note: For any of the vulnerabilities in cryptographically signed controls or applets, any system that trusts Cisco's signing certificate chain may be impacted, even if Cisco AnyConnect Secure Mobility Client has never been installed on the system. Using the ActiveX Control kill-bit and Java Message Digest workarounds will protect systems on which Cisco AnyConnect Secure Mobility Client is not or will not be installed.
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac</URL>
+        <Description>Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco AnyConnect Secure Mobility Client and Cisco Secure Desktop Hostscan Downloader Software Downgrade Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtx74235</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtx74235</Note>
+    </Notes>
+    <CVE>CVE-2012-2495</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-109810</ProductID>
+        <ProductID>CVRFPID-7307</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>4.3</BaseScoreV2>
+        <TemporalScoreV2>3.6</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:P/A:N/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Blacklists can be enforced manually, based on the instructions provided in the ���Details��� section, or by applying updates from Microsoft (2736233["http://technet.microsoft.com/en-us/security/advisory/2736233"]) or Oracle (Java SE 6 Update 37["http://www.oracle.com/technetwork/java/javase/6u37-relnotes-1863283.html"] and Java SE 7 Update 9["http://www.oracle.com/technetwork/java/javase/7u9-relnotes-1863279.html"]) that include ActiveX CLSIDs or Java applet Message Digests.  Anyone opting to enforce blacklists of the vulnerable ActiveX control CLSIDs and Java applet Message Digests can prevent the vulnerable code from instantiating. As a result, WebLaunch initiation of vulnerable software installation and upgrades will be prevented; however, pre-deployed software initiated through standalone methods and WebLaunch initiation of fixed software will continue to function. 
+
+
+
+Note: For any of the vulnerabilities in cryptographically signed controls or applets, any system that trusts Cisco's signing certificate chain may be impacted, even if Cisco AnyConnect Secure Mobility Client has never been installed on the system. Using the ActiveX Control kill-bit and Java Message Digest workarounds will protect systems on which Cisco AnyConnect Secure Mobility Client is not or will not be installed.
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac</URL>
+        <Description>Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Secure Desktop Arbitrary Code Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtz76128</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtz76128,CSCtz78204</Note>
+    </Notes>
+    <CVE>CVE-2012-4655</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-7307</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.3</BaseScoreV2>
+        <TemporalScoreV2>7.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Blacklists can be enforced manually, based on the instructions provided in the ���Details��� section, or by applying updates from Microsoft (2736233["http://technet.microsoft.com/en-us/security/advisory/2736233"]) or Oracle (Java SE 6 Update 37["http://www.oracle.com/technetwork/java/javase/6u37-relnotes-1863283.html"] and Java SE 7 Update 9["http://www.oracle.com/technetwork/java/javase/7u9-relnotes-1863279.html"]) that include ActiveX CLSIDs or Java applet Message Digests.  Anyone opting to enforce blacklists of the vulnerable ActiveX control CLSIDs and Java applet Message Digests can prevent the vulnerable code from instantiating. As a result, WebLaunch initiation of vulnerable software installation and upgrades will be prevented; however, pre-deployed software initiated through standalone methods and WebLaunch initiation of fixed software will continue to function. 
+
+
+
+Note: For any of the vulnerabilities in cryptographically signed controls or applets, any system that trusts Cisco's signing certificate chain may be impacted, even if Cisco AnyConnect Secure Mobility Client has never been installed on the system. Using the ActiveX Control kill-bit and Java Message Digest workarounds will protect systems on which Cisco AnyConnect Secure Mobility Client is not or will not be installed.
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory: https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20120620-ac"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120620-ac</URL>
+        <Description>Multiple Vulnerabilities in Cisco AnyConnect Secure Mobility Client</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

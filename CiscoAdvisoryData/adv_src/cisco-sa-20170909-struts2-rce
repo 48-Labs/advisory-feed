@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20170909-struts2-rce",
+  "title": "Apache Struts 2 Remote Code Execution Vulnerability Affecting Multiple Cisco Products: September 2017",
+  "version": "1.11",
+  "firstPublished": "2017-09-09T17:00:00.000+0000",
+  "lastPublished": "2017-10-23T20:24:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170909-struts2-rce",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "55163",
+  "cve": "CVE-2017-12611",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "On September 7, 2017, the Apache Software Foundation released a security bulletin that disclosed a vulnerability in the Freemarker tag functionality of the Apache Struts 2 package. The vulnerability could allow an unauthenticated, remote attacker to execute arbitrary code on an affected system. The ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Apache Struts Freemarker Tag Processing Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=55163&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "44327",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        },
+        {
+          "name": "44328",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        },
+        {
+          "name": "44329",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        },
+        {
+          "name": "44330",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-09-08-new.html"
+        }
+      ]
+    }
+  ]
+}

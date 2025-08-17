@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20180926-errdisable",
+  "title": "Cisco IOS XE Software Errdisable Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2018-09-26T16:00:00.000+0000",
+  "lastPublished": "2018-09-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180926-errdisable",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-362",
+  "erpPubIds": "ERP-69981",
+  "cve": "CVE-2018-0480",
+  "ciscoBugId": "CSCvh13611",
+  "status": "",
+  "summary": "A vulnerability in the errdisable per VLAN feature of Cisco&nbsp;IOS XE Software could allow an unauthenticated, adjacent attacker to cause the device to crash, leading to a denial of service (DoS) condition.The vulnerability is due to a race condition that occurs when the VLAN and port ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-69981&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

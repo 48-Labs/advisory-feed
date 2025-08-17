@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20120627-webex",
+  "title": "Buffer Overflow Vulnerabilities in the Cisco WebEx Player",
+  "version": "1.1",
+  "firstPublished": "2012-06-27T16:00:00.000+0000",
+  "lastPublished": "2012-07-14T18:04:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120627-webex",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "26207,26209,26210",
+  "cve": "CVE-2012-3053,CVE-2012-3054,CVE-2012-3055,CVE-2012-3056,CVE-2012-3057",
+  "ciscoBugId": "CSCtz00755,CSCtz72946,CSCtz72953,CSCtz72977,CSCtz72985",
+  "status": "",
+  "summary": "The Cisco WebEx Recording Format (WRF) player contains four buffer overflow vulnerabilities and the Cisco Advanced Recording Format (ARF)&nbsp;player contains one buffer overflow vulnerability. In some cases, exploitation of the vulnerabilities could allow a remote attacker to execute arbitrary ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco WebEx Recording Format Player JPEG DHT Chunk Stack Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26207&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx Recording Format Player Memory Corruption Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26209&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx Player Audio File Processing Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26210&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WebEx Player WRF File  Heap Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1283&signatureSubId=0&releaseVersion=S675&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx Player WRF File Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1284&signatureSubId=0&releaseVersion=S654&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Webex WRF JPEG DHT Chunk Stack Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1296&signatureSubId=0&releaseVersion=S892&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

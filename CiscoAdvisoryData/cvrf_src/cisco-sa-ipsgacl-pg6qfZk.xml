@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS Software on Cisco Catalyst 1000 and 2960L Switches Access Control List Bypass Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-ipsgacl-pg6qfZk</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2025-05-07T15:53:26</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2025-05-07T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2025-05-07T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2025-05-07T16:00:45.9697213Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the access control list (ACL) programming of Cisco IOS Software that is running on Cisco Catalyst 1000 Switches and Cisco Catalyst 2960L Switches could allow an unauthenticated, remote attacker to bypass a configured ACL.
+
+This vulnerability is due to the use of both an IPv4 ACL and a dynamic ACL of IP Source Guard on the same interface, which is an unsupported configuration. An attacker could exploit this vulnerability by attempting to send traffic through an affected device. A successful exploit could allow the attacker to bypass an ACL on the affected device.
+
+Note: Cisco documentation has been updated to reflect that this is an unsupported configuration. However, Cisco is publishing this advisory because the device will not prevent an administrator from configuring both features on the same interface. There are no plans to implement the ability to configure both features on the same interface on Cisco Catalyst 1000 or Catalyst 2960L Switches.
+
+Cisco has not released software updates that address this vulnerability. There are workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipsgacl-pg6qfZk ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipsgacl-pg6qfZk"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this vulnerability affected the following Cisco products if they were running a vulnerable release of Cisco IOS Software and had both an IPv4 ACL and IP Source Guard configured on an interface:
+
+Catalyst 1000 Switches
+Catalyst 2960-L Series Switches
+
+For information about which Cisco software releases are vulnerable, see the Fixed Software ["#fs"] section of this advisory.
+
+Determine the Device Configuration
+
+To determine whether a device has an IPv4 ACL configured on the same interface that is leveraging IP Source Guard, use the show running-config CLI command. Examine the contents under each interface to see if an IPv4 access-group has been configured along with IP Source Guard, which is enabled with the ip verify source command, as shown in the following example:
+
+
+Switch# show running-config
+.
+.
+&lt;output omitted&gt;
+.
+.
+interface GigabitEthernet1/0/11
+switchport access vlan 200
+ip access-group DropACL in
+ip verify source
+.
+.
+&lt;output omitted&gt;
+.
+.
+Switch#
+
+Note:  For the IP Source Guard configuration to take effect, IP DHCP snooping must be enabled for the VLAN to which the IP Source Guard and IP access-group is applied. The following example shows DHCP enabled on VLAN 200:
+
+
+Switch#show ip dhcp snooping
+Switch DHCP snooping is enabled
+Switch DHCP gleaning is disabled
+DHCP snooping is configured on following VLANs:
+200
+DHCP snooping is operational on following VLANs:
+200
+.
+.
+.
+output omitted</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+IOS Software that is running on platforms not listed in the Vulnerable Products ["#vp"] section of this advisory
+IOS XE Software
+IOS XR Software
+Meraki products
+NX-OS Software</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Exploitation of this vulnerability could allow an attacker to bypass protections that are provided by an ACL that is applied on an affected device. The overall impact of exploitation is organization specific because it depends on the importance of the assets that the ACL was supposed to protect. Customers should evaluate how exploitation of this vulnerability would impact their network and proceed according to their own vulnerability-handling and remediation processes.
+
+Either the IPv4 ACL will be active or the dynamic generated ACL for IP Source Guard will be active, but not both at the same time. The programming depends on the order of the commands, and if there are changes in IP Source Guard the ACL would be updated and reflect the IP Source Guard ACL.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There is a workaround that addresses this vulnerability.
+
+Administrators should determine which ACL best suits their needs and then configure that single ACL type on the interface.
+
+While this workaround has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+      Fixed Releases
+Because this vulnerability affects an unsupported feature, Cisco does not plan to release fixed software.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">This vulnerability was found during the resolution of a Cisco TAC support case.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipsgacl-pg6qfZk</cvrf:URL>
+      <cvrf:Description>Cisco IOS Software on Cisco Catalyst 1000 and 2960L Switches Access Control List Bypass Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="IOS">
+        <Branch Type="Product Version" Name="15.2E">
+          <Branch Type="Service Pack" Name="15.2(5a)E">
+            <FullProductName ProductID="CVRFPID-218995">Cisco IOS 15.2(5a)E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(5b)E">
+            <FullProductName ProductID="CVRFPID-220457">Cisco IOS 15.2(5b)E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(5c)E">
+            <FullProductName ProductID="CVRFPID-221137">Cisco IOS 15.2(5c)E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E">
+            <FullProductName ProductID="CVRFPID-227598">Cisco IOS 15.2(6)E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E1">
+            <FullProductName ProductID="CVRFPID-230592">Cisco IOS 15.2(6)E1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E0c">
+            <FullProductName ProductID="CVRFPID-231245">Cisco IOS 15.2(6)E0c</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E2">
+            <FullProductName ProductID="CVRFPID-232007">Cisco IOS 15.2(6)E2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E1a">
+            <FullProductName ProductID="CVRFPID-238999">Cisco IOS 15.2(6)E1a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E1s">
+            <FullProductName ProductID="CVRFPID-240186">Cisco IOS 15.2(6)E1s</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E">
+            <FullProductName ProductID="CVRFPID-242313">Cisco IOS 15.2(7)E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E2b">
+            <FullProductName ProductID="CVRFPID-250278">Cisco IOS 15.2(6)E2b</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E1">
+            <FullProductName ProductID="CVRFPID-254193">Cisco IOS 15.2(7)E1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E0a">
+            <FullProductName ProductID="CVRFPID-259867">Cisco IOS 15.2(7)E0a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E0s">
+            <FullProductName ProductID="CVRFPID-262300">Cisco IOS 15.2(7)E0s</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(6)E3">
+            <FullProductName ProductID="CVRFPID-262684">Cisco IOS 15.2(6)E3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E2">
+            <FullProductName ProductID="CVRFPID-270096">Cisco IOS 15.2(7)E2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7a)E0b">
+            <FullProductName ProductID="CVRFPID-271140">Cisco IOS 15.2(7a)E0b</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E3">
+            <FullProductName ProductID="CVRFPID-271631">Cisco IOS 15.2(7)E3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E1a">
+            <FullProductName ProductID="CVRFPID-273573">Cisco IOS 15.2(7)E1a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7b)E0b">
+            <FullProductName ProductID="CVRFPID-276903">Cisco IOS 15.2(7b)E0b</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E4">
+            <FullProductName ProductID="CVRFPID-278803">Cisco IOS 15.2(7)E4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E3k">
+            <FullProductName ProductID="CVRFPID-280771">Cisco IOS 15.2(7)E3k</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E">
+            <FullProductName ProductID="CVRFPID-280857">Cisco IOS 15.2(8)E</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E1">
+            <FullProductName ProductID="CVRFPID-281581">Cisco IOS 15.2(8)E1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E5">
+            <FullProductName ProductID="CVRFPID-282112">Cisco IOS 15.2(7)E5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E6">
+            <FullProductName ProductID="CVRFPID-284159">Cisco IOS 15.2(7)E6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E2">
+            <FullProductName ProductID="CVRFPID-284334">Cisco IOS 15.2(8)E2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E7">
+            <FullProductName ProductID="CVRFPID-286558">Cisco IOS 15.2(7)E7</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E3">
+            <FullProductName ProductID="CVRFPID-287123">Cisco IOS 15.2(8)E3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E8">
+            <FullProductName ProductID="CVRFPID-290581">Cisco IOS 15.2(7)E8</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E4">
+            <FullProductName ProductID="CVRFPID-290619">Cisco IOS 15.2(8)E4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E9">
+            <FullProductName ProductID="CVRFPID-295162">Cisco IOS 15.2(7)E9</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E5">
+            <FullProductName ProductID="CVRFPID-295426">Cisco IOS 15.2(8)E5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E6">
+            <FullProductName ProductID="CVRFPID-300274">Cisco IOS 15.2(8)E6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E10">
+            <FullProductName ProductID="CVRFPID-300846">Cisco IOS 15.2(7)E10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E11">
+            <FullProductName ProductID="CVRFPID-301328">Cisco IOS 15.2(7)E11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(7)E12">
+            <FullProductName ProductID="CVRFPID-302838">Cisco IOS 15.2(7)E12</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.2(8)E8">
+            <FullProductName ProductID="CVRFPID-303032">Cisco IOS 15.2(8)E8</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="12.2I">
+          <Branch Type="Service Pack" Name="12.2(6)I1">
+            <FullProductName ProductID="CVRFPID-243144">Cisco IOS 12.2(6)I1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVR">
+          <Branch Type="Service Pack" Name="15.1(3)SVR1">
+            <FullProductName ProductID="CVRFPID-277230">Cisco IOS 15.1(3)SVR1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR2">
+            <FullProductName ProductID="CVRFPID-277253">Cisco IOS 15.1(3)SVR2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR3">
+            <FullProductName ProductID="CVRFPID-279337">Cisco IOS 15.1(3)SVR3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR10">
+            <FullProductName ProductID="CVRFPID-290618">Cisco IOS 15.1(3)SVR10</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVS">
+          <Branch Type="Service Pack" Name="15.1(3)SVS">
+            <FullProductName ProductID="CVRFPID-277232">Cisco IOS 15.1(3)SVS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVS1">
+            <FullProductName ProductID="CVRFPID-279335">Cisco IOS 15.1(3)SVS1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVT">
+          <Branch Type="Service Pack" Name="15.1(3)SVT1">
+            <FullProductName ProductID="CVRFPID-280759">Cisco IOS 15.1(3)SVT1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT2">
+            <FullProductName ProductID="CVRFPID-282026">Cisco IOS 15.1(3)SVT2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT3">
+            <FullProductName ProductID="CVRFPID-284785">Cisco IOS 15.1(3)SVT3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT4">
+            <FullProductName ProductID="CVRFPID-286399">Cisco IOS 15.1(3)SVT4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVU">
+          <Branch Type="Service Pack" Name="15.1(3)SVU1">
+            <FullProductName ProductID="CVRFPID-283833">Cisco IOS 15.1(3)SVU1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU10">
+            <FullProductName ProductID="CVRFPID-284291">Cisco IOS 15.1(3)SVU10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU2">
+            <FullProductName ProductID="CVRFPID-284566">Cisco IOS 15.1(3)SVU2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU11">
+            <FullProductName ProductID="CVRFPID-286400">Cisco IOS 15.1(3)SVU11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU20">
+            <FullProductName ProductID="CVRFPID-289270">Cisco IOS 15.1(3)SVU20</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU21">
+            <FullProductName ProductID="CVRFPID-290557">Cisco IOS 15.1(3)SVU21</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVV">
+          <Branch Type="Service Pack" Name="15.1(3)SVV1">
+            <FullProductName ProductID="CVRFPID-284341">Cisco IOS 15.1(3)SVV1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV2">
+            <FullProductName ProductID="CVRFPID-286029">Cisco IOS 15.1(3)SVV2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV3">
+            <FullProductName ProductID="CVRFPID-286940">Cisco IOS 15.1(3)SVV3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV4">
+            <FullProductName ProductID="CVRFPID-289371">Cisco IOS 15.1(3)SVV4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVW">
+          <Branch Type="Service Pack" Name="15.1(3)SVW">
+            <FullProductName ProductID="CVRFPID-286451">Cisco IOS 15.1(3)SVW</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVW1">
+            <FullProductName ProductID="CVRFPID-286844">Cisco IOS 15.1(3)SVW1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVX">
+          <Branch Type="Service Pack" Name="15.1(3)SVX">
+            <FullProductName ProductID="CVRFPID-286927">Cisco IOS 15.1(3)SVX</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVX1">
+            <FullProductName ProductID="CVRFPID-289301">Cisco IOS 15.1(3)SVX1</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS Software on Cisco Catalyst 1000 and 2960L Switches Access Control List Bypass Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwm03838</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwm03838</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2025-20137</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-218995</ProductID>
+        <ProductID>CVRFPID-220457</ProductID>
+        <ProductID>CVRFPID-221137</ProductID>
+        <ProductID>CVRFPID-227598</ProductID>
+        <ProductID>CVRFPID-230592</ProductID>
+        <ProductID>CVRFPID-231245</ProductID>
+        <ProductID>CVRFPID-232007</ProductID>
+        <ProductID>CVRFPID-238999</ProductID>
+        <ProductID>CVRFPID-240186</ProductID>
+        <ProductID>CVRFPID-242313</ProductID>
+        <ProductID>CVRFPID-243144</ProductID>
+        <ProductID>CVRFPID-250278</ProductID>
+        <ProductID>CVRFPID-254193</ProductID>
+        <ProductID>CVRFPID-259867</ProductID>
+        <ProductID>CVRFPID-262300</ProductID>
+        <ProductID>CVRFPID-262684</ProductID>
+        <ProductID>CVRFPID-270096</ProductID>
+        <ProductID>CVRFPID-271140</ProductID>
+        <ProductID>CVRFPID-271631</ProductID>
+        <ProductID>CVRFPID-273573</ProductID>
+        <ProductID>CVRFPID-276903</ProductID>
+        <ProductID>CVRFPID-277230</ProductID>
+        <ProductID>CVRFPID-277232</ProductID>
+        <ProductID>CVRFPID-277253</ProductID>
+        <ProductID>CVRFPID-278803</ProductID>
+        <ProductID>CVRFPID-279335</ProductID>
+        <ProductID>CVRFPID-279337</ProductID>
+        <ProductID>CVRFPID-280759</ProductID>
+        <ProductID>CVRFPID-280771</ProductID>
+        <ProductID>CVRFPID-280857</ProductID>
+        <ProductID>CVRFPID-281581</ProductID>
+        <ProductID>CVRFPID-282026</ProductID>
+        <ProductID>CVRFPID-282112</ProductID>
+        <ProductID>CVRFPID-283833</ProductID>
+        <ProductID>CVRFPID-284159</ProductID>
+        <ProductID>CVRFPID-284291</ProductID>
+        <ProductID>CVRFPID-284334</ProductID>
+        <ProductID>CVRFPID-284341</ProductID>
+        <ProductID>CVRFPID-284566</ProductID>
+        <ProductID>CVRFPID-284785</ProductID>
+        <ProductID>CVRFPID-286029</ProductID>
+        <ProductID>CVRFPID-286399</ProductID>
+        <ProductID>CVRFPID-286400</ProductID>
+        <ProductID>CVRFPID-286451</ProductID>
+        <ProductID>CVRFPID-286558</ProductID>
+        <ProductID>CVRFPID-286844</ProductID>
+        <ProductID>CVRFPID-286927</ProductID>
+        <ProductID>CVRFPID-286940</ProductID>
+        <ProductID>CVRFPID-287123</ProductID>
+        <ProductID>CVRFPID-289270</ProductID>
+        <ProductID>CVRFPID-289301</ProductID>
+        <ProductID>CVRFPID-289371</ProductID>
+        <ProductID>CVRFPID-290557</ProductID>
+        <ProductID>CVRFPID-290581</ProductID>
+        <ProductID>CVRFPID-290618</ProductID>
+        <ProductID>CVRFPID-290619</ProductID>
+        <ProductID>CVRFPID-295162</ProductID>
+        <ProductID>CVRFPID-295426</ProductID>
+        <ProductID>CVRFPID-300274</ProductID>
+        <ProductID>CVRFPID-300846</ProductID>
+        <ProductID>CVRFPID-301328</ProductID>
+        <ProductID>CVRFPID-302838</ProductID>
+        <ProductID>CVRFPID-303032</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>4.7</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There is a workaround that addresses this vulnerability.
+
+Administrators should determine which ACL best suits their needs and then configure that single ACL type on the interface.
+
+While this workaround has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipsgacl-pg6qfZk</URL>
+        <Description>Cisco IOS Software on Cisco Catalyst 1000 and 2960L Switches Access Control List Bypass Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

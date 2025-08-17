@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20130424-nxosmulti",
+  "title": "Multiple Vulnerabilities in Cisco NX-OS-Based Products",
+  "version": "1.2",
+  "firstPublished": "2013-04-24T16:00:00.000+0000",
+  "lastPublished": "2013-04-26T19:40:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-nxosmulti",
+  "severity": "Critical",
+  "cwe": "CWE-119, CWE-20",
+  "erpPubIds": "28737,29024,29023,29022,29021",
+  "cve": "CVE-2013-1178,CVE-2013-1179,CVE-2013-1180,CVE-2013-1181",
+  "ciscoBugId": "CSCts10593,CSCtu10544,CSCtu10548,CSCtu10550,CSCtu10551,CSCtu10630,CSCtw56581,CSCtx17544,CSCtx54822,CSCtx54830,CSCtx95389,CSCuf61275",
+  "status": "",
+  "summary": "Cisco Nexus, Cisco Unified Computing System (UCS), Cisco MDS 9000 Series Multilayer Switches, and Cisco 1000 Series Connected Grid Routers (CGR) are all based on the Cisco NX-OS operating system.&nbsp; These products are affected by one or more of the following vulnerabilities:    ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco NX-OS Software Jumbo Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29024&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco NX-OS Software SNMP Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29023&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco NX-OS Software SNMP and License Manager Buffer Overflow Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29022&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Multiple Cisco Discovery Protocol Vulnerabilities in Cisco NX-OS-Based Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29021&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco NX-OS-Based Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28737"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco SNMP Get Request Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1484&signatureSubId=0&releaseVersion=S739&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

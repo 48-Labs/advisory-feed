@@ -1,0 +1,68 @@
+{
+  "identifier": "cisco-sa-20100303-dmp",
+  "title": "Cisco Digital Media Player Remote Display Unauthorized Content Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2010-03-03T16:00:00.000+0000",
+  "lastPublished": "2010-03-03T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100303-dmp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "19999,20000,20002,20003,20004,cisco-amb-20100303-cucm",
+  "cve": "CVE-2010-0587,CVE-2010-0588,CVE-2010-0590,CVE-2010-0591,CVE-2010-0592",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "A vulnerability exists in the Cisco Digital Media Player that could allow an unauthenticated attacker to inject video or data content into a remote display.    Cisco has released software updates that address this vulnerability. There are no workarounds available to mitigate this ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager SCCP StationCapabilitiesRes Message Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19999&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager SCCP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20000&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Malformed SIP Register Message Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20002&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Malformed SIP Message Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20003&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager CTI Manager Request Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20004&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100303-cucm"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "CUCM Malformed SIP Message DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24359&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco CUCM Malformed SCCP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24499&signatureSubId=0&releaseVersion=S549&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

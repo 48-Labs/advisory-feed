@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180801-sb-pxss",
+  "title": "Cisco Small Business 300 Series Managed Switches Persistent Cross-Site Scripting Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2018-08-01T16:00:00.000+0000",
+  "lastPublished": "2018-08-01T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180801-sb-pxss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2018-0407",
+  "ciscoBugId": "CSCvi87326",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco Small Business 300 Series (Sx300) Managed Switches could allow an authenticated, remote attacker to conduct a persistent cross-site scripting (XSS) attack against a user of the web-based management interface of an affected ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

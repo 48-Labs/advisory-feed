@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20080521-ssh",
+  "title": "Cisco IOS Secure Shell Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2008-05-21T16:00:00.000+0000",
+  "lastPublished": "2008-05-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080521-ssh",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "15819",
+  "cve": "CVE-2008-1159",
+  "ciscoBugId": "CSCsh51293,CSCsk42419,CSCsk60020",
+  "status": "",
+  "summary": "   The Secure Shell server (SSH) implementation in Cisco IOS contains multiple vulnerabilities that allow unauthenticated users the ability to generate a spurious memory access error or, in certain cases, reload the device.    The IOS SSH server is an optional service that is ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS SSH Server Improper Memory Access Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15819&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "identifier": "cisco-sa-20020918-smb-dos",
+  "title": "Microsoft Windows SMB Denial of Service Vulnerabilities in Cisco Products - MS02-045",
+  "version": "1.1",
+  "firstPublished": "2002-09-18T16:00:00.000+0000",
+  "lastPublished": "2002-09-18T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020918-smb-dos",
+  "cwe": "CWE-119",
+  "erpPubIds": "4489",
+  "cve": "CVE-2002-0724",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   This advisory describes vulnerabilities that affect Cisco products and applications that are installed on Microsoft operating systems incorporating the use of the Server Message Block (SMB) file sharing protocol. It is based on the vulnerabilities in Microsoft's SMB protocol, not due ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Microsoft Server Message Block Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=4489&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "2101",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "2102",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5716",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5717",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5718",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5719",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5720",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5721",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5722",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5723",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5724",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5725",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "5726",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Netbios Enum Share DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3310&signatureSubId=0&releaseVersion=S612&softwareVersion=6.0"
+        },
+        {
+          "name": "NetBIOS Enum Share DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5582&signatureSubId=0&releaseVersion=S457&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "identifier": "cisco-sa-20020415-ms02-018",
+  "title": "Microsoft IIS Vulnerabilities in Cisco Products - MS02-018",
+  "version": "1.1",
+  "firstPublished": "2002-04-15T18:00:00.000+0000",
+  "lastPublished": "2002-04-15T18:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020415-ms02-018",
+  "erpPubIds": "3588",
+  "cve": "CVE-2002-0071,CVE-2002-0072,CVE-2002-0073,CVE-2002-0074,CVE-2002-0075,CVE-2002-0079,CVE-2002-0147,CVE-2002-0148,CVE-2002-0149,CVE-2002-0150,CVE-2002-0364",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   This advisory describes a vulnerability that affects Cisco products and applications that are installed on Microsoft operating systems incorporating the use of the Internet Information Server (IIS), and is based on the vulnerability of IIS, not due to a defect of the Cisco product or ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Microsoft IIS Multiple Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=3588&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "1618",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1619",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "17410",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1768",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1777",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1778",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1801",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1802",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1803",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1804",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1806",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1807",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1809",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31405",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "57760",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Define Tranfer-Encoding Chunked",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=12693&signatureSubId=0&releaseVersion=S586&softwareVersion=6.0"
+        },
+        {
+          "name": "WWW finger attempt",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3232&signatureSubId=0&releaseVersion=S613&softwareVersion=6.0"
+        },
+        {
+          "name": "IIS FTP STAT Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3704&signatureSubId=0&releaseVersion=S633&softwareVersion=6.0"
+        },
+        {
+          "name": "WWW finger attempt",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5039&signatureSubId=0&releaseVersion=S633&softwareVersion=6.0"
+        },
+        {
+          "name": "URL with XSS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5232&signatureSubId=1&releaseVersion=S585&softwareVersion=6.0"
+        },
+        {
+          "name": "HTTP 1.1 Chunked Encoding Transfer",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5245&signatureSubId=0&releaseVersion=S448&softwareVersion=6.0"
+        },
+        {
+          "name": "IIS ISAPI Filter Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5246&signatureSubId=0&releaseVersion=S256&softwareVersion=5.1"
+        },
+        {
+          "name": "IIS ISAPI Filter Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5246&signatureSubId=0&releaseVersion=S256&softwareVersion=6.0"
+        },
+        {
+          "name": "IIS ASP SSI Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5247&signatureSubId=0&releaseVersion=S308&softwareVersion=6.0"
+        },
+        {
+          "name": "IIS HTR ISAPI Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5248&signatureSubId=0&releaseVersion=S256&softwareVersion=5.1"
+        },
+        {
+          "name": "IIS HTR ISAPI Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5248&signatureSubId=0&releaseVersion=S256&softwareVersion=6.0"
+        },
+        {
+          "name": "finger CGI Recon",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5295&signatureSubId=0&releaseVersion=S256&softwareVersion=5.1"
+        },
+        {
+          "name": "finger CGI Recon",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5295&signatureSubId=0&releaseVersion=S256&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed URL",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5711&signatureSubId=0&releaseVersion=S256&softwareVersion=5.1"
+        },
+        {
+          "name": "Malformed URL",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5711&signatureSubId=0&releaseVersion=S256&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20151204-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL (December 2015) Affecting Cisco Products",
+  "version": "1.12",
+  "firstPublished": "2015-12-04T17:38:00.000+0000",
+  "lastPublished": "2016-09-21T22:47:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151204-openssl",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "erpPubIds": "42531,42532,42528",
+  "cve": "CVE-2015-1794,CVE-2015-3193,CVE-2015-3194,CVE-2015-3195,CVE-2015-3196",
+  "ciscoBugId": "CSCux41145,CSCux41206,CSCux41294,CSCux41300,CSCux41302,CSCux41303,CSCux41304,CSCux41305,CSCux41308,CSCux41309,CSCux41310,CSCux41312,CSCux41321,CSCux41322,CSCux41324,CSCux41328,CSCux41329,CSCux41334,CSCux41336,CSCux41337,CSCux41340,CSCux41341,CSCux41342,CSCux41343,CSCux41344,CSCux41345,CSCux41347,CSCux41349,CSCux41350,CSCux41352,CSCux41354,CSCux41355,CSCux41356,CSCux41358,CSCux41360,CSCux41361,CSCux41362,CSCux41364,CSCux41366,CSCux41367,CSCux41368,CSCux41370,CSCux41371,CSCux41372,CSCux41374,CSCux41377,CSCux41379,CSCux41384,CSCux41395,CSCux41398,CSCux41399,CSCux41400,CSCux41401,CSCux41402,CSCux41404,CSCux41407,CSCux41410,CSCux41418,CSCux41420,CSCux41422,CSCux41429,CSCux41430,CSCux41438,CSCux41440,CSCux41442,CSCux41444,CSCux41446,CSCux41447,CSCux41449,CSCux41451,CSCux41455,CSCux41457,CSCux41458,CSCux41459,CSCux41461,CSCux41463,CSCux41464,CSCux41467,CSCux41468,CSCux41472,CSCux41473,CSCux41478,CSCux41479,CSCux41480,CSCux41499,CSCux41536,CSCux41548,CSCux41554,CSCux53030,CSCux56314,CSCux67343",
+  "status": "",
+  "summary": "On December 3, 2015, the OpenSSL Project released a security advisory detailing five vulnerabilities.Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL Certificate Preshared Key Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=42531&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Anonymous Diffie-Hellman Cipher Suite Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=42532&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL BN_mod_exp Function Security Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=42528&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "37154",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "37155",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

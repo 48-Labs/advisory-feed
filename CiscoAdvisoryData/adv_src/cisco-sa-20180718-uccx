@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180718-uccx",
+  "title": "Multiple Vulnerabilities in Cisco Unified Contact Center Express",
+  "version": "1.0",
+  "firstPublished": "2018-07-18T16:00:00.000+0000",
+  "lastPublished": "2018-07-18T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180718-uccx",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-19, CWE-352, CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2018-0400,CVE-2018-0401,CVE-2018-0402,CVE-2018-0403",
+  "ciscoBugId": "CSCvg70904,CSCvg70921,CSCvg70967,CSCvg71040",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Unified Contact Center Express (Unified CCX) could allow an unauthenticated, remote attacker to conduct cross-site scripting (XSS) attacks against a user of the interface, conduct a cross-site request forgery (CSRF) attack, ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

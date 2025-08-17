@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190501-asa-ftd-xss",
+  "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software WebVPN Cross-Site Scripting Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2019-05-01T16:00:00.000+0000",
+  "lastPublished": "2019-05-02T17:42:58.337+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2019-1701",
+  "ciscoBugId": "CSCvn78674,CSCvo11406,CSCvo11416,CSCvo17033",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the WebVPN service of Cisco&nbsp;Adaptive Security Appliance (ASA) Software and Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the WebVPN portal of an ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

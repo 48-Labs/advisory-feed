@@ -1,0 +1,59 @@
+{
+  "identifier": "cisco-sa-20020724-solaris-cachefs",
+  "title": "Heap Overflow in Solaris cachefs Daemon",
+  "version": "1.1",
+  "firstPublished": "2002-07-24T16:00:00.000+0000",
+  "lastPublished": "2002-07-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020724-solaris-cachefs",
+  "cwe": "CWE-119",
+  "erpPubIds": "3712",
+  "cve": "CVE-2002-0033,CVE-2002-0084,CVE-2002-0085,CVE-2003-1063",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   This advisory describes a vulnerability that affects Cisco products and applications that are installed on the Solaris operating system, and is based on the vulnerability of an common service within the Solaris operating system, not due to a defect of the Cisco product or application. ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Sun Solaris cachefs Daemon Multiple Buffer Overflow Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=3712&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "1746",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1747",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1751",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cachefsd Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6199&signatureSubId=0&releaseVersion=S630&softwareVersion=6.0"
+        },
+        {
+          "name": "Cachefsd Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6199&signatureSubId=1&releaseVersion=S617&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

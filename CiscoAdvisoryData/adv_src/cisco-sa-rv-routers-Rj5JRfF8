@@ -1,0 +1,87 @@
+{
+  "identifier": "cisco-sa-rv-routers-Rj5JRfF8",
+  "title": "Cisco Small Business RV Series Routers Command Injection Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2020-06-17T16:00:00.000+0000",
+  "lastPublished": "2020-08-03T16:18:58.213+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-rv-routers-Rj5JRfF8",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-77",
+  "cve": "CVE-2020-3274,CVE-2020-3275,CVE-2020-3276,CVE-2020-3277,CVE-2020-3278,CVE-2020-3279",
+  "ciscoBugId": "CSCvt26490,CSCvt26504,CSCvt26669,CSCvt26676,CSCvt26683,CSCvt26714,CSCvt29372,CSCvt29376,CSCvt29405,CSCvt29407,CSCvt29409,CSCvt29415",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Small Business RV320 and RV325 Series Routers and Cisco Small Business RV016, RV042, and RV082 Routers could allow an authenticated, remote attacker with administrative privileges to execute arbitrary commands on an ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "54320",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54321",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54322",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54323",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54324",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54325",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54326",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54327",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54328",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54329",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54330",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        },
+        {
+          "name": "54331",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-06-18-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Small Business RV Series Routers Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8422&signatureSubId=0&releaseVersion=S1041&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Small Business RV Series Routers Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8422&signatureSubId=1&releaseVersion=S1041&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

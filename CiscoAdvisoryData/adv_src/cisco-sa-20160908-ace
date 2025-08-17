@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20160908-ace",
+  "title": "Cisco ACE30 Application Control Engine Module and Cisco ACE 4710 Application Control Engine Denial of Service Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2016-09-08T16:30:00.000+0000",
+  "lastPublished": "2016-10-26T18:16:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160908-ace",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2016-6399",
+  "ciscoBugId": "CSCvb16317",
+  "status": "",
+  "summary": "A vulnerability in the SSL/TLS functions of the Cisco ACE30 Application Control Engine Module and the Cisco ACE 4700 Series Application Control Engine Appliances could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on the affected device.The ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40048",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-09-06-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ACE SSL Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7681&signatureSubId=0&releaseVersion=S940&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "identifier": "cisco-sa-20151021-ntp",
+  "title": "Multiple Vulnerabilities in ntpd Affecting Cisco Products - October 2015",
+  "version": "2.8",
+  "firstPublished": "2015-10-21T23:00:00.000+0000",
+  "lastPublished": "2016-01-27T19:20:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-ntp",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": "CWE-119, CWE-20, CWE-22, CWE-264, CWE-287, CWE-399",
+  "erpPubIds": "41658,41657,41598,41596,41599,41659,41653,41600,41597,41595,41594,41656",
+  "cve": "CVE-2015-7691,CVE-2015-7692,CVE-2015-7701,CVE-2015-7702,CVE-2015-7703,CVE-2015-7704,CVE-2015-7705,CVE-2015-7848,CVE-2015-7849,CVE-2015-7850,CVE-2015-7851,CVE-2015-7852,CVE-2015-7853,CVE-2015-7854,CVE-2015-7855,CVE-2015-7871",
+  "ciscoBugId": "CSCuw85826,CSCuw84638,CSCuw84641,CSCuw84642,CSCuw84679,CSCuw84697,CSCuw84702,CSCuw84703,CSCuw84704,CSCuw84705,CSCuw84710,CSCuw84712,CSCuw84719,CSCuw84721,CSCuw84746,CSCuw84765,CSCuw84780,CSCuw84782,CSCuw84791,CSCuw84797,CSCuw84810,CSCuw84818,CSCuw84833,CSCuw84835,CSCuw84852,CSCuw84854,CSCuw84891,CSCuw84893,CSCuw84901,CSCuw84912,CSCuw84914,CSCuw84972,CSCuw85024,CSCuw85054,CSCuw85071,CSCuw85074,CSCuw85080,CSCuw85099,CSCuw85108,CSCuw85139,CSCuw98638,CSCux02249",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the ntpd package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to create a denial of service (DoS) condition or modify the time being advertised by a device acting as a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Network Time Protocol CRYPTO_ASSOC Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41658&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol pidfile and driftfile Configuration Directive Manipulation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41657&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol ntpq atoascii Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41598&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol Remote Configuration Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41596&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol Reference Clock Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41599&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol decodenetnum() Function Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41659&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol Daemon Symmetric Association Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41653&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol Password Length Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41600&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol ntpd saveconfig Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41597&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol Password Memory Corruption Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41595&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol Private Mode Packet Integer Overflow Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41594&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Network Time Protocol Request Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=41656&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "35831",
+          "url": "https://www.snort.org/advisories"
+        },
+        {
+          "name": "36250",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "36251",
+          "url": "https://www.snort.org/advisories"
+        },
+        {
+          "name": "36252",
+          "url": "https://www.snort.org/advisories"
+        },
+        {
+          "name": "36253",
+          "url": "https://www.snort.org/advisories"
+        },
+        {
+          "name": "36536",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "36632",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "36633",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "37525",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "37526",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "40811",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "Blog",
+      "values": [
+        {
+          "name": "Cisco Identifies Multiple Vulnerabilities in Network Time Protocol daemon (ntpd)",
+          "url": "http://blogs.cisco.com/security/talos/2015-10-ntpd-vulnerabilities"
+        },
+        {
+          "name": "Talos 2015-10 NTPd Vulnerabilities",
+          "url": "http://blog.talosintel.com/2015/10/ntpd-vulnerabilities.html"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Attacking the Network Time Protocol",
+          "url": "https://eprint.iacr.org/2015/1020.pdf"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "NTP Daemon Integer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6911&signatureSubId=0&releaseVersion=S895&softwareVersion=6.0"
+        },
+        {
+          "name": "NTP Daemon Remote Configuration Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6912&signatureSubId=0&releaseVersion=S891&softwareVersion=6.0"
+        },
+        {
+          "name": "NTP Daemon Saveconfig Directory Traversal",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6913&signatureSubId=0&releaseVersion=S891&softwareVersion=6.0"
+        },
+        {
+          "name": "NTP Query Program Atoascii Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6914&signatureSubId=0&releaseVersion=S891&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

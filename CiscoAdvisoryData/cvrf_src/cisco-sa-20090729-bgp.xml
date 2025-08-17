@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS Software Border Gateway Protocol 4-Byte Autonomous System Number Vulnerabilities</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20090729-bgp</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2009-07-29T16:00:00</cvrf:Date>
+        <cvrf:Description>Modifications to insert 2 byte and 4 byte clarification at
+			 customer's request.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2009-07-29T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2009-07-29T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="1">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090729-bgp</cvrf:URL>
+      <cvrf:Description>Cisco IOS Software Border Gateway Protocol 4-Byte Autonomous System Number Vulnerabilities</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="IOS" Type="Product Name">
+        <Branch Name="12.0S" Type="Product Version">
+          <Branch Name="12.0(32)S13" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105249">Cisco IOS 12.0(32)S13</FullProductName>
+          </Branch>
+          <Branch Name="12.0(32)S12" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106033">Cisco IOS 12.0(32)S12</FullProductName>
+          </Branch>
+          <Branch Name="12.0(32)S11o" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106663">Cisco IOS 12.0(32)S11o</FullProductName>
+          </Branch>
+          <Branch Name="12.0(33)S3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107636">Cisco IOS 12.0(33)S3</FullProductName>
+          </Branch>
+          <Branch Name="12.0(33)S4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-114865">Cisco IOS 12.0(33)S4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.0SY" Type="Product Version">
+          <Branch Name="12.0(32)SY8a" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-103875">Cisco IOS 12.0(32)SY8a</FullProductName>
+          </Branch>
+          <Branch Name="12.0(32)SY9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-106282">Cisco IOS 12.0(32)SY9</FullProductName>
+          </Branch>
+          <Branch Name="12.0(32)SY8" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107021">Cisco IOS 12.0(32)SY8</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.4T" Type="Product Version">
+          <Branch Name="12.4(24)T" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-92384">Cisco IOS 12.4(24)T</FullProductName>
+          </Branch>
+          <Branch Name="12.4(24)T1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-105745">Cisco IOS 12.4(24)T1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="12.2SXI" Type="Product Version">
+          <Branch Name="12.2(33)SXI1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-107649">Cisco IOS 12.2(33)SXI1</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco IOS XE Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-93036">Cisco IOS XE Software </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS Malformed BGP Update Message Remote Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCta33973</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCta33973</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2009-2049</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-103875</ProductID>
+        <ProductID>CVRFPID-105249</ProductID>
+        <ProductID>CVRFPID-105745</ProductID>
+        <ProductID>CVRFPID-106033</ProductID>
+        <ProductID>CVRFPID-106282</ProductID>
+        <ProductID>CVRFPID-106663</ProductID>
+        <ProductID>CVRFPID-107021</ProductID>
+        <ProductID>CVRFPID-107636</ProductID>
+        <ProductID>CVRFPID-107649</ProductID>
+        <ProductID>CVRFPID-114865</ProductID>
+        <ProductID>CVRFPID-92384</ProductID>
+        <ProductID>CVRFPID-93036</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>5.4</BaseScoreV2>
+        <TemporalScoreV2>4.5</TemporalScoreV2>
+        <VectorV2>AV:N/AC:H/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+        <ProductID>CVRFPID-93036</ProductID>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090729-bgp</URL>
+        <Description>Cisco IOS Software Border Gateway Protocol 4-Byte Autonomous System Number Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS Software BGP Autonomous System Path Segments Denial of Service Vulnerability</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2009-1168</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-93036</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090729-bgp</URL>
+        <Description>Cisco IOS Software Border Gateway Protocol 4-Byte Autonomous System Number Vulnerabilities</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

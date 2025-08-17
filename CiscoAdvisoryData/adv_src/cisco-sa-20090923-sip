@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20090923-sip",
+  "title": "Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2009-09-23T16:00:00.000+0000",
+  "lastPublished": "2009-09-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090923-sip",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "cisco-amb-20090923-voice,18891",
+  "cve": "CVE-2009-2870",
+  "ciscoBugId": "CSCsx25880",
+  "status": "",
+  "summary": "A vulnerability exists in the Session Initiation Protocol (SIP) implementation in Cisco IOS&reg; Software that could allow an unauthenticated attacker to cause a denial of service (DoS) condition on an affected device when the Cisco Unified Border Element feature is enabled.  ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18891&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Denial of Service Vulnerabilities in Cisco Unified Communications Manager and Cisco IOS Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090923-voice"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS/Unified Communications Manager SIP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=19259&signatureSubId=0&releaseVersion=S445&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS/Unified Communications Manager SIP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=19420&signatureSubId=0&releaseVersion=S449&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

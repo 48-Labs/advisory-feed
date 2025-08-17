@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20170607-dcnm1",
+  "title": " Cisco Prime Data Center Network Manager Debug Remote Code Execution Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-06-07T16:00:00.000+0000",
+  "lastPublished": "2017-06-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170607-dcnm1",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-16",
+  "cve": "CVE-2017-6639",
+  "ciscoBugId": "CSCvd09961",
+  "status": "",
+  "summary": "A vulnerability in the role-based access control&nbsp;(RBAC) functionality of Cisco&nbsp;Prime Data Center Network Manager&nbsp;(DCNM) could allow an unauthenticated, remote attacker to access sensitive information or execute arbitrary code with root privileges on an affected system.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "31302",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Prime Data Center Network Manager Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7966&signatureSubId=0&releaseVersion=S985&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

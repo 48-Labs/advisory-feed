@@ -1,0 +1,65 @@
+{
+  "identifier": "cisco-sa-20080312-ucp",
+  "title": "Cisco Secure Access Control Server for Windows User-Changeable Password Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2008-03-12T16:00:00.000+0000",
+  "lastPublished": "2008-03-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080312-ucp",
+  "severity": "Medium",
+  "cwe": "CWE-79",
+  "erpPubIds": "15338,15339,cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2008-0532,CVE-2008-0533",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Two sets of vulnerabilities were discovered in the Cisco Secure Access Control Server (ACS) for Windows User-Changeable Password (UCP) application and reported to Cisco by Felix 'FX' Lindner, Recurity Labs GmbH.   The first set of vulnerabilities address several buffer ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Secure Access Control Server for Windows User-Changeable Password Application Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15338&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Secure Access Control Server for Windows User-Changeable Password Application Cross-Site Scripting Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15339&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "13656",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Secure Access Control Server CGI Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6262&signatureSubId=0&releaseVersion=S790&softwareVersion=6.0"
+        },
+        {
+          "name": "XSS in Cisco ACS Server",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6263&signatureSubId=0&releaseVersion=S635&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "identifier": "cisco-sa-asafdt-webvpn-dos-KSqJAKPA",
+  "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Web Services Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2021-10-27T16:00:00.000+0000",
+  "lastPublished": "2021-10-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asafdt-webvpn-dos-KSqJAKPA",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-121, CWE-234, CWE-787",
+  "erpPubIds": "ERP-74773",
+  "cve": "CVE-2021-1573,CVE-2021-34704,CVE-2021-40118",
+  "ciscoBugId": "CSCvy36910,CSCvy58278,CSCvy89144",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web services interface of Cisco&nbsp;Adaptive Security Appliance (ASA) Software and Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a denial of service (DoS) condition.These vulnerabilities are ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "58440",
+          "url": "https://snort.org"
+        },
+        {
+          "name": "58441",
+          "url": "https://snort.org"
+        },
+        {
+          "name": "58443",
+          "url": "https://snort.org"
+        },
+        {
+          "name": "58444",
+          "url": "https://snort.org"
+        },
+        {
+          "name": "58445",
+          "url": "https://snort.org"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2021 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74773&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

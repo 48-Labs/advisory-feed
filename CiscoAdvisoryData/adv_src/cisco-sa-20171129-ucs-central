@@ -1,0 +1,44 @@
+{
+  "identifier": "cisco-sa-20171129-ucs-central",
+  "title": "Multiple Vulnerabilities in Cisco UCS Central Software",
+  "version": "1.0",
+  "firstPublished": "2017-11-29T16:00:00.000+0000",
+  "lastPublished": "2017-11-29T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171129-ucs-central",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-384, CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2017-12348,CVE-2017-12349",
+  "ciscoBugId": "CSCvf71978,CSCvf71986",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco&nbsp;UCS Central Software could allow a remote attacker to conduct a cross-site scripting&nbsp;(XSS) attack against a user of the affected interface or hijack a valid session ID from a user of the affected interface.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        },
+        {
+          "name": "Session Fixation",
+          "url": "https://www.owasp.org/index.php/Session_fixation"
+        }
+      ]
+    }
+  ]
+}

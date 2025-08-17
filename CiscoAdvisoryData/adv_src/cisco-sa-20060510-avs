@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20060510-avs",
+  "title": "AVS TCP Relay Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2006-05-10T16:00:00.000+0000",
+  "lastPublished": "2006-05-10T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060510-avs",
+  "cwe": "CWE-78",
+  "erpPubIds": "10895",
+  "cve": "CVE-2006-2322",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Application Velocity System's (AVS) default configuration allows transparent relay of TCP connections to any reachable destination TCP port if the receiving TCP service can process requests embedded in a HTTP POST method message. This issue does not require a software upgrade ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Application Velocity System (AVS) TCP Relay Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=10895&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Embedded TCP Connection Relay",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5756&signatureSubId=0&releaseVersion=S631&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Firepower Threat Defense Software for Cisco Firepower 2100 Series Firewalls Inspection Rules Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-ftd-intrusion-dos-DfT7wyGC</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2023-11-01T15:59:51</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2023-11-01T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2023-11-01T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2023-11-01T16:00:26.6774342Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the internal packet processing of Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 2100 Series Firewalls could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.
+
+This vulnerability is due to improper handling of certain packets when they are sent to the inspection engine. An attacker could exploit this vulnerability by sending a series of crafted packets to an affected device. A successful exploit could allow the attacker to deplete all 9,472 byte blocks on the device, resulting in traffic loss across the device or an unexpected reload of the device. If the device does not reload on its own, a manual reload of the device would be required to recover from this state.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-intrusion-dos-DfT7wyGC ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-intrusion-dos-DfT7wyGC"]
+
+This advisory is part of the November 2023 release of the Cisco ASA, FTD, and FMC Security Advisory Bundled publication. For a complete list of the advisories and links to them, see Cisco Event Response: November 2023 Semiannual Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication ["https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74985"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This vulnerability affects Cisco Firepower 2100 Series Firewalls if they are running a vulnerable release of Cisco FTD Software and have any of the following features enabled:
+
+Intrusion Policies
+Malware and File Policies
+Security Intelligence
+URL Filtering
+
+For information about which Cisco software releases are vulnerable, see the Fixed Software ["#fs"] section of this advisory.
+  Determine the Device Configuration
+To determine whether any of the affected features are enabled on a device, see the appropriate chapters in one of the following configuration guides:
+
+For Cisco FTD Devices Managed by Cisco Firepower Management Center (FMC)
+
+Intrusion Policies: Getting Started with Intrusion Policies ["https://www.cisco.com/c/en/us/td/docs/security/secure-firewall/management-center/device-config/720/management-center-device-config-72/intrusion-get-start.html"]
+Malware and File Policies: Network Malware Protection and File Policies ["https://www.cisco.com/c/en/us/td/docs/security/secure-firewall/management-center/device-config/720/management-center-device-config-72/network-malware-protection.html"]
+Security Intelligence: Security Intelligence ["https://www.cisco.com/c/en/us/td/docs/security/secure-firewall/management-center/device-config/720/management-center-device-config-72/access-security-intelligence.html"]
+URL Filtering: URL Filtering ["https://www.cisco.com/c/en/us/td/docs/security/secure-firewall/management-center/device-config/720/management-center-device-config-72/access-url-filtering.html"]
+
+For Standalone Cisco FTD Devices Using Cisco Firepower Device Manager (FDM)
+
+Intrusion Policies: Intrusion Policies ["https://www.cisco.com/c/en/us/td/docs/security/firepower/720/fdm/fptd-fdm-config-guide-720/fptd-fdm-intrusion.html"]
+Malware and File Policies: Access Control &gt; Intrusion, File, and Malware Inspection ["https://www.cisco.com/c/en/us/td/docs/security/firepower/720/fdm/fptd-fdm-config-guide-720/fptd-fdm-access.html#concept_A1DB99832FED44F0AAC7181CD11FECBD"]
+Security Intelligence: Security Intelligence ["https://www.cisco.com/c/en/us/td/docs/security/firepower/720/fdm/fptd-fdm-config-guide-720/fptd-fdm-sec-intel.html"]
+URL Filtering: Access Control &gt; URL Filtering ["https://www.cisco.com/c/en/us/td/docs/security/firepower/720/fdm/fptd-fdm-config-guide-720/fptd-fdm-access.html#concept_3FD55F41D0084FDB8E58869B8FFF65C9"]</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+Adaptive Security Appliance (ASA) Software
+Firepower Management Center (FMC) Software
+Next-Generation Intrusion Prevention System (NGIPS)</cvrf:Note>
+    <cvrf:Note Title="Indicators of Compromise" Type="General" Ordinal="4">A free count (CNT) of zero for the 9,472 byte blocks in the output of the show blocks CLI command can indicate successful exploitation of this vulnerability, as shown in the following example:
+
+
+&gt; show blocks
+SIZE    MAX    LOW    CNT
+     0   2700   2700   2700       4    100    100    100      80   1747   1746   1747     256   4148   4142   4143    1550   6234   6231   6232    2048    100    100    100    2560    164    164    164    4096    100    100    100    8192    100    100    100    9472  24000      0      0   16384    100    100    100   65536     16     11     16
+
+In Cisco FTD Software releases 7.0.1 and later, a non-zero FAILED count for the 9,472 byte blocks in the output of the show blocks CLI command, along with a free count (CNT) of zero, can indicate successful exploitation of this vulnerability, as shown in the following example:
+
+
+&gt; show blocks
+SIZE    MAX    LOW    CNT  FAILED
+     0   2700   2699   2700      0       4    100    100    100      0      80   1000    998   1000      0     256   5784   5647   5679      0    1550   6234   6214   6232      0    2048    100    100    100      0    2560    164    164    164      0    4096    100    100    100      0    8192    100    100    100      0    9472  10000      0      0 398788   16384    100    100    100      0   65664     16     16     16      0
+
+Customers who encounter the above indicators of compromise on their device should contact their support organization to determine whether this state is the result of successful exploitation of this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">Cisco has released free software updates ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#ssu"] that address the vulnerability described in this advisory. Customers with service contracts that entitle them to regular software updates should obtain security fixes through their usual update channels.
+
+Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license:
+https://www.cisco.com/c/en/us/products/end-user-license-agreement.html ["https://www.cisco.com/c/en/us/products/end-user-license-agreement.html"]
+
+Additionally, customers may only download software for which they have a valid license, procured from Cisco directly, or through a Cisco authorized reseller or partner. In most cases this will be a maintenance upgrade to software that was previously purchased. Free security software updates do not entitle customers to a new software license, additional software feature sets, or major revision upgrades.
+
+The Cisco Support and Downloads page ["https://www.cisco.com/c/en/us/support/index.html"] on Cisco.com provides information about licensing and downloads. This page can also display customer device support coverage for customers who use the My Devices tool.
+
+When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+Customers Without Service Contracts
+Customers who purchase directly from Cisco but do not hold a Cisco service contract and customers who make purchases through third-party vendors but are unsuccessful in obtaining fixed software through their point of sale should obtain upgrades by contacting the Cisco TAC: https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html ["https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"]
+
+Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
+Cisco ASA, FMC, and FTD Software
+To help customers determine their exposure to vulnerabilities in Cisco ASA, FMC, and FTD Software, Cisco provides the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"]. This tool identifies any Cisco security advisories that impact a specific software release and the earliest release that fixes the vulnerabilities that are described in each advisory (“First Fixed”). If applicable, the tool also returns the earliest release that fixes all the vulnerabilities that are described in all the advisories that the Software Checker identifies (“Combined First Fixed”).
+
+To use the tool, go to the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"] page and follow the instructions. Alternatively, use the following form to search for vulnerabilities that affect a specific software release. To use the form, follow these steps:
+
+Choose which advisories the tool will search—all advisories, only advisories with a Critical or High Security Impact Rating (SIR) ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#asr"], or only this advisory.
+Choose the appropriate software.
+Choose the appropriate platform.
+Enter a release number—for example, 9.16.2.11 for Cisco ASA Software or 6.6.7 for Cisco FTD Software.
+Click Check.
+  Only this advisoryAll Critical and High advisoriesAll advisoriesCisco ASA SoftwareCisco FMC SoftwareCisco FTD SoftwareAny Platform3000 Series Industrial Security Appliances (ISA)ASA 5500-X Series FirewallsASA Service ModuleAdaptive Security Virtual Appliance (ASAv)Firepower 1000 SeriesFirepower 2100 SeriesFirepower 4100 SeriesFirepower 9000 SeriesFirepower NGFW VirtualSecure Firewall 3100 SeriesFirepower Management Center Appliances
+
+
+
+
+
+For instructions on upgrading your FTD device, see Cisco Firepower Management Center Upgrade Guide ["https://www.cisco.com/c/en/us/td/docs/security/firepower/upgrade/fpmc-upgrade-guide/getting_started.html"].
+
+ Additional Resources
+For help determining the best Cisco ASA, FTD, or FMC Software release, see the following Recommended Releases documents. If a security advisory recommends a later release, Cisco recommends following the advisory guidance.
+
+Cisco ASA Compatibility ["https://www.cisco.com/c/en/us/td/docs/security/asa/compatibility/asamatrx.html"]
+Cisco Secure Firewall ASA Upgrade Guide ["https://www.cisco.com/c/en/us/td/docs/security/asa/upgrade/asa-upgrade/planning.html"]
+Cisco Secure Firewall Threat Defense Compatibility Guide ["https://www.cisco.com/c/en/us/td/docs/security/secure-firewall/compatibility/threat-defense-compatibility.html"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">This vulnerability was found by Sanmith Prakash of Cisco during internal security testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-intrusion-dos-DfT7wyGC</cvrf:URL>
+      <cvrf:Description>Cisco Firepower Threat Defense Software for Cisco Firepower 2100 Series Firewalls Inspection Rules Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74985</cvrf:URL>
+      <cvrf:Description>Cisco Event Response: November 2023 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco Firepower Threat Defense Software">
+        <Branch Type="Product Version" Name="6.2">
+          <Branch Type="Service Pack" Name="6.2.3">
+            <FullProductName ProductID="CVRFPID-233334">Cisco Firepower Threat Defense Software 6.2.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.1">
+            <FullProductName ProductID="CVRFPID-245396">Cisco Firepower Threat Defense Software 6.2.3.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.2">
+            <FullProductName ProductID="CVRFPID-245397">Cisco Firepower Threat Defense Software 6.2.3.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.3">
+            <FullProductName ProductID="CVRFPID-245398">Cisco Firepower Threat Defense Software 6.2.3.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.4">
+            <FullProductName ProductID="CVRFPID-247893">Cisco Firepower Threat Defense Software 6.2.3.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.5">
+            <FullProductName ProductID="CVRFPID-247894">Cisco Firepower Threat Defense Software 6.2.3.5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.6">
+            <FullProductName ProductID="CVRFPID-248816">Cisco Firepower Threat Defense Software 6.2.3.6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.7">
+            <FullProductName ProductID="CVRFPID-251756">Cisco Firepower Threat Defense Software 6.2.3.7</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.8">
+            <FullProductName ProductID="CVRFPID-251757">Cisco Firepower Threat Defense Software 6.2.3.8</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.10">
+            <FullProductName ProductID="CVRFPID-258063">Cisco Firepower Threat Defense Software 6.2.3.10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.11">
+            <FullProductName ProductID="CVRFPID-258064">Cisco Firepower Threat Defense Software 6.2.3.11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.9">
+            <FullProductName ProductID="CVRFPID-258915">Cisco Firepower Threat Defense Software 6.2.3.9</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.12">
+            <FullProductName ProductID="CVRFPID-265011">Cisco Firepower Threat Defense Software 6.2.3.12</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.13">
+            <FullProductName ProductID="CVRFPID-267675">Cisco Firepower Threat Defense Software 6.2.3.13</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.14">
+            <FullProductName ProductID="CVRFPID-267676">Cisco Firepower Threat Defense Software 6.2.3.14</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.15">
+            <FullProductName ProductID="CVRFPID-275475">Cisco Firepower Threat Defense Software 6.2.3.15</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.16">
+            <FullProductName ProductID="CVRFPID-278503">Cisco Firepower Threat Defense Software 6.2.3.16</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.17">
+            <FullProductName ProductID="CVRFPID-284172">Cisco Firepower Threat Defense Software 6.2.3.17</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.2.3.18">
+            <FullProductName ProductID="CVRFPID-286536">Cisco Firepower Threat Defense Software 6.2.3.18</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="6.6">
+          <Branch Type="Service Pack" Name="6.6.0">
+            <FullProductName ProductID="CVRFPID-225862">Cisco Firepower Threat Defense Software 6.6.0</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.0.1">
+            <FullProductName ProductID="CVRFPID-278885">Cisco Firepower Threat Defense Software 6.6.0.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.1">
+            <FullProductName ProductID="CVRFPID-280013">Cisco Firepower Threat Defense Software 6.6.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.3">
+            <FullProductName ProductID="CVRFPID-281981">Cisco Firepower Threat Defense Software 6.6.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.4">
+            <FullProductName ProductID="CVRFPID-282174">Cisco Firepower Threat Defense Software 6.6.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.5">
+            <FullProductName ProductID="CVRFPID-284314">Cisco Firepower Threat Defense Software 6.6.5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.5.1">
+            <FullProductName ProductID="CVRFPID-286093">Cisco Firepower Threat Defense Software 6.6.5.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.5.2">
+            <FullProductName ProductID="CVRFPID-286580">Cisco Firepower Threat Defense Software 6.6.5.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.7">
+            <FullProductName ProductID="CVRFPID-287202">Cisco Firepower Threat Defense Software 6.6.7</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.7.1">
+            <FullProductName ProductID="CVRFPID-292740">Cisco Firepower Threat Defense Software 6.6.7.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.6.7.2">
+            <FullProductName ProductID="CVRFPID-301624">Cisco Firepower Threat Defense Software 6.6.7.2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="6.4">
+          <Branch Type="Service Pack" Name="6.4.0">
+            <FullProductName ProductID="CVRFPID-265014">Cisco Firepower Threat Defense Software 6.4.0</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.1">
+            <FullProductName ProductID="CVRFPID-265015">Cisco Firepower Threat Defense Software 6.4.0.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.3">
+            <FullProductName ProductID="CVRFPID-265950">Cisco Firepower Threat Defense Software 6.4.0.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.2">
+            <FullProductName ProductID="CVRFPID-268602">Cisco Firepower Threat Defense Software 6.4.0.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.4">
+            <FullProductName ProductID="CVRFPID-276372">Cisco Firepower Threat Defense Software 6.4.0.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.5">
+            <FullProductName ProductID="CVRFPID-276373">Cisco Firepower Threat Defense Software 6.4.0.5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.6">
+            <FullProductName ProductID="CVRFPID-276933">Cisco Firepower Threat Defense Software 6.4.0.6</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.7">
+            <FullProductName ProductID="CVRFPID-276934">Cisco Firepower Threat Defense Software 6.4.0.7</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.8">
+            <FullProductName ProductID="CVRFPID-276935">Cisco Firepower Threat Defense Software 6.4.0.8</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.9">
+            <FullProductName ProductID="CVRFPID-278397">Cisco Firepower Threat Defense Software 6.4.0.9</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.10">
+            <FullProductName ProductID="CVRFPID-280662">Cisco Firepower Threat Defense Software 6.4.0.10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.11">
+            <FullProductName ProductID="CVRFPID-280999">Cisco Firepower Threat Defense Software 6.4.0.11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.12">
+            <FullProductName ProductID="CVRFPID-282609">Cisco Firepower Threat Defense Software 6.4.0.12</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.13">
+            <FullProductName ProductID="CVRFPID-286092">Cisco Firepower Threat Defense Software 6.4.0.13</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.14">
+            <FullProductName ProductID="CVRFPID-286537">Cisco Firepower Threat Defense Software 6.4.0.14</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.15">
+            <FullProductName ProductID="CVRFPID-287041">Cisco Firepower Threat Defense Software 6.4.0.15</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="6.4.0.16">
+            <FullProductName ProductID="CVRFPID-290665">Cisco Firepower Threat Defense Software 6.4.0.16</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="7.0">
+          <Branch Type="Service Pack" Name="7.0.0">
+            <FullProductName ProductID="CVRFPID-282695">Cisco Firepower Threat Defense Software 7.0.0</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.0.1">
+            <FullProductName ProductID="CVRFPID-284277">Cisco Firepower Threat Defense Software 7.0.0.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.1">
+            <FullProductName ProductID="CVRFPID-284789">Cisco Firepower Threat Defense Software 7.0.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.1.1">
+            <FullProductName ProductID="CVRFPID-286538">Cisco Firepower Threat Defense Software 7.0.1.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.2">
+            <FullProductName ProductID="CVRFPID-286930">Cisco Firepower Threat Defense Software 7.0.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.2.1">
+            <FullProductName ProductID="CVRFPID-287122">Cisco Firepower Threat Defense Software 7.0.2.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.3">
+            <FullProductName ProductID="CVRFPID-287181">Cisco Firepower Threat Defense Software 7.0.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.4">
+            <FullProductName ProductID="CVRFPID-290481">Cisco Firepower Threat Defense Software 7.0.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.0.5">
+            <FullProductName ProductID="CVRFPID-290663">Cisco Firepower Threat Defense Software 7.0.5</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="7.1">
+          <Branch Type="Service Pack" Name="7.1.0">
+            <FullProductName ProductID="CVRFPID-286091">Cisco Firepower Threat Defense Software 7.1.0</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.1.0.1">
+            <FullProductName ProductID="CVRFPID-286543">Cisco Firepower Threat Defense Software 7.1.0.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.1.0.3">
+            <FullProductName ProductID="CVRFPID-290468">Cisco Firepower Threat Defense Software 7.1.0.3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="7.2">
+          <Branch Type="Service Pack" Name="7.2.0">
+            <FullProductName ProductID="CVRFPID-287081">Cisco Firepower Threat Defense Software 7.2.0</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.0.1">
+            <FullProductName ProductID="CVRFPID-290469">Cisco Firepower Threat Defense Software 7.2.0.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.1">
+            <FullProductName ProductID="CVRFPID-290563">Cisco Firepower Threat Defense Software 7.2.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.2">
+            <FullProductName ProductID="CVRFPID-292413">Cisco Firepower Threat Defense Software 7.2.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.3">
+            <FullProductName ProductID="CVRFPID-294794">Cisco Firepower Threat Defense Software 7.2.3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="7.3">
+          <Branch Type="Service Pack" Name="7.3.0">
+            <FullProductName ProductID="CVRFPID-292363">Cisco Firepower Threat Defense Software 7.3.0</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.3.1">
+            <FullProductName ProductID="CVRFPID-294962">Cisco Firepower Threat Defense Software 7.3.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.3.1.1">
+            <FullProductName ProductID="CVRFPID-300512">Cisco Firepower Threat Defense Software 7.3.1.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.3.1.2">
+            <FullProductName ProductID="CVRFPID-301705">Cisco Firepower Threat Defense Software 7.3.1.2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Name" Name="Cisco Firepower 2100 Series">
+          <FullProductName ProductID="CVRFPID-277392">Cisco Firepower Threat Defense Software Platform Cisco Firepower 2100 Series</FullProductName>
+        </Branch>
+      </Branch>
+    </Branch>
+    <Relationship ProductReference="CVRFPID-233334" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-233334:277392">Cisco Firepower Threat Defense Software 6.2.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-245396" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-245396:277392">Cisco Firepower Threat Defense Software 6.2.3.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-245397" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-245397:277392">Cisco Firepower Threat Defense Software 6.2.3.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-245398" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-245398:277392">Cisco Firepower Threat Defense Software 6.2.3.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-247893" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-247893:277392">Cisco Firepower Threat Defense Software 6.2.3.4 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-247894" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-247894:277392">Cisco Firepower Threat Defense Software 6.2.3.5 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-248816" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-248816:277392">Cisco Firepower Threat Defense Software 6.2.3.6 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-251756" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-251756:277392">Cisco Firepower Threat Defense Software 6.2.3.7 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-251757" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-251757:277392">Cisco Firepower Threat Defense Software 6.2.3.8 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-258063" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-258063:277392">Cisco Firepower Threat Defense Software 6.2.3.10 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-258064" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-258064:277392">Cisco Firepower Threat Defense Software 6.2.3.11 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-258915" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-258915:277392">Cisco Firepower Threat Defense Software 6.2.3.9 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-265011" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-265011:277392">Cisco Firepower Threat Defense Software 6.2.3.12 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-267675" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-267675:277392">Cisco Firepower Threat Defense Software 6.2.3.13 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-267676" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-267676:277392">Cisco Firepower Threat Defense Software 6.2.3.14 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-275475" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-275475:277392">Cisco Firepower Threat Defense Software 6.2.3.15 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-278503" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-278503:277392">Cisco Firepower Threat Defense Software 6.2.3.16 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-284172" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-284172:277392">Cisco Firepower Threat Defense Software 6.2.3.17 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286536" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286536:277392">Cisco Firepower Threat Defense Software 6.2.3.18 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-225862" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-225862:277392">Cisco Firepower Threat Defense Software 6.6.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-278885" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-278885:277392">Cisco Firepower Threat Defense Software 6.6.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-280013" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-280013:277392">Cisco Firepower Threat Defense Software 6.6.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-281981" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-281981:277392">Cisco Firepower Threat Defense Software 6.6.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-282174" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-282174:277392">Cisco Firepower Threat Defense Software 6.6.4 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-284314" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-284314:277392">Cisco Firepower Threat Defense Software 6.6.5 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286093" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286093:277392">Cisco Firepower Threat Defense Software 6.6.5.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286580" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286580:277392">Cisco Firepower Threat Defense Software 6.6.5.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-287202" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-287202:277392">Cisco Firepower Threat Defense Software 6.6.7 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-292740" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-292740:277392">Cisco Firepower Threat Defense Software 6.6.7.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-301624" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-301624:277392">Cisco Firepower Threat Defense Software 6.6.7.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-265014" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-265014:277392">Cisco Firepower Threat Defense Software 6.4.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-265015" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-265015:277392">Cisco Firepower Threat Defense Software 6.4.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-265950" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-265950:277392">Cisco Firepower Threat Defense Software 6.4.0.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-268602" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-268602:277392">Cisco Firepower Threat Defense Software 6.4.0.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-276372" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-276372:277392">Cisco Firepower Threat Defense Software 6.4.0.4 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-276373" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-276373:277392">Cisco Firepower Threat Defense Software 6.4.0.5 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-276933" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-276933:277392">Cisco Firepower Threat Defense Software 6.4.0.6 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-276934" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-276934:277392">Cisco Firepower Threat Defense Software 6.4.0.7 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-276935" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-276935:277392">Cisco Firepower Threat Defense Software 6.4.0.8 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-278397" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-278397:277392">Cisco Firepower Threat Defense Software 6.4.0.9 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-280662" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-280662:277392">Cisco Firepower Threat Defense Software 6.4.0.10 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-280999" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-280999:277392">Cisco Firepower Threat Defense Software 6.4.0.11 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-282609" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-282609:277392">Cisco Firepower Threat Defense Software 6.4.0.12 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286092" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286092:277392">Cisco Firepower Threat Defense Software 6.4.0.13 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286537" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286537:277392">Cisco Firepower Threat Defense Software 6.4.0.14 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-287041" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-287041:277392">Cisco Firepower Threat Defense Software 6.4.0.15 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-290665" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-290665:277392">Cisco Firepower Threat Defense Software 6.4.0.16 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-282695" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-282695:277392">Cisco Firepower Threat Defense Software 7.0.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-284277" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-284277:277392">Cisco Firepower Threat Defense Software 7.0.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-284789" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-284789:277392">Cisco Firepower Threat Defense Software 7.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286538" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286538:277392">Cisco Firepower Threat Defense Software 7.0.1.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286930" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286930:277392">Cisco Firepower Threat Defense Software 7.0.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-287122" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-287122:277392">Cisco Firepower Threat Defense Software 7.0.2.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-287181" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-287181:277392">Cisco Firepower Threat Defense Software 7.0.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-290481" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-290481:277392">Cisco Firepower Threat Defense Software 7.0.4 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-290663" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-290663:277392">Cisco Firepower Threat Defense Software 7.0.5 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286091" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286091:277392">Cisco Firepower Threat Defense Software 7.1.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-286543" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-286543:277392">Cisco Firepower Threat Defense Software 7.1.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-290468" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-290468:277392">Cisco Firepower Threat Defense Software 7.1.0.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-287081" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-287081:277392">Cisco Firepower Threat Defense Software 7.2.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-290469" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-290469:277392">Cisco Firepower Threat Defense Software 7.2.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-290563" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-290563:277392">Cisco Firepower Threat Defense Software 7.2.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-292413" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-292413:277392">Cisco Firepower Threat Defense Software 7.2.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-294794" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-294794:277392">Cisco Firepower Threat Defense Software 7.2.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-292363" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-292363:277392">Cisco Firepower Threat Defense Software 7.3.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-294962" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-294962:277392">Cisco Firepower Threat Defense Software 7.3.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-300512" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-300512:277392">Cisco Firepower Threat Defense Software 7.3.1.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship ProductReference="CVRFPID-301705" RelationType="Installed On" RelatesToProductReference="CVRFPID-277392">
+      <FullProductName ProductID="CVRFPID-301705:277392">Cisco Firepower Threat Defense Software 7.3.1.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Firepower Threat Defense Software for Cisco Firepower 2100 Series Firewalls Intrusion Policy Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwe98687</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwe98687</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2023-20244</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-225862:277392</ProductID>
+        <ProductID>CVRFPID-233334:277392</ProductID>
+        <ProductID>CVRFPID-245396:277392</ProductID>
+        <ProductID>CVRFPID-245397:277392</ProductID>
+        <ProductID>CVRFPID-245398:277392</ProductID>
+        <ProductID>CVRFPID-247893:277392</ProductID>
+        <ProductID>CVRFPID-247894:277392</ProductID>
+        <ProductID>CVRFPID-248816:277392</ProductID>
+        <ProductID>CVRFPID-251756:277392</ProductID>
+        <ProductID>CVRFPID-251757:277392</ProductID>
+        <ProductID>CVRFPID-258063:277392</ProductID>
+        <ProductID>CVRFPID-258064:277392</ProductID>
+        <ProductID>CVRFPID-258915:277392</ProductID>
+        <ProductID>CVRFPID-265011:277392</ProductID>
+        <ProductID>CVRFPID-265014:277392</ProductID>
+        <ProductID>CVRFPID-265015:277392</ProductID>
+        <ProductID>CVRFPID-265950:277392</ProductID>
+        <ProductID>CVRFPID-267675:277392</ProductID>
+        <ProductID>CVRFPID-267676:277392</ProductID>
+        <ProductID>CVRFPID-268602:277392</ProductID>
+        <ProductID>CVRFPID-275475:277392</ProductID>
+        <ProductID>CVRFPID-276372:277392</ProductID>
+        <ProductID>CVRFPID-276373:277392</ProductID>
+        <ProductID>CVRFPID-276933:277392</ProductID>
+        <ProductID>CVRFPID-276934:277392</ProductID>
+        <ProductID>CVRFPID-276935:277392</ProductID>
+        <ProductID>CVRFPID-278397:277392</ProductID>
+        <ProductID>CVRFPID-278503:277392</ProductID>
+        <ProductID>CVRFPID-278885:277392</ProductID>
+        <ProductID>CVRFPID-280013:277392</ProductID>
+        <ProductID>CVRFPID-280662:277392</ProductID>
+        <ProductID>CVRFPID-280999:277392</ProductID>
+        <ProductID>CVRFPID-281981:277392</ProductID>
+        <ProductID>CVRFPID-282174:277392</ProductID>
+        <ProductID>CVRFPID-282609:277392</ProductID>
+        <ProductID>CVRFPID-282695:277392</ProductID>
+        <ProductID>CVRFPID-284172:277392</ProductID>
+        <ProductID>CVRFPID-284277:277392</ProductID>
+        <ProductID>CVRFPID-284314:277392</ProductID>
+        <ProductID>CVRFPID-284789:277392</ProductID>
+        <ProductID>CVRFPID-286091:277392</ProductID>
+        <ProductID>CVRFPID-286092:277392</ProductID>
+        <ProductID>CVRFPID-286093:277392</ProductID>
+        <ProductID>CVRFPID-286536:277392</ProductID>
+        <ProductID>CVRFPID-286537:277392</ProductID>
+        <ProductID>CVRFPID-286538:277392</ProductID>
+        <ProductID>CVRFPID-286543:277392</ProductID>
+        <ProductID>CVRFPID-286580:277392</ProductID>
+        <ProductID>CVRFPID-286930:277392</ProductID>
+        <ProductID>CVRFPID-287041:277392</ProductID>
+        <ProductID>CVRFPID-287081:277392</ProductID>
+        <ProductID>CVRFPID-287122:277392</ProductID>
+        <ProductID>CVRFPID-287181:277392</ProductID>
+        <ProductID>CVRFPID-287202:277392</ProductID>
+        <ProductID>CVRFPID-290468:277392</ProductID>
+        <ProductID>CVRFPID-290469:277392</ProductID>
+        <ProductID>CVRFPID-290481:277392</ProductID>
+        <ProductID>CVRFPID-290563:277392</ProductID>
+        <ProductID>CVRFPID-290663:277392</ProductID>
+        <ProductID>CVRFPID-290665:277392</ProductID>
+        <ProductID>CVRFPID-292363:277392</ProductID>
+        <ProductID>CVRFPID-292413:277392</ProductID>
+        <ProductID>CVRFPID-292740:277392</ProductID>
+        <ProductID>CVRFPID-294794:277392</ProductID>
+        <ProductID>CVRFPID-294962:277392</ProductID>
+        <ProductID>CVRFPID-300512:277392</ProductID>
+        <ProductID>CVRFPID-301624:277392</ProductID>
+        <ProductID>CVRFPID-301705:277392</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>8.6</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-intrusion-dos-DfT7wyGC</URL>
+        <Description>Cisco Firepower Threat Defense Software for Cisco Firepower 2100 Series Firewalls Inspection Rules Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

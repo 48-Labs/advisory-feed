@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20100324-ldp",
+  "title": "Cisco IOS Software Multiprotocol Label Switching Packet Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2010-03-24T00:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:10:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100324-ldp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "20060",
+  "cve": "CVE-2010-0576",
+  "ciscoBugId": "CSCsz45567",
+  "status": "",
+  "summary": "A device running Cisco IOS&reg; Software, CiscoIOS XE Software, or Cisco IOS XR Software is vulnerable to a remote denial ofservice (DoS) condition if it is configured for Multiprotocol Label Switching(MPLS) and has support for Label Distribution Protocol (LDP).A ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software MPLS Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20060&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Crafted LDP Packet Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24780&signatureSubId=0&releaseVersion=S479&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

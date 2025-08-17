@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20120328-ike",
+  "title": "Cisco IOS Internet Key Exchange Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2012-03-28T16:00:00.000+0000",
+  "lastPublished": "2012-03-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120328-ike",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "25360",
+  "cve": "CVE-2012-0381",
+  "ciscoBugId": "CSCts38429",
+  "status": "",
+  "summary": "The Cisco IOS Software Internet Key Exchange (IKE) featurecontains a&nbsp; denial of service (DoS) vulnerability.Cisco has released software updates that address this vulnerability. This advisory is available at the following link:",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Internet Key Exchange Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25360&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS ISAKMP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1127&signatureSubId=0&releaseVersion=S638&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS ISAKMP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=40986&signatureSubId=0&releaseVersion=S638&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20180620-nxos-bo",
+  "title": "Cisco NX-OS Software NX-API Arbitrary Code Execution Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2018-06-20T16:00:00.000+0000",
+  "lastPublished": "2018-07-05T21:11:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180620-nxos-bo",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-67770",
+  "cve": "CVE-2018-0301",
+  "ciscoBugId": "CSCvd45804,CSCve02322,CSCve02412",
+  "status": "",
+  "summary": "A vulnerability in the NX-API feature of Cisco NX-OS Software could allow an unauthenticated, remote attacker to craft a packet to the management interface on an affected system, causing a buffer overflow. The vulnerability is due to incorrect input validation in the ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: June 2018 Cisco FXOS and NX-OS Software Security Advisory Collection",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-67770&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

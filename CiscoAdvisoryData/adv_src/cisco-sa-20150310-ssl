@@ -1,0 +1,277 @@
+{
+  "identifier": "cisco-sa-20150310-ssl",
+  "title": "Multiple Vulnerabilities in OpenSSL (January 2015) Affecting Cisco Products",
+  "version": "1.17",
+  "firstPublished": "2015-03-10T16:00:00.000+0000",
+  "lastPublished": "2015-11-13T15:34:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150310-ssl",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": "CWE-20, CWE-310, CWE-399",
+  "erpPubIds": "36956,36953,36957,36952,36955",
+  "cve": "CVE-2014-3569,CVE-2014-3570,CVE-2014-3571,CVE-2014-3572,CVE-2014-8275,CVE-2015-0204,CVE-2015-0205,CVE-2015-0206",
+  "ciscoBugId": "CSCus61884,CSCum57065,CSCus42699,CSCus42701,CSCus42702,CSCus42705,CSCus42706,CSCus42707,CSCus42709,CSCus42710,CSCus42711,CSCus42712,CSCus42713,CSCus42717,CSCus42721,CSCus42723,CSCus42724,CSCus42726,CSCus42727,CSCus42729,CSCus42732,CSCus42733,CSCus42734,CSCus42735,CSCus42737,CSCus42738,CSCus42739,CSCus42742,CSCus42748,CSCus42749,CSCus42751,CSCus42752,CSCus42753,CSCus42754,CSCus42755,CSCus42758,CSCus42763,CSCus42766,CSCus42768,CSCus42772,CSCus42773,CSCus42775,CSCus42781,CSCus42785,CSCus42786,CSCus42787,CSCus42791,CSCus42792,CSCus42794,CSCus42800,CSCus42801,CSCus42803,CSCus42804,CSCus42812,CSCus42814,CSCus42816,CSCus42817,CSCus42818,CSCus42821,CSCus42824,CSCus42827,CSCus42828,CSCus42829,CSCus42831,CSCus42833,CSCus42834,CSCus42836,CSCus42840,CSCus42841,CSCus42850,CSCus42851,CSCus42853,CSCus42871,CSCus42879,CSCus42880,CSCus42882,CSCus42883,CSCus42887,CSCus42900,CSCus42901,CSCus42902,CSCus42904,CSCus42905,CSCus42906,CSCus42908,CSCus42909,CSCus42910,CSCus42917,CSCus42924,CSCus42939,CSCus42941,CSCus42945,CSCus42947,CSCus42952,CSCus42953,CSCus42954,CSCus42958,CSCus42959,CSCus42966,CSCus42967,CSCus42968,CSCus42972,CSCus42976,CSCus42982,CSCus42983,CSCus42987,CSCus42996,CSCus43000,CSCus43003,CSCus43009,CSCus43015,CSCus43016,CSCus43020,CSCus43022,CSCus43029,CSCus43041,CSCus43043,CSCus43046,CSCus43052,CSCus44454,CSCus44478,CSCus47080,CSCus60116,CSCus61833,CSCus77211,CSCut08817,CSCut14256,CSCut32908,CSCut45829,CSCut82321,CSCuw30989",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service condition or perform a man-in-the-middle attack. On January 8, 2015, the OpenSSL Project released a security ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL RSA Temporary Key Cryptographic Downgrade Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=36956&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL dtls1_buffer_record Function DTLS Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=36953&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Diffie-Hellman Certificate Validation Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=36957&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL DTLS Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=36952&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Elliptic Curve Cryptographic Downgrade Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=36955&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "33686",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33687",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33688",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33689",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33690",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33691",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33692",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33693",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33694",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33695",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33696",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33697",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33698",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33699",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33700",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33701",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33702",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33703",
+          "url": "https://www.snort.org/advisories/vrt-rules-2015-03-05"
+        },
+        {
+          "name": "33777",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33778",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33779",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33780",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33781",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33782",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33783",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33784",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33785",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33786",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33787",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33788",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33789",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33790",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33791",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33792",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33793",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33794",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33795",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33796",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33797",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33798",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33799",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33800",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33801",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33802",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33803",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33804",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33805",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33806",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51356",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51357",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51358",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51359",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "63331",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "FREAK SSL Downgrade Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5891&signatureSubId=0&releaseVersion=S866&softwareVersion=6.0"
+        },
+        {
+          "name": "FREAK SSL Downgrade Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5891&signatureSubId=1&releaseVersion=S866&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

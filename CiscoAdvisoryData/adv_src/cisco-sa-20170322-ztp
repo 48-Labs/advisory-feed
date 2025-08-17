@@ -1,0 +1,49 @@
+{
+  "identifier": "cisco-sa-20170322-ztp",
+  "title": "Cisco IOS XE Software for Cisco ASR 920 Series Routers Zero Touch Provisioning Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-03-22T16:00:00.000+0000",
+  "lastPublished": "2017-03-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170322-ztp",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-134",
+  "erpPubIds": "ERP-60851",
+  "cve": "CVE-2017-3859",
+  "ciscoBugId": "CSCuy56385",
+  "status": "",
+  "summary": "A vulnerability in the DHCP code for the Zero Touch Provisioning feature of Cisco&nbsp;ASR 920 Series Aggregation Services Routers could allow an unauthenticated, remote attacker to cause an affected device to reload.The vulnerability is due to a format string vulnerability when ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "42069",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-03-23-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2017 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-60851&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS XE Software Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7884&signatureSubId=0&releaseVersion=S973&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

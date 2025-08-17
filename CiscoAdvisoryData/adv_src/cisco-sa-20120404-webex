@@ -1,0 +1,96 @@
+{
+  "identifier": "cisco-sa-20120404-webex",
+  "title": "Buffer Overflow Vulnerabilities in the Cisco WebEx Player",
+  "version": "1.1",
+  "firstPublished": "2012-04-04T16:00:00.000+0000",
+  "lastPublished": "2012-07-20T18:35:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120404-webex",
+  "cve": "CVE-2012-1335,CVE-2012-1336,CVE-2012-1337",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The Cisco WebEx Recording Format (WRF) player contains three&nbsp;buffer overflow vulnerabilities. In some cases, exploitation of the vulnerabilities could allow a remote attacker to execute arbitrary code on the system with the privileges of a targeted user.The ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "23269",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24678",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24679",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24680",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24681",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24682",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24683",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24684",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24685",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24997",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24998",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "24999",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "25000",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "28263",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WebEx WRF File Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1055&signatureSubId=0&releaseVersion=S638&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx Player WRF File Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1057&signatureSubId=0&releaseVersion=S638&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Webex WRF File Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1058&signatureSubId=0&releaseVersion=S638&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

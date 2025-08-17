@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Unity Connection</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20150401-cuc</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2015-04-01T15:47:53</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2015-04-01T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2015-04-01T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco Unity Connection contains multiple vulnerabilities, when it is configured with  Session Initiation Protocol (SIP) trunk integration. The vulnerabilities described in this advisory are denial of service vulnerabilities impacting the availability of Cisco Unity Connection for processing SIP messages.
+
+ 
+
+Cisco has released software updates that address these vulnerabilities. Workarounds that mitigate these vulnerabilities are not available.
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco Unity Connection is affected by all the vulnerabilities listed in this advisory if the implementation is integrated with SIP.   
+
+
+
+Implementations that use Skinny Call Control Protocol (SCCP) integration are not affected by any of the vulnerabilities described in this advisory.
+
+
+
+Integrations over either IP version 4 (IPv4) or IP version 6 (IPv6) are affected.
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">The following table shows the major Cisco Unity Connection versions affected by each individual vulnerability:
+
+
+
+
+    
+        
+            Major Version
+            Major Train Affected by Vulnerability
+        
+        
+            CSCul28089
+            CSCul26267
+            CSCul20444
+            CSCuh25062
+            CSCul69819
+        
+        
+            Prior to 8.5
+            Y
+
+            
+            Y
+            Y 
+            Y 
+            Y 
+        
+        
+            8.5
+            Y
+            Y 
+            Y 
+            Y 
+            Y 
+        
+        
+            8.6
+            Y
+            Y
+            Y 
+            Y 
+            Y 
+        
+        
+            9.0
+            Y
+            Y
+            Y 
+            Y 
+            Y 
+        
+        
+            9.1
+            Y
+            Y
+            Y 
+            Y 
+            Y 
+        
+        
+            10.0
+            Y
+            Y
+            Y 
+            N 
+            N 
+        
+        
+            10.5
+            N
+            N
+            N 
+            N 
+            N 
+        
+    
+
+
+
+Although each vulnerability is independent from the other, given they all impact SIP communications, it is recommended to upgrade to a version that contains the fixes for all five vulnerabilities.
+
+
+
+Note: Cisco Unity Connection versions prior to 8.5 have reached end of software maintenance. Customers running versions prior to 8.5 should contact their Cisco support team for assistance in upgrading to a supported version of Cisco Unity Connection.
+
+
+
+
+Information About Cisco Business Edition
+
+
+
+Cisco Business Edition 7000 and Cisco Business Edition 6000 are affected by these vulnerabilities if the Cisco Unity Connection version that is used is among the affected versions in the tables in the "Vulnerable Products" section of the security advisory.
+
+
+
+
+Determine the Software Version
+
+
+
+
+To determine the Cisco Unity Connection software version that an appliance is running, administrators can access the Cisco Unity Connection web interface and click the About link at the top right.
+Optionally, administrators can log in to the command-line interface and access the main menu. The software version can be identified by using the show version active command. The following example shows Cisco Unity Connection running version 8.6.2:
+
+
+
+Welcome to the Platform Command Line Interfaceadmin:show version activeActive Master Version: 8.6.2.10000-30
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">The following products are not affected:
+
+
+    Cisco IOS Software SIP implementation
+    Cisco Unified Communications Manager
+    Cisco Unity Express
+
+No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">Cisco Unity Connection is a feature-rich voice messaging platform that runs on the same Linux-based Cisco Unified Communications Operating System that is used by Cisco Unified Communications Manager. Cisco Unity Connection scales to support enterprise organizations with up to 100,000 users. 
+
+
+
+Cisco Unity Connection can be integrated into the voice infrastructure using either SIP or SCCP. Only SIP integrations are affected by the following vulnerabilities:
+
+
+
+Note: All the following vulnerabilities can be exploited by either IPv4 or IPv6 communications.
+
+
+
+Cisco Unity Connection SIP Trunk Integration Port UDP 5060 Denial of Service Vulnerability
+
+
+
+A vulnerability in the Connection Conversation Manager (CuCsMgr) process of Cisco Unity
+Connection could allow an unauthenticated, remote attacker to cause the
+SIP network port UDP 5060 to close on the affected device.
+
+
+
+
+The vulnerability is due to incorrect processing of specific UDP packets.
+An attacker could exploit this vulnerability by sending a specific UDP
+packet to the configured SIP trunk of the affected device. A successful exploit could
+allow the attacker to cause the SIP port to close, rendering Cisco
+Unity Connection unable to process any further calls.
+
+
+
+UDP port 5060 is bound to the CuCsMgr process on Unity Connection and that it closed permanently receiving specific UDP packets.  This vulnerability is known to be exploitable with publicly available network scanners.
+
+
+
+This vulnerability can be exploited using UDP packets only.
+
+
+
+When the vulnerability is exploited, the Cisco Unity Connection administrator must restart the CuCsMgr process.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCuh25062["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuh25062"] (registered customers only["https://sec.cloudapps.cisco.comRPF/register/register.do"]) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2015-0612.
+
+
+
+Cisco Unity Connection SIP Trunk Integration Crafted INVITE Message Denial of Service Vulnerability
+
+A vulnerability in the Connection Conversation Manager (CuCsMgr) process of Cisco Unity Connection could allow an unauthenticated, remote attacker to cause the CuCsMgr process to core dump and restart.
+
+
+
+
+The vulnerability is due to incorrect processing of crafted SIP INVITE messages. An attacker could exploit this vulnerability by sending crafted SIP INVITE messages to the Cisco Unity Connection server. An exploit could allow the attacker to trigger a core dump of the CuCsMgr process and create a denial of service condition.This vulnerability is independent of the transport protocols that are used and can be exploited with UDP, TCP, or TLS connections.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCul20444["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCul20444"] (registered customers only["https://sec.cloudapps.cisco.comRPF/register/register.do"]) and has been assigned CVE ID CVE-2015-0613.
+
+
+
+Cisco Unity Connection SIP Trunk Integration Crafted INVITE Message Denial of Service Vulnerability
+
+A vulnerability in the Connection Conversation Manager (CuCsMgr) process of Cisco Unity Connection could allow an unauthenticated, remote attacker to cause the CuCsMgr process to core dump and restart.
+
+The vulnerability is due to incorrect processing of crafted SIP INVITE messages. An attacker could exploit this vulnerability by sending crafted SIP INVITE messages to the Cisco Unity Connection server. An exploit could allow the attacker to trigger a core dump of the CuCsMgr process and create a DoS condition.
+Whilst this vulnerability is similar to the previous vulnerability, it is a different part of the SIP Invite message that is incorrectly processed.
+
+
+
+This vulnerability is independent of the transport protocols that are used and can be exploited with UDP, TCP, or TLS connections.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCul26267["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCul26267"] (registered customers only["https://sec.cloudapps.cisco.comRPF/register/register.do"]) and has been assigned CVE ID CVE-2015-0614.
+
+
+
+
+Note: The difference between the vulnerability documented in CVE ID CVE-2015-0613 and  CVE ID CVE-2015-0614 is that each vulnerability is exploited by using different fields in the SIP INVITE messages.
+
+
+
+Cisco Unity Connection SIP Trunk Integration Ports Busy Denial of Service Vulnerability
+
+A vulnerability in the SIP call handling code of Cisco Unity Connection could allow an unauthenticated, remote attacker to cause all the SIP connection lines (ports) to be consumed.
+
+
+
+
+The vulnerability is due to not releasing allocated resources under specific connection scenarios. An attacker could exploit this vulnerability by abnormally terminating a SIP session. An exploit could allow the attacker to consume all available SIP ports on Unity Connection, preventing any further connections.When this vulnerability is exploited all the SIP lines (known as ports) on Cisco Unity Connection will respond with a 503 error indicating all ports are busy. The only way to recover is for the Cisco Unity Connection administrator to restart the conversation manager.
+
+
+
+This vulnerability is independent of the transport protocols that are used and can be exploited with UDP, TCP, or TLS connections.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCul28089["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCul28089"] (registered customers only["https://sec.cloudapps.cisco.comRPF/register/register.do"]) and has been assigned CVE ID CVE-2015-0615.
+
+
+
+Cisco Unity Connection SIP Trunk Integration CuCsMgr Denial of Service Vulnerability
+
+
+
+A vulnerability in the Connection Conversation Manager (CuCsMgr) process of Cisco Unity Connection could allow an unauthenticated, remote attacker to cause the CuCsMgr process to core dump and restart.
+
+
+
+
+The vulnerability is due to incorrect handling of incorrectly terminated SIP conversations. An attacker could exploit this vulnerability by abnormal termination of SIP connections to the Cisco Unity Connection server. An exploit could allow the attacker to trigger a core dump of the CuCsMgr process and create a DoS condition.
+
+
+
+This vulnerability can be exploited with TCP SIP connections only.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCul69819["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCul69819"] (registered customers only["https://sec.cloudapps.cisco.comRPF/register/register.do"]) and has been assigned CVE ID CVE-2015-0616.
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">There are no workarounds that mitigate these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Alerts archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+
+
+The following table contains the first fixed releases, which include the fixes for all the vulnerabilities described in this advisory:
+
+
+    
+        
+            Version 
+            First Fixed Release 
+        
+        
+            8.5
+            8.5(1)SU7
+
+            
+        
+        
+            8.6
+            8.6(2a)SU4
+        
+        
+            9.0
+            Vulnerable; Migrate to 9.1(2)SU2 or later.
+        
+        
+            9.1
+            9.1(2)SU2
+        
+        
+            10.0
+            10.0(1)SU1
+        
+        
+            10.5
+            Not Affected
+        
+    
+
+The following table contains the first fixed release per vulnerability:
+
+
+    
+        
+            Version
+            First Fixed Release
+        
+        
+            CSCul28089
+            CSCul26267
+            CSCul20444
+            CSCuh25062
+            CSCul69819
+        
+        
+            8.5
+            8.5(1)SU7
+            8.5(1)SU7
+            8.5(1)SU7
+            8.5(1)SU6
+            8.5(1)SU7
+        
+        
+            8.6
+            8.6(2a)SU4
+            8.6(2a)SU4
+            8.6(2a)SU4
+            8.6(2a)SU4
+            8.6(2a)SU4
+        
+        
+            9.0
+            Vulnerable
+            Vulnerable
+            Vulnerable
+            Vulnerable
+            Vulnerable
+        
+        
+            9.1
+            9.1(2)SU2
+            9.1(2)SU2
+            9.1(2)SU2
+            9.1(2)SU2
+            9.1(2)SU2
+        
+        
+            10.0
+            10.0(1)SU1
+            10.0(1)SU1
+            10.0(1)SU1
+            Not Affected 
+            Not Affected 
+        
+        
+            10.5
+            Not Affected 
+            Not Affected 
+            Not Affected 
+            Not Affected 
+            Not Affected
+        
+    
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+These vulnerabilities were discovered by internal testing and during the handling of customer service requests.
+
+
+
+Some network scanners have been known to exploit Cisco bug ID CSCuh25062 (CVE-ID-2015-0612).
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Unity Connection</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37806</cvrf:URL>
+      <cvrf:Description>Cisco Unity Connection SIP Trunk Integration Port UDP 5060 Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37807</cvrf:URL>
+      <cvrf:Description>Cisco Unity Connection SIP Trunk Integration Crafted INVITE Message Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37808</cvrf:URL>
+      <cvrf:Description>Cisco Unity Connection SIP Trunk Integration Ports Busy Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37809</cvrf:URL>
+      <cvrf:Description>Cisco Unity Connection SIP Trunk Integration CuCsMgr Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37834</cvrf:URL>
+      <cvrf:Description>Cisco Unity Connection SIP Trunk Integration Crafted INVITE Message Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unity Connection" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-73608">Cisco Unity Connection </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unity Connection SIP Trunk Integration Port UDP 5060 Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuh25062</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuh25062</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0612</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-73608</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unity Connection</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unity Connection SIP Trunk Integration Crafted INVITE Message Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCul20444</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCul20444</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0613</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-73608</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unity Connection</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unity Connection SIP Trunk Integration Crafted INVITE Message Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCul26267</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCul26267</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0614</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-73608</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unity Connection</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unity Connection SIP Trunk Integration Ports Busy Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCul28089</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCul28089</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0615</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-73608</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unity Connection</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unity Connection SIP Trunk Integration CuCsMgr Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCul69819</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCul69819</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-0616</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-73608</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-cuc</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unity Connection</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

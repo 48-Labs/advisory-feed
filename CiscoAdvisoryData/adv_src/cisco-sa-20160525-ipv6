@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20160525-ipv6",
+  "title": "Cisco Products IPv6 Neighbor Discovery Crafted Packet Denial of Service Vulnerability",
+  "version": "1.16",
+  "firstPublished": "2016-05-25T16:00:00.000+0000",
+  "lastPublished": "2019-09-16T19:48:04.990+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160525-ipv6",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": null,
+  "cve": "CVE-2016-1409",
+  "ciscoBugId": "CSCuz81292,CSCuz66542,CSCuz79330,CSCuz80276,CSCuz80281,CSCuz83883,CSCuz89940,CSCuz96600,CSCva17794,CSCva21637,CSCva33531,CSCva39982,CSCva61877,CSCva94139,CSCvb19057",
+  "status": "",
+  "summary": "A vulnerability in the IP Version 6 (IPv6) packet processing functions of multiple Cisco products could allow an unauthenticated, remote attacker to cause an affected device to stop processing IPv6 traffic, leading to a denial of service (DoS) condition on the device.The ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "39065",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-05-26-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS IPv6 Neighbor Discovery Crafted Packet Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7506&signatureSubId=0&releaseVersion=S922&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

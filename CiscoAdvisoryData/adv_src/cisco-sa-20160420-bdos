@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20160420-bdos",
+  "title": "Cisco Wireless LAN Controller Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-04-20T16:00:00.000+0000",
+  "lastPublished": "2016-04-20T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160420-bdos",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2016-1364",
+  "ciscoBugId": "CSCur66908",
+  "status": "",
+  "summary": "A vulnerability in the Bonjour task manager of Cisco&nbsp;Wireless LAN Controller&nbsp;(WLC) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.The vulnerability is due to improper handling of Bonjour traffic ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "38590",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-04-21-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controller Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7453&signatureSubId=0&releaseVersion=S917&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

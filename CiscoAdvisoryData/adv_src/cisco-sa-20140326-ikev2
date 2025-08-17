@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20140326-ikev2",
+  "title": "Cisco IOS Software Internet Key Exchange Version 2 Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2014-03-26T16:00:00.000+0000",
+  "lastPublished": "2014-03-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-ikev2",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "33346",
+  "cve": "CVE-2014-2108",
+  "ciscoBugId": "CSCui88426",
+  "status": "",
+  "summary": "A vulnerability in the Internet Key Exchange Version 2 (IKEv2) module of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a reload of the affected device that would lead to a denial of service (DoS) condition.The vulnerability is ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Cisco IOS XE Software IKEv2 Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33346&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Cisco IOS Software Security Advisory Bundled Publication March 2014",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar14.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Packet Bad Length",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1250&signatureSubId=0&releaseVersion=S667&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

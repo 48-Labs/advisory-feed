@@ -1,0 +1,76 @@
+{
+  "identifier": "cisco-sa-20080213-phone",
+  "title": "Cisco Unified IP Phone Overflow and Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2008-02-13T16:00:00.000+0000",
+  "lastPublished": "2008-02-13T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080213-phone",
+  "severity": "Critical",
+  "cwe": "CWE-119, CWE-399",
+  "erpPubIds": "14268,14883,14886,14887,15102,15107,15109,cisco-amb-20080213-phone",
+  "cve": "CVE-2004-2486,CVE-2008-0526,CVE-2008-0527,CVE-2008-0528,CVE-2008-0529,CVE-2008-0530,CVE-2008-0531",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Unified IP Phone models contain multiple overflow and denial of service (DoS) vulnerabilities. There are workarounds for several of these vulnerabilities. Cisco has made free software available to address this issue for affected customers.   This advisory is posted at ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified IP Phone SCCP ICMP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14268&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified IP Phone SIP Firmware MIME Data Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14883&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified IP Phone Telnet Server Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14886&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified IP Phone SCCP Firmware HTTP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14887&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified IP Phone DNS Response Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15102&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified IP Phone SIP Proxy Response Heap Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15107&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Dropbear SSH Server Improperly Freed Variable Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15109&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified IP Phone Overflow and DoS Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080213-phone"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "SIP Proxy Response Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6781&signatureSubId=0&releaseVersion=S618&softwareVersion=6.0"
+        },
+        {
+          "name": "SIP MIME Request Boundary Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6782&signatureSubId=0&releaseVersion=S618&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

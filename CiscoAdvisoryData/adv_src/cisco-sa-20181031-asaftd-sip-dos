@@ -1,0 +1,46 @@
+{
+  "identifier": "cisco-sa-20181031-asaftd-sip-dos",
+  "title": "Cisco Adaptive Security Appliance Software and Cisco Firepower Threat Defense Software Denial of Service Vulnerability",
+  "version": "1.5",
+  "firstPublished": "2018-10-31T19:30:00.000+0000",
+  "lastPublished": "2018-11-16T21:19:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181031-asaftd-sip-dos",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2018-15454",
+  "ciscoBugId": "CSCvm43975",
+  "status": "",
+  "summary": "A vulnerability in the Session Initiation Protocol (SIP) inspectionengine of Cisco Adaptive Security Appliance (ASA) Software and CiscoFirepower Threat Defense (FTD) Software could allow an unauthenticated,remote attacker to cause an affected device to reload or trigger high CPU, resulting in ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "19389",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "20395",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "48264",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "48265",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "48593",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

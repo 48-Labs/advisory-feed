@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20110223-telepresence-ctsman",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence Manager",
+  "version": "1.0",
+  "firstPublished": "2011-02-23T16:00:00.000+0000",
+  "lastPublished": "2011-02-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110223-telepresence-ctsman",
+  "severity": "Critical",
+  "cwe": "CWE-287, CWE-399",
+  "erpPubIds": "22497,22498,22499,cisco-amb-20110223-telepresence",
+  "cve": "CVE-2011-0380,CVE-2011-0381,CVE-2011-0390",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Cisco TelePresence Manager. This security advisory outlines the details of the following vulnerabilities:       Simple Object Access Protocol (SOAP) Authentication Bypass      Java Remote Method Invocation (RMI) Command ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence System Software XML-Remote Procedure Call Request Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22497&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Simple Object Access Protocol Interface Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22498&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Java Remote Method Invocation Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22499&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco TelePresence Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20110223-telepresence"
+        }
+      ]
+    }
+  ]
+}

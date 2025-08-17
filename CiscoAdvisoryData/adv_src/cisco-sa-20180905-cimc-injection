@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20180905-cimc-injection",
+  "title": "Cisco Integrated Management Controller Command Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2018-09-05T16:00:00.000+0000",
+  "lastPublished": "2018-09-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180905-cimc-injection",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-77",
+  "cve": "CVE-2018-0430,CVE-2018-0431",
+  "ciscoBugId": "CSCvi34410,CSCvi45098,CSCvi46942,CSCvj38915,CSCvj39762",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Integrated Management Controller&nbsp;(IMC) Software could allow an authenticated, remote attacker to inject and execute arbitrary commands with root privileges on an affected device.The vulnerability is due to ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Integrated Management Controller Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8250&signatureSubId=0&releaseVersion=S1022&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

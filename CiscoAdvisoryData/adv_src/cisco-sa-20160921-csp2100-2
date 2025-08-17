@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160921-csp2100-2",
+  "title": "Cisco Cloud Services Platform 2100 Remote Command Execution Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-09-21T16:00:00.000+0000",
+  "lastPublished": "2016-09-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160921-csp2100-2",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2016-6374",
+  "ciscoBugId": "CSCuz89093",
+  "status": "",
+  "summary": "A vulnerability in the web interface of Cisco Cloud Services Platform (CSP) 2100 could allow an unauthenticated, remote attacker to execute arbitrary code on a targeted system.The vulnerability is due to insufficient sanitization of specific values received as part of a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Cloud Services Platform 2100 Remote Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7691&signatureSubId=0&releaseVersion=S943&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

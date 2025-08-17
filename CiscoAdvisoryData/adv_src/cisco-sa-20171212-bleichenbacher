@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20171212-bleichenbacher",
+  "title": "Bleichenbacher Attack on TLS Affecting Cisco Products: December 2017",
+  "version": "1.6",
+  "firstPublished": "2017-12-12T15:45:00.000+0000",
+  "lastPublished": "2018-05-18T17:31:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171212-bleichenbacher",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": "CWE-200",
+  "cve": "CVE-2017-12373,CVE-2017-15533,CVE-2017-17428",
+  "ciscoBugId": "CSCvg74693,CSCvg97652,CSCvh00296,CSCvh10981,CSCvh25064",
+  "status": "",
+  "summary": "On December 12, 2017, a research paper with the title Return of Bleichenbacher's Oracle Threat was  made publicly available. This paper describes how some Transport Layer Security (TLS) stacks are vulnerable to variations of the classic Bleichenbacher attack on RSA key exchange. Multiple ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "45120",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2017-12-12-new.html"
+        },
+        {
+          "name": "45199",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "45200",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "45201",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "45830",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Bleichenbacher TLS Decryption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8150&signatureSubId=0&releaseVersion=S1005&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

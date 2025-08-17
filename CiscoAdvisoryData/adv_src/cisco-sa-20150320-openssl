@@ -1,0 +1,88 @@
+{
+  "identifier": "cisco-sa-20150320-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL (March 2015) Affecting Cisco Products",
+  "version": "1.14",
+  "firstPublished": "2015-03-20T20:20:00.000+0000",
+  "lastPublished": "2016-01-11T13:40:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150320-openssl",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-119, CWE-20, CWE-310, CWE",
+  "erpPubIds": "37959,37956,37948,37950,37960,37955,37954,37953,37958,37957",
+  "cve": "CVE-2015-0207,CVE-2015-0209,CVE-2015-0285,CVE-2015-0287,CVE-2015-0288,CVE-2015-0289,CVE-2015-0290,CVE-2015-0291,CVE-2015-0292,CVE-2015-0293,CVE-2015-1787",
+  "ciscoBugId": "CSCut46130,CSCut45798,CSCut45827,CSCut45828,CSCut45829,CSCut45834,CSCut45835,CSCut45836,CSCut45837,CSCut45838,CSCut45840,CSCut45841,CSCut45844,CSCut45846,CSCut45851,CSCut45854,CSCut45866,CSCut45867,CSCut45869,CSCut45874,CSCut45878,CSCut45879,CSCut45880,CSCut45883,CSCut45888,CSCut45893,CSCut45894,CSCut45900,CSCut45902,CSCut45904,CSCut45907,CSCut45912,CSCut45914,CSCut45916,CSCut45919,CSCut45925,CSCut45926,CSCut45932,CSCut45933,CSCut45934,CSCut45935,CSCut45936,CSCut45942,CSCut45944,CSCut45947,CSCut45950,CSCut45951,CSCut45953,CSCut45954,CSCut45956,CSCut45958,CSCut45960,CSCut45961,CSCut45962,CSCut45963,CSCut45964,CSCut45965,CSCut45966,CSCut45967,CSCut45968,CSCut45970,CSCut45971,CSCut45972,CSCut45975,CSCut45976,CSCut45977,CSCut45978,CSCut45980,CSCut45985,CSCut45987,CSCut45990,CSCut45994,CSCut46003,CSCut46011,CSCut46019,CSCut46028,CSCut46029,CSCut46035,CSCut46044,CSCut46047,CSCut46048,CSCut46054,CSCut46056,CSCut46058,CSCut46059,CSCut46072,CSCut46079,CSCut46092,CSCut46096,CSCut46103,CSCut46126,CSCut46136,CSCut46139,CSCut46140,CSCut46145,CSCut46146,CSCut46151,CSCut46164,CSCut46165,CSCut46171,CSCut46175,CSCut46176,CSCut46177,CSCut46180,CSCut46183,CSCut46188,CSCut46193,CSCut46198,CSCut46199,CSCut46200,CSCut46201,CSCut46204,CSCut46207,CSCut46209,CSCut46211,CSCut46214,CSCut46215,CSCut46368,CSCut46458,CSCut46478,CSCut46480,CSCut46498,CSCut46503,CSCut46528,CSCut46530,CSCut46564,CSCut46572,CSCut46580,CSCut46607,CSCut46608,CSCut46612,CSCut46632,CSCut46634,CSCut46635,CSCut68520,CSCuu83317,CSCuy37090",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or corrupt portions of OpenSSL process memory. On March 19, 2015, the OpenSSL Project ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL d2i_ECPrivateKey Use-After-Free Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37959&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL SSLv2 Server Reachable Assert Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37956&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL ClientHello sigalgs Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37948&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL DTLSv1_listen Segmentation Fault Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37950&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL X509_to_X509_REQ NULL Pointer Dereference Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37960&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Base64 Decode Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37955&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL PKCS7 NULL Pointer Dereference Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37954&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL ASN.1 Structure Reuse Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37953&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Unseeded PRNG Handshake Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37958&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL Empty ClientKeyExchange Message Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37957&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "34595",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "34649",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "44374",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "44375",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

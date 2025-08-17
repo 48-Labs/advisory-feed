@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20130925-ike",
+  "title": "Cisco IOS Software Internet Key Exchange Memory Leak Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2013-09-25T16:00:00.000+0000",
+  "lastPublished": "2013-09-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130925-ike",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "30696",
+  "cve": "CVE-2013-5473",
+  "ciscoBugId": "CSCtx66011",
+  "status": "",
+  "summary": "A vulnerability in the Internet Key Exchange (IKE) protocol of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a memory leak that could lead to a device reload.The vulnerability is due to incorrect handling of malformed IKE ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS and IOS XE Software Internet Key Exchange Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30696&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep13.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20111026-csa",
+  "title": "Cisco Security Agent Remote Code Execution Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2011-10-26T16:00:00.000+0000",
+  "lastPublished": "2011-10-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111026-csa",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "Cisco-SA-20110420-CVE-2011-0808,22962",
+  "cve": "CVE-2011-0794,CVE-2011-0808",
+  "ciscoBugId": "CSCtq29413",
+  "status": "",
+  "summary": "Cisco Security Agent is affected by vulnerabilities that could allow an unauthenticated attacker to perform remote code execution on the affected device. These vulnerabilities are in a third-party library (Oracle Outside In) and are documented in CERT-CC Vulnerability Note VU#520721 at ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Oracle Outside In Technology File Processing Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22962&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Oracle Outside In Technology File Processing Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20110420-CVE-2011-0808"
+        }
+      ]
+    }
+  ]
+}

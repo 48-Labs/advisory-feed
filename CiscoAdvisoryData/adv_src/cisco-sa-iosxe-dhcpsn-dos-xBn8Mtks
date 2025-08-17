@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-iosxe-dhcpsn-dos-xBn8Mtks",
+  "title": "Cisco IOS XE Software DHCP Snooping Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2025-05-07T16:00:00.000+0000",
+  "lastPublished": "2025-05-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-dhcpsn-dos-xBn8Mtks",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-400",
+  "erpPubIds": "ERP-75279",
+  "cve": "CVE-2025-20162",
+  "ciscoBugId": "CSCwm45385",
+  "status": "",
+  "summary": "A vulnerability in the DHCP snooping security feature of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a full interface queue wedge, which could result in a denial of service (DoS) condition.This vulnerability is due to improper handling of DHCP ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: May 2025 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75279&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

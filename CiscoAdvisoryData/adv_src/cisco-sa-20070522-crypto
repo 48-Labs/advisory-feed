@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20070522-crypto",
+  "title": "Vulnerability In Crypto Library",
+  "version": "2.0",
+  "firstPublished": "2007-05-22T13:00:00.000+0000",
+  "lastPublished": "2007-05-22T13:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070522-crypto",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "13365",
+  "cve": "CVE-2006-3894",
+  "ciscoBugId": "CSCsd85587",
+  "status": "",
+  "summary": " A vulnerability has been discovered in a third party cryptographiclibrary which is used by a number of Cisco products. This vulnerability may betriggered when a malformed Abstract Syntax Notation One (ASN.1) object isparsed. Due to the nature of the vulnerability it may be possible, in ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "RSA BSAFE Cryptographic Libraries ASN.1 Parsing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13365&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

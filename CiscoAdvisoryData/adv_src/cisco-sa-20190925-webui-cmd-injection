@@ -1,0 +1,69 @@
+{
+  "identifier": "cisco-sa-20190925-webui-cmd-injection",
+  "title": "Cisco IOS XE Software Web UI Command Injection Vulnerabilities",
+  "version": "1.2",
+  "firstPublished": "2019-09-25T16:00:00.000+0000",
+  "lastPublished": "2019-10-14T18:25:06.080+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190925-webui-cmd-injection",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-77",
+  "erpPubIds": "ERP-72547",
+  "cve": "CVE-2019-12650,CVE-2019-12651",
+  "ciscoBugId": "CSCvo61821,CSCvp78858,CSCvp95724",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based user interface (Web UI) of Cisco IOS XE Software could allow an authenticated, remote attacker to execute commands with elevated privileges on the affected device.For more information about these vulnerabilities, see the ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "50117",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-05-14-new.html"
+        },
+        {
+          "name": "50118",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-05-14-new.html"
+        },
+        {
+          "name": "51622",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-09-26-new.html"
+        },
+        {
+          "name": "51623",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-09-26-new.html"
+        },
+        {
+          "name": "51624",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-09-26-new.html"
+        },
+        {
+          "name": "51625",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-09-26-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2019 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-72547&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS XE Software Web UI Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8348&signatureSubId=0&releaseVersion=S1033&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

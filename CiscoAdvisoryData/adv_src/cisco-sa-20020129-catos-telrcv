@@ -1,0 +1,76 @@
+{
+  "identifier": "cisco-sa-20020129-catos-telrcv",
+  "title": "Cisco CatOS Telnet Buffer Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2002-01-29T15:00:00.000+0000",
+  "lastPublished": "2002-01-29T15:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020129-catos-telrcv",
+  "cwe": "CWE-119",
+  "erpPubIds": "2467,cisco-sa-20020903-vpn3k-vulnerability",
+  "cve": "CVE-2001-0554",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Some Cisco Catalyst switches, running certain CatOS based software releases, have a vulnerability wherein a buffer overflow in the Telnet option handling can cause the Telnet daemon to crash and result in a switch reload.    This vulnerability can be exploited to initiate a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Linux/Unix: Telnet Daemon Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=2467&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco VPN 3000 Concentrator Multiple Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020903-vpn3k-vulnerability"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "1252",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1253",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "BSD Telnet Daemon Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3402&signatureSubId=0&releaseVersion=S401&softwareVersion=6.0"
+        },
+        {
+          "name": "BSD Telnet Daemon Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3402&signatureSubId=1&releaseVersion=S401&softwareVersion=6.0"
+        },
+        {
+          "name": "BSD Telnet Daemon Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3402&signatureSubId=2&releaseVersion=S401&softwareVersion=6.0"
+        },
+        {
+          "name": "BSD Telnet Daemon Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3402&signatureSubId=3&releaseVersion=S399&softwareVersion=6.0"
+        },
+        {
+          "name": "BSD Telnet Daemon Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3402&signatureSubId=4&releaseVersion=S401&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

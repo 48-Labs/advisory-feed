@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20090923-ios-fw",
+  "title": "Cisco IOS Software Zone-Based Policy Firewall Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2009-09-23T16:00:00.000+0000",
+  "lastPublished": "2009-09-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090923-ios-fw",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "18886",
+  "cve": "CVE-2009-2867",
+  "ciscoBugId": "CSCsr18691",
+  "status": "",
+  "summary": "Cisco IOS&reg; devices that are configured with Cisco IOS Zone-Based Policy Firewall Session Initiation Protocol (SIP) inspection are vulnerable to denial of service (DoS) attacks when processing a specific SIP transit packet. Exploitation of the vulnerability could result in a ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Zone-Based Policy Firewall Session Initiation Protocol Inspection Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18886&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS SIP Parser Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=18639&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

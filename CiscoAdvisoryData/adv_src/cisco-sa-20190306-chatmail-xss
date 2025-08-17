@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190306-chatmail-xss",
+  "title": "Cisco Enterprise Chat and Email Cross-Site Scripting Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2019-03-06T16:00:00.000+0000",
+  "lastPublished": "2019-03-06T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190306-chatmail-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2019-1702",
+  "ciscoBugId": "CSCvn77926,CSCvn77927",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Enterprise Chat and Email could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of the affected software.The ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "identifier": "cisco-sa-20130925-dhcp",
+  "title": "Cisco IOS Software DHCP Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2013-09-25T16:00:00.000+0000",
+  "lastPublished": "2013-09-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130925-dhcp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "30698",
+  "cve": "CVE-2013-5475",
+  "ciscoBugId": "CSCug31561",
+  "status": "",
+  "summary": "A vulnerability in the DHCP implementation of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition.The vulnerability occurs during the parsing of crafted DHCP packets. An attacker could exploit this ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS and IOS XE Software DHCP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30698&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "43573",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep13.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Software DHCP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2763&signatureSubId=0&releaseVersion=S744&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

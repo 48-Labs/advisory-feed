@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20130801-lsaospf",
+  "title": "OSPF LSA Manipulation Vulnerability in Multiple Cisco Products",
+  "version": "1.4",
+  "firstPublished": "2013-08-01T16:00:00.000+0000",
+  "lastPublished": "2017-02-13T14:29:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130801-lsaospf",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": "CWE-20",
+  "erpPubIds": "29974",
+  "cve": "CVE-2013-0149",
+  "ciscoBugId": "CSCug34485,CSCug34469,CSCug39762,CSCug39795,CSCug63304",
+  "status": "",
+  "summary": "Multiple Cisco products are affected by a vulnerability involving the Open Shortest Path First (OSPF) Routing Protocol Link State Advertisement (LSA) database. This vulnerability could allow an unauthenticated attacker to take full control of the OSPF Autonomous System (AS) domain routing table, ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the OSPF LSA Manipulation Vulnerability in Multiple Cisco Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29974"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco OSPF Blind LSA Injection Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2489&signatureSubId=0&releaseVersion=S740&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

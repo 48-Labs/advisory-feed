@@ -1,0 +1,76 @@
+{
+  "identifier": "cisco-sa-20100526-mediator",
+  "title": "Multiple Vulnerabilities in Cisco Network Building Mediator",
+  "version": "1.1",
+  "firstPublished": "2010-05-26T16:00:00.000+0000",
+  "lastPublished": "2010-05-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100526-mediator",
+  "severity": "Critical",
+  "cwe": "CWE-264, CWE-287, CWE-310",
+  "erpPubIds": "20439,20440,20441,20443,20444,20445,cisco-amb-20100526-mediator",
+  "cve": "CVE-2010-0595,CVE-2010-0596,CVE-2010-0597,CVE-2010-0598,CVE-2010-0599,CVE-2010-0600",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Cisco Network Building Mediator (NBM) products. These vulnerabilities also affect the legacy Richards-Zeta Mediator products. This security advisory outlines details of the following vulnerabilities:      Default credentials  ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Network Building Mediator Default Credentials Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20439&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Network Building Mediator HTTP Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20440&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Network Building Mediator XML RPC Remote Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20441&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Network Building Mediator Unauthorized HTTP Information Interception Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20443&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Network Building Mediator XML RPC Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20444&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Network Building Mediator Unauthorized Information Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20445&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Network Building Mediator",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100526-mediator"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Network Building Mediator Unauthorized Information Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=23879&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Network Building Mediator Default Credentials",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24241&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Network Building Mediator HTTP Privilege Escalation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24739&signatureSubId=0&releaseVersion=S517&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

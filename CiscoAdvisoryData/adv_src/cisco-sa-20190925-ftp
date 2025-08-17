@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190925-ftp",
+  "title": "Cisco IOS XE Software FTP Application Layer Gateway for NAT, NAT64, and ZBFW Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2019-09-25T16:00:00.000+0000",
+  "lastPublished": "2019-11-20T15:15:59.840+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190925-ftp",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-72547",
+  "cve": "CVE-2019-12655",
+  "ciscoBugId": "CSCvn02419",
+  "status": "",
+  "summary": "A vulnerability in the FTP application layer gateway (ALG) functionality used by Network Address Translation (NAT), NAT IPv6 to IPv4 (NAT64), and the Zone-Based Policy Firewall (ZBFW) in Cisco&nbsp;IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "125:6:1",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-09-26-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2019 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-72547&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20170503-cme",
+  "title": "Cisco Aironet 1800, 2800, and 3800 Series Access Points Plug-and-Play Arbitrary Code Execution Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2017-05-03T16:00:00.000+0000",
+  "lastPublished": "2017-09-21T16:44:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170503-cme",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2017-3873",
+  "ciscoBugId": "CSCvb42386",
+  "status": "",
+  "summary": "A vulnerability in the Plug-and-Play (PnP) subsystem of the Cisco Aironet 1800, 2800, and 3800 Series Access Points running a Lightweight Access Point (AP) or Mobility Express image could allow an unauthenticated, adjacent attacker to execute arbitrary code with root privileges.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "45489",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-05-04-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Aironet Mobility Express Arbitrary Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7907&signatureSubId=0&releaseVersion=S980&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

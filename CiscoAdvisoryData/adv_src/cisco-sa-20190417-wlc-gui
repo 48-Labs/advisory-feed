@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20190417-wlc-gui",
+  "title": "Cisco Wireless LAN Controller Software GUI Configuration Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2019-04-17T16:00:00.000+0000",
+  "lastPublished": "2019-04-18T18:04:38.143+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190417-wlc-gui",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2018-0248",
+  "ciscoBugId": "CSCvb35683,CSCvd64417,CSCve58704,CSCve68131,CSCve82306,CSCve88013,CSCve90361,CSCve90365,CSCve91536,CSCve91601,CSCve92619,CSCve93039,CSCve93215,CSCve93547,CSCve94030,CSCve94052,CSCve94683,CSCve94821,CSCve94942,CSCve95046,CSCve95104,CSCve95848,CSCve95866,CSCve95898,CSCve95987,CSCve96534,CSCve96615,CSCve96858,CSCve96879,CSCve97734,CSCve97771,CSCve98357,CSCve98393,CSCve98434,CSCve99020,CSCve99072,CSCve99212,CSCve99744,CSCvf01690,CSCvf02412,CSCvf06525,CSCvf08015,CSCvf15789,CSCvf16237,CSCvf16322,CSCvf16358,CSCvf20684,CSCvf27133,CSCvf27342,CSCvf42722,CSCvf47085,CSCvf47220,CSCvf47430,CSCvf47934,CSCvf54469,CSCvf57639,CSCvf58849,CSCvf59210,CSCvf59796,CSCvf59799",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the administrative GUI configuration feature of Cisco&nbsp;Wireless LAN Controller (WLC) Software could allow an authenticated, remote attacker to cause the device to reload unexpectedly during device configuration when the administrator is using this GUI, causing a ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "49866",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-04-18-seu.html"
+        },
+        {
+          "name": "49867",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-04-18-seu.html"
+        }
+      ]
+    }
+  ]
+}

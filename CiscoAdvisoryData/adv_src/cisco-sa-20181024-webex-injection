@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20181024-webex-injection",
+  "title": "Cisco Webex Meetings Desktop App Update Service Command Injection Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2018-10-24T16:00:00.000+0000",
+  "lastPublished": "2018-11-27T16:01:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181024-webex-injection",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-78",
+  "cve": "CVE-2018-15442",
+  "ciscoBugId": "CSCvn17203",
+  "status": "",
+  "summary": "A vulnerability in the update service of Cisco Webex Meetings Desktop App for Windows could allow an authenticated, local attacker to execute arbitrary commands as a privileged user.The vulnerability is due to insufficient validation of user-supplied parameters. An attacker could ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "48241",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

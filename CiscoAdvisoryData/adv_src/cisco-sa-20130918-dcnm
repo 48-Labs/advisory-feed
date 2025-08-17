@@ -1,0 +1,97 @@
+{
+  "identifier": "cisco-sa-20130918-dcnm",
+  "title": "Multiple Vulnerabilities in Cisco Prime Data Center Network Manager",
+  "version": "1.2",
+  "firstPublished": "2013-09-18T16:00:00.000+0000",
+  "lastPublished": "2013-11-05T22:18:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130918-dcnm",
+  "severity": "Critical",
+  "cwe": "CWE-200, CWE-78",
+  "erpPubIds": "30757,30758,30756,30682",
+  "cve": "CVE-2013-5486,CVE-2013-5487,CVE-2013-5490",
+  "ciscoBugId": "CSCud80148,CSCue77029,CSCue77035,CSCue77036",
+  "status": "",
+  "summary": "Cisco Prime Data Center Network Manager (DCNM) containsmultiple vulnerabilities that could allow an unauthenticated, remote attacker to disclose file components, and access text files on an affected device. Various components of Cisco Prime DCNM areaffected.&nbsp; These vulnerabilities can be ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Prime Data Center Network Manager Remote Command Execution Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30757&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Prime Data Center Network Manager XML External Entity Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30758&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Prime Data Center Network Manager Information Disclosure Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30756&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Prime Data Center Network Manager",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30682"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "29041",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "29042",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "29141",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "29142",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "29266",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "38351",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Prime Data Center Network Manager XML External Entity Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2819&signatureSubId=0&releaseVersion=S742&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco DCNM-SAN Server Remote Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2828&signatureSubId=0&releaseVersion=S742&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco DCNM-SAN Server Remote Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2828&signatureSubId=1&releaseVersion=S742&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco DCNM-SAN Server Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2830&signatureSubId=0&releaseVersion=S742&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

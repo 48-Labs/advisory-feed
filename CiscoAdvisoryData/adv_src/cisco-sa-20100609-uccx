@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20100609-uccx",
+  "title": "Vulnerabilities in Cisco Unified Contact Center Express",
+  "version": "1.0",
+  "firstPublished": "2010-06-09T16:00:00.000+0000",
+  "lastPublished": "2010-06-09T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100609-uccx",
+  "severity": "High",
+  "cwe": "CWE-22, CWE-399",
+  "erpPubIds": "20537,cisco-amb-20100609-uccx",
+  "cve": "CVE-2010-1569,CVE-2010-1571",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": " Cisco Unified Contact Center Express (UCCX or Unified CCX) contains a denial of service (DoS) vulnerability and a directory traversal vulnerability. These vulnerabilities are independent of each other.   Exploitation of these vulnerabilities could result in a DoS condition or an ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Contact Center Express Bootstrap Service Remote Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20537&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Vulnerabilities in Unified Contact Center Express",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100609-uccx"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco UCCX Information Disclosure Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=26021&signatureSubId=0&releaseVersion=S803&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

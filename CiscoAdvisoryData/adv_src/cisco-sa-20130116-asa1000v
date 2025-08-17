@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20130116-asa1000v",
+  "title": "Cisco ASA 1000V Cloud Firewall H.323 Inspection Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2013-01-16T16:00:00.000+0000",
+  "lastPublished": "2013-01-16T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130116-asa1000v",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "27835",
+  "cve": "CVE-2012-5419",
+  "ciscoBugId": "CSCuc42812,CSCuc88741",
+  "status": "",
+  "summary": "A vulnerability in Cisco Adaptive Security Appliance (ASA) Software for the Cisco ASA 1000V Cloud Firewall may cause the Cisco ASA 1000V to reload after processing a malformed H.323 message. Cisco ASA 1000V Cloud Firewall is affected when H.323 inspection is enabled.Cisco has ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco ASA 1000V Cloud Firewall H.323 Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=27835&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA 1000v Cloud Firewall H.323 Inspection Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1807&signatureSubId=0&releaseVersion=S691&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

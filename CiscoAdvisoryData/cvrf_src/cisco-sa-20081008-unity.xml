@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Authentication Bypass in Cisco Unity</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20081008-unity</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2008-10-08T16:00:00</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2008-10-08T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2008-10-08T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability exists in Cisco Unity that could allow an  unauthenticated user to view or modify some of the configuration parameters of  the Cisco Unity server. Cisco has released software updates that address this vulnerabilities. A workaround that mitigates this vulnerability is  available.
+
+This advisory is posted at  https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20081008-unity ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20081008-unity"].</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco Unity is a voice and unified messaging platform. Cisco Unity can  be configured to interoperate with Microsoft Exchange or IBM Lotus Domino  enabling users to access e-mail, voice, and fax messages from a single  inbox.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">All Cisco Unity versions, 4.x, 5.x and 7.x, may be affected by this  vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">No other Cisco products are currently known to be affected by this  vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">Cisco Unity servers may be affected by an authentication bypass when  they are configured for anonymous authentication. Anonymous authentication is  used when Cisco Unity servers are authenticated to the subscriber instead of  Microsoft Windows (Integrated Windows authentication). By default, Cisco Unity  is configured so that the administrator uses the Integrated Windows  authentication method for authentication.
+
+ Details on authentication mechanisms can be found in the  Installation Guide for Cisco Unity in the  Authentication  Methods Available for the Cisco Unity Administrator ["http://www.cisco.com/en/US/docs/voice_ip_comm/unity/5x/installation/guide/umexnofo/5xcuigumenofo100.html#wp1533581"] section.
+
+ This authentication bypass vulnerability allows an  unauthenticated user the ability to view or modify some system configuration  parameters. No credentials, personally identifiable, or user information can be  obtained through exploitation of this vulnerability.
+
+ This vulnerability is documented in Cisco Bug ID   CSCsr86943  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCsr86943"]            ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)          and has been assigned  Common Vulnerability and Exposures (CVE) ID CVE-2008-3814.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">Integrated Windows authentication is not affected by this vulnerability  and may be used as an alternative to Anonymous Authentication.
+
+ Details on authentication mechanisms and how to configure  them can be found in the Installation Guide for Cisco Unity in the  Setting  Up Authentication for the Cisco Unity Administrator ["http://www.cisco.com/en/US/docs/voice_ip_comm/unity/5x/installation/guide/umexnofo/5xcuigumenofo100.html"] section.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">This vulnerability is fixed in Cisco Unity software version 4.2.1ES161  for the 4.2.1release, 5.0ES53 for the 5.x release, and 7.0ES8 for the 7.x  release.
+
+The latest versions of Cisco Unity software can be downloaded from  https://sec.cloudapps.cisco.com/support/downloads/go/Redirect.x?mdfid=274246502 ["https://sec.cloudapps.cisco.com/support/downloads/go/Redirect.x?mdfid=274246502"].  Software for each releases is available at:  4.2(1)  ES release ["https://sec.cloudapps.cisco.com/support/downloads/go/ImageList.x?relVer=4.2%281%29&amp;mdfid=280391779&amp;sftType=Unity+System+Software&amp;optPlat=&amp;nodecount=2&amp;edesignator=null&amp;modelName=Cisco+Unity+Version+4.2&amp;treeMdfId=278875240&amp;treeName=Voice+and+Unified+Communications&amp;modifmdfid=null&amp;imname=&amp;hybrid=Y&amp;imst=N&amp;lr=Y"],  5.0(1)  ES release ["https://sec.cloudapps.cisco.com/support/downloads/go/ImageList.x?relVer=5.0%281%29&amp;mdfid=281063851&amp;sftType=Unity+System+Software&amp;optPlat=&amp;nodecount=4&amp;edesignator=null&amp;modelName=Cisco+Unity+Version+5.0&amp;treeMdfId=278875240&amp;treeName=Voice+and+Unified+Communications&amp;modifmdfid=null&amp;imname=&amp;hybrid=Y&amp;imst=N&amp;lr=Y"],  7.0(2)  ES release ["https://sec.cloudapps.cisco.com/support/downloads/go/ImageList.x?relVer=7.0%282%29&amp;mdfid=281942013&amp;sftType=Unity+System+Software&amp;optPlat=&amp;nodecount=5&amp;edesignator=null&amp;modelName=Cisco+Unity+Version+7.0&amp;treeMdfId=278875240&amp;treeName=Voice+and+Unified+Communications&amp;modifmdfid=null&amp;imname=&amp;hybrid=Y&amp;imst=N&amp;lr=Y"].
+
+When considering software upgrades, also consult  http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"]  and any subsequent advisories to determine exposure and a complete upgrade  solution.
+
+In all cases, customers should exercise caution to be  certain the devices to be upgraded contain sufficient memory and that current  hardware and software configurations will continue to be supported properly by  the new release. If the information is not clear, contact the Cisco Technical  Assistance Center (TAC) or your contracted maintenance provider for  assistance.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">This vulnerability was reported to Cisco by VoIPShield Systems.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20081008-unity</cvrf:URL>
+      <cvrf:Description>Authentication Bypass in Cisco Unity</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unity" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2078">Cisco Unity </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unity Authentication Bypass Vulnerability</Title>
+    <CVE>CVE-2008-3814</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-2078</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>5.8</BaseScoreV2>
+        <TemporalScoreV2>4.8</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:P/I:P/A:N/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Integrated Windows authentication is not affected by this vulnerability  and may be used as an alternative to Anonymous Authentication.
+
+ Details on authentication mechanisms and how to configure  them can be found in the Installation Guide for Cisco Unity in the  Setting  Up Authentication for the Cisco Unity Administrator ["http://www.cisco.com/en/US/docs/voice_ip_comm/unity/5x/installation/guide/umexnofo/5xcuigumenofo100.html"] section.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20081008-unity</URL>
+        <Description>Authentication Bypass in Cisco Unity</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

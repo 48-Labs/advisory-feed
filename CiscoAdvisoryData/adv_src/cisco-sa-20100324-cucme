@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20100324-cucme",
+  "title": "Cisco Unified Communications Manager Express Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2010-03-24T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:04:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100324-cucme",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "20069,20070",
+  "cve": "CVE-2010-0585,CVE-2010-0586",
+  "ciscoBugId": "CSCsz48614,CSCsz49741",
+  "status": "",
+  "summary": "Devices running Cisco IOS&reg; Software andconfigured for Cisco Unified Communications Manager Express (CME) or CiscoUnified Survivable Remote Site Telephony (SRST) operation are affected by twodenial of service vulnerabilities that may result in a device reload ifsuccessfully ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Unified Communications Manager Express SCCP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20069&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Unified Communications Manager Express SCCP Request Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20070&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Malformed SCCP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24781&signatureSubId=0&releaseVersion=S479&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS Malformed SCCP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24799&signatureSubId=0&releaseVersion=S479&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20140122-vcs",
+  "title": "Cisco TelePresence Video Communication Server SIP Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2014-01-22T16:00:00.000+0000",
+  "lastPublished": "2014-01-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140122-vcs",
+  "severity": "High",
+  "cwe": "CWE",
+  "erpPubIds": "32459,32409",
+  "cve": "CVE-2014-0662",
+  "ciscoBugId": "CSCue97632",
+  "status": "",
+  "summary": "CiscoTelePresence Video Communication Server (VCS) contains a vulnerability that could allow anunauthenticated, remote attacker to trigger the failure of several critical processes which may cause active call to be dropped and prevent ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence Video Communication Server SDP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=32459&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco TelePresence Video Communication Server SIP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32409"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco TelePresence Video Communication Service SIP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3571&signatureSubId=0&releaseVersion=S765&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

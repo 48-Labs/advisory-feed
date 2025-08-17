@@ -1,0 +1,65 @@
+{
+  "identifier": "cisco-sa-20140924-mdns",
+  "title": "Multiple Vulnerabilities in Cisco IOS Software Multicast Domain Name System",
+  "version": "1.0",
+  "firstPublished": "2014-09-24T16:00:00.000+0000",
+  "lastPublished": "2014-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140924-mdns",
+  "severity": "High",
+  "cwe": "CWE-20, CWE-399",
+  "erpPubIds": "35608,35607,35023",
+  "cve": "CVE-2014-3357,CVE-2014-3358",
+  "ciscoBugId": "CSCuj58950,CSCul90866",
+  "status": "",
+  "summary": "The Cisco IOS Software implementation of the multicast Domain Name System (mDNS) feature contains the following vulnerabilities when processing mDNS packets that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition:    Cisco IOS Software mDNS ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Multicast Domain Name System Gateway Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35608&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Multicast Domain Name System Gateway Memory Leak Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35607&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco IOS Software Multicast Domain Name System",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=35023"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2014 Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep14.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed mDNS Response",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4565&signatureSubId=0&releaseVersion=S823&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed mDNS Response",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4698&signatureSubId=0&releaseVersion=S825&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

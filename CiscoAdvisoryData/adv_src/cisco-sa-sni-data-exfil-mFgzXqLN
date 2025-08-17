@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-sni-data-exfil-mFgzXqLN",
+  "title": "Multiple Cisco Products Server Name Identification Data Exfiltration Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2021-08-18T16:00:00.000+0000",
+  "lastPublished": "2021-09-27T16:31:35.080+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sni-data-exfil-mFgzXqLN",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-200",
+  "cve": "CVE-2021-34749",
+  "ciscoBugId": "CSCvy50873,CSCvy64824,CSCvy76771,CSCvz34379",
+  "status": "",
+  "summary": "A vulnerability in the web filtering features of multiple Cisco&nbsp;products could allow an unauthenticated, remote attacker to bypass web reputation filters and threat detection mechanisms on an affected device and exfiltrate data from a compromised host to a blocked external ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "58062",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

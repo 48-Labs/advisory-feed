@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-uccx-multi-UhOTvPGL",
+  "title": "Cisco Unified Contact Center Express Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2025-06-04T16:00:00.000+0000",
+  "lastPublished": "2025-06-04T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-uccx-multi-UhOTvPGL",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-22, CWE-502, CWE-79",
+  "cve": "CVE-2025-20276,CVE-2025-20277,CVE-2025-20279",
+  "ciscoBugId": "CSCwk24068,CSCwk24108,CSCwk24130",
+  "status": "New",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Unified Contact Center Express (Unified CCX) could allow an authenticated, remote attacker to perform a stored cross-site scripting (XSS) attack or execute arbitrary code on an affected device. To exploit these ",
+  "totalCount": 14,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

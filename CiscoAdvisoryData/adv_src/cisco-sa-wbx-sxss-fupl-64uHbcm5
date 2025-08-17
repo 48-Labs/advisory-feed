@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-wbx-sxss-fupl-64uHbcm5",
+  "title": "Cisco Webex Meetings Web UI Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2023-04-05T16:00:00.000+0000",
+  "lastPublished": "2023-04-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-wbx-sxss-fupl-64uHbcm5",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-20, CWE-79",
+  "cve": "CVE-2023-20132,CVE-2023-20134",
+  "ciscoBugId": "CSCwe38537,CSCwe38541",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web interface of Cisco Webex Meetings could allow an authenticated, remote attacker to conduct a stored cross-site scripting (XSS) attack or upload arbitrary files as recordings.For more information about these vulnerabilities, see the ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Firewall Services Module</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20121010-fwsm</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2012-10-10T14:28:46</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2012-10-10T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-10-10T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">The Cisco Firewall Services Module (FWSM) for Cisco Catalyst 6500 Series Switches and Cisco 7600 Series Routers is affected by the
+following vulnerabilities: 
+
+
+    DCERPC Inspection Buffer Overflow Vulnerability
+    
+    DCERPC Inspection Denial Of Service Vulnerabilities
+
+These vulnerabilities are not interdependent; a release that is
+affected by one vulnerability is not necessarily affected by the
+other.
+
+
+
+Exploitation of these vulnerabilities could allow an unauthenticated,
+remote attacker to trigger a reload of the affected device, or to execute arbitrary commands.  Repeated
+exploitation could result in a denial of service (DoS) condition.
+
+Cisco has released software updates that address these vulnerabilities. There are no workarounds that mitigate these vulnerabilities. 
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm"]
+
+
+
+Note: The Cisco Catalyst 6500 Series ASA Services Module, and the Cisco ASA 5500 Series Adaptive Security Appliance may also be affected by these vulnerabilities.
+
+
+
+The vulnerabilities affecting the Cisco Catalyst 6500 Series ASA Services Module and Cisco ASA 5500 Series Adaptive Security Appliance have been disclosed in a separate Cisco Security Advisory. The Advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-asa["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-asa"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">The Cisco FWSM for Cisco Catalyst 6500 Series Switches and Cisco 7600 Series Routers is affected by multiple
+vulnerabilities. The affected versions of the Cisco FWSM varies
+depending on the specific vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">Consult the "Software Versions and Fixes" section of this security advisory for more information about the affected versions.
+
+
+
+DCERPC Inspection Buffer Overflow Vulnerability
+
+
+
+The Cisco FWSM is vulnerable when DCERPC
+inspection is enabled.  DCERPC inspection
+is not enabled by default.
+
+
+
+DCERPC Inspection Denial Of Service Vulnerabilities
+
+
+
+The Cisco FWSM is vulnerable when DCERPC inspection is enabled.  DCERPC inspection is not enabled by default.  
+
+
+
+Checking Whether DCERPC Inspection Is Enabled
+
+
+
+To determine if your FWSM configuration is affected by these vulnerabilities, issue the
+show service-policy | include dcerpc  command. 
+
+
+
+The following example indicates a Cisco FWSM
+with DCERPC inspection enabled: 
+
+
+
+
+fwsm# show  service-policy | include dcerpc
+      Inspect: dcerpc, packet 0, drop 0, reset-drop 0
+
+
+
+
+
+
+How to Determine the Running Software Version
+To determine the version of the Cisco FWSM software that is running on a device, administrators can issue the show version command, as shown in the following example:
+
+
+FWSM&gt; show version
+
+FWSM Firewall Version 4.0(16)
+[...]
+
+Customers who use the Cisco Adaptive Security Device Manager (ASDM)
+to manage their devices can find the version of the software displayed
+in the table in the login window or in the upper left corner of the
+Cisco ASDM window. The version notation is similar to the following
+example:
+
+
+FWSM Version: 4.0(16)
+
+Version information can also be obtained from the Cisco Catalyst 6500 Series Switch or the Cisco 7600 Series Router.  To determine the version of Cisco FWSM Software that is running on a device, issue the show module
+command from Cisco IOS Software or Cisco Catalyst Operating System
+Software to identify what modules and submodules are installed on the
+system.
+
+The following example shows a system with a Cisco FWSM (WS-SVC-FWM-1) installed in slot 2:
+
+
+switch&gt;show module
+Mod Ports Card Type                              Model              Serial No.
+--- ----- -------------------------------------- ------------------ -----------
+  1   16  SFM-capable 16 port 1000mb GBIC        WS-X6516-GBIC      SAL06334NS9
+  2    6  Firewall Module                        WS-SVC-FWM-1       SAD10360485
+  3    8  Intrusion Detection System             WS-SVC-IDSM-2      SAD0932089Z
+  4    4  SLB Application Processor Complex      WS-X6066-SLB-APC   SAD093004BD
+  5    2  Supervisor Engine 720 (Active)         WS-SUP720-3B       SAL0934888E
+
+Mod MAC addresses                       Hw    Fw           Sw           Status
+--- ---------------------------------- ------ ------------ ------------ -------
+  1  0009.11e3.ade8 to 0009.11e3.adf7   5.1   6.3(1)       8.7(0.22)BUB Ok
+  2  0018.ba41.5092 to 0018.ba41.5099   4.0   7.2(1)       4.0(16)      Ok
+  3  0014.a90c.9956 to 0014.a90c.995d   5.0   7.2(1)       7.0(4)E4     Ok
+  4  0014.a90c.66e6 to 0014.a90c.66ed   1.7   Unknown      Unknown      PwrDown
+  5  0013.c42e.7fe0 to 0013.c42e.7fe3   4.4   8.1(3)       12.2(33)SXH8 Ok
+
+[...]
+
+After locating the correct slot, issue the show module  command to identify the software version that is running, as shown in the following example:
+
+
+switch&gt;show module 2
+Mod Ports Card Type                              Model              Serial No.
+--- ----- -------------------------------------- ------------------ -----------
+  2    6  Firewall Module                        WS-SVC-FWM-1       SAD10360485
+
+Mod MAC addresses                       Hw    Fw           Sw           Status
+--- ---------------------------------- ------ ------------ ------------ -------
+  2  0018.ba41.5092 to 0018.ba41.5099   4.0   7.2(1)       4.0(16)      Ok
+
+[...]
+
+The preceding example shows that the Cisco FWSM is running software version 4.0(16) as indicated by the Sw column.
+
+If a Virtual Switching System (VSS) is used to allow two physical
+Cisco Catalyst 6500 Series switches to operate as a single logical
+virtual switch, the show module switch all command can
+display the software version of all FWSMs that belong to switch 1 and
+switch 2. The output from this command will be similar to the output
+from show module  but will include module information for the modules in each switch in the VSS.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">With the exception of the Cisco Adaptive Security Appliance, and Cisco ASA Service Module, no other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">
+The Cisco FWSM is a high-speed, integrated
+firewall module for Cisco Catalyst 6500 Series Switches and Cisco 7600
+Series Routers. The FWSM offers firewall services with stateful packet
+filtering and deep packet inspection.
+
+The Cisco FWSM is affected by multiple vulnerabilities, which are described in the following sections:
+
+DCERPC Inspection Buffer Overflow Vulnerability
+
+DCERPC is a protocol widely used by Microsoft
+distributed client and server applications that allows software clients
+to execute programs on a server remotely. 
+
+A
+vulnerability exists in the code of the DCERPC inspection engine that
+would allow an unauthenticated, remote attacker to cause a reload of the
+affected system or to overflow the stack and possibly execute arbitrary
+commands. The vulnerability is due to insufficient validation of DCERPC
+packets within a valid DCERPC session. An attacker could exploit this
+vulnerability by sending a crafted DCERPC packet that will be
+inspected by the affected system. 
+
+
+
+Note: Only transit traffic can be used to exploit
+this vulnerability. This vulnerability affects both routed and
+transparent firewall mode in both single and multi-context mode. This
+vulnerability can be triggered by IPv4 and IPv6 traffic.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtr27522["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtr27522"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2012-4661.
+
+
+
+DCERPC Inspection Denial Of Service Vulnerabilities
+
+
+
+Two vulnerabilities exist in the DCERPC inspection engine that would
+allow an
+unauthenticated, remote attacker to cause a reload of the affected
+system. The vulnerabilities are due to insufficient validation of DCERPC
+packets within a valid DCERPC session. An attacker could exploit this
+vulnerability by
+sending a crafted DCERPC packet that will be inspected by the
+affected system.
+
+
+
+Note: Only transit traffic can be used to exploit
+these vulnerabilities. These vulnerabilities affect both routed and
+transparent firewall mode in both single and multi-context mode. These
+vulnerabilities can be triggered by IPv4 and IPv6 traffic.
+
+These vulnerabilities are documented in Cisco bug ID CSCtr27524["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtr27524"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and CSCtr27521["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtr27521"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and have been assigned CVE IDs CVE-2012-4662 and CVE-2012-4663, respectively.
+
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">Administrators can mitigate these vulnerabilities by disabling the DCERPC inspection if it is not required.
+
+
+
+No other workarounds exist to mitigate these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+
+DCERPC Inspection Buffer Overflow Vulnerability
+
+
+
+
+    
+        
+            Vulnerability
+            Major Release
+
+            
+            First Fixed Release
+
+            
+        
+        
+            DCERPC Inspection Buffer Overflow Vulnerability -
+            CSCtr27522
+
+            
+            3.1
+            Not Vulnerable
+
+            
+        
+        
+            3.2
+            Not Vulnerable 
+        
+        
+            4.0
+            Not Vulnerable
+
+            
+        
+        
+            4.1
+            4.1(9)
+        
+    
+
+
+
+DCERPC Inspection Denial Of Service Vulnerabilities
+
+
+
+
+    
+        
+            Vulnerability
+            Major Release
+
+            
+            First Fixed Release
+
+            
+        
+        
+            DCERPC Inspection Denial Of Service Vulnerabilities - CSCtr27524 and CSCtr27521
+
+            
+            3.1
+            Not Vulnerable
+
+            
+        
+        
+            3.2
+            Not Vulnerable
+
+            
+        
+        
+            4.0
+            Not Vulnerable
+
+            
+        
+        
+            4.1
+            4.1(7)
+        
+    
+
+
+
+Recommended Releases
+The following table lists all recommended releases. These recommended
+releases contain the fixes for all vulnerabilities in this advisory.
+Cisco recommends upgrading to a release that is equal to or later than
+these recommended releases.
+
+
+    
+        
+            
+            Major Release
+
+            
+            
+            Recommended Release
+
+            
+        
+        
+            3.1 
+            Not Vulnerable
+
+            
+        
+        
+            3.2 
+            Not Vulnerable
+
+            
+        
+        
+            4.0 
+            Not Vulnerable
+
+            
+        
+        
+            4.1 
+            4.1(9)
+        
+    
+
+
+
+Software Download
+Cisco FWSM Software can be downloaded from the Software Center on Cisco.com by visiting http://www.cisco.com/cisco/software/navigator.html["http://www.cisco.com/cisco/software/navigator.html"]
+For Cisco Catalyst 6500 Series ASA Services Module, navigate to Products
+&gt; Cisco Interfaces and Modules &gt; Cisco Services Modules &gt;Cisco
+Catalyst 6500 Series Firewall  Services Module &gt; ASA Services Module
+(FWSM) Software. Please note that some of these versions are interim versions and can be found by expanding the Interim tab on the download page.
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory. 
+
+The vulnerabilities described in this security advisory were found
+during internal testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Firewall Services Module</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Firewall Services Module (FWSM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5176">Cisco Firewall Services Module (FWSM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Adaptive Security Appliance (ASA) Software" Type="Product Name">
+        <Branch Name="8.3" Type="Product Version">
+          <Branch Name="8.3.1.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-99996">Cisco Adaptive Security Appliance (ASA) Software 8.3.1.1</FullProductName>
+          </Branch>
+          <Branch Name="8.3.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-99997">Cisco Adaptive Security Appliance (ASA) Software 8.3.1</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-108069">Cisco Adaptive Security Appliance (ASA) Software 8.3.2</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.23" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112138">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.23</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.25" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112800">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.25</FullProductName>
+          </Branch>
+          <Branch Name="8.3.1.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115249">Cisco Adaptive Security Appliance (ASA) Software 8.3.1.4</FullProductName>
+          </Branch>
+          <Branch Name="8.3.1.6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115250">Cisco Adaptive Security Appliance (ASA) Software 8.3.1.6</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115251">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.4</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.13" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115252">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.13</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.31" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115262">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.31</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.33" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115263">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.33</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.4" Type="Product Version">
+          <Branch Name="8.4.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-108073">Cisco Adaptive Security Appliance (ASA) Software 8.4.1</FullProductName>
+          </Branch>
+          <Branch Name="8.4.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112139">Cisco Adaptive Security Appliance (ASA) Software 8.4.2</FullProductName>
+          </Branch>
+          <Branch Name="8.4.1.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115253">Cisco Adaptive Security Appliance (ASA) Software 8.4.1.3</FullProductName>
+          </Branch>
+          <Branch Name="8.4.1.11" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115254">Cisco Adaptive Security Appliance (ASA) Software 8.4.1.11</FullProductName>
+          </Branch>
+          <Branch Name="8.4.2.8" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115255">Cisco Adaptive Security Appliance (ASA) Software 8.4.2.8</FullProductName>
+          </Branch>
+          <Branch Name="8.4.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115256">Cisco Adaptive Security Appliance (ASA) Software 8.4.3</FullProductName>
+          </Branch>
+          <Branch Name="8.4.3.8" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115264">Cisco Adaptive Security Appliance (ASA) Software 8.4.3.8</FullProductName>
+          </Branch>
+          <Branch Name="8.4.3.9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115265">Cisco Adaptive Security Appliance (ASA) Software 8.4.3.9</FullProductName>
+          </Branch>
+          <Branch Name="8.4.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115266">Cisco Adaptive Security Appliance (ASA) Software 8.4.4</FullProductName>
+          </Branch>
+          <Branch Name="8.4.4.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-185251">Cisco Adaptive Security Appliance (ASA) Software 8.4.4.1</FullProductName>
+          </Branch>
+          <Branch Name="8.4.4.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-185252">Cisco Adaptive Security Appliance (ASA) Software 8.4.4.3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.5" Type="Product Version">
+          <Branch Name="8.5.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112136">Cisco Adaptive Security Appliance (ASA) Software 8.5.1</FullProductName>
+          </Branch>
+          <Branch Name="8.5.1.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112140">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.1</FullProductName>
+          </Branch>
+          <Branch Name="8.5.1.6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115269">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.6</FullProductName>
+          </Branch>
+          <Branch Name="8.5.1.7" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115270">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.7</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.6" Type="Product Version">
+          <Branch Name="8.6.1.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115268">Cisco Adaptive Security Appliance (ASA) Software 8.6.1.1</FullProductName>
+          </Branch>
+          <Branch Name="8.6.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115276">Cisco Adaptive Security Appliance (ASA) Software 8.6.1</FullProductName>
+          </Branch>
+          <Branch Name="8.6.1.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-185176">Cisco Adaptive Security Appliance (ASA) Software 8.6.1.2</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>DCERPC Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtr21346</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtr21346</Note>
+    </Notes>
+    <CVE>CVE-2012-4663</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112138</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-112140</ProductID>
+        <ProductID>CVRFPID-115249</ProductID>
+        <ProductID>CVRFPID-115250</ProductID>
+        <ProductID>CVRFPID-115251</ProductID>
+        <ProductID>CVRFPID-115252</ProductID>
+        <ProductID>CVRFPID-115253</ProductID>
+        <ProductID>CVRFPID-115254</ProductID>
+        <ProductID>CVRFPID-115255</ProductID>
+        <ProductID>CVRFPID-115269</ProductID>
+        <ProductID>CVRFPID-115270</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Administrators can mitigate these vulnerabilities by disabling the DCERPC inspection if it is not required.
+
+
+
+No other workarounds exist to mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>DCERPC Inspection Buffer Overflow Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtr21359</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtr21359,CSCtr27522</Note>
+    </Notes>
+    <CVE>CVE-2012-4661</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112138</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-112140</ProductID>
+        <ProductID>CVRFPID-112800</ProductID>
+        <ProductID>CVRFPID-115249</ProductID>
+        <ProductID>CVRFPID-115250</ProductID>
+        <ProductID>CVRFPID-115251</ProductID>
+        <ProductID>CVRFPID-115252</ProductID>
+        <ProductID>CVRFPID-115253</ProductID>
+        <ProductID>CVRFPID-115254</ProductID>
+        <ProductID>CVRFPID-115255</ProductID>
+        <ProductID>CVRFPID-115256</ProductID>
+        <ProductID>CVRFPID-115262</ProductID>
+        <ProductID>CVRFPID-115263</ProductID>
+        <ProductID>CVRFPID-115264</ProductID>
+        <ProductID>CVRFPID-115265</ProductID>
+        <ProductID>CVRFPID-115266</ProductID>
+        <ProductID>CVRFPID-115268</ProductID>
+        <ProductID>CVRFPID-115269</ProductID>
+        <ProductID>CVRFPID-115270</ProductID>
+        <ProductID>CVRFPID-115276</ProductID>
+        <ProductID>CVRFPID-185176</ProductID>
+        <ProductID>CVRFPID-185251</ProductID>
+        <ProductID>CVRFPID-185252</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+        <ProductID>CVRFPID-5176</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:C/I:P/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Administrators can mitigate these vulnerabilities by disabling the DCERPC inspection if it is not required.
+
+
+
+No other workarounds exist to mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>DCERPC Inspection Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtr21376</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtr21376,CSCtr27524</Note>
+    </Notes>
+    <CVE>CVE-2012-4662</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112138</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-112140</ProductID>
+        <ProductID>CVRFPID-115249</ProductID>
+        <ProductID>CVRFPID-115250</ProductID>
+        <ProductID>CVRFPID-115251</ProductID>
+        <ProductID>CVRFPID-115252</ProductID>
+        <ProductID>CVRFPID-115253</ProductID>
+        <ProductID>CVRFPID-115254</ProductID>
+        <ProductID>CVRFPID-115269</ProductID>
+        <ProductID>CVRFPID-115270</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+        <ProductID>CVRFPID-5176</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Administrators can mitigate these vulnerabilities by disabling the DCERPC inspection if it is not required.
+
+
+
+No other workarounds exist to mitigate these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

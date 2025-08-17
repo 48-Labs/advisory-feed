@@ -1,0 +1,72 @@
+{
+  "identifier": "cisco-sa-20070412-wlc",
+  "title": "Multiple Vulnerabilities in the Cisco Wireless LAN Controller and Cisco Lightweight Access Points",
+  "version": "1.4",
+  "firstPublished": "2007-04-12T16:00:00.000+0000",
+  "lastPublished": "2007-04-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070412-wlc",
+  "severity": "Critical",
+  "cwe": "CWE-264, CWE-399",
+  "erpPubIds": "13041,13044,13047,13049,13051,13085,cisco-amb-20070412-wlc",
+  "cve": "CVE-2007-2036,CVE-2007-2037,CVE-2007-2038,CVE-2007-2039,CVE-2007-2040,CVE-2007-2041",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   The Cisco Wireless LAN Controller (WLC) manages Cisco Aironet access points using the Lightweight Access Point Protocol (LWAPP). The WLC contains multiple vulnerabilities that could result in a denial of service (DoS) condition, information disclosure, or access control list changes, ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controller Default SNMP Strings Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13041&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Malformed Ethernet Traffic Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13044&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller NPU Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13047&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller ACL Configuration Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13049&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Aironet Lightweight Access Point Default Service Password Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13051&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless LAN Controller Malformed SNAP Packet NPU Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13085&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in the Cisco WLC and Cisco Lightweight APs",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070412-wlc"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "SNMP Community String Public",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4512&signatureSubId=0&releaseVersion=S579&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Community String Private",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6003&signatureSubId=0&releaseVersion=S579&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

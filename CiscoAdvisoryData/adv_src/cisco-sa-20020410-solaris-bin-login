@@ -1,0 +1,71 @@
+{
+  "identifier": "cisco-sa-20020410-solaris-bin-login",
+  "title": "Solaris /bin/login Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2002-04-10T16:00:00.000+0000",
+  "lastPublished": "2002-04-10T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020410-solaris-bin-login",
+  "cwe": "CWE-119",
+  "erpPubIds": "2943",
+  "cve": "CVE-2001-0797,CVE-2002-1689",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "This advisory describes a vulnerability that affects Cisco products and applications that are installed on the Solaris operating system, and is based on the vulnerability of an common service within the Solaris operating system, not due to a defect of the Cisco product or application. A ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Unix System V Derived /bin/login Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=2943&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "13613",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "3147",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "3274",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Telnet Excessive Environment Options",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3403&signatureSubId=0&releaseVersion=S290&softwareVersion=6.0"
+        },
+        {
+          "name": "SysV /bin/login Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3404&signatureSubId=0&releaseVersion=S423&softwareVersion=6.0"
+        },
+        {
+          "name": "SysV /bin/login Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3404&signatureSubId=1&releaseVersion=S423&softwareVersion=6.0"
+        },
+        {
+          "name": "Solaris TTYPROMPT Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3406&signatureSubId=0&releaseVersion=S633&softwareVersion=6.0"
+        },
+        {
+          "name": "Rlogin Long TERM Variable",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3501&signatureSubId=0&releaseVersion=S423&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

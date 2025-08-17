@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20200102-dcnm-sql-inject",
+  "title": "Cisco Data Center Network Manager SQL Injection Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2020-01-02T16:00:00.000+0000",
+  "lastPublished": "2020-01-15T15:57:59.897+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200102-dcnm-sql-inject",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-89",
+  "cve": "CVE-2019-15984,CVE-2019-15985",
+  "ciscoBugId": "CSCvq98723,CSCvq98730,CSCvq98736,CSCvq98748,CSCvr01692,CSCvr01694,CSCvr01701,CSCvr07317,CSCvr14598,CSCvr17974,CSCvr23573,CSCvr23728,CSCvr23733,CSCvr23770,CSCvr23864,CSCvr23865,CSCvr32014,CSCvr34624,CSCvr46544,CSCvr46547,CSCvr79116,CSCvr79127,CSCvs16306",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the REST and SOAP API endpoints of Cisco&nbsp;Data Center Network Manager (DCNM) could allow an authenticated, remote attacker to execute arbitrary SQL commands on an affected device. To exploit these vulnerabilities, an attacker would need administrative privileges ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "52543",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52544",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        },
+        {
+          "name": "52545",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-01-03-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Data Center Network Manager SQL Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8379&signatureSubId=0&releaseVersion=S1037&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Data Center Network Manager SQL Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8379&signatureSubId=1&releaseVersion=S1037&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Data Center Network Manager SQL Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8379&signatureSubId=2&releaseVersion=S1037&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

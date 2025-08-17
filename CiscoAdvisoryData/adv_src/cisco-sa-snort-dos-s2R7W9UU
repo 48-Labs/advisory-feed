@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-snort-dos-s2R7W9UU",
+  "title": "Multiple Cisco Products Snort Memory Leak Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2021-10-27T16:00:00.000+0000",
+  "lastPublished": "2021-10-29T14:07:40.973+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort-dos-s2R7W9UU",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-770",
+  "erpPubIds": "ERP-74773",
+  "cve": "CVE-2021-40114",
+  "ciscoBugId": "CSCvt57503,CSCvx29001",
+  "status": "",
+  "summary": "Multiple Cisco&nbsp;products are affected by a vulnerability in the way the Snort detection engine processes ICMP traffic that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.The vulnerability is due to improper memory ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2021 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74773&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

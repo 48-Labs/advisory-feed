@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-umbrella-xss-LfeYQV3",
+  "title": "Cisco Umbrella Stored Cross-Site Scripting Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2022-11-02T16:00:00.000+0000",
+  "lastPublished": "2022-11-02T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-umbrella-xss-LfeYQV3",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "cve": "CVE-2022-20969",
+  "ciscoBugId": "CSCwc04568,CSCwc04570,CSCwc04575,CSCwc04587",
+  "status": "",
+  "summary": "A vulnerability in multiple management dashboard pages of Cisco&nbsp;Umbrella could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the Cisco&nbsp;Umbrella dashboard.This vulnerability is due to unsanitized user input. An ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

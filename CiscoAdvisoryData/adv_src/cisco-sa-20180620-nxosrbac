@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20180620-nxosrbac",
+  "title": "Cisco NX-OS Software Role-Based Access Control Elevated Privileges Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2018-06-20T16:00:00.000+0000",
+  "lastPublished": "2018-07-05T21:11:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180620-nxosrbac",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "erpPubIds": "ERP-67770",
+  "cve": "CVE-2018-0293",
+  "ciscoBugId": "CSCvd77904",
+  "status": "",
+  "summary": "A vulnerability in role-based access control (RBAC) for Cisco NX-OS Software could allow an authenticated, remote attacker to execute CLI commands that should be restricted for a nonadministrative user. The attacker would have to possess valid user credentials for the device.The ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: June 2018 Cisco FXOS and NX-OS Software Security Advisory Collection",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-67770&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

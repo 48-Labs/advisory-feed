@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Unified Communications Domain Manager</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20140702-cucdm</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>3.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2014-07-02T15:35:37</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.0</cvrf:Number>
+        <cvrf:Date>2014-07-08T21:14:32</cvrf:Date>
+        <cvrf:Description>Added information regarding fixed versions of the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>3.0</cvrf:Number>
+        <cvrf:Date>2014-10-13T15:55:13</cvrf:Date>
+        <cvrf:Description>Added important information regarding fixed versions of the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2014-07-02T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2014-10-13T15:55:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco Unified Communications Domain Manager (Cisco Unified CDM) is affected by the following vulnerabilities:
+
+
+    Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability
+    Cisco Unified Communications Domain Manager Default SSH Key Vulnerability 
+    Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability 
+
+Successful exploitation of the Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability or of the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability may allow an attacker
+to execute arbitrary commands or obtain privileged access to the affected system.
+
+Successful exploitation of the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability may allow an attacker to access and modify BVSMWeb portal user information
+such settings in the personal phone directory, speed dials, Single Number Reach, and
+call forward settings.
+
+
+
+Cisco has released free software updates that address the Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability and the
+Cisco Unified Communications Domain Manager Default SSH Key Vulnerability. 
+
+Cisco will provide a free software update for the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability as soon as the fix is available.
+
+
+
+Workarounds that mitigate these vulnerabilities are not available. Customers that are concerned about the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability may apply the
+mitigation detailed in the "Workarounds" section of this advisory. 
+
+
+
+Note: Due to an error in the fix of the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability, all Cisco Unified CDM Platform Software releases are
+vulnerable regardless if a previous patch has been applied due to this security advisory. This advisory has been updated to provide additional information about the fix for the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability.
+
+
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140702-cucdm["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140702-cucdm"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability
+
+
+
+This vulnerability affects all Cisco Unified CDM Application Software versions prior to 8.1.4.
+
+
+
+Cisco Unified Communications Domain Manager Default SSH Key Vulnerability
+
+
+
+This vulnerability affects all Cisco Unified CDM Platform Software that do not have the "ssh_keys_cleanup" hotfix patch installed.
+
+
+
+Note: Due to an error in the fix, all Cisco Unified CDM Platform Software releases are
+vulnerable regardless if a previous patch has been applied due to this security advisory. Customers
+running any Cisco Unified CDM Platform Software release should
+request the hotfix patch called "ssh_keys_cleanup" through the normal support
+channel. The hotfix addresses only the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability.
+
+
+
+
+
+Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability
+
+
+
+This vulnerability affects all Cisco Unified CDM Application Software versions prior to 10
+
+Determining the Running Software Version
+The software version for both Cisco Unified CDM Application Software and Platform Software can be determined by accessing the Administration GUI and navigating the About menu options on the top left corner of the page.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Cisco Unified Communications Manager (Cisco Unified CM) is not affected by these vulnerabilities.
+
+
+
+No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Cisco Unified Communications Domain Manager (Cisco Unified CDM) is a service delivery and management platform that
+provides automation and administrative functions over the Cisco Unified
+Communications Manager, Cisco Unity Connection, and Cisco Jabber
+applications, as well as the associated phones and soft clients. 
+
+
+
+CUCDM is part of Cisco Hosted Collaboration System (HCS). The Cisco Unified CDM solution includes an Application Software and a Platform Software.
+
+
+
+Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability
+
+
+
+A vulnerability in the web framework of the
+Cisco Unified Communications Domain Manager Application Software could allow an
+authenticated, remote attacker to elevate privileges and gain
+administrative access to the affected system.
+
+
+
+The vulnerability
+is due to improper implementation of authentication and authorization
+controls of the Administration GUI. An attacker could exploit this
+vulnerability by submitting a crafted URL to change the administrative credentials of a user.
+The attacker needs to be authenticated to the system or convince a valid user of the Administration GUI to click a
+malicious link.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCun49862["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCun49862"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) identifier CVE-2014-2197.
+
+
+
+Cisco Unified Communications Domain Manager Default SSH Key Vulnerability
+
+
+
+A vulnerability in the implementation of the framework that allows access to
+support representatives of the Cisco
+Unified Communications Domain Manager Platform Software could allow an unauthenticated,
+remote attacker to connect to the affected system with the privileges of
+the root user.
+
+
+
+The vulnerability is due to the presence of
+a default SSH private key, which is stored in an insecure way on the system. An attacker could exploit this vulnerability by obtaining the SSH
+private key. For example, the attacker might reverse engineer the binary file of the operating system.
+This will allow the attacker to connect by using the support account to the
+system without requiring any form of authentication. An exploit could allow the attacker to gain access to the system with the privileges of the root user.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCud41130["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCud41130"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-2198.
+
+
+
+Note: Due to an error in the fix, all Cisco Unified CDM Platform Software releases are
+vulnerable regardless if a previous patch has been applied due to this security advisory. Customers
+running any Cisco Unified CDM Platform Software release should
+request the hotfix patch called "ssh_keys_cleanup" through the normal support
+channel. The hotfix addresses only the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability.
+
+The error in the fix is documented in Cisco bug ID CSCuq99452["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuq99452"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only).
+
+
+
+
+
+Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability
+
+
+
+A vulnerability in the web framework of Cisco Unified Communications Domain Manager Application Software could allow an unauthenticated, remote attacker to access and modify BVSMWeb portal user information such as settings in the personal phone directory, speed dials, Single Number Reach, and call forward settings.
+
+
+
+The vulnerability is due to improper implementation of authentication and authorization controls when accessing some web pages of the BVSMWeb portal. An attacker could exploit this vulnerability by submitting a crafted URL to the affected system.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCum77041["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCum77041"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2014-3300</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that mitigate the vulnerabilities in this security advisory.
+
+
+
+Customers that are affected by the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability should use the functionality offered by the Cisco Unified Communication Manager and the Cisco Unified CDM Self-Care portal instead of the Cisco Unified CDM BVSMWeb portal to provide services.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this advisory: 
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689"]
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+
+Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability
+
+
+
+The Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability is resolved in Cisco Unified CDM Application Software usm-8.1.4-ubuntu10_04.tar.gz and later.
+
+
+
+
+
+Cisco Unified Communications Domain Manager Default SSH Key Vulnerability
+
+
+
+The Cisco Unified Communications Domain Manager Default SSH Key Vulnerability is resolved in Cisco Unified CDM Platform Software  hotfix patch called "ssh_keys_cleanup" .
+
+
+
+Note: Due to an error in the fix, all Cisco Unified CDM Platform Software releases are
+vulnerable regardless if a previous patch has been applied due to this security advisory. Customers
+running any Cisco Unified CDM Platform Software release should
+request the hotfix patch called "ssh_keys_cleanup" through the normal support
+channel. The hotfix addresses only the Cisco Unified Communications Domain Manager Default SSH Key Vulnerability.
+
+
+
+
+
+Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability
+
+
+
+Currently, there is no Cisco Unified CDM version that addresses the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability. Cisco Unified CDM Application Software version 10 and later does not implement the BVSMWeb service interface and it is not affected by this vulnerability. Cisco Unified CDM version 10 is expected to be available in September 2014. Customers that are concerned about this vulnerability should apply the mitigation detailed in the "Workarounds" section of this advisory until a fixed software release is available.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+The Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability and Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability were reported to Cisco by Fatih Ozavci from Sense of Security.
+
+
+
+The Cisco Unified Communications Domain Manager Default SSH Key Vulnerability was found during the resolution of support cases.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Unified Communications Domain Manager</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140702-cucdm</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Unified Communications Domain Manager</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unified Communications Domain Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-188989">Cisco Unified Communications Domain Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Domain Manager Platform" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-201010">Cisco Unified Communications Domain Manager Platform </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Domain Manager Privilege Escalation Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCun49862</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCun49862</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-2197</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-188989</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate the vulnerabilities in this security advisory.
+
+
+
+Customers that are affected by the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability should use the functionality offered by the Cisco Unified Communication Manager and the Cisco Unified CDM Self-Care portal instead of the Cisco Unified CDM BVSMWeb portal to provide services.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this advisory: 
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140702-cucdm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Domain Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Domain Manager Default SSH Key Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCud41130</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCud41130</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-2198</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-201010</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>10.0</BaseScoreV2>
+        <TemporalScoreV2>8.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:H/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate the vulnerabilities in this security advisory.
+
+
+
+Customers that are affected by the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability should use the functionality offered by the Cisco Unified Communication Manager and the Cisco Unified CDM Self-Care portal instead of the Cisco Unified CDM BVSMWeb portal to provide services.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this advisory: 
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140702-cucdm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Domain Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCum77041</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCum77041</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-3300</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-188989</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.5</BaseScoreV2>
+        <TemporalScoreV2>7.1</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:U/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate the vulnerabilities in this security advisory.
+
+
+
+Customers that are affected by the Cisco Unified Communications Domain Manager BVSMWeb Unauthorized Data Manipulation Vulnerability should use the functionality offered by the Cisco Unified Communication Manager and the Cisco Unified CDM Self-Care portal instead of the Cisco Unified CDM BVSMWeb portal to provide services.
+
+
+
+Additional mitigations that can be deployed on Cisco devices within the network are available in the Cisco Applied Intelligence companion document for this advisory: 
+
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=34689"]
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140702-cucdm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Domain Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

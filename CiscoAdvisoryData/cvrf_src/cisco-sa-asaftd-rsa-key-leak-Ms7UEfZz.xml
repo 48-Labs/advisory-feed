@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software RSA Private Key Leak Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-asaftd-rsa-key-leak-Ms7UEfZz</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2022-08-10T15:49:27</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2022-08-10T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-08-10T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the handling of RSA keys on devices running Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to retrieve an RSA private key.
+
+This vulnerability is due to a logic error when the RSA key is stored in memory on a hardware platform that performs hardware-based cryptography. An attacker could exploit this vulnerability by using a Lenstra side-channel attack against the targeted device. A successful exploit could allow the attacker to retrieve the RSA private key.
+
+The following conditions may be observed on an affected device:
+
+This vulnerability will apply to approximately 5 percent of the RSA keys on a device that is running a vulnerable release of Cisco ASA Software or Cisco FTD Software; not all RSA keys are expected to be affected due to mathematical calculations applied to the RSA key.
+The RSA key could be valid but have specific characteristics that make it vulnerable to the potential leak of the RSA private key. If an attacker obtains the RSA private key, they could use the key to impersonate a device that is running Cisco ASA Software or Cisco FTD Software or to decrypt the device traffic. See the Indicators of Compromise ["#ic"] section for more information on the detection of this type of RSA key.
+The RSA key could be malformed and invalid. A malformed RSA key is not functional, and a TLS client connection to a device that is running Cisco ASA Software or Cisco FTD Software that uses the malformed RSA key will result in a TLS signature failure, which means a vulnerable software release created an invalid RSA signature that failed verification. If an attacker obtains the RSA private key, they could use the key to impersonate a device that is running Cisco ASA Software or Cisco FTD Software or to decrypt the device traffic.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-rsa-key-leak-Ms7UEfZz ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-rsa-key-leak-Ms7UEfZz"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This vulnerability affects the following Cisco products, which perform hardware-based cryptographic functions, if they are running a vulnerable release of Cisco ASA Software or Cisco FTD Software:
+
+ASA 5506-X with FirePOWER Services
+ASA 5506H-X with FirePOWER Services
+ASA 5506W-X with FirePOWER Services
+ASA 5508-X with FirePOWER Services
+ASA 5516-X with FirePOWER Services
+Firepower 1000 Series Next-Generation Firewall
+Firepower 2100 Series Security Appliances
+Firepower 4100 Series Security Appliances
+Firepower 9300 Series Security Appliances
+Secure Firewall 3100
+
+Additional information:
+
+This vulnerability affects only Cisco ASA Software releases 9.16.1 and later and Cisco FTD Software releases 7.0.0 and later; all earlier software releases are not affected. If a customer is running Cisco ASA Software Release 9.15 or earlier or Cisco FTD Software Release 6.7 or earlier, the device is not considered vulnerable as long as none of the RSA keys present on the device were generated by a vulnerable software release.
+This vulnerability applies to RSA keys only. Elliptic Curve Digital Signature Algorithm (ECDSA) keys and Edwards-curve Digital Signature Algorithm (EdDSA) keys are not vulnerable.
+This vulnerability applies to all RSA keys that are stored in memory or flash on a vulnerable software release, which means an RSA key could become malformed or susceptible to the RSA private key leak during the following actions:
+
+When generating a new RSA key on a vulnerable software release
+When a good RSA key is upgraded from an earlier, non-vulnerable software release to a vulnerable software release
+When importing the RSA key on a vulnerable software release
+
+
+Thus, any RSA key on a vulnerable software release, regardless of where it was originally generated, could be malformed (non-working but vulnerable to the RSA private key leak) or susceptible (valid but vulnerable to the RSA private key leak). If the RSA key was configured for use at any time, then it is possible the RSA private key has been leaked to malicious actors.
+  Vulnerable Configurations
+If an RSA key is flagged by the Cisco off-box detection script or any of the conditions noted in the Indicators of Compromise ["#ic"] section of this advisory, Cisco recommends that the RSA key be replaced and any certificates that use this RSA key pair be revoked and replaced. The following Cisco ASA and FTD Software features are known to be used with a configured RSA key; however, any flagged RSA key should be replaced on the device.
+
+ASA Software
+
+In the following table, the left column lists the Cisco ASA Software features that are potentially vulnerable if a malformed or susceptible RSA key is associated with that feature's configuration. The right column indicates the basic configuration for the feature from the show running-config CLI command, if it can be determined.
+        Cisco ASA Software Feature  Possible Vulnerable Configuration          Adaptive Security Device Manager (ASDM)1
+http server enable &lt;port&gt;
+http &lt;remote_ip_address&gt; &lt;remote_subnet_mask&gt; &lt;interface_name&gt;
+      AnyConnect SSL VPN
+webvpn
+ enable &lt;interface_name&gt;
+      Cisco Security Manager (CSM)1
+http server enable &lt;port&gt;
+http &lt;remote_ip_address&gt; &lt;remote_subnet_mask&gt; &lt;interface_name&gt;
+      Clientless SSL VPN (WebVPN)2
+webvpn
+ enable &lt;interface_name&gt;
+      Internet Key Exchange Version 1 (IKEv1) VPN (remote access and LAN-to-LAN) using certificate-based authentication
+crypto ikev1 enable &lt;interface_name&gt;
+crypto ikev1 policy &lt;priority&gt;
+ authentication rsa-sig
+tunnel-group &lt;tunnel_group_name&gt; ipsec-attributes
+ trust-point &lt;trustpoint_name&gt;
+      Internet Key Exchange Version 2 (IKEv2) VPN (remote access and LAN-to-LAN) using certificate-based authentication
+crypto ikev2 enable &lt;interface_name&gt;
+tunnel-group &lt;tunnel_group_name&gt; ipsec-attributes
+ ikev2 remote-authentication certificate
+ ikev2 local-authentication certificate &lt;trustpoint_name&gt;
+      Proxy Bypass
+webvpn
+ proxy-bypass
+      TLS Proxy
+tls-proxy &lt;name&gt;
+      REST API1
+rest-api image disk0:/&lt;image name&gt;
+rest-api agent
+      SSH Access3
+ssh &lt;remote_ip_address&gt; &lt;remote_subnet_mask&gt; &lt;interface_name&gt;
+
+1. ASDM, CSM, and REST API services are accessible only from an IP address in the configured http command range.
+2. Clientless SSL VPN is no longer supported in Cisco ASA Software releases 9.17(1) and later.
+3. SSH service is accessible only from an IP address in the configured ssh command range.
+FTD Software
+
+In the following table, the left column lists the Cisco FTD Software features that are potentially affected if a malformed or susceptible RSA key is associated with that feature's configuration. The right column indicates the basic configuration for the feature from the show running-config CLI command, if it can be determined.
+        Cisco FTD Feature  Possible Vulnerable Configuration          AnyConnect SSL VPN1,2
+webvpn
+ enable &lt;interface_name
+      Clientless SSL VPN (WebVPN)2
+webvpn
+ enable &lt;interface_name&gt;
+      IKEv1 VPN (remote access and LAN-to-LAN) using certificate-based authentication1,2
+crypto ikev1 enable &lt;interface_name&gt;
+crypto ikev1 policy &lt;priority&gt;
+ authentication rsa-sig
+tunnel-group &lt;tunnel_group_name&gt; ipsec-attributes
+trust-point &lt;trustpoint_name&gt;
+      IKEv2 VPN (remote access and LAN-to-LAN) using certificate-based authentication1,2
+crypto ikev2 enable &lt;interface_name&gt;
+tunnel-group &lt;tunnel_group_name&gt; ipsec-attributes
+ ikev2 remote-authentication certificate
+ ikev2 local-authentication certificate &lt;trustpoint_name&gt;
+
+1. Remote access VPN features are enabled through Devices &gt; VPN &gt; Remote Access in Cisco Firepower Management Center (FMC) Software or through Device &gt; Remote Access VPN in Cisco Firepower Device Manager (FDM).
+2. The Clientless SSL VPN feature is not supported as of Cisco FTD Software Release 7.1.0. However, for earlier Cisco FTD Software releases, it can be enabled using FlexConfig.  Determine Whether the RSA Key Is Malformed or Susceptible
+To determine whether the RSA key is malformed or susceptible, use the Cisco off-box detection script, which detects malformed or susceptible RSA keys for which the RSA private key could have been leaked. Customers can run this script on a local machine (not on a Cisco ASA or FTD device) without the sensitive key material ever leaving their environment.
+
+Cisco recommends using this script when a device is running a vulnerable release of Cisco ASA or FTD Software and cannot be upgraded to a fixed software release immediately.
+
+To use the script, do the following:
+
+Export the RSA key(s) that need testing from a potentially affected device.
+Run the script to identify whether any of the RSA keys are either malformed or susceptible to the RSA private key leak.
+
+For the script and associated documentation, see https://github.com/CiscoPSIRT/CVE-2022-20866 ["https://github.com/CiscoPSIRT/CVE-2022-20866"].
+
+Note: If an RSA key is not currently configured but was previously configured on a vulnerable software release, then the RSA private key could have been leaked. Cisco recommends removing the RSA key and revoking any certificates that use this RSA key pair.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect Cisco FMC Software.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Lenstra Side-Channel Attack
+
+In 1996, Arjen Lenstra described an attack against Chinese remainder theorem optimization (RSA-CRT). This attack is possible if a fault happens during the computation of a cryptographic signature when using RSA-CRT optimization. An attacker could potentially recover the private key from the signature. This attack is also known as an RSA-CRT key leak. The Lenstra attack is a well-known side-channel attack. It does not attack the RSA algorithm directly but could exploit flaws in the implementation.
+
+For additional information on the attack, see the Memo on RSA signature generation in the presence of faults ["https://infoscience.epfl.ch/record/164524"].
+
+The vulnerability described in this advisory could result in an RSA key for which the Lenstra side-channel attack is successful, potentially allowing the attacker to derive the RSA private key.</cvrf:Note>
+    <cvrf:Note Title="Indicators of Compromise" Type="General" Ordinal="5">These indicators of compromise are available on Cisco ASA or FTD Software fixed releases only. They are not available on previous software releases.
+
+When an affected device is upgraded to a fixed software release, some or all of these indicators may be present to alert an administrator that the device has an RSA key for which the RSA private key may have been leaked.
+  How to Detect Malformed or Susceptible RSA Keys When Upgrading to a Fixed Software Release
+Critical Syslog Messages
+
+When an affected device is upgraded to a fixed software release, two new syslog messages will alert the administrator if malformed or potentially susceptible RSA keys are detected. These messages mean that the RSA key(s) flagged could have leaked the RSA private key. The new syslog messages are logged at the CRITICAL level and can be viewed by an administrator using the show logging CLI command. The ASA or FTD prefix is specific to the type of device the syslog is being displayed on. The new syslog messages will appear as follows:
+
+%ASA-1-717065: Keypair &lt;name&gt; is invalid due to the Cisco RSA Private Key Leak Vulnerability (CVE-2022-20866) and will be cleared in memory. Please remove this key.
+
+%FTD-1-717065: Keypair &lt;name&gt; is invalid due to the Cisco RSA Private Key Leak Vulnerability (CVE-2022-20866) and will be cleared in memory. Please remove this key.
+
+Syslog messages ASA-1-717065 and FTD-1-717065 indicate that a malformed RSA key was detected that was vulnerable to the RSA private key leak described in this security advisory. The malformed RSA key was disabled and cannot be used. This RSA key was not functional previously and must be replaced. Any certificates using this RSA key pair must also be revoked and replaced.
+
+%ASA-1-717066: Keypair &lt;name&gt; is valid but may have been vulnerable to exposure in previous versions due to the Cisco RSA Private Key Leak Vulnerability (CVE-2022-20866). Please remove this key.
+
+%FTD-1-717066: Keypair &lt;name&gt; is valid but may have been vulnerable to exposure in previous versions due to the Cisco RSA Private Key Leak Vulnerability (CVE-2022-20866). Please remove this key.
+
+Syslog messages ASA-1-717066 and FTD-1-717066 indicate that although the RSA key is not malformed, it was susceptible to the RSA private key leak described in this security advisory. It is highly recommended that this RSA key be replaced and any certificates using this RSA key pair be revoked and replaced.
+
+Error Counters
+
+When an affected device is upgraded to a fixed software release, several new error counters will indicate if a malformed or susceptible RSA key is detected. To view these counters, use the show counters | grep PKI CLI command. The new error counters appear as follows:
+
+
+asaftd# show counters | grep PKI
+...
+PKI          RSAKEY_INVAL_VULN                        1   Summary
+PKI          RSAKEY_INVAL_SCRUB                       1   Summary
+PKI          RSAKEY_INVAL_NOT_VULN                    1   Summary
+PKI          RSAKEY_VALID_SHORT                       1   Summary
+PKI          RSAKEY_ANALYSIS_ERROR                    1   Summary
+PKI          RSAKEY_SCRUB_ERROR                       1   Summary
+
+The meaning of each new error counter is as follows:
+
+RSAKEY_INVAL_VULN: Invalid vulnerable key detected
+RSAKEY_INVAL_SCRUB: Invalid vulnerable key cleared in memory
+RSAKEY_INVAL_NOT_VULN: Invalid key, not vulnerable
+RSAKEY_VALID_SHORT: Valid key vulnerable in previous affected versions
+RSAKEY_ANALYSIS_ERROR: An error occurred during analysis
+RSAKEY_SCRUB_ERROR: An error occurred while scrubbing a key
+
+These counters are incremented when a corresponding syslog message is logged and require the affected RSA key to be replaced and any certificates using the RSA key pair to be revoked and replaced.
+
+Device Boot Warnings
+
+After an affected device is upgraded to a fixed software release, one or more of the following console log messages may be observed during the boot sequence if a malformed or susceptible RSA key is detected:
+        CRITICAL:   RSA key &lt;name&gt; is invalid due to the         Cisco RSA Private Key Leak Vulnerability (CVE-2022-20866)         and has been cleared in memory. Please remove this key.                CRITICAL:  RSA key &lt;name&gt; may have been vulnerable to         exposure in previous versions due to the         Cisco RSA Private Key Leak Vulnerability (CVE-2022-20866).         Please remove this key.
+Each of these boot-time warnings will have a corresponding syslog message logged and requires the RSA key to be replaced and any certificates using the RSA key pair to be revoked and replaced.
+
+Debug Menu Commands
+
+After upgrading an affected Cisco ASA or FTD device to a fixed software release, use the new debug command debug menu pki 60 to parse all RSA keys on the device. The command output will display the state of each RSA key to show whether any of them may have been compromised. The Validity column gives the current status of each RSA key. The value INVALID in this column indicates that the RSA private key may have been leaked. An example of output from the debug command is as follows:
+
+
+asa# debug menu pki 60
+Key Name                 : Validity  : Cisco RSA Malformed Key Vulnerability
+                         :           : (CVE-2022-20866) exposure status
+------------------------ : --------- : -------------------------------------
+&lt;Default-RSA-Key&gt;        : Valid     : No exposure characteristics
+test1                    : Valid     : ** Possible exposure in earlier software versions
+test3                    : INVALID   : No exposure characteristics
+test8                    : INVALID   : ** Key generated by affected version, cleared in memory
+tets2                    : ERROR     : ** Error during analysis
+test4                    : INVALID   : ** Has exposure characteristics
+test5                    : unknown   : Key pair not analyzed
+
+Undetectable Malformed RSA Key
+
+It is not possible to detect a malformed or susceptible RSA key that was used in the past and has since been removed. Some RSA keys may not have been functional due to being malformed, so during normal operations, they might have been removed and regenerated. If there is any concern that a malformed or susceptible RSA key was in use on a device in the past, ensure that any certificates using this RSA key pair have been revoked.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">Cisco has released free software updates ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#ssu"] that address the vulnerability described in this advisory. Customers with service contracts that entitle them to regular software updates should obtain security fixes through their usual update channels.
+
+Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license:
+https://www.cisco.com/c/en/us/products/end-user-license-agreement.html ["https://www.cisco.com/c/en/us/products/end-user-license-agreement.html"]
+
+Additionally, customers may only download software for which they have a valid license, procured from Cisco directly, or through a Cisco authorized reseller or partner. In most cases this will be a maintenance upgrade to software that was previously purchased. Free security software updates do not entitle customers to a new software license, additional software feature sets, or major revision upgrades.
+
+The Cisco Support and Downloads page ["https://www.cisco.com/c/en/us/support/index.html"] on Cisco.com provides information about licensing and downloads. This page can also display customer device support coverage for customers who use the My Devices tool.
+
+When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+  Customers Without Service Contracts
+Customers who purchase directly from Cisco but do not hold a Cisco service contract and customers who make purchases through third-party vendors but are unsuccessful in obtaining fixed software through their point of sale should obtain upgrades by contacting the Cisco TAC: https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html ["https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"]
+
+Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
+      Fixed Releases
+In the following table(s), the left column lists Cisco software releases. The right column indicates whether a release is affected by the vulnerability described in this advisory and the first release that includes the fix for this vulnerability.
+
+ASA Software
+        Cisco ASA Software Release  First Fixed Release          9.15 and earlier1  Not vulnerable      9.16  9.16.3.19      9.17  9.17.1.13      9.18  9.18.2
+1. If a Cisco ASA device was upgraded to a vulnerable release and then downgraded to a non-vulnerable release—for example, upgraded to Release 9.16.1 and then downgraded to Release 9.14.3.18—the RSA keys on the non-vulnerable release could be malformed or susceptible because they were saved on a vulnerable release. If a Cisco ASA device has been upgraded and downgraded in this manner, please ensure that the RSA keys are valid.
+FTD Software
+        Cisco FTD Software Release  First Fixed Release          6.7.0 and earlier1  Not vulnerable      7.0.0  7.0.4      7.1.0  Cisco_FTD_Hotfix_P-7.1.0.2-2.sh.REL.tar
+Cisco_FTD_SSP_FP1K_Hotfix_P-7.1.0.2-2.sh.REL.tar
+Cisco_FTD_SSP_FP2K_Hotfix_P-7.1.0.2-2.sh.REL.tar
+Cisco_FTD_SSP_Hotfix_P-7.1.0.2-2.sh.REL.tar
+Cisco_FTD_SSP_FP3K_Hotfix_Q-7.1.0.3-2.sh.REL.tar      7.2.0  7.2.0.1
+1. If a Cisco FTD device was upgraded to a vulnerable release and then downgraded to a non-vulnerable release—for example, upgraded to Release 7.0.0 and then downgraded to Release 6.4.0.15—the RSA keys on the non-vulnerable release could be malformed or susceptible because they were saved on a vulnerable release. If a Cisco FTD device has been upgraded and downgraded in this manner, please ensure that the RSA keys are valid.
+For instructions on upgrading a Cisco FTD device, see the Cisco Firepower Management Center Upgrade Guide ["https://www.cisco.com/c/en/us/td/docs/security/firepower/upgrade/fpmc-upgrade-guide/getting_started.html"].
+
+Note: See the Indicators of Compromise ["#ic"] section for more information on the detection of RSA keys that may have been compromised when upgrading to a fixed software release.
+
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Recommendations" Type="General" Ordinal="8">As the result of this vulnerability, Cisco ASA or FTD device administrators may need to remove malformed or susceptible RSA keys and possibly revoke any certificates associated with those RSA keys. This is because it is possible the RSA private key has been leaked to a malicious actor. For additional assistance, see the following technical documentation:
+
+Cisco ASA Software
+
+Cisco ASA Series General Operations CLI Configuration Guide - Digital Certificates ["https://www.cisco.com/c/en/us/td/docs/security/asa/asa98/configuration/general/asa-98-general-config/basic-certs.html"]
+Configure ASA: SSL Digital Certificate Installation and Renewal ["https://www.cisco.com/c/en/us/support/docs/security-vpn/public-key-infrastructure-pki/200339-Configure-ASA-SSL-Digital-Certificate-I.html"]
+
+Cisco FTD Software
+
+Cisco Firepower Threat Defense Configuration Guide for Firepower Device Manager - Certificates ["https://www.cisco.com/c/en/us/td/docs/security/firepower/623/fdm/fptd-fdm-config-guide-623/fptd-fdm-certificates.html"]
+Certificate Installation and Renewal on FTD managed by FDM ["https://www.cisco.com/c/en/us/support/docs/security-vpn/public-key-infrastructure-pki/215850-certificate-installation-and-renewal-on.html"]
+Install and Renew Certificates on FTD Managed by FMC ["https://www.cisco.com/c/en/us/support/docs/security-vpn/public-key-infrastructure-pki/215849-certificate-installation-and-renewal-on.html"]
+
+Customers are advised to contact the Cisco TAC or their contracted maintenance providers if further assistance is needed.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="9">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="10">The Cisco PSIRT is aware of a public announcement of the vulnerability that is described in this advisory.
+
+The Cisco PSIRT is not aware of any malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="11">Cisco would like to thank Nadia Heninger and George Sullivan of the University of California San Diego and Jackson Sippe and Eric Wustrow of the University of Colorado Boulder for reporting this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="12">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-rsa-key-leak-Ms7UEfZz</cvrf:URL>
+      <cvrf:Description>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software RSA Private Key Leak Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Adaptive Security Appliance (ASA) Software" Type="Product Name">
+        <Branch Name="9.16" Type="Product Version">
+          <Branch Name="9.16.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-283788">Cisco Adaptive Security Appliance (ASA) Software 9.16.1</FullProductName>
+          </Branch>
+          <Branch Name="9.16.1.28" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-284175">Cisco Adaptive Security Appliance (ASA) Software 9.16.1.28</FullProductName>
+          </Branch>
+          <Branch Name="9.16.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-284342">Cisco Adaptive Security Appliance (ASA) Software 9.16.2</FullProductName>
+          </Branch>
+          <Branch Name="9.16.2.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-284600">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.3</FullProductName>
+          </Branch>
+          <Branch Name="9.16.2.7" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286190">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.7</FullProductName>
+          </Branch>
+          <Branch Name="9.16.2.11" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286192">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.11</FullProductName>
+          </Branch>
+          <Branch Name="9.16.2.13" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286396">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.13</FullProductName>
+          </Branch>
+          <Branch Name="9.16.2.14" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286584">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.14</FullProductName>
+          </Branch>
+          <Branch Name="9.16.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286867">Cisco Adaptive Security Appliance (ASA) Software 9.16.3</FullProductName>
+          </Branch>
+          <Branch Name="9.16.3.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286868">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.3</FullProductName>
+          </Branch>
+          <Branch Name="9.16.3.14" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286906">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.14</FullProductName>
+          </Branch>
+          <Branch Name="9.16.3.15" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-287201">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.15</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="9.17" Type="Product Version">
+          <Branch Name="9.17.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-285970">Cisco Adaptive Security Appliance (ASA) Software 9.17.1</FullProductName>
+          </Branch>
+          <Branch Name="9.17.1.7" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286583">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.7</FullProductName>
+          </Branch>
+          <Branch Name="9.17.1.9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286880">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.9</FullProductName>
+          </Branch>
+          <Branch Name="9.17.1.10" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-287042">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.10</FullProductName>
+          </Branch>
+          <Branch Name="9.17.1.11" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-288207">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.11</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="9.18" Type="Product Version">
+          <Branch Name="9.18.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-287079">Cisco Adaptive Security Appliance (ASA) Software 9.18.1</FullProductName>
+          </Branch>
+          <Branch Name="9.18.1.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-287200">Cisco Adaptive Security Appliance (ASA) Software 9.18.1.3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="Cisco Firepower 2100 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277392">Cisco Adaptive Security Appliance (ASA) Software Platform Cisco Firepower 2100 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Firepower 1000 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277393">Cisco Adaptive Security Appliance (ASA) Software Platform Cisco Firepower 1000 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco ASA 5500-X Series Firewalls" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277437">Cisco Adaptive Security Appliance (ASA) Software Platform Cisco ASA 5500-X Series Firewalls</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Firepower 9000 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277440">Cisco Adaptive Security Appliance (ASA) Software Platform Cisco Firepower 9000 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Firepower 4100 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277441">Cisco Adaptive Security Appliance (ASA) Software Platform Cisco Firepower 4100 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Secure Firewall 3100 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-286865">Cisco Adaptive Security Appliance (ASA) Software Platform Cisco Secure Firewall 3100 Series</FullProductName>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco Adaptive Security Appliance (ASA) Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-6588">Cisco Adaptive Security Appliance (ASA) Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Firepower Threat Defense Software" Type="Product Name">
+        <Branch Name="7.0" Type="Product Version">
+          <Branch Name="7.0.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-282695">Cisco Firepower Threat Defense Software 7.0.0</FullProductName>
+          </Branch>
+          <Branch Name="7.0.0.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-284277">Cisco Firepower Threat Defense Software 7.0.0.1</FullProductName>
+          </Branch>
+          <Branch Name="7.0.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-284789">Cisco Firepower Threat Defense Software 7.0.1</FullProductName>
+          </Branch>
+          <Branch Name="7.0.1.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286538">Cisco Firepower Threat Defense Software 7.0.1.1</FullProductName>
+          </Branch>
+          <Branch Name="7.0.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286930">Cisco Firepower Threat Defense Software 7.0.2</FullProductName>
+          </Branch>
+          <Branch Name="7.0.2.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-287122">Cisco Firepower Threat Defense Software 7.0.2.1</FullProductName>
+          </Branch>
+          <Branch Name="7.0.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-287181">Cisco Firepower Threat Defense Software 7.0.3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.1" Type="Product Version">
+          <Branch Name="7.1.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286091">Cisco Firepower Threat Defense Software 7.1.0</FullProductName>
+          </Branch>
+          <Branch Name="7.1.0.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-286543">Cisco Firepower Threat Defense Software 7.1.0.1</FullProductName>
+          </Branch>
+          <Branch Name="7.1.0.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-290467">Cisco Firepower Threat Defense Software 7.1.0.2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.2" Type="Product Version">
+          <Branch Name="7.2.0" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-287081">Cisco Firepower Threat Defense Software 7.2.0</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="Cisco Firepower 2100 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277392">Cisco Firepower Threat Defense Software Platform Cisco Firepower 2100 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Firepower 1000 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277393">Cisco Firepower Threat Defense Software Platform Cisco Firepower 1000 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco ASA 5500-X Series Firewalls" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277437">Cisco Firepower Threat Defense Software Platform Cisco ASA 5500-X Series Firewalls</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Firepower 9000 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277440">Cisco Firepower Threat Defense Software Platform Cisco Firepower 9000 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Firepower 4100 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-277441">Cisco Firepower Threat Defense Software Platform Cisco Firepower 4100 Series</FullProductName>
+        </Branch>
+        <Branch Name="Cisco Secure Firewall 3100 Series" Type="Product Name">
+          <FullProductName ProductID="CVRFPID-286865">Cisco Firepower Threat Defense Software Platform Cisco Secure Firewall 3100 Series</FullProductName>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco Firepower Threat Defense Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-220203">Cisco Firepower Threat Defense Software </FullProductName>
+      </Branch>
+    </Branch>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-283788">
+      <FullProductName ProductID="CVRFPID-283788:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-283788">
+      <FullProductName ProductID="CVRFPID-283788:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-283788">
+      <FullProductName ProductID="CVRFPID-283788:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.1 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-283788">
+      <FullProductName ProductID="CVRFPID-283788:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-283788">
+      <FullProductName ProductID="CVRFPID-283788:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-284175">
+      <FullProductName ProductID="CVRFPID-284175:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.1.28 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-284175">
+      <FullProductName ProductID="CVRFPID-284175:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.1.28 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-284175">
+      <FullProductName ProductID="CVRFPID-284175:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.1.28 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-284175">
+      <FullProductName ProductID="CVRFPID-284175:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.1.28 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-284175">
+      <FullProductName ProductID="CVRFPID-284175:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.1.28 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-284342">
+      <FullProductName ProductID="CVRFPID-284342:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-284342">
+      <FullProductName ProductID="CVRFPID-284342:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.2 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-284342">
+      <FullProductName ProductID="CVRFPID-284342:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.2 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-284342">
+      <FullProductName ProductID="CVRFPID-284342:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.2 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-284342">
+      <FullProductName ProductID="CVRFPID-284342:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.2 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-284600">
+      <FullProductName ProductID="CVRFPID-284600:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-284600">
+      <FullProductName ProductID="CVRFPID-284600:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.3 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-284600">
+      <FullProductName ProductID="CVRFPID-284600:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.3 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-284600">
+      <FullProductName ProductID="CVRFPID-284600:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.3 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-284600">
+      <FullProductName ProductID="CVRFPID-284600:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.3 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286190">
+      <FullProductName ProductID="CVRFPID-286190:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.7 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286190">
+      <FullProductName ProductID="CVRFPID-286190:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.7 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286190">
+      <FullProductName ProductID="CVRFPID-286190:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.7 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286190">
+      <FullProductName ProductID="CVRFPID-286190:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.7 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286190">
+      <FullProductName ProductID="CVRFPID-286190:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.7 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286192">
+      <FullProductName ProductID="CVRFPID-286192:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.11 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286192">
+      <FullProductName ProductID="CVRFPID-286192:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.11 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286192">
+      <FullProductName ProductID="CVRFPID-286192:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.11 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286192">
+      <FullProductName ProductID="CVRFPID-286192:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.11 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286192">
+      <FullProductName ProductID="CVRFPID-286192:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.11 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286396">
+      <FullProductName ProductID="CVRFPID-286396:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.13 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286396">
+      <FullProductName ProductID="CVRFPID-286396:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.13 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286396">
+      <FullProductName ProductID="CVRFPID-286396:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.13 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286396">
+      <FullProductName ProductID="CVRFPID-286396:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.13 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286396">
+      <FullProductName ProductID="CVRFPID-286396:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.13 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286584">
+      <FullProductName ProductID="CVRFPID-286584:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.14 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286584">
+      <FullProductName ProductID="CVRFPID-286584:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.14 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286584">
+      <FullProductName ProductID="CVRFPID-286584:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.14 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286584">
+      <FullProductName ProductID="CVRFPID-286584:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.14 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286584">
+      <FullProductName ProductID="CVRFPID-286584:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.2.14 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286867">
+      <FullProductName ProductID="CVRFPID-286867:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286867">
+      <FullProductName ProductID="CVRFPID-286867:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.3 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286867">
+      <FullProductName ProductID="CVRFPID-286867:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.3 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286867">
+      <FullProductName ProductID="CVRFPID-286867:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.3 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286867">
+      <FullProductName ProductID="CVRFPID-286867:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.3 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286868">
+      <FullProductName ProductID="CVRFPID-286868:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286868">
+      <FullProductName ProductID="CVRFPID-286868:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.3 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286868">
+      <FullProductName ProductID="CVRFPID-286868:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.3 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286868">
+      <FullProductName ProductID="CVRFPID-286868:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.3 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286868">
+      <FullProductName ProductID="CVRFPID-286868:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.3 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286906">
+      <FullProductName ProductID="CVRFPID-286906:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.14 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286906">
+      <FullProductName ProductID="CVRFPID-286906:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.14 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286906">
+      <FullProductName ProductID="CVRFPID-286906:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.14 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286906">
+      <FullProductName ProductID="CVRFPID-286906:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.14 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286906">
+      <FullProductName ProductID="CVRFPID-286906:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.14 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-287201">
+      <FullProductName ProductID="CVRFPID-287201:277392">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.15 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-287201">
+      <FullProductName ProductID="CVRFPID-287201:277393">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.15 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-287201">
+      <FullProductName ProductID="CVRFPID-287201:277437">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.15 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-287201">
+      <FullProductName ProductID="CVRFPID-287201:277440">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.15 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-287201">
+      <FullProductName ProductID="CVRFPID-287201:277441">Cisco Adaptive Security Appliance (ASA) Software 9.16.3.15 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-285970">
+      <FullProductName ProductID="CVRFPID-285970:277392">Cisco Adaptive Security Appliance (ASA) Software 9.17.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-285970">
+      <FullProductName ProductID="CVRFPID-285970:277393">Cisco Adaptive Security Appliance (ASA) Software 9.17.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-285970">
+      <FullProductName ProductID="CVRFPID-285970:277440">Cisco Adaptive Security Appliance (ASA) Software 9.17.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-285970">
+      <FullProductName ProductID="CVRFPID-285970:277441">Cisco Adaptive Security Appliance (ASA) Software 9.17.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-285970">
+      <FullProductName ProductID="CVRFPID-285970:286865">Cisco Adaptive Security Appliance (ASA) Software 9.17.1 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286583">
+      <FullProductName ProductID="CVRFPID-286583:277392">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.7 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286583">
+      <FullProductName ProductID="CVRFPID-286583:277393">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.7 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286583">
+      <FullProductName ProductID="CVRFPID-286583:277440">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.7 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286583">
+      <FullProductName ProductID="CVRFPID-286583:277441">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.7 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286880">
+      <FullProductName ProductID="CVRFPID-286880:277392">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.9 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286880">
+      <FullProductName ProductID="CVRFPID-286880:277393">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.9 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286880">
+      <FullProductName ProductID="CVRFPID-286880:277440">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.9 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286880">
+      <FullProductName ProductID="CVRFPID-286880:277441">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.9 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-286880">
+      <FullProductName ProductID="CVRFPID-286880:286865">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.9 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-287042">
+      <FullProductName ProductID="CVRFPID-287042:277392">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.10 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-287042">
+      <FullProductName ProductID="CVRFPID-287042:277393">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.10 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-287042">
+      <FullProductName ProductID="CVRFPID-287042:277440">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.10 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-287042">
+      <FullProductName ProductID="CVRFPID-287042:277441">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.10 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-287042">
+      <FullProductName ProductID="CVRFPID-287042:286865">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.10 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-288207">
+      <FullProductName ProductID="CVRFPID-288207:277392">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.11 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-288207">
+      <FullProductName ProductID="CVRFPID-288207:277393">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.11 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-288207">
+      <FullProductName ProductID="CVRFPID-288207:277440">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.11 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-288207">
+      <FullProductName ProductID="CVRFPID-288207:277441">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.11 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-288207">
+      <FullProductName ProductID="CVRFPID-288207:286865">Cisco Adaptive Security Appliance (ASA) Software 9.17.1.11 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-287079">
+      <FullProductName ProductID="CVRFPID-287079:277392">Cisco Adaptive Security Appliance (ASA) Software 9.18.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-287079">
+      <FullProductName ProductID="CVRFPID-287079:277393">Cisco Adaptive Security Appliance (ASA) Software 9.18.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-287079">
+      <FullProductName ProductID="CVRFPID-287079:277440">Cisco Adaptive Security Appliance (ASA) Software 9.18.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-287079">
+      <FullProductName ProductID="CVRFPID-287079:277441">Cisco Adaptive Security Appliance (ASA) Software 9.18.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-287079">
+      <FullProductName ProductID="CVRFPID-287079:286865">Cisco Adaptive Security Appliance (ASA) Software 9.18.1 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-287200">
+      <FullProductName ProductID="CVRFPID-287200:277392">Cisco Adaptive Security Appliance (ASA) Software 9.18.1.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-287200">
+      <FullProductName ProductID="CVRFPID-287200:277393">Cisco Adaptive Security Appliance (ASA) Software 9.18.1.3 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-287200">
+      <FullProductName ProductID="CVRFPID-287200:277440">Cisco Adaptive Security Appliance (ASA) Software 9.18.1.3 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-287200">
+      <FullProductName ProductID="CVRFPID-287200:277441">Cisco Adaptive Security Appliance (ASA) Software 9.18.1.3 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-287200">
+      <FullProductName ProductID="CVRFPID-287200:286865">Cisco Adaptive Security Appliance (ASA) Software 9.18.1.3 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-282695">
+      <FullProductName ProductID="CVRFPID-282695:277392">Cisco Firepower Threat Defense Software 7.0.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-282695">
+      <FullProductName ProductID="CVRFPID-282695:277393">Cisco Firepower Threat Defense Software 7.0.0 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-282695">
+      <FullProductName ProductID="CVRFPID-282695:277437">Cisco Firepower Threat Defense Software 7.0.0 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-282695">
+      <FullProductName ProductID="CVRFPID-282695:277440">Cisco Firepower Threat Defense Software 7.0.0 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-282695">
+      <FullProductName ProductID="CVRFPID-282695:277441">Cisco Firepower Threat Defense Software 7.0.0 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-284277">
+      <FullProductName ProductID="CVRFPID-284277:277392">Cisco Firepower Threat Defense Software 7.0.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-284277">
+      <FullProductName ProductID="CVRFPID-284277:277393">Cisco Firepower Threat Defense Software 7.0.0.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-284277">
+      <FullProductName ProductID="CVRFPID-284277:277437">Cisco Firepower Threat Defense Software 7.0.0.1 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-284277">
+      <FullProductName ProductID="CVRFPID-284277:277440">Cisco Firepower Threat Defense Software 7.0.0.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-284277">
+      <FullProductName ProductID="CVRFPID-284277:277441">Cisco Firepower Threat Defense Software 7.0.0.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-284789">
+      <FullProductName ProductID="CVRFPID-284789:277392">Cisco Firepower Threat Defense Software 7.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-284789">
+      <FullProductName ProductID="CVRFPID-284789:277393">Cisco Firepower Threat Defense Software 7.0.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-284789">
+      <FullProductName ProductID="CVRFPID-284789:277437">Cisco Firepower Threat Defense Software 7.0.1 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-284789">
+      <FullProductName ProductID="CVRFPID-284789:277440">Cisco Firepower Threat Defense Software 7.0.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-284789">
+      <FullProductName ProductID="CVRFPID-284789:277441">Cisco Firepower Threat Defense Software 7.0.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286538">
+      <FullProductName ProductID="CVRFPID-286538:277392">Cisco Firepower Threat Defense Software 7.0.1.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286538">
+      <FullProductName ProductID="CVRFPID-286538:277393">Cisco Firepower Threat Defense Software 7.0.1.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286538">
+      <FullProductName ProductID="CVRFPID-286538:277437">Cisco Firepower Threat Defense Software 7.0.1.1 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286538">
+      <FullProductName ProductID="CVRFPID-286538:277440">Cisco Firepower Threat Defense Software 7.0.1.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286538">
+      <FullProductName ProductID="CVRFPID-286538:277441">Cisco Firepower Threat Defense Software 7.0.1.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286930">
+      <FullProductName ProductID="CVRFPID-286930:277392">Cisco Firepower Threat Defense Software 7.0.2 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286930">
+      <FullProductName ProductID="CVRFPID-286930:277393">Cisco Firepower Threat Defense Software 7.0.2 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-286930">
+      <FullProductName ProductID="CVRFPID-286930:277437">Cisco Firepower Threat Defense Software 7.0.2 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286930">
+      <FullProductName ProductID="CVRFPID-286930:277440">Cisco Firepower Threat Defense Software 7.0.2 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286930">
+      <FullProductName ProductID="CVRFPID-286930:277441">Cisco Firepower Threat Defense Software 7.0.2 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-287122">
+      <FullProductName ProductID="CVRFPID-287122:277392">Cisco Firepower Threat Defense Software 7.0.2.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-287122">
+      <FullProductName ProductID="CVRFPID-287122:277393">Cisco Firepower Threat Defense Software 7.0.2.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-287122">
+      <FullProductName ProductID="CVRFPID-287122:277437">Cisco Firepower Threat Defense Software 7.0.2.1 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-287122">
+      <FullProductName ProductID="CVRFPID-287122:277440">Cisco Firepower Threat Defense Software 7.0.2.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-287122">
+      <FullProductName ProductID="CVRFPID-287122:277441">Cisco Firepower Threat Defense Software 7.0.2.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-287181">
+      <FullProductName ProductID="CVRFPID-287181:277392">Cisco Firepower Threat Defense Software 7.0.3 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-287181">
+      <FullProductName ProductID="CVRFPID-287181:277393">Cisco Firepower Threat Defense Software 7.0.3 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277437" RelationType="Installed On" ProductReference="CVRFPID-287181">
+      <FullProductName ProductID="CVRFPID-287181:277437">Cisco Firepower Threat Defense Software 7.0.3 when installed on Cisco ASA 5500-X Series Firewalls</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-287181">
+      <FullProductName ProductID="CVRFPID-287181:277440">Cisco Firepower Threat Defense Software 7.0.3 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-287181">
+      <FullProductName ProductID="CVRFPID-287181:277441">Cisco Firepower Threat Defense Software 7.0.3 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286091">
+      <FullProductName ProductID="CVRFPID-286091:277392">Cisco Firepower Threat Defense Software 7.1.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286091">
+      <FullProductName ProductID="CVRFPID-286091:277393">Cisco Firepower Threat Defense Software 7.1.0 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286091">
+      <FullProductName ProductID="CVRFPID-286091:277440">Cisco Firepower Threat Defense Software 7.1.0 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286091">
+      <FullProductName ProductID="CVRFPID-286091:277441">Cisco Firepower Threat Defense Software 7.1.0 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-286091">
+      <FullProductName ProductID="CVRFPID-286091:286865">Cisco Firepower Threat Defense Software 7.1.0 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-286543">
+      <FullProductName ProductID="CVRFPID-286543:277392">Cisco Firepower Threat Defense Software 7.1.0.1 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-286543">
+      <FullProductName ProductID="CVRFPID-286543:277393">Cisco Firepower Threat Defense Software 7.1.0.1 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-286543">
+      <FullProductName ProductID="CVRFPID-286543:277440">Cisco Firepower Threat Defense Software 7.1.0.1 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-286543">
+      <FullProductName ProductID="CVRFPID-286543:277441">Cisco Firepower Threat Defense Software 7.1.0.1 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-290467">
+      <FullProductName ProductID="CVRFPID-290467:286865">Cisco Firepower Threat Defense Software 7.1.0.2 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277392" RelationType="Installed On" ProductReference="CVRFPID-287081">
+      <FullProductName ProductID="CVRFPID-287081:277392">Cisco Firepower Threat Defense Software 7.2.0 when installed on Cisco Firepower 2100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277393" RelationType="Installed On" ProductReference="CVRFPID-287081">
+      <FullProductName ProductID="CVRFPID-287081:277393">Cisco Firepower Threat Defense Software 7.2.0 when installed on Cisco Firepower 1000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277440" RelationType="Installed On" ProductReference="CVRFPID-287081">
+      <FullProductName ProductID="CVRFPID-287081:277440">Cisco Firepower Threat Defense Software 7.2.0 when installed on Cisco Firepower 9000 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-277441" RelationType="Installed On" ProductReference="CVRFPID-287081">
+      <FullProductName ProductID="CVRFPID-287081:277441">Cisco Firepower Threat Defense Software 7.2.0 when installed on Cisco Firepower 4100 Series</FullProductName>
+    </Relationship>
+    <Relationship RelatesToProductReference="CVRFPID-286865" RelationType="Installed On" ProductReference="CVRFPID-287081">
+      <FullProductName ProductID="CVRFPID-287081:286865">Cisco Firepower Threat Defense Software 7.2.0 when installed on Cisco Secure Firewall 3100 Series</FullProductName>
+    </Relationship>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Hardware Cryptographic RSA Malformed Key Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCwb88651</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwb88651,CSCwc28334</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2022-20866</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-220203</ProductID>
+        <ProductID>CVRFPID-282695:277392</ProductID>
+        <ProductID>CVRFPID-282695:277393</ProductID>
+        <ProductID>CVRFPID-282695:277437</ProductID>
+        <ProductID>CVRFPID-282695:277440</ProductID>
+        <ProductID>CVRFPID-282695:277441</ProductID>
+        <ProductID>CVRFPID-284277:277392</ProductID>
+        <ProductID>CVRFPID-284277:277393</ProductID>
+        <ProductID>CVRFPID-284277:277437</ProductID>
+        <ProductID>CVRFPID-284277:277440</ProductID>
+        <ProductID>CVRFPID-284277:277441</ProductID>
+        <ProductID>CVRFPID-284789:277392</ProductID>
+        <ProductID>CVRFPID-284789:277393</ProductID>
+        <ProductID>CVRFPID-284789:277437</ProductID>
+        <ProductID>CVRFPID-284789:277440</ProductID>
+        <ProductID>CVRFPID-284789:277441</ProductID>
+        <ProductID>CVRFPID-286091:277392</ProductID>
+        <ProductID>CVRFPID-286091:277393</ProductID>
+        <ProductID>CVRFPID-286091:277440</ProductID>
+        <ProductID>CVRFPID-286091:277441</ProductID>
+        <ProductID>CVRFPID-286091:286865</ProductID>
+        <ProductID>CVRFPID-286538:277392</ProductID>
+        <ProductID>CVRFPID-286538:277393</ProductID>
+        <ProductID>CVRFPID-286538:277437</ProductID>
+        <ProductID>CVRFPID-286538:277440</ProductID>
+        <ProductID>CVRFPID-286538:277441</ProductID>
+        <ProductID>CVRFPID-286543:277392</ProductID>
+        <ProductID>CVRFPID-286543:277393</ProductID>
+        <ProductID>CVRFPID-286543:277440</ProductID>
+        <ProductID>CVRFPID-286543:277441</ProductID>
+        <ProductID>CVRFPID-286930:277392</ProductID>
+        <ProductID>CVRFPID-286930:277393</ProductID>
+        <ProductID>CVRFPID-286930:277437</ProductID>
+        <ProductID>CVRFPID-286930:277440</ProductID>
+        <ProductID>CVRFPID-286930:277441</ProductID>
+        <ProductID>CVRFPID-287081:277392</ProductID>
+        <ProductID>CVRFPID-287081:277393</ProductID>
+        <ProductID>CVRFPID-287081:277440</ProductID>
+        <ProductID>CVRFPID-287081:277441</ProductID>
+        <ProductID>CVRFPID-287081:286865</ProductID>
+        <ProductID>CVRFPID-287122:277392</ProductID>
+        <ProductID>CVRFPID-287122:277393</ProductID>
+        <ProductID>CVRFPID-287122:277437</ProductID>
+        <ProductID>CVRFPID-287122:277440</ProductID>
+        <ProductID>CVRFPID-287122:277441</ProductID>
+        <ProductID>CVRFPID-287181:277392</ProductID>
+        <ProductID>CVRFPID-287181:277393</ProductID>
+        <ProductID>CVRFPID-287181:277437</ProductID>
+        <ProductID>CVRFPID-287181:277440</ProductID>
+        <ProductID>CVRFPID-287181:277441</ProductID>
+        <ProductID>CVRFPID-290467:286865</ProductID>
+        <ProductID>CVRFPID-283788:277392</ProductID>
+        <ProductID>CVRFPID-283788:277393</ProductID>
+        <ProductID>CVRFPID-283788:277437</ProductID>
+        <ProductID>CVRFPID-283788:277440</ProductID>
+        <ProductID>CVRFPID-283788:277441</ProductID>
+        <ProductID>CVRFPID-284175:277392</ProductID>
+        <ProductID>CVRFPID-284175:277393</ProductID>
+        <ProductID>CVRFPID-284175:277437</ProductID>
+        <ProductID>CVRFPID-284175:277440</ProductID>
+        <ProductID>CVRFPID-284175:277441</ProductID>
+        <ProductID>CVRFPID-284342:277392</ProductID>
+        <ProductID>CVRFPID-284342:277393</ProductID>
+        <ProductID>CVRFPID-284342:277437</ProductID>
+        <ProductID>CVRFPID-284342:277440</ProductID>
+        <ProductID>CVRFPID-284342:277441</ProductID>
+        <ProductID>CVRFPID-284600:277392</ProductID>
+        <ProductID>CVRFPID-284600:277393</ProductID>
+        <ProductID>CVRFPID-284600:277437</ProductID>
+        <ProductID>CVRFPID-284600:277440</ProductID>
+        <ProductID>CVRFPID-284600:277441</ProductID>
+        <ProductID>CVRFPID-285970:277392</ProductID>
+        <ProductID>CVRFPID-285970:277393</ProductID>
+        <ProductID>CVRFPID-285970:277440</ProductID>
+        <ProductID>CVRFPID-285970:277441</ProductID>
+        <ProductID>CVRFPID-285970:286865</ProductID>
+        <ProductID>CVRFPID-286190:277392</ProductID>
+        <ProductID>CVRFPID-286190:277393</ProductID>
+        <ProductID>CVRFPID-286190:277437</ProductID>
+        <ProductID>CVRFPID-286190:277440</ProductID>
+        <ProductID>CVRFPID-286190:277441</ProductID>
+        <ProductID>CVRFPID-286192:277392</ProductID>
+        <ProductID>CVRFPID-286192:277393</ProductID>
+        <ProductID>CVRFPID-286192:277437</ProductID>
+        <ProductID>CVRFPID-286192:277440</ProductID>
+        <ProductID>CVRFPID-286192:277441</ProductID>
+        <ProductID>CVRFPID-286396:277392</ProductID>
+        <ProductID>CVRFPID-286396:277393</ProductID>
+        <ProductID>CVRFPID-286396:277437</ProductID>
+        <ProductID>CVRFPID-286396:277440</ProductID>
+        <ProductID>CVRFPID-286396:277441</ProductID>
+        <ProductID>CVRFPID-286583:277392</ProductID>
+        <ProductID>CVRFPID-286583:277393</ProductID>
+        <ProductID>CVRFPID-286583:277440</ProductID>
+        <ProductID>CVRFPID-286583:277441</ProductID>
+        <ProductID>CVRFPID-286584:277392</ProductID>
+        <ProductID>CVRFPID-286584:277393</ProductID>
+        <ProductID>CVRFPID-286584:277437</ProductID>
+        <ProductID>CVRFPID-286584:277440</ProductID>
+        <ProductID>CVRFPID-286584:277441</ProductID>
+        <ProductID>CVRFPID-286867:277392</ProductID>
+        <ProductID>CVRFPID-286867:277393</ProductID>
+        <ProductID>CVRFPID-286867:277437</ProductID>
+        <ProductID>CVRFPID-286867:277440</ProductID>
+        <ProductID>CVRFPID-286867:277441</ProductID>
+        <ProductID>CVRFPID-286868:277392</ProductID>
+        <ProductID>CVRFPID-286868:277393</ProductID>
+        <ProductID>CVRFPID-286868:277437</ProductID>
+        <ProductID>CVRFPID-286868:277440</ProductID>
+        <ProductID>CVRFPID-286868:277441</ProductID>
+        <ProductID>CVRFPID-286880:277392</ProductID>
+        <ProductID>CVRFPID-286880:277393</ProductID>
+        <ProductID>CVRFPID-286880:277440</ProductID>
+        <ProductID>CVRFPID-286880:277441</ProductID>
+        <ProductID>CVRFPID-286880:286865</ProductID>
+        <ProductID>CVRFPID-286906:277392</ProductID>
+        <ProductID>CVRFPID-286906:277393</ProductID>
+        <ProductID>CVRFPID-286906:277437</ProductID>
+        <ProductID>CVRFPID-286906:277440</ProductID>
+        <ProductID>CVRFPID-286906:277441</ProductID>
+        <ProductID>CVRFPID-287042:277392</ProductID>
+        <ProductID>CVRFPID-287042:277393</ProductID>
+        <ProductID>CVRFPID-287042:277440</ProductID>
+        <ProductID>CVRFPID-287042:277441</ProductID>
+        <ProductID>CVRFPID-287042:286865</ProductID>
+        <ProductID>CVRFPID-287079:277392</ProductID>
+        <ProductID>CVRFPID-287079:277393</ProductID>
+        <ProductID>CVRFPID-287079:277440</ProductID>
+        <ProductID>CVRFPID-287079:277441</ProductID>
+        <ProductID>CVRFPID-287079:286865</ProductID>
+        <ProductID>CVRFPID-287200:277392</ProductID>
+        <ProductID>CVRFPID-287200:277393</ProductID>
+        <ProductID>CVRFPID-287200:277440</ProductID>
+        <ProductID>CVRFPID-287200:277441</ProductID>
+        <ProductID>CVRFPID-287200:286865</ProductID>
+        <ProductID>CVRFPID-287201:277392</ProductID>
+        <ProductID>CVRFPID-287201:277393</ProductID>
+        <ProductID>CVRFPID-287201:277437</ProductID>
+        <ProductID>CVRFPID-287201:277440</ProductID>
+        <ProductID>CVRFPID-287201:277441</ProductID>
+        <ProductID>CVRFPID-288207:277392</ProductID>
+        <ProductID>CVRFPID-288207:277393</ProductID>
+        <ProductID>CVRFPID-288207:277440</ProductID>
+        <ProductID>CVRFPID-288207:277441</ProductID>
+        <ProductID>CVRFPID-288207:286865</ProductID>
+        <ProductID>CVRFPID-6588</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>7.4</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-rsa-key-leak-Ms7UEfZz</URL>
+        <Description>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software RSA Private Key Leak Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

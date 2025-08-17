@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Identity Services Engine Administrator Password Lifetime Expiration Issue</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-ise-lifetime-pwd-GpCs76mb</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2022-07-20T15:37:12</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2022-07-20T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2022-07-20T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">An issue in the Password Policy settings of Cisco Identity Services Engine (ISE) could allow an administrator to use expired credentials to gain access to the web management interface.
+
+When the Password Lifetime setting for the administrator password policy is used to set the password to expire, the password does not expire. As a result, an administrator could use expired credentials to log in to the web management interface and have the same level of privileges as before the password expired. No additional privileges would be gained, and valid credentials would be required.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-lifetime-pwd-GpCs76mb ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-lifetime-pwd-GpCs76mb"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this issue affected Cisco ISE if it had Password Lifetime enabled.
+
+Cisco is tracking this issue in Cisco bug ID CSCvy74919 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCvy74919"].
+
+For information about which Cisco software releases were affected at the time of publication, see the Fixed Software ["#fs"] section of this advisory. See the Details section in the bug ID(s) for the most complete and current information.
+
+Determine Whether Password Lifetime Is Enabled
+
+To determine whether Password Lifetime is enabled, do the following:
+
+Log in to the Cisco ISE web management interface.
+For Cisco ISE releases 3.0 and 3.1, click the menu icon. For earlier versions of Cisco ISE, skip this step.
+Choose Administration &gt; System &gt; Admin Access.
+Click the Password Policy tab.
+Scroll to the Password Lifetime section.
+If the Administrator passwords expire n days after creation or last change check box is checked, the Password Lifetime feature is enabled.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">To manually disable an administrative account at the time it expires, do the following:
+
+Log in to the Cisco ISE web management interface.
+For Cisco ISE releases 3.0 and 3.1, click the menu icon. For earlier versions of Cisco ISE, skip this step.
+Choose Administration &gt; System &gt; Admin Access.
+Choose Administrators &gt; Admin Users from the menu on the right.
+Check the box next to the appropriate administrator account and click Edit.
+In the Status drop-down menu, choose Disabled.
+Click Save.
+
+While this workaround has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+ Fixed Releases
+At the time of publication, the release information in the following table(s) was accurate. See the Details section in the bug ID(s) for the most complete and current information.
+
+The left column lists Cisco software, and the right column indicates whether a release was affected by the issue described in this advisory and which release included the fix for this issue.
+    Cisco ISE Release First Fixed Release     2.4 and earlier Not affected.   2.6P9 and earlier Not affected.   2.6P10 and later Migrate to a fixed release.1   2.7 2.7P5   3.0 3.0P3   3.1 Not affected.
+1. The hot patch for Cisco ISE Release 2.6P10 is available by request. Contact the Cisco TAC to make the request.
+
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="7">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-lifetime-pwd-GpCs76mb</cvrf:URL>
+      <cvrf:Description>Cisco Identity Services Engine Administrator Password Lifetime Expiration Issue</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Identity Service Engine Administrator Password Lifetime Expiration Issue</Title>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>To manually disable an administrative account at the time it expires, do the following:
+
+Log in to the Cisco ISE web management interface.
+For Cisco ISE releases 3.0 and 3.1, click the menu icon. For earlier versions of Cisco ISE, skip this step.
+Choose Administration &gt; System &gt; Admin Access.
+Choose Administrators &gt; Admin Users from the menu on the right.
+Check the box next to the appropriate administrator account and click Edit.
+In the Status drop-down menu, choose Disabled.
+Click Save.
+
+While this workaround has been deployed and was proven successful in a test environment, customers should determine the applicability and effectiveness in their own environment and under their own use conditions. Customers should be aware that any workaround or mitigation that is implemented may negatively impact the functionality or performance of their network based on intrinsic customer deployment scenarios and limitations. Customers should not deploy any workarounds or mitigations before first evaluating the applicability to their own environment and any impact to such environment.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-lifetime-pwd-GpCs76mb</URL>
+        <Description>Cisco Identity Services Engine Administrator Password Lifetime Expiration Issue</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

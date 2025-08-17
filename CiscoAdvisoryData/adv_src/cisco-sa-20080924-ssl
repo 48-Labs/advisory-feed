@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20080924-ssl",
+  "title": "Vulnerability in Cisco IOS While Processing SSL Packet",
+  "version": "1.1",
+  "firstPublished": "2008-09-24T16:00:00.000+0000",
+  "lastPublished": "2008-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ssl",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "16637",
+  "cve": "CVE-2008-3798",
+  "ciscoBugId": "CSCsj85065",
+  "status": "",
+  "summary": "   A Cisco IOS device may crash while processing an SSL packet. This can happen during the termination of an SSL-based session. The offending packet is not malformed and is normally received as part of the packet exchange.    Cisco has released software updates that address this ",
+  "totalCount": 11,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software HTTPS Session Setup Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16637&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

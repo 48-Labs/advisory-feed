@@ -1,0 +1,57 @@
+{
+  "identifier": "cisco-sa-20080116-cucmctl",
+  "title": "Cisco Unified Communications Manager CTL Provider Heap Overflow",
+  "version": "1.0",
+  "firstPublished": "2008-01-16T16:00:00.000+0000",
+  "lastPublished": "2008-01-16T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080116-cucmctl",
+  "severity": "Critical",
+  "cwe": "CWE-119",
+  "erpPubIds": "14885,cisco-amb-20080116-cucmctl",
+  "cve": "CVE-2008-0027",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Unified Communications Manager (CUCM), formerly CallManager, contains a heap overflow vulnerability in the Certificate Trust List (CTL) Provider service that could allow a remote, unauthenticated user to cause a denial of service (DoS) condition or execute arbitrary code. There ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager CTL Provider Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14885&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager CTL Provider Heap Overflow",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080116-cucmctl"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "13363",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager CTL Provider Heap Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6761&signatureSubId=0&releaseVersion=S806&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

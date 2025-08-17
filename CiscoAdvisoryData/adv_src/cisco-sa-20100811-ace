@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20100811-ace",
+  "title": "Multiple Vulnerabilities in the Cisco ACE Application Control Engine Module and Cisco ACE 4710 Application Control Engine",
+  "version": "1.0",
+  "firstPublished": "2010-08-11T16:00:00.000+0000",
+  "lastPublished": "2010-08-11T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100811-ace",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "21085,21086,21088,21087,cisco-amb-20100811-ace",
+  "cve": "CVE-2010-2822,CVE-2010-2823,CVE-2010-2824,CVE-2010-2825",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The Cisco ACE Application Control Engine Module and Cisco ACE 4710 Application Control Engine contain the following DoS vulnerabilities:        Real-Time Streaming Protocol (RTSP) inspection DoSvulnerability      HTTP, RTSP, and Session Initiation Protocol ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco ACE Application Control Engine Software Real Time Streaming Protocol Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21085&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ACE Application Control Engine Software Multiple Protocol Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21086&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ACE Application Control Engine Software Session Initiation Protocol Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21088&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ACE Application Control Engine Module SSL Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21087&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in the Cisco ACE Application Control Engine Module and Cisco ACE 4710 Application Control Engine",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100811-ace"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ACE SIP Inspection DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=27599&signatureSubId=0&releaseVersion=S803&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

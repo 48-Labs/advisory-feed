@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20170125-telepresence",
+  "title": "Cisco TelePresence Multipoint Control Unit Remote Code Execution Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-01-25T16:00:00.000+0000",
+  "lastPublished": "2017-01-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170125-telepresence",
+  "severity": "Critical",
+  "workarounds": "Yes",
+  "cwe": "CWE-20",
+  "cve": "CVE-2017-3792",
+  "ciscoBugId": "CSCuu67675",
+  "status": "",
+  "summary": "A vulnerability in a proprietary device driver in the kernel of Cisco TelePresence Multipoint Control Unit (MCU) Software could allow an unauthenticated, remote attacker to execute arbitrary code or cause a denial of service (DoS) condition.The vulnerability is due to improper size ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco TelePresence MCU Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7824&signatureSubId=0&releaseVersion=S966&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

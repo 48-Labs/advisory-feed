@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20160323-dhcpv6",
+  "title": "Cisco IOS and IOS XE Software DHCPv6 Relay Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-03-23T16:00:00.000+0000",
+  "lastPublished": "2016-03-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160323-dhcpv6",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2016-1348",
+  "ciscoBugId": "CSCus55821",
+  "status": "",
+  "summary": "A vulnerability in the DHCP version 6 (DHCPv6) relay feature of Cisco&nbsp;IOS and IOS&nbsp;XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload.The vulnerability is due to insufficient validation of DHCPv6 relay messages. An attacker ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "38302",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-03-23-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2016 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/c/en/us/about/security-center/event-response/cisco-erp-march-2016.html"
+        }
+      ]
+    }
+  ]
+}

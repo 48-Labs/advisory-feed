@@ -1,0 +1,56 @@
+{
+  "identifier": "cisco-sa-20150408-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA Software",
+  "version": "1.0",
+  "firstPublished": "2015-04-08T16:00:00.000+0000",
+  "lastPublished": "2015-04-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-asa",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "38185,38184,38183",
+  "cve": "CVE-2015-0675,CVE-2015-0676,CVE-2015-0677",
+  "ciscoBugId": "CSCuq77655,CSCur21069,CSCus95290",
+  "status": "",
+  "summary": "Cisco Adaptive Security Appliance (ASA) Software is affected by the following vulnerabilities:    Cisco ASA Failover Command Injection Vulnerability    Cisco ASA DNS Memory Exhaustion Vulnerability    Cisco ASA VPN XML Parser Denial of Service ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco ASA Software VPN XML Parser Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=38185&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Software DNS Memory Exhaustion Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=38184&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Software Failover Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=38183&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "29800",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA XML Entity Parsing Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1687&signatureSubId=2&releaseVersion=S861&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

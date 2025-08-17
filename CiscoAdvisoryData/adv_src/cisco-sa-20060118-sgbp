@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20060118-sgbp",
+  "title": "IOS Stack Group Bidding Protocol Crafted Packet DoS",
+  "version": "1.1",
+  "firstPublished": "2006-01-18T16:00:00.000+0000",
+  "lastPublished": "2006-01-18T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060118-sgbp",
+  "cwe": "CWE-399",
+  "erpPubIds": "10285",
+  "cve": "CVE-2006-0340",
+  "ciscoBugId": "CSCsb11124",
+  "status": "",
+  "summary": "   The Cisco IOS Stack Group Bidding Protocol (SGBP) feature in certain versions of Cisco IOS software is vulnerable to a remotely-exploitable denial of service condition. Devices that do not support or have not enabled the SGBP protocol are not affected by this vulnerability.    ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Stack Group Bidding Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=10285&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IOS Stack Group Bidding Protocol DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5716&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

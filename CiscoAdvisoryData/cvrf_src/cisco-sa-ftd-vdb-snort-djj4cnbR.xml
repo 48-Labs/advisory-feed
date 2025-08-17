@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Firepower Threat Defense Software Vulnerability Database with Snort Detection Engine Security Policy Bypass and Denial of Service Issue</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-ftd-vdb-snort-djj4cnbR</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2024-10-23T15:57:29</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2024-10-23T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2024-10-23T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2024-10-23T15:58:57.6592408Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">An issue with a Cisco Vulnerability Database (VDB) release for Cisco Firepower Threat Defense (FTD) Software could cause the Snort detection engine to restart unexpectedly when inspecting traffic. While the Snort detection engine is restarting, traffic could bypass Snort inspection or be dropped, depending on the device configuration. For more information, see the Details ["#details"] section of this advisory.
+
+The Snort 2 and Snort 3 detection engines are both affected. The Snort detection engine will restart automatically. No manual intervention is required.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-vdb-snort-djj4cnbR ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-vdb-snort-djj4cnbR"]
+
+This advisory is part of the October 2024 release of the Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication. For a complete list of the advisories and links to them, see Cisco Event Response: October 2024 Semiannual Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication ["https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75300"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This issue affects Cisco FTD Software if it is running Cisco VDB Release 396.
+
+Determine the Cisco VDB Release
+
+To determine which Cisco VDB release a Cisco FTD device is running, use the show version CLI command, as shown in the following example:
+
+
+FTD&gt; show version
+-------------[ ftd-fmc2-mgmt ]---------------------
+Model                     : Cisco Firepower Threat Defense for VMware (75) Version 7.2.8 (Build 25)
+UUID                      : a0ed2102-6a3e-11ef-b9a6-b8830d51972b
+LSP version               : lsp-rel-20240930-1858
+VDB version               : 396
+----------------------------------------------------
+FTD&gt;
+
+View the VDB version line. If the release is 396, the issue that is described in this advisory is present. If any other release is listed, the issue that is described in this advisory is not present.
+
+To view the Cisco VDB release in the Cisco Secure Firewall Management Center (FMC) Software, formerly Firepower Management Center, GUI, choose Help &gt; About.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this issue.
+
+Cisco has confirmed that this vulnerability does not affect the following products:
+
+Cisco Adaptive Security Appliance (ASA) Software
+Cisco FMC Software
+Open Source Snort 2
+Open Source Snort 3</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The following Cisco FTD Software Snort detection engine configuration parameters govern how traffic is handled if the Snort process restarts:
+
+
+
+Snort Fail Open
+snort preserve-connection
+
+For additional information, see the Snort Restart Traffic Behavior section of the Firepower Management Center Configuration Guide ["https://www.cisco.com/c/en/us/td/docs/security/secure-firewall/management-center/device-config/720/management-center-device-config-72/get-started-deployment.html#concept_uc1_gtq_ty"] or the Managing Firewall Threat Defense with Cloud-delivered Firewall Management Center in Cisco Defense Orchestrator ["https://www.cisco.com/c/en/us/td/docs/security/cdo/cloud-delivered-firewall-management-center-in-cdo/managing-firewall-threat-defense-services-with-cisco-defense-orchestrator/m_get-started-deployment.html?bookSearch=true#concept_uc1_gtq_ty"] guide.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address this issue.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+    Fixed Releases
+At the time of publication, Cisco FTD Software contained the fix for this issue if it was running Cisco VDB Release 397 or later. Cisco VDB Release 396 has been removed from the Cisco Software Download Center ["https://software.cisco.com/download/home"].
+
+See the Details section in the bug ID(s) at the top of the advisory for the most complete and current information.
+
+For more information on upgrading the Cisco VDB, see the following resources:
+
+The Update the Vulnerability Database (VDB) ["https://www.cisco.com/c/en/us/td/docs/security/firepower/70/configuration/guide/fpmc-config-guide-v70/system_software_updates.html#Cisco_Concept.dita_7a4949fd-7dc1-43bc-8187-3124694c7aad"] section of the Firepower Management Center Configuration Guide
+The Updating System Databases ["https://www.cisco.com/c/en/us/td/docs/security/firepower/70/fdm/fptd-fdm-config-guide-700/fptd-fdm-mgmt.html#id_11511"] section of the Cisco Firepower Threat Defense Configuration Guide for Firepower Device Manager
+
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is not aware of any public announcements or malicious use of the issue that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">This issue was found during the resolution of a Cisco TAC support case.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-vdb-snort-djj4cnbR</cvrf:URL>
+      <cvrf:Description>Cisco Firepower Threat Defense Software Vulnerability Database with Snort Detection Engine Security Policy Bypass and Denial of Service Issue</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Firepower Management Center Software File and Snort Detection Enine Denial of Service Vulnerability</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this issue.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-vdb-snort-djj4cnbR</URL>
+        <Description>Cisco Firepower Threat Defense Software Vulnerability Database with Snort Detection Engine Security Policy Bypass and Denial of Service Issue</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

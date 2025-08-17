@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20160504-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL Affecting Cisco Products: May 2016 ",
+  "version": "1.12",
+  "firstPublished": "2016-05-04T19:30:00.000+0000",
+  "lastPublished": "2016-12-05T16:10:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160504-openssl",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-119, CWE-200, CWE-310",
+  "erpPubIds": "44982,44986,44985,44983,44984",
+  "cve": "CVE-2016-2105,CVE-2016-2106,CVE-2016-2107,CVE-2016-2108,CVE-2016-2109,CVE-2016-2176",
+  "ciscoBugId": "CSCuz52348,CSCuz52349,CSCuz52351,CSCuz52360,CSCuz52362,CSCuz52363,CSCuz52364,CSCuz52365,CSCuz52366,CSCuz52367,CSCuz52370,CSCuz52371,CSCuz52373,CSCuz52375,CSCuz52382,CSCuz52383,CSCuz52386,CSCuz52387,CSCuz52393,CSCuz52397,CSCuz52399,CSCuz52400,CSCuz52405,CSCuz52407,CSCuz52408,CSCuz52409,CSCuz52410,CSCuz52413,CSCuz52415,CSCuz52418,CSCuz52420,CSCuz52421,CSCuz52422,CSCuz52423,CSCuz52424,CSCuz52425,CSCuz52429,CSCuz52430,CSCuz52432,CSCuz52433,CSCuz52435,CSCuz52437,CSCuz52439,CSCuz52441,CSCuz52442,CSCuz52444,CSCuz52446,CSCuz52447,CSCuz52448,CSCuz52451,CSCuz52452,CSCuz52453,CSCuz52454,CSCuz52455,CSCuz52456,CSCuz52458,CSCuz52461,CSCuz52462,CSCuz52466,CSCuz52468,CSCuz52472,CSCuz52474,CSCuz52477,CSCuz52481,CSCuz52482,CSCuz52483,CSCuz52485,CSCuz52486,CSCuz52487,CSCuz52488,CSCuz52490,CSCuz52492,CSCuz52493,CSCuz52494,CSCuz52503,CSCuz52506,CSCuz52507,CSCuz52508,CSCuz52522,CSCuz52528,CSCuz52529,CSCuz52531,CSCuz52532,CSCuz52533,CSCuz52537,CSCuz52538,CSCuz52539,CSCuz52543,CSCuz52547,CSCuz52548,CSCuz52550,CSCuz52551,CSCuz52552,CSCuz52554,CSCuz52556,CSCuz52558,CSCuz52560,CSCuz52562,CSCuz52563,CSCuz52565,CSCuz52566,CSCuz52567,CSCuz52568,CSCuz52570,CSCuz52571,CSCuz52583,CSCuz52587,CSCuz55590,CSCuz60563,CSCuz63935,CSCuz63936,CSCuz63938,CSCuz63940,CSCuz73565",
+  "status": "",
+  "summary": "On May 3, 2016, the OpenSSL Software Foundation released a security advisory that included six vulnerabilities. Of the six vulnerabilities disclosed, four of them may cause memory corruption or excessive memory usage, one could allow a padding oracle attack to decrypt traffic when the connection ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL AES CBC Cipher Man-in-the-Middle Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=44982&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL ASN.1 Strings X509_NAME_oneline Function Overread Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=44986&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL d2i_CMS_bio Function Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=44985&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL EVP_EncodeUpdate Function Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=44983&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "OpenSSL EVP_EncryptUpdate Function Overflow Heap Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=44984&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "identifier": "cisco-sa-20071017-cucm",
+  "title": "Cisco Unified Communications Manager Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2007-10-17T16:00:00.000+0000",
+  "lastPublished": "2007-10-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20071017-cucm",
+  "severity": "Critical",
+  "cwe": "CWE-119, CWE-399",
+  "erpPubIds": "14229,14259,cisco-amb-20071017-cucm",
+  "cve": "CVE-2007-5537,CVE-2007-5538",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco Unified Communications Manager (CUCM), formerly CallManager, contains two denial of service (DoS) vulnerabilities. Large volumes of UDP Session Initiation Protocol (SIP) INVITE messages may cause a resource exhaustion condition on CUCM systems resulting in a kernel panic. The CUCM ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Session Initiation Protocol INVITE Message Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14229&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Centralized TFTP File Locator Service Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14259&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20071017-cucm"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "CUCM Centralized TFTP File Locator Service Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5910&signatureSubId=0&releaseVersion=S427&softwareVersion=6.0"
+        },
+        {
+          "name": "CUCM SIP INVITE UDP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5912&signatureSubId=0&releaseVersion=S403&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

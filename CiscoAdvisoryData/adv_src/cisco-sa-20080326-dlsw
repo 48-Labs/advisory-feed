@@ -1,0 +1,65 @@
+{
+  "identifier": "cisco-sa-20080326-dlsw",
+  "title": "Multiple DLSw Denial of Service Vulnerabilities in Cisco IOS",
+  "version": "1.5",
+  "firstPublished": "2008-03-26T16:00:00.000+0000",
+  "lastPublished": "2008-03-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080326-dlsw",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "cisco-sa-20070110-dlsw,12412,15413,cisco-amb-20080326-dlsw",
+  "cve": "CVE-2007-0199,CVE-2008-1152",
+  "ciscoBugId": "CSCsf28840,CSCsk73104",
+  "status": "",
+  "summary": "   Cisco IOS contains multiple vulnerabilities in the Data-link Switching (DLSw) feature that may result in a reload or memory leaks when processing specially crafted UDP or IP Protocol 91 packets.       Cisco has released software updates that address these ",
+  "totalCount": 5,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Data Link Switching Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12412&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Data-Link Switching Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15413&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple DLSw Denial of Service Vulnerabilities in Cisco IOS",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080326-dlsw"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "DLSw Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070110-dlsw"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS DLSw DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6926&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS DLSw DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6926&signatureSubId=1&releaseVersion=S757&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

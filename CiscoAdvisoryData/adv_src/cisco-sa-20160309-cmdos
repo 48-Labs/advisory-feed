@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160309-cmdos",
+  "title": "Cisco Wireless Residential Gateway with EDVA Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-03-09T16:00:00.000+0000",
+  "lastPublished": "2016-03-09T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160309-cmdos",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2016-1326",
+  "ciscoBugId": "CSCup48105",
+  "status": "",
+  "summary": "A vulnerability in the web-based administration interface of Cisco Model DPQ3925 8x4 DOCSIS 3.0 Wireless Residential Gateway with EDVA could allow an unauthenticated, remote attacker to cause the device to become unresponsive and restart, creating a denial of service (DoS) condition.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "38138",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-03-09-seu.html"
+        }
+      ]
+    }
+  ]
+}

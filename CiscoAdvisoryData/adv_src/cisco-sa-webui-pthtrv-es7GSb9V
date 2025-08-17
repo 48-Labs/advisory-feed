@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-webui-pthtrv-es7GSb9V",
+  "title": "Cisco IOS XE Software Web UI Path Traversal Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2023-03-22T16:00:00.000+0000",
+  "lastPublished": "2023-03-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-webui-pthtrv-es7GSb9V",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-23",
+  "erpPubIds": "ERP-74842",
+  "cve": "CVE-2023-20066",
+  "ciscoBugId": "CSCwc76009",
+  "status": "",
+  "summary": "A vulnerability in the web UI of Cisco IOS XE Software could allow an authenticated, remote attacker to perform a directory traversal and access resources that are outside the filesystem mountpoint of the web UI.&nbsp;This vulnerability is due to an insufficient security ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2023 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74842&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

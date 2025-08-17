@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20090325-mobileip",
+  "title": "Cisco IOS Software Mobile IP and Mobile IPv6 Vulnerabilities",
+  "version": "1.3",
+  "firstPublished": "2009-03-25T16:00:00.000+0000",
+  "lastPublished": "2009-03-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090325-mobileip",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "17759,17760",
+  "cve": "CVE-2009-0633,CVE-2009-0634",
+  "ciscoBugId": "CSCsm97220,CSCso05337",
+  "status": "",
+  "summary": "   Devices that are running Cisco IOS Software and configured for Mobile IP Network Address Translation (NAT) Traversal feature or Mobile IPv6 are vulnerable to a denial of service (DoS) attack that may result in a blocked interface.        Cisco has released software ",
+  "totalCount": 8,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Mobile IP MIPv6 Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17759&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Mobile IP ICMP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17760&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

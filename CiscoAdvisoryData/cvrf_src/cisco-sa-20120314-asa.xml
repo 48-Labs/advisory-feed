@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module </cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20120314-asa</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2012-03-14T16:05:16</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2012-03-14T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-03-14T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="1">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120314-asa</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module </cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Firewall Services Module (FWSM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5176">Cisco Firewall Services Module (FWSM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Adaptive Security Appliance (ASA) Software" Type="Product Name">
+        <Branch Name="7.2" Type="Product Version">
+          <Branch Name="7.2.2.34" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-70760">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.34</FullProductName>
+          </Branch>
+          <Branch Name="7.2.3.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-70763">Cisco Adaptive Security Appliance (ASA) Software 7.2.3.1</FullProductName>
+          </Branch>
+          <Branch Name="7.2.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-70764">Cisco Adaptive Security Appliance (ASA) Software 7.2.2</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91011">Cisco Adaptive Security Appliance (ASA) Software 7.2.4</FullProductName>
+          </Branch>
+          <Branch Name="7.2.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91012">Cisco Adaptive Security Appliance (ASA) Software 7.2.3</FullProductName>
+          </Branch>
+          <Branch Name="7.2.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91013">Cisco Adaptive Security Appliance (ASA) Software 7.2.1</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4.27" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91089">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.27</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4.30" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91090">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.30</FullProductName>
+          </Branch>
+          <Branch Name="7.2.5" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-100027">Cisco Adaptive Security Appliance (ASA) Software 7.2.5</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4.33" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-111872">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.33</FullProductName>
+          </Branch>
+          <Branch Name="7.2.1.9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115208">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.9</FullProductName>
+          </Branch>
+          <Branch Name="7.2.1.13" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115209">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.13</FullProductName>
+          </Branch>
+          <Branch Name="7.2.1.19" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115210">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.19</FullProductName>
+          </Branch>
+          <Branch Name="7.2.1.24" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115211">Cisco Adaptive Security Appliance (ASA) Software 7.2.1.24</FullProductName>
+          </Branch>
+          <Branch Name="7.2.2.6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115212">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.6</FullProductName>
+          </Branch>
+          <Branch Name="7.2.2.10" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115213">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.10</FullProductName>
+          </Branch>
+          <Branch Name="7.2.2.14" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115214">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.14</FullProductName>
+          </Branch>
+          <Branch Name="7.2.2.18" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115215">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.18</FullProductName>
+          </Branch>
+          <Branch Name="7.2.2.19" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115216">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.19</FullProductName>
+          </Branch>
+          <Branch Name="7.2.2.22" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115217">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.22</FullProductName>
+          </Branch>
+          <Branch Name="7.2.3.12" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115218">Cisco Adaptive Security Appliance (ASA) Software 7.2.3.12</FullProductName>
+          </Branch>
+          <Branch Name="7.2.3.16" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115219">Cisco Adaptive Security Appliance (ASA) Software 7.2.3.16</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4.6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115220">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.6</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4.9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115221">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.9</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4.18" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115222">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.18</FullProductName>
+          </Branch>
+          <Branch Name="7.2.4.25" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115223">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.25</FullProductName>
+          </Branch>
+          <Branch Name="7.2.5.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115224">Cisco Adaptive Security Appliance (ASA) Software 7.2.5.2</FullProductName>
+          </Branch>
+          <Branch Name="7.2.5.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115225">Cisco Adaptive Security Appliance (ASA) Software 7.2.5.4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.0" Type="Product Version">
+          <Branch Name="8.0.2.11" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-70761">Cisco Adaptive Security Appliance (ASA) Software 8.0.2.11</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91003">Cisco Adaptive Security Appliance (ASA) Software 8.0.4</FullProductName>
+          </Branch>
+          <Branch Name="8.0.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91004">Cisco Adaptive Security Appliance (ASA) Software 8.0.3</FullProductName>
+          </Branch>
+          <Branch Name="8.0.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91005">Cisco Adaptive Security Appliance (ASA) Software 8.0.2</FullProductName>
+          </Branch>
+          <Branch Name="8.0.1.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91006">Cisco Adaptive Security Appliance (ASA) Software 8.0.1.2</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.25" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91021">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.25</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.28" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91022">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.28</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.33" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-92319">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.33</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.32" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-92322">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.32</FullProductName>
+          </Branch>
+          <Branch Name="8.0.5" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-97262">Cisco Adaptive Security Appliance (ASA) Software 8.0.5</FullProductName>
+          </Branch>
+          <Branch Name="8.0.2.15" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115226">Cisco Adaptive Security Appliance (ASA) Software 8.0.2.15</FullProductName>
+          </Branch>
+          <Branch Name="8.0.3.6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115227">Cisco Adaptive Security Appliance (ASA) Software 8.0.3.6</FullProductName>
+          </Branch>
+          <Branch Name="8.0.3.12" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115228">Cisco Adaptive Security Appliance (ASA) Software 8.0.3.12</FullProductName>
+          </Branch>
+          <Branch Name="8.0.3.19" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115229">Cisco Adaptive Security Appliance (ASA) Software 8.0.3.19</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115230">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.3</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115231">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.9</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.16" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115232">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.16</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.23" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115233">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.23</FullProductName>
+          </Branch>
+          <Branch Name="8.0.4.31" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115234">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.31</FullProductName>
+          </Branch>
+          <Branch Name="8.0.5.20" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115235">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.20</FullProductName>
+          </Branch>
+          <Branch Name="8.0.5.23" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115236">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.23</FullProductName>
+          </Branch>
+          <Branch Name="8.0.5.25" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115237">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.25</FullProductName>
+          </Branch>
+          <Branch Name="8.0.5.27" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115258">Cisco Adaptive Security Appliance (ASA) Software 8.0.5.27</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.2" Type="Product Version">
+          <Branch Name="8.2.0.45" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-70762">Cisco Adaptive Security Appliance (ASA) Software 8.2.0.45</FullProductName>
+          </Branch>
+          <Branch Name="8.2.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-97260">Cisco Adaptive Security Appliance (ASA) Software 8.2.1</FullProductName>
+          </Branch>
+          <Branch Name="8.2.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-97261">Cisco Adaptive Security Appliance (ASA) Software 8.2.2</FullProductName>
+          </Branch>
+          <Branch Name="8.2.2.10" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-99994">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.10</FullProductName>
+          </Branch>
+          <Branch Name="8.2.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-108072">Cisco Adaptive Security Appliance (ASA) Software 8.2.3</FullProductName>
+          </Branch>
+          <Branch Name="8.2.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-108074">Cisco Adaptive Security Appliance (ASA) Software 8.2.4</FullProductName>
+          </Branch>
+          <Branch Name="8.2.1.11" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115241">Cisco Adaptive Security Appliance (ASA) Software 8.2.1.11</FullProductName>
+          </Branch>
+          <Branch Name="8.2.2.9" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115242">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.9</FullProductName>
+          </Branch>
+          <Branch Name="8.2.2.12" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115243">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.12</FullProductName>
+          </Branch>
+          <Branch Name="8.2.2.16" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115244">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.16</FullProductName>
+          </Branch>
+          <Branch Name="8.2.4.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115245">Cisco Adaptive Security Appliance (ASA) Software 8.2.4.1</FullProductName>
+          </Branch>
+          <Branch Name="8.2.4.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115246">Cisco Adaptive Security Appliance (ASA) Software 8.2.4.4</FullProductName>
+          </Branch>
+          <Branch Name="8.2.5" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115247">Cisco Adaptive Security Appliance (ASA) Software 8.2.5</FullProductName>
+          </Branch>
+          <Branch Name="8.2.5.13" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115248">Cisco Adaptive Security Appliance (ASA) Software 8.2.5.13</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.1" Type="Product Version">
+          <Branch Name="8.1.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91009">Cisco Adaptive Security Appliance (ASA) Software 8.1.1</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91010">Cisco Adaptive Security Appliance (ASA) Software 8.1.2</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.15" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91019">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.15</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.16" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91020">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.16</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.19" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-91088">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.19</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.23" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-92320">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.23</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.24" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-92321">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.24</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.50" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112137">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.50</FullProductName>
+          </Branch>
+          <Branch Name="8.1.1.6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115238">Cisco Adaptive Security Appliance (ASA) Software 8.1.1.6</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.13" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115239">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.13</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.49" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115240">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.49</FullProductName>
+          </Branch>
+          <Branch Name="8.1.2.55" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115259">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.55</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.3" Type="Product Version">
+          <Branch Name="8.3.1.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-99996">Cisco Adaptive Security Appliance (ASA) Software 8.3.1.1</FullProductName>
+          </Branch>
+          <Branch Name="8.3.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-99997">Cisco Adaptive Security Appliance (ASA) Software 8.3.1</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-108069">Cisco Adaptive Security Appliance (ASA) Software 8.3.2</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.23" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112138">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.23</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.25" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112800">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.25</FullProductName>
+          </Branch>
+          <Branch Name="8.3.1.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115249">Cisco Adaptive Security Appliance (ASA) Software 8.3.1.4</FullProductName>
+          </Branch>
+          <Branch Name="8.3.1.6" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115250">Cisco Adaptive Security Appliance (ASA) Software 8.3.1.6</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.4" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115251">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.4</FullProductName>
+          </Branch>
+          <Branch Name="8.3.2.13" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115252">Cisco Adaptive Security Appliance (ASA) Software 8.3.2.13</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.4" Type="Product Version">
+          <Branch Name="8.4.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-108073">Cisco Adaptive Security Appliance (ASA) Software 8.4.1</FullProductName>
+          </Branch>
+          <Branch Name="8.4.2" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112139">Cisco Adaptive Security Appliance (ASA) Software 8.4.2</FullProductName>
+          </Branch>
+          <Branch Name="8.4.1.3" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115253">Cisco Adaptive Security Appliance (ASA) Software 8.4.1.3</FullProductName>
+          </Branch>
+          <Branch Name="8.4.1.11" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115254">Cisco Adaptive Security Appliance (ASA) Software 8.4.1.11</FullProductName>
+          </Branch>
+          <Branch Name="8.4.2.8" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115255">Cisco Adaptive Security Appliance (ASA) Software 8.4.2.8</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.5" Type="Product Version">
+          <Branch Name="8.5.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112136">Cisco Adaptive Security Appliance (ASA) Software 8.5.1</FullProductName>
+          </Branch>
+          <Branch Name="8.5.1.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-112140">Cisco Adaptive Security Appliance (ASA) Software 8.5.1.1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="8.6" Type="Product Version">
+          <Branch Name="8.6.1" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-115276">Cisco Adaptive Security Appliance (ASA) Software 8.6.1</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco Adaptive Security Appliance (ASA) Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-6588">Cisco Adaptive Security Appliance (ASA) Software </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco ASA Syslog Message 305006 Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCts39634</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCts39634</Note>
+    </Notes>
+    <CVE>CVE-2012-0355</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-112140</ProductID>
+        <ProductID>CVRFPID-115255</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120314-asa</URL>
+        <Description>Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Protocol Independent Multicast Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtr47517</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtr47517,CSCtu97367</Note>
+    </Notes>
+    <CVE>CVE-2012-0356</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-100027</ProductID>
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-111872</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112137</ProductID>
+        <ProductID>CVRFPID-112138</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-112140</ProductID>
+        <ProductID>CVRFPID-112800</ProductID>
+        <ProductID>CVRFPID-115208</ProductID>
+        <ProductID>CVRFPID-115209</ProductID>
+        <ProductID>CVRFPID-115210</ProductID>
+        <ProductID>CVRFPID-115211</ProductID>
+        <ProductID>CVRFPID-115212</ProductID>
+        <ProductID>CVRFPID-115213</ProductID>
+        <ProductID>CVRFPID-115214</ProductID>
+        <ProductID>CVRFPID-115215</ProductID>
+        <ProductID>CVRFPID-115216</ProductID>
+        <ProductID>CVRFPID-115217</ProductID>
+        <ProductID>CVRFPID-115218</ProductID>
+        <ProductID>CVRFPID-115219</ProductID>
+        <ProductID>CVRFPID-115220</ProductID>
+        <ProductID>CVRFPID-115221</ProductID>
+        <ProductID>CVRFPID-115222</ProductID>
+        <ProductID>CVRFPID-115223</ProductID>
+        <ProductID>CVRFPID-115224</ProductID>
+        <ProductID>CVRFPID-115225</ProductID>
+        <ProductID>CVRFPID-115226</ProductID>
+        <ProductID>CVRFPID-115227</ProductID>
+        <ProductID>CVRFPID-115228</ProductID>
+        <ProductID>CVRFPID-115229</ProductID>
+        <ProductID>CVRFPID-115230</ProductID>
+        <ProductID>CVRFPID-115231</ProductID>
+        <ProductID>CVRFPID-115232</ProductID>
+        <ProductID>CVRFPID-115233</ProductID>
+        <ProductID>CVRFPID-115234</ProductID>
+        <ProductID>CVRFPID-115235</ProductID>
+        <ProductID>CVRFPID-115236</ProductID>
+        <ProductID>CVRFPID-115237</ProductID>
+        <ProductID>CVRFPID-115238</ProductID>
+        <ProductID>CVRFPID-115239</ProductID>
+        <ProductID>CVRFPID-115240</ProductID>
+        <ProductID>CVRFPID-115241</ProductID>
+        <ProductID>CVRFPID-115242</ProductID>
+        <ProductID>CVRFPID-115243</ProductID>
+        <ProductID>CVRFPID-115244</ProductID>
+        <ProductID>CVRFPID-115245</ProductID>
+        <ProductID>CVRFPID-115246</ProductID>
+        <ProductID>CVRFPID-115247</ProductID>
+        <ProductID>CVRFPID-115249</ProductID>
+        <ProductID>CVRFPID-115250</ProductID>
+        <ProductID>CVRFPID-115251</ProductID>
+        <ProductID>CVRFPID-115252</ProductID>
+        <ProductID>CVRFPID-115253</ProductID>
+        <ProductID>CVRFPID-115254</ProductID>
+        <ProductID>CVRFPID-43</ProductID>
+        <ProductID>CVRFPID-70760</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-70763</ProductID>
+        <ProductID>CVRFPID-70764</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91011</ProductID>
+        <ProductID>CVRFPID-91012</ProductID>
+        <ProductID>CVRFPID-91013</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-91089</ProductID>
+        <ProductID>CVRFPID-91090</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+        <ProductID>CVRFPID-5176</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120314-asa</URL>
+        <Description>Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco ASA UDP Inspection Engine Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtq10441</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtq10441</Note>
+    </Notes>
+    <CVE>CVE-2012-0353</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112137</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-115226</ProductID>
+        <ProductID>CVRFPID-115227</ProductID>
+        <ProductID>CVRFPID-115228</ProductID>
+        <ProductID>CVRFPID-115229</ProductID>
+        <ProductID>CVRFPID-115230</ProductID>
+        <ProductID>CVRFPID-115231</ProductID>
+        <ProductID>CVRFPID-115232</ProductID>
+        <ProductID>CVRFPID-115233</ProductID>
+        <ProductID>CVRFPID-115234</ProductID>
+        <ProductID>CVRFPID-115235</ProductID>
+        <ProductID>CVRFPID-115236</ProductID>
+        <ProductID>CVRFPID-115241</ProductID>
+        <ProductID>CVRFPID-115242</ProductID>
+        <ProductID>CVRFPID-115243</ProductID>
+        <ProductID>CVRFPID-115244</ProductID>
+        <ProductID>CVRFPID-115245</ProductID>
+        <ProductID>CVRFPID-115246</ProductID>
+        <ProductID>CVRFPID-115247</ProductID>
+        <ProductID>CVRFPID-115249</ProductID>
+        <ProductID>CVRFPID-115250</ProductID>
+        <ProductID>CVRFPID-115251</ProductID>
+        <ProductID>CVRFPID-115252</ProductID>
+        <ProductID>CVRFPID-115253</ProductID>
+        <ProductID>CVRFPID-115254</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120314-asa</URL>
+        <Description>Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco ASA Threat Detection Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtw35765</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtw35765</Note>
+    </Notes>
+    <CVE>CVE-2012-0354</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112137</ProductID>
+        <ProductID>CVRFPID-112138</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-112140</ProductID>
+        <ProductID>CVRFPID-112800</ProductID>
+        <ProductID>CVRFPID-115226</ProductID>
+        <ProductID>CVRFPID-115227</ProductID>
+        <ProductID>CVRFPID-115228</ProductID>
+        <ProductID>CVRFPID-115229</ProductID>
+        <ProductID>CVRFPID-115230</ProductID>
+        <ProductID>CVRFPID-115231</ProductID>
+        <ProductID>CVRFPID-115232</ProductID>
+        <ProductID>CVRFPID-115233</ProductID>
+        <ProductID>CVRFPID-115234</ProductID>
+        <ProductID>CVRFPID-115235</ProductID>
+        <ProductID>CVRFPID-115236</ProductID>
+        <ProductID>CVRFPID-115237</ProductID>
+        <ProductID>CVRFPID-115238</ProductID>
+        <ProductID>CVRFPID-115239</ProductID>
+        <ProductID>CVRFPID-115240</ProductID>
+        <ProductID>CVRFPID-115241</ProductID>
+        <ProductID>CVRFPID-115242</ProductID>
+        <ProductID>CVRFPID-115243</ProductID>
+        <ProductID>CVRFPID-115244</ProductID>
+        <ProductID>CVRFPID-115245</ProductID>
+        <ProductID>CVRFPID-115246</ProductID>
+        <ProductID>CVRFPID-115247</ProductID>
+        <ProductID>CVRFPID-115248</ProductID>
+        <ProductID>CVRFPID-115249</ProductID>
+        <ProductID>CVRFPID-115250</ProductID>
+        <ProductID>CVRFPID-115251</ProductID>
+        <ProductID>CVRFPID-115252</ProductID>
+        <ProductID>CVRFPID-115253</ProductID>
+        <ProductID>CVRFPID-115254</ProductID>
+        <ProductID>CVRFPID-115255</ProductID>
+        <ProductID>CVRFPID-115258</ProductID>
+        <ProductID>CVRFPID-115259</ProductID>
+        <ProductID>CVRFPID-115276</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120314-asa</URL>
+        <Description>Multiple Vulnerabilities in Cisco ASA 5500 Series Adaptive Security Appliances and Cisco Catalyst 6500 Series ASA Services Module </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

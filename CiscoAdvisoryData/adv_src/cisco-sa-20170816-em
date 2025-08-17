@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20170816-em",
+  "title": "Cisco Virtual Network Function Element Manager Arbitrary Command Execution Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-08-16T16:00:00.000+0000",
+  "lastPublished": "2017-08-16T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170816-em",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-78",
+  "cve": "CVE-2017-6710",
+  "ciscoBugId": "CSCvc76670",
+  "status": "",
+  "summary": "A vulnerability in the Cisco&nbsp;Virtual Network Function (VNF) Element Manager could allow an authenticated, remote attacker to elevate privileges and run commands in the context of the root user on the server.The vulnerability is due to command settings that ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Virtual Network Function Element Manager Arbitrary Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8036&signatureSubId=0&releaseVersion=S992&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

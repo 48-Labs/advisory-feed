@@ -1,0 +1,85 @@
+{
+  "identifier": "cisco-sa-20150128-ghost",
+  "title": "GNU glibc gethostbyname Function Buffer Overflow Vulnerability",
+  "version": "1.33",
+  "firstPublished": "2015-01-28T22:30:00.000+0000",
+  "lastPublished": "2015-07-24T17:47:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150128-ghost",
+  "severity": "Critical",
+  "cwe": "CWE-119",
+  "erpPubIds": "37181",
+  "cve": "CVE-2015-0235",
+  "ciscoBugId": "CSCus66766,CSCus68529,CSCus68533,CSCus68534,CSCus68537,CSCus68770,CSCus68905,CSCus68928,CSCus69387,CSCus69388,CSCus69422,CSCus69424,CSCus69430,CSCus69431,CSCus69460,CSCus69463,CSCus69472,CSCus69475,CSCus69491,CSCus69493,CSCus69494,CSCus69495,CSCus69513,CSCus69517,CSCus69523,CSCus69524,CSCus69525,CSCus69529,CSCus69535,CSCus69539,CSCus69543,CSCus69547,CSCus69550,CSCus69558,CSCus69559,CSCus69563,CSCus69570,CSCus69585,CSCus69592,CSCus69606,CSCus69607,CSCus69609,CSCus69610,CSCus69612,CSCus69615,CSCus69617,CSCus69620,CSCus69622,CSCus69646,CSCus69665,CSCus69682,CSCus69696,CSCus69731,CSCus69732,CSCus69738,CSCus69763,CSCus69766,CSCus69768,CSCus69769,CSCus69787,CSCus69788,CSCus69789,CSCus69791,CSCus69792,CSCus69809,CSCus70263,CSCus71708,CSCus71883,CSCus74488,CSCus85675,CSCus85759,CSCus95601",
+  "status": "",
+  "summary": "On January 27, 2015, a buffer overflow vulnerability in the GNU C library (glibc) was publicly announced. This vulnerability is related to the various gethostbyname functions included in glibc and affects applications that call these functions. This vulnerability may allow an attacker to obtain ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "GNU glibc gethost Function Calls Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37181&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "33225",
+          "url": "https://www.snort.org/rule_docs/33225"
+        },
+        {
+          "name": "33226",
+          "url": "https://www.snort.org/rule_docs/33226"
+        },
+        {
+          "name": "33275",
+          "url": "https://www.snort.org/rule_docs/33275"
+        },
+        {
+          "name": "39925",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: GNU glibc gethostbyname Function Buffer Overflow Vulnerability",
+          "url": "http://www.cisco.com/web/about/security/intelligence/ERP_GHOST_29-Jan-2015.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "GNU C Library Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4977&signatureSubId=0&releaseVersion=S848&softwareVersion=6.0"
+        },
+        {
+          "name": "GNU C Library Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4977&signatureSubId=1&releaseVersion=S852&softwareVersion=6.0"
+        },
+        {
+          "name": "GNU C Library Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4977&signatureSubId=2&releaseVersion=S852&softwareVersion=6.0"
+        },
+        {
+          "name": "GNU C Library Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4977&signatureSubId=3&releaseVersion=S852&softwareVersion=6.0"
+        },
+        {
+          "name": "GNU C Library Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4977&signatureSubId=4&releaseVersion=S852&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

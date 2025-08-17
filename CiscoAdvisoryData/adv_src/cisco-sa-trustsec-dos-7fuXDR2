@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-trustsec-dos-7fuXDR2",
+  "title": "Cisco IOS and IOS XE Software  TrustSec CLI Parser Denial of Service  Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2021-09-22T16:00:00.000+0000",
+  "lastPublished": "2021-09-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-trustsec-dos-7fuXDR2",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-435",
+  "erpPubIds": "ERP-74581",
+  "cve": "CVE-2021-34699",
+  "ciscoBugId": "CSCvx66699",
+  "status": "",
+  "summary": "A vulnerability in the TrustSec CLI parser of Cisco&nbsp;IOS and Cisco&nbsp;IOS XE Software could allow an authenticated, remote attacker to cause an affected device to reload.This vulnerability is due to an improper interaction between the web UI and the CLI parser. An attacker could ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "58189-58190",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2021 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74581&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

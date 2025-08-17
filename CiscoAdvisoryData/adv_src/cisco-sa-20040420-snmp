@@ -1,0 +1,50 @@
+{
+  "identifier": "cisco-sa-20040420-snmp",
+  "title": "Vulnerabilities in SNMP Message Processing",
+  "version": "1.5",
+  "firstPublished": "2004-04-20T21:00:00.000+0000",
+  "lastPublished": "2004-04-20T21:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-snmp",
+  "cwe": "CWE-399",
+  "erpPubIds": "7570",
+  "cve": "CVE-2004-0714",
+  "ciscoBugId": "CSCed68575",
+  "status": "",
+  "summary": "    Cisco Internetwork Operating System (IOS) Software release trains 12.0S, 12.1E, 12.2, 12.2S, 12.3, 12.3B and 12.3T may contain a vulnerability in processing SNMP requests which, if exploited, could cause the device to reload.     The vulnerability is only present in certain ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco SNMP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=7570&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco SNMP Message Processing DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4513&signatureSubId=0&releaseVersion=S179&softwareVersion=5.1"
+        },
+        {
+          "name": "Cisco SNMP Message Processing DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4513&signatureSubId=0&releaseVersion=S179&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco SNMP Message Processing DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5512&signatureSubId=0&releaseVersion=S591&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco SNMP Message Processing DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5512&signatureSubId=1&releaseVersion=S543&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

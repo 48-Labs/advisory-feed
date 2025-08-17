@@ -1,0 +1,49 @@
+{
+  "identifier": "cisco-sa-20190327-iosxe-cmdinject",
+  "title": "Cisco IOS XE Software Command Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-03-27T16:00:00.000+0000",
+  "lastPublished": "2019-03-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190327-iosxe-cmdinject",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-71135",
+  "cve": "CVE-2019-1756",
+  "ciscoBugId": "CSCvi36805",
+  "status": "",
+  "summary": "A vulnerability in Cisco&nbsp;IOS XE Software could allow an authenticated, remote attacker to execute commands on the underlying Linux shell of an affected device with root privileges.The vulnerability occurs because the affected software improperly sanitizes user-supplied ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "49608",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-03-28-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2019 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-71135&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS XE Software Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8356&signatureSubId=0&releaseVersion=S1034&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

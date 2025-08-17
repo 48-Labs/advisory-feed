@@ -1,0 +1,49 @@
+{
+  "identifier": "cisco-sa-20160928-esp-nat",
+  "title": "Cisco IOS XE Software NAT Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-09-28T16:00:00.000+0000",
+  "lastPublished": "2016-09-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160928-esp-nat",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "erpPubIds": "ERP-56513",
+  "cve": "CVE-2016-6378",
+  "ciscoBugId": "CSCuw85853",
+  "status": "",
+  "summary": "A vulnerability in the implementation of Network Address Translation&nbsp;(NAT) functionality in Cisco&nbsp;IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload.The vulnerability is due to improper handling of malformed ICMP packets ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "116:250",
+          "url": "https://snort.org/rule_docs/116-250?"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2016 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-56513&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS XE Software NAT Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7653&signatureSubId=0&releaseVersion=S945&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

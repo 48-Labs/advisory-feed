@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20110928-sip",
+  "title": "Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2011-09-28T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:22:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-sip",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "24129,24130,24127",
+  "cve": "CVE-2011-0939,CVE-2011-2072,CVE-2011-3275",
+  "ciscoBugId": "CSCth03022,CSCti48504,CSCto88686",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Session Initiation Protocol (SIP)implementation in Cisco IOS Software and Cisco IOS XE Software that could allowan unauthenticated, remote attacker to cause a reload of an affected device ortrigger memory leaks that may result in system instabilities. ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Cisco Unified Communications Manager Session Initiation Protocol Packet Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24129&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Memory Leak Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24130&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24127&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager SIP Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=32379&signatureSubId=0&releaseVersion=S802&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS SIP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=34445&signatureSubId=0&releaseVersion=S598&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

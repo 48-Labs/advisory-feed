@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Microsoft Windows SMB Denial of Service Vulnerabilities in Cisco Products - MS02-045</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20020918-smb-dos</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2002-09-18T16:00:00</cvrf:Date>
+        <cvrf:Description>Removed URT from 'fixed' list, reworded summary to more closely
+				match the original Microsoft bulletin</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2002-09-18T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2002-09-18T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="1">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020918-smb-dos</cvrf:URL>
+      <cvrf:Description>Microsoft Windows SMB Denial of Service Vulnerabilities in Cisco Products - MS02-045</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Broadband Troubleshooter" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2059">Cisco Broadband Troubleshooter </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Building Broadband Service Manager (BBSM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2067">Cisco Building Broadband Service Manager (BBSM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco E-mail Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2070">Cisco E-mail Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Intelligent Contact Manager (ICM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2071">Cisco Intelligent Contact Manager (ICM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco CNS Network Registrar" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2072">Cisco CNS Network Registrar </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Access Control System (ACS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2074">Cisco Secure Access Control System (ACS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Access Control Server (ACS) for UNIX" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2075">Cisco Secure Access Control Server (ACS) for UNIX </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Access Control Server (ACS) for Windows 2000/ NT" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2076">Cisco Secure Access Control Server (ACS) for Windows 2000/ NT </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Access Control Server (ACS) for Windows" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2077">Cisco Secure Access Control Server (ACS) for Windows </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unity" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2078">Cisco Unity </FullProductName>
+      </Branch>
+      <Branch Name="Cisco DOCSIS CPE Configurator" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2085">Cisco DOCSIS CPE Configurator </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Collaboration Server Dynamic Content Adapter (DCA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2087">Cisco Collaboration Server Dynamic Content Adapter (DCA) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco ICS-7750 Integrated Communication System" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2094">Cisco ICS-7750 Integrated Communication System </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Media Blender" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2106">Cisco Media Blender </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Policy Manager " Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2122">Cisco Secure Policy Manager  </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Trailhead" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2128">Cisco Trailhead </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Transport Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2129">Cisco Transport Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure User Registration Tool (URT)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2132">Cisco Secure User Registration Tool (URT) </FullProductName>
+      </Branch>
+      <Branch Name="CiscoWorks 2000" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2141">CiscoWorks 2000 </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Open Network Exchange (uOne) Enterprise Edition" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4269">Cisco Unified Open Network Exchange (uOne) Enterprise Edition </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-88444">Cisco Unified Communications Manager </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Microsoft  Server Message Block Denial of Service Vulnerability</Title>
+    <CVE>CVE-2002-0724</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-2059</ProductID>
+        <ProductID>CVRFPID-2067</ProductID>
+        <ProductID>CVRFPID-88444</ProductID>
+        <ProductID>CVRFPID-2072</ProductID>
+        <ProductID>CVRFPID-2087</ProductID>
+        <ProductID>CVRFPID-2070</ProductID>
+        <ProductID>CVRFPID-2071</ProductID>
+        <ProductID>CVRFPID-2106</ProductID>
+        <ProductID>CVRFPID-2077</ProductID>
+        <ProductID>CVRFPID-2076</ProductID>
+        <ProductID>CVRFPID-2074</ProductID>
+        <ProductID>CVRFPID-2132</ProductID>
+        <ProductID>CVRFPID-2128</ProductID>
+        <ProductID>CVRFPID-2078</ProductID>
+        <ProductID>CVRFPID-4269</ProductID>
+        <ProductID>CVRFPID-2085</ProductID>
+        <ProductID>CVRFPID-2094</ProductID>
+        <ProductID>CVRFPID-2075</ProductID>
+        <ProductID>CVRFPID-2122</ProductID>
+        <ProductID>CVRFPID-2129</ProductID>
+        <ProductID>CVRFPID-2141</ProductID>
+      </Status>
+    </ProductStatuses>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020918-smb-dos</URL>
+        <Description>Microsoft Windows SMB Denial of Service Vulnerabilities in Cisco Products - MS02-045</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

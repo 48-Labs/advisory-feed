@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>TCP Vulnerabilities in Multiple Non-IOS Cisco Products</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20040420-tcp-nonios</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>2.10</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2004-04-20T21:00:00</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.9</cvrf:Number>
+        <cvrf:Date>2004-04-20T21:00:00</cvrf:Date>
+        <cvrf:Description>Removed CSCee07451 and CSCee07450 as Cisco FWSM itself is not
+				affected. Added fixed software releases for the following MGX models: 8230,
+				8250, 8830, 8850 and 8950. MGX8220 reached End-of-Support. Added fixed software
+				releases for BPX 8600 and IGX 8400.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.10</cvrf:Number>
+        <cvrf:Date>2014-10-23T12:53:51</cvrf:Date>
+        <cvrf:Description>Added CSCur03816,  Cisco Standalone rack server CIMC.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2004-04-20T21:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2014-10-23T12:53:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the Transmission Control Protocol (TCP)  specification (RFC793) has been discovered by an external researcher. The  successful exploitation enables an adversary to reset any established TCP  connection in a much shorter time than was previously discussed publicly.  Depending on the application, the connection may get automatically  re-established. In other cases, a user will have to repeat the action (for  example, open a new Telnet or SSH session). Depending upon the attacked  protocol, a successful attack may have additional consequences beyond  terminated connection which must be considered. This attack vector is only  applicable to the sessions which are terminating on a device (such as a router,  switch, or computer), and not to the sessions that are only passing through the  device (for example, transit traffic that is being routed by a router). In  addition, the attack vector does not directly compromise data integrity or  confidentiality.
+
+ All Cisco products which contain a TCP stack are susceptible to this  vulnerability.
+
+ This advisory is available at    https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-tcp-nonios ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-tcp-nonios"],  and it describes this vulnerability as it applies to Cisco products that do not  run Cisco IOS�� software.
+
+ A companion advisory that describes this vulnerability for products  that run Cisco IOS software is available at  https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-tcp-ios ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-tcp-ios"].</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">This section provides details on affected products.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">Products which contain a TCP stack are susceptible to this  vulnerability. All Cisco products and models are affected. The severity of the  exposure depends upon the protocols and applications that utilize TCP.
+
+In some cases the vulnerability lies in the underlying operating  system. In these cases, we rely on the original OS vendor to provide the patch.
+
+ The nonexhaustive list of vulnerable non-IOS based Cisco products is  as follows:
+
+      Access Registrar
+      BPX 8600, IGX 8400, MGX 82xx, 88xx and 8950 WAN Switches, and the      Service Expansion Shelf
+      BR340, WGB340, AP340, AP350, BR350 Cisco/Aironet wireless products
+      Cache Engine 505 and 570
+      CallManager
+      Catalyst 1200, 1900, 28xx, 2948G-GE-TX, 3000, 3900, 4000, 5000,      6000
+      Cisco 8110 Broadband Network Termination Unit
+      Cisco Element Management Framework
+      Cisco Info Center
+      Cisco Intelligent Contact Management
+      Cisco MDS 9000
+      Cisco ONS 15190/15194 IP Transport Concentrator
+      Cisco ONS 15327 Metro Edge Optical Transport Platform
+      Cisco ONS 15454 Optical Transport Platform
+      Cisco ONS 15531/15532 T31 OMDS Metro WDM System
+      Cisco ONS 15800/15801/15808 Dense Wave Division Multiplexing      Platform
+      Cisco ONS 15830 T30 Optical Amplification System
+      Cisco ONS 15831/15832 T31 DWDM System
+      Cisco ONS 15863 T31 Submarine WDM System
+      Content Router 4430 and Content Delivery Manager 4630 and 4650
+      CiscoSecure ACS for Windows and Unix, and CiscoSecure ACS 1111      Appliance
+      Cisco Secure Intrusion Detection System (NetRanger) appliance and      IDS Module
+      Cisco Secure PIX firewall
+      Cisco ws-x6608 and ws-x6624 IP Telephony Modules
+      CiscoWorks Windows
+      Content Engine 507, 560, 590, and 7320
+      CSS11000 (Arrowpoint) Content Services Switch
+      Hosting Solution Engine
+      User Registration Tool VLAN Policy Server
+      Cisco FastHub 300 and 400
+      CR-4430-B
+      Device Fault Manager
+      Internet CDN Content Engine 590 and 7320, Content Distribution      Manager 4670, and Content Router 4450
+      IP Phone (all models including ATA and VG248)
+      IP/TV
+      LightStream 1010
+      LightStream 100 ATM Switches
+      LocalDirector
+      ME1100 series
+      MicroHub 1500,MicroSwitch 1538/1548
+      Voice Manager
+      RTM
+      SN5400 series storage routers
+      Switch Probe
+      Unity Server
+      VG248 Analog Phone Gateway
+      VPN5000 - VPN Concentrator
+      Traffic Director
+      WAN Manager
+      CSS 11050, CSS 11100, CSS 11150, CSS 11500 and CSS      11800
+      GSS, CSM
+      Cisco Channel Interface Processor (CIP) and Channel Port Adapter      (CPA)
+      Cisco Systems ESCON Channel Port Adapter (ECPA)
+      Cisco Systems Parallel Channel Port Adapter (PCPA)
+      Cisco Firewall Services Module for Cisco Catalyst 6500 Series and      Cisco 7600 Series (FWSM)
+      Cisco ACNS
+      CiscoWorks Wireless LAN Solution Appliance
+      Cisco VPN 3000 Series Concentrators
+Cisco Standalone rack server CIMC</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">No other Cisco products are currently known to be affected by these  vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">TCP is the transport layer protocol designed to provide  connection-oriented reliable delivery of a data stream. To accomplish this, TCP  uses a mixture of flags to indicate state and sequence numbers to identify the  order in which the packets are to be reassembled. TCP also provides a number,  called an acknowledgement number, that is used to indicate the sequence number  of the next packet expected. The packets are reassembled by the receiving TCP  implementation only if their sequence numbers fall within a range of the  acknowledgement number (called a "window"). The acknowledgement number is not  used in a packet with the reset (RST) flag set because a reset does not expect  a packet in return. The full specification of the TCP protocol can be found at    http://www.ietf.org/rfc/rfc0793.txt ["http://www.ietf.org/rfc/rfc0793.txt"]  .
+
+ According to the RFC793 specification, it is possible to reset an  established TCP connection by sending a packet with the RST or synchronize  (SYN) flag set. In order for this to occur, the 4-tuple must be known or  guessed (source and destination IP address and ports) together with a sequence  number. However, the sequence number does not have to be an exact match; it is  sufficient to fall within the advertised window. This significantly decreases  the effort required by an adversary: the larger the window, the easier it is to  reset the connection. While source and destination IP addresses may be  relatively easy to determine, the source TCP port must be guessed. The  destination TCP port is usually known for all standard services (for example,  23 for Telnet, 80 for HTTP). Many operating systems (OSs) use predictable  ephemeral ports for known services with a predictable increment (the next port  which will be used for a subsequent connection). These values, while constant  for a particular OS and protocol, do vary from one OS release to another.
+
+ Here is an example of a normal termination of a TCP session:
+
+
+                Host(1)                       Host(2)
+                  |                             |                    |                             |                    |  ACK ack=1001, window=5000  |                    |&lt;----------------------------|                    |                             |                      Host(1) is             closing the session                          |        RST seq=1001         |                    |----------------------------&gt;|                    |                             |                                                    Host(2) is                                            closing the session
+
+ In addition, the following scenario is also permitted:
+
+
+                Host(1)                       Host(2)
+                  |                             |                    |                             |                    |  ACK ack=1001, window=5000  |                    |&lt;----------------------------|                    |                             |                      Host(1) is             closing the session                          |        RST seq=4321         |                    |----------------------------&gt;|                    |                             |                                                    Host(2) is                                            closing the session
+
+ Note how the RST packet was able to terminate the session although the  sequence number was not the next expected one (which is 1001). It was  sufficient for the sequence number to fall within the advertised "window". In  this example, Host(2) was accepting sequence numbers from 1001 to 6001 and 4321  is clearly within the acceptable range.
+
+Cisco fixed this vulnerability in accordance with the  http://www.ietf.org/internet-drafts/draft-ietf-tcpm-tcpsecure-02.txt ["http://tools.ietf.org/html/draft-ietf-tcpm-tcpsecure-02"]  .
+
+As a general rule, all protocols where a TCP connection stays  established for longer than one minute should be considered exposed.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">The effectiveness of any workaround is dependent on specific customer  situations such as product mix, network topology, traffic behavior, and  organizational mission. Due to the variety of affected products and releases,  customers should consult with their service provider or support organization to  ensure any applied workaround is the most appropriate for use in the intended  network before it is deployed.
+
+ There are no workarounds available to mitigate the effects of this  vulnerability.
+
+ It is possible to mitigate the exposure on this vulnerability by  applying anti-spoofing measures on the edge of the network.
+
+ By enabling Unicast Reverse Path Forwarding (uRPF), all spoofed  packets will be dropped at the first device. To enable uRPF, use the following  commands.
+
+
+router(config)#ip cef
+  router(config)#interface &lt;interface&gt; &lt;interface #&gt;      router(config-if)#ip verify unicast reverse-path
+
+ Please consult  http://www.cisco.com/en/US/docs/ios/12_2t/12_2t13/feature/guide/ft_urpf.html ["http://www.cisco.com/en/US/docs/ios/12_2t/12_2t13/feature/guide/ft_urpf.html"]  and   ftp://ftp-eng.cisco.com/cons/isp/security/URPF-ISP.pdf ["ftp://ftp-eng.cisco.com/cons/isp/security/URPF-ISP.pdf"] for further  descriptions of how uRPF works and how to configure it in various scenarios.  This is especially important if you are using asymmetric routing.
+
+ Access control lists (ACLs) should also be deployed as close to the  edge as possible. Unlike uRPF, you must specify the exact IP range that is  permitted. Specifying which addresses should be blocked is not the optimal  solution because it tends to be harder to maintain.
+
+    Caution: In order for anti-spoofing measures to be effective, they must be  deployed at least one hop away from the devices which are being protected.  Ideally, they will be deployed at the network edge.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">For all Cisco products that are based on a third party Operating System  and when Cisco is not supplying the OS, please contact your respective vendor  for the appropriate patches.
+
+Be advised that Cisco released multiple advisories on  2004-April-20.
+
+Product
+
+Defect ID
+
+Intended First Fixed Release
+
+              LAN Switching
+
+ Catalyst 1200, 1900, 28xx, 29xx, 3000, 3900, 4000, 5000, 6000
+
+              CSCed32349 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed32349"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ 6.4(13), 6.4(12.3), 7.6(8.6), 8.3(2.8), 8.3(3.4), 8.4(0.47COC,              8.4(0.91)COC, 8.4(1.2)GLX, 8.4(2.1)GLX, 8.6(0.1)TAL, 8.6(0.21)TAL
+
+Catalyst 1900 and 2820
+
+9.00.07 Available on 2004-Apr-27
+
+Catalyst 6500 Series SSL Services Module
+
+              CSCee35285 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee35285"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+2.1(2)
+
+              Network Storage
+
+ Cisco MDS 9000 Family
+
+              CSCed27956 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed27956"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)              ,              CSCed38527 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed38527"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)              ,              CSCed65607 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed65607"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+1.3(4a)
+
+Cisco Channel Interface Processor (CIP)
+
+              CSCee35335 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee35335"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+27-x and 28-x, No software available; date has not been              determined yet.
+
+Cisco SN5428 and SN5428-2 Storage Routers
+
+              CSCee36193 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee36193"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+3.5(3)-K9
+
+              Unified Computing
+
+Cisco Standalone rack server CIMC
+
+              CSCur03816 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCur03816"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+No software available; date has not been determined              yet.
+
+              Voice Products
+
+VG248 Analog Phone Gateway
+
+              CSCsk45124 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCsk45124"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+No software available; date has not been determined              yet.
+
+ WS-6624 analog station gateway module for the Catalyst 6500
+
+              CSCee22691 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee22691"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ No software available; date has not been determined yet.
+
+Windows-based CallManager
+
+Fixed by              http://www.microsoft.com/technet/security/Bulletin/MS05-019.mspx ["http://www.microsoft.com/technet/security/Bulletin/MS05-019.mspx"]
+
+Windows version 2000.2.7sr5 and later contain the              fix
+
+RedHat-based CallManager
+
+Waiting on RedHat to provide the fix
+
+No software available; date has not been determined              yet.
+
+              Wireless Products
+
+ Cisco Aironet Access Point 340, 350, 1200 Series (only              VxWorks-based)
+
+               CSCee22526 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee22526"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ No software available; date has not been determined yet.              Customers are encouraged to migrate to IOS.
+
+              Security Products
+
+Cisco Intrusion Detection System (IDS)
+
+              CSCee33732 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee33732"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+5.0
+
+No software available; date has not been determined              yet.
+
+Cisco Firewall Services Module for Cisco Catalyst 6500 and 7600              Series (FWSM)
+
+              CSCee07453 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee07453"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+1.1(3.17) Contact TAC
+
+ Cisco PIX Firewall
+
+              CSCed31689 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed31689"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)              ,               CSCed91445 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed91445"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)              , CSCed70062 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed70062"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)              ,               CSCed91726 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed91726"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ 6.1.5(104), 6.2.3(110), and 6.3.3(133) Contact TAC
+
+              Content Networking
+
+Cisco CSS11500 Family
+
+              CSCee06117 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee06117"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)              , SSL termination
+
+07.30(00.09)S 07.20(03.10)S 07.30(00.08)S 07.10(05.07)S              07.20(03.09)S, 07.30(1.06), 07.20(4.05)
+
+Cisco CSS11000 and CSS11500 Family
+
+              CSCee39336 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee39336"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)              , TCP management              connections
+
+07.30(01.02), 07.30(01.06), 07.20(04.05), 05.00(05.05)S,              06.10(03.10)S
+
+Cisco Content Switching Module (CSM)
+
+              CSCee33252 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee33252"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+4.1(2) Available 2004-Jun, for 3.x releases contact              TAC
+
+ Cisco ACNS
+
+              CSCee37496 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee37496"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+No software available; date has not been determined              yet.
+
+ Cisco 11000 Series Secure Content Accelerator (SCA)
+
+                            CSCee49634  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee49634"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ No software available; date has not been determined yet.
+
+Cisco LocalDirector
+
+                            CSCee08921 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee08921"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+4.2(1), 4.2(2), 4.2(3), 4.2(4), 4.2(5), 4.2(6)
+
+              Optical Products
+
+ Cisco ONS 15327, 15454 and 15454SDH Optical Transport              Platform
+
+               CSCed73026 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed73026"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+R4.14 available 2004-Apr-27; future releases R4.62,              R2.35.
+
+Cisco ONS 15501 Optical Transport Platform
+
+              CSCee41687 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee41687"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+No software available; date has not been determined yet.
+
+Cisco ONS 15600 Optical Transport Platform
+
+               CSCed73026 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCed73026"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+Future releases R5.0
+
+              WAN Switching
+
+ MGX 8850, MGX 8830, MGX 8950
+
+              CSCee34615 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee34615"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ 4.0.17, 5.1.20, 5.2.00.
+
+ SES
+
+              CSCee34615 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee34615"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ 4.0.X. No software available; date has not been determined              yet.
+
+ MGX 8230, MGX 8250
+
+              CSCee34620 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee34620"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ 1.2.23, 1.3.11.
+
+ MGX 8220
+
+ This product reached End-of-Support. Customers are recomended              to upgrade to MGX 8230 or MGX8250 models.
+
+              http://www.cisco.com/en/US/products/hw/switches/ps1925/              prod_eol_notice09186a00800a445d.html ["http://www.cisco.com/en/US/products/hw/switches/ps1925/prod_eol_notice09186a00800a445d.html"]
+
+              CSCee34624 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee34624"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+No fixed software planned.
+
+ BPX 8600, IGX 8400
+
+               CSCee34625 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCee34625"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+ 9.3.51, 9.4.12
+
+              VPN Concentrators
+
+VPN 3000 Series Concentrators
+
+              CSCsc28894 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCsc28894"]              (              registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)
+
+04.7.02.C
+
+4.1.7.K. &gt; Release</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">This vulnerability was presented at the public conference. The Cisco  PSIRT is not aware malicious use of the vulnerability described in this  advisory.
+
+ The exploitation of the vulnerability with packets having RST flag set  (reset packets) was discovered by Paul (Tony) Watson of OSVDB.org. The  extension of the attack vector to packets with SYN flag set and data injection  was discovered by the vendors cooperating on the resolution of this issue.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-tcp-nonios</cvrf:URL>
+      <cvrf:Description>TCP Vulnerabilities in Multiple Non-IOS Cisco Products</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Cache Engine" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2062">Cisco Cache Engine </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Content Router" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2069">Cisco Content Router </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Intelligent Contact Manager (ICM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2071">Cisco Intelligent Contact Manager (ICM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Optical Networking Systems (ONS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2073">Cisco Optical Networking Systems (ONS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Access Control Server (ACS) for UNIX" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2075">Cisco Secure Access Control Server (ACS) for UNIX </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Access Control Server (ACS) for Windows" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2077">Cisco Secure Access Control Server (ACS) for Windows </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Content Distribution Manager (CDM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2080">Cisco Content Distribution Manager (CDM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Content Engine" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2081">Cisco Content Engine </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Content Services Switch (CSS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2082">Cisco Content Services Switch (CSS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco WAN Manager for AIX" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2083">Cisco WAN Manager for AIX </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Element Management Framework (Cisco EMF)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2088">Cisco Element Management Framework (Cisco EMF) </FullProductName>
+      </Branch>
+      <Branch Name="CiscoWorks Hosting Solution Engine (HSE)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2092">CiscoWorks Hosting Solution Engine (HSE) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Intrusion Detection System (IDS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2095">Cisco Intrusion Detection System (IDS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco LocalDirector" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2104">Cisco LocalDirector </FullProductName>
+      </Branch>
+      <Branch Name="Cisco PIX Firewall Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2117">Cisco PIX Firewall Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco VPN 3000 Series Concentrator" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2134">Cisco VPN 3000 Series Concentrator </FullProductName>
+      </Branch>
+      <Branch Name="Cisco VPN 5000 Series Concentrator" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2135">Cisco VPN 5000 Series Concentrator </FullProductName>
+      </Branch>
+      <Branch Name="Cisco WebNS" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2140">Cisco WebNS </FullProductName>
+      </Branch>
+      <Branch Name="Cisco IP phone" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4473">Cisco IP phone </FullProductName>
+      </Branch>
+      <Branch Name="Cisco WAN Switching Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4850">Cisco WAN Switching Software </FullProductName>
+      </Branch>
+      <Branch Name="CiscoWorks Wireless LAN Solution Engine (WLSE)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5046">CiscoWorks Wireless LAN Solution Engine (WLSE) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco GSS Global Site Selector" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5047">Cisco GSS Global Site Selector </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Firewall Services Module (FWSM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5176">Cisco Firewall Services Module (FWSM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Catalyst WS-X6608" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5309">Cisco Catalyst WS-X6608 </FullProductName>
+      </Branch>
+      <Branch Name="Cisco VG248 Analog Phone Gateway" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5311">Cisco VG248 Analog Phone Gateway </FullProductName>
+      </Branch>
+      <Branch Name="Cisco MDS SAN-OS Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5348">Cisco MDS SAN-OS Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Catalyst 1900/2820" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5430">Cisco Catalyst 1900/2820 </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Content Switching Module (CSM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5447">Cisco Content Switching Module (CSM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-88444">Cisco Unified Communications Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Computing System (Standalone)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-191638">Cisco Unified Computing System (Standalone) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>TCP Connection Reset Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuq38097</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuq38097</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2004-0230</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-191638</ProductID>
+        <ProductID>CVRFPID-2062</ProductID>
+        <ProductID>CVRFPID-5430</ProductID>
+        <ProductID>CVRFPID-88444</ProductID>
+        <ProductID>CVRFPID-5047</ProductID>
+        <ProductID>CVRFPID-2071</ProductID>
+        <ProductID>CVRFPID-2077</ProductID>
+        <ProductID>CVRFPID-2092</ProductID>
+        <ProductID>CVRFPID-5046</ProductID>
+        <ProductID>CVRFPID-2080</ProductID>
+        <ProductID>CVRFPID-2081</ProductID>
+        <ProductID>CVRFPID-2069</ProductID>
+        <ProductID>CVRFPID-2082</ProductID>
+        <ProductID>CVRFPID-5447</ProductID>
+        <ProductID>CVRFPID-2088</ProductID>
+        <ProductID>CVRFPID-5176</ProductID>
+        <ProductID>CVRFPID-2095</ProductID>
+        <ProductID>CVRFPID-4473</ProductID>
+        <ProductID>CVRFPID-2104</ProductID>
+        <ProductID>CVRFPID-5348</ProductID>
+        <ProductID>CVRFPID-2073</ProductID>
+        <ProductID>CVRFPID-2117</ProductID>
+        <ProductID>CVRFPID-2075</ProductID>
+        <ProductID>CVRFPID-5311</ProductID>
+        <ProductID>CVRFPID-2134</ProductID>
+        <ProductID>CVRFPID-2135</ProductID>
+        <ProductID>CVRFPID-2083</ProductID>
+        <ProductID>CVRFPID-4850</ProductID>
+        <ProductID>CVRFPID-2140</ProductID>
+        <ProductID>CVRFPID-5309</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>5.0</BaseScoreV2>
+        <TemporalScoreV2>4.5</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:P/E:POC/RL:U/RC:C</VectorV2>
+        <ProductID>CVRFPID-191638</ProductID>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>The effectiveness of any workaround is dependent on specific customer  situations such as product mix, network topology, traffic behavior, and  organizational mission. Due to the variety of affected products and releases,  customers should consult with their service provider or support organization to  ensure any applied workaround is the most appropriate for use in the intended  network before it is deployed.
+
+ There are no workarounds available to mitigate the effects of this  vulnerability.
+
+ It is possible to mitigate the exposure on this vulnerability by  applying anti-spoofing measures on the edge of the network.
+
+ By enabling Unicast Reverse Path Forwarding (uRPF), all spoofed  packets will be dropped at the first device. To enable uRPF, use the following  commands.
+
+
+router(config)#ip cef
+  router(config)#interface &lt;interface&gt; &lt;interface #&gt;      router(config-if)#ip verify unicast reverse-path
+
+ Please consult  http://www.cisco.com/en/US/docs/ios/12_2t/12_2t13/feature/guide/ft_urpf.html ["http://www.cisco.com/en/US/docs/ios/12_2t/12_2t13/feature/guide/ft_urpf.html"]  and   ftp://ftp-eng.cisco.com/cons/isp/security/URPF-ISP.pdf ["ftp://ftp-eng.cisco.com/cons/isp/security/URPF-ISP.pdf"] for further  descriptions of how uRPF works and how to configure it in various scenarios.  This is especially important if you are using asymmetric routing.
+
+ Access control lists (ACLs) should also be deployed as close to the  edge as possible. Unlike uRPF, you must specify the exact IP range that is  permitted. Specifying which addresses should be blocked is not the optimal  solution because it tends to be harder to maintain.
+
+    Caution: In order for anti-spoofing measures to be effective, they must be  deployed at least one hop away from the devices which are being protected.  Ideally, they will be deployed at the network edge.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040420-tcp-nonios</URL>
+        <Description>TCP Vulnerabilities in Multiple Non-IOS Cisco Products</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

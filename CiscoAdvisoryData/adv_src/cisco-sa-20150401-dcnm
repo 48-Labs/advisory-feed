@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20150401-dcnm",
+  "title": "Cisco Prime Data Center Network Manager File Information Disclosure Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2015-04-01T16:00:00.000+0000",
+  "lastPublished": "2023-01-12T15:18:43.080+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150401-dcnm",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-22",
+  "erpPubIds": "37810",
+  "cve": "CVE-2015-0666",
+  "ciscoBugId": "CSCus00241",
+  "status": "",
+  "summary": "Cisco Prime Data Center Network Manager (DCNM) contains a file information disclosure vulnerability that could allow an unauthenticated, remote attacker to retrieve arbitrary files from the underlying operating system.&nbsp;Cisco has released software updates that address this ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Data Center Network Manager Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37810&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Data Center Network Manager Directory Traversal Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5901&signatureSubId=0&releaseVersion=S860&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

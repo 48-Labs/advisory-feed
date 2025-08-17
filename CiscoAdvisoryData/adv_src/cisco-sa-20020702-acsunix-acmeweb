@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20020702-acsunix-acmeweb",
+  "title": "Cisco Secure ACS Unix Acme.server Information Disclosure Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2002-07-02T18:00:00.000+0000",
+  "lastPublished": "2002-07-02T18:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020702-acsunix-acmeweb",
+  "severity": "Low",
+  "cwe": "CWE-22",
+  "erpPubIds": "65",
+  "cve": "CVE-2001-0748",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Secure Access Control Server for Unix implements the Acme.server and is therefore vulnerable to a directory traversal vulnerability. The fix has been included in ACS Unix version 2.3.6.1 which is currently available.     This vulnerability is detailed in Cisco Bug ID ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "ACME Laboratories Acme.Serve HTTP Server Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=65&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Secure ACS Directory Traversal",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3710&signatureSubId=0&releaseVersion=S616&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

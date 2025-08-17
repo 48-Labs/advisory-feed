@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20110928-ipsla",
+  "title": "Cisco IOS Software IP Service Level Agreement Vulnerability",
+  "version": "2.1",
+  "firstPublished": "2011-09-28T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:19:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-ipsla",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "24122,cisco-amb-20110928-ipsla",
+  "cve": "CVE-2011-3272",
+  "ciscoBugId": "CSCtk67073",
+  "status": "",
+  "summary": "The Cisco IOS IP Service Level Agreement (IP SLA) feature contains adenial of service (DoS) vulnerability. The vulnerability is triggered whenmalformed UDP packets are sent to a vulnerable device. The vulnerable UDP portnumbers depend on the device configuration. Default ports are not used ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software IP Service Level Agreement Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24122&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS Software IP Service Level Agreement Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20110928-ipsla"
+        }
+      ]
+    }
+  ]
+}

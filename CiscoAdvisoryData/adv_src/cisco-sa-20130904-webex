@@ -1,0 +1,63 @@
+{
+  "identifier": "cisco-sa-20130904-webex",
+  "title": "Multiple Vulnerabilities in the Cisco WebEx Recording Format and Advanced Recording Format Players",
+  "version": "1.0",
+  "firstPublished": "2013-09-04T16:00:00.000+0000",
+  "lastPublished": "2013-09-04T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130904-webex",
+  "severity": "Critical",
+  "cwe": "CWE-119",
+  "erpPubIds": "30535,30534,30533,30532,30531",
+  "cve": "CVE-2013-1115,CVE-2013-1116,CVE-2013-1117,CVE-2013-1118,CVE-2013-1119",
+  "ciscoBugId": "CSCub28371,CSCub28383,CSCuc24503,CSCuc27639,CSCuc27645,CSCud23401,CSCud31109,CSCue74118,CSCue74147",
+  "status": "",
+  "summary": "Multiple buffer overflow vulnerabilities exist in the Cisco WebEx Recording Format (WRF) and Advanced Recording Format (ARF) Players. Exploitation of these vulnerabilities could allow a remote attacker to crash an affected player, and in some cases, could allow a remote attacker to execute ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco WebEx WRF Player JPEG DHT Index Memory Corruption Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30535&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx Recording Format Player Stack Buffer Overflow Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30534&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx Recording Format Player Exception Handler Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30533&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx Advanced Recording Format Player Heap Corruption Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30532&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco WebEx Advanced Recording Format Player Memory Corruption Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30531&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WebEx Recording Format Player Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2733&signatureSubId=0&releaseVersion=S914&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx Recording Format Player Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2733&signatureSubId=1&releaseVersion=S739&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx ARF Player Memory Corruption Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2735&signatureSubId=0&releaseVersion=S739&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

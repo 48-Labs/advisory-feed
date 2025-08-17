@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Prime Infrastructure Arbitrary File Upload and Command Execution Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20181003-pi-tftp</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2018-10-03T15:50:51</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2018-10-03T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2018-10-03T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in which the HTTP web server for Cisco Prime Infrastructure (PI) has unrestricted directory permissions could allow an unauthenticated, remote attacker to upload an arbitrary file. This file could allow the attacker to execute commands at the privilege level of the user prime. This user does not have administrative or root privileges.
+
+The vulnerability is due to an incorrect permission setting for important system directories. An attacker could exploit this vulnerability by uploading a malicious file by using TFTP, which can be accessed via the web-interface GUI. A successful exploit could allow the attacker to run commands on the targeted application without authentication.
+
+Cisco has released software updates that address this vulnerability. There are workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-pi-tftp ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-pi-tftp"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Cisco PI Software Releases 3.2 through 3.4 prior to the first fixed release are vulnerable if the TFTP server is enabled, which is the default setting. The administrator can check the TFTP status by navigating in the web interface to Administration &gt; Settings &gt; System Settings &gt; Server &gt; TFTP.
+
+The PI Federal Information Processing Standards (FIPS) image has TFTP disabled by default.
+  Determining the PI Software Release
+To determine the software release that is running on the appliance, administrators can use one of the following methods.
+
+The administrator can issue the show version command in the console CLI. The following output is from an affected application running PI Software Release 3.2.0 with PI Maintenance Release 3.2.2 installed:
+
+piconsole# show version
+Cisco Application Deployment Engine OS Release: 3.2
+ADE-OS Build Version: 3.2.0.001
+ADE-OS System Architecture: x86_64
+
+Copyright (c) 2009-2016 by Cisco Systems, Inc.
+All rights reserved.
+Hostname: lmpy-spc-princess
+
+Version information of installed applications
+---------------------------------------------
+
+Cisco Prime Infrastructure
+********************************************************
+Version : 3.2.0
+Build : 3.2.0.0.132
+Critical Fixes:
+PI 3.2.2 Maintenance Release ( 6.0.0 )
+Device Support:
+Prime Infrastructure 3.2 Device Pack 11 ( 11.0 )
+
+The administrator can also view the PI release and maintenance release updates by logging in to the web interface using the http(s)://&lt;system-ip&gt; access URL. The PI software release is displayed on the welcome screen and the administrator can click View Installed Update, which opens a pop-up window with a list of PI maintenance releases and patches. The following is an example of text that is displayed in the pop-up window for PI Software Release 3.2:
+
+Cisco Prime Infrastructure
+Version 3.2
+View Installed Update
+    The pop-up window will display the list of maintenance release updates in the following format:
+Update Name
+PI 3.2.2 Maintenance Release
+
+The administrator can also view the PI release and maintenance release updates by logging in to the web interface using the http(s)://&lt;system-ip&gt; access URL and navigating to the Gear &gt; About Prime Infrastructure &gt; View Installed Updates screen. The release information is displayed as follows:
+
+Installed Updates
+
+Critical Fixes
+Update Name            Version
+PI 3.2.2 Maintenance Rel...    6.0.0
+
+Device Support
+Update Name
+Prime Infrastructure 3.2</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that Cisco Evolved Programmable Network Manager (EPNM) is not vulnerable.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">The administrator can disable TFTP for Cisco PI by navigating in the web interface to Administration &gt; Settings &gt; System Settings &gt; Server &gt; TFTP. In Cisco PI, TFTP is used for internal operations such as image transfer, configuration, and archives. The administrator can instead use a secure protcotol such as Secure Copy Protocol (SCP) or SFTP for these functions.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">Cisco has released free software updates that address the vulnerability described in this advisory. Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license:  https://www.cisco.com/c/en/us/products/end-user-license-agreement.html ["https://www.cisco.com/c/en/us/products/end-user-license-agreement.html"]
+
+Additionally, customers may only download software for which they have a valid license, procured from Cisco directly, or through a Cisco authorized reseller or partner. In most cases this will be a maintenance upgrade to software that was previously purchased. Free security software updates do not entitle customers to a new software license, additional software feature sets, or major revision upgrades.
+
+When considering software upgrades, customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories and Alerts page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+  Customers Without Service Contracts
+Customers who purchase directly from Cisco but do not hold a Cisco service contract and customers who make purchases through third-party vendors but are unsuccessful in obtaining fixed software through their point of sale should obtain upgrades by contacting the Cisco TAC: https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html ["https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"]
+
+Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
+  Fixed Releases
+Customers should upgrade to an appropriate release as indicated in the following table:
+                                Cisco Prime Infrastructure Major Release                            First Fixed Release for This Vulnerability                                                3.2
+              3.3.1 Update 02
+                                  3.2 FIPS              No fix available1                                  3.3              3.3.1 Update 02
+                                  3.4              3.4.1
+1. TFTP is disabled by default in Cisco PI Release 3.2 FIPS. The administrator can also use the workaround that is provided in this advisory.
+
+
+
+Software Download
+
+Customers can download Cisco Prime Infrastructure Software from the Software Center ["https://software.cisco.com/download/home"] on Cisco.com by doing the following:
+
+Click Browse all.
+Navigate to Cloud and Systems Management &gt; Routing and Switching Management &gt; Network Management Solutions &gt; Prime Infrastructure.
+Access Cisco PI releases by using the right pane of the software downloads navigation.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">Cisco would like to thank an independent security researcher, Pedro Ribeiro, who reported this vulnerability to Beyond Security's SecuriTeam Secure Disclosure program.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-pi-tftp</cvrf:URL>
+      <cvrf:Description>Cisco Prime Infrastructure Arbitrary File Upload and Command Execution Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Prime Infrastructure" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-190324">Cisco Prime Infrastructure </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Prime Infrastructure Arbitrary File Upload and Command Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCvk24890</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCvk24890</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2018-15379</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-190324</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>7.3</BaseScoreV3>
+        <VectorV3>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>The administrator can disable TFTP for Cisco PI by navigating in the web interface to Administration &gt; Settings &gt; System Settings &gt; Server &gt; TFTP. In Cisco PI, TFTP is used for internal operations such as image transfer, configuration, and archives. The administrator can instead use a secure protcotol such as Secure Copy Protocol (SCP) or SFTP for these functions.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-pi-tftp</URL>
+        <Description>Cisco Prime Infrastructure Arbitrary File Upload and Command Execution Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

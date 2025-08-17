@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20090325-ctcp",
+  "title": "Cisco IOS cTCP Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2009-03-25T16:00:00.000+0000",
+  "lastPublished": "2009-03-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090325-ctcp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "17758,cisco-amb-20090325-ctcp",
+  "cve": "CVE-2009-0635",
+  "ciscoBugId": "CSCsu21828,CSCsr16693",
+  "status": "",
+  "summary": "   A series of TCP packets may cause a denial of service (DoS) condition on Cisco IOS devices that are configured as Easy VPN servers with the Cisco Tunneling Control Protocol (cTCP) encapsulation feature. Cisco has released software updates that address this vulnerability. No workarounds ",
+  "totalCount": 8,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Cisco Tunneling Control Protocol Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17758&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS cTCP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090325-ctcp"
+        }
+      ]
+    }
+  ]
+}

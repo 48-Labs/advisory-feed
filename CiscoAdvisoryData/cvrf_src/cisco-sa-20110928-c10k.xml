@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco 10000 Series Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20110928-c10k</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.3</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2012-02-17T18:25:22</cvrf:Date>
+        <cvrf:Description>Updated information in Ciso IOS Software table for Cisco IOS 12.2SXH</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2011-09-28T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-09-21T19:17:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">The Cisco 10000 Series Router is affected by a denial of service  (DoS) vulnerability where an attacker could cause a device reload by  sending a series of ICMP packets.
+
+  Cisco has released software updates that address this vulnerability.
+
+ Workarounds that mitigate this vulnerability are also available.
+  This advisory is posted at https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k"].
+
+Note: The September 28, 2011, Cisco IOS Software Security Advisory bundled publication includes ten Cisco Security Advisories. Nine of the advisories address vulnerabilities in Cisco IOS Software, and one advisory addresses a vulnerability in Cisco Unified Communications Manager. Each advisory lists the Cisco IOS Software releases that correct the vulnerability or vulnerabilities detailed in the advisory as well as the Cisco IOS Software releases that correct all vulnerabilities in the September 2011 Bundled Publication.
+
+Individual publication links are in "Cisco Event Response: Semiannual Cisco IOS Software Security Advisory Bundled Publication" at the following link:
+
+  http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep11.html ["http://www.cisco.com/web/about/security/i/ntelligence/Cisco_ERP_sep11.html"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Cisco 10000 Series Routers that are running an affected version of Cisco IOS are affected.
+
+To determine the Cisco IOS Software release that is running  on a Cisco product, administrators can log in to the device and issue  the show version command to display the system banner.  The system banner confirms that the device is running Cisco IOS Software  by displaying text similar to "Cisco Internetwork Operating System  Software" or "Cisco IOS Software." The image name displays in  parentheses, followed by "Version" and the Cisco IOS Software release  name. Other Cisco devices do not have the show version command or may provide different output.
+
+The following example identifies a Cisco product that is  running Cisco IOS Software Release 15.0(1)M1 with an installed image  name of C3900-UNIVERSALK9-M:
+
+
+Router&gt; show version
+Cisco IOS Software, C3900 Software (C3900-UNIVERSALK9-M), Version 15.0(1)M1, RELEASE SOFTWARE (fc1)  Technical Support: http://www.cisco.com/techsupport  Copyright (c) 1986-2009 by Cisco Systems, Inc.  Compiled Wed 02-Dec-09 17:17 by prod_rel_team    !--- output truncated
+
+Additional information about Cisco IOS Software release naming conventions is available in  the white paper Cisco IOS and NX-OS Software Reference Guide available at:    http://www.cisco.com/web/about/security/intelligence/ios-ref.html ["http://www.cisco.com/web/about/security/intelligence/ios-ref.html"].</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Cisco IOS XR Software is not affected by this vulnerability.
+
+  Cisco IOS XE Software is not affected by this vulnerability.
+
+  No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The Cisco 10000 Series Router is affected by a denial of service  (DoS) vulnerability where an unauthenticated attacker could cause a  device reload by sending a series of ICMP packets.
+
+Traffic destined to the device or transit traffic could trigger the effects of this vulnerability.
+
+This vulnerability is documented in Cisco Bug ID CSCtk62453 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtk62453"]  (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)  and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2011-3270.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">Traffic destined to the device or transit traffic could trigger the  effects of this vulnerability. Subsequently, the only workaround  available is to block ICMP packets destined to the affected device and  all ICMP transit traffic.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, also consult http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"] and any subsequent advisories to determine exposure and a complete upgrade solution.
+
+In all cases, customers should exercise caution to be certain the devices to be upgraded contain sufficient memory and that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, contact the Cisco Technical Assistance Center (TAC) or your contracted maintenance provider for assistance.
+
+Additionally, the Cisco IOS Software Checker is available on the Cisco Security (SIO) portal at https://sec.cloudapps.cisco.com/security/center/selectIOSVersion.x ["https://sec.cloudapps.cisco.com/security/center/selectIOSVersion.x"]. It provides several features for checking which Security Advisories affect specified versions of Cisco IOS Software.
+  Cisco IOS Software
+Each row of the following Cisco IOS Software table corresponds to a Cisco IOS Software train. If a particular train is vulnerable, the earliest releases that contain the fix are listed in the First Fixed Release For This Advisory column. The First Fixed Release for All Advisories in the September 2011 Bundled Publication column lists the earliest possible releases that correct all the published vulnerabilities in the Cisco IOS Software Security Advisory bundled publication. Cisco recommends upgrading to the latest available release, where possible.
+
+Major Release
+
+     Availability of Repaired Releases
+
+Affected 12.0-Based Releases
+
+First Fixed Release
+
+First Fixed Release for All Advisories in the September 2011 Bundled Publication
+
+There are no affected 12.0 based releases
+
+Affected 12.1-Based Releases
+
+First Fixed Release
+
+First Fixed Release for All Advisories in the September 2011 Bundled Publication
+
+There are no affected 12.1 based releases
+
+Affected 12.2-Based Releases
+
+First Fixed Release
+
+First Fixed Release for All Advisories in the September 2011 Bundled Publication
+
+12.2
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2B
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2BC
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2BW
+
+Not vulnerable
+
+Not vulnerable
+
+12.2BX
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SB ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SB"]
+
+12.2BY
+
+Not vulnerable
+
+Not vulnerable
+
+12.2BZ
+
+Not vulnerable
+
+Not vulnerable
+
+12.2CX
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2CY
+
+Not vulnerable
+
+Not vulnerable
+
+12.2CZ
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SB ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SB"]
+
+12.2DA
+
+Not vulnerable
+
+Not vulnerable
+
+12.2DD
+
+Not vulnerable
+
+Not vulnerable
+
+12.2DX
+
+Not vulnerable
+
+Not vulnerable
+
+12.2EU
+
+Not vulnerable
+
+Not vulnerable
+
+12.2EW
+
+Not vulnerable
+
+Releases up to and including 12.2(20)EW4 are not vulnerable.
+
+12.2EWA
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2EX
+
+Not vulnerable
+
+12.2(55)EX3
+
+12.2EY
+
+Not vulnerable
+
+12.2(58)EY
+
+12.2EZ
+
+Not vulnerable
+
+Vulnerable; migrate to any release in 15.0SE
+
+12.2FX
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2FY
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2EX ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2EX"]
+
+12.2FZ
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2IRA
+
+Not vulnerable
+
+Vulnerable; migrate to any release in 12.2IRG
+
+12.2IRB
+
+Not vulnerable
+
+Vulnerable; migrate to any release in 12.2IRG
+
+12.2IRC
+
+Not vulnerable
+
+Vulnerable; migrate to any release in 12.2IRG
+
+12.2IRD
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in the Obtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IRE
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in the Obtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IRF
+
+Not vulnerable
+
+Vulnerable; migrate to any release in 12.2IRG
+
+12.2IRG
+
+Not vulnerable
+
+Not vulnerable
+
+12.2IXA
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IXB
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IXC
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IXD
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IXE
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IXF
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IXG
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2IXH
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2JA
+
+Not vulnerable
+
+Not vulnerable
+
+12.2JK
+
+Not vulnerable
+
+Not vulnerable
+
+12.2MB
+
+Not vulnerable
+
+Not vulnerable
+
+12.2MC
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2MRA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SRD ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SRD"]
+
+12.2MRB
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in the Obtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2S
+
+Not vulnerable
+
+12.2(30)S are vulnerable; Releases12.2(30)S and later are not vulnerable. First fixed in Release 12.2SB ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SB"]
+
+12.2SB
+
+Releases prior to 12.2(31)SB18 and 12.2(33)SB9 are not vulnerable.
+
+12.2(33)SB10
+
+12.2(31)SB20
+
+12.2(33)SB10
+
+12.2SBC
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SB ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SB"]
+
+12.2SCA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SCC ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SCC"]
+
+12.2SCB
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SCC ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SCC"]
+
+12.2SCC
+
+Not vulnerable
+
+12.2(33)SCC7
+
+12.2SCD
+
+Not vulnerable
+
+12.2(33)SCD6
+
+12.2SCE
+
+Not vulnerable
+
+12.2(33)SCE1
+
+12.2(33)SCE2
+
+12.2SCF
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SE
+
+Not vulnerable
+
+12.2(55)SE3
+
+12.2(58)SE
+
+12.2SEA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2SEB
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2SEC
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2SED
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2SEE
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2SEF
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SE ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SE"]
+
+12.2SEG
+
+Not vulnerable
+
+Releases prior to 12.2(25)SEG4 are vulnerable; Releases12.2(25)SEG4 and later are not vulnerable. First fixed in Release 12.2EX ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2EX"]
+
+12.2SG
+
+Not vulnerable
+
+Releases prior to 12.2(53)SG4 are vulnerable; Releases 12.2(53)SG4 and later are not vulnerable.
+
+12.2SGA
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2SL
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SM
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2SO
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SQ
+
+Not vulnerable
+
+12.2(50)SQ3
+
+12.2SRA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SRD ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SRD"]
+
+12.2SRB
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SRD ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SRD"]
+
+12.2SRC
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SRD ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SRD"]
+
+12.2SRD
+
+Not vulnerable
+
+12.2(33)SRD6
+
+12.2SRE
+
+Not vulnerable
+
+12.2(33)SRE4
+
+12.2STE
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SU
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2SV
+
+Not vulnerable
+
+Releases prior to 12.2(29a)SV are vulnerable; Releases 12.2(29a)SV and later are not vulnerable. Migrate to any release in 12.2SVD
+
+12.2SVA
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SVC
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SVD
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SVE
+
+Not vulnerable
+
+Not vulnerable
+
+12.2SW
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2SX
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SXF ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SXF"]
+
+12.2SXA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SXF ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SXF"]
+
+12.2SXB
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SXF ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SXF"]
+
+12.2SXD
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SXF ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SXF"]
+
+12.2SXE
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SXF ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SXF"]
+
+12.2SXF
+
+Not vulnerable
+
+12.2(18)SXF17b
+
+12.2SXH
+
+Not vulnerable
+
+Vulnerable; First fixed in              Release 12.2SXI ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-ipv6#12_2SXI"]
+
+12.2SXI
+
+Not vulnerable
+
+12.2(33)SXI6
+
+12.2SXJ
+
+Not vulnerable
+
+12.2(33)SXJ1
+
+12.2SY
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in the Obtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2SZ
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SB ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SB"]
+
+12.2T
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2TPC
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2XA
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XB
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2XC
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XD
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XE
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XF
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XG
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XH
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XI
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XJ
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XK
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XL
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XM
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XN
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XNA
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+12.2XNB
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+12.2XNC
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+12.2XND
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+12.2XNE
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+12.2XNF
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+Please see Cisco IOS-XE Software Availability ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#iosxe"]
+
+12.2XO
+
+Not vulnerable
+
+Releases prior to 12.2(54)XO are vulnerable; Releases12.2(54)XO and later are not vulnerable.
+
+12.2XQ
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XR
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XS
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XT
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XU
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XV
+
+Not vulnerable
+
+Not vulnerable
+
+12.2XW
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2YB
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YC
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YD
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YE
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YF
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YG
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YH
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YJ
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YK
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YL
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YM
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2YN
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YO
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YP
+
+Not vulnerable
+
+Not vulnerable
+
+12.2YQ
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YR
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YS
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YT
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YU
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YV
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YW
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YX
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YY
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2YZ
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2ZA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SXF ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SXF"]
+
+12.2ZB
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2ZC
+
+Not vulnerable
+
+Not vulnerable
+
+12.2ZD
+
+Not vulnerable
+
+Not vulnerable
+
+12.2ZE
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2ZF
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2ZG
+
+Not vulnerable
+
+Not vulnerable
+
+12.2ZH
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.4 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_4"]
+
+12.2ZJ
+
+Not vulnerable
+
+Not vulnerable
+
+12.2ZL
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2ZP
+
+Not vulnerable
+
+Not vulnerable
+
+12.2ZU
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 12.2SXH ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#12_2SXH"]
+
+12.2ZX
+
+Not vulnerable
+
+Not vulnerable
+
+12.2ZY
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+12.2ZYA
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+Affected 12.3-Based Releases
+
+First Fixed Release
+
+First Fixed Release for All Advisories in the September 2011 Bundled Publication
+
+There are no affected 12.3 based releases
+
+Affected 12.4-Based Releases
+
+First Fixed Release
+
+First Fixed Release for All Advisories in the September 2011 Bundled Publication
+
+There are no affected 12.4 based releases
+
+Affected 15.0-Based Releases
+
+First Fixed Release
+
+Bundle First Fixed Release
+
+15.0M
+
+Not vulnerable
+
+15.0(1)M7
+
+15.0MR
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+15.0MRA
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+15.0S
+
+15.0(1)S3a
+
+15.0(1)S4
+
+15.0SA
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+15.0SE
+
+Not vulnerable
+
+Not vulnerable
+
+15.0SG
+
+Not vulnerable
+
+Not vulnerable
+
+15.0XA
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 15.1T ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#15_1T"]
+
+15.0XO
+
+Not vulnerable
+
+Releases prior to 15.0(2)XO1 are vulnerable; Releases15.0(2)XO1 and later are not vulnerable.
+
+Affected 15.1-Based Releases
+
+First Fixed Release
+
+First Fixed Release for All Advisories in the September 2011 Bundled Publication
+
+15.1EY
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+15.1GC
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 15.1T ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#15_1T"]
+
+15.1M
+
+Not vulnerable
+
+15.1(4)M2; Available on 30-SEP-11
+
+15.1MR
+
+Not vulnerable
+
+Vulnerable; contact your support organization per the instructions in theObtaining Fixed Software ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#fixes"] section of this advisory.
+
+15.1S
+
+Not vulnerable
+
+15.1(2)S2
+
+15.1(3)S
+
+15.1T
+
+Not vulnerable
+
+15.1(1)T4 on 09-DEC-2011
+
+15.1(2)T4
+
+15.1(3)T2
+
+15.1XB
+
+Not vulnerable
+
+Vulnerable; First fixed in Release 15.1T ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k#15_1T"]
+
+Affected 15.2-Based Releases
+
+First Fixed Release
+
+First Fixed Release for All Advisories in the September 2011 Bundled Publication
+
+There are no affected 15.2 based releases
+                                  Cisco IOS XE Software
+Cisco IOS XE Software is not affected by the vulnerability disclosed in this advisory.
+  Cisco IOS XR Software
+Cisco IOS XR Software is not affected by the vulnerability disclosed in this advisory.
+
+Cisco IOS XR Software is not affected by the vulnerabilities disclosed in the September 28, 2011, Cisco IOS Software Security Advisory bundled publication.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerability described in this advisory.
+
+This vulnerability was discovered while troubleshooting a customer service request.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k</cvrf:URL>
+      <cvrf:Description>Cisco 10000 Series Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco 10000 Series Denial of Service Vulnerability</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2011-3270</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Traffic destined to the device or transit traffic could trigger the  effects of this vulnerability. Subsequently, the only workaround  available is to block ICMP packets destined to the affected device and  all ICMP transit traffic.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-c10k</URL>
+        <Description>Cisco 10000 Series Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

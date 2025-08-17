@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20100120-xr-ssh",
+  "title": "Cisco IOS XR Software SSH Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2010-01-20T16:00:00.000+0000",
+  "lastPublished": "2010-01-20T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100120-xr-ssh",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "19723",
+  "cve": "CVE-2010-0137",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "The SSH server implementation in Cisco IOS XR Software contains a vulnerability that an unauthenticated, remote user could exploit to cause a denial of service condition.   An attacker could trigger this vulnerability by sending a crafted SSH version 2 packet that may cause a new ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS XR Software SSH Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19723&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS XR Software SSH Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=23579&signatureSubId=0&releaseVersion=S462&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

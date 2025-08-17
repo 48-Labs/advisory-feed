@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20100303-dmm",
+  "title": "Multiple Vulnerabilities in Cisco Digital Media Manager",
+  "version": "1.0",
+  "firstPublished": "2010-03-03T16:00:00.000+0000",
+  "lastPublished": "2010-03-03T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100303-dmm",
+  "severity": "Critical",
+  "cwe": "CWE-200, CWE-264, CWE-287",
+  "erpPubIds": "19985,19987,19986",
+  "cve": "CVE-2010-0570,CVE-2010-0571,CVE-2010-0572",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Cisco Digital Media Manager (DMM). This security advisory outlines details of the following vulnerabilities:                                    Default credentials                                        Privilege escalation ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Digital Media Manager Default Credential Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19985&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Digital Media Manager User Credential Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19987&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Digital Media Manager Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=19986&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Digital Media Manager Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24240&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

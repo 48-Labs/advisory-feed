@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20100324-h323",
+  "title": "Cisco IOS Software H.323 Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2010-03-24T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:08:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100324-h323",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "20066,20067",
+  "cve": "CVE-2010-0582,CVE-2010-0583",
+  "ciscoBugId": "CSCta19962,CSCtb93855",
+  "status": "",
+  "summary": "The H.323 implementation in Cisco IOS Software contains twovulnerabilities that may be exploited remotely to cause a denial of service(DoS) condition on a device that is running a vulnerable version of Cisco IOSSoftware.  Cisco has released software updates that address these ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software H.323 Packet Processing Blocked Interface Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20066&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software H.323 Protocol Packet Handling Memory Leak Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20067&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Software H.323 DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=24899&signatureSubId=0&releaseVersion=S778&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20160804-wedge",
+  "title": "Cisco IOS and IOS XE Software Crafted Network Time Protocol Packets Denial of Service Vulnerability",
+  "version": "1.3",
+  "firstPublished": "2016-08-04T16:00:00.000+0000",
+  "lastPublished": "2018-02-27T12:37:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160804-wedge",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": null,
+  "cve": "CVE-2016-1478",
+  "ciscoBugId": "CSCva35619",
+  "status": "",
+  "summary": "A vulnerability in the processing of Network Time Protocol (NTP) packets by Cisco IOS and Cisco IOS XE could allow an unauthenticated, remote attacker to cause an interface wedge and an eventual denial of service (DoS) condition on the affected device.The vulnerability is due to ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "39878",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-08-16-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS NTP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7648&signatureSubId=0&releaseVersion=S976&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

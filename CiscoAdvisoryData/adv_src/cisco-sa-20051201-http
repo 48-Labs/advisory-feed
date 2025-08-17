@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20051201-http",
+  "title": "IOS HTTP Server Command Injection Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2005-12-01T21:00:00.000+0000",
+  "lastPublished": "2005-12-01T21:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20051201-http",
+  "severity": "High",
+  "cwe": "CWE-79",
+  "erpPubIds": "10102",
+  "cve": "CVE-2005-3921",
+  "ciscoBugId": "CSCsc64976",
+  "status": "",
+  "summary": " A vulnerability exists in the IOS HTTP server in which HTML code inserted into dynamically generated output, such as the output from a show buffers command, will be passed to the browser requesting the page. This HTML code could be interpreted by the client browser and ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS HTTP Server Code Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=10102&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "17287",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IOS HTTP Server Iframe Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6004&signatureSubId=0&releaseVersion=S286&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

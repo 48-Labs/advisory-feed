@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20090923-tls",
+  "title": "Cisco IOS Software Crafted Encryption Packet Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2009-09-23T16:00:00.000+0000",
+  "lastPublished": "2009-09-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090923-tls",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "18892",
+  "cve": "CVE-2009-2871",
+  "ciscoBugId": "CSCsq24002",
+  "status": "",
+  "summary": "Cisco IOS&reg; Software contains a vulnerability that could allow an attacker to cause a Cisco IOS device to reload by remotely sending a crafted encryption packet.     Cisco has released software updates that address this vulnerability.   This advisory is posted at ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Crafted Encryption Packet Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18892&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IOS Software Crafted Encryption Packet DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20362&signatureSubId=0&releaseVersion=S772&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

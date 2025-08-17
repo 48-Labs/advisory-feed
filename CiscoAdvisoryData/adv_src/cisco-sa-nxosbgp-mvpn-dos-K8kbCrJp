@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-nxosbgp-mvpn-dos-K8kbCrJp",
+  "title": "Cisco NX-OS Software Border Gateway Protocol Multicast VPN Session Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2020-08-26T16:00:00.000+0000",
+  "lastPublished": "2020-08-26T20:56:48.037+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxosbgp-mvpn-dos-K8kbCrJp",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-74239",
+  "cve": "CVE-2020-3398",
+  "ciscoBugId": "CSCvr60479",
+  "status": "",
+  "summary": "A vulnerability in the Border Gateway Protocol (BGP) Multicast VPN (MVPN) implementation of Cisco&nbsp;NX-OS Software could allow an unauthenticated, remote attacker to cause a BGP session to repeatedly reset, causing a partial denial of service (DoS) condition due to the BGP session being ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: August 2020 Cisco FXOS and NX-OS Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74239&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

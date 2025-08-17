@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20190821-imc-privescal",
+  "title": "Cisco Integrated Management Controller Substring Comparison Privilege Escalation Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-08-21T16:00:00.000+0000",
+  "lastPublished": "2019-08-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190821-imc-privescal",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-285",
+  "cve": "CVE-2019-1907",
+  "ciscoBugId": "CSCvo36080",
+  "status": "",
+  "summary": "A vulnerability in the web server of Cisco&nbsp;Integrated Management Controller (IMC) could allow an authenticated, remote attacker to set sensitive configuration values and gain elevated privileges.The vulnerability is due to improper handling of substring comparison operations that ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "51201",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-08-22-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Integrated Management Controller Substring Comparison Privilege Escalation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8338&signatureSubId=0&releaseVersion=S1032&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

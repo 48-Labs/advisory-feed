@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20170717-webex",
+  "title": "Cisco WebEx Browser Extension Remote Code Execution Vulnerability",
+  "version": "1.3",
+  "firstPublished": "2017-07-17T16:00:00.000+0000",
+  "lastPublished": "2017-08-11T15:41:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170717-webex",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-119",
+  "cve": "CVE-2017-6753",
+  "ciscoBugId": "CSCvf15012,CSCvf15020,CSCvf15030,CSCvf15033,CSCvf15036,CSCvf15037",
+  "status": "",
+  "summary": "A vulnerability in Cisco WebEx browser extensions for Google Chrome and Mozilla Firefox could allow an unauthenticated, remote attacker to execute arbitrary code with the privileges of the affected browser on an affected system. This vulnerability affects the browser extensions for Cisco&nbsp;WebEx ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "41407",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-01-24-seu.html"
+        },
+        {
+          "name": "41408",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-01-24-seu.html"
+        },
+        {
+          "name": "41409",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-01-24-seu.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "identifier": "cisco-sa-20050729-ipv6",
+  "title": "IPv6 Crafted Packet Vulnerability",
+  "version": "2.0",
+  "firstPublished": "2005-07-29T08:00:00.000+0000",
+  "lastPublished": "2005-07-29T08:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20050729-ipv6",
+  "cwe": "CWE-94",
+  "erpPubIds": "9534",
+  "cve": "CVE-2005-2451",
+  "ciscoBugId": "CSCef68324,CSCuk53918",
+  "status": "",
+  "summary": "Cisco Internetwork Operating System (IOS&reg;)Software is vulnerable to a Denial of Service (DoS) and potentially anarbitrary code execution attack from a specifically crafted IPv6 packet. Thepacket must be sent from a local network segment. Only devices that have beenexplicitly ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Malformed IPv6 Packet Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=9534&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "ICMPv6 zero length option",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1600&signatureSubId=0&releaseVersion=S417&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMPv6 option type 1 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1601&signatureSubId=0&releaseVersion=S230&softwareVersion=5.1"
+        },
+        {
+          "name": "ICMPv6 option type 1 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1601&signatureSubId=0&releaseVersion=S230&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMPv6 option type 2 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1602&signatureSubId=0&releaseVersion=S230&softwareVersion=5.1"
+        },
+        {
+          "name": "ICMPv6 option type 2 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1602&signatureSubId=0&releaseVersion=S230&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMPv6 option type 3 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1603&signatureSubId=0&releaseVersion=S230&softwareVersion=5.1"
+        },
+        {
+          "name": "ICMPv6 option type 3 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1603&signatureSubId=0&releaseVersion=S230&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMPv6 option type 4 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1604&signatureSubId=0&releaseVersion=S582&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMPv6 option type 5 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1605&signatureSubId=0&releaseVersion=S230&softwareVersion=5.1"
+        },
+        {
+          "name": "ICMPv6 option type 5 violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1605&signatureSubId=0&releaseVersion=S230&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMPv6 short option data",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1606&signatureSubId=0&releaseVersion=S582&softwareVersion=6.0"
+        },
+        {
+          "name": "IPv6 multi-crafted fragments",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1607&signatureSubId=0&releaseVersion=S642&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

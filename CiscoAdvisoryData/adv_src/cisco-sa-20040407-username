@@ -1,0 +1,37 @@
+{
+  "identifier": "cisco-sa-20040407-username",
+  "title": "A Default Username and Password in WLSE and HSE Devices",
+  "version": "1.4",
+  "firstPublished": "2004-04-07T16:00:00.000+0000",
+  "lastPublished": "2004-04-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040407-username",
+  "erpPubIds": "7501",
+  "cve": "CVE-2004-0391",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "    A default username/password pair is present in all releases of the Wireless LAN Solution Engine (WLSE) and Hosting Solution Engine (HSE) software. A user who logs in using this username has complete control of the device. This username cannot be disabled. There is no workaround.  ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco WLSE and HSE Default Username Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=7501&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WLSE/HSE Default Username",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5653&signatureSubId=0&releaseVersion=S588&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190807-spa112-xss",
+  "title": "Cisco SPA112 2-Port Phone Adapter Stored Cross-Site Scripting Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-08-07T16:00:00.000+0000",
+  "lastPublished": "2019-08-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190807-spa112-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2019-1956",
+  "ciscoBugId": "CSCvp27894",
+  "status": "",
+  "summary": "A vulnerability in the web-based interface of the Cisco&nbsp;SPA112 2-Port Phone Adapter could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against another user of the device.The vulnerability is due to insufficient validation of user-supplied ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

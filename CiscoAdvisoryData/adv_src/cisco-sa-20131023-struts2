@@ -1,0 +1,59 @@
+{
+  "identifier": "cisco-sa-20131023-struts2",
+  "title": "Apache Struts 2 Command Execution Vulnerability in Multiple Cisco Products",
+  "version": "1.1",
+  "firstPublished": "2013-10-23T16:00:00.000+0000",
+  "lastPublished": "2015-10-12T12:30:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131023-struts2",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2013-2251",
+  "ciscoBugId": "CSCui22841,CSCui33268,CSCui40582,CSCui48757,CSCui51516",
+  "status": "",
+  "summary": "Multiple Cisco products include an implementation of the Apache Struts 2 component that is affected by a remote command execution vulnerability. The vulnerability is due to insufficient sanitization of user-suppliedinput. An attacker could exploit this vulnerability by sending crafted ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "27243",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "27244",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "27245",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "29747",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "29748",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "49885",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Apache Struts 2 Command Execution Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2579&signatureSubId=0&releaseVersion=S734&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

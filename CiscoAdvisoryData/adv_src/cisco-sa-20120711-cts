@@ -1,0 +1,72 @@
+{
+  "identifier": "cisco-sa-20120711-cts",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence Immersive Endpoint Devices",
+  "version": "1.1",
+  "firstPublished": "2012-07-11T16:00:00.000+0000",
+  "lastPublished": "2012-09-24T14:56:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "cisco-sa-20120711-ctrs,26342,26344,26345,cisco-sa-20120711-ctms,cisco-sa-20120711-ctsman",
+  "cve": "CVE-2012-2486,CVE-2012-3074,CVE-2012-3075",
+  "ciscoBugId": "CSCtn99724,CSCtz38382,CSCtz40941,CSCtz40947,CSCtz40953,CSCtz40965",
+  "status": "",
+  "summary": "Cisco TelePresence Endpoint devices contain the following vulnerabilities:    Cisco TelePresence API Remote Command Execution Vulnerability    Cisco TelePresence Remote Command Execution Vulnerability    Cisco TelePresence Cisco Discovery Protocol Remote ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence Multipoint Switch Cisco Discovery Protocol Remote Arbitrary Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26342&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence Immersive Endpoint Devices API Remote Command Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26344&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence Immersive Endpoint System Remote Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=26345&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Multiple Vulnerabilities in Cisco TelePresence Recording Server",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctrs"
+        },
+        {
+          "name": "Multiple Vulnerabilities in Cisco TelePresence Multipoint Switch",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctms"
+        },
+        {
+          "name": "Multiple Vulnerabilities in Cisco TelePresence Manager",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctsman"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Telepresence Command Injection Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1338&signatureSubId=0&releaseVersion=S657&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Telepresence Unauthenticated Remote Arbitrary Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=32719&signatureSubId=0&releaseVersion=S616&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Endpoint CGI Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33859&signatureSubId=0&releaseVersion=S662&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

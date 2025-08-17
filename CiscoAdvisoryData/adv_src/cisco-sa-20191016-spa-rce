@@ -1,0 +1,59 @@
+{
+  "identifier": "cisco-sa-20191016-spa-rce",
+  "title": "Multiple Cisco Analog Telephone Adapters Remote Code Execution Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2019-10-16T16:00:00.000+0000",
+  "lastPublished": "2019-12-02T16:40:47.850+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20191016-spa-rce",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-119",
+  "cve": "CVE-2019-15240,CVE-2019-15241,CVE-2019-15242,CVE-2019-15243,CVE-2019-15244,CVE-2019-15245,CVE-2019-15246,CVE-2019-15247,CVE-2019-15248,CVE-2019-15249,CVE-2019-15250,CVE-2019-15251,CVE-2019-15252",
+  "ciscoBugId": "CSCvq50494,CSCvr49341",
+  "status": "",
+  "summary": "Multiple vulnerabilities in Cisco&nbsp;SPA Analog Telephone Adapters (ATAs) could allow an authenticated, adjacent attacker to execute arbitrary code with elevated privileges.The vulnerabilities are due to improper validation of user-supplied input to the web-based management interface. ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "51890",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51891",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51892",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51893",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51894",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        },
+        {
+          "name": "51895",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-17-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco SPA100 Series Analog Telephone Adapters Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8358&signatureSubId=0&releaseVersion=S1034&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20190306-aci-shell-escape",
+  "title": "Cisco Nexus 9000 Series Fabric Switches Application Centric Infrastructure Mode Shell Escape Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2019-03-06T16:00:00.000+0000",
+  "lastPublished": "2019-03-19T21:08:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190306-aci-shell-escape",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "erpPubIds": "ERP-70757",
+  "cve": "CVE-2019-1591",
+  "ciscoBugId": "CSCvm52063",
+  "status": "",
+  "summary": "A vulnerability in a specific CLI command implementation of Cisco Nexus 9000 Series ACI Mode Switch Software could allow an authenticated, local attacker to escape a restricted shell on an affected device.The vulnerability is due to insufficient sanitization of user-supplied input ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2019 Cisco FXOS and NX-OS Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-70757&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

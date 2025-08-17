@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco FXOS Software CLI Command Injection Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20200226-fpwr-cmdinj</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2020-02-25T19:25:01</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2020-02-26T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2020-02-26T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the CLI of Cisco FXOS Software could allow an authenticated, local attacker to execute arbitrary commands on the underlying Linux operating system with a privilege level of root on an affected device.
+
+The vulnerability is due to insufficient validation of arguments passed to a specific CLI command on the affected device. An attacker could exploit this vulnerability by including malicious input as the argument of an affected command. A successful exploit could allow the attacker to execute arbitrary commands on the underlying Linux operating system with root privileges. An attacker would need valid administrator credentials to exploit this vulnerability.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200226-fpwr-cmdinj ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200226-fpwr-cmdinj"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this vulnerability affected Cisco FXOS Software running on the following Cisco devices:
+
+Firepower 4100 Series
+Firepower 9300 Security Appliances
+
+For information about which Cisco software releases were vulnerable at the time of publication, see the Fixed Software ["#fs"] section of this advisory. See the Details section in the bug ID(s) at the top of this advisory for the most complete and current information.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+Firepower 1000 Series
+Firepower 2100 Series
+MDS 9000 Series Multilayer Switches
+Nexus 1000 Virtual Edge for VMware vSphere
+Nexus 1000V Switch for Microsoft Hyper-V
+Nexus 1000V Switch for VMware vSphere
+Nexus 3000 Series Switches
+Nexus 5500 Platform Switches
+Nexus 5600 Platform Switches
+Nexus 6000 Series Switches
+Nexus 7000 Series Switches
+Nexus 9000 Series Fabric Switches in Application Centric Infrastructure (ACI) mode
+Nexus 9000 Series Switches in standalone NX-OS mode
+UCS 6200 Series Fabric Interconnects
+UCS 6300 Series Fabric Interconnects
+UCS 6400 Series Fabric Interconnects</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories and Alerts page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+      Cisco FXOS Software
+At the time of publication, the release information in the following table(s) was accurate. See the Details section in the bug ID(s) at the top of this advisory for the most complete and current information.
+
+The left column lists Cisco software releases, and the right column indicates whether a release was affected by the vulnerability described in this advisory and which release included the fix for this vulnerability.
+
+Firepower 4100 Series and Firepower 9300 Security Appliances: CSCvo42633 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCvo42633"]
+                                Cisco FXOS Software Release              First Fixed Release for This Vulnerability
+                                              2.2              2.2.2.97                                  2.3              2.3.1.144                                  2.4              2.4.1.234                                  2.6              Not vulnerable                                  2.7              Not vulnerable</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">This vulnerability was found during internal security testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200226-fpwr-cmdinj</cvrf:URL>
+      <cvrf:Description>Cisco FXOS Software CLI Command Injection Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Firepower Extensible Operating System (FXOS)" Type="Product Name">
+        <Branch Name="2.0" Type="Product Version">
+          <Branch Name="2.0.1.68" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-225891">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.68</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.201" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-248969">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.201</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.86" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253468">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.86</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.37" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253469">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.37</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.135" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253470">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.135</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.141" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253471">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.141</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.144" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253472">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.144</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.148" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253473">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.148</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.149" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253474">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.149</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.153" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253475">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.153</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.159" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253476">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.159</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.188" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253477">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.188</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.203" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253478">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.203</FullProductName>
+          </Branch>
+          <Branch Name="2.0.1.204" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253479">Cisco Firepower Extensible Operating System (FXOS) 2.0.1.204</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="2.1" Type="Product Version">
+          <Branch Name="2.1.1.64" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253480">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.64</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.73" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253481">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.73</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.77" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253482">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.77</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.83" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253483">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.83</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.85" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253484">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.85</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.86" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253485">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.86</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.97" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253486">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.97</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.106" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253487">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.106</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.107" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253488">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.107</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.113" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253489">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.113</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.115" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253490">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.115</FullProductName>
+          </Branch>
+          <Branch Name="2.1.1.116" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253491">Cisco Firepower Extensible Operating System (FXOS) 2.1.1.116</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="1.1" Type="Product Version">
+          <Branch Name="1.1.1.147" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253454">Cisco Firepower Extensible Operating System (FXOS) 1.1.1.147</FullProductName>
+          </Branch>
+          <Branch Name="1.1.1.160" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253455">Cisco Firepower Extensible Operating System (FXOS) 1.1.1.160</FullProductName>
+          </Branch>
+          <Branch Name="1.1.2.51" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253456">Cisco Firepower Extensible Operating System (FXOS) 1.1.2.51</FullProductName>
+          </Branch>
+          <Branch Name="1.1.2.178" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253457">Cisco Firepower Extensible Operating System (FXOS) 1.1.2.178</FullProductName>
+          </Branch>
+          <Branch Name="1.1.3.84" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253458">Cisco Firepower Extensible Operating System (FXOS) 1.1.3.84</FullProductName>
+          </Branch>
+          <Branch Name="1.1.3.86" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253459">Cisco Firepower Extensible Operating System (FXOS) 1.1.3.86</FullProductName>
+          </Branch>
+          <Branch Name="1.1.3.97" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253460">Cisco Firepower Extensible Operating System (FXOS) 1.1.3.97</FullProductName>
+          </Branch>
+          <Branch Name="1.1.4.95" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253461">Cisco Firepower Extensible Operating System (FXOS) 1.1.4.95</FullProductName>
+          </Branch>
+          <Branch Name="1.1.4.117" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253462">Cisco Firepower Extensible Operating System (FXOS) 1.1.4.117</FullProductName>
+          </Branch>
+          <Branch Name="1.1.4.169" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253464">Cisco Firepower Extensible Operating System (FXOS) 1.1.4.169</FullProductName>
+          </Branch>
+          <Branch Name="1.1.4.175" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253465">Cisco Firepower Extensible Operating System (FXOS) 1.1.4.175</FullProductName>
+          </Branch>
+          <Branch Name="1.1.4.178" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253466">Cisco Firepower Extensible Operating System (FXOS) 1.1.4.178</FullProductName>
+          </Branch>
+          <Branch Name="1.1.4.179" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253467">Cisco Firepower Extensible Operating System (FXOS) 1.1.4.179</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="2.2" Type="Product Version">
+          <Branch Name="2.2.1.63" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253492">Cisco Firepower Extensible Operating System (FXOS) 2.2.1.63</FullProductName>
+          </Branch>
+          <Branch Name="2.2.1.66" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253493">Cisco Firepower Extensible Operating System (FXOS) 2.2.1.66</FullProductName>
+          </Branch>
+          <Branch Name="2.2.1.70" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253494">Cisco Firepower Extensible Operating System (FXOS) 2.2.1.70</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.17" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253495">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.17</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.19" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253496">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.19</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.24" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253497">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.24</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.26" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253498">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.26</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.28" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253499">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.28</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.54" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253500">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.54</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.60" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253501">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.60</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.71" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253502">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.71</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.83" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253503">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.83</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.86" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-253504">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.86</FullProductName>
+          </Branch>
+          <Branch Name="2.2.2.91" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-273567">Cisco Firepower Extensible Operating System (FXOS) 2.2.2.91</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="2.3" Type="Product Version">
+          <Branch Name="2.3.1.99" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256167">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.99</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.93" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256168">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.93</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.91" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256169">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.91</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.88" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256170">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.88</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.75" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256171">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.75</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.73" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256172">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.73</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.66" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256173">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.66</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.58" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256174">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.58</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.130" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256175">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.130</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.111" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256176">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.111</FullProductName>
+          </Branch>
+          <Branch Name="2.3.1.110" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256177">Cisco Firepower Extensible Operating System (FXOS) 2.3.1.110</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="2.4" Type="Product Version">
+          <Branch Name="2.4.1.101" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256180">Cisco Firepower Extensible Operating System (FXOS) 2.4.1.101</FullProductName>
+          </Branch>
+          <Branch Name="2.4.1.214" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-256181">Cisco Firepower Extensible Operating System (FXOS) 2.4.1.214</FullProductName>
+          </Branch>
+          <Branch Name="2.4.1.222" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-271840">Cisco Firepower Extensible Operating System (FXOS) 2.4.1.222</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco Firepower Extensible Operating System (FXOS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-225888">Cisco Firepower Extensible Operating System (FXOS) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco FXOS Software CLI Command Injection Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCvo42633</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCvo42633</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2020-3169</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-225888</ProductID>
+        <ProductID>CVRFPID-225891</ProductID>
+        <ProductID>CVRFPID-248969</ProductID>
+        <ProductID>CVRFPID-253454</ProductID>
+        <ProductID>CVRFPID-253455</ProductID>
+        <ProductID>CVRFPID-253456</ProductID>
+        <ProductID>CVRFPID-253457</ProductID>
+        <ProductID>CVRFPID-253458</ProductID>
+        <ProductID>CVRFPID-253459</ProductID>
+        <ProductID>CVRFPID-253460</ProductID>
+        <ProductID>CVRFPID-253461</ProductID>
+        <ProductID>CVRFPID-253462</ProductID>
+        <ProductID>CVRFPID-253464</ProductID>
+        <ProductID>CVRFPID-253465</ProductID>
+        <ProductID>CVRFPID-253466</ProductID>
+        <ProductID>CVRFPID-253467</ProductID>
+        <ProductID>CVRFPID-253468</ProductID>
+        <ProductID>CVRFPID-253469</ProductID>
+        <ProductID>CVRFPID-253470</ProductID>
+        <ProductID>CVRFPID-253471</ProductID>
+        <ProductID>CVRFPID-253472</ProductID>
+        <ProductID>CVRFPID-253473</ProductID>
+        <ProductID>CVRFPID-253474</ProductID>
+        <ProductID>CVRFPID-253475</ProductID>
+        <ProductID>CVRFPID-253476</ProductID>
+        <ProductID>CVRFPID-253477</ProductID>
+        <ProductID>CVRFPID-253478</ProductID>
+        <ProductID>CVRFPID-253479</ProductID>
+        <ProductID>CVRFPID-253480</ProductID>
+        <ProductID>CVRFPID-253481</ProductID>
+        <ProductID>CVRFPID-253482</ProductID>
+        <ProductID>CVRFPID-253483</ProductID>
+        <ProductID>CVRFPID-253484</ProductID>
+        <ProductID>CVRFPID-253485</ProductID>
+        <ProductID>CVRFPID-253486</ProductID>
+        <ProductID>CVRFPID-253487</ProductID>
+        <ProductID>CVRFPID-253488</ProductID>
+        <ProductID>CVRFPID-253489</ProductID>
+        <ProductID>CVRFPID-253490</ProductID>
+        <ProductID>CVRFPID-253491</ProductID>
+        <ProductID>CVRFPID-253492</ProductID>
+        <ProductID>CVRFPID-253493</ProductID>
+        <ProductID>CVRFPID-253494</ProductID>
+        <ProductID>CVRFPID-253495</ProductID>
+        <ProductID>CVRFPID-253496</ProductID>
+        <ProductID>CVRFPID-253497</ProductID>
+        <ProductID>CVRFPID-253498</ProductID>
+        <ProductID>CVRFPID-253499</ProductID>
+        <ProductID>CVRFPID-253500</ProductID>
+        <ProductID>CVRFPID-253501</ProductID>
+        <ProductID>CVRFPID-253502</ProductID>
+        <ProductID>CVRFPID-253503</ProductID>
+        <ProductID>CVRFPID-253504</ProductID>
+        <ProductID>CVRFPID-256167</ProductID>
+        <ProductID>CVRFPID-256168</ProductID>
+        <ProductID>CVRFPID-256169</ProductID>
+        <ProductID>CVRFPID-256170</ProductID>
+        <ProductID>CVRFPID-256171</ProductID>
+        <ProductID>CVRFPID-256172</ProductID>
+        <ProductID>CVRFPID-256173</ProductID>
+        <ProductID>CVRFPID-256174</ProductID>
+        <ProductID>CVRFPID-256175</ProductID>
+        <ProductID>CVRFPID-256176</ProductID>
+        <ProductID>CVRFPID-256177</ProductID>
+        <ProductID>CVRFPID-256180</ProductID>
+        <ProductID>CVRFPID-256181</ProductID>
+        <ProductID>CVRFPID-271840</ProductID>
+        <ProductID>CVRFPID-273567</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>6.7</BaseScoreV3>
+        <VectorV3>CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200226-fpwr-cmdinj</URL>
+        <Description>Cisco FXOS Software CLI Command Injection Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

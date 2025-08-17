@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20130821-hcm",
+  "title": "Cisco Prime Central for Hosted Collaboration Solution Assurance Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2013-08-21T16:00:00.000+0000",
+  "lastPublished": "2013-08-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-hcm",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "30430,30429,30428,30427",
+  "cve": "CVE-2013-3387,CVE-2013-3388,CVE-2013-3389,CVE-2013-3390",
+  "ciscoBugId": "CSCtz90114,CSCtz92776,CSCua42724,CSCub59158",
+  "status": "",
+  "summary": "Cisco Prime Central for Hosted Collaboration Solution (HCS) Assurance contains multiple vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition. Exploitation of these vulnerabilities could interrupt the monitoring of voice services and ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Prime Central for Hosted Collaboration Solution Assurance TCP Flood Memory Exhaustion Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30430&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Prime Central for Hosted Collaboration Solution Assurance TCP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30429&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Prime Central for Hosted Collaboration Solution Assurance TCP Flood Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30428&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Prime Central for Hosted Collaboration Solution Assurance Excessive Logging Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30427&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

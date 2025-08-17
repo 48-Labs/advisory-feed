@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20100922-sip",
+  "title": "Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2010-09-22T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:16:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100922-sip",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "18898,21382",
+  "cve": "CVE-2009-2051,CVE-2010-2834,CVE-2010-2835",
+  "ciscoBugId": "CSCsz43987,CSCta20040,CSCtf72678",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Session Initiation Protocol (SIP)implementation in Cisco IOS&reg; Software that couldallow an unauthenticated, remote attacker to cause a reload of an affecteddevice when SIP operation is enabled. Cisco has released software updates ",
+  "totalCount": 3,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Unified Communications Manager Session Initiation Protocol INVITE Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18898&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software and Unified Communications Manager Session Initiation Protocol Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21382&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20481&signatureSubId=0&releaseVersion=S598&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20481&signatureSubId=1&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=30059&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=30059&signatureSubId=1&releaseVersion=S598&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

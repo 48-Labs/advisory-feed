@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20111026-webex",
+  "title": "Buffer Overflow Vulnerabilities in the Cisco WebEx Player",
+  "version": "1.1",
+  "firstPublished": "2011-10-26T16:00:00.000+0000",
+  "lastPublished": "2012-07-18T14:22:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111026-webex",
+  "cve": "CVE-2011-3319,CVE-2011-4004",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple buffer overflow vulnerabilities exist in the Cisco WebEx Recording Format (WRF) player. In some cases, exploitation of the vulnerabilities could allow a remote attacker to execute arbitrary code on the system with the privileges of a targeted user.The Cisco WebEx ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "21116",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "25341",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Webex Player Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=40006&signatureSubId=0&releaseVersion=S616&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Webex Recording Format File Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=40026&signatureSubId=0&releaseVersion=S605&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx Player ATDL2006.dll Heap Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=42907&signatureSubId=0&releaseVersion=S748&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

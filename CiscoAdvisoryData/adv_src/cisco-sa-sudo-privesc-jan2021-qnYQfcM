@@ -1,0 +1,58 @@
+{
+  "identifier": "cisco-sa-sudo-privesc-jan2021-qnYQfcM",
+  "title": "Sudo Privilege Escalation Vulnerability Affecting Cisco Products: January 2021",
+  "version": "1.15",
+  "firstPublished": "2021-01-29T21:30:00.000+0000",
+  "lastPublished": "2021-03-16T20:43:10.117+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sudo-privesc-jan2021-qnYQfcM",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-122",
+  "cve": "CVE-2021-3156",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "A vulnerability in the command line parameter parsing code of Sudo could allow an authenticated, local attacker to execute commands or binaries with root privileges.The vulnerability is due to improper parsing of command line parameters that may result in a heap-based buffer overflow. ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "60504",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "60505",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "64517",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "64518",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "64519",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "64520",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "64521",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "64522",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20190306-nxos-cmdinj-1611",
+  "title": "Cisco FXOS and NX-OS Software CLI Command Injection Vulnerability (CVE-2019-1611)",
+  "version": "1.0",
+  "firstPublished": "2019-03-06T16:00:00.000+0000",
+  "lastPublished": "2019-03-06T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190306-nxos-cmdinj-1611",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-88",
+  "erpPubIds": "ERP-70757",
+  "cve": "CVE-2019-1611",
+  "ciscoBugId": "CSCvj63798,CSCvj65666,CSCvk65444,CSCvk65447,CSCvk65482",
+  "status": "",
+  "summary": "A vulnerability in the CLI of Cisco NX-OS Software and Cisco FXOS Software could allow an authenticated, local attacker to execute arbitrary commands on the underlying operating system of an affected device.The vulnerability is due to insufficient validation of arguments passed to ",
+  "totalCount": 26,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2019 Cisco FXOS and NX-OS Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-70757&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

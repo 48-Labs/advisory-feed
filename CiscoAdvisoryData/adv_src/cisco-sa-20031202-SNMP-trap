@@ -1,0 +1,27 @@
+{
+  "identifier": "cisco-sa-20031202-SNMP-trap",
+  "title": "SNMP Trap Reveals WEP Key in Cisco Aironet Access Point",
+  "version": "1.0",
+  "firstPublished": "2003-12-02T17:00:00.000+0000",
+  "lastPublished": "2003-12-02T17:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20031202-SNMP-trap",
+  "cwe": "CWE-200",
+  "erpPubIds": "7039",
+  "status": "",
+  "summary": "   Cisco Aironet Access Points (AP) running Cisco IOS&reg; software will send any static Wired Equivalent Privacy (WEP) key in the cleartext to the Simple Network Management Protocol (SNMP) server if the snmp-server enable traps wlan-wep command is enabled. Affected hardware models ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Aironet Access Point WEP Key Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=7039&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

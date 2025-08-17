@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-iosxr-dvmrp-memexh-dSmpdvfz",
+  "title": "Cisco IOS XR Software DVMRP Memory Exhaustion Vulnerabilities",
+  "version": "2.2",
+  "firstPublished": "2020-08-29T03:00:00.000+0000",
+  "lastPublished": "2020-09-28T21:36:50.010+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-dvmrp-memexh-dSmpdvfz",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-400",
+  "cve": "CVE-2020-3566,CVE-2020-3569",
+  "ciscoBugId": "CSCvr86414,CSCvv54838",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the Distance Vector Multicast Routing Protocol (DVMRP) feature of Cisco&nbsp;IOS XR Software could allow an unauthenticated, remote attacker to either immediately crash the Internet Group Management Protocol (IGMP) process or make it consume available memory and ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "54902",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-08-28-new.html"
+        }
+      ]
+    }
+  ]
+}

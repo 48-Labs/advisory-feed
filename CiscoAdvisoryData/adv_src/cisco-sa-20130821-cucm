@@ -1,0 +1,59 @@
+{
+  "identifier": "cisco-sa-20130821-cucm",
+  "title": "Multiple Vulnerabilities in Cisco Unified Communications Manager",
+  "version": "1.0",
+  "firstPublished": "2013-08-21T16:00:00.000+0000",
+  "lastPublished": "2013-08-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm",
+  "severity": "High",
+  "cwe": "CWE-119, CWE-20, CWE",
+  "erpPubIds": "30434,30433,30432,30431",
+  "cve": "CVE-2013-3459,CVE-2013-3460,CVE-2013-3461,CVE-2013-3462",
+  "ciscoBugId": "CSCub35869,CSCub85597,CSCud54358,CSCuf93466",
+  "status": "",
+  "summary": "Cisco Unified Communications Manager (Unified CM) contains multiple vulnerabilities that could allow an unauthenticated, remote attacker to modify data, execute arbitrary commands, or cause a denial of service (DoS) condition.Cisco has released software updates that address these ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30434&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager SIP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30433&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager UDP Packet Processing Memory Leak Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30432&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Registration Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30431&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2667&signatureSubId=0&releaseVersion=S736&softwareVersion=6.0"
+        },
+        {
+          "name": "UDP Host Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4002&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS XR Memory Exhaustion Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4488&signatureSubId=0&releaseVersion=S823&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

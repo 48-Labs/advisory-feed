@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20100210-ironport</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2010-02-10T16:00:00</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2014-07-30T20:11:36</cvrf:Date>
+        <cvrf:Description>Updated the Workarounds section with additional details.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2015-10-03T06:52:58</cvrf:Date>
+        <cvrf:Description>Updated the advisory to reflect that no software fixes are available to address all the known ways to exploit these vulnerabilities.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2010-02-10T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2015-10-03T06:52:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco IronPort Encryption Appliance devices contain two vulnerabilities
+that allow remote, unauthenticated access to any file on the device and one
+vulnerability that allows remote, unauthenticated users to execute arbitrary
+code with elevated privileges. There are workarounds available to mitigate
+these vulnerabilities.
+
+
+
+This advisory is posted at
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport"].
+["http://www.cisco.com/c/en/us/products/collateral/security/email-encryption-appliance/eol_C51-716239.html"]
+
+
+
+Recently
+it was brought to Cisco's attention that additional methods to exploit
+these vulnerabilities could be used. 
+
+
+
+Because of the lifecycle of this product, no more
+software versions will be published.
+Please refer to the End-of-Sale and End-of-Life Announcement for the Cisco IronPort Encryption Appliance["http://www.cisco.com/c/en/us/products/collateral/security/email-encryption-appliance/eol_C51-716239.html"] and the Cisco End-of-Life Policy["http://www.cisco.com/c/en/us/products/eos-eol-policy.html"].
+
+
+
+However, the workarounds explained in this advisory are applicable and
+are addressing those vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2"></cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">
+The following Cisco IronPort Encryption Appliance versions are affected
+by these vulnerabilities:
+
+
+    
+    Cisco IronPort Encryption Appliance 6.5 versions.
+    
+    Cisco IronPort Encryption Appliance 6.2 versions
+    
+    Cisco IronPort PostX MAP versions.
+
+The version of software that is running on a Cisco IronPort Encryption
+Appliance is located on the About page of the Cisco IronPort
+Encryption Appliance administration interface.
+
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Cisco IronPort C, M, and S-Series appliances are not affected by these
+vulnerabilities. No other Cisco products are currently known to be affected by
+these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">
+
+Note: IronPort tracks bugs using an internal system that is not available
+to customers. The IronPort bug tracking identifiers are provided for reference
+only.
+
+The Cisco IronPort Encryption Appliance contains two information
+disclosure vulnerabilities that allow remote, unauthenticated access to
+arbitrary files on vulnerable devices via the embedded HTTPS server. The first
+vulnerability affecting the Cisco IronPort Encryption Appliance administration
+interface is documented in IronPort bug 65921 and has been assigned Common
+Vulnerabilities and Exposures (CVE) identifier CVE-2010-0143. The second
+vulnerability affecting the WebSafe servlet is documented in IronPort bug 65922
+and has been assigned Common Vulnerabilities and Exposures (CVE) identifier
+CVE-2010-0144.
+
+The Cisco IronPort Encryption Appliance contains a remote code
+execution vulnerability that allows an unauthenticated attacker to run
+arbitrary code with elevated privileges on vulnerable devices via the embedded
+HTTPS server. The vulnerability is documented in IronPort bug 65923 and has
+been assigned Common Vulnerabilities and Exposures (CVE) identifier
+CVE-2010-0145.
+
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">
+It is possible to mitigate the administration interface file access
+vulnerability (IronPort Bug 65921) by using the IP address restriction feature
+of the administration interface to limit access to trusted hosts. Access to the
+administration interface is not restricted by default. To configure access
+limits, an administrator should navigate to Configuration -&gt; Web
+Services -&gt; Admin -&gt; Console Security area in the Cisco IronPort
+Encryption Appliance administration interface.
+
+It is possible to workaround the remote code execution vulnerability
+(IronPort Bug 65923) by disabling HTTP Invoker in the Cisco IronPort Encryption
+Appliance configuration files. To disable the HTTP Invoker, an administrator
+must delete several files in the PostX application home directory and remove a
+directive from the web server configuration. The following files must be
+deleted:
+
+
+jboss/server/postx/deploy/http-invoker.sar
+
+
+jboss/server/postx/deploy/jms/jbossmq-httpil.sar
+
+The following directive must be removed from the
+jboss/server/postx/conf/jboss-service.xml web server
+configuration file.
+
+     
+      
+The JMXConsole and WebConsole should be removed as well.  This is done by carrying out the following commands as an administrator: 
+
+     cd /usr/local/postx/server/jboss/server/postx/deploy
+
+     mv jmx-console.war jmx-console-disabled.war
+
+     cd management
+
+     mv web-console.war web-console-disabled.war
+After deleting the files and removing the directive from the
+configuration file, the PostX application service must be restarted.
+
+
+
+Additional mitigation techniques that can be deployed on Cisco devices
+within the network are available in the Cisco Applied Mitigation Bulletin
+companion document for this advisory: 
+
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"]
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">
+When considering software upgrades, also consult
+http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"]
+and any subsequent advisories to determine exposure and a complete upgrade
+solution.
+
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">
+The Cisco PSIRT is not aware of any public announcements or malicious
+use of the vulnerabilities described in this advisory.
+
+These vulnerabilities were discovered and reported to Cisco by Jesse
+Michael and Alexander Senkevitch. Cisco would like to thank Jesse and Alexander
+for reporting these vulnerabilities to us and for working with us on a
+coordinated disclosure. 
+
+
+Cisco would like to thank Dominic Chell for finding and reporting to us the additional ways to exploit the vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in IronPort Encryption Appliance</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco IronPort PostX MAP" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-97207">Cisco IronPort PostX MAP </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IronPort Encryption Appliance Remote Arbitrary Code Execution Vulnerability</Title>
+    <CVE>CVE-2010-0145</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-97207</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>10.0</BaseScoreV2>
+        <TemporalScoreV2>8.3</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>
+It is possible to mitigate the administration interface file access
+vulnerability (IronPort Bug 65921) by using the IP address restriction feature
+of the administration interface to limit access to trusted hosts. Access to the
+administration interface is not restricted by default. To configure access
+limits, an administrator should navigate to Configuration -&gt; Web
+Services -&gt; Admin -&gt; Console Security area in the Cisco IronPort
+Encryption Appliance administration interface.
+
+It is possible to workaround the remote code execution vulnerability
+(IronPort Bug 65923) by disabling HTTP Invoker in the Cisco IronPort Encryption
+Appliance configuration files. To disable the HTTP Invoker, an administrator
+must delete several files in the PostX application home directory and remove a
+directive from the web server configuration. The following files must be
+deleted:
+
+
+jboss/server/postx/deploy/http-invoker.sar
+
+
+jboss/server/postx/deploy/jms/jbossmq-httpil.sar
+
+The following directive must be removed from the
+jboss/server/postx/conf/jboss-service.xml web server
+configuration file.
+
+     
+      
+The JMXConsole and WebConsole should be removed as well.  This is done by carrying out the following commands as an administrator: 
+
+     cd /usr/local/postx/server/jboss/server/postx/deploy
+
+     mv jmx-console.war jmx-console-disabled.war
+
+     cd management
+
+     mv web-console.war web-console-disabled.war
+After deleting the files and removing the directive from the
+configuration file, the PostX application service must be restarted.
+
+
+
+Additional mitigation techniques that can be deployed on Cisco devices
+within the network are available in the Cisco Applied Mitigation Bulletin
+companion document for this advisory: 
+
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"]
+
+
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</URL>
+        <Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IronPort Encryption Appliance WebSafe Servlet Remote Information Disclosure Vulnerability</Title>
+    <CVE>CVE-2010-0144</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-97207</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>
+It is possible to mitigate the administration interface file access
+vulnerability (IronPort Bug 65921) by using the IP address restriction feature
+of the administration interface to limit access to trusted hosts. Access to the
+administration interface is not restricted by default. To configure access
+limits, an administrator should navigate to Configuration -&gt; Web
+Services -&gt; Admin -&gt; Console Security area in the Cisco IronPort
+Encryption Appliance administration interface.
+
+It is possible to workaround the remote code execution vulnerability
+(IronPort Bug 65923) by disabling HTTP Invoker in the Cisco IronPort Encryption
+Appliance configuration files. To disable the HTTP Invoker, an administrator
+must delete several files in the PostX application home directory and remove a
+directive from the web server configuration. The following files must be
+deleted:
+
+
+jboss/server/postx/deploy/http-invoker.sar
+
+
+jboss/server/postx/deploy/jms/jbossmq-httpil.sar
+
+The following directive must be removed from the
+jboss/server/postx/conf/jboss-service.xml web server
+configuration file.
+
+     
+      
+The JMXConsole and WebConsole should be removed as well.  This is done by carrying out the following commands as an administrator: 
+
+     cd /usr/local/postx/server/jboss/server/postx/deploy
+
+     mv jmx-console.war jmx-console-disabled.war
+
+     cd management
+
+     mv web-console.war web-console-disabled.war
+After deleting the files and removing the directive from the
+configuration file, the PostX application service must be restarted.
+
+
+
+Additional mitigation techniques that can be deployed on Cisco devices
+within the network are available in the Cisco Applied Mitigation Bulletin
+companion document for this advisory: 
+
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"]
+
+
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</URL>
+        <Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IronPort Encryption Appliance Administration Interface Remote Information Disclosure Vulnerability</Title>
+    <CVE>CVE-2010-0143</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-97207</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:N/A:N/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>
+It is possible to mitigate the administration interface file access
+vulnerability (IronPort Bug 65921) by using the IP address restriction feature
+of the administration interface to limit access to trusted hosts. Access to the
+administration interface is not restricted by default. To configure access
+limits, an administrator should navigate to Configuration -&gt; Web
+Services -&gt; Admin -&gt; Console Security area in the Cisco IronPort
+Encryption Appliance administration interface.
+
+It is possible to workaround the remote code execution vulnerability
+(IronPort Bug 65923) by disabling HTTP Invoker in the Cisco IronPort Encryption
+Appliance configuration files. To disable the HTTP Invoker, an administrator
+must delete several files in the PostX application home directory and remove a
+directive from the web server configuration. The following files must be
+deleted:
+
+
+jboss/server/postx/deploy/http-invoker.sar
+
+
+jboss/server/postx/deploy/jms/jbossmq-httpil.sar
+
+The following directive must be removed from the
+jboss/server/postx/conf/jboss-service.xml web server
+configuration file.
+
+     
+      
+The JMXConsole and WebConsole should be removed as well.  This is done by carrying out the following commands as an administrator: 
+
+     cd /usr/local/postx/server/jboss/server/postx/deploy
+
+     mv jmx-console.war jmx-console-disabled.war
+
+     cd management
+
+     mv web-console.war web-console-disabled.war
+After deleting the files and removing the directive from the
+configuration file, the PostX application service must be restarted.
+
+
+
+Additional mitigation techniques that can be deployed on Cisco devices
+within the network are available in the Cisco Applied Mitigation Bulletin
+companion document for this advisory: 
+
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport["https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100210-ironport"]
+
+
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100210-ironport</URL>
+        <Description>Multiple Vulnerabilities in Cisco IronPort Encryption Appliance</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

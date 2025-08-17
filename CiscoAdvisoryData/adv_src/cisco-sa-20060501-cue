@@ -1,0 +1,29 @@
+{
+  "identifier": "cisco-sa-20060501-cue",
+  "title": "Cisco Unity Express Expired Password Reset Privilege Escalation",
+  "version": "1.0",
+  "firstPublished": "2006-05-01T23:00:00.000+0000",
+  "lastPublished": "2006-05-01T23:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060501-cue",
+  "cwe": "CWE-264",
+  "erpPubIds": "10842",
+  "cve": "CVE-2006-2166",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "        Cisco Unity Express (CUE) contains a vulnerability that might allow an authenticated user to change the password for another user by using the HTTP management interface, if the password for the user being modified is marked as expired. This can result in a privilege escalation attack ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unity Express Expired Password Reset Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=10842&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>IOS HTTP Server Command Injection Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20051201-http</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>2.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2005-12-01T21:00:00</cvrf:Date>
+        <cvrf:Description>Added additional advisory credits.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.0</cvrf:Number>
+        <cvrf:Date>2005-12-01T21:00:00</cvrf:Date>
+        <cvrf:Description>Updated the Software Versions and Fixes section.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2005-12-01T21:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2005-12-01T21:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability exists in the IOS HTTP server in which HTML code  inserted into dynamically generated output, such as the output from a  show buffers command, will be passed to the browser  requesting the page. This HTML code could be interpreted by the client browser  and potentially execute malicious commands against the device or other possible  cross-site scripting attacks. Successful exploitation of this vulnerability  requires that a user browse a page containing dynamic content in which HTML  commands have been injected.
+
+Cisco will be making free software available to address this  vulnerability for affected customers. There are workarounds available to  mitigate the effects of the vulnerability.
+
+This advisory is posted at  https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20051201-http ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20051201-http"].</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">This section provides details on affected products.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">This security advisory applies to all Cisco products that run Cisco  IOS Software versions 11.0 through 12.4 with the HTTP server enabled. A system  which contains the IOS HTTP server or HTTP secure server, but does not have it  enabled, is not affected.
+
+ To determine if the HTTP server is running on your device, issue the  show ip http server status and show ip  http server secure status commands at the prompt and look for  output similar to:
+
+
+Router&gt;show ip http server status
+HTTP server status: Enabled
+
+ If the device is not running the HTTP server, you should see output  similar to:
+
+
+Router&gt;show ip http server status
+HTTP server status: Disabled
+
+ Any version of Cisco IOS prior to the versions which will be listed in  the Fixed Software section below may be vulnerable.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Cisco IOS XR is not affected.
+
+ To determine the software running on a Cisco product, log in to the  device and issue the show version command to display the  system banner. Cisco IOS Software will identify itself as "Internetwork  Operating System Software" or simply "IOS". On the next line of output, the  image name will be displayed between parentheses, followed by "Version" and the  IOS release name. Other Cisco devices will not have the show  version command or will give different output.
+
+ The following example identifies a Cisco product running IOS release  12.3(6) with an installed image name of C3640-I-M:
+
+
+Cisco Internetwork Operating System Software
+IOS (tm) 3600 Software (C3640-I-M), Version 12.3(6), RELEASE SOFTWARE (fc3)
+
+ The next example shows a product running IOS release 12.3(11)T3 with  an image name of C3845-ADVIPSERVICESK9-M:
+
+
+Cisco IOS Software, 3800 Software (C3845-ADVIPSERVICESK9-M), Version 12.3(11)T3, RELEASE SOFTWARE (fc4)
+Technical Support: http://www.cisco.com/techsupport Copyright (c) 1986-2005 by Cisco Systems, Inc.
+
+ Additional information about Cisco IOS release naming can be found at  http://www.cisco.com/warp/public/620/1.html ["http://www.cisco.com/warp/public/620/1.html"].
+
+No other Cisco products are currently known to be affected by these  vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">The Cisco IOS Web browser interface (which enables the device to  perform as an HTTP server) allows configuration and monitoring of a router or  access server using any web browser. This feature was introduced in IOS 11.0.
+
+ A vulnerability exists in the IOS HTTP server in which HTML code  inserted into dynamically generated output, such as the output from a  show buffers command, will be passed to the browser  requesting the page. This HTML code could be interpreted by the browser and  potentially execute malicious commands against the device or other possible  cross-site scripting attacks.
+
+ In order to be vulnerable to the cross-site scripting attack, a user  must browse and view the content during the same period of time the injected  code exists in memory. On the other hand, if a user does not browse  contaminated dynamic content on the device, then exploitation is not possible.
+
+ A proof of concept exploit exists for this vulnerability, in which the  exploit attempts to reset the enable password on the device. For the attack to  work against the device itself, the user browsing tainted dynamic content on  the router will only be able to execute commands at or below the privilege  level for which they are authenticated and authorized for on the device.
+
+ This vulnerability is documented in Cisco Bug ID  CSCsc64976 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCsc64976"]            ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)         .</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">If the HTTP server is not used for any legitimate purposes on the  device, it is a best practice to disable it by issuing the following commands  in configure mode:
+
+
+no ip http server
+no ip http secure-server
+    Disable the HTTP WEB_EXEC Service
+A feature was introduced in 12.3(14)T and later in which selective HTTP  and HTTPS services could be enabled or disabled. The WEB_EXEC service provides  a facility to configure the box and retrieve the current state of the box from  remote clients.
+
+It is possible to disable the WEB_EXEC service while still leaving  other HTTP services active. If an installation does not require the use of the  WEB_EXEC service, then it may be disabled using the following procedure:
+
+   Verify the list of all session modules.
+Router#show ip http server session-module 
+HTTP server application session modules:   Session module Name  Handle Status   Secure-status  Description  HTTP_IFS              1      Active   Active         HTTP based IOS File Server  HOME_PAGE             2      Active   Active         IOS Homepage Server  QDM                   3      Active   Active         QOS Device Manager Server  QDM_SA                4      Active   Active         QOS Device Manager Signed Applet Server  WEB_EXEC              5      Active   Active         HTTP based IOS EXEC Server  IXI                   6      Active   Active         IOS XML Infra Application Server  IDCONF                7      Active   Active         IDCONF HTTP(S) Server  XSM                   8      Active   Active         XML Session Manager  VDM                   9      Active   Active         VPN Device Manager Server  XML_Api               10     Active   Active         XML Api  ITS                   11     Active   Active         IOS Telephony Service  ITS_LOCDIR            12     Active   Active         ITS Local Directory Search  CME_SERVICE_URL       13     Active   Active         CME Service URL  CME_AUTH_SRV_LOGIN    14     Active   Active         CME Authentication Server  IPS_SDEE              15     Active   Active         IOS IPS SDEE Server  tti-petitioner        16     Active   Active         TTI Petitioner
+
+   Create a list of session modules that are required, in this example it would be everything other than WEB_EXEC.
+Router#configuration terminal
+Router(config)#ip http session-module-list exclude_webexec               HTTP_IFS,HOME_PAGE,QDM,QDM_SA,IXI,IDCONF,XSM,VDM,XML_Api,              ITS,ITS_LOCDIR,CME_SERVICE_URL,CME_AUTH_SRV_LOGIN,IPS_SDEE,tti-petitioner
+
+   Selectively enable HTTP/HTTPS applications that will service incoming HTTP requests from remote clients.
+Router(config)#ip http active-session-modules exclude_webexec 
+Router(config)#ip http secure-active-session-modules exclude_webexec  Router(config)#exit
+
+   Verify the list of all session modules, and ensure WEB_EXEC is not active.
+Router#show ip http server session-module 
+HTTP server application session modules:   Session module Name  Handle Status   Secure-status  Description  HTTP_IFS              1      Active   Active         HTTP based IOS File Server  HOME_PAGE             2      Active   Active         IOS Homepage Server  QDM                   3      Active   Active         QOS Device Manager Server  QDM_SA                4      Active   Active         QOS Device Manager Signed Applet Server  WEB_EXEC              5      Inactive Inactive       HTTP based IOS EXEC Server  IXI                   6      Active   Active         IOS XML Infra Application Server  IDCONF                7      Active   Active         IDCONF HTTP(S) Server  XSM                   8      Active   Active         XML Session Manager  VDM                   9      Active   Active         VPN Device Manager Server  XML_Api               10     Active   Active         XML Api  ITS                   11     Active   Active         IOS Telephony Service  ITS_LOCDIR            12     Active   Active         ITS Local Directory Search  CME_SERVICE_URL       13     Active   Active         CME Service URL  CME_AUTH_SRV_LOGIN    14     Active   Active         CME Authentication Server  IPS_SDEE              15     Active   Active         IOS IPS SDEE Server  tti-petitioner        16     Active   Active         TTI Petitioner
+
+
+For further information on selective enabling of applications using an  HTTP or secure HTTP server, consult the Cisco IOS network management  configuration guide, release 12.4T at:  http://www.cisco.com/en/US/docs/ios/netmgmt/configuration/guide/nm_http_app_enable.html ["http://www.cisco.com/en/US/docs/ios/netmgmt/configuration/guide/nm_http_app_enable.html"]
+     Avoid the use of Web-based SHOW commands
+ Successful exploitation of this vulnerability requires an unsuspecting  user to request dynamic content from the device via the "show" commands which  are available. Avoiding the use of those commands via the web interface until  an upgrade to fixed software is possible may be perfectly legitimate for some  installations.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">When considering software upgrades, also consult  http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"]  and any subsequent advisories to determine exposure and a complete upgrade  solution.
+
+In all cases, customers should exercise caution to be  certain the devices to be upgraded contain sufficient memory and that current  hardware and software configurations will continue to be supported properly by  the new release. If the information is not clear, contact the Cisco Technical  Assistance Center (TAC) or your contracted maintenance provider for assistance.
+
+Each row of the Cisco IOS software table (below) names a  Cisco IOS release train. If a given release train is vulnerable, then the  earliest possible releases that contain the fix (along with the anticipated  date of availability for each, if applicable) are listed in the "First Fixed  Release" column of the table. Cisco recommends upgrading to the latest  available release where possible.
+
+  Major Release
+
+      Availability of Repaired  Releases
+
+ Affected 12.0-Based Releases
+
+ First Fixed Release
+
+ 12.0
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0DA
+
+Vulnerable; first fixed in 12.2DA ["#12_2DA"]
+
+ 12.0DB
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0DC
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0S
+
+12.0(33)S
+
+12.0(32)S6
+
+ 12.0SC
+
+Vulnerable; first fixed in 12.0S ["#12_0S"]
+
+ 12.0SL
+
+Vulnerable; first fixed in 12.0S ["#12_0S"]
+
+ 12.0SP
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0ST
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.0SX
+
+Vulnerable; first fixed in 12.0S ["#12_0S"]
+
+ 12.0SY
+
+12.0(32)SY9a
+
+12.0(32)SY3
+
+ 12.0SZ
+
+12.0(30)SZ4
+
+ 12.0T
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0W
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0WC
+
+12.0(5)WC14
+
+ 12.0WT
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XA
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XB
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XC
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XD
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XE
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XF
+
+Not Vulnerable
+
+ 12.0XG
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XH
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XI
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XJ
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XK
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XL
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XM
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XN
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XQ
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XR
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XS
+
+Not Vulnerable
+
+ 12.0XT
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.0XV
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ Affected 12.1-Based Releases
+
+ First Fixed Release
+
+ 12.1
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1AA
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1AX
+
+Vulnerable; first fixed in 12.2SE ["#12_2SE"]
+
+ 12.1AY
+
+Vulnerable; first fixed in 12.1EA ["#12_1EA"]
+
+ 12.1AZ
+
+Vulnerable; first fixed in 12.1EA ["#12_1EA"]
+
+ 12.1CX
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1DA
+
+Vulnerable; first fixed in 12.2DA ["#12_2DA"]
+
+ 12.1DB
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1DC
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1E
+
+12.1(26)E8
+
+12.1(27b)E1
+
+ 12.1EA
+
+12.1(22)EA7
+
+ 12.1EB
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.1EC
+
+Vulnerable; first fixed in 12.3BC ["#12_3BC"]
+
+ 12.1EO
+
+12.1(19)EO6
+
+ 12.1EU
+
+Vulnerable; first fixed in 12.2EWA ["#12_2EWA"]
+
+ 12.1EV
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1EW
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1EX
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1EY
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.1EZ
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1GA
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1GB
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1T
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XA
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XB
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XC
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XD
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XE
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XF
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XG
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XH
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XI
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XJ
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XL
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XM
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XP
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XQ
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XR
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XS
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XT
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XU
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XV
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XW
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XX
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XY
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1XZ
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YA
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YB
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YC
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YD
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YE
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YF
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YH
+
+Vulnerable; first fixed in 12.2 ["#12_2"]
+
+ 12.1YI
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.1YJ
+
+Vulnerable; first fixed in 12.1EA ["#12_1EA"]
+
+ Affected 12.2-Based Releases
+
+ First Fixed Release
+
+ 12.2
+
+12.2(27c)
+
+12.2(29b)
+
+12.2(28d)
+
+12.2(26c)
+
+12.2(34)
+
+ 12.2B
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2BC
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2BW
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2BX
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2BY
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2BZ
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2CX
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2CY
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2CZ
+
+Vulnerable; first fixed in 12.2S ["#12_2S"]
+
+ 12.2DA
+
+12.2(10)DA7
+
+12.2(12)DA11
+
+ 12.2DD
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2DX
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2EW
+
+Vulnerable; first fixed in 12.2EWA ["#12_2EWA"]
+
+ 12.2EWA
+
+12.2(25)EWA8
+
+12.2(25)EWA6
+
+12.2(25)EWA11
+
+ 12.2EX
+
+12.2(35)EX
+
+ 12.2EY
+
+12.2(37)EY
+
+ 12.2EZ
+
+Vulnerable; migrate to any release in 12.2SEE
+
+ 12.2FX
+
+Vulnerable; migrate to any release in 12.2SEE
+
+ 12.2FY
+
+Vulnerable; migrate to any release in 12.2SEG
+
+ 12.2FZ
+
+Not Vulnerable
+
+ 12.2IRA
+
+Not Vulnerable
+
+ 12.2IRB
+
+Not Vulnerable
+
+ 12.2IRC
+
+Not Vulnerable
+
+ 12.2IRD
+
+Not Vulnerable
+
+ 12.2IXA
+
+Vulnerable; first fixed in 12.2IXD ["#12_2IXD"]
+
+ 12.2IXB
+
+Vulnerable; first fixed in 12.2IXD ["#12_2IXD"]
+
+ 12.2IXC
+
+Vulnerable; first fixed in 12.2IXD ["#12_2IXD"]
+
+ 12.2IXD
+
+12.2(18)IXD1
+
+ 12.2IXE
+
+Not Vulnerable
+
+ 12.2IXF
+
+Not Vulnerable
+
+ 12.2IXG
+
+Not Vulnerable
+
+ 12.2IXH
+
+Not Vulnerable
+
+ 12.2JA
+
+Vulnerable; first fixed in 12.3JA ["#12_3JA"]
+
+ 12.2JK
+
+Vulnerable; first fixed in 12.3JK ["#12_3JK"]
+
+ 12.2MB
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2MC
+
+12.2(15)MC2h
+
+ 12.2S
+
+12.2(14)S18
+
+12.2(18)S13
+
+12.2(25)S11
+
+12.2(20)S13
+
+ 12.2SB
+
+12.2(31)SB3x
+
+12.2(28)SB2
+
+12.2(31)SB2
+
+ 12.2SBC
+
+Vulnerable; first fixed in 12.2SB ["#12_2SB"]
+
+ 12.2SCA
+
+Not Vulnerable
+
+ 12.2SCB
+
+Not Vulnerable
+
+ 12.2SCC
+
+Not Vulnerable
+
+ 12.2SE
+
+12.2(35)SE
+
+ 12.2SEA
+
+Vulnerable; migrate to any release in 12.2SEE
+
+ 12.2SEB
+
+Vulnerable; migrate to any release in 12.2SEE
+
+ 12.2SEC
+
+Vulnerable; migrate to any release in 12.2SEE
+
+ 12.2SED
+
+Vulnerable; migrate to any release in 12.2SEE
+
+ 12.2SEE
+
+Not Vulnerable
+
+ 12.2SEF
+
+Not Vulnerable
+
+ 12.2SEG
+
+Not Vulnerable
+
+ 12.2SG
+
+12.2(25)SG2
+
+12.2(31)SG1
+
+12.2(31)SG
+
+ 12.2SGA
+
+12.2(31)SGA6
+
+12.2(31)SGA
+
+12.2(31)SGA3
+
+ 12.2SL
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2SM
+
+12.2(29)SM2
+
+ 12.2SO
+
+12.2(18)SO7
+
+ 12.2SQ
+
+Not Vulnerable
+
+ 12.2SRA
+
+Not Vulnerable
+
+ 12.2SRB
+
+Not Vulnerable
+
+ 12.2SRC
+
+Not Vulnerable
+
+ 12.2SRD
+
+Not Vulnerable
+
+ 12.2SRE
+
+Not Vulnerable
+
+ 12.2STE
+
+Not Vulnerable
+
+ 12.2SU
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.2SV
+
+12.2(29)SV3
+
+12.2(29b)SV
+
+12.2(27)SV5
+
+12.2(28)SV2
+
+12.2(29a)SV1
+
+ 12.2SVA
+
+Not Vulnerable
+
+ 12.2SVC
+
+Not Vulnerable
+
+ 12.2SVD
+
+Not Vulnerable
+
+ 12.2SVE
+
+Not Vulnerable
+
+ 12.2SW
+
+12.2(25)SW11
+
+ 12.2SX
+
+Vulnerable; first fixed in 12.2SXF ["#12_2SXF"]
+
+ 12.2SXA
+
+Vulnerable; first fixed in 12.2SXF ["#12_2SXF"]
+
+ 12.2SXB
+
+Vulnerable; first fixed in 12.2SXD ["#12_2SXD"]
+
+ 12.2SXD
+
+12.2(18)SXD7b
+
+ 12.2SXE
+
+12.2(18)SXE6b
+
+ 12.2SXF
+
+12.2(18)SXF15a
+
+12.2(18)SXF5
+
+12.2(18)SXF17a
+
+ 12.2SXH
+
+Not Vulnerable
+
+ 12.2SXI
+
+Not Vulnerable
+
+ 12.2SY
+
+Vulnerable; first fixed in 12.2S ["#12_2S"]
+
+ 12.2SZ
+
+Vulnerable; first fixed in 12.2S ["#12_2S"]
+
+ 12.2T
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2TPC
+
+12.2(8)TPC10b
+
+ 12.2XA
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XB
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XC
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XD
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XE
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XF
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XG
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XH
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XI
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XJ
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XK
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XL
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XM
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XN
+
+Not Vulnerable
+
+ 12.2XNA
+
+Not Vulnerable
+
+ 12.2XNB
+
+Not Vulnerable
+
+ 12.2XNC
+
+Not Vulnerable
+
+ 12.2XND
+
+Not Vulnerable
+
+ 12.2XNE
+
+Not Vulnerable
+
+ 12.2XO
+
+Not Vulnerable
+
+ 12.2XQ
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XR
+
+Vulnerable; first fixed in 12.3JA ["#12_3JA"]
+
+ 12.2XS
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XT
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XU
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XV
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2XW
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2YA
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2YB
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YC
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YD
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YE
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YF
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YG
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YH
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YJ
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YK
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YL
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YM
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.2YN
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YO
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YP
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2YQ
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YR
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YS
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YT
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YU
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YV
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YW
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YX
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YY
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2YZ
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2ZA
+
+Vulnerable; first fixed in 12.2SXD ["#12_2SXD"]
+
+ 12.2ZB
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2ZC
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2ZD
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2ZE
+
+Vulnerable; first fixed in 12.3 ["#12_3"]
+
+ 12.2ZF
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.2ZG
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.2ZH
+
+12.2(13)ZH9
+
+ 12.2ZJ
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2ZL
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2ZP
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.2ZU
+
+12.2(18)ZU2
+
+ 12.2ZX
+
+Vulnerable; first fixed in 12.2SB ["#12_2SB"]
+
+ 12.2ZY
+
+Not Vulnerable
+
+ 12.2ZYA
+
+12.2(18)ZYA
+
+ Affected 12.3-Based Releases
+
+ First Fixed Release
+
+ 12.3
+
+12.3(17c)
+
+12.3(18)
+
+ 12.3B
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3BC
+
+12.3(21)BC
+
+12.3(17b)BC5
+
+ 12.3BW
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3EU
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.3JA
+
+12.3(8)JA
+
+12.3(7)JA3
+
+12.3(2)JA6
+
+12.3(4)JA2
+
+ 12.3JEA
+
+12.3(8)JEA
+
+ 12.3JEB
+
+Not Vulnerable
+
+ 12.3JEC
+
+Not Vulnerable
+
+ 12.3JED
+
+Not Vulnerable
+
+ 12.3JK
+
+12.3(8)JK
+
+12.3(2)JK3
+
+ 12.3JL
+
+Not Vulnerable
+
+ 12.3JX
+
+Not Vulnerable
+
+ 12.3T
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3TPC
+
+12.3(4)TPC11b
+
+ 12.3VA
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3XA
+
+12.3(2)XA6
+
+ 12.3XB
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.3XC
+
+12.3(2)XC5
+
+ 12.3XD
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3XE
+
+12.3(2)XE5
+
+ 12.3XF
+
+Vulnerable; Contact your support organization per the  instructions in Obtaining Fixed Software ["#fixes"] section of  this advisory
+
+ 12.3XG
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3XI
+
+12.3(7)XI9
+
+ 12.3XJ
+
+Vulnerable; first fixed in 12.3YX ["#12_3YX"]
+
+ 12.3XK
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3XL
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3XQ
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3XR
+
+12.3(7)XR7
+
+ 12.3XS
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3XU
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3XW
+
+Vulnerable; first fixed in 12.3YX ["#12_3YX"]
+
+ 12.3XX
+
+12.3(8)XX2d
+
+ 12.3XY
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3XZ
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3YA
+
+Vulnerable; first fixed in 12.4 ["#12_4"]
+
+ 12.3YD
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3YF
+
+Vulnerable; first fixed in 12.3YX ["#12_3YX"]
+
+ 12.3YG
+
+12.3(8)YG6
+
+ 12.3YH
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3YI
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3YJ
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3YK
+
+12.3(11)YK3
+
+ 12.3YM
+
+12.3(14)YM10
+
+ 12.3YQ
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3YS
+
+12.3(11)YS2
+
+ 12.3YT
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.3YU
+
+Vulnerable; first fixed in 12.4XB ["#12_4XB"]
+
+ 12.3YX
+
+12.3(14)YX8
+
+ 12.3YZ
+
+12.3(11)YZ2
+
+ 12.3ZA
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ Affected 12.4-Based Releases
+
+ First Fixed Release
+
+ 12.4
+
+12.4(7)
+
+12.4(5c)
+
+12.4(3g)
+
+ 12.4GC
+
+Not Vulnerable
+
+ 12.4JA
+
+12.4(3g)JA
+
+ 12.4JDA
+
+Not Vulnerable
+
+ 12.4JDC
+
+Not Vulnerable
+
+ 12.4JDD
+
+Not Vulnerable
+
+ 12.4JK
+
+Not Vulnerable
+
+ 12.4JL
+
+Not Vulnerable
+
+ 12.4JMA
+
+Not Vulnerable
+
+ 12.4JMB
+
+Not Vulnerable
+
+ 12.4JX
+
+Not Vulnerable
+
+ 12.4MD
+
+12.4(11)MD
+
+ 12.4MDA
+
+Not Vulnerable
+
+ 12.4MR
+
+12.4(6)MR
+
+ 12.4SW
+
+Not Vulnerable
+
+ 12.4T
+
+12.4(2)T6
+
+12.4(6)T
+
+12.4(4)T5
+
+ 12.4XA
+
+Vulnerable; first fixed in 12.4T ["#12_4T"]
+
+ 12.4XB
+
+12.4(2)XB6
+
+ 12.4XC
+
+12.4(4)XC6
+
+ 12.4XD
+
+12.4(4)XD4
+
+ 12.4XE
+
+Not Vulnerable
+
+ 12.4XF
+
+Not Vulnerable
+
+ 12.4XG
+
+Not Vulnerable
+
+ 12.4XJ
+
+Not Vulnerable
+
+ 12.4XK
+
+Not Vulnerable
+
+ 12.4XL
+
+Not Vulnerable
+
+ 12.4XM
+
+Not Vulnerable
+
+ 12.4XN
+
+Not Vulnerable
+
+ 12.4XP
+
+Not Vulnerable
+
+ 12.4XQ
+
+Not Vulnerable
+
+ 12.4XR
+
+Not Vulnerable
+
+ 12.4XT
+
+Not Vulnerable
+
+ 12.4XV
+
+Not Vulnerable
+
+ 12.4XW
+
+Not Vulnerable
+
+ 12.4XY
+
+Not Vulnerable
+
+ 12.4XZ
+
+Not Vulnerable
+
+ 12.4YA
+
+Not Vulnerable
+
+ 12.4YB
+
+Not Vulnerable
+
+ 12.4YD
+
+Not Vulnerable
+
+ 12.4YE
+
+Not Vulnerable
+
+ 12.4YG
+
+Not Vulnerable
+
+ Affected 15.0-Based Releases
+
+ First Fixed Release
+
+There are no affected 15.0 based releases
+
+ Affected 15.1-Based Releases
+
+ First Fixed Release
+
+There are no affected 15.1 based releases</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">This vulnerability was disclosed in a public posting to the Bugtraq  mailing list.
+
+We would like to thank iDefense for finding and initially reporting  this vulnerability to us.
+
+We would also like to thank Mr. Adrian Pastor from ProCheckup Ltd for  sharing information with us about another possible vector into this  vulnerability. His research paper is available at  http://www.procheckup.com/vulnerability_manager/vulnerabilities/paper-04 ["http://www.procheckup.com/vulnerability_manager/vulnerabilities/paper-04"] .
+
+The Cisco PSIRT is not aware of any malicious use of the vulnerability  described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20051201-http</cvrf:URL>
+      <cvrf:Description>IOS HTTP Server Command Injection Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS HTTP Server Code Injection Vulnerability</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2005-3921</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>If the HTTP server is not used for any legitimate purposes on the  device, it is a best practice to disable it by issuing the following commands  in configure mode:
+
+
+no ip http server
+no ip http secure-server
+    Disable the HTTP WEB_EXEC Service
+A feature was introduced in 12.3(14)T and later in which selective HTTP  and HTTPS services could be enabled or disabled. The WEB_EXEC service provides  a facility to configure the box and retrieve the current state of the box from  remote clients.
+
+It is possible to disable the WEB_EXEC service while still leaving  other HTTP services active. If an installation does not require the use of the  WEB_EXEC service, then it may be disabled using the following procedure:
+
+   Verify the list of all session modules.
+Router#show ip http server session-module 
+HTTP server application session modules:   Session module Name  Handle Status   Secure-status  Description  HTTP_IFS              1      Active   Active         HTTP based IOS File Server  HOME_PAGE             2      Active   Active         IOS Homepage Server  QDM                   3      Active   Active         QOS Device Manager Server  QDM_SA                4      Active   Active         QOS Device Manager Signed Applet Server  WEB_EXEC              5      Active   Active         HTTP based IOS EXEC Server  IXI                   6      Active   Active         IOS XML Infra Application Server  IDCONF                7      Active   Active         IDCONF HTTP(S) Server  XSM                   8      Active   Active         XML Session Manager  VDM                   9      Active   Active         VPN Device Manager Server  XML_Api               10     Active   Active         XML Api  ITS                   11     Active   Active         IOS Telephony Service  ITS_LOCDIR            12     Active   Active         ITS Local Directory Search  CME_SERVICE_URL       13     Active   Active         CME Service URL  CME_AUTH_SRV_LOGIN    14     Active   Active         CME Authentication Server  IPS_SDEE              15     Active   Active         IOS IPS SDEE Server  tti-petitioner        16     Active   Active         TTI Petitioner
+
+   Create a list of session modules that are required, in this example it would be everything other than WEB_EXEC.
+Router#configuration terminal
+Router(config)#ip http session-module-list exclude_webexec               HTTP_IFS,HOME_PAGE,QDM,QDM_SA,IXI,IDCONF,XSM,VDM,XML_Api,              ITS,ITS_LOCDIR,CME_SERVICE_URL,CME_AUTH_SRV_LOGIN,IPS_SDEE,tti-petitioner
+
+   Selectively enable HTTP/HTTPS applications that will service incoming HTTP requests from remote clients.
+Router(config)#ip http active-session-modules exclude_webexec 
+Router(config)#ip http secure-active-session-modules exclude_webexec  Router(config)#exit
+
+   Verify the list of all session modules, and ensure WEB_EXEC is not active.
+Router#show ip http server session-module 
+HTTP server application session modules:   Session module Name  Handle Status   Secure-status  Description  HTTP_IFS              1      Active   Active         HTTP based IOS File Server  HOME_PAGE             2      Active   Active         IOS Homepage Server  QDM                   3      Active   Active         QOS Device Manager Server  QDM_SA                4      Active   Active         QOS Device Manager Signed Applet Server  WEB_EXEC              5      Inactive Inactive       HTTP based IOS EXEC Server  IXI                   6      Active   Active         IOS XML Infra Application Server  IDCONF                7      Active   Active         IDCONF HTTP(S) Server  XSM                   8      Active   Active         XML Session Manager  VDM                   9      Active   Active         VPN Device Manager Server  XML_Api               10     Active   Active         XML Api  ITS                   11     Active   Active         IOS Telephony Service  ITS_LOCDIR            12     Active   Active         ITS Local Directory Search  CME_SERVICE_URL       13     Active   Active         CME Service URL  CME_AUTH_SRV_LOGIN    14     Active   Active         CME Authentication Server  IPS_SDEE              15     Active   Active         IOS IPS SDEE Server  tti-petitioner        16     Active   Active         TTI Petitioner
+
+
+For further information on selective enabling of applications using an  HTTP or secure HTTP server, consult the Cisco IOS network management  configuration guide, release 12.4T at:  http://www.cisco.com/en/US/docs/ios/netmgmt/configuration/guide/nm_http_app_enable.html ["http://www.cisco.com/en/US/docs/ios/netmgmt/configuration/guide/nm_http_app_enable.html"]
+     Avoid the use of Web-based SHOW commands
+ Successful exploitation of this vulnerability requires an unsuspecting  user to request dynamic content from the device via the "show" commands which  are available. Avoiding the use of those commands via the web interface until  an upgrade to fixed software is possible may be perfectly legitimate for some  installations.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20051201-http</URL>
+        <Description>IOS HTTP Server Command Injection Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

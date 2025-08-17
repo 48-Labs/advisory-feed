@@ -1,0 +1,92 @@
+{
+  "identifier": "cisco-sa-20130821-cup",
+  "title": "Cisco Unified Communications Manager IM and Presence Service Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2013-08-21T16:00:00.000+0000",
+  "lastPublished": "2013-08-21T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cup",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "30426,30393",
+  "cve": "CVE-2013-3453",
+  "ciscoBugId": "CSCud84959",
+  "status": "",
+  "summary": "Cisco Unified Communications Manager IM and Presence Service contains a denial of service (DoS) vulnerability that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition.  Exploitation of this vulnerability ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager IM and Presence Service Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30426&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Cisco Applied Mitigation Bulletin: Identifying and Mitigating the Cisco Unified Communications Manager IM and Presence Service Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=30393"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=5.1"
+        },
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMP Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2152&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Queso Sweep",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3045&signatureSubId=0&releaseVersion=S507&softwareVersion=6.0"
+        },
+        {
+          "name": "Half-open SYN Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3050&signatureSubId=0&releaseVersion=S774&softwareVersion=6.0"
+        },
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

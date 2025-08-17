@@ -1,0 +1,58 @@
+{
+  "identifier": "cisco-sa-20060628-wcs",
+  "title": "Multiple Vulnerabilities in Wireless Control System",
+  "version": "1.2",
+  "firstPublished": "2006-06-28T16:00:00.000+0000",
+  "lastPublished": "2006-06-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060628-wcs",
+  "cwe": "CWE-200, CWE-79",
+  "erpPubIds": "11191,11192,11193,11195,11196,11198",
+  "cve": "CVE-2006-3285,CVE-2006-3287,CVE-2006-3288,CVE-2006-3289,CVE-2006-3290",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Wireless Control System (WCS) contains multiple vulnerabilities which may allow a remote user to:       access sensitive configuration information about access pointsmanaged by WCS     read from and write to arbitrary files on a WCSsystem",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless Control System HTTP Server Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11191&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless Control System Undocumented Credentials Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11192&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless Control System Default Administrator Authenticated Credentials Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11193&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless Control System TFTP Arbitrary File Access Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11195&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless Control System Login Page Cross-Site Scripting Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11196&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless Control System Username and Password Disclosure Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11198&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Wireless Control System Cross Server Site Scripting",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5763&signatureSubId=0&releaseVersion=S624&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

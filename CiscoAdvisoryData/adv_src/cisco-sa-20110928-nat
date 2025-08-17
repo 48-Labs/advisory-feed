@@ -1,0 +1,49 @@
+{
+  "identifier": "cisco-sa-20110928-nat",
+  "title": "Cisco IOS Software Network Address Translation Vulnerabilities",
+  "version": "1.4",
+  "firstPublished": "2011-09-28T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:21:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110928-nat",
+  "erpPubIds": "24120,24121,24119,24118",
+  "cve": "CVE-2011-3276,CVE-2011-3277,CVE-2011-3278,CVE-2011-3279,CVE-2011-3280",
+  "ciscoBugId": "CSCso02147,CSCtd10712,CSCth11006,CSCti48483,CSCti98219,CSCtj04672",
+  "status": "",
+  "summary": "The Cisco IOS Software network address translation (NAT) featurecontains multiple denial of service (DoS) vulnerabilities in thetranslation  of the following protocols:        NetMeeting Directory  (Lightweight Directory Access Protocol, LDAP)        Session ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol UDP Packet Network Address Translation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24120&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software MPLS Packet Network Address Translation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24121&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software H.323 Packet Network Address Translation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24119&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Network Address Translation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24118&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed SIP Packet Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=25999&signatureSubId=0&releaseVersion=S598&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

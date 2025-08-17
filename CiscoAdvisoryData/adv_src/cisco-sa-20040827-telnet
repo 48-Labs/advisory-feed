@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20040827-telnet",
+  "title": "Cisco Telnet Denial of Service Vulnerability",
+  "version": "2.5",
+  "firstPublished": "2004-08-27T10:00:00.000+0000",
+  "lastPublished": "2004-08-27T10:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040827-telnet",
+  "severity": "Medium",
+  "cwe": "CWE-399",
+  "erpPubIds": "8077",
+  "cve": "CVE-2004-1464",
+  "ciscoBugId": "CSCef46191",
+  "status": "",
+  "summary": "   A specifically crafted Transmission Control Protocol (TCP) connection to a telnet or reverse telnet port of a Cisco device running Internetwork Operating System (IOS)&reg; may block further telnet, reverse telnet, Remote Shell (RSH), Secure Shell (SSH), and in some cases ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Management Interface Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=8077&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Telnet DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3531&signatureSubId=0&releaseVersion=S410&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

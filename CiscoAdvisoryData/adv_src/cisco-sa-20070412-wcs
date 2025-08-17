@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20070412-wcs",
+  "title": "Multiple Vulnerabilities in the Cisco Wireless Control System",
+  "version": "1.1",
+  "firstPublished": "2007-04-12T16:00:00.000+0000",
+  "lastPublished": "2007-04-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070412-wcs",
+  "severity": "Low",
+  "cwe": "CWE-200, CWE-264",
+  "erpPubIds": "12987,13036,cisco-amb-20070412-wcs",
+  "cve": "CVE-2007-2033,CVE-2007-2035",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   The Cisco Wireless Control System (WCS) works in conjunction with Cisco Aironet Lightweight Access Points, Cisco Wireless LAN Controllers, and the Cisco Wireless Location Appliance by providing tools for wireless LAN planning and design, system configuration, location tracking, ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless Control System Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12987&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Wireless Control System Configuration Page Exposure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13036&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in the Cisco Wireless Control System",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070412-wcs"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "WCS Administrative Directory Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5851&signatureSubId=0&releaseVersion=S437&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

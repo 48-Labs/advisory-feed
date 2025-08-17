@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20080326-IPv4IPv6",
+  "title": "Cisco IOS User Datagram Protocol Delivery Issue For IPv4/IPv6 Dual-stack Routers",
+  "version": "1.5",
+  "firstPublished": "2008-03-26T16:00:00.000+0000",
+  "lastPublished": "2008-03-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080326-IPv4IPv6",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "15447,cisco-amb-20080326-IPv4IPv6",
+  "cve": "CVE-2008-1153",
+  "ciscoBugId": "CSCse56501",
+  "status": "",
+  "summary": "   A device running Cisco IOS software that has Internet Protocol version 6 (IPv6) enabled may be subject to a denial of service (DoS) attack. For the device to be affected by this vulnerability the device also has to have certain Internet Protocol version 4 (IPv4) User Datagram Protocol ",
+  "totalCount": 5,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS IPv6 UDP Packet Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15447&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "User Datagram Protocol Delivery Issue For IPv4/IPv6 Dual-stack Routers",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080326-IPv4IPv6"
+        }
+      ]
+    }
+  ]
+}

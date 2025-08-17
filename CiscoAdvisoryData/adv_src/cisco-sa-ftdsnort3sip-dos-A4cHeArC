@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-ftdsnort3sip-dos-A4cHeArC",
+  "title": "Cisco Firepower Threat Defense Software SIP and Snort 3 Detection Engine Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2022-11-09T16:00:00.000+0000",
+  "lastPublished": "2022-11-09T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftdsnort3sip-dos-A4cHeArC",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-770",
+  "erpPubIds": "ERP-74838",
+  "cve": "CVE-2022-20950",
+  "ciscoBugId": "CSCwb99509",
+  "status": "",
+  "summary": "A vulnerability in the interaction of SIP and Snort 3 for Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the Snort 3 detection engine to restart.This vulnerability is due to a lack of error-checking when SIP bidirectional flows ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: November 2022 Semiannual Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74838&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

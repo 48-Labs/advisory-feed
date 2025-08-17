@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20090225-anm",
+  "title": "Cisco ACE Application Control Engine Device Manager and Application Networking Manager Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2009-02-25T16:00:00.000+0000",
+  "lastPublished": "2009-02-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090225-anm",
+  "severity": "Critical",
+  "cwe": "CWE-22, CWE-264",
+  "erpPubIds": "17636,17637,17638,17639,cisco-amb-20090225-anm",
+  "cve": "CVE-2009-0615,CVE-2009-0616,CVE-2009-0617,CVE-2009-0618",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Multiple vulnerabilities exist in the Cisco Application Networking Manager (ANM) and Cisco Application Control Engine (ACE) Device Manager applications. These vulnerabilities are independent of each other. Successful exploitation of these vulnerabilities may result in unauthorized ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Application Control Engine Device Manager and Application Networking Manager Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17636&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Networking Manager Default Credential Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17637&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Networking Manager Default MySQL Credential Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17638&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Application Networking Manager Java Agent Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=17639&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco ACE Application Control Engine Device Manager and Application Networking Manager Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090225-anm"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ANM Java Agent Privilege Escalation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=15493&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

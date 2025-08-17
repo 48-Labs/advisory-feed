@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20150408-ntpd",
+  "title": "Multiple Vulnerabilities in ntpd (April 2015) Affecting Cisco Products",
+  "version": "1.11",
+  "firstPublished": "2015-04-08T16:00:00.000+0000",
+  "lastPublished": "2015-12-07T14:37:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-ntpd",
+  "severity": "Medium",
+  "workarounds": "Yes",
+  "cwe": "CWE-287",
+  "erpPubIds": "36857",
+  "cve": "CVE-2015-1798,CVE-2015-1799",
+  "ciscoBugId": "CSCut77619,CSCut77389,CSCut77402,CSCut77409,CSCut77411,CSCut77412,CSCut77414,CSCut77415,CSCut77416,CSCut77417,CSCut77418,CSCut77422,CSCut77458,CSCut77459,CSCut77466,CSCut77468,CSCut77471,CSCut77474,CSCut77479,CSCut77491,CSCut77493,CSCut77494,CSCut77506,CSCut77524,CSCut77525,CSCut77528,CSCut77531,CSCut77532,CSCut77535,CSCut77540,CSCut77541,CSCut77567,CSCut77568,CSCut83796",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the ntpd package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to bypass authentication controls or to create a denial of service (DoS) condition.On ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Multiple Vulnerabilities in Network Time Protocol",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"
+        }
+      ]
+    }
+  ]
+}

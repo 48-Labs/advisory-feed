@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160831-sps3",
+  "title": "Cisco Small Business 220 Series Smart Plus Switches SNMP Unauthorized Access Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-08-31T16:00:00.000+0000",
+  "lastPublished": "2016-08-31T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160831-sps3",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-200",
+  "cve": "CVE-2016-1473",
+  "ciscoBugId": "CSCuz76216",
+  "status": "",
+  "summary": "A vulnerability in the implementation of Simple Network Management Protocol&nbsp;(SNMP) functionality in Cisco&nbsp;Small Business 220 Series Smart Plus&nbsp;(Sx220) Switches could allow an unauthenticated, remote attacker to gain unauthorized access to SNMP objects on an affected device.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco 220 Series Smart Plus Hard Coded SNMP Community String",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7657&signatureSubId=0&releaseVersion=S939&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

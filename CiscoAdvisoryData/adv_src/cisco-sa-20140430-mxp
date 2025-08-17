@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20140430-mxp",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence System MXP Series ",
+  "version": "1.0",
+  "firstPublished": "2014-04-30T16:00:00.000+0000",
+  "lastPublished": "2014-04-30T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140430-mxp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "33901,33900",
+  "cve": "CVE-2014-2156,CVE-2014-2157,CVE-2014-2158,CVE-2014-2159,CVE-2014-2160,CVE-2014-2161",
+  "ciscoBugId": "CSCtq78722,CSCty45720,CSCty45731,CSCty45733,CSCty45739,CSCty45745",
+  "status": "",
+  "summary": "Cisco TelePresence System MXP Series Software contains the following vulnerabilities:    Three SIP denial of service vulnerabilities    Three H.225 denial of service vulnerabilitiesSuccessful exploitation of these vulnerabilities may allow an attacker ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence System MXP Series Software H.225 Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33901&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System MXP Series Software SIP Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33900&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco TelePresence System MXP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4261&signatureSubId=0&releaseVersion=S793&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence System MXP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4261&signatureSubId=1&releaseVersion=S793&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence System MXP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4261&signatureSubId=2&releaseVersion=S793&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence System MXP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4261&signatureSubId=3&releaseVersion=S793&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

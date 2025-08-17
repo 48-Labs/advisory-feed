@@ -1,0 +1,254 @@
+{
+  "identifier": "cisco-sa-20020211-snmp-msgs-non-ios",
+  "title": "Malformed SNMP Message-Handling Vulnerabilities for Cisco Non-IOS Products",
+  "version": "2.6",
+  "firstPublished": "2002-02-11T23:00:00.000+0000",
+  "lastPublished": "2002-02-11T23:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020211-snmp-msgs-non-ios",
+  "erpPubIds": "3293",
+  "cve": "CVE-2002-0012,CVE-2002-0013",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Multiple Cisco products contain vulnerabilities in the processing of Simple Network Management Protocol (SNMP) messages. These vulnerabilities can be repeatedly exploited to produce a denial of service. In most cases, workarounds are available that may mitigate the impact. Some of ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Multiple Vendor SNMP Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=3293&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "1409",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1411",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1412",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1413",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1414",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1415",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1416",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1417",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1418",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1419",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1420",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1421",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "1422",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=0&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=1&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=10&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=11&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=12&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=13&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=14&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=15&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=16&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=17&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=18&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=19&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=2&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=20&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=21&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=22&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=23&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=24&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=25&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=26&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=27&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=28&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=29&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=3&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=30&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=31&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=32&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=33&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=34&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=35&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=36&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=37&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=4&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=5&releaseVersion=S617&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=6&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=7&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=8&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Protocol Violation",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4507&signatureSubId=9&releaseVersion=S751&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco SNMP Message Processing DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4513&signatureSubId=0&releaseVersion=S179&softwareVersion=5.1"
+        },
+        {
+          "name": "Cisco SNMP Message Processing DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4513&signatureSubId=0&releaseVersion=S179&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco SNMP Message Processing DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5512&signatureSubId=0&releaseVersion=S591&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

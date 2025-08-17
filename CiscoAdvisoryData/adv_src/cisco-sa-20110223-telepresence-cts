@@ -1,0 +1,72 @@
+{
+  "identifier": "cisco-sa-20110223-telepresence-cts",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence Endpoint Devices",
+  "version": "1.0",
+  "firstPublished": "2011-02-23T16:00:00.000+0000",
+  "lastPublished": "2011-02-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110223-telepresence-cts",
+  "severity": "Critical",
+  "cwe": "CWE-119, CWE-200, CWE-264, CWE-399",
+  "erpPubIds": "22487,22501,22502,22503,22504,22505,cisco-amb-20110223-telepresence",
+  "cve": "CVE-2011-0372,CVE-2011-0373,CVE-2011-0374,CVE-2011-0375,CVE-2011-0376,CVE-2011-0377,CVE-2011-0378,CVE-2011-0379",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Cisco TelePresence solution; each component of the solution is addressed independently in its own advisory. This advisory addresses Cisco TelePresence endpoint devices and details the following vulnerabilities:      Unauthenticated ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence System Software Cisco Discovery Protocol Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22487&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Unauthenticated Common Gateway Interface Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22501&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Common Gateway Interface Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22502&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software TFTP Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22503&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software Malicious IP Address Injection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22504&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence System Software XML-Remote Procedure Call Command Injection Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=22505&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in Cisco TelePresence Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20110223-telepresence"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Telepresence Unauthenticated Remote Arbitrary Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=32719&signatureSubId=0&releaseVersion=S616&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence Endpoint CGI Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=33859&signatureSubId=0&releaseVersion=S662&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

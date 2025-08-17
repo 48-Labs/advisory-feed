@@ -1,0 +1,2184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20141222-ntpd</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>2.10</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2014-12-22T16:08:26</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2014-12-23T13:37:23</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.  Added AMB publication link in Workarounds section.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2014-12-24T15:23:47</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2014-12-26T14:08:37</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.4</cvrf:Number>
+        <cvrf:Date>2014-12-30T13:59:56</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.5</cvrf:Number>
+        <cvrf:Date>2014-12-31T15:33:30</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.6</cvrf:Number>
+        <cvrf:Date>2015-01-06T16:50:55</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.7</cvrf:Number>
+        <cvrf:Date>2015-01-07T18:21:11</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, Products Confirmed Not Vulnerable, and Workaround sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.8</cvrf:Number>
+        <cvrf:Date>2015-01-08T15:34:02</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.9</cvrf:Number>
+        <cvrf:Date>2015-01-09T14:19:51</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.10</cvrf:Number>
+        <cvrf:Date>2015-01-12T16:00:45</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.11</cvrf:Number>
+        <cvrf:Date>2015-01-13T19:24:31</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.12</cvrf:Number>
+        <cvrf:Date>2015-01-15T17:24:55</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.13</cvrf:Number>
+        <cvrf:Date>2015-01-16T20:59:13</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.14</cvrf:Number>
+        <cvrf:Date>2015-01-21T15:38:13</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.15</cvrf:Number>
+        <cvrf:Date>2015-01-26T16:06:26</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.  Cisco TelePresence ISDN Link moved from Vulnerable to Not Vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.16</cvrf:Number>
+        <cvrf:Date>2015-01-27T15:52:43</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections. Moved Cisco TelePresence Exchange System (CTX) and Cisco Unified SIP Proxy from Vulnerable section to Not Vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.17</cvrf:Number>
+        <cvrf:Date>2015-02-03T15:33:54</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.  Note: Cisco Videoscape Conductor moved from Not Vulnerable to Vulnerable</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.0</cvrf:Number>
+        <cvrf:Date>2015-02-11T19:47:55</cvrf:Date>
+        <cvrf:Description>Added the two new CVE IDs from ntp.org.  Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections. Note: Cisco WebEx Meeting Server versions 2.x moved from Vulnerable to Not Vulnerable.  Cisco Business Edition 3000 (BE3k) removed from advisory as end of life.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.1</cvrf:Number>
+        <cvrf:Date>2015-02-12T20:33:21</cvrf:Date>
+        <cvrf:Description>Cisco UCS Manager, Virtual Systems Operations Center for vPE project, and Cisco TelePresence Manager (CTSMan) were moved from Vulnerable to Not Vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.2</cvrf:Number>
+        <cvrf:Date>2015-02-16T14:09:00</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.3</cvrf:Number>
+        <cvrf:Date>2015-02-18T16:34:28</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.4</cvrf:Number>
+        <cvrf:Date>2015-02-18T23:19:30</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.5</cvrf:Number>
+        <cvrf:Date>2015-02-23T16:28:08</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.6</cvrf:Number>
+        <cvrf:Date>2015-03-03T15:30:58</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.7</cvrf:Number>
+        <cvrf:Date>2015-03-04T14:48:05</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.8</cvrf:Number>
+        <cvrf:Date>2015-03-11T04:09:20</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.9</cvrf:Number>
+        <cvrf:Date>2015-03-26T14:28:50</cvrf:Date>
+        <cvrf:Description>Updated the Affected Products, Vulnerable Products, and Products Confirmed Not Vulnerable sections.  Moved Cisco IP Interoperability and Collaboration System (IPICS) from affected to not vulnerable for CVE-2014-9297, CVE-2014-9298.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.10</cvrf:Number>
+        <cvrf:Date>2015-03-31T15:29:34</cvrf:Date>
+        <cvrf:Description>Updated the First Fixed Software.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2014-12-22T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2015-03-31T15:29:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Multiple Cisco products incorporate a version of the ntpd package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to execute arbitrary code or create a denial of service (DoS) condition.
+
+On December 19, 2014, NTP.org and US-CERT released security advisories detailing two issues regarding weak cryptographic pseudorandom number generation (PRNG), three buffer overflow vulnerabilities, and an unhandled error condition with an unknown impact. These vulnerabilities are referenced in this document as follows:
+
+CVE-2014-9293: Weak Default Key in config_auth()
+CVE-2014-9294: Noncryptographic Random Number Generator with Weak Seed Used by ntp-keygen to Generate Symmetric Keys
+CVE-2014-9295: Multiple Buffer Overflow Vulnerabilities in ntpd
+CVE-2014-9296: ntpd receive(): Missing Return on Error
+On February 4, 2015, NTP.org and US-CERT released two additional vulnerabilities regarding improper validation of vallen in ntp_crypto.c and an IPv6 ::1 ACL bypass vulnerability. These vulnerabilities were added to their original advisory. For completeness, these vulnerabilities are referenced in this document as follows:
+
+CVE-2014-9297: NTP ntp_crypto.c Improper Validation Vulnerability
+CVE-2014-9298: NTP IPv6 ACL Bypass Vulnerability
+This advisory will be updated as additional information becomes available.
+
+Cisco will release software updates that address these vulnerabilities.
+
+Workarounds that mitigate these vulnerabilities are available.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">Products and services listed in the following table have had their exposure to CVE-2014-9295 confirmed.
+
+                              Product              Defect              Fixed releases availability                                  Collaboration and Social Media                                  Cisco Unified MeetingPlace              CSCus27576 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27576"]              Patch available for 8.6 (27-Feb-15)
+Patch available for 8.5 MR3 (27-Feb-15)                                  Cisco WebEx Social              CSCus27488 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27488"]              No further releases planned.
+                                  Network Application, Service, and Acceleration                                  Cisco Application and Content Networking System (ACNS)              CSCus26947 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26947"]              ACNS 5.5.39
+                                  Cisco Wide Area Application Services (WAAS)              CSCus26864 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26864"]              5.5.3 (25-Mar-2015)
+5.5.3d (31-May-2015)
+                                  Network and Content Security Devices                                  Cisco ASA CX and Cisco Prime Security Manager              CSCus27226 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27226"]              9.3.3.2 (1-May-15)
+                                  Cisco FireSIGHT System Software              CSCus27325 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27325"]              4.10.3.11
+5.2.0.8
+5.4.0.1
+5.3.1.2
+5.3.0.3
+                                  Cisco IronPort Encryption Appliance (IEA)              CSCus27240 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27240"]              No further releases planned.
+                                  Cisco Physical Access Gateway              CSCus27369 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27369"]              1.5(3.0.3.2) (15-April-2015)
+                                  Cisco Virtual Security Gateway              CSCus27283 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27283"]              5.2(1)VSG2(1.1)
+                                  Network Management and Provisioning                                  Cisco Application Networking Manager              CSCus27501 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27501"]              Update via Admin Shell                                  Cisco Common Services Platform Collector              CSCus27536 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27536"]              1.4
+                                  Cisco Digital Media Manager (DMM)              CSCus26895 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26895"]              5.6
+                                  Cisco Intelligent Automation for Cloud              CSCus27302 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27302"]              4.2
+                                  Cisco NetFlow Collection Agent              CSCus27340 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27340"]              001.003(000.000)
+                                  Cisco Physical Access Manager              CSCus27373 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27373"]              1.5.3 (3-Apr-2015)
+                                  Cisco Prime Data Center Network Manager (.ova and .iso installers)              CSCus27527 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27527"]              Update via Admin Shell                                  Cisco Prime Infrastructure              CSCus27337 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27337"]              Patch update available for vulnerable releases.
+                                  Cisco Prime LAN Management Solution (Linux Bundles)              CSCus27300 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27300"]              MR3 - 004.002(005.003) (End of April , 2015)
+                                  Cisco Prime License Manager              CSCus27292 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27292"]              11.0 (May 2015)
+                                  Cisco Prime Service Catalog Virtual Appliance              CSCus27577 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27577"]              Update via Admin Shell                                  Cisco Quantum Policy Suite (QPS)              CSCus27432 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27432"]              7.5 (Available 30-Jun-2015)
+                                  Cisco Quantum SON Suite              CSCus27433 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27433"]              Update via Admin Shell
+                                  Cisco Unified Provisioning Manager 8.6 on Linux              CSCus43427 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus43427"]              No further releases planned.
+                                  Prime Collaboration Provisioning              CSCus27270 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27270"]              11.0 (22-Jun-2015)
+                                  Routing and Switching - Enterprise and Service Provider                                  Cisco Application Policy Infrastructure Controller              CSCus27224 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27224"]              1.0(3)                                  Cisco IOS XR Software (NCS6K, NCS4K,ASR9K, CRS, C12K)              CSCus26956 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26956"]              5.3.1
+                                  Cisco MDS 9000 Series Multilayer Switches              CSCus27221 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27221"]              5.2(8f)
+6.2(11b)
+                                  Cisco Nexus 1000V Series Switches              CSCus26882 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26882"]              5.2(1)SV3(1.2.105)
+                                  Cisco Nexus 3000 Series Switches              CSCus26875 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26875"]              6.0(2)U6(1)
+6.0(2)U5(2)
+6.0(2)U4(4)
+6.0(2)A6(1)
+6.0(2)A5(2)
+6.0(2)A4(4)
+                                  Cisco Nexus 4000 Series Switches              CSCus26859 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26859"]              4.1(2)E1(1o)
+                                  Cisco Nexus 5000 Series Switches              CSCus26870 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26870"]              7.0(6)N1(1)
+5.2(1)N1(8b)
+                                  Cisco Nexus 6000 Series Switches              CSCus26873 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26873"]              7.0(6)N1(1)                                  Cisco Nexus 7000 Series Switches              CSCus26870 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26870"]              6.2(12)                                  Cisco Nexus 9000 Series Switches              CSCus29415 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus29415"]              7.0(3)I1(1)                                  Cisco OnePK All-in-One VM              CSCus27274 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27274"]              Update via Admin Shell                                  Cisco Service Control Operating System              CSCus27279 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27279"]              Patch file available for Cisco Service Control Engine 1000 Series versions 5.0.0 to 5.1.0 (5-Apr-2015)
+Patch file available for Cisco Service Control Engine 8000 Series versions 3.5.0 to 5.1.0 (5-Apr-2015)
+5.2.0 (Available 31-Aug-2015)
+                                  IOS-XR for Cisco Network Convergence System (NCS) 6000              CSCus27229 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27229"]              AA09409: NCS6K-sysadmin5.0.1
+AA09410: NCS6K-sysadmin5.2.1
+                                  Unified Computing                                  Cisco UCS Director              CSCus27245 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27245"]              Patch files are available for vulnerable releases.                                  Cisco UCS Invicta Series              CSCus27263 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27263"]              5.0(1.3a) (Release date pending CentOS fix)
+5.0(1.2b) (Release date pending CentOS fix)
+                                  Voice and Unified Communications Devices                                  Cisco Emergency Responder              CSCus27391 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27391"]              11.0                                   Cisco Finesse              CSCus27243 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27243"]              11.0 (June 2015)
+                                  Cisco IM and Presence Service (CUPS)              CSCus27395 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27395"]              9.1.1 SU5 (10th April 2015)
+10.5.1 SU3 (27th March 2015)
+10.5.2 SU1 (20th March 2015)                                                Cisco IP Interoperability and Collaboration System (IPICS)              CSCus26891 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26891"]              ipics-os-security_patch-8.0-0_el5.bin (15-Feb-15)
+                                  Cisco Jabber Guest              CSCus27589 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27589"]              10.6 (24-Apr-15)
+                                  Cisco Management Heartbeat Server              CSCus27595 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27595"]              SR10 (13-Feb-15)
+RMS 4.1 (13-Feb-15)
+RMS 5.0 (13-Feb-15)                                  Cisco MediaSense              CSCus27244 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27244"]              11.0(1) (July 2015)
+10.5(1)SU1
+                                  Cisco Paging Server (Informacast)              CSCus27269 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27269"]              9.0.1                                  Cisco Paging Server              CSCus27269 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27269"]              9.0.1                                  Cisco Unified Communications Domain Manager              CSCus27222 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27222"]              10.1(2)
+                                  Cisco Unified Communications Manager (CUCM)              CSCus26858 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26858"]              10.5(2)su1 (Available)
+9.1(2)su3 (April 2015)
+                                  Cisco Unified Contact Center Express (UCCX)              CSCus26946 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus26946"]              11.0(1) (Available 30-Jun-15)
+                                  Cisco Unified Intelligence Center (CUIC)              CSCus27247 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27247"]              11.0(1) (June 2015)
+                                  Cisco Unity Connection (UC)              CSCus27364 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27364"]              8.6(2)ES163 (Available)
+9.1(2)ES82 (Available)
+10.5(2)ES11 (Available)
+                                  Cisco Universal Small Cell RAN Management System Wireless              CSCus27596 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27596"]              RMS4.1.0
+                                  Video, Streaming, TelePresence, and Transcoding Devices                                  Cisco AutoBackup Server              CSCus27553 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27553"]              OS is not distributed with product. Check with OS vendor for fixes.
+                                  Cisco Command 2000 Server (cmd2k)              CSCus27551 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27551"]              Update with latest version supplied by Oracle.
+                                  Cisco Common Download Server (CDLS)              CSCus27561 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27561"]              Patch files available for vulnerable releases. (3-Mar-2015)                                  Cisco D9036 Modular Encoding Platform              CSCus27255 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27255"]              V02.03.214
+                                  Cisco DCM Series 9900-Digital Content Manager              CSCus27291 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27291"]              V16.0 (1-Apr-15)
+                                  Cisco DNCS Application Server (AppServer)              CSCus27562 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27562"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Digital Network Control System (DNCS)              CSCus27535 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27535"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Digital Transport Adapter Control System (DTACS)              CSCus27560 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27560"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Download Server (DLS) (Linux Based)              CSCus27554 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27554"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Download Server (DLS) (Solaris Based)              CSCus27558 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27558"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Edge 300 Digital Media Player              CSCus27239 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27239"]              1.7 (16-Mar-2015)
+                                  Cisco Enterprise Content Delivery Service              CSCus27241 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27241"]              2.6.4 (30-Apr-2015)
+                                  Cisco Explorer Controller (EC) server              CSCus37392 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus37392"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco IPTV Service Delivery System (ISDS)              CSCus27555 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27555"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco International Digital Network Control System (iDNCS)              CSCus27556 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27556"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Media Experience Engines (MXE)              CSCus30138 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus30138"]              3.5 (April 2015)
+                                  Cisco PowerVu D9190 Conditional Access Manager (PCAM)              CSCus27458 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27458"]              v1.1.0 (31-Mar-2015)
+                                  Cisco PowerVu Network Center              CSCus27620 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27620"]              Update via Admin Shell                                  Cisco PowerKey Encryption Server (PKES)              CSCus27550 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27550"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Remote Conditional Access System (RCAS)              CSCus27557 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27557"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Remote Network Control System (RNCS)              CSCus27548 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27548"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Show and Share              CSCus27253 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27253"]              5.6 (March 2015)
+                                  Cisco TelePresence 1310              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco TelePresence Endpoints (C series, EX series, MX series, MXG2 series, SX series) and the 10" touch panel              CSCus27007 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27007"]              7.3.1                                  Cisco TelePresence System 1000              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco TelePresence System 1100              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco TelePresence System 1300              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco TelePresence System 3000 Series              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco TelePresence System 500-32              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco TelePresence System 500-37              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco TelePresence TE Software (for E20 - EoL)              CSCus27309 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27309"]              No further planed software releases scheduled.
+                                  Cisco TelePresence TX 9000 Series              CSCus27281 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27281"]              6.1.7 (March 2015)
+                                  Cisco Transaction Encryption Device (TED)              CSCus27547 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27547"]              Patch files available for vulnerable releases. (3-Mar-2015)
+                                  Cisco Video Delivery System Recorder              CSCus62967 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus62967"]              3.4.2 (15-Feb-2015)
+3.8.1 (15-Feb-2015)
+or Update via Admin Shell                                  Cisco Video Surveillance Media Server              CSCus27388 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27388"]              7.7 (Oct 2015)
+                                  Cisco Videoscape Conductor              CSCus27345 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27345"]              Update with latest version supplied by Red Hat.
+                                  Cisco Virtualization Experience Client 6215              CSCus27483 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27483"]              End of Life. No future releases are forthcoming.
+                                  Cloud Object Store (COS)              CSCus27358 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27358"]              2.1.1 (15-Feb-2015)
+2.1.2 (15-Feb-2015)
+2.1.3 (15-Feb-2015)
+or Update via Admin Shell                                  Cisco Hosted Services                                  Cisco Network Configuration and Change Management Service              CSCus27470 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27470"]              Update via Admin Shell
+
+Products and services listed in the following table have had their exposure to CVE-2014-9297 and/or CVE-2014-9298 confirmed.
+
+                              Product              Defect              Fixed releases availability                                  Network and Content Security Devices                                  Cisco Physical Access Gateway              CSCus27369 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27369"]              1.5(3.0.3.2) (15-April-2015)
+                                  Network Management and Provisioning                                  Cisco Prime Data Center Network Manager (.ova and .iso installers)              CSCus88284 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus88284"]              7.1(2)PF (31-Mar-2015)                                  Cisco Quantum Policy Suite (QPS)
+              CSCus27432 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27432"]
+              7.5 (Available 30-Jun-2015)
+                                  Cisco Virtual Systems Operations Center for vPE project
+              CSCus94209 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus94209"]                            2.0 (1-Apr-2015)
+Note: Not affected by other NTP vulnerabilities.                                  Unified Computing                                  Cisco UCS Director              CSCus90552 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus90552"]              Software and release date pending CentOS fix.                                  Cisco UCS Invicta Series              CSCus27263 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27263"]              5.0(1.3a) (Release date pending CentOS fix)              5.0(1.2b) (Release date pending CentOS fix)
+                                                Voice and Unified Communications Devices
+                                  Cisco Jabber Guest              CSCus88292 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus88292"]              Update via Admin Shell
+10.6.5                                  Cisco Management Heartbeat Server              CSCus89695 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus89695"]              SR10 (13-Feb-15)
+RMS 4.1 (13-Feb-15)
+RMS 5.0 (13-Feb-15)
+                                  Cisco Universal Small Cell RAN Management System Wireless
+              CSCus27596 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27596"]
+              SR10 (3-Mar-2015)
+RMS4.1 (3-Mar-2015)
+RMS5.0 (3-Mar-2015)
+                                  Video, Streaming, TelePresence, and Transcoding Devices                                  Cisco TelePresence Endpoints (C series, EX series, MX series, MXG2 series, SX series) and the 10" touch panel              CSCus88487 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus88487"]              7.3.2                                  Cisco TelePresence TE Software (for E20 - EoL)              CSCus90674 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus90674"]              TE 4.1.6 (April 2015)
+                                  Cisco Video Delivery System Recorder              CSCus62967 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus62967"]              Update via Admin Shell                                  Cisco Videoscape Back Office (VBO)              CSCus82885 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus82885"]              V4.0-Branch (27-Mar-2015)                                  Cloud Object Store (COS)              CSCus27358 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27358"]              2.1.1 (15-Feb-2015)
+2.1.2 (15-Feb-2015)
+2.1.3 (15-Feb-2015)
+or Update via Admin Shell
+
+                              CSCus27596 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27596"]
+                                CSCus27596 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus27596"]</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Not Vulnerable to CVE-2014-9297 or CVE-2014-9298  The following Cisco products have been analyzed. While they are affected by CVE-2014-9295, they are not affected by either CVE-2014-9297 or CVE-2014-9298.
+
+Collaboration and Social Media
+
+Cisco Unified MeetingPlace
+Cisco WebEx Social
+Network and Content Security Devices
+
+Cisco ASA CX and Cisco Prime Security Manager
+Cisco FireSIGHT System Software
+Cisco IronPort Encryption Appliance (IEA)
+Cisco Virtual Security Gateway
+Network Application, Service, and Acceleration
+
+Cisco Application and Content Networking System (ACNS)
+Cisco Wide Area Application Services (WAAS)
+Network Management and Provisioning
+
+Cisco Common Services Platform Collector
+Cisco Digital Media Manager (DMM)
+Cisco Intelligent Automation for Cloud
+Cisco Prime LAN Management Solution (Linux Bundles)
+Cisco Prime License Manager
+Cisco Prime Service Catalog Virtual Appliance
+Cisco Quantum SON Suite
+Cisco Unified Provisioning Manager 8.6 on Linux
+Routing and Switching - Enterprise and Service Provider
+
+Cisco Application Policy Infrastructure Controller
+Cisco IOS XR Software (NCS6K, NCS4K,ASR9K, CRS, C12K)
+Cisco MDS 9000 Series Multilayer Switches
+Cisco Nexus 1000V Series Switches
+Cisco Nexus 3000 Series Switches
+Cisco Nexus 4000 Series Switches
+Cisco Nexus 5000 Series Switches
+Cisco Nexus 6000 Series Switches
+Cisco Nexus 7000 Series Switches
+Cisco Nexus 9000 Series Switches
+Cisco OnePK All-in-One VM
+Cisco Service Control Operating System
+IOS-XR for Cisco Network Convergence System (NCS) 6000
+Network Management and Provisioning
+
+Cisco Application Networking Manager
+Cisco Netflow Collection Agent
+Cisco Physical Access Manager
+Prime Collaboration Provisioning
+Cisco Prime Infrastructure
+Video, Streaming, TelePresence, and Transcoding Devices
+
+Cisco AutoBackup Server
+Cisco Command 2000 Server (cmd2k)
+Cisco Common Download Server (CDLS)
+Cisco D9036 Modular Encoding Platform
+Cisco DCM Series 9900-Digital Content Manager
+Cisco Digital Network Control System (DNCS)
+Cisco Digital Transport Adapter Control System (DTACS)
+Cisco DNCS Application Server (AppServer)
+Cisco Download Server (DLS) (Linux Based)
+Cisco Edge 300 Digital Media Player
+Cisco Emergency Responder
+Cisco Enterprise Content Delivery Service
+Cisco Explorer Controller (EC) server
+Cisco IPTV Service Delivery System (ISDS)
+Cisco International Digital Network Control System (iDNCS)
+Cisco Media Experience Engines (MXE)
+Cisco PowerKey Encryption Server (PKES)
+Cisco PowerVu D9190 Conditional Access Manager (PCAM)
+Cisco PowerVu Network Center
+Cisco Remote Conditional Access System (RCAS)
+Cisco Remote Network Control System (RNCS)
+Cisco Show and Share
+Cisco TelePresence System 1000
+Cisco TelePresence System 1100
+Cisco TelePresence System 1300
+Cisco TelePresence 1310
+Cisco TelePresence System 3000 Series
+Cisco TelePresence System 500-32
+Cisco TelePresence System 500-37
+Cisco TelePresence TX 9000 Series
+Cisco Transaction Encryption Device (TED)
+Cisco Videoscape Conductor
+Cisco Video Surveillance Media Server
+Cisco Virtualization Experience Client 6215
+Voice and Unified Communications Devices
+
+Cisco Finesse
+Cisco IP Interoperability and Collaboration System (IPICS)
+Cisco IM and Presence Service (CUPS)
+Cisco MediaSense
+Cisco Paging Server (Informacast) (ntp support was removed with Cisco bug ID CSCus27269)
+Cisco Paging Server (ntp support was removed with Cisco bug ID CSCus27269)
+Cisco Unified Communications Domain Manager
+Cisco Unified Communications Manager (CUCM)
+Cisco Unified Contact Center Express (UCCX)
+Cisco Unified Intelligence Center (CUIC)
+Cisco Unity Connection (UC)
+Cisco Hosted Services
+
+Cisco Network Configuration and Change Management Service
+  Not Vulnerable to Any Listed Vulnerabilities  The following Cisco products have been analyzed and are not affected by any of the listed vulnerabilities:
+
+Collaboration and Social Media
+
+Cisco WebEx Meeting Server versions 2.x
+Endpoint Clients and Client Software
+
+Cisco IP Communicator
+Cisco Jabber for Android
+Cisco Jabber for iOS
+Cisco Jabber for Mac
+Cisco Jabber for Windows
+Cisco NAC Agent for Mac
+Cisco NAC Agent for Web
+Cisco UC Integration for Microsoft Lync
+Cisco Unified Personal Communicator
+Cisco Unified Video Advantage
+Network Application, Service, and Acceleration
+
+Cisco Application Control Engine (ACE10 and ACE20)
+Cisco Application Control Engine (ACE30/ACE 4710)
+Cisco Clean Access Manager
+Cisco Extensible Network Controller (XNC)
+Cisco GSS 4492R Global Site Selector
+Cisco NAC Guest Server
+Cisco NAC Server
+Content Services Switch
+Cisco Smart Call Home
+Cisco Visual Quality Experience Server
+Cisco Visual Quality Experience Tools Server
+Openflow Agent
+Network and Content Security Devices
+
+Catalyst 6500 Series / 7600 Series ASA Services Module
+Cisco Adaptive Security Appliance (ASA)
+Cisco Adaptive Security Device Manager
+Cisco Content Security Appliance Updater Servers
+Cisco Email Security Appliance (ESA)
+Cisco Firewall Services Module (FWSM)
+Cisco Identity Services Engine (ISE)
+Cisco Intrusion Prevention System Solutions (IPS)
+Cisco Secure Access Control Server (ACS)
+Cisco Security Management Appliance (SMA)
+Cisco Web Security Appliance (WSA)
+Network Management and Provisioning
+
+Cisco Cloud Consumption Service collector
+Cisco Connected Grid Network Management System
+Network Device Security Assessment
+Cisco Insight Reporter
+Cisco Local Collector Appliance (LCA)
+Cisco MATE collector
+Cisco MATE Design
+Cisco MATE Live
+Cisco Mobile Wireless Transport Manager
+Cisco Multicast Manager
+Cisco Network Analysis Module
+Cisco Network Collector
+CiscoWorks Network Compliance Manager
+Cisco Prime Access Registrar
+Cisco Prime Analytics
+Cisco Prime Cable Provisioning
+Cisco Prime Central for SPs
+Cisco Prime Collaboration Assurance
+Cisco Prime Data Center Network Manager (Windows and Linux)
+Cisco Prime Home
+Cisco Prime IP Express
+Cisco Prime Network
+Cisco Prime Network Registrar (CPNR)
+Cisco Prime Network Services Controller
+Cisco Prime Optical for SPs
+Cisco Prime Performance Manager
+Cisco Prime Provisioning
+Cisco Security Manager
+Cisco UCS Central
+Cisco Unified Communications Deployment Tools
+Cisco Unified Provisioning Manager (CUPM)
+DCAF UCS Collector
+Network Profiler
+Security Module for Cisco Network Registrar
+Virtual Systems Operations Centre for vPE Project
+Routing and Switching - Enterprise and Service Provider
+
+Cisco ASR 5000 Series
+Cisco ASR 9000 Series Integrated Service Module
+Cisco Connected Grid Device Manager
+Cisco Connected Grid Routers (CGR)
+Cisco IOS Software
+Cisco IOS XE for ASR1k, ASR903, ISR4400, and CSR1000v
+Cisco IOS XE for Catalyst 3k, 4k, AIR-CT5760, and Cisco RF Gateway 10 (RFGW-10)
+Cisco Metro Ethernet 1200 Series Access Devices
+Cisco ONS 15454 Series Multiservice Provisioning Platforms
+Cisco Quantum Virtualized Packet Core
+Cisco Service Control Application for Broadband
+Cisco Service Control Collection Manager
+Cisco Service Control Subscriber Manager
+Cisco VPN Acceleration Engine
+CRS-CGSE-PLIM
+CRS-CGSE-PLUS
+Routing and Switching - Small Business
+
+Cisco DPH150 Series MicroCell Solution
+Cisco Sx220 Switches
+Cisco Sx300 Switches
+Cisco Sx500 Switches
+Cisco RV180W Wireless-N Multifunction VPN Router
+Cisco Small Business AP500 Series Wireless Access Points
+Cisco Small Business ISA500 Series Integrated Security Appliances
+Cisco Small Business RV Series Routers 0xxv3
+Cisco Small Business RV Series Routers RV110W
+Cisco Small Business RV120W Wireless-N VPN Firewall
+Cisco Small Business RV Series Routers RV130x
+Cisco Small Business RV Series Routers RV215W
+Cisco Small Business RV Series Routers RV220
+Cisco Small Business RV Series Routers RV220W
+Cisco Small Business RV Series Routers RV315W
+Cisco Small Business RV Series Routers RV320
+Cisco WAG310G Residential Gateway
+Unified Computing
+
+Cisco Standalone Rack Server CIMC
+Cisco UCS ADA
+Cisco UCS Manager
+Cisco Unified Computing System B-Series Blade Servers
+Cisco Unified Computing System E-Series Blade Servers
+Video, Streaming, TelePresence, and Transcoding Devices
+
+Cisco AnyRes VOD (CAV)
+Cisco AnyRes Live (CAL)
+Cisco Broadband Access Center for Cable Tools Suite
+Cisco Broadband Access Center Telco Wireless
+Cisco D9034-S Encoder
+Cisco D9054 HDTV Encoder
+Cisco D9804 Multiple Transport Receiver
+Cisco D9824 Advanced Multi-Decryption Receiver
+Cisco D9854/D9854-I Advanced Program Receiver
+Cisco D9858 Advanced Receiver Transcoder
+Cisco D9859 Advanced Receiver Transcoder
+Cisco D9865 Satellite Receiver
+Cisco Edge 340 Digital Media Player
+Cisco IPTV
+Cisco Jabber Video for TelePresence (Movi)
+Cisco Jabber for TelePresence (Movi)
+Cisco Linear Stream Manager
+Cisco Model D9485 DAVIC QPSK
+Cisco Powerkey CAS Gateway (PCG)
+Cisco TelePresence Advanced Media Gateway Series
+Cisco TelePresence Conductor
+Cisco TelePresence Content Server (TCS)
+Cisco TelePresence Exchange System (CTX)
+Cisco TelePresence IP Gateway Series
+Cisco TelePresence IP VCR Series
+Cisco TelePresence ISDN GW 3241
+Cisco TelePresence ISDN GW MSE 8321
+Cisco TelePresence ISDN Link
+Cisco TelePresence Manager (CTSMan)
+Cisco TelePresence Management Suite (TMS)
+Cisco TelePresence Management Suite Analytics Extension (TMSAE)
+Cisco TelePresence Management Suite Extension (TMSXE)
+Cisco TelePresence Management Suite Extension for IBM
+Cisco TelePresence Management Suite Provisioning Extension
+Cisco TelePresence MCU (8510, 8420, 4200, 4500 and 5300)
+Cisco TelePresence MPS Series
+Cisco TelePresence Multipoint Switch (CTMS)
+Cisco TelePresence MXP Software
+Cisco TelePresence Recording Server (CTRS)
+Cisco TelePresence Serial Gateway Series
+Cisco TelePresence Server 8710, 7010
+Cisco TelePresence Server on Multiparty Media 310, 320
+Cisco TelePresence Server on Virtual Machine
+Cisco TelePresence Supervisor MSE 8050
+Cisco TelePresence Video Communications Server (VCS)
+Cisco VDS Service Broker
+Cisco Videoscape Back Office (VBO): Note: Has a ntp.conf configuration that makes it vulnerable to CVE-2014-9297.
+Cisco Video Distribution Suite
+Cisco Videoscape Distribution Suite Transparent Caching
+Cisco Video Surveillance 3000 Series IP Cameras
+Cisco Video Surveillance 4000 Series High-Definition IP Cameras
+Cisco Video Surveillance 4300E/4500E High-Definition IP Cameras
+Cisco Video Surveillance 6000 Series IP Cameras
+Cisco Video Surveillance 7000 Series IP Cameras
+Cisco Video Surveillance PTZ IP Cameras
+Cisco Virtual PGW 2200 Softswitch
+Digital Media Player (DMP) 4310
+Digital Media Player (DMP) 4400
+Media Services Interface
+Tandberg Codian ISDN GW 3210/3220/3240
+Tandberg Codian MSE 8320 model
+Voice and Unified Communications Devices
+
+Cisco 190 ATA Series Analog Terminal Adapter
+Cisco 7937 IP Phone
+Cisco ATA 187 Analog Telephone Adapter
+Cisco Agent Desktop
+Cisco Computer Telephony Integration Object Server (CTIOS)
+Cisco Desktop Collaboration Experience DX650
+Cisco Desktop Collaboration Experience DX70 and DX80
+Cisco Hosted Collaboration Mediation Fulfillment
+Cisco IP Phone 8800 Series
+Cisco MS200X Ethernet Access Switch
+Cisco Unified Workforce Optimization
+Cisco Unity Express
+Cisco Packaged Contact Center Enterprise
+Cisco Remote Silent Monitoring
+Cisco SPA112 2-Port Phone Adapter
+Cisco SPA122 ATA with Router
+Cisco SPA232D Multi-Line DECT ATA
+Cisco SPA8800 IP Telephony Gateway with 4 FXS and 4 FXO Ports
+Cisco SPA30X Series IP Phones
+Cisco SPA50X Series IP Phones
+Cisco SPA51X Series IP Phones
+Cisco SPA525G Series IP Phones
+Cisco SPA8000 8-port IP Telephony Gateway
+Cisco Social Miner
+Cisco TAPI Service Provider (TSP)
+Cisco Unified 3900 Series IP Phones
+Cisco Unified 6900 Series IP Phones
+Cisco Unified 6911 IP Phone
+Cisco Unified 6945 IP Phone
+Cisco Unified 7800 Series IP Phones
+Cisco Unified 7900 Series IP Phones
+Cisco Unified 8941 IP Phone
+Cisco Unified 8945 IP Phone
+Cisco Unified 8961 IP Phone
+Cisco Unified 9951 IP Phone
+Cisco Unified 9971 IP Phone
+Cisco Unified Attendant Console Advanced
+Cisco Unified Attendant Console Business Edition
+Cisco Unified Attendant Console Department Edition
+Cisco Unified Attendant Console Enterprise Edition
+Cisco Unified Attendant Console Premium Edition
+Cisco Unified Attendant Console Standard
+Cisco Unified Contact Center Enterprise
+Cisco Unified Client Services Framework
+Cisco Unified Communications Widgets Click To Call
+Cisco Unified Email Interaction Manager
+Cisco Unified Intelligent Contact Management Enterprise
+Cisco Unified Integration for IBM Sametime
+Cisco Unified IP Conference Phone 8831
+Cisco Unified Operations Manager (CUOM)
+Cisco Unified Service Monitor
+Cisco Unified Service Statistics Manager
+Cisco Unified SIP Proxy
+Cisco Unified Customer Voice Portal
+Cisco Unified Web Interaction Manager
+Cisco Unified Wireless IP Phones
+Cisco Virtualization Experience Media Engine
+Xony VIM/CCDM/CCMP
+Wireless
+
+Cisco Mobility Services Engine (MSE)
+Cisco RF Gateway 1 (RFGW-1)
+Cisco Mobility Services Engine
+Cisco Small Business 121 Series Wireless Access Points
+Cisco Small Business 321 Series Wireless Access Points
+Cisco Small Business 371 Series Wireless Access Points
+Cisco Small Business 500 Series Wireless Access Points
+Cisco Wireless Control System (WCS)
+Cisco Wireless LAN Controller (WLC)
+Cisco Wireless Security Gateway Application (WSG)
+Cisco Hosted Services
+
+Business Video Services Automation Software (BV)
+Cisco Discovery Service
+Cisco Connected Analytics For Collaboration
+Cisco Cloud and Systems Management
+Cisco Cloud Email Security
+Cisco Cloud Services
+Cisco Cloud Web Security (CWS)
+Cisco Install Base Management
+Cisco Partner Supporting Service
+Cisco Proactive Network Operations Center
+Cisco Registered Envelope Service (CRES)
+Cisco Services Platform Collector (CSPC)
+Cisco Services Provisioning Platform (SPP)
+Cisco Smart Care
+Cisco Smart Connection
+Cisco Smart Reports
+Cisco Smart Net Total Care (SNTC)
+Cisco SMB Market Place
+Cisco UCS Invicta Series Autosupport Portal
+Cisco Unified Communications Sizing Tool
+Cisco Unified Services Delivery Platform (CUSDP)
+Cisco Universal Small Cell 5000 Series running V3.4.2.x software
+Cisco Universal Small Cell 7000 Series running V3.4.2.x software
+Cisco Universal Small Cell CloudBase
+Cisco WebEx Connect client (Windows)
+Cisco WebEx Messenger Service
+Cisco WebEx Meetings for Android
+Cisco WebEx Meetings for BlackBerry
+Cisco WebEx Meetings for iOS
+Cisco WebEx Meetings for WP8
+Cisco WebEx Node for MCS
+Cisco WebEx Productivity Tools
+Cisco WebEx WebOffice &amp; Workspace
+Connected Analytics for Network Deployment (CAND)
+Data Center Analytics Framework (DCAF)
+Feature Analytics Service
+Femto Provisioning Gateway
+MACD Process Controller (MPC)
+Network Health Framework (NHF)
+Network Performance Analytics (NPA)
+One View
+On Going Support Automation (OGSA)
+Serial Number Assessment Service (SNAS)
+SI component of Partner Supporting Service
+Small Cell Factory Recovery Root Filesystem V2.99.4 or later
+Support Central
+Unified Communication Audit Tool (UCAT)
+WebEx Meeting Center
+WebEx PCNow
+WebEx QuickBooks
+WebEx Recording Playback
+This section will continue to be populated when investigation of each product has concluded.
+
+No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">On December 19, 2014, NTP.org and US-CERT released security advisories for ntpd detailing two issues regarding weak cryptographic pseudorandom number generation (PRNG), three buffer overflow vulnerabilities, and an unhandled error condition with an unknown impact. Further, on February 4, 2015, these advisories were updated to include an autokey authentication vulnerability and an IPv6 ACL bypass vulnerability.
+
+The impact of these vulnerabilities on Cisco products may vary depending on the affected product.
+
+For Cisco products, refer to the information provided in the Cisco bug IDs listed in the "Affected Products" section of this document.
+
+Additional information and detailed instructions are available in the Cisco installation, configuration, and maintenance guides for each product. If additional clarification or advice is needed, please contact your support organization.
+
+The vulnerability names and associated Common Vulnerabilities and Exposures (CVE) IDs are as follows:
+
+Weak Default Key in config_auth()
+An issue in the generation of a random key for ntpd could allow an unauthenticated, remote attacker to guess the generated key. The attacker may be able to use it to send ntpdc query or configuration requests.
+
+The issue occurs because ntpd automatically generates weak keys if no ntpdc request authentication key was specified in the ntp.conf configuration file. An attacker could exploit this issue by guessing the generated key and matching any configured IP restrictions. An exploit could allow the attacker to send ntpdc query or configuration requests.
+
+This issue has been assigned CVE ID CVE-2014-9293.
+
+The Cisco Product Security Incident Response Team (PSIRT) considers this a hardening issue rather than a vulnerability.
+
+Noncryptographic Random Number Generator with Weak Seed Used by ntp-keygen to Generate Symmetric Keys
+An issue in ntp-keygen of ntpd could allow an unauthenticated, remote attacker to guess the generated MD5 keys.
+
+The issue occurs because ntp-keygen uses a weak method for generating the MD5 keys. An attacker could exploit this issue by guessing the generated MD5 keys. An exploit could allow the attacker to use the guessed MD5 keys to spoof a trusted NTP client or server.
+
+This issue has been assigned CVE ID CVE-2014-9294.
+
+Cisco PSIRT considers this a hardening issue rather than a vulnerability.
+
+Multiple Buffer Overflow Vulnerabilities in ntpd
+Vulnerabilities in crypto_recv(), ctl_putdata(), and configure() of ntpd could allow an unauthenticated, remote attacker to cause a stack buffer overflow, which could allow the attacker to execute malicious code with the privilege level of the ntpd process.
+
+The vulnerabilities are due to incorrect validation checks on the received packets. An attacker could exploit these vulnerabilities by sending crafted request packets. An exploit could allow the attacker to crash the ntpd process. Arbitrary code execution with the privilege level of the ntpd process may also be possible.
+
+This vulnerability has been assigned CVE ID CVE-2014-9295.
+
+ntpd receive(): Missing Return on Error
+An issue in ntp_proto.c:receive() of ntp in the code path where an error was detected could indicate processing did not stop when a specific rare error occurs.
+
+The issue is due to a missing return; in the code path where an error was detected. It has not been proven how an attacker could exploit this issue. The impact to the affected system is also unknown.
+
+This issue has been assigned CVE ID CVE-2014-9296.
+
+Cisco PSIRT at this stage does not consider this to be a vulnerability.
+
+NTP ntp_crypto.c Improper Validation Vulnerability
+A vulnerability in ntp_crypto.c of ntpd could allow an unauthenticated, remote attacker to obtain sensitive information.
+
+The vulnerability is due to improper validation of vallen. An attacker could exploit this vulnerability by sending crafted packets to a device running ntpd and configured with autokey authentication. An exploit could allow the attacker to retrieve sensitive information.
+
+This issue has been assigned CVE ID CVE-2014-9297.
+
+NTP IPv6 ACL Bypass Vulnerability
+A vulnerability in IPv6 address handling could allow an unauthenticated, remote  attacker to send IPv6 network packets to a vulnerable system using a spoofed source address of ::1 on an interface not configured for localhost.
+
+The vulnerability is due to improper IPv6 address processing. An attacker could exploit this issue by sending IPv6 packets with a source address of ::1 to an affected host. An exploit could allow the attacker to bypass application ACLs that rely on IPv6 source address filtering.
+
+This issue has been assigned CVE ID CVE-2014-9298</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">Mitigations involve preventing the device from processing NTP control queries. In products that allow for editing the ntp.conf file, this is accomplished by the restrict directive. Other products may support ntp access-group commands which can be used to filter NTP control queries. Potential workarounds for each affected Cisco product is referenced in the Cisco Bug ID workarounds section.
+
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+
+This section will be populated when investigation of each product has concluded.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerabilities described in this advisory.
+
+These vulnerabilities were reported to Cisco by US-CERT/CC.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Multiple Vulnerabilities in Network Time Protocol</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Application and Content Networking System (ACNS) Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2054">Cisco Application and Content Networking System (ACNS) Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Emergency Responder" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4844">Cisco Emergency Responder </FullProductName>
+      </Branch>
+      <Branch Name="Cisco IOS XR Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5834">Cisco IOS XR Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco NAC Appliance Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-6407">Cisco NAC Appliance Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Presence Server" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7333">Cisco Unified Presence Server </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Wide Area Application Services (WAAS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7367">Cisco Wide Area Application Services (WAAS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Contact Center Enterprise" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7500">Cisco Unified Contact Center Enterprise </FullProductName>
+      </Branch>
+      <Branch Name="Cisco IP Interoperability and Collaboration System (IPICS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-8043">Cisco IP Interoperability and Collaboration System (IPICS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Service Control Engine (SCE)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-8046">Cisco Service Control Engine (SCE) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco NX-OS Software" Type="Product Name">
+        <Branch Name="4.1" Type="Product Version">
+          <Branch Name="4.1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191429">Cisco NX-OS Software 4.1(2)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191430">Cisco NX-OS Software 4.1(3)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191431">Cisco NX-OS Software 4.1(4)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191432">Cisco NX-OS Software 4.1(5)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0" Type="Product Version">
+          <Branch Name="5.0(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191438">Cisco NX-OS Software 5.0(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191439">Cisco NX-OS Software 5.0(3)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191440">Cisco NX-OS Software 5.0(5)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2" Type="Product Version">
+          <Branch Name="4.2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191433">Cisco NX-OS Software 4.2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191434">Cisco NX-OS Software 4.2(3)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191435">Cisco NX-OS Software 4.2(4)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(6)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191436">Cisco NX-OS Software 4.2(6)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(8)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191437">Cisco NX-OS Software 4.2(8)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.1" Type="Product Version">
+          <Branch Name="5.1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191441">Cisco NX-OS Software 5.1(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191442">Cisco NX-OS Software 5.1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191443">Cisco NX-OS Software 5.1(3)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191444">Cisco NX-OS Software 5.1(4)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191445">Cisco NX-OS Software 5.1(5)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(6)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191446">Cisco NX-OS Software 5.1(6)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.2" Type="Product Version">
+          <Branch Name="5.2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191447">Cisco NX-OS Software 5.2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(3a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191448">Cisco NX-OS Software 5.2(3a)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191449">Cisco NX-OS Software 5.2(4)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191450">Cisco NX-OS Software 5.2(5)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(7)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191451">Cisco NX-OS Software 5.2(7)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(9)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191452">Cisco NX-OS Software 5.2(9)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.1" Type="Product Version">
+          <Branch Name="6.1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191457">Cisco NX-OS Software 6.1(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191458">Cisco NX-OS Software 6.1(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191459">Cisco NX-OS Software 6.1(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196607">Cisco NX-OS Software 6.1(4)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(4a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196608">Cisco NX-OS Software 6.1(4a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.0(0)N1" Type="Product Version">
+          <Branch Name="4.0(0)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191394">Cisco NX-OS Software 4.0(0)N1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(0)N1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191395">Cisco NX-OS Software 4.0(0)N1(2)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(0)N1(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191396">Cisco NX-OS Software 4.0(0)N1(2a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.0(1a)N1" Type="Product Version">
+          <Branch Name="4.0(1a)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191397">Cisco NX-OS Software 4.0(1a)N1(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(1a)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191398">Cisco NX-OS Software 4.0(1a)N1(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.0(1a)N2" Type="Product Version">
+          <Branch Name="4.0(1a)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191399">Cisco NX-OS Software 4.0(1a)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.0(1a)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191400">Cisco NX-OS Software 4.0(1a)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.1(2)E1" Type="Product Version">
+          <Branch Name="4.1(2)E1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191382">Cisco NX-OS Software 4.1(2)E1(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191383">Cisco NX-OS Software 4.1(2)E1(1b)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1d)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191384">Cisco NX-OS Software 4.1(2)E1(1d)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1e)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191385">Cisco NX-OS Software 4.1(2)E1(1e)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1f)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191386">Cisco NX-OS Software 4.1(2)E1(1f)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1g)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191387">Cisco NX-OS Software 4.1(2)E1(1g)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1h)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191388">Cisco NX-OS Software 4.1(2)E1(1h)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1i)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191389">Cisco NX-OS Software 4.1(2)E1(1i)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(2)E1(1j)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191390">Cisco NX-OS Software 4.1(2)E1(1j)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.1(3)N1" Type="Product Version">
+          <Branch Name="4.1(3)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191401">Cisco NX-OS Software 4.1(3)N1(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(3)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191402">Cisco NX-OS Software 4.1(3)N1(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.1(3)N2" Type="Product Version">
+          <Branch Name="4.1(3)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191403">Cisco NX-OS Software 4.1(3)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.1(3)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191404">Cisco NX-OS Software 4.1(3)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2(1)N1" Type="Product Version">
+          <Branch Name="4.2(1)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191405">Cisco NX-OS Software 4.2(1)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2(1)N2" Type="Product Version">
+          <Branch Name="4.2(1)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191406">Cisco NX-OS Software 4.2(1)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191407">Cisco NX-OS Software 4.2(1)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2(1)SV1" Type="Product Version">
+          <Branch Name="4.2(1)SV1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191557">Cisco NX-OS Software 4.2(1)SV1(4)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(4a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191558">Cisco NX-OS Software 4.2(1)SV1(4a)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(4b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191559">Cisco NX-OS Software 4.2(1)SV1(4b)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(5.1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191560">Cisco NX-OS Software 4.2(1)SV1(5.1)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(5.1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191561">Cisco NX-OS Software 4.2(1)SV1(5.1a)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(5.2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191562">Cisco NX-OS Software 4.2(1)SV1(5.2)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV1(5.2b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191563">Cisco NX-OS Software 4.2(1)SV1(5.2b)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="4.2(1)SV2" Type="Product Version">
+          <Branch Name="4.2(1)SV2(1.1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191380">Cisco NX-OS Software 4.2(1)SV2(1.1)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV2(1.1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191381">Cisco NX-OS Software 4.2(1)SV2(1.1a)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV2(2.1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196618">Cisco NX-OS Software 4.2(1)SV2(2.1)</FullProductName>
+          </Branch>
+          <Branch Name="4.2(1)SV2(2.1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196619">Cisco NX-OS Software 4.2(1)SV2(2.1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(2)N1" Type="Product Version">
+          <Branch Name="5.0(2)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191408">Cisco NX-OS Software 5.0(2)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(2)N2" Type="Product Version">
+          <Branch Name="5.0(2)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191410">Cisco NX-OS Software 5.0(2)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(2)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191411">Cisco NX-OS Software 5.0(2)N2(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)N1" Type="Product Version">
+          <Branch Name="5.0(3)N1(1c)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191409">Cisco NX-OS Software 5.0(3)N1(1c)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)N2" Type="Product Version">
+          <Branch Name="5.0(3)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191412">Cisco NX-OS Software 5.0(3)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)N2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191413">Cisco NX-OS Software 5.0(3)N2(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)N2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191414">Cisco NX-OS Software 5.0(3)N2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)N2(2b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191415">Cisco NX-OS Software 5.0(3)N2(2b)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U1" Type="Product Version">
+          <Branch Name="5.0(3)U1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191391">Cisco NX-OS Software 5.0(3)U1(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191392">Cisco NX-OS Software 5.0(3)U1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191393">Cisco NX-OS Software 5.0(3)U1(1b)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(1d)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191466">Cisco NX-OS Software 5.0(3)U1(1d)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191467">Cisco NX-OS Software 5.0(3)U1(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U1(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191468">Cisco NX-OS Software 5.0(3)U1(2a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U2" Type="Product Version">
+          <Branch Name="5.0(3)U2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191469">Cisco NX-OS Software 5.0(3)U2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191470">Cisco NX-OS Software 5.0(3)U2(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191471">Cisco NX-OS Software 5.0(3)U2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191472">Cisco NX-OS Software 5.0(3)U2(2b)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2c)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191473">Cisco NX-OS Software 5.0(3)U2(2c)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U2(2d)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191474">Cisco NX-OS Software 5.0(3)U2(2d)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U3" Type="Product Version">
+          <Branch Name="5.0(3)U3(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191475">Cisco NX-OS Software 5.0(3)U3(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U3(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191476">Cisco NX-OS Software 5.0(3)U3(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U3(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191477">Cisco NX-OS Software 5.0(3)U3(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U3(2b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191478">Cisco NX-OS Software 5.0(3)U3(2b)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U4" Type="Product Version">
+          <Branch Name="5.0(3)U4(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191479">Cisco NX-OS Software 5.0(3)U4(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.0(3)U5" Type="Product Version">
+          <Branch Name="5.0(3)U5(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191480">Cisco NX-OS Software 5.0(3)U5(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191481">Cisco NX-OS Software 5.0(3)U5(1a)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191482">Cisco NX-OS Software 5.0(3)U5(1b)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1c)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191483">Cisco NX-OS Software 5.0(3)U5(1c)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1d)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191484">Cisco NX-OS Software 5.0(3)U5(1d)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1e)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191485">Cisco NX-OS Software 5.0(3)U5(1e)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1f)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196613">Cisco NX-OS Software 5.0(3)U5(1f)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1g)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196614">Cisco NX-OS Software 5.0(3)U5(1g)</FullProductName>
+          </Branch>
+          <Branch Name="5.0(3)U5(1h)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196615">Cisco NX-OS Software 5.0(3)U5(1h)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.1(3)N1" Type="Product Version">
+          <Branch Name="5.1(3)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191416">Cisco NX-OS Software 5.1(3)N1(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(3)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191417">Cisco NX-OS Software 5.1(3)N1(1a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.1(3)N2" Type="Product Version">
+          <Branch Name="5.1(3)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191418">Cisco NX-OS Software 5.1(3)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(3)N2(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191419">Cisco NX-OS Software 5.1(3)N2(1a)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(3)N2(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191420">Cisco NX-OS Software 5.1(3)N2(1b)</FullProductName>
+          </Branch>
+          <Branch Name="5.1(3)N2(1c)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191421">Cisco NX-OS Software 5.1(3)N2(1c)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.2(1)N1" Type="Product Version">
+          <Branch Name="5.2(1)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191422">Cisco NX-OS Software 5.2(1)N1(1)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191423">Cisco NX-OS Software 5.2(1)N1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191424">Cisco NX-OS Software 5.2(1)N1(1b)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191425">Cisco NX-OS Software 5.2(1)N1(2)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191426">Cisco NX-OS Software 5.2(1)N1(2a)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191427">Cisco NX-OS Software 5.2(1)N1(3)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191428">Cisco NX-OS Software 5.2(1)N1(4)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196611">Cisco NX-OS Software 5.2(1)N1(5)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(6)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196612">Cisco NX-OS Software 5.2(1)N1(6)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(7)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-198539">Cisco NX-OS Software 5.2(1)N1(7)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(8a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201874">Cisco NX-OS Software 5.2(1)N1(8a)</FullProductName>
+          </Branch>
+          <Branch Name="5.2(1)N1(8)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201888">Cisco NX-OS Software 5.2(1)N1(8)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="5.2(1)SM1" Type="Product Version">
+          <Branch Name="5.2(1)SM1(5.1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-195841">Cisco NX-OS Software 5.2(1)SM1(5.1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0" Type="Product Version">
+          <Branch Name="6.0(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191453">Cisco NX-OS Software 6.0(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191454">Cisco NX-OS Software 6.0(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191455">Cisco NX-OS Software 6.0(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-191456">Cisco NX-OS Software 6.0(4)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0(2)N1" Type="Product Version">
+          <Branch Name="6.0(2)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201875">Cisco NX-OS Software 6.0(2)N1(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)N1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201876">Cisco NX-OS Software 6.0(2)N1(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)N1(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201877">Cisco NX-OS Software 6.0(2)N1(2a)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0(2)N2" Type="Product Version">
+          <Branch Name="6.0(2)N2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201878">Cisco NX-OS Software 6.0(2)N2(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)N2(1b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201879">Cisco NX-OS Software 6.0(2)N2(1b)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)N2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201880">Cisco NX-OS Software 6.0(2)N2(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)N2(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201881">Cisco NX-OS Software 6.0(2)N2(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)N2(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201882">Cisco NX-OS Software 6.0(2)N2(4)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)N2(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201883">Cisco NX-OS Software 6.0(2)N2(5)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0(2)U1" Type="Product Version">
+          <Branch Name="6.0(2)U1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-194693">Cisco NX-OS Software 6.0(2)U1(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U1(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-194694">Cisco NX-OS Software 6.0(2)U1(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U1(1a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196616">Cisco NX-OS Software 6.0(2)U1(1a)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U1(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196617">Cisco NX-OS Software 6.0(2)U1(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U1(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205076">Cisco NX-OS Software 6.0(2)U1(4)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0(2)U2" Type="Product Version">
+          <Branch Name="6.0(2)U2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205077">Cisco NX-OS Software 6.0(2)U2(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205078">Cisco NX-OS Software 6.0(2)U2(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U2(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205079">Cisco NX-OS Software 6.0(2)U2(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U2(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205080">Cisco NX-OS Software 6.0(2)U2(4)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U2(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205081">Cisco NX-OS Software 6.0(2)U2(5)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U2(6)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205082">Cisco NX-OS Software 6.0(2)U2(6)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0(2)U3" Type="Product Version">
+          <Branch Name="6.0(2)U3(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205083">Cisco NX-OS Software 6.0(2)U3(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U3(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205084">Cisco NX-OS Software 6.0(2)U3(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U3(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205085">Cisco NX-OS Software 6.0(2)U3(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U3(4)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205086">Cisco NX-OS Software 6.0(2)U3(4)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U3(5)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205087">Cisco NX-OS Software 6.0(2)U3(5)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0(2)U4" Type="Product Version">
+          <Branch Name="6.0(2)U4(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-203349">Cisco NX-OS Software 6.0(2)U4(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U4(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205088">Cisco NX-OS Software 6.0(2)U4(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.0(2)U4(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205089">Cisco NX-OS Software 6.0(2)U4(3)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.0(2)U5" Type="Product Version">
+          <Branch Name="6.0(2)U5(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205090">Cisco NX-OS Software 6.0(2)U5(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.1(2)I2" Type="Product Version">
+          <Branch Name="6.1(2)I2(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201604">Cisco NX-OS Software 6.1(2)I2(1)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(2)I2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201605">Cisco NX-OS Software 6.1(2)I2(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(2)I2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201606">Cisco NX-OS Software 6.1(2)I2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(2)I2(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201607">Cisco NX-OS Software 6.1(2)I2(3)</FullProductName>
+          </Branch>
+          <Branch Name="6.1(2)I2(2b)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-202737">Cisco NX-OS Software 6.1(2)I2(2b)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.1(2)I3" Type="Product Version">
+          <Branch Name="6.1(2)I3(3)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-205093">Cisco NX-OS Software 6.1(2)I3(3)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="6.2" Type="Product Version">
+          <Branch Name="6.2(2)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196609">Cisco NX-OS Software 6.2(2)</FullProductName>
+          </Branch>
+          <Branch Name="6.2(2a)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-196610">Cisco NX-OS Software 6.2(2a)</FullProductName>
+          </Branch>
+          <Branch Name="6.2(6)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-202738">Cisco NX-OS Software 6.2(6)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.0(0)N1" Type="Product Version">
+          <Branch Name="7.0(0)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201884">Cisco NX-OS Software 7.0(0)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.0(1)N1" Type="Product Version">
+          <Branch Name="7.0(1)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201885">Cisco NX-OS Software 7.0(1)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.0(2)N1" Type="Product Version">
+          <Branch Name="7.0(2)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201886">Cisco NX-OS Software 7.0(2)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Name="7.0(3)N1" Type="Product Version">
+          <Branch Name="7.0(3)N1(1)" Type="Service Pack">
+            <FullProductName ProductID="CVRFPID-201887">Cisco NX-OS Software 7.0(3)N1(1)</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-88444">Cisco Unified Communications Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Application Networking Manager (ANM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-89523">Cisco Application Networking Manager (ANM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Provisioning Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-91870">Cisco Unified Provisioning Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Physical Access Gateway " Type="Product Name">
+        <FullProductName ProductID="CVRFPID-92399">Cisco Physical Access Gateway  </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Video Surveillance Media Server Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-95900">Cisco Video Surveillance Media Server Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Digital Media Manager Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-95918">Cisco Digital Media Manager Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco IP Interoperability and Communications System (IPICS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-96277">Cisco IP Interoperability and Communications System (IPICS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco IronPort Encryption Appliance" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-96780">Cisco IronPort Encryption Appliance </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Network Admission Control Guest Server" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-99257">Cisco Network Admission Control Guest Server </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Telepresence MXP Series Endpoints" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-100637">Cisco Telepresence MXP Series Endpoints </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Show and Share" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-111580">Cisco Show and Share </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Virtual Security Gateway for Nexus 1000V Series Switches" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-115622">Cisco Virtual Security Gateway for Nexus 1000V Series Switches </FullProductName>
+      </Branch>
+      <Branch Name="Cisco TelePresence Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-117634">Cisco TelePresence Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco ASA CX Context-Aware Security Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-184512">Cisco ASA CX Context-Aware Security Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Prime Security Manager (PRSM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-184690">Cisco Prime Security Manager (PRSM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Prime Data Center Network Manager (DCNM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-185359">Cisco Prime Data Center Network Manager (DCNM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Prime Infrastructure" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-190324">Cisco Prime Infrastructure </FullProductName>
+      </Branch>
+      <Branch Name="Cisco WebEx Meetings Server" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-190702">Cisco WebEx Meetings Server </FullProductName>
+      </Branch>
+      <Branch Name="Cisco TelePresence System Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-192167">Cisco TelePresence System Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Enterprise Content Delivery System (ECDS)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-192324">Cisco Enterprise Content Delivery System (ECDS) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco TelePresence TC Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-192563">Cisco TelePresence TC Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco TelePresence TE Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-192564">Cisco TelePresence TE Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Virtualization Experience Client 6000 Series Firmware" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-192918">Cisco Virtualization Experience Client 6000 Series Firmware </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Finesse" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-193469">Cisco Finesse </FullProductName>
+      </Branch>
+      <Branch Name="Cisco SocialMiner" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-194456">Cisco SocialMiner </FullProductName>
+      </Branch>
+      <Branch Name="Cisco MediaSense" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-194833">Cisco MediaSense </FullProductName>
+      </Branch>
+      <Branch Name="Cisco MXE 3500 (Media Experience Engine)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-195235">Cisco MXE 3500 (Media Experience Engine) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco UCS Director" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-197112">Cisco UCS Director </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Digital Content Manager (DCM) Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-197708">Cisco Digital Content Manager (DCM) Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Intelligence Center" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-198393">Cisco Unified Intelligence Center </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Prime Service Catalog" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-202401">Cisco Prime Service Catalog </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Application Policy Infrastructure Controller (APIC)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-202553">Cisco Application Policy Infrastructure Controller (APIC) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Edge 300 Series" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-202761">Cisco Edge 300 Series </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Jabber Guest" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-203403">Cisco Jabber Guest </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Computing System (Management Software)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-203512">Cisco Unified Computing System (Management Software) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Prime License Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-203607">Cisco Prime License Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco onePK All-in-One Virtual Machine" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-203731">Cisco onePK All-in-One Virtual Machine </FullProductName>
+      </Branch>
+      <Branch Name="Cisco TelePresence ISDN Link" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-203746">Cisco TelePresence ISDN Link </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Modular Encoding Platform D9036" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-204778">Cisco Modular Encoding Platform D9036 </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Firepower System Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-205007">Cisco Firepower System Software </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Weak Default Key in config_auth()</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Not available.</Note>
+    </Notes>
+    <CVE>CVE-2014-9293</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Mitigations involve preventing the device from processing NTP control queries. In products that allow for editing the ntp.conf file, this is accomplished by the restrict directive. Other products may support ntp access-group commands which can be used to filter NTP control queries. Potential workarounds for each affected Cisco product is referenced in the Cisco Bug ID workarounds section.
+
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd</URL>
+        <Description>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Noncryptographic Random Number Generator with Weak Seed Used by ntp-keygen to Generate Symmetric Keys</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Not available.</Note>
+    </Notes>
+    <CVE>CVE-2014-9294</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Mitigations involve preventing the device from processing NTP control queries. In products that allow for editing the ntp.conf file, this is accomplished by the restrict directive. Other products may support ntp access-group commands which can be used to filter NTP control queries. Potential workarounds for each affected Cisco product is referenced in the Cisco Bug ID workarounds section.
+
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd</URL>
+        <Description>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>ntpd receive(): Missing Return on Error</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Not available.</Note>
+    </Notes>
+    <CVE>CVE-2014-9296</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Mitigations involve preventing the device from processing NTP control queries. In products that allow for editing the ntp.conf file, this is accomplished by the restrict directive. Other products may support ntp access-group commands which can be used to filter NTP control queries. Potential workarounds for each affected Cisco product is referenced in the Cisco Bug ID workarounds section.
+
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd</URL>
+        <Description>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>NTP ntp_crypto.c Improper Validation Vulnerability</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Not available.</Note>
+    </Notes>
+    <CVE>CVE-2014-9297</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Mitigations involve preventing the device from processing NTP control queries. In products that allow for editing the ntp.conf file, this is accomplished by the restrict directive. Other products may support ntp access-group commands which can be used to filter NTP control queries. Potential workarounds for each affected Cisco product is referenced in the Cisco Bug ID workarounds section.
+
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd</URL>
+        <Description>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Multiple Buffer Overflow Vulnerabilities in ntpd</Title>
+    <ID SystemName="Cisco Bug ID">CSCus26858</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCus26858,CSCus27248,CSCus27247,CSCus27243,CSCus27244,CSCus27246,CSCus26946,CSCus27253,CSCus27280,CSCus27309,CSCus26895,CSCus26875,CSCus29415,CSCus26870,CSCus26882,CSCus27007,CSCus27239,CSCus26891,CSCus30138,CSCus27291,CSCus27388,CSCus27224,CSCus43427,CSCus27240,CSCus27391,CSCus27229,CSCus27245,CSCus27225,CSCus27241,CSCus26947,CSCus26864,CSCus27527,CSCus27337,CSCus27483,CSCus27589,CSCus27274,CSCus27279,CSCus27416,CSCus27413,CSCus27423,CSCus27325,CSCus27577,CSCus26956,CSCus27226,CSCus27501,CSCus27292,CSCus27295,CSCus27395,CSCus27283</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-9295</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+        <ProductID>CVRFPID-190702</ProductID>
+        <ProductID>CVRFPID-198393</ProductID>
+        <ProductID>CVRFPID-193469</ProductID>
+        <ProductID>CVRFPID-194833</ProductID>
+        <ProductID>CVRFPID-194456</ProductID>
+        <ProductID>CVRFPID-7500</ProductID>
+        <ProductID>CVRFPID-111580</ProductID>
+        <ProductID>CVRFPID-203746</ProductID>
+        <ProductID>CVRFPID-192564</ProductID>
+        <ProductID>CVRFPID-95918</ProductID>
+        <ProductID>CVRFPID-191380</ProductID>
+        <ProductID>CVRFPID-191381</ProductID>
+        <ProductID>CVRFPID-191382</ProductID>
+        <ProductID>CVRFPID-191383</ProductID>
+        <ProductID>CVRFPID-191384</ProductID>
+        <ProductID>CVRFPID-191385</ProductID>
+        <ProductID>CVRFPID-191386</ProductID>
+        <ProductID>CVRFPID-191387</ProductID>
+        <ProductID>CVRFPID-191388</ProductID>
+        <ProductID>CVRFPID-191389</ProductID>
+        <ProductID>CVRFPID-191390</ProductID>
+        <ProductID>CVRFPID-191391</ProductID>
+        <ProductID>CVRFPID-191392</ProductID>
+        <ProductID>CVRFPID-191393</ProductID>
+        <ProductID>CVRFPID-191394</ProductID>
+        <ProductID>CVRFPID-191395</ProductID>
+        <ProductID>CVRFPID-191396</ProductID>
+        <ProductID>CVRFPID-191397</ProductID>
+        <ProductID>CVRFPID-191398</ProductID>
+        <ProductID>CVRFPID-191399</ProductID>
+        <ProductID>CVRFPID-191400</ProductID>
+        <ProductID>CVRFPID-191401</ProductID>
+        <ProductID>CVRFPID-191402</ProductID>
+        <ProductID>CVRFPID-191403</ProductID>
+        <ProductID>CVRFPID-191404</ProductID>
+        <ProductID>CVRFPID-191405</ProductID>
+        <ProductID>CVRFPID-191406</ProductID>
+        <ProductID>CVRFPID-191407</ProductID>
+        <ProductID>CVRFPID-191408</ProductID>
+        <ProductID>CVRFPID-191409</ProductID>
+        <ProductID>CVRFPID-191410</ProductID>
+        <ProductID>CVRFPID-191411</ProductID>
+        <ProductID>CVRFPID-191412</ProductID>
+        <ProductID>CVRFPID-191413</ProductID>
+        <ProductID>CVRFPID-191414</ProductID>
+        <ProductID>CVRFPID-191415</ProductID>
+        <ProductID>CVRFPID-191416</ProductID>
+        <ProductID>CVRFPID-191417</ProductID>
+        <ProductID>CVRFPID-191418</ProductID>
+        <ProductID>CVRFPID-191419</ProductID>
+        <ProductID>CVRFPID-191420</ProductID>
+        <ProductID>CVRFPID-191421</ProductID>
+        <ProductID>CVRFPID-191422</ProductID>
+        <ProductID>CVRFPID-191423</ProductID>
+        <ProductID>CVRFPID-191424</ProductID>
+        <ProductID>CVRFPID-191425</ProductID>
+        <ProductID>CVRFPID-191426</ProductID>
+        <ProductID>CVRFPID-191427</ProductID>
+        <ProductID>CVRFPID-191428</ProductID>
+        <ProductID>CVRFPID-191429</ProductID>
+        <ProductID>CVRFPID-191430</ProductID>
+        <ProductID>CVRFPID-191431</ProductID>
+        <ProductID>CVRFPID-191432</ProductID>
+        <ProductID>CVRFPID-191433</ProductID>
+        <ProductID>CVRFPID-191434</ProductID>
+        <ProductID>CVRFPID-191435</ProductID>
+        <ProductID>CVRFPID-191436</ProductID>
+        <ProductID>CVRFPID-191437</ProductID>
+        <ProductID>CVRFPID-191438</ProductID>
+        <ProductID>CVRFPID-191439</ProductID>
+        <ProductID>CVRFPID-191440</ProductID>
+        <ProductID>CVRFPID-191441</ProductID>
+        <ProductID>CVRFPID-191442</ProductID>
+        <ProductID>CVRFPID-191443</ProductID>
+        <ProductID>CVRFPID-191444</ProductID>
+        <ProductID>CVRFPID-191445</ProductID>
+        <ProductID>CVRFPID-191446</ProductID>
+        <ProductID>CVRFPID-191447</ProductID>
+        <ProductID>CVRFPID-191448</ProductID>
+        <ProductID>CVRFPID-191449</ProductID>
+        <ProductID>CVRFPID-191450</ProductID>
+        <ProductID>CVRFPID-191451</ProductID>
+        <ProductID>CVRFPID-191452</ProductID>
+        <ProductID>CVRFPID-191453</ProductID>
+        <ProductID>CVRFPID-191454</ProductID>
+        <ProductID>CVRFPID-191455</ProductID>
+        <ProductID>CVRFPID-191456</ProductID>
+        <ProductID>CVRFPID-191457</ProductID>
+        <ProductID>CVRFPID-191458</ProductID>
+        <ProductID>CVRFPID-191459</ProductID>
+        <ProductID>CVRFPID-191466</ProductID>
+        <ProductID>CVRFPID-191467</ProductID>
+        <ProductID>CVRFPID-191468</ProductID>
+        <ProductID>CVRFPID-191469</ProductID>
+        <ProductID>CVRFPID-191470</ProductID>
+        <ProductID>CVRFPID-191471</ProductID>
+        <ProductID>CVRFPID-191472</ProductID>
+        <ProductID>CVRFPID-191473</ProductID>
+        <ProductID>CVRFPID-191474</ProductID>
+        <ProductID>CVRFPID-191475</ProductID>
+        <ProductID>CVRFPID-191476</ProductID>
+        <ProductID>CVRFPID-191477</ProductID>
+        <ProductID>CVRFPID-191478</ProductID>
+        <ProductID>CVRFPID-191479</ProductID>
+        <ProductID>CVRFPID-191480</ProductID>
+        <ProductID>CVRFPID-191481</ProductID>
+        <ProductID>CVRFPID-191482</ProductID>
+        <ProductID>CVRFPID-191483</ProductID>
+        <ProductID>CVRFPID-191484</ProductID>
+        <ProductID>CVRFPID-191485</ProductID>
+        <ProductID>CVRFPID-191557</ProductID>
+        <ProductID>CVRFPID-191558</ProductID>
+        <ProductID>CVRFPID-191559</ProductID>
+        <ProductID>CVRFPID-191560</ProductID>
+        <ProductID>CVRFPID-191561</ProductID>
+        <ProductID>CVRFPID-191562</ProductID>
+        <ProductID>CVRFPID-191563</ProductID>
+        <ProductID>CVRFPID-194693</ProductID>
+        <ProductID>CVRFPID-194694</ProductID>
+        <ProductID>CVRFPID-195841</ProductID>
+        <ProductID>CVRFPID-196607</ProductID>
+        <ProductID>CVRFPID-196608</ProductID>
+        <ProductID>CVRFPID-196609</ProductID>
+        <ProductID>CVRFPID-196610</ProductID>
+        <ProductID>CVRFPID-196611</ProductID>
+        <ProductID>CVRFPID-196612</ProductID>
+        <ProductID>CVRFPID-196613</ProductID>
+        <ProductID>CVRFPID-196614</ProductID>
+        <ProductID>CVRFPID-196615</ProductID>
+        <ProductID>CVRFPID-196616</ProductID>
+        <ProductID>CVRFPID-196617</ProductID>
+        <ProductID>CVRFPID-196618</ProductID>
+        <ProductID>CVRFPID-196619</ProductID>
+        <ProductID>CVRFPID-198539</ProductID>
+        <ProductID>CVRFPID-201604</ProductID>
+        <ProductID>CVRFPID-201605</ProductID>
+        <ProductID>CVRFPID-201606</ProductID>
+        <ProductID>CVRFPID-201607</ProductID>
+        <ProductID>CVRFPID-201874</ProductID>
+        <ProductID>CVRFPID-201875</ProductID>
+        <ProductID>CVRFPID-201876</ProductID>
+        <ProductID>CVRFPID-201877</ProductID>
+        <ProductID>CVRFPID-201878</ProductID>
+        <ProductID>CVRFPID-201879</ProductID>
+        <ProductID>CVRFPID-201880</ProductID>
+        <ProductID>CVRFPID-201881</ProductID>
+        <ProductID>CVRFPID-201882</ProductID>
+        <ProductID>CVRFPID-201883</ProductID>
+        <ProductID>CVRFPID-201884</ProductID>
+        <ProductID>CVRFPID-201885</ProductID>
+        <ProductID>CVRFPID-201886</ProductID>
+        <ProductID>CVRFPID-201887</ProductID>
+        <ProductID>CVRFPID-201888</ProductID>
+        <ProductID>CVRFPID-202737</ProductID>
+        <ProductID>CVRFPID-202738</ProductID>
+        <ProductID>CVRFPID-203349</ProductID>
+        <ProductID>CVRFPID-205076</ProductID>
+        <ProductID>CVRFPID-205077</ProductID>
+        <ProductID>CVRFPID-205078</ProductID>
+        <ProductID>CVRFPID-205079</ProductID>
+        <ProductID>CVRFPID-205080</ProductID>
+        <ProductID>CVRFPID-205081</ProductID>
+        <ProductID>CVRFPID-205082</ProductID>
+        <ProductID>CVRFPID-205083</ProductID>
+        <ProductID>CVRFPID-205084</ProductID>
+        <ProductID>CVRFPID-205085</ProductID>
+        <ProductID>CVRFPID-205086</ProductID>
+        <ProductID>CVRFPID-205087</ProductID>
+        <ProductID>CVRFPID-205088</ProductID>
+        <ProductID>CVRFPID-205089</ProductID>
+        <ProductID>CVRFPID-205090</ProductID>
+        <ProductID>CVRFPID-205093</ProductID>
+        <ProductID>CVRFPID-192563</ProductID>
+        <ProductID>CVRFPID-100637</ProductID>
+        <ProductID>CVRFPID-202761</ProductID>
+        <ProductID>CVRFPID-8043</ProductID>
+        <ProductID>CVRFPID-96277</ProductID>
+        <ProductID>CVRFPID-195235</ProductID>
+        <ProductID>CVRFPID-197708</ProductID>
+        <ProductID>CVRFPID-95900</ProductID>
+        <ProductID>CVRFPID-204778</ProductID>
+        <ProductID>CVRFPID-202553</ProductID>
+        <ProductID>CVRFPID-91870</ProductID>
+        <ProductID>CVRFPID-96780</ProductID>
+        <ProductID>CVRFPID-4844</ProductID>
+        <ProductID>CVRFPID-5834</ProductID>
+        <ProductID>CVRFPID-197112</ProductID>
+        <ProductID>CVRFPID-203512</ProductID>
+        <ProductID>CVRFPID-192324</ProductID>
+        <ProductID>CVRFPID-2054</ProductID>
+        <ProductID>CVRFPID-7367</ProductID>
+        <ProductID>CVRFPID-185359</ProductID>
+        <ProductID>CVRFPID-190324</ProductID>
+        <ProductID>CVRFPID-192918</ProductID>
+        <ProductID>CVRFPID-203403</ProductID>
+        <ProductID>CVRFPID-203731</ProductID>
+        <ProductID>CVRFPID-8046</ProductID>
+        <ProductID>CVRFPID-6407</ProductID>
+        <ProductID>CVRFPID-99257</ProductID>
+        <ProductID>CVRFPID-205007</ProductID>
+        <ProductID>CVRFPID-202401</ProductID>
+        <ProductID>CVRFPID-184512</ProductID>
+        <ProductID>CVRFPID-184690</ProductID>
+        <ProductID>CVRFPID-89523</ProductID>
+        <ProductID>CVRFPID-203607</ProductID>
+        <ProductID>CVRFPID-117634</ProductID>
+        <ProductID>CVRFPID-7333</ProductID>
+        <ProductID>CVRFPID-115622</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.8</BaseScoreV2>
+        <TemporalScoreV2>6.1</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:U/RC:C</VectorV2>
+        <ProductID>CVRFPID-88444</ProductID>
+        <ProductID>CVRFPID-198393</ProductID>
+        <ProductID>CVRFPID-193469</ProductID>
+        <ProductID>CVRFPID-194833</ProductID>
+        <ProductID>CVRFPID-7500</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>7.2</BaseScoreV2>
+        <TemporalScoreV2>6.5</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:N/C:C/I:C/A:C/E:POC/RL:U/RC:C</VectorV2>
+        <ProductID>CVRFPID-190702</ProductID>
+        <ProductID>CVRFPID-194456</ProductID>
+        <ProductID>CVRFPID-95918</ProductID>
+        <ProductID>CVRFPID-192563</ProductID>
+        <ProductID>CVRFPID-100637</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>7.5</BaseScoreV2>
+        <TemporalScoreV2>6.8</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:U/RC:C</VectorV2>
+        <ProductID>CVRFPID-111580</ProductID>
+        <ProductID>CVRFPID-202761</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>7.2</BaseScoreV2>
+        <TemporalScoreV2>6.5</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:N/C:C/I:C/A:C/E:POC/RL:ND/RC:C</VectorV2>
+        <ProductID>CVRFPID-203746</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>7.2</BaseScoreV2>
+        <TemporalScoreV2>6.8</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:U/RC:C</VectorV2>
+        <ProductID>CVRFPID-192564</ProductID>
+        <ProductID>CVRFPID-197708</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>7.5</BaseScoreV2>
+        <TemporalScoreV2>6.8</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:W/RC:C</VectorV2>
+        <ProductID>CVRFPID-191380</ProductID>
+        <ProductID>CVRFPID-191381</ProductID>
+        <ProductID>CVRFPID-191382</ProductID>
+        <ProductID>CVRFPID-191383</ProductID>
+        <ProductID>CVRFPID-191384</ProductID>
+        <ProductID>CVRFPID-191385</ProductID>
+        <ProductID>CVRFPID-191386</ProductID>
+        <ProductID>CVRFPID-191387</ProductID>
+        <ProductID>CVRFPID-191388</ProductID>
+        <ProductID>CVRFPID-191389</ProductID>
+        <ProductID>CVRFPID-191390</ProductID>
+        <ProductID>CVRFPID-191391</ProductID>
+        <ProductID>CVRFPID-191392</ProductID>
+        <ProductID>CVRFPID-191393</ProductID>
+        <ProductID>CVRFPID-191394</ProductID>
+        <ProductID>CVRFPID-191395</ProductID>
+        <ProductID>CVRFPID-191396</ProductID>
+        <ProductID>CVRFPID-191397</ProductID>
+        <ProductID>CVRFPID-191398</ProductID>
+        <ProductID>CVRFPID-191399</ProductID>
+        <ProductID>CVRFPID-191400</ProductID>
+        <ProductID>CVRFPID-191401</ProductID>
+        <ProductID>CVRFPID-191402</ProductID>
+        <ProductID>CVRFPID-191403</ProductID>
+        <ProductID>CVRFPID-191404</ProductID>
+        <ProductID>CVRFPID-191405</ProductID>
+        <ProductID>CVRFPID-191406</ProductID>
+        <ProductID>CVRFPID-191407</ProductID>
+        <ProductID>CVRFPID-191408</ProductID>
+        <ProductID>CVRFPID-191409</ProductID>
+        <ProductID>CVRFPID-191410</ProductID>
+        <ProductID>CVRFPID-191411</ProductID>
+        <ProductID>CVRFPID-191412</ProductID>
+        <ProductID>CVRFPID-191413</ProductID>
+        <ProductID>CVRFPID-191414</ProductID>
+        <ProductID>CVRFPID-191415</ProductID>
+        <ProductID>CVRFPID-191416</ProductID>
+        <ProductID>CVRFPID-191417</ProductID>
+        <ProductID>CVRFPID-191418</ProductID>
+        <ProductID>CVRFPID-191419</ProductID>
+        <ProductID>CVRFPID-191420</ProductID>
+        <ProductID>CVRFPID-191421</ProductID>
+        <ProductID>CVRFPID-191422</ProductID>
+        <ProductID>CVRFPID-191423</ProductID>
+        <ProductID>CVRFPID-191424</ProductID>
+        <ProductID>CVRFPID-191425</ProductID>
+        <ProductID>CVRFPID-191426</ProductID>
+        <ProductID>CVRFPID-191427</ProductID>
+        <ProductID>CVRFPID-191428</ProductID>
+        <ProductID>CVRFPID-191429</ProductID>
+        <ProductID>CVRFPID-191430</ProductID>
+        <ProductID>CVRFPID-191431</ProductID>
+        <ProductID>CVRFPID-191432</ProductID>
+        <ProductID>CVRFPID-191433</ProductID>
+        <ProductID>CVRFPID-191434</ProductID>
+        <ProductID>CVRFPID-191435</ProductID>
+        <ProductID>CVRFPID-191436</ProductID>
+        <ProductID>CVRFPID-191437</ProductID>
+        <ProductID>CVRFPID-191438</ProductID>
+        <ProductID>CVRFPID-191439</ProductID>
+        <ProductID>CVRFPID-191440</ProductID>
+        <ProductID>CVRFPID-191441</ProductID>
+        <ProductID>CVRFPID-191442</ProductID>
+        <ProductID>CVRFPID-191443</ProductID>
+        <ProductID>CVRFPID-191444</ProductID>
+        <ProductID>CVRFPID-191445</ProductID>
+        <ProductID>CVRFPID-191446</ProductID>
+        <ProductID>CVRFPID-191447</ProductID>
+        <ProductID>CVRFPID-191448</ProductID>
+        <ProductID>CVRFPID-191449</ProductID>
+        <ProductID>CVRFPID-191450</ProductID>
+        <ProductID>CVRFPID-191451</ProductID>
+        <ProductID>CVRFPID-191452</ProductID>
+        <ProductID>CVRFPID-191453</ProductID>
+        <ProductID>CVRFPID-191454</ProductID>
+        <ProductID>CVRFPID-191455</ProductID>
+        <ProductID>CVRFPID-191456</ProductID>
+        <ProductID>CVRFPID-191457</ProductID>
+        <ProductID>CVRFPID-191458</ProductID>
+        <ProductID>CVRFPID-191459</ProductID>
+        <ProductID>CVRFPID-191466</ProductID>
+        <ProductID>CVRFPID-191467</ProductID>
+        <ProductID>CVRFPID-191468</ProductID>
+        <ProductID>CVRFPID-191469</ProductID>
+        <ProductID>CVRFPID-191470</ProductID>
+        <ProductID>CVRFPID-191471</ProductID>
+        <ProductID>CVRFPID-191472</ProductID>
+        <ProductID>CVRFPID-191473</ProductID>
+        <ProductID>CVRFPID-191474</ProductID>
+        <ProductID>CVRFPID-191475</ProductID>
+        <ProductID>CVRFPID-191476</ProductID>
+        <ProductID>CVRFPID-191477</ProductID>
+        <ProductID>CVRFPID-191478</ProductID>
+        <ProductID>CVRFPID-191479</ProductID>
+        <ProductID>CVRFPID-191480</ProductID>
+        <ProductID>CVRFPID-191481</ProductID>
+        <ProductID>CVRFPID-191482</ProductID>
+        <ProductID>CVRFPID-191483</ProductID>
+        <ProductID>CVRFPID-191484</ProductID>
+        <ProductID>CVRFPID-191485</ProductID>
+        <ProductID>CVRFPID-191557</ProductID>
+        <ProductID>CVRFPID-191558</ProductID>
+        <ProductID>CVRFPID-191559</ProductID>
+        <ProductID>CVRFPID-191560</ProductID>
+        <ProductID>CVRFPID-191561</ProductID>
+        <ProductID>CVRFPID-191562</ProductID>
+        <ProductID>CVRFPID-191563</ProductID>
+        <ProductID>CVRFPID-194693</ProductID>
+        <ProductID>CVRFPID-194694</ProductID>
+        <ProductID>CVRFPID-195841</ProductID>
+        <ProductID>CVRFPID-196607</ProductID>
+        <ProductID>CVRFPID-196608</ProductID>
+        <ProductID>CVRFPID-196609</ProductID>
+        <ProductID>CVRFPID-196610</ProductID>
+        <ProductID>CVRFPID-196611</ProductID>
+        <ProductID>CVRFPID-196612</ProductID>
+        <ProductID>CVRFPID-196613</ProductID>
+        <ProductID>CVRFPID-196614</ProductID>
+        <ProductID>CVRFPID-196615</ProductID>
+        <ProductID>CVRFPID-196616</ProductID>
+        <ProductID>CVRFPID-196617</ProductID>
+        <ProductID>CVRFPID-196618</ProductID>
+        <ProductID>CVRFPID-196619</ProductID>
+        <ProductID>CVRFPID-198539</ProductID>
+        <ProductID>CVRFPID-201604</ProductID>
+        <ProductID>CVRFPID-201605</ProductID>
+        <ProductID>CVRFPID-201606</ProductID>
+        <ProductID>CVRFPID-201607</ProductID>
+        <ProductID>CVRFPID-201874</ProductID>
+        <ProductID>CVRFPID-201875</ProductID>
+        <ProductID>CVRFPID-201876</ProductID>
+        <ProductID>CVRFPID-201877</ProductID>
+        <ProductID>CVRFPID-201878</ProductID>
+        <ProductID>CVRFPID-201879</ProductID>
+        <ProductID>CVRFPID-201880</ProductID>
+        <ProductID>CVRFPID-201881</ProductID>
+        <ProductID>CVRFPID-201882</ProductID>
+        <ProductID>CVRFPID-201883</ProductID>
+        <ProductID>CVRFPID-201884</ProductID>
+        <ProductID>CVRFPID-201885</ProductID>
+        <ProductID>CVRFPID-201886</ProductID>
+        <ProductID>CVRFPID-201887</ProductID>
+        <ProductID>CVRFPID-201888</ProductID>
+        <ProductID>CVRFPID-202737</ProductID>
+        <ProductID>CVRFPID-202738</ProductID>
+        <ProductID>CVRFPID-203349</ProductID>
+        <ProductID>CVRFPID-205076</ProductID>
+        <ProductID>CVRFPID-205077</ProductID>
+        <ProductID>CVRFPID-205078</ProductID>
+        <ProductID>CVRFPID-205079</ProductID>
+        <ProductID>CVRFPID-205080</ProductID>
+        <ProductID>CVRFPID-205081</ProductID>
+        <ProductID>CVRFPID-205082</ProductID>
+        <ProductID>CVRFPID-205083</ProductID>
+        <ProductID>CVRFPID-205084</ProductID>
+        <ProductID>CVRFPID-205085</ProductID>
+        <ProductID>CVRFPID-205086</ProductID>
+        <ProductID>CVRFPID-205087</ProductID>
+        <ProductID>CVRFPID-205088</ProductID>
+        <ProductID>CVRFPID-205089</ProductID>
+        <ProductID>CVRFPID-205090</ProductID>
+        <ProductID>CVRFPID-205093</ProductID>
+        <ProductID>CVRFPID-203403</ProductID>
+        <ProductID>CVRFPID-203731</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>4.6</BaseScoreV2>
+        <TemporalScoreV2>4.4</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:U/RC:C</VectorV2>
+        <ProductID>CVRFPID-8043</ProductID>
+        <ProductID>CVRFPID-96277</ProductID>
+        <ProductID>CVRFPID-202553</ProductID>
+        <ProductID>CVRFPID-91870</ProductID>
+        <ProductID>CVRFPID-96780</ProductID>
+        <ProductID>CVRFPID-4844</ProductID>
+        <ProductID>CVRFPID-190324</ProductID>
+        <ProductID>CVRFPID-8046</ProductID>
+        <ProductID>CVRFPID-205007</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>7.5</BaseScoreV2>
+        <TemporalScoreV2>7.1</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:U/RC:C</VectorV2>
+        <ProductID>CVRFPID-195235</ProductID>
+        <ProductID>CVRFPID-95900</ProductID>
+        <ProductID>CVRFPID-204778</ProductID>
+        <ProductID>CVRFPID-5834</ProductID>
+        <ProductID>CVRFPID-197112</ProductID>
+        <ProductID>CVRFPID-203512</ProductID>
+        <ProductID>CVRFPID-192324</ProductID>
+        <ProductID>CVRFPID-2054</ProductID>
+        <ProductID>CVRFPID-7367</ProductID>
+        <ProductID>CVRFPID-192918</ProductID>
+        <ProductID>CVRFPID-184512</ProductID>
+        <ProductID>CVRFPID-184690</ProductID>
+        <ProductID>CVRFPID-117634</ProductID>
+        <ProductID>CVRFPID-115622</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>4.6</BaseScoreV2>
+        <TemporalScoreV2>3.8</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:OF/RC:C</VectorV2>
+        <ProductID>CVRFPID-185359</ProductID>
+        <ProductID>CVRFPID-89523</ProductID>
+        <ProductID>CVRFPID-203607</ProductID>
+        <ProductID>CVRFPID-7333</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>7.5</BaseScoreV2>
+        <TemporalScoreV2>6.2</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:OF/RC:C</VectorV2>
+        <ProductID>CVRFPID-6407</ProductID>
+        <ProductID>CVRFPID-99257</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>4.6</BaseScoreV2>
+        <TemporalScoreV2>4.2</TemporalScoreV2>
+        <VectorV2>AV:L/AC:L/Au:N/C:P/I:P/A:P/E:F/RL:W/RC:C</VectorV2>
+        <ProductID>CVRFPID-202401</ProductID>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Mitigations involve preventing the device from processing NTP control queries. In products that allow for editing the ntp.conf file, this is accomplished by the restrict directive. Other products may support ntp access-group commands which can be used to filter NTP control queries. Potential workarounds for each affected Cisco product is referenced in the Cisco Bug ID workarounds section.
+
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd</URL>
+        <Description>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="6" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>NTP IPv6 ACL Bypass Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCus27369</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCus27369,CSCus82092,CSCus88284,CSCus90552,CSCus83811,CSCus88292,CSCus90733,CSCus88487,CSCus90674</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2014-9298</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-92399</ProductID>
+        <ProductID>CVRFPID-95918</ProductID>
+        <ProductID>CVRFPID-185359</ProductID>
+        <ProductID>CVRFPID-197112</ProductID>
+        <ProductID>CVRFPID-8043</ProductID>
+        <ProductID>CVRFPID-203403</ProductID>
+        <ProductID>CVRFPID-111580</ProductID>
+        <ProductID>CVRFPID-192167</ProductID>
+        <ProductID>CVRFPID-192564</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>5.0</BaseScoreV2>
+        <TemporalScoreV2>4.8</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:P/I:N/A:N/E:F/RL:U/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Mitigations involve preventing the device from processing NTP control queries. In products that allow for editing the ntp.conf file, this is accomplished by the restrict directive. Other products may support ntp access-group commands which can be used to filter NTP control queries. Potential workarounds for each affected Cisco product is referenced in the Cisco Bug ID workarounds section.
+
+Mitigations that can be deployed on Cisco devices in a network are available in the Cisco Applied Intelligence companion document for this advisory:
+https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857 ["https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=36857"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141222-ntpd</URL>
+        <Description>Multiple Vulnerabilities in ntpd Affecting Cisco Products  </Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

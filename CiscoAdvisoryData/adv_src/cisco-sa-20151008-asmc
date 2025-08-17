@@ -1,0 +1,20 @@
+{
+  "identifier": "cisco-sa-20151008-asmc",
+  "title": "Cisco AnyConnect Secure Mobility Client Arbitrary File Move Vulnerability ",
+  "version": "1.1",
+  "firstPublished": "2015-10-08T14:26:00.000+0000",
+  "lastPublished": "2015-11-13T22:01:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151008-asmc",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "cve": "CVE-2015-6322",
+  "ciscoBugId": "CSCuv48563",
+  "status": "",
+  "summary": "A vulnerability in interprocess communication (IPC) channel of Cisco AnyConnect Secure Mobility Client could allow an authenticated, local attacker to move arbitrary files with elevated privileges. The vulnerability is due to missing source path validation in certain IPC commands. ",
+  "totalCount": 5039,
+  "relatedResource": []
+}

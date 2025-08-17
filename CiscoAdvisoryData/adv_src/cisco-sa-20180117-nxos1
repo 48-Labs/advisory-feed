@@ -1,0 +1,20 @@
+{
+  "identifier": "cisco-sa-20180117-nxos1",
+  "title": "Cisco NX-OS System Software Unauthorized User Account Deletion Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2018-01-17T16:00:00.000+0000",
+  "lastPublished": "2018-01-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180117-nxos1",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "cve": "CVE-2018-0092",
+  "ciscoBugId": "CSCvg21120",
+  "status": "",
+  "summary": "A vulnerability in the network-operator user role implementation for Cisco NX-OS System Software could allow an authenticated, local attacker to improperly delete valid user accounts. The network-operator role should not be able to delete other configured users on the device.",
+  "totalCount": 1,
+  "relatedResource": []
+}

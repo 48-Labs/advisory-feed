@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160518-wsa3",
+  "title": "Cisco Web Security Appliance HTTP Length Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-05-18T16:00:00.000+0000",
+  "lastPublished": "2016-05-18T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160518-wsa3",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": null,
+  "cve": "CVE-2016-1382",
+  "ciscoBugId": "CSCuu02529",
+  "status": "",
+  "summary": "A vulnerability in HTTP request parsing in Cisco AsyncOS for the Cisco Web Security Appliance (WSA) could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition when the proxy process unexpectedly restarts.The vulnerability occurs because the affected ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Web Security Appliance HTTP Length Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7488&signatureSubId=0&releaseVersion=S921&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

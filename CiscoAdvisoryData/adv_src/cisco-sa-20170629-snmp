@@ -1,0 +1,103 @@
+{
+  "identifier": "cisco-sa-20170629-snmp",
+  "title": "SNMP Remote Code Execution Vulnerabilities in Cisco IOS and IOS XE Software",
+  "version": "1.11",
+  "firstPublished": "2017-06-29T16:00:00.000+0000",
+  "lastPublished": "2025-07-30T16:27:06.977+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170629-snmp",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-119",
+  "cve": "CVE-2017-6736,CVE-2017-6737,CVE-2017-6738,CVE-2017-6739,CVE-2017-6740,CVE-2017-6741,CVE-2017-6742,CVE-2017-6743,CVE-2017-6744",
+  "ciscoBugId": "CSCsy56638,CSCve54313,CSCve57697,CSCve60276,CSCve60376,CSCve60402,CSCve66601,CSCve66658,CSCve89865,CSCve66540,CSCve78027",
+  "status": "",
+  "summary": "The Simple Network Management Protocol&nbsp;(SNMP) subsystem of Cisco IOS and IOS XE Software contains multiple vulnerabilities that could allow an authenticated, remote attacker to remotely execute code on an affected system or cause an affected system to reload. An attacker could exploit ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "43424",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43425",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43426",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43427",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43428",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43429",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43430",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43431",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        },
+        {
+          "name": "43432",
+          "url": "http://www.cisco.com/web/software/286271056/117258/sf-rules-2017-06-29-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=0&releaseVersion=S988&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=1&releaseVersion=S988&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=10&releaseVersion=S1013&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=3&releaseVersion=S988&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=4&releaseVersion=S988&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=6&releaseVersion=S988&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=7&releaseVersion=S988&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=8&releaseVersion=S988&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS and IOS-XE SNMP Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7988&signatureSubId=9&releaseVersion=S1013&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

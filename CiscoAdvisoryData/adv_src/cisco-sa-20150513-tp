@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20150513-tp",
+  "title": "Command Injection Vulnerability in Multiple Cisco TelePresence Products",
+  "version": "1.0",
+  "firstPublished": "2015-05-13T16:00:00.000+0000",
+  "lastPublished": "2015-05-13T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150513-tp",
+  "severity": "Critical",
+  "cwe": "CWE-78",
+  "erpPubIds": "38717",
+  "cve": "CVE-2015-0713",
+  "ciscoBugId": "CSCul55968,CSCur08993,CSCur15803,CSCur15807,CSCur15825,CSCur15832,CSCur15842,CSCur15850,CSCur15855",
+  "status": "",
+  "summary": "A vulnerability in the web framework of multiple CiscoTelePresence products  could allow an authenticated, remote attacker to inject arbitrary commands that are executed with the privileges ofthe root user.The vulnerability is due to insufficient inputvalidation. An ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence Products Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=38717&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Commands Injection Vulnerability In Multiple Cisco TelePresence Products",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6306&signatureSubId=0&releaseVersion=S868&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

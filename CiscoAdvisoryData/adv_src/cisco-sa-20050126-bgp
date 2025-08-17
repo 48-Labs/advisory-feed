@@ -1,0 +1,42 @@
+{
+  "identifier": "cisco-sa-20050126-bgp",
+  "title": "Cisco IOS Misformed BGP Packet Causes Reload",
+  "version": "1.5",
+  "firstPublished": "2005-01-26T16:00:00.000+0000",
+  "lastPublished": "2005-01-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20050126-bgp",
+  "cwe": "CWE-399",
+  "erpPubIds": "8702",
+  "cve": "CVE-2005-0196",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "A Cisco device running IOS Border Gateway Protocol (BGP) is vulnerable to a Denial of Service (DoS) attack from a malformed BGP packet. Only devices with either the command bgp log-neighbor-changes configured or the command snmp-server enable traps bgp are vulnerable. The ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS BGP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=8702&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed BGP Open Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3532&signatureSubId=0&releaseVersion=S633&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS Misformed BGP Packet DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3533&signatureSubId=0&releaseVersion=S611&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

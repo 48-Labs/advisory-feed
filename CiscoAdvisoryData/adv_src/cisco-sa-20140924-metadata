@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20140924-metadata",
+  "title": "Cisco IOS Software Metadata Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2014-09-24T16:00:00.000+0000",
+  "lastPublished": "2014-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140924-metadata",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "35622,35623",
+  "cve": "CVE-2014-3355,CVE-2014-3356",
+  "ciscoBugId": "CSCue22753,CSCug75942",
+  "status": "",
+  "summary": "Two vulnerabilities in the metadata flow feature of Cisco IOS Software could allow an unauthenticated, remote attacker to reload a vulnerable device.The vulnerabilities are due to improper handling of transit RSVP packets that need to be processed by the metadata infrastructure. An ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Metadata Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35622&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Metadata Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35623&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2014 Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep14.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Crash in Metadata",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4526&signatureSubId=0&releaseVersion=S823&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

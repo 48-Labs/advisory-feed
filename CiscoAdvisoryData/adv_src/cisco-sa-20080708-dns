@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20080708-dns",
+  "title": "Multiple Cisco Products Vulnerable to DNS Cache Poisoning Attacks",
+  "version": "2.1",
+  "firstPublished": "2008-07-08T18:00:00.000+0000",
+  "lastPublished": "2008-07-08T18:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080708-dns",
+  "severity": "Medium",
+  "cwe": "CWE-310",
+  "erpPubIds": "16183,16345",
+  "cve": "CVE-2008-1447,CVE-2008-5133",
+  "ciscoBugId": "CSCso81854",
+  "status": "",
+  "summary": "   Multiple Cisco products are vulnerable to DNS cache poisoning attacks due to their use of insufficiently randomized DNS transaction IDs and UDP source ports in the DNS queries that they produce, which may allow an attacker to more easily forge DNS answers that can poison DNS ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Multiple Vendor DNS Implementations Insufficient Entropy Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16183&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Multiple Cisco Products and Sun Solaris Port Address Translation DNS Cache Poisoning Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16345&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "13948",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "13949",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "16206",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "DNS Flood Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4004&signatureSubId=0&releaseVersion=S844&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

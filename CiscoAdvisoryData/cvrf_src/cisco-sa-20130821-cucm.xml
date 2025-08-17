@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Unified Communications Manager</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20130821-cucm</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2013-08-21T14:13:37</cvrf:Date>
+        <cvrf:Description>Initial public release</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2013-08-21T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2013-08-21T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco Unified Communications Manager (Unified CM) contains multiple vulnerabilities that could allow an unauthenticated, remote attacker to modify data, execute arbitrary commands, or cause a denial of service (DoS) condition.
+
+
+
+Cisco has released software updates that address these vulnerabilities.
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following products are affected by the vulnerabilities that are described in this advisory:
+
+
+
+
+    
+    Cisco Unified Communications Manager 7.1(x)
+    
+    Cisco Unified Communications Manager 8.5(x)
+    
+    Cisco Unified Communications Manager 8.6(x)
+    
+    Cisco Unified Communications Manager 9.0(x)
+    
+    Cisco Unified Communications Manager 9.1(x)
+
+
+
+Note: Cisco Unified Communications Manager version 8.0
+reached the End of Software Maintenance on October 23, 2012. Customers
+using Cisco Unified Communications Manager 8.0(x) versions should
+contact their Cisco support team for assistance in upgrading to a
+supported version of Cisco Unified Communications Manager.
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Cisco Unified Communications Manager is the call processing component of
+the Cisco IP Telephony solution that extends enterprise telephony
+features and functions to packet telephony network devices, such as IP
+phones, media processing devices, VoIP gateways, and multimedia
+applications. Cisco Unified Communications Manager contains multiple vulnerabilities that could allow an unauthenticated, remote attacker to cause a DoS condition or execute code remotely.
+
+
+
+Denial of Service Vulnerabilities
+
+
+
+Cisco Unified
+Communications Manager 7.1(x) contains a vulnerability that could allow
+an unauthenticated, remote attacker to cause a DoS condition on an
+affected device. The vulnerability is due to improper error handling . An attacker could
+exploit this vulnerability by sending malformed registration messages, resulting in a DoS condition on an
+affected device. This vulnerability is documented in
+Cisco bug ID CSCuf93466["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuf93466"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"]
+customers only) and has been assigned the Common Vulnerabilities
+and Exposures (CVE) ID CVE-2013-3459.  This vulnerability affects
+only Cisco UCM versions 7.1(x).
+
+
+
+Cisco Unified
+Communications Manager 8.5(x), 8.6(x), and 9.0(x) contain a vulnerability that
+could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. The vulnerability is due to insufficient limiting of traffic on certain
+UDP ports. An attacker could exploit this vulnerability by sending UDP
+packets at a high rate to certain ports on an affected device, resulting in a DoS condition on the
+affected device. This vulnerability is documented in Cisco bug ID CSCub85597["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCub85597"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the CVE ID CVE-2013-3460. 
+
+
+
+Cisco Unified
+Communications Manager versions 8.5(x), 8.6(x) and 9.0(1) contain a
+vulnerability that could allow an unauthenticated, remote attacker to
+cause a DoS condition on an affected device. The vulnerability is due to insufficient rate limiting of traffic on the Session Initiation Protocol (SIP) port. An attacker could exploit this
+vulnerability by sending UDP packets at a high rate to port 5060 on an
+affected device. A sustained attack could allow the attacker to cause a
+DoS condition on the affected device. This vulnerability is documented in Cisco bug ID CSCub35869["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCub35869"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the Common Vulnerabilities and Exposures CVE ID CVE-2013-3461. 
+
+
+
+Buffer Overflow Vulnerability
+
+
+
+Cisco
+Unified Communications Manager 7.1(x), 8.5(x), 8.6(x), 9.0(x) and 9.1(x) contain a vulnerability that could
+allow an authenticated, remote attacker to cause a buffer overflow on
+an affected device. The vulnerability is due to insufficient bounds checking. An attacker
+could exploit this vulnerability by overwriting an allocated memory
+buffer on an affected device. An exploit could allow the attacker to
+corrupt data, disrupt services, or run arbitrary commands. This vulnerability is documented in Cisco bug ID CSCud54358["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCud54358"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned the CVE ID CVE-2013-3462.  This vulnerability affects Cisco UCM versions 7.1(x) through 9.1(1x).</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">No workarounds are available for these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. Cisco recommends upgrading to a release equal to or later than the release in the "Recommended Release" column of the following table:
+
+
+
+
+
+
+    
+        
+            Identifier
+
+            
+            
+            CVE ID
+
+            
+            
+            Cisco Unified Communication Manager Version
+            First Fixed
+
+            
+            Recommended Release
+        
+        
+             CSCud54358: Insufficient Boundary Check of Input Buffer
+            
+             CVE-2013-3462
+             7.x
+            7.1(5b)su6
+             7.1(5b)su6a
+        
+        
+             CSCuf93466: 
+            Improper Error Handling of Malformed Registration Messages 
+             CVE-2013-3459
+             7.x
+            7.1(5b)su6a 
+             7.1(5b)su6a
+        
+        
+             CSCub85597: Memory Leak Observed During UDP Flood
+             CVE-2013-3460
+            8.x
+            8.5(1)su6,
+
+            8.6(2a)su3,
+
+            8.6(5)BE3K  
+            8.5(1)su6,
+
+            8.6(2a)su3,
+
+            8.6(5)BE3K 
+
+            
+        
+        
+             CSCub35869: High CPU Utilization and Memory Leak During UDP Flood
+            
+             CVE-2013-3461
+            8.x
+            8.6(2a)su3,
+
+            8.6(5)BE3K 
+
+            
+            8.6(2a)su3,
+
+            8.6(5)BE3K 
+
+            
+        
+        
+             CSCud54358: Insufficient Boundary Check of Input Buffer
+            
+             CVE-2013-3462
+            8.x
+            8.5(1)su6,
+
+            8.6(2a)su3
+
+            
+            8.5(1)su6, 
+
+            8.6(2a)su3
+        
+        
+             CSCub85597: Memory Leak Observed During UDP Flood
+             CVE-2013-3460
+            9.x
+            9.1(1)
+            9.1(2) or later
+        
+        
+             CSCub35869: High CPU Utilization and Memory Leak During UDP Flood
+            
+             CVE-2013-3461
+            9.x
+            9.1(1)
+            9.1(2) or later
+        
+        
+             CSCud54358: Insufficient Boundary Check of Input Buffer
+            
+             CVE-2013-3462
+            9.x
+            9.1(2)
+            9.1(2) or later
+        
+    
+
+
+
+
+*Note: Cisco Unified Communications Manager Version 8.5(1)su6 is targeted for release in mid-September 2013. Customers running Cisco Unified Communications Manager Version 8.5 are encouraged to upgrade to 8.6 for complete coverage for all vulnerabilities listed in this advisory.
+
+
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+These vulnerabilities were found during internal testing.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unified Communications Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-88444">Cisco Unified Communications Manager </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Buffer Overflow in MGCP</Title>
+    <ID SystemName="Cisco Bug ID">CSCud54358</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCud54358</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3462</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>8.5</BaseScoreV2>
+        <TemporalScoreV2>7.0</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available for these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Denial of Service in CCM</Title>
+    <ID SystemName="Cisco Bug ID">CSCuf93466</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuf93466</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3459</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available for these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Memory Leak in SIPudp</Title>
+    <ID SystemName="Cisco Bug ID">CSCub85597</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCub85597</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3460</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available for these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Unified Communications Manager Denial of Service Vulnerability </Title>
+    <ID SystemName="Cisco Bug ID">CSCub35869</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCub35869</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2013-3461</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.1</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:M/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>No workarounds are available for these vulnerabilities.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130821-cucm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Unified Communications Manager</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

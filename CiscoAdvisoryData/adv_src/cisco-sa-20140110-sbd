@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20140110-sbd",
+  "title": "Undocumented Test Interface in Cisco Small Business Devices",
+  "version": "1.5",
+  "firstPublished": "2014-01-10T16:00:00.000+0000",
+  "lastPublished": "2014-04-23T18:22:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140110-sbd",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "32381",
+  "cve": "CVE-2014-0659",
+  "ciscoBugId": "CSCum37566,CSCum43685,CSCum43693,CSCum43700",
+  "status": "",
+  "summary": "A vulnerability in the Cisco WAP4410N Wireless-N Access Point, Cisco WRVS4400N Wireless-N Gigabit Security Router, and the Cisco RVS4000 4-port Gigabit Security Router could allow an unauthenticated, remote attacker to gain root-level access to an affected device.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Small Business Devices Undocumented Test Interface Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=32381&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "46121",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "46122",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "46123",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "46124",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

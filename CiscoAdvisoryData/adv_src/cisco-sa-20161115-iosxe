@@ -1,0 +1,42 @@
+{
+  "identifier": "cisco-sa-20161115-iosxe",
+  "title": "Cisco IOS XE Software Directory Traversal Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-11-15T16:00:00.000+0000",
+  "lastPublished": "2016-11-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161115-iosxe",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": null,
+  "cve": "CVE-2016-6450",
+  "ciscoBugId": "CSCvb22622,CSCva60013",
+  "status": "",
+  "summary": "A vulnerability in the package unbundle utility of Cisco&nbsp;IOS XE Software could allow an authenticated, local attacker to gain write access to some files in the underlying operating system.The vulnerability is due to insufficient validation of files submitted to ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40767",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-11-15-seu.html"
+        },
+        {
+          "name": "40768",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-11-15-seu.html"
+        },
+        {
+          "name": "40769",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-11-15-seu.html"
+        },
+        {
+          "name": "40770",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-11-15-seu.html"
+        }
+      ]
+    }
+  ]
+}

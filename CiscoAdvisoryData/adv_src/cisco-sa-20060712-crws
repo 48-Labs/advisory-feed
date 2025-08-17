@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20060712-crws",
+  "title": "Cisco Router Web Setup Ships with Insecure Default IOS Configuration",
+  "version": "1.1",
+  "firstPublished": "2006-07-12T16:00:00.000+0000",
+  "lastPublished": "2006-07-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060712-crws",
+  "cwe": "CWE-16",
+  "erpPubIds": "11260",
+  "cve": "CVE-2006-3595",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   The default Cisco IOS configuration shipped with the Cisco Router Web Setup (CRWS) application allows the execution of commands at privilege level 15 through the Cisco IOS HTTP (Hypertext Transfer Protocol) server web interface without requiring authentication credentials. Privilege ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Router Web Setup Tool Command Execution Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11260&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS HTTP Unauthorized Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5796&signatureSubId=0&releaseVersion=S469&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

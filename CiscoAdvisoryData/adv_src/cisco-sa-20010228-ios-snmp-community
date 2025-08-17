@@ -1,0 +1,33 @@
+{
+  "identifier": "cisco-sa-20010228-ios-snmp-community",
+  "title": "Cisco IOS Software Multiple SNMP Community String Vulnerabilities",
+  "version": "1.2",
+  "firstPublished": "2001-02-28T16:00:00.000+0000",
+  "lastPublished": "2001-02-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20010228-ios-snmp-community",
+  "status": "",
+  "summary": "   Multiple Cisco IOS&reg; Software and CatOS software releases contain several independent but related vulnerabilities involving the unexpected creation and exposure of SNMP community strings. These vulnerabilities can be exploited to permit the unauthorized viewing or modification of ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Embedded SNMP Community Names",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4500&signatureSubId=0&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS Embedded SNMP Community Names",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4500&signatureSubId=1&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP IOS VACM MIB Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4505&signatureSubId=0&releaseVersion=S800&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

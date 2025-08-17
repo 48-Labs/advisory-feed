@@ -1,0 +1,37 @@
+{
+  "identifier": "cisco-sa-20041102-acs-eap-tls",
+  "title": "Vulnerability in Cisco Secure Access Control Server EAP-TLS Authentication",
+  "version": "1.0",
+  "firstPublished": "2004-11-02T15:00:00.000+0000",
+  "lastPublished": "2004-11-02T15:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20041102-acs-eap-tls",
+  "erpPubIds": "8342",
+  "cve": "CVE-2004-1099",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "    A Cisco Secure Access Control Server (ACS) that is configured to use Extensible Authentication Protocol-Transport Layer Security (EAP-TLS) to authenticate users to the network will allow access to any user that uses a cryptographically correct certificate as long as the user name is ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Secure ACS Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=8342&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Secure ACS EAP-TLS Authentication Bypass",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6106&signatureSubId=0&releaseVersion=S388&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

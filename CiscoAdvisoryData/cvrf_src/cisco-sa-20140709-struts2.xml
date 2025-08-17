@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Apache Struts 2 Command Execution Vulnerability in Multiple Cisco Products</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20140709-struts2</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2014-07-09T15:31:01</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2014-08-27T19:31:48</cvrf:Date>
+        <cvrf:Description>Added additional information about fixed releases for Cisco Unified CCE.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2014-12-17T18:47:33</cvrf:Date>
+        <cvrf:Description>Credited vulnerability reporters, per request.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2014-07-09T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2014-12-17T18:47:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Multiple Cisco products include an implementation of the Apache Struts 2  component that is affected by a remote command execution vulnerability identified by Apache with Common Vulnerabilities and Exposures ID CVE-2010-1870.
+
+The vulnerability is due to insufficient sanitization on user-supplied input in the XWorks component of the affected software. The component uses the ParameterInterceptors directive to parse the Object-Graph Navigation Language (OGNL) expressions that are implemented via a whitelist feature. An attacker could exploit this vulnerability by sending crafted requests  that contain OGNL expressions to an affected system. An  exploit could allow the attacker to execute arbitrary code on the targeted system.
+
+Cisco has released software updates that address this vulnerability  for all the affected products except Cisco Business Edition 3000 Series. Customers using Cisco  Business Edition 3000 Series should contact their Cisco representative for  available options.
+
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.  This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140709-struts2 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140709-struts2"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following Cisco products are affected by this vulnerability:
+
+Cisco Business Edition 3000 Series
+Cisco Identity Services Engine (ISE)
+Cisco Media Experience Engine (MXE) 3500 Series
+Cisco Unified Contact Center Enterprise (Cisco Unified CCE)</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">The following Cisco products have been analyzed and are not affected by this vulnerability:
+
+          Cisco Adaptive Security Appliance (ASA) Software
+    Cisco Business Edition 5000 Series and Cisco Business Edition 6000 Series
+    Cisco Cloud Web Security (CWS)
+    Cisco Conductor
+    Cisco Configuration Assurance Solution (CAS)
+    Cisco Prime Data Center Network Manager (DCNM)
+    Cisco DVR
+    Cisco Emergency Responder
+    Cisco Firewall Service Module (FWSM) Software
+    Cisco Hosted Collaboration Mediation Fulfillment (HCM-F)
+    Cisco Media Experience Engine (MXE) 3000 Series and Cisco MXE 5600 Series
+    Cisco Prime Central for Hosted Collaboration Solution (HCS) Assurance
+    Cisco Prime Infrastructure
+    Cisco Prime LAN Management Solution (LMS)
+    Cisco Prime Network Control System (NCS)
+    Cisco Secure Access Control Server (ACS)
+    Cisco TelePresence Manager, Cisco TelePresence Recording Server, and Cisco TelePresence Multipoint Switch
+    Cisco Unified Attendant Console
+    Cisco Unified Communications Domain Manager (Cisco Unified CDM)
+    Cisco Unified Communications Manager (Cisco Unified CM)
+    Cisco Unified Communications Manager IM and Presence Service and Cisco Unified Presence
+    Cisco Unified MeetingPlace
+    Cisco Prime Unified Operation Manager (UOM)
+    Cisco Prime Unified Services Monitor (USM)
+    Cisco Unified SIP Proxy (USP)
+    Cisco Unified Survivable Remote Site Telephony (SRST) Manager
+    Cisco Unified Survivable Remote Site Voicemail (SRSV)
+    Cisco Unity Connection
+    Cisco Videoscape Control Suite Foundation (VCS-Foundation)
+    Cisco Web Security Appliance (WSA), Cisco Email Security Appliance (ESA), and Cisco Content Security Management Appliance (SMA)
+    Cisco WebEx
+    Cisco WebEx Recording Format (WRF) and Cisco WebEx Network-Based Recorder (NBR) Player
+    Cisco Wireless Control System (WCS)
+    CiscoWorks Common Services (CS)
+
+No other Cisco products are affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">Apache Struts 2 contains a vulnerability that could  allow an unauthenticated, remote attacker to bypass security  restrictions and execute arbitrary commands on a targeted system.
+
+The vulnerability is due to insufficient sanitization on user-supplied input  by the affected software. An unauthenticated, remote attacker could  exploit the vulnerability by sending crafted requests that contain OGNL expressions to bypass security restrictions and execute  arbitrary commands on server-side objects.
+
+This vulnerability has been confirmed to allow remote code execution with Administrator privileges for Cisco Unified CCE. Exploitation on Cisco ISE, Cisco MXE 3500, and Cisco Business Edition 3000 Series is theoretically possible but could not be reproduced. Cisco recommends that customers affected by this vulnerability upgrade to a fixed software release version.
+
+This vulnerability is documented in Cisco bug IDs CSCun31197 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCun31197"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) for Cisco Business Edition 3000 Series, CSCun31314 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCun31314"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) for Cisco ISE, CSCun31301 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCun31301"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) for Cisco MXE 3500, and CSCun25241 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCun25241"] (registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) for Cisco Unified CCE.
+
+This vulnerability has been assigned the Common Vulnerabilities and Exposures (CVE) ID CVE-2010-1870.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that mitigate this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories, Responses, and Notices archive at http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+  The following table provides the first fixed release for each affected product:
+
+                               Product              First Fixed Release
+                                  Cisco Business Edition 3000 Series                 Not available. Please contact Cisco TAC or your Cisco representative for available options.
+                                  Cisco Identity Services Engine (ISE)                1.0.4.573-6, 1.1.0.665-4, 1.1.1.268-6, 1.1.2.145-9, 1.1.3.124-4, 1.1.4.218-4, and 1.2.0.899
+                                  Cisco Media Experience Engine (MXE) 3500 Series                3.3.2 and apply StrutsPatch.zip                                  Cisco Unified CCE
+               10.5(1), 8.5(4)ES37, 9.0(4)ES39, 9.0(3)ES13
+
+Note: The Engineering Special patch releases for Cisco Unified CCE are available at the following links:
+
+8.5(4): http://www.cisco.com/cisco/software/special/release.html?config=2c8f679b8cdc4fed65e866e30fced34c ["http://www.cisco.com/cisco/software/special/release.html?config=2c8f679b8cdc4fed65e866e30fced34c"]
+9.0(4): http://software.cisco.com/download/special/release.html?config=b40f7ffb0a876e5dae4e202df4b6547b ["http://software.cisco.com/download/special/release.html?config=b40f7ffb0a876e5dae4e202df4b6547b"]
+9.0(3): http://software.cisco.com/download/special/release.html?config=593487b10e77653c20560c54efa6e7a0 ["http://software.cisco.com/download/special/release.html?config=593487b10e77653c20560c54efa6e7a0"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">Apache has confirmed this vulnerability at http://struts.apache.org/release/2.2.x/docs/s2-005.html  ["http://struts.apache.org/release/2.2.x/docs/s2-005.html"]
+
+Functional code that demonstrates an exploit of this vulnerability is publicly available.
+
+The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory on any of the affected Cisco products.
+
+This vulnerability was reported to Cisco for Cisco Unified CCE by Che-Chun Kuo and Jason Sinchak.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140709-struts2</cvrf:URL>
+      <cvrf:Description>Apache Struts 2 Command Execution Vulnerability in Multiple Cisco Products</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Unified Contact Center Express" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-92631">Cisco Unified Contact Center Express </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Identity Services Engine Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-111903">Cisco Identity Services Engine Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Business Edition 3000 Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-114987">Cisco Business Edition 3000 Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco MXE 3500 (Media Experience Engine)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-195235">Cisco MXE 3500 (Media Experience Engine) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Apache Struts 2 Remote Code Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCun31301</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCun31301,CSCun31314,CSCun31197,CSCun25241</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2010-1870</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-195235</ProductID>
+        <ProductID>CVRFPID-111903</ProductID>
+        <ProductID>CVRFPID-114987</ProductID>
+        <ProductID>CVRFPID-92631</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>10.0</BaseScoreV2>
+        <TemporalScoreV2>6.7</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:U/RL:OF/RC:UC</VectorV2>
+        <ProductID>CVRFPID-195235</ProductID>
+        <ProductID>CVRFPID-111903</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>10.0</BaseScoreV2>
+        <TemporalScoreV2>7.6</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:U/RL:U/RC:UC</VectorV2>
+        <ProductID>CVRFPID-114987</ProductID>
+      </ScoreSetV2>
+      <ScoreSetV2>
+        <BaseScoreV2>10.0</BaseScoreV2>
+        <TemporalScoreV2>8.3</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+        <ProductID>CVRFPID-92631</ProductID>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140709-struts2</URL>
+        <Description>Apache Struts 2 Command Execution Vulnerability in Multiple Cisco Products</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

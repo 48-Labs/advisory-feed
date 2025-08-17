@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20171129-dcnm",
+  "title": "Multiple Vulnerabilities in Cisco Data Center Network Manager Software",
+  "version": "1.1",
+  "firstPublished": "2017-11-29T16:00:00.000+0000",
+  "lastPublished": "2017-11-30T12:25:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171129-dcnm",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-113, CWE-20, CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2017-12343,CVE-2017-12344,CVE-2017-12345,CVE-2017-12346,CVE-2017-12347",
+  "ciscoBugId": "CSCvf40477,CSCvf63150,CSCvf68218,CSCvf68235,CSCvf68247",
+  "status": "",
+  "summary": "Multiple vulnerabilities in Cisco&nbsp;Data Center Network Manager&nbsp;(DCNM) Software could allow a remote attacker to inject arbitrary values into DCNM configuration parameters, redirect a user to a malicious website, inject malicious content into a DCNM client interface, or conduct a cross-site ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

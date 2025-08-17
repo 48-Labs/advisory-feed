@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20130424-ucsmulti",
+  "title": "Multiple Vulnerabilities in Cisco Unified Computing System",
+  "version": "1.2",
+  "firstPublished": "2013-04-24T16:00:00.000+0000",
+  "lastPublished": "2013-06-06T20:24:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130424-ucsmulti",
+  "severity": "Critical",
+  "cwe": "CWE-119, CWE-20, CWE-200, CWE-287",
+  "erpPubIds": "28729,29032,29031,29030,29029,29028",
+  "cve": "CVE-2013-1182,CVE-2013-1183,CVE-2013-1184,CVE-2013-1185,CVE-2013-1186",
+  "ciscoBugId": "CSCtc91207,CSCtd32371,CSCtg48206,CSCtq86543,CSCts53746",
+  "status": "",
+  "summary": "Managed and standalone Cisco Unified Computing System (UCS) deployments contain one or more of the vulnerabilities:    Cisco Unified Computing System LDAP User Authentication Bypass Vulnerability    Cisco Unified Computing System IPMI Buffer Overflow ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Computing System KVM Authentication Bypass Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29032&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Computing System Information Disclosure Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29031&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Computing Management API Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29030&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Computing System IPMI Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29029&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Computing System LDAP User Authentication Bypass Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29028&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Computing System",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28729"
+        }
+      ]
+    }
+  ]
+}

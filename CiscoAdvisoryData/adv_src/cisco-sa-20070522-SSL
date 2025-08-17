@@ -1,0 +1,56 @@
+{
+  "identifier": "cisco-sa-20070522-SSL",
+  "title": "Multiple Vulnerabilities in Cisco IOS While Processing SSL Packets",
+  "version": "1.4",
+  "firstPublished": "2007-05-22T13:00:00.000+0000",
+  "lastPublished": "2007-05-22T13:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070522-SSL",
+  "severity": "Low",
+  "cwe": "CWE-399",
+  "erpPubIds": "13337,13338,13356,cisco-amb-20070522-SSL",
+  "cve": "CVE-2007-2813",
+  "ciscoBugId": "CSCsb12598,CSCsb40304,CSCsd92405",
+  "status": "",
+  "summary": "    Cisco IOS device may crash while processing malformed Secure Sockets Layer (SSL) packets. In order to trigger these vulnerabilities, a malicious client must send malformed packets during the SSL protocol exchange with the vulnerable device.    Successful repeated exploitation ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS ChangeCipherSpec SSL Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13337&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS SSL ClientHello Message Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13338&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Finished SSL Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13356&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco IOS While Processing SSL Packets",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070522-SSL"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "OpenSSL  SSL OR TLS Malformed Handshake DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5403&signatureSubId=0&releaseVersion=S790&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

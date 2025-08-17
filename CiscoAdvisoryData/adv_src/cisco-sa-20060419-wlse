@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20060419-wlse",
+  "title": "Multiple Vulnerabilities in the WLSE Appliance",
+  "version": "1.0",
+  "firstPublished": "2006-04-19T15:00:00.000+0000",
+  "lastPublished": "2006-04-19T15:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060419-wlse",
+  "cwe": "CWE-79",
+  "erpPubIds": "10752",
+  "cve": "CVE-2006-1960",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   There are two vulnerabilities that exist in the CiscoWorks Wireless LAN Solution Engine (WLSE). The first is a cross site scripting (XSS) vulnerability that may allow an attacker to gain administrative privileges on the system. The second is a local privilege escalation vulnerability ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "CiscoWorks Wireless LAN Solution Engine Cross-Site Scripting Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=10752&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "WLSE Cross Site Scripting",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5750&signatureSubId=0&releaseVersion=S416&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software ACLs Not Installed upon Reload</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-asaftd-aclconfig-wVK52f3z</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2023-07-27T16:07:04</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2023-07-27T16:38:54</cvrf:Date>
+        <cvrf:Description>Clarified the role of object groups.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2023-07-27T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2023-07-27T16:38:54</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2023-07-27T16:38:56.3718169Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">An issue with the boot-time programming of access control lists (ACLs) for Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow a device to boot without all of its ACLs being correctly installed.
+
+This issue is due to a logic error that occurs when ACLs are programmed at boot time. If object groups are not in sequential order in the startup configuration, some access control entries (ACEs) may not be installed. Because ACLs govern network traffic to, from, and across the device, an incorrectly programmed ACL could cause traffic disruptions by blocking traffic that should be allowed or allowing traffic that should blocked. As a result, the device could have ACLs that are not properly programmed such that a range of both permit ACEs and deny ACEs could be missed, adversely affecting all traffic patterns.
+
+Cisco has released software updates that address this issue. There are no workarounds that address this issue.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-aclconfig-wVK52f3z  ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-aclconfig-wVK52f3z"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This issue affects Cisco products if they are running Cisco ASA Software Release 9.18.1 or later or Cisco FTD Software Release 7.2.0 or later.
+
+Cisco Bug ID CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"] affects the behavior of this issue in the following releases. These releases are only affected by this issue if the object group search (OGS) ACL optimization feature is enabled:
+
+Cisco ASA Software releases 9.18.3.39, 9.18.3.46, and 9.19.1.12
+Cisco FTD Software Release 7.2.4
+        Cisco ASA Releases  Cisco FTD Releases  Configuration Dependency  Behavior          9.18.1 and later
+9.19.1 and later  7.2.0 and later  Object groups  Upon reload, object groups configured out of order fail to load and are not present in the running configuration.      9.18.3.39
+9.18.3.46
+9.19.1.12  7.2.4  OGS access control with object groups  Upon reload, object groups that are out of order load and are in the running configuration but are not associated with ACLs that reference them.
+See the Details ["#details"] section for examples of susceptible configurations.
+  Behavior in Releases That Are Not Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"]
+In Cisco ASA Software releases 9.18.1 and later and Cisco FTD Software releases 7.2.0 and later, this issue would only be triggered when the device reloads.
+
+This issue can cause object groups that are out of order in the startup configuration to fail to load during boot time, which would only impact the ACL rules that reference those same object groups. This behavior is not dependent on whether the object search ACL optimization feature is enabled.
+
+If the object group configuration fails to load, the following error message will appear on the console when the device reloads:
+
+
+Specified group object (name) does not exist
+*** Output from config line xxxx, " group-object name..."
+
+This error message will not be present during subsequent reloads of the device.
+  Behavior in Releases That Are Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"]
+In Cisco ASA Software releases 9.18.3.39, 9.18.3.46, and 9.19.1.12 and Cisco FTD Software Release 7.2.4 with the OGS ACL optimization feature enabled, this issue would only be triggered when the device reloads.
+
+Object groups that are out of order in the startup configuration will load but are silently not applied to all ACL rules that are associated to a broader object group that uses them as a member.
+
+This behavior only occurs if the OGS ACL optimization feature is enabled. This feature is enabled by default for new deployments of Cisco ASA Software releases 9.18.1 and later and Cisco FTD Software releases 7.2.0 and later. In earlier releases of Cisco ASA Software and Cisco FTD Software, this feature is disabled by default. When upgrading to a susceptible release, the previous configuration is retained. For additional details, see the Release Notes for the Cisco Secure Firewall ASA Series, 9.18(x) : New Features in ASA 9.18(1) ["https://www.cisco.com/c/en/us/td/docs/security/asa/asa918/release/notes/asarn918.html#reference_epy_jcy_35b"].
+
+Determine the OGS ACL Optimization Configuration
+
+To determine the OGS ACL optimization configuration, use the show running-config object-group-search command on the device CLI. The following example shows the output of the show running-config object-group-search command on a device that has the OGS ACL optimization feature enabled and thus is potentially at risk:
+
+
+# show running-config object-group-search
+object-group-search access-control
+
+If the command returns empty output or an output of no object-group-search access-control, the OGS ACL optimization feature is disabled and the device is not susceptible to the issue.
+
+For information about which Cisco software releases are susceptible, see the Fixed Software ["#fs"] section of this advisory.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this issue.
+
+Cisco has confirmed that this issue does not affect Cisco Firepower Management Center (FMC) Software.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">ACLs govern network traffic to, from, and across the device. An incorrectly programmed ACL could cause traffic that should have been allowed to be blocked or traffic that should have been blocked to be allowed, potentially causing traffic disruptions. A device that is affected by the issue that is described in this advisory could be missing a range of both permit ACEs and deny ACEs, so all traffic patterns could be affected adversely.
+
+Note: There is no single configuration parameter or status that can be reviewed to determine if a device would experience this issue when rebooted. In general terms, the problem occurs when a broader object group references another object group that is not yet initialized. For example, object-group #1 uses object-group #2 as a member, but due to the sequential order of the startup configuration, object-group #2 will only be created later. This allows for the condition where ACEs may be missing upon reboot.
+  Behavior of Susceptible Configuration in Releases Not Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"]
+This issue can affect Cisco products if they are running Cisco ASA Software releases 9.18.1 or later or Cisco FTD Software releases 7.2.0 or later. For these releases, object groups that are out of order will fail to load from the startup configuration. In this example of a susceptible configuration, Object-group network group1-dmz is in the startup configuration after it is referenced. Therefore, Object-group network group1-dmz will not load and will be missing from the running configuration as a member of parent object-group network ���A���.
+
+
+!
+Object-group network group2-dmz
+Object-group network group3-dmz
+!
+object-group network ���A���
+ group-object group1-dmz
+ group-object group2-dmz
+ group-object group3-dmz
+!
+Object-group network group1-dmz
+
+This would result in the following console error during the first reload only:
+
+
+Specified group object (group1-dmz) does not exist
+*** Output from config line xxxx, " group-object group1-dmz..."
+
+   Behavior of Susceptible Configuration in Releases Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"]
+Cisco ASA Software releases 9.18.3.39, 9.18.3.46, and 9.19.1.12 and Cisco FTD Software Release 7.2.4 are affected by CSCwe64043, and they are affected by the issue described in this advisory only if the object-group-search access-control ACL optimization feature is enabled. For these releases, all object groups that are out of order will load and will not generate a startup-configuration error. However, the impact can be broader. In this example of a susceptible configuration, object-group-search access-control is configured, and Object-group network group1-dmz is in the startup configuration after it is referenced. In this situation, the entire object-group network ���A��� will be impacted. All of its members will be present on the running configuration, but all ACEs will not be installed and will be missing from the show access-list output.
+
+
+!
+object-group-search access-control
+.
+.
+.
+!
+!
+Object-group network group2-dmz
+Object-group network group3-dmz
+!
+object-group network ���A���
+ group-object group1-dmz
+ group-object group2-dmz
+ group-object group3-dmz
+!
+Object-group network group1-dmz
+!
+
+This scenario can be observed by comparing the output of the show access-list CLI command before the reload, when all the ACLs are properly applied, and then after the reload, when ACLs were not installed at boot time. This example shows the output before the reload that triggers this issue:
+
+
+# show access-list
+access-list Inside_in line 1 extended deny ip object-group A any (hitcnt=0) 0xd90bfe1b
+  access-list Inside_in line 1 extended deny ip v4-object-group A(2147483650) any4(2147549186) (hitcnt=0) 0x95c59a2e
+  access-list Inside_in line 1 extended deny ip v4-object-group A(2147483650) any6(2147549187) (hitcnt=0) 0xa35991aa
+access-list Inside_in line 2 extended permit ip object-group B any (hitcnt=0) 0x8beb7d31
+  access-list Inside_in line 2 extended permit ip v4-object-group B(2147483652) any4(2147549186) (hitcnt=0) 0x477509a7
+access-list Inside_in line 2 extended permit ip v4-object-group B(2147483652) any6(2147549187) (hitcnt=0) 0x80ea08ea
+
+This example shows the output after the reload. ACLs have not been installed properly, and the device is in the problematic state.
+
+
+# show access-list
+access-list Inside_in line 1 extended deny ip object-group A any (hitcnt=0) 0xd90bfe1b
+access-list Inside_in line 2 extended permit ip object-group B any (hitcnt=0) 0x8beb7d31
+access-list Inside_in line 2 extended permit ip v4-object-group B(2147483652) any4(2147549186) (hitcnt=0) 0x477509a7
+access-list Inside_in line 2 extended permit ip v4-object-group B(2147483652) any6(2147549187) (hitcnt=0) 0x80ea08ea</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address this issue.
+
+The information in this section pertains to the recovery of the ACL configuration that is either missing from the running configuration or was not installed at boot time. When implementing one of the recovery options, note the following:
+
+Upgrading to a fixed release does not recover missing ACLs, so manual recovery is necessary.
+After implementing one of the recovery options, refrain from adding new object groups into existing access-control rules because doing so could put the configurations out of order and reintroduce this issue. Instead, associate any new object groups with new rules.
+After the ACLs are manually recovered, Cisco strongly recommends upgrading the device to a fixed software release, as outlined in the Fixed Software ["#fs"] section of this advisory. For Cisco FTD devices managed by Cisco FMC or Cisco Cloud-Delivered FMC (cdFMC), the configuration recovery and software upgrade can be done at the same time.
+  Recovery Options for Cisco FTD Software Releases 7.2.0 through 7.3.1 (Not Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For these releases, the ACLs are missing from the startup and running configurations. Take one of the following actions, depending on the management device that is used:
+
+For devices that are managed by Cisco FMC or Cisco cdFMC, perform a Force Deploy of the Access Control Policy (ACP) after every reload of the Cisco FTD device to restore the impacted ACLs.
+For devices that are managed by Cisco FMC, Cisco cdFMC, or Cisco Defense Orchestrator, perform a Force Deploy of the Access Control Policy (ACP) from the Cisco FMC or Cisco cdFMC UI.
+
+Cisco FTD devices that are managed by Cisco Firepower Device Manager (FDM) or by Cisco FDM with Cisco Defense Orchestrator are not impacted by this issue.
+  Recovery Options for Cisco FTD Software Release 7.2.4 (Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For this release, the ACLs are present in the startup and running configurations but may not have been properly installed during boot time.
+
+For devices that are managed by Cisco FMC or Cisco cdFMC, the recommended recovery method is to duplicate the current ACP that is associated with the impacted FTD device, associate the duplicate ACP with the Cisco FTD device, and deploy. Do not return or re-associate the FTD device to the former, problematic ACP, and continue to use the duplicate ACP.
+Another recovery option���which is not recommended by Cisco���for devices that are managed by Cisco FMC or Cisco cdFMC is to copy-paste a new ACP into the problematic ACP and deploy it to the Cisco FTD device. To determine any problematic rules, use the show access-list CLI command on the Cisco FTD device and search for any sequence of three or more lines that display remarks only. Three or more lines of remarks are not expected and are an indication of the problematic state. Note the sequential remark keyword in the following example:
+
+# show running-config access-list
+.
+.
+.
+access-list CSM_FW_ACL_ remark rule-id 268437505: ACCESS POLICY: TEST - Mandatory
+access-list CSM_FW_ACL_ remark rule-id 268437505: L4 RULE: TEST1
+access-list CSM_FW_ACL_ remark rule-id 268437506: ACCESS POLICY: TEST - Mandatory
+access-list CSM_FW_ACL_ remark rule-id 268437506: L7 RULE: TEST2
+access-list CSM_FW_ACL_ remark rule-id 268437504: ACCESS POLICY: TEST - Default
+access-list CSM_FW_ACL_ remark rule-id 268437504: L4 RULE: DEFAULT ACTION RULE
+access-list CSM_FW_ACL_ advanced permit ip any any rule-id 268437504 event-log flow-endsrc_rule_268437506 any rule-id 268437
+
+For devices that are managed by Cisco FMC, Cisco cdFMC, or Cisco Defense Orchestrator, execute the same recovery steps as described for Cisco FTD devices that are managed by Cisco FMC only.
+
+Cisco FTD devices that are managed by Cisco Firepower Device Manager (FDM) or by Cisco FDM with Cisco Defense Orchestrator are not impacted by this issue.
+  Recovery Options for Cisco ASA Software Releases 9.18.1 up to 9.18.3.39 and Releases 9.19.1 up to 9.19.1.12 (Not Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For these releases, the ACLs are missing from the startup and running configurations.
+
+For Cisco ASAs that are managed through the CLI or through Cisco Adaptive Security Device Manager (ASDM), add the missing object-group membership under the respective parent object group. To find the missing lines in the ACL configuration that need to be added, use a previous configuration backup and compare it to the current configuration. In general, the following steps can be used to compare two ASA configurations:
+
+From the CLI of the device, copy the running-config and save it to a text file called config1.txt (or any desired name) on your local machine.
+Get the second configuration for the comparison from a backup configuration or previously saved configuration.
+From the CLI, copy the second configuration and save it to a separate text file named config2.txt (or any desired name) on your local machine.
+Open a text editor or a terminal-based diff tool, such as diff or vimdiff, and compare the two configuration files.
+Analyze the differences highlighted by the diff tool, where added lines are typically marked with + and deleted lines with -. The tool will show where changes have occurred, allowing the administrator to compare and understand the changes between the two configurations.
+
+When the ASA is managed by Cisco Security Manager, the administrator can push any deployment to the device and Cisco Security Manager will return the missing configuration lines when Out-of-Band changes is enabled (which is the default).
+  Recovery Options for Cisco ASA Software Releases 9.18.3.39, 9.18.3.46, or 9.19.1.12 (Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For these releases, the ACLs are present in the startup and running configurations but may not have been properly installed during boot time.
+
+Devices Managed Using the CLI or Cisco ASDM
+
+For Cisco ASAs that are managed through the CLI or Cisco ASDM, in general terms, the administrator will need to remove the problematic object-group member from the parent object group and repeat the show access-list CLI command in order to recover the access list rule(s). In the following example, the root cause of the issue is that object-group network Subnets-3 is sequentially in the running configuration after it is used in object-group network RISK-NETS. This is only an example; the actual information and object-group names are unique to each ASA configuration.
+
+
+# show access-list
+.
+.
+.
+access-list Inside_in line 1 extended deny ip object-group RISK-NETS any (hitcnt=0) 0xd90bfe1b
+access-list Inside_in line 2 extended permit ip object-group ALLOW-NETS any (hitcnt=0) 0x8beb7d31
+  access-list Inside_in line 2 extended permit ip v4-object-group ALLOW-NETS(2147483652) any4(2147549186) (hitcnt=0) 0x477509a7
+access-list Inside_in line 2 extended permit ip v4-object-group ALLOW-NETS(2147483652) any6(2147549187) (hitcnt=0) 0x80ea08ea
+
+# show running-config | include object|subnet|access
+object-group network Subnets-1
+ network-object object Subnet1A
+ network-object object Subnet1B
+!
+object-group network RISK-NETS
+ group-object Subnets-1
+ group-object Subnets-3
+!
+object-group network Subnets-3
+ network-object object Subnet3A
+ network-object object Subnet3B
+!
+
+In the preceding example, all of the access lists associated with RISK-NETS are not installed because object-group network Subnets-3 is a member, but object-group network Subnets-3 is initialized after RISK-NETS in the running config, due to the sequential order. To remove the problematic object-group and recover the ACL rule, do the following for all rules in the problematic state:
+
+
+# config t
+(config)# object-group network RISK-NETS
+(config-network-object-group)# no group-object Subnets-3
+(config)# access-list Inside_in line 1 extended deny ip object-group RISK-NETS any
+
+Devices Managed Using Cisco Security Manager
+
+For Cisco ASAs that are managed by Cisco Security Manager, the recovery options are as follows:
+
+The administrator should duplicate the current ACPs that are associated with the impacted device, associate them with the ASA, and deploy.
+The administrator could paste a new ACP into the same ACPs that was affected by this issue and then deploy to the ASA.
+
+Customers who need help with ACL recovery are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. It is important to note that upgrading to a fixed release will not restore the missing ACLs and that manual recovery is required with a subsequent upgrade to a fixed release.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+  Fixed Releases
+At the time of publication, the release information in the following table(s) was accurate. See the Details section in the bug ID(s) at the top of this advisory for the most complete and current information.
+
+The left column lists Cisco software releases, and the right column indicates whether a release was affected by the issue that is described in this advisory and which release included the fix for this issue.
+           Cisco ASA Release  First Fixed Release          Earlier than 9.18  Not affected      9.18  9.18.3.53      9.19  9.19.1.18
+            Cisco FTD Release  First Fixed Release          Earlier than 7.2  Not affected      7.2  7.2.4.1
+7.2.5
+Cisco_FTD_Hotfix_AW-7.2.4.1-1.sh.REL.tar
+Cisco_FTD_SSP_FP1K_Hotfix_AW-7.2.4.1-1.sh.REL.tar
+Cisco_FTD_SSP_FP2K_Hotfix_AW-7.2.4.1-1.sh.REL.tar
+Cisco_FTD_SSP_FP3K_Hotfix_AW-7.2.4.1-1.sh.REL.tar
+Cisco_FTD_SSP_Hotfix_AW-7.2.4.1-1.sh.REL.tar      7.3  7.3.1.1 (future release)
+The Cisco Product Security Incident Response Team (PSIRT) validates only the affected and fixed release information that is documented in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">This issue was found during the resolution of a Cisco TAC support case.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-aclconfig-wVK52f3z</cvrf:URL>
+      <cvrf:Description>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software ACLs Not Installed upon Reload</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="IntelliShield">
+      <Branch Type="Product Name" Name="Universal Product">
+        <FullProductName ProductID="CVRFPID-3291">IntelliShield Universal Product </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Object Group Search ACL Bypass Vulnerability</Title>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this issue.
+
+The information in this section pertains to the recovery of the ACL configuration that is either missing from the running configuration or was not installed at boot time. When implementing one of the recovery options, note the following:
+
+Upgrading to a fixed release does not recover missing ACLs, so manual recovery is necessary.
+After implementing one of the recovery options, refrain from adding new object groups into existing access-control rules because doing so could put the configurations out of order and reintroduce this issue. Instead, associate any new object groups with new rules.
+After the ACLs are manually recovered, Cisco strongly recommends upgrading the device to a fixed software release, as outlined in the Fixed Software ["#fs"] section of this advisory. For Cisco FTD devices managed by Cisco FMC or Cisco Cloud-Delivered FMC (cdFMC), the configuration recovery and software upgrade can be done at the same time.
+  Recovery Options for Cisco FTD Software Releases 7.2.0 through 7.3.1 (Not Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For these releases, the ACLs are missing from the startup and running configurations. Take one of the following actions, depending on the management device that is used:
+
+For devices that are managed by Cisco FMC or Cisco cdFMC, perform a Force Deploy of the Access Control Policy (ACP) after every reload of the Cisco FTD device to restore the impacted ACLs.
+For devices that are managed by Cisco FMC, Cisco cdFMC, or Cisco Defense Orchestrator, perform a Force Deploy of the Access Control Policy (ACP) from the Cisco FMC or Cisco cdFMC UI.
+
+Cisco FTD devices that are managed by Cisco Firepower Device Manager (FDM) or by Cisco FDM with Cisco Defense Orchestrator are not impacted by this issue.
+  Recovery Options for Cisco FTD Software Release 7.2.4 (Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For this release, the ACLs are present in the startup and running configurations but may not have been properly installed during boot time.
+
+For devices that are managed by Cisco FMC or Cisco cdFMC, the recommended recovery method is to duplicate the current ACP that is associated with the impacted FTD device, associate the duplicate ACP with the Cisco FTD device, and deploy. Do not return or re-associate the FTD device to the former, problematic ACP, and continue to use the duplicate ACP.
+Another recovery option���which is not recommended by Cisco���for devices that are managed by Cisco FMC or Cisco cdFMC is to copy-paste a new ACP into the problematic ACP and deploy it to the Cisco FTD device. To determine any problematic rules, use the show access-list CLI command on the Cisco FTD device and search for any sequence of three or more lines that display remarks only. Three or more lines of remarks are not expected and are an indication of the problematic state. Note the sequential remark keyword in the following example:
+
+# show running-config access-list
+.
+.
+.
+access-list CSM_FW_ACL_ remark rule-id 268437505: ACCESS POLICY: TEST - Mandatory
+access-list CSM_FW_ACL_ remark rule-id 268437505: L4 RULE: TEST1
+access-list CSM_FW_ACL_ remark rule-id 268437506: ACCESS POLICY: TEST - Mandatory
+access-list CSM_FW_ACL_ remark rule-id 268437506: L7 RULE: TEST2
+access-list CSM_FW_ACL_ remark rule-id 268437504: ACCESS POLICY: TEST - Default
+access-list CSM_FW_ACL_ remark rule-id 268437504: L4 RULE: DEFAULT ACTION RULE
+access-list CSM_FW_ACL_ advanced permit ip any any rule-id 268437504 event-log flow-endsrc_rule_268437506 any rule-id 268437
+
+For devices that are managed by Cisco FMC, Cisco cdFMC, or Cisco Defense Orchestrator, execute the same recovery steps as described for Cisco FTD devices that are managed by Cisco FMC only.
+
+Cisco FTD devices that are managed by Cisco Firepower Device Manager (FDM) or by Cisco FDM with Cisco Defense Orchestrator are not impacted by this issue.
+  Recovery Options for Cisco ASA Software Releases 9.18.1 up to 9.18.3.39 and Releases 9.19.1 up to 9.19.1.12 (Not Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For these releases, the ACLs are missing from the startup and running configurations.
+
+For Cisco ASAs that are managed through the CLI or through Cisco Adaptive Security Device Manager (ASDM), add the missing object-group membership under the respective parent object group. To find the missing lines in the ACL configuration that need to be added, use a previous configuration backup and compare it to the current configuration. In general, the following steps can be used to compare two ASA configurations:
+
+From the CLI of the device, copy the running-config and save it to a text file called config1.txt (or any desired name) on your local machine.
+Get the second configuration for the comparison from a backup configuration or previously saved configuration.
+From the CLI, copy the second configuration and save it to a separate text file named config2.txt (or any desired name) on your local machine.
+Open a text editor or a terminal-based diff tool, such as diff or vimdiff, and compare the two configuration files.
+Analyze the differences highlighted by the diff tool, where added lines are typically marked with + and deleted lines with -. The tool will show where changes have occurred, allowing the administrator to compare and understand the changes between the two configurations.
+
+When the ASA is managed by Cisco Security Manager, the administrator can push any deployment to the device and Cisco Security Manager will return the missing configuration lines when Out-of-Band changes is enabled (which is the default).
+  Recovery Options for Cisco ASA Software Releases 9.18.3.39, 9.18.3.46, or 9.19.1.12 (Affected by CSCwe64043 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwe64043"])
+For these releases, the ACLs are present in the startup and running configurations but may not have been properly installed during boot time.
+
+Devices Managed Using the CLI or Cisco ASDM
+
+For Cisco ASAs that are managed through the CLI or Cisco ASDM, in general terms, the administrator will need to remove the problematic object-group member from the parent object group and repeat the show access-list CLI command in order to recover the access list rule(s). In the following example, the root cause of the issue is that object-group network Subnets-3 is sequentially in the running configuration after it is used in object-group network RISK-NETS. This is only an example; the actual information and object-group names are unique to each ASA configuration.
+
+
+# show access-list
+.
+.
+.
+access-list Inside_in line 1 extended deny ip object-group RISK-NETS any (hitcnt=0) 0xd90bfe1b
+access-list Inside_in line 2 extended permit ip object-group ALLOW-NETS any (hitcnt=0) 0x8beb7d31
+  access-list Inside_in line 2 extended permit ip v4-object-group ALLOW-NETS(2147483652) any4(2147549186) (hitcnt=0) 0x477509a7
+access-list Inside_in line 2 extended permit ip v4-object-group ALLOW-NETS(2147483652) any6(2147549187) (hitcnt=0) 0x80ea08ea
+
+# show running-config | include object|subnet|access
+object-group network Subnets-1
+ network-object object Subnet1A
+ network-object object Subnet1B
+!
+object-group network RISK-NETS
+ group-object Subnets-1
+ group-object Subnets-3
+!
+object-group network Subnets-3
+ network-object object Subnet3A
+ network-object object Subnet3B
+!
+
+In the preceding example, all of the access lists associated with RISK-NETS are not installed because object-group network Subnets-3 is a member, but object-group network Subnets-3 is initialized after RISK-NETS in the running config, due to the sequential order. To remove the problematic object-group and recover the ACL rule, do the following for all rules in the problematic state:
+
+
+# config t
+(config)# object-group network RISK-NETS
+(config-network-object-group)# no group-object Subnets-3
+(config)# access-list Inside_in line 1 extended deny ip object-group RISK-NETS any
+
+Devices Managed Using Cisco Security Manager
+
+For Cisco ASAs that are managed by Cisco Security Manager, the recovery options are as follows:
+
+The administrator should duplicate the current ACPs that are associated with the impacted device, associate them with the ASA, and deploy.
+The administrator could paste a new ACP into the same ACPs that was affected by this issue and then deploy to the ASA.
+
+Customers who need help with ACL recovery are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. It is important to note that upgrading to a fixed release will not restore the missing ACLs and that manual recovery is required with a subsequent upgrade to a fixed release.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-aclconfig-wVK52f3z</URL>
+        <Description>Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software ACLs Not Installed upon Reload</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

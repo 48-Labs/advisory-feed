@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160609-ipp",
+  "title": "Cisco IP Phones Web Application Buffer Overflow Vulnerability",
+  "version": "2.1",
+  "firstPublished": "2016-06-09T16:00:00.000+0000",
+  "lastPublished": "2020-04-16T15:59:00.720+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160609-ipp",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-119",
+  "cve": "CVE-2016-1421",
+  "ciscoBugId": "CSCuz03034,CSCvs78281",
+  "status": "",
+  "summary": "A vulnerability in the web application for Cisco IP Phones could allow an unauthenticated, remote attacker to execute code with root privileges or cause a reload of an affected IP phone, resulting in a denial of service (DoS) condition.The vulnerability exists because ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "53669",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-04-16-new.html"
+        }
+      ]
+    }
+  ]
+}

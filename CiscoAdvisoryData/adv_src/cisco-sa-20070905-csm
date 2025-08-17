@@ -1,0 +1,116 @@
+{
+  "identifier": "cisco-sa-20070905-csm",
+  "title": "Denial of Service Vulnerabilities in Content Switching Module",
+  "version": "1.1",
+  "firstPublished": "2007-09-05T16:00:00.000+0000",
+  "lastPublished": "2007-09-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070905-csm",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "14071,14072,cisco-amb-20070905-csm",
+  "cve": "CVE-2007-4788,CVE-2007-4789",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   The Cisco Content Switching Modules (CSM) and Cisco Content Switching Module with SSL (CSM-S) contain two vulnerabilities that can lead to a denial of service (DoS) condition. The first vulnerability exists when processing TCP packets, and the second vulnerability affects devices with ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Content Switching Module TCP Packet Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14071&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Content Switching Module Service Termination Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14072&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Denial of Service Vulnerabilities in Content Switching Module",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070905-csm"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=5.1"
+        },
+        {
+          "name": "IP options-Bad Option List",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1000&signatureSubId=0&releaseVersion=S160&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Missing Initial Fragment",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1204&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Too Many Datagrams",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1205&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Incomplete Datagram",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1208&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "TCP Segment Overwrite",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1300&signatureSubId=0&releaseVersion=S637&softwareVersion=6.0"
+        },
+        {
+          "name": "TCP option data after EOL option",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1306&signatureSubId=6&releaseVersion=S675&softwareVersion=6.0"
+        },
+        {
+          "name": "TCP timestamp option detected when not expected",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1330&signatureSubId=19&releaseVersion=S739&softwareVersion=6.0"
+        },
+        {
+          "name": "TCP winscale option detected when not expected",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1330&signatureSubId=20&releaseVersion=S739&softwareVersion=6.0"
+        },
+        {
+          "name": "TCP option SACK data detected when not expected.",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1330&signatureSubId=21&releaseVersion=S739&softwareVersion=6.0"
+        },
+        {
+          "name": "ICMP Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2152&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Queso Sweep",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3045&signatureSubId=0&releaseVersion=S507&softwareVersion=6.0"
+        },
+        {
+          "name": "Half-open SYN Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3050&signatureSubId=0&releaseVersion=S774&softwareVersion=6.0"
+        },
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

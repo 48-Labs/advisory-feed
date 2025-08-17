@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20100324-tcp",
+  "title": "Cisco IOS Software Crafted TCP Packet Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2010-03-24T16:00:00.000+0000",
+  "lastPublished": "2012-09-21T19:12:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100324-tcp",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "20061",
+  "cve": "CVE-2010-0577",
+  "ciscoBugId": "CSCsz75186",
+  "status": "",
+  "summary": "Cisco IOS&reg; Software is affected by a denialof service vulnerability that may allow a remote unauthenticated attacker tocause an affected device to reload or hang. The vulnerability may be triggeredby a TCP segment containing crafted TCP options that is received during the ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software TCP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20061&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

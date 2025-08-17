@@ -1,0 +1,85 @@
+{
+  "identifier": "cisco-sa-20070509-iosftp",
+  "title": "Multiple Vulnerabilities in the IOS FTP Server",
+  "version": "1.4",
+  "firstPublished": "2007-05-09T16:00:00.000+0000",
+  "lastPublished": "2007-05-09T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070509-iosftp",
+  "severity": "Critical",
+  "cwe": "CWE-399",
+  "erpPubIds": "13159,13156,cisco-amb-20070509-iosftp",
+  "cve": "CVE-2007-2586,CVE-2007-2587",
+  "ciscoBugId": "CSCsg16908",
+  "status": "",
+  "summary": "   The Cisco IOS FTP Server feature contains multiple vulnerabilities that can result in a denial of service (DoS) condition, improper verification of user credentials, and the ability to retrieve or write any file from the device filesystem, including the device's saved configuration. ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS FTP Server Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13159&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software FTP Server Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13156&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of Multiple Vulnerabilities in the IOS FTP Server",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070509-iosftp"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "23055",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "FTP 230 Reply Code",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5846&signatureSubId=0&releaseVersion=S367&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco CUCM/CUPS  Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5854&signatureSubId=0&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco CUCM/CUPS  Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5854&signatureSubId=1&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "IOS FTPd Successful Login",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5860&signatureSubId=0&releaseVersion=S367&softwareVersion=6.0"
+        },
+        {
+          "name": "IOS FTPd Successful Login",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5860&signatureSubId=1&releaseVersion=S618&softwareVersion=6.0"
+        },
+        {
+          "name": "IOS FTPd MKD Command Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6973&signatureSubId=0&releaseVersion=S457&softwareVersion=6.0"
+        },
+        {
+          "name": "IOS FTPd MKD Command Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6973&signatureSubId=1&releaseVersion=S639&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

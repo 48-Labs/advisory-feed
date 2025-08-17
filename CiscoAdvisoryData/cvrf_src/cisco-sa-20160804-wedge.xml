@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS and IOS XE Software Crafted Network Time Protocol Packets Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20160804-wedge</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.3</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2016-08-04T15:24:35</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2016-08-09T12:39:33</cvrf:Date>
+        <cvrf:Description>Specified corresponding affected IOS XE Software releases.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2016-10-06T15:53:11</cvrf:Date>
+        <cvrf:Description>Updated advisory metadata.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2018-02-27T12:37:31</cvrf:Date>
+        <cvrf:Description>Updated the Workarounds section to indicate the use of Control Plane Policing to cover all interface types.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2016-08-04T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2018-02-27T12:37:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the processing of Network Time Protocol (NTP) packets by Cisco IOS and Cisco IOS XE could allow an unauthenticated, remote attacker to cause an interface wedge and an eventual denial of service (DoS) condition on the affected device.
+
+The vulnerability is due to insufficient checks on clearing the invalid NTP packets from the interface queue. An attacker could exploit this vulnerability by sending a number of crafted NTP packets to be processed by an affected device. An exploit could allow the attacker to cause an interface wedge and an eventual denial of service (DoS) condition on the affected device.
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability; however, there is a mitigation for this vulnerability.
+
+This advisory is available at the following link: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160804-wedge ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160804-wedge"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The following releases of Cisco IOS Software and the corresponding releases of IOS XE Software are affected by this vulnerability:
+
+15.5(3)S3 - 3.16.3S
+15.6(1)S2 - 3.17.2S
+15.6(2)S1 - 3.18.1S
+15.6(2)T1
+  Cisco devices running an affected version of IOS or IOS XE Software are vulnerable if they are configured for NTP operations. NTP is not enabled in Cisco IOS or IOS XE Software by default.
+
+To see if a device is configured with NTP, log in to the device and issue the command-line interface (CLI) command show running-config | include ntp. If the output returns any of the following commands, the device is vulnerable:
+ntp master &lt;any following commands&gt;
+ntp peer &lt;any following commands&gt;
+ntp server &lt;any following commands&gt;
+ntp broadcast client
+ntp multicast client
+
+  The following example identifies a Cisco device that is configured with NTP:
+router#show running-config | include ntp
+ntp peer 192.168.0.12
+The following example identifies a Cisco device that is not configured with NTP:
+router#show running-config | include ntp
+router#
+  This vulnerability can be exploited using both IPv4 and IPv6 packets. The vulnerability can be triggered by crafted NTP packets destined to UDP listening port 123 and using an IPv4 or IPv6 unicast address of any interface configured on a device or a network address.
+
+This vulnerability can be triggered only by traffic destined to an affected device and cannot be exploited with traffic transiting an affected device.
+
+Determining the Cisco IOS or IOS XE Software Release
+Determining the Cisco IOS Software Release
+To determine which Cisco IOS Software release is running on a device, administrators can log in to the device, use the show version command in the command-line interface (CLI), and then refer to the system banner that appears. If the device is running Cisco IOS Software, the system banner displays text similar to Cisco Internetwork Operating System Software or Cisco IOS Software. The banner also displays the installed image name in parentheses, followed by the Cisco IOS Software release number and release name. Some Cisco devices do not support the show version command or may provide different output.
+
+The following example identifies a Cisco product that is running Cisco IOS Software Release 15.5(2)T1 with an installed image name of C2951-UNIVERSALK9-M:
+
+
+Router&gt; show version
+Cisco IOS Software, C2951 Software (C2951-UNIVERSALK9-M), Version 15.5(2)T1, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport  Copyright (c) 1986-2015 by Cisco Systems, Inc.  Compiled Mon 22-Jun-15 09:32 by prod_rel_team  .  .  .
+
+For information about the naming and numbering conventions for Cisco IOS Software releases, see White Paper: Cisco IOS and NX-OS Software Reference Guide ["http://www.cisco.com/web/about/security/intelligence/ios-ref.html"].</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Indicators of Compromise" Type="General" Ordinal="4">On devices where this vulnerability is exploited, crafted NTP packets will get stuck in the ingress input queue of the receiving interface and eventually wedge the queue. Once this interface is wedged, it will stop receiving traffic until the router is reloaded.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that address this vulnerability; however, there is a mitigation for this vulnerability.
+
+As a mitigation measure, customers can use Control Plane Policing (CoPP) with an interface access control list (ACL), limiting NTP traffic to that coming from known NTP peers. Detailed knowledge and careful configuration is required by the network administrators in order to avoid dropping valid NTP traffic by implementing such mitigation measures. Because the NTP protocol in this vulnerability uses UDP as a transport, it is possible to spoof the sender's IP address, which may defeat ACLs that permit communication to these ports from trusted IP addresses.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">Cisco has released free software updates that address the vulnerability described in this advisory. Customers may only install and expect support for software versions and feature sets for which they have purchased a license. By installing, downloading, accessing, or otherwise using such software upgrades, customers agree to follow the terms of the Cisco software license
+
+Additionally, customers may only download software for which they have a valid license, procured from Cisco directly, or through a Cisco authorized reseller or partner. In most cases this will be a maintenance upgrade to software that was previously purchased. Free security software updates do not entitle customers to a new software license, additional software feature sets, or major revision upgrades.
+
+When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt ["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+
+Customers Without Service Contracts
+
+  Customers who purchase directly from Cisco but do not hold a Cisco service contract and customers who make purchases through third-party vendors but are unsuccessful in obtaining fixed software through their point of sale should obtain upgrades by contacting the Cisco Technical Assistance Center (TAC):
+
+Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
+
+Fixed Releases
+This vulnerability has been corrected in the following releases of Cisco IOS Software and the corresponding releases of Cisco IOS XE Software:
+
+15.6(3)M
+15.6(2)SP - 3.18.0SP
+  Cisco will release fixed software for remaining affected releases as soon as it is available.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">This vulnerability was found during the resolution of a support case.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160804-wedge</cvrf:URL>
+      <cvrf:Description>Cisco IOS and IOS XE Software Crafted Network Time Protocol Packets Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="IOS">
+        <Branch Type="Product Version" Name="15.5S">
+          <Branch Type="Service Pack" Name="15.5(3)S3">
+            <FullProductName ProductID="CVRFPID-213594">Cisco IOS 15.5(3)S3</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.6S">
+          <Branch Type="Service Pack" Name="15.6(2)S1">
+            <FullProductName ProductID="CVRFPID-211984">Cisco IOS 15.6(2)S1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.6(1)S2">
+            <FullProductName ProductID="CVRFPID-214161">Cisco IOS 15.6(1)S2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.6T">
+          <Branch Type="Service Pack" Name="15.6(2)T1">
+            <FullProductName ProductID="CVRFPID-214938">Cisco IOS 15.6(2)T1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVR">
+          <Branch Type="Service Pack" Name="15.1(3)SVR1">
+            <FullProductName ProductID="CVRFPID-277230">Cisco IOS 15.1(3)SVR1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR2">
+            <FullProductName ProductID="CVRFPID-277253">Cisco IOS 15.1(3)SVR2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR3">
+            <FullProductName ProductID="CVRFPID-279337">Cisco IOS 15.1(3)SVR3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVR10">
+            <FullProductName ProductID="CVRFPID-290618">Cisco IOS 15.1(3)SVR10</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVS">
+          <Branch Type="Service Pack" Name="15.1(3)SVS">
+            <FullProductName ProductID="CVRFPID-277232">Cisco IOS 15.1(3)SVS</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVS1">
+            <FullProductName ProductID="CVRFPID-279335">Cisco IOS 15.1(3)SVS1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVT">
+          <Branch Type="Service Pack" Name="15.1(3)SVT1">
+            <FullProductName ProductID="CVRFPID-280759">Cisco IOS 15.1(3)SVT1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT2">
+            <FullProductName ProductID="CVRFPID-282026">Cisco IOS 15.1(3)SVT2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT3">
+            <FullProductName ProductID="CVRFPID-284785">Cisco IOS 15.1(3)SVT3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVT4">
+            <FullProductName ProductID="CVRFPID-286399">Cisco IOS 15.1(3)SVT4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVU">
+          <Branch Type="Service Pack" Name="15.1(3)SVU1">
+            <FullProductName ProductID="CVRFPID-283833">Cisco IOS 15.1(3)SVU1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU10">
+            <FullProductName ProductID="CVRFPID-284291">Cisco IOS 15.1(3)SVU10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU2">
+            <FullProductName ProductID="CVRFPID-284566">Cisco IOS 15.1(3)SVU2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU11">
+            <FullProductName ProductID="CVRFPID-286400">Cisco IOS 15.1(3)SVU11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU20">
+            <FullProductName ProductID="CVRFPID-289270">Cisco IOS 15.1(3)SVU20</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVU21">
+            <FullProductName ProductID="CVRFPID-290557">Cisco IOS 15.1(3)SVU21</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVV">
+          <Branch Type="Service Pack" Name="15.1(3)SVV1">
+            <FullProductName ProductID="CVRFPID-284341">Cisco IOS 15.1(3)SVV1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV2">
+            <FullProductName ProductID="CVRFPID-286029">Cisco IOS 15.1(3)SVV2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV3">
+            <FullProductName ProductID="CVRFPID-286940">Cisco IOS 15.1(3)SVV3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVV4">
+            <FullProductName ProductID="CVRFPID-289371">Cisco IOS 15.1(3)SVV4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVW">
+          <Branch Type="Service Pack" Name="15.1(3)SVW">
+            <FullProductName ProductID="CVRFPID-286451">Cisco IOS 15.1(3)SVW</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVW1">
+            <FullProductName ProductID="CVRFPID-286844">Cisco IOS 15.1(3)SVW1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="15.1SVX">
+          <Branch Type="Service Pack" Name="15.1(3)SVX">
+            <FullProductName ProductID="CVRFPID-286927">Cisco IOS 15.1(3)SVX</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="15.1(3)SVX1">
+            <FullProductName ProductID="CVRFPID-289301">Cisco IOS 15.1(3)SVX1</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+      <Branch Type="Product Name" Name="Cisco IOS XE Software">
+        <Branch Type="Product Version" Name="3.16S">
+          <Branch Type="Service Pack" Name="3.16.3S">
+            <FullProductName ProductID="CVRFPID-213779">Cisco IOS XE Software 3.16.3S</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="3.16.3aS">
+            <FullProductName ProductID="CVRFPID-217266">Cisco IOS XE Software 3.16.3aS</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.17S">
+          <Branch Type="Service Pack" Name="3.17.2S">
+            <FullProductName ProductID="CVRFPID-217234">Cisco IOS XE Software 3.17.2S</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="16.3">
+          <Branch Type="Service Pack" Name="16.3.1">
+            <FullProductName ProductID="CVRFPID-213960">Cisco IOS XE Software 16.3.1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="3.18S">
+          <Branch Type="Service Pack" Name="3.18.1S">
+            <FullProductName ProductID="CVRFPID-217272">Cisco IOS XE Software 3.18.1S</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS and IOS XE Software Crafted NTP Packets Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCva35619</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCva35619</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2016-1478</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-211984</ProductID>
+        <ProductID>CVRFPID-213594</ProductID>
+        <ProductID>CVRFPID-214161</ProductID>
+        <ProductID>CVRFPID-214938</ProductID>
+        <ProductID>CVRFPID-277230</ProductID>
+        <ProductID>CVRFPID-277232</ProductID>
+        <ProductID>CVRFPID-277253</ProductID>
+        <ProductID>CVRFPID-279335</ProductID>
+        <ProductID>CVRFPID-279337</ProductID>
+        <ProductID>CVRFPID-280759</ProductID>
+        <ProductID>CVRFPID-282026</ProductID>
+        <ProductID>CVRFPID-283833</ProductID>
+        <ProductID>CVRFPID-284291</ProductID>
+        <ProductID>CVRFPID-284341</ProductID>
+        <ProductID>CVRFPID-284566</ProductID>
+        <ProductID>CVRFPID-284785</ProductID>
+        <ProductID>CVRFPID-286029</ProductID>
+        <ProductID>CVRFPID-286399</ProductID>
+        <ProductID>CVRFPID-286400</ProductID>
+        <ProductID>CVRFPID-286451</ProductID>
+        <ProductID>CVRFPID-286844</ProductID>
+        <ProductID>CVRFPID-286927</ProductID>
+        <ProductID>CVRFPID-286940</ProductID>
+        <ProductID>CVRFPID-289270</ProductID>
+        <ProductID>CVRFPID-289301</ProductID>
+        <ProductID>CVRFPID-289371</ProductID>
+        <ProductID>CVRFPID-290557</ProductID>
+        <ProductID>CVRFPID-290618</ProductID>
+        <ProductID>CVRFPID-213779</ProductID>
+        <ProductID>CVRFPID-213960</ProductID>
+        <ProductID>CVRFPID-217234</ProductID>
+        <ProductID>CVRFPID-217266</ProductID>
+        <ProductID>CVRFPID-217272</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability; however, there is a mitigation for this vulnerability.
+
+As a mitigation measure, customers can use Control Plane Policing (CoPP) with an interface access control list (ACL), limiting NTP traffic to that coming from known NTP peers. Detailed knowledge and careful configuration is required by the network administrators in order to avoid dropping valid NTP traffic by implementing such mitigation measures. Because the NTP protocol in this vulnerability uses UDP as a transport, it is possible to spoof the sender's IP address, which may defeat ACLs that permit communication to these ports from trusted IP addresses.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160804-wedge</URL>
+        <Description>Cisco IOS and IOS XE Software Crafted Network Time Protocol Packets Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

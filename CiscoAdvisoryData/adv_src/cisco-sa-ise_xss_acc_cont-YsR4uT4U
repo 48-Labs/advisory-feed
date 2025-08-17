@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-ise_xss_acc_cont-YsR4uT4U",
+  "title": "Cisco Identity Services Engine Stored Cross-Site Scripting Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2025-08-06T16:00:00.000+0000",
+  "lastPublished": "2025-08-06T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise_xss_acc_cont-YsR4uT4U",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-80, CWE-863",
+  "cve": "CVE-2025-20331,CVE-2025-20332",
+  "ciscoBugId": "CSCwk14928,CSCwm03606",
+  "status": "New",
+  "summary": "Multiple vulnerabilities in Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) could allow an authenticated, remote attacker to either modify part of the configuration of an affected device or conduct a stored cross-site scripting (XSS) attack.For ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

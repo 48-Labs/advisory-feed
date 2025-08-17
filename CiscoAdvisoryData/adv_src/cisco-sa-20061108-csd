@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20061108-csd",
+  "title": "Multiple Vulnerabilities in Cisco Secure Desktop",
+  "version": "1.2",
+  "firstPublished": "2006-11-08T16:00:00.000+0000",
+  "lastPublished": "2006-11-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20061108-csd",
+  "severity": "High",
+  "cwe": "CWE-200, CWE-264",
+  "erpPubIds": "12049,12051,12054",
+  "cve": "CVE-2006-5806,CVE-2006-5807,CVE-2006-5808",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "    Cisco Secure Desktop (CSD) software is affected by three vulnerabilities that may:        Cause information produced and accessed during an Internet browsingsession to be left behind on a computer after an SSL VPN session terminates.       Allow ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Secure Desktop Spawned Browser SSL VPN Session Information Disclosure Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12049&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Secure Desktop Insecure Permissions Local Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12051&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Secure Desktop System Policy Bypass Issue ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12054&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

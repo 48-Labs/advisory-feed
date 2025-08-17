@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20100811-wcs",
+  "title": "SQL Injection Vulnerability in Cisco Wireless Control System",
+  "version": "1.0",
+  "firstPublished": "2010-08-11T16:00:00.000+0000",
+  "lastPublished": "2010-08-11T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100811-wcs",
+  "severity": "Critical",
+  "cwe": "CWE-94",
+  "erpPubIds": "21107,cisco-amb-20100811-wcs",
+  "cve": "CVE-2010-2826",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco Wireless Control System (WCS) contains a SQL injection vulnerability that could allow an authenticated attacker full access to the vulnerable device, including modification of system configuration; create, modify and delete users; or modify the configuration of wireless devices ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Wireless Control System SQL Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=21107&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the SQL Injection Vulnerability in Cisco Wireless Control System",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100811-wcs"
+        }
+      ]
+    }
+  ]
+}

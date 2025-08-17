@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20080326-mvpn",
+  "title": "Cisco IOS Multicast Virtual Private Network (MVPN) Data Leak",
+  "version": "1.3",
+  "firstPublished": "2008-03-26T16:00:00.000+0000",
+  "lastPublished": "2008-03-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080326-mvpn",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "cisco-amb-20080326-mvpn,15446",
+  "cve": "CVE-2008-1156",
+  "ciscoBugId": "CSCsi01470",
+  "status": "",
+  "summary": "   A vulnerability in the Cisco implementation of Multicast Virtual Private Network (MVPN) is subject to exploitation that can allow a malicious user to create extra multicast states on the core routers or receive multicast traffic from other Multiprotocol Label Switching (MPLS) based ",
+  "totalCount": 5,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Multicast Virtual Private Networking Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15446&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS Multicast Virtual Private Network Data Leak",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080326-mvpn"
+        }
+      ]
+    }
+  ]
+}

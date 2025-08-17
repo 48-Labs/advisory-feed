@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Vulnerability in Spring Framework Affecting Cisco Products: March 2022</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-java-spring-rce-Zx9GUc67</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.13</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2022-04-02T00:37:17</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2022-04-04T21:57:16</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2022-04-05T17:43:30</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.3</cvrf:Number>
+        <cvrf:Date>2022-04-06T17:39:06</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.4</cvrf:Number>
+        <cvrf:Date>2022-04-07T18:00:44</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.5</cvrf:Number>
+        <cvrf:Date>2022-04-11T17:54:26</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.6</cvrf:Number>
+        <cvrf:Date>2022-04-12T18:27:07</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.7</cvrf:Number>
+        <cvrf:Date>2022-04-13T16:54:53</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.8</cvrf:Number>
+        <cvrf:Date>2022-04-14T17:27:42</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.9</cvrf:Number>
+        <cvrf:Date>2022-04-21T21:01:20</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.10</cvrf:Number>
+        <cvrf:Date>2022-04-26T17:43:02</cvrf:Date>
+        <cvrf:Description>Updated the products under investigation, vulnerable products, and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.11</cvrf:Number>
+        <cvrf:Date>2022-04-29T16:53:49</cvrf:Date>
+        <cvrf:Description>Updated vulnerable products and products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.12</cvrf:Number>
+        <cvrf:Date>2022-06-01T17:22:35</cvrf:Date>
+        <cvrf:Description>Updated Fixed Releases information.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.13</cvrf:Number>
+        <cvrf:Date>2023-02-09T15:14:14</cvrf:Date>
+        <cvrf:Description>Updated products confirmed not vulnerable.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2022-04-01T23:45:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2023-02-09T15:14:14</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">On March 31, 2022, the following critical vulnerability in the Spring Framework affecting Spring MVC and Spring WebFlux applications running on JDK 9+ was released:
+
+    CVE-2022-22965: Spring Framework RCE via Data Binding on JDK 9+
+
+For a description of this vulnerability, see VMware Spring Framework Security Vulnerability Report ["https://tanzu.vmware.com/security/cve-2022-22965"].
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-java-spring-rce-Zx9GUc67 ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-java-spring-rce-Zx9GUc67"]</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Cisco investigated its product line to determine which products may be affected by this vulnerability.
+
+The Vulnerable Products ["#vp"] section includes Cisco bug IDs for each affected product. The bugs are accessible through the Cisco Bug Search Tool ["https://bst.cloudapps.cisco.com/bugsearch/bug/BUGID"] and contain additional platform-specific information, including workarounds (if available) and fixed software releases.
+
+Any product not listed in the Affected Products section of this advisory is to be considered not vulnerable.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">Cisco investigated its product line to determine which products may be affected by this vulnerability.
+
+The following table lists Cisco products that are affected by the vulnerability that is described in this advisory. If a future release date is indicated for software, the date provided represents an estimate based on all information known to Cisco as of the Last Updated date at the top of the advisory. Availability dates are subject to change based on a number of factors, including satisfactory testing results and delivery of other priority features and fixes. Customers should refer to the associated Cisco bug(s) for further details.
+        Product  Cisco Bug ID  Fixed Release Availability ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"]      Endpoint Clients and Client Software      Cisco CX Cloud Agent Software  CSCwb41735 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb41735"]  2.0 (Available)      Network Management and Provisioning      Cisco Automated Subsea Tuning  CSCwb43658 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43658"]  2.1.0 (31 May 2022)      Cisco Crosswork Network Controller  CSCwb43703 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43703"]  3.0.2 (Available)
+2.0.2 (Available)      Cisco Crosswork Optimization Engine  CSCwb43709 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43709"]  3.1.1 (Available)
+2.1.1 (Available)      Cisco Crosswork Zero Touch Provisioning (ZTP)  CSCwb43706 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43706"]  3.0.2 (Available)
+2.0.2 (Available)      Cisco DNA Center  CSCwb43650 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43650"]  2.3.3.3 (17 Jun 2022)
+2.2.3.6 (6 Jun 2022)
+2.2.2.9 (6 Jun 2022)      Cisco Evolved Programmable Network Manager  CSCwb43643 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43643"]  6.0.1.1 (Available)
+5.1.4.1 (Available)
+5.0.2.3 (Available)      Cisco Managed Services Accelerator (MSX)  CSCwb43667 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43667"]  4.2.3 (Available)      Cisco Optical Network Planner  CSCwb43691 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43691"]  4.2 (31 May 2022)
+5.0 (30 Aug 2022)      Cisco WAN Automation Engine (WAE) Live  CSCwb43708 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43708"]  7.5.2.1 (Available)
+7.4.0.2 (Available)
+7.3.0.3 (Available)      Cisco WAN Automation Engine (WAE)  CSCwb43708 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43708"]  7.5.2.1 (Available)
+7.4.0.2 (Available)
+7.3.0.3 (Available)      Data Center Network Manager (DCNM)  CSCwb43637 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43637"]  11.5.4 (Available)      Nexus Dashboard Fabric Controller (NDFC)  CSCwb43637 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43637"]  12.1.1 (30 Jun 2022)      Routing and Switching - Enterprise and Service Provider      Cisco Optical Network Controller  CSCwb43692 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43692"]  2.0 (31 May 2022)      Cisco Software-Defined AVC (SD-AVC)  CSCwb43727 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43727"]  4.3.1 (30 July 2022)
+4.4.0 (30 Nov 2022)      Voice and Unified Communications Devices      Cisco Enterprise Chat and Email  CSCwb45202 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb45202"]  11.6 - Not vulnerable.
+12.0 (6 Jun 2022)
+12.5 (6 Jun 2022)
+12.6 ES2 (6 Jun 2022)      Video, Streaming, TelePresence, and Transcoding Devices      Cisco Meeting Server  CSCwb43662 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCwb43662"]  3.5.0 (Available)
+3.4.2 (31 May 2022)
+3.3.3 (17 Jun 2022)</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Cisco investigated its product line to determine which products may be affected by this vulnerability.
+
+Any product not listed in the Affected Products section of this advisory is to be considered not vulnerable.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+Cable Devices
+
+Cisco Continuous Deployment and Automation Framework
+Cisco Prime Cable Provisioning
+
+Collaboration and Social Media
+
+Cisco SocialMiner
+Cisco Webex App, formerly Cisco Webex Teams
+Cisco Webex Meetings Server
+
+Network Application, Service, and Acceleration
+
+Cisco Wide Area Application Services (WAAS)
+
+Network and Content Security Devices
+
+Cisco Adaptive Security Appliance (ASA) Software
+Cisco Firepower Device Manager (FDM)
+Cisco Firepower Management Center (FMC) Software
+Cisco Firepower System Software
+Cisco Identity Services Engine (ISE)
+Cisco Secure Email Gateway, formerly Email Security Appliance (ESA)
+Cisco Secure Email and Web Manager, formerly Cisco Content Security Management Appliance (SMA)
+Cisco Secure Network Analytics, formerly Cisco Stealthwatch
+Cisco Security Manager
+Cisco Umbrella Active Directory (AD) Connector
+Cisco Umbrella Roaming Clients
+Cisco Umbrella Virtual Appliance
+
+Network Management and Provisioning
+
+Cisco Application Policy Infrastructure Controller (APIC)
+Cisco Business Process Automation
+Cisco CloudCenter Action Orchestrator
+Cisco CloudCenter Cost Optimizer
+Cisco CloudCenter Suite Admin
+Cisco CloudCenter Workload Manager
+Cisco CloudCenter
+Cisco Collaboration Audit and Assessments
+Cisco Common Services Platform Collector (CSPC)
+Cisco Connected Mobile Experiences
+Cisco Connected Pharma
+Cisco Crosswork Change Automation
+Cisco Crosswork Data Gateway
+Cisco Crosswork Network Automation
+Cisco Crosswork Situation Manager
+Cisco Elastic Services Controller (ESC)
+Cisco Extensible Network Controller (XNC)
+Cisco Intelligent Node (iNode) Manager
+Cisco IoT Field Network Director, formerly Cisco Connected Grid Network Management System
+Cisco NCS 2000 Shelf Virtualization Orchestrator (SVO)
+Cisco Network Change and Configuration Management
+Cisco Network Insights for Data Center
+Cisco Nexus Dashboard Data Broker, formerly Cisco Nexus Data Broker
+Cisco Nexus Dashboard, formerly Cisco Application Services Engine
+Cisco Nexus Insights
+Cisco Policy Suite for Mobile
+Cisco Policy Suite
+Cisco Prime Performance Manager
+Cisco Smart PHY
+Cisco ThousandEyes Endpoint Agent
+Cisco ThousandEyes Enterprise Agent
+Cisco Virtual Topology System - Virtual Topology Controller (VTC) VM
+
+Routing and Switching - Enterprise and Service Provider
+
+Cisco ACI HTML5 vCenter Plug-in
+Cisco ASR 5000 Series Routers
+Cisco Enterprise NFV Infrastructure Software (NFVIS)
+Cisco GGSN Gateway GPRS Support Node
+Cisco IOx Fog Director
+Cisco IP Services Gateway (IPSG)
+Cisco MME Mobility Management Entity
+Cisco Mobility Unified Reporting and Analytics System
+Cisco Network Convergence System 2000 Series
+Cisco ONS 15454 Series Multiservice Provisioning Platforms
+Cisco PDSN/HA Packet Data Serving Node and Home Agent
+Cisco PGW Packet Data Network Gateway
+Cisco SD-WAN vManage
+Cisco System Architecture Evolution Gateway (SAEGW)
+Cisco Ultra Packet Core
+Cisco Ultra Services Platform
+
+Routing and Switching - Small Business
+
+Cisco Business Dashboard
+
+Unified Computing
+
+Cisco HyperFlex
+
+Voice and Unified Communications Devices
+
+Cisco BroadWorks
+Cisco Cloud Connect
+Cisco Emergency Responder
+Cisco Packaged Contact Center Enterprise
+Cisco Unified Attendant Console Advanced
+Cisco Unified Attendant Console Business Edition
+Cisco Unified Attendant Console Department Edition
+Cisco Unified Attendant Console Enterprise Edition
+Cisco Unified Attendant Console Premium Edition
+Cisco Unified Communications Manager IM &amp; Presence Service
+Cisco Unified Communications Manager Session Management Edition
+Cisco Unified Communications Manager
+Cisco Unified Contact Center Enterprise
+Cisco Unified Contact Center Express
+Cisco Unified Customer Voice Portal
+Cisco Unified Intelligence Center
+Cisco Unity Connection
+Cisco Virtualized Voice Browser
+
+Video, Streaming, TelePresence, and Transcoding Devices
+
+Cisco Expressway Series
+Cisco TelePresence Integrator C Series
+Cisco TelePresence MX Series
+Cisco TelePresence Management Suite Provisioning Extensions
+Cisco TelePresence Management Suite
+Cisco TelePresence Precision Cameras
+Cisco TelePresence Profile Series
+Cisco TelePresence SX Series
+Cisco TelePresence System EX Series
+Cisco TelePresence Video Communication Server (VCS)
+Cisco Touch
+Cisco Video Surveillance Operations Manager
+Cisco Vision Dynamic Signage Director
+Cisco Webex Board Series
+Cisco Webex Desk Series
+Cisco Webex Room Navigator
+Cisco Webex Room Series
+
+Wireless
+
+Cisco Ultra Cloud Core - Access and Mobility Management Function
+Cisco Ultra Cloud Core - Network Repository Function
+Cisco Ultra Cloud Core - Policy Control Function
+Cisco Ultra Cloud Core - Redundancy Configuration Manager
+Cisco Ultra Cloud Core - Session Management Function
+Cisco Ultra Cloud Core - Subscriber Microservices Infrastructure
+
+Cisco Cloud Hosted Services
+
+Cisco BroadCloud
+Cisco Industrial Asset Vision
+Cisco IoT Control Center
+Cisco IoT Operations Dashboard (IOTOC)
+Cisco Kinetic for Cities
+Cisco Registered Envelope Service
+Cisco Smart Collector - Lifecycle Management
+Cisco Umbrella
+Cisco Unified Communications Manager Cloud
+Cisco Webex Cloud-Connected UC (CCUC)</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">Any workarounds will be documented in the product-specific Cisco bugs, which are identified in the Vulnerable Products section of this advisory.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">For information about fixed software releases, consult the Cisco bugs identified in the Vulnerable Products ["#vp"] section of this advisory.
+
+When considering software upgrades, customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page, to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is aware that proof-of-concept exploit code is available for the vulnerability described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">This vulnerability was publicly disclosed by VMware on March 31, 2022.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-java-spring-rce-Zx9GUc67</cvrf:URL>
+      <cvrf:Description>Vulnerability in Spring Framework Affecting Cisco Products: March 2022</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Emergency Responder" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4844">Cisco Emergency Responder </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unity Connection" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-73608">Cisco Unity Connection </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-88444">Cisco Unified Communications Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager IM and Presence Service" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189784">Cisco Unified Communications Manager IM and Presence Service </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Prime License Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-203607">Cisco Prime License Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Prime Collaboration Deployment" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-203614">Cisco Prime Collaboration Deployment </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Firepower Management Center" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-212162">Cisco Firepower Management Center </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Evolved Programmable Network Manager (EPNM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-213688">Cisco Evolved Programmable Network Manager (EPNM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Firepower Threat Defense Software" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-220203">Cisco Firepower Threat Defense Software </FullProductName>
+      </Branch>
+      <Branch Name="Cisco IoT Field Network Director (IoT-FND)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-227605">Cisco IoT Field Network Director (IoT-FND) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco HyperFlex HX Data Platform" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-247050">Cisco HyperFlex HX Data Platform </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager / Cisco Unity Connection" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-277610">Cisco Unified Communications Manager / Cisco Unity Connection </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Vulnerability in Java Spring Framework Affecting System Products</Title>
+    <ID SystemName="Cisco Bug ID">CSCwb69766</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwb69766,CSCwb43734,CSCwb43739,CSCwb43738,CSCwb43736,CSCwd75689,CSCvv65984,CSCwb44794,CSCwb70105,CSCwc96587,CSCwa79849,CSCwb84370,CSCwb43345,CSCwb43327,CSCwb43328,CSCwb43331,CSCwb43332,CSCwb43335,CSCwb43340,CSCwb43342,CSCwb43346</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2022-22965</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-213688</ProductID>
+        <ProductID>CVRFPID-88444</ProductID>
+        <ProductID>CVRFPID-4844</ProductID>
+        <ProductID>CVRFPID-73608</ProductID>
+        <ProductID>CVRFPID-277610</ProductID>
+        <ProductID>CVRFPID-247050</ProductID>
+        <ProductID>CVRFPID-189784</ProductID>
+        <ProductID>CVRFPID-227605</ProductID>
+        <ProductID>CVRFPID-203607</ProductID>
+        <ProductID>CVRFPID-220203</ProductID>
+        <ProductID>CVRFPID-212162</ProductID>
+        <ProductID>CVRFPID-203614</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>9.8</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>Any workarounds will be documented in the product-specific Cisco bugs, which are identified in the Vulnerable Products section of this advisory.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-java-spring-rce-Zx9GUc67</URL>
+        <Description>Vulnerability in Spring Framework Affecting Cisco Products: March 2022</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

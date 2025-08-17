@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Email Security Appliance Anti-Spam Scanner Bypass Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20150612-esa</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>2.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2015-06-12T19:19:45</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.0</cvrf:Number>
+        <cvrf:Date>2015-11-04T16:00:47</cvrf:Date>
+        <cvrf:Description>Updated to High Security Impact Rating.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.1</cvrf:Number>
+        <cvrf:Date>2015-11-16T22:15:20</cvrf:Date>
+        <cvrf:Description>Added information about CES maintenance and upgrades.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>2.2</cvrf:Number>
+        <cvrf:Date>2015-11-20T17:48:43</cvrf:Date>
+        <cvrf:Description>Added steps for upgrading a device by using the GUI.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2015-06-12T19:19:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2015-11-20T17:48:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the anti-spam scanner of Cisco AsyncOS for Cisco Email Security Appliance (ESA) could allow an unauthenticated, remote attacker to bypass the anti-spam functionality of the ESA.
+
+
+
+The vulnerability is due to improper error handling of a malformed packet in the anti-spam scanner. An attacker could exploit this vulnerability by sending a crafted DNS Sender Policy Framework (SPF) text record. A successful exploit could allow the attacker to bypass the anti-spam scanner and generate a malformed packet alert.
+
+
+
+Cisco has released software updates that address this vulnerability. There are no workarounds that mitigate this vulnerability.
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-esa["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-esa"]</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">This vulnerability affects Cisco AsyncOS versions through 9.6 for ESA, on both virtual and hardware appliances, that are configured to perform anti-spam scanning and SPF/Sender Identification Framework (SIDF) verification for mail flow.
+
+
+
+To determine whether an ESA is configured to perform anti-spam scanning, use the GUI and navigate to Open Security services &gt; IronPort Anti-Spam, and verify that IronPort Anti-Spam is enabled. 
+
+
+
+To determine whether SPF/SIDF is configured, use the GUI and navigate to Mail Polices &gt; Mail Flow Policies. For each configured policy name, scroll down to Security Services &gt; SPF/SIDF Verification and verify that SPF/SIDF verification is enabled.
+
+
+To determine whether a vulnerable version of Cisco AsyncOS Software is running on a Cisco ESA, administrators can use the version command in the ESA CLI. The following example shows the results for a device running Cisco AsyncOS Software version 8.5.3-051:
+
+
+ciscoesa&gt; version
+Current Version
+===============
+Product: Cisco IronPort X1070 Messaging Gateway(tm) Appliance
+Model: X1070
+Version: 8.5.3-051
+.
+.
+.
+
+
+
+
+Cisco Cloud Email Security (CES) includes the Cisco ESA and Cisco Security Management Appliance (SMA) as part of the service solution. Cisco provides regular maintenance of the products included in this solution. Customers can also request a software upgrade by contacting Cisco CES support.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">The following products are not vulnerable:
+
+
+    Cisco Security Mail Appliance, both virtual and hardware versions
+    Cisco Web Security Appliance, both virtual and hardware versions
+
+
+
+No other Cisco products are currently known to be affected by this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Indicators of Compromise" Type="General" Ordinal="4">The indicator of compromise for this vulnerability is that the ESA log file will show the following error when this problem is detected:
+
+
+Critical  : MID ###### cannot be scanned by IMS. The message is either malformed or bad headers.
+
+Warning: case antispam - engine (44476) : case-daemon: bdecode error: bad format: pos 921, ... 
+
+
+To view the error logs, use the mail_logs command in the ESA CLI. The mail_logs log file contains the most recent system log messages.
+
+
+esa&gt; mail_logs
+
+esa&gt; grep "The message is either malformed or bad headers" mail_logs
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">There are no workarounds that mitigate this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="6">When considering software upgrades, customers are advised to consult the Cisco Security Advisories archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution.
+
+
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+
+
+
+In the following table, the left column lists major releases of Cisco AsyncOS for ESA software. The center column indicates whether a major release is affected by the vulnerability described in this advisory and the first minor release that includes the fix for this vulnerability. The right column indicates whether a major release is affected by all the vulnerabilities described in this and the following companion advisories and which release includes fixes for those vulnerabilities:
+
+
+    cisco-sa-20151104-aos["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151104-aos"]
+    cisco-sa-20151104-wsa["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151104-wsa"]
+    cisco-sa-20151104-wsa1["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151104-wsa1"]
+    cisco-sa-20151104-wsa2["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151104-wsa2"]
+    cisco-sa-20150612-esa["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-esa"]
+    cisco-sa-20151104-esa2["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151104-esa2"]
+
+Customers should upgrade to an appropriate release as indicated in the following table:
+
+
+
+
+
+
+    
+        
+            AsyncOS for ESA Major Release
+            
+            First Fixed Release for This Vulnerability
+            
+            First Fixed Release for This Vulnerability and All Vulnerabilities Described in the Companion Advisories
+            
+        
+        
+            7.6 and prior
+
+            
+            7.6.3-027
+            Affected; migrate to 8.5.7-043 or later
+
+            
+        
+        
+            8.0 and 8.0.1
+
+            
+            8.5.7-043
+
+            
+            Affected; migrate to 8.5.7-043 or later
+
+            
+        
+        
+            8.0.2
+            8.0.2-055
+
+            
+            Affected; migrate to 9.1.1-023 or later
+        
+        
+            8.5
+            8.5.7-043
+            8.5.7-043 or later
+        
+        
+            9.0
+            9.1.0-032
+            Affected; migrate to 9.1.1-023 or later
+        
+        
+            9.1
+            9.1.1-023
+
+            
+            9.1.1-023 or later
+        
+        
+            9.5
+            9.5.0-201
+            Affected; migrate to 9.6.0-046 or later
+        
+        
+            9.6
+            9.6.0-042
+            9.6.0-046 or later
+        
+        
+            9.7
+            Not affected
+            Not affected
+        
+    
+
+
+
+In most cases an ESA can be updated over the network by using the System Upgrade options in the System Administration GUI. To upgrade a device by using the System Administration GUI:
+
+
+    Choose System Administration &gt; System Upgrade.
+    Click Upgrade Options.
+    Choose the option to Download and Install or, for an ESA, Download the upgrade.
+    Choose the release to upgrade to.
+    In the Upgrade Preparation area, choose the appropriate options.
+    Click Proceed to begin the upgrade. A progress bar displays the status of the upgrade.
+
+After the upgrade is complete, the device reboots.
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="9">This vulnerability was found during the resolution of a support case.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-esa</cvrf:URL>
+      <cvrf:Description>Cisco Email Security Appliance Anti-Spam Scanner Bypass Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Email Security Appliance (ESA)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-189790">Cisco Email Security Appliance (ESA) </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Email Security Appliance Anti-Spam Scanner Bypass Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCuu35853</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCuu35853,CSCuu37733</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2015-4184</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-189790</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>5.0</BaseScoreV2>
+        <TemporalScoreV2>4.1</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:P/A:N/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-esa</URL>
+        <Description>Cisco Email Security Appliance Anti-Spam Scanner Bypass Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

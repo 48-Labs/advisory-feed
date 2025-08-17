@@ -1,0 +1,59 @@
+{
+  "identifier": "cisco-sa-20030221-protos",
+  "title": "Multiple Product Vulnerabilities Found by PROTOS SIP Test Suite",
+  "version": "1.0",
+  "firstPublished": "2003-02-21T17:00:00.000+0000",
+  "lastPublished": "2003-02-21T17:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20030221-protos",
+  "cwe": "CWE-119",
+  "erpPubIds": "5498",
+  "cve": "CVE-2003-1109,CVE-2003-1110,CVE-2003-1111,CVE-2003-1112,CVE-2003-1113,CVE-2003-1114,CVE-2003-1115",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "    Multiple Cisco products contain vulnerabilities in the processing of Session Initiation Protocol (SIP) INVITE messages. These vulnerabilities were identified by the University of Oulu Secure Programming Group (OUSPG) 'PROTOS' Test Suite for SIP and can be repeatedly exploited to ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "SIP Protocol Multiple Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=5498&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "12682",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "12683",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed Via Header",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6517&signatureSubId=0&releaseVersion=S395&softwareVersion=6.0"
+        },
+        {
+          "name": "SIP Long Header Field",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6518&signatureSubId=0&releaseVersion=S339&softwareVersion=6.0"
+        },
+        {
+          "name": "SIP Long Header Field",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6518&signatureSubId=1&releaseVersion=S345&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

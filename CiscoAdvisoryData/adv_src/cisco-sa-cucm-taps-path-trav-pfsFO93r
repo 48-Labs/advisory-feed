@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-cucm-taps-path-trav-pfsFO93r",
+  "title": "Cisco Unified Communications Manager Path Traversal Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2020-04-15T16:00:00.000+0000",
+  "lastPublished": "2020-04-15T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-taps-path-trav-pfsFO93r",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-22",
+  "cve": "CVE-2020-3177",
+  "ciscoBugId": "CSCvq58268,CSCvt33058",
+  "status": "",
+  "summary": "A vulnerability in the Tool for Auto-Registered Phones Support (TAPS) of Cisco Unified Communications Manager (UCM) and Cisco Unified Communications Manager Session Management Edition (SME) could allow an unauthenticated, remote attacker to conduct directory traversal attacks on an affected ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "53667",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-04-16-new.html"
+        },
+        {
+          "name": "53668",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-04-16-new.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager TAPS RMI Method Lookup",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8413&signatureSubId=0&releaseVersion=S1040&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

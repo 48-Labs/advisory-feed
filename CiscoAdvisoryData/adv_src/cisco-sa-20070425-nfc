@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20070425-nfc",
+  "title": "Default Passwords in NetFlow Collection Engine",
+  "version": "1.1",
+  "firstPublished": "2007-04-25T16:00:00.000+0000",
+  "lastPublished": "2007-04-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070425-nfc",
+  "severity": "Medium",
+  "cwe": "CWE-264",
+  "erpPubIds": "13158",
+  "cve": "CVE-2007-2282",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Versions of Cisco Network Services (CNS) NetFlow Collection Engine (NFC) prior to 6.0 create and use default accounts with identical usernames and passwords. An attacker with knowledge of these accounts can modify the application configuration and, in certain instances, gain user ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco NetFlow Collection Engine Default Credentials Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13158&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco CNS Netflow Collection Engine Default Password",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5861&signatureSubId=0&releaseVersion=S631&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco CNS Netflow Collection Engine Default Password",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5861&signatureSubId=1&releaseVersion=S618&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

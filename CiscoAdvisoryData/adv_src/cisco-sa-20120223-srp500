@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20120223-srp500",
+  "title": "Cisco Small Business SRP 500 Series Multiple Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2012-02-23T16:00:00.000+0000",
+  "lastPublished": "2012-02-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120223-srp500",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "25195,25196,25197",
+  "cve": "CVE-2012-0363,CVE-2012-0364,CVE-2012-0365",
+  "ciscoBugId": "CSCtt46871,CSCtw55495,CSCtw56009",
+  "status": "",
+  "summary": "Cisco Small Business (SRP 500) Series Services Ready Platforms contain the following three vulnerabilities:    Cisco SRP 500 Series Web Interface Command Injection Vulnerability     Cisco SRP 500 Series Unauthenticated Configuration Upload Vulnerability     ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Small Business SRP 500 Series Directory Traversal Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25195&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Small Business SRP 500 Series Web Interface Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25196&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Small Business SRP 500 Series Unauthenticated Configuration Upload Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25197&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco SRP 500 Series Web Interface Command Injection Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=32689&signatureSubId=0&releaseVersion=S627&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Unauthenticated Configuration Upload Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=42106&signatureSubId=0&releaseVersion=S627&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco SRP 500 Series Directory Traversal Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=42126&signatureSubId=0&releaseVersion=S627&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

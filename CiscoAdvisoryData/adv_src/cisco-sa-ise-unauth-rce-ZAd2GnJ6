@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-ise-unauth-rce-ZAd2GnJ6",
+  "title": "Cisco Identity Services Engine Unauthenticated Remote Code Execution Vulnerabilities",
+  "version": "2.2",
+  "firstPublished": "2025-06-25T16:00:00.000+0000",
+  "lastPublished": "2025-07-24T23:30:31.950+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-269, CWE-74",
+  "cve": "CVE-2025-20281,CVE-2025-20282,CVE-2025-20337",
+  "ciscoBugId": "CSCwo99449,CSCwp02814,CSCwp02821",
+  "status": "Updated",
+  "summary": "Multiple vulnerabilities in Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) could allow an unauthenticated, remote attacker to issue commands on the underlying operating system as the root user.&nbsp;For more information about these ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "65075",
+          "url": "https://www.snort.org/"
+        }
+      ]
+    }
+  ]
+}

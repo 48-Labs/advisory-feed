@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20161026-ipics",
+  "title": "Cisco IP Interoperability and Collaboration System Universal Media Services Unauthorized Access Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-10-26T16:00:00.000+0000",
+  "lastPublished": "2016-10-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161026-ipics",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-287",
+  "cve": "CVE-2016-6397",
+  "ciscoBugId": "CSCva46644",
+  "status": "",
+  "summary": "A vulnerability in the interdevice communications interface of the Cisco IP Interoperability and Collaboration System (IPICS) Universal Media Services (UMS) could allow an unauthenticated, remote attacker to modify configuration parameters of the UMS and cause the system to become unavailable.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40580",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-27-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IP Interoperability and Collaboration System Universal Media Server Unauthorized Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7711&signatureSubId=0&releaseVersion=S949&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IP Interoperability and Collaboration System Universal Media Server Unauthorized Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7712&signatureSubId=0&releaseVersion=S949&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IP Interoperability and Collaboration System Universal Media Server Unauthorized Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7713&signatureSubId=0&releaseVersion=S949&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

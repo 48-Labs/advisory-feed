@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20070110-dlsw",
+  "title": "DLSw Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2007-01-10T16:00:00.000+0000",
+  "lastPublished": "2007-01-10T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070110-dlsw",
+  "severity": "Low",
+  "cwe": "CWE-399",
+  "erpPubIds": "cisco-sa-20080326-dlsw,12412",
+  "cve": "CVE-2007-0199",
+  "ciscoBugId": "CSCsf28840",
+  "status": "",
+  "summary": " A vulnerability exists in the Data-link Switching (DLSw) feature in Cisco IOS where an invalid value in a DLSw message could result in a reload of the DLSw device. Successful exploitation of this vulnerability requires that an attacker be able to establish a DLSw connection to the ",
+  "totalCount": 6,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Data Link Switching Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12412&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Multiple DLSw Denial of Service Vulnerabilities in Cisco IOS",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080326-dlsw"
+        }
+      ]
+    }
+  ]
+}

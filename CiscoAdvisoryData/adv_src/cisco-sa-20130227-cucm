@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20130227-cucm",
+  "title": "Cisco Unified Communications Manager Multiple Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2013-02-27T16:00:00.000+0000",
+  "lastPublished": "2013-02-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130227-cucm",
+  "severity": "High",
+  "cwe": "CWE-20, CWE-264",
+  "erpPubIds": "28329,28328,28034",
+  "cve": "CVE-2013-1133,CVE-2013-1134",
+  "ciscoBugId": "CSCtx43337,CSCub28920",
+  "status": "",
+  "summary": "Cisco Unified Communications Manager contains two vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition. Exploitation of these vulnerabilities could cause an interruption of voice services.Cisco has released software ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Location Bandwidth Manager Poisoning Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28329&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager UDP Closed Ports Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28328&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identification and Mitigation of Vulnerabilities in Cisco Voice and Unified Communications Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28034"
+        }
+      ]
+    }
+  ]
+}

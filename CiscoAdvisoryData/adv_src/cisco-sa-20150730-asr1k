@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20150730-asr1k",
+  "title": "Cisco ASR 1000 Series Aggregation Services Routers Fragmented Packet Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2015-07-30T16:00:00.000+0000",
+  "lastPublished": "2015-07-30T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150730-asr1k",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "40212",
+  "cve": "CVE-2015-4291",
+  "ciscoBugId": "CSCtd72617",
+  "status": "",
+  "summary": "A vulnerability in the code handling the reassembly of fragmented IP version 4 (IPv4) or IP version 6 (IPv6) packets of Cisco IOS XE Software for Cisco ASR 1000 Series Aggregation Services Routers could allow an unauthenticated, remote attacker to cause a crash of the Embedded Services Processor ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS XE Software Fragmented Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=40212&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IP Fragment Overlap",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1201&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Overlap",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1201&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "IP Fragment Overwrite - Data is Overwritten",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1203&signatureSubId=0&releaseVersion=S212&softwareVersion=5.1"
+        },
+        {
+          "name": "IP Fragment Overwrite - Data is Overwritten",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1203&signatureSubId=0&releaseVersion=S212&softwareVersion=6.0"
+        },
+        {
+          "name": "Fragmented ICMP Traffic",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2150&signatureSubId=0&releaseVersion=S591&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

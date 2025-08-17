@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20070711-voip",
+  "title": "Cisco Unified Communications Manager and Presence Server Unauthorized Access Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2007-07-11T16:00:00.000+0000",
+  "lastPublished": "2007-07-11T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070711-voip",
+  "severity": "High",
+  "cwe": "CWE-200, CWE-264",
+  "erpPubIds": "13681,13682,cisco-amb-20070711-cucm",
+  "cve": "CVE-2007-3775,CVE-2007-3776",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Unified Communications Manager (CUCM), formerly CallManager, and Cisco Unified Presence Server (CUPS) contain two vulnerabilities that could allow an unauthorized administrator to activate and terminate CUCM / CUPS system services and access SNMP configuration information. This ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Privilege Escalation Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13681&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager and Unified Presence Server SNMP Settings Disclosure Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13682&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Cisco Unified Communications Manager and Presence Server Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070711-cucm"
+        }
+      ]
+    }
+  ]
+}

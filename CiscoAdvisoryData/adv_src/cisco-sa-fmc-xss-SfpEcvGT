@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-fmc-xss-SfpEcvGT",
+  "title": "Cisco Firepower Management Center Software Cross-Site Scripting Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2022-04-27T16:00:00.000+0000",
+  "lastPublished": "2022-04-28T16:24:30.133+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-xss-SfpEcvGT",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-80",
+  "erpPubIds": "ERP-74836",
+  "cve": "CVE-2022-20740",
+  "ciscoBugId": "CSCwa40223",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Firepower Management Center (FMC) Software could allow an unauthenticated, remote attacker to conduct a cross-site scripting attack.This vulnerability is due to improper validation of user-supplied input to the ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: April 2022 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74836&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

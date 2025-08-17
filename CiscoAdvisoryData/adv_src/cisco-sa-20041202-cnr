@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20041202-cnr",
+  "title": "Cisco Network Registrar Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2004-12-02T16:00:00.000+0000",
+  "lastPublished": "2004-12-02T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20041202-cnr",
+  "cwe": "CWE-399",
+  "erpPubIds": "8449",
+  "cve": "CVE-2004-1163,CVE-2004-1164",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco CNS Network Registrar Domain Name Service /Dynamic Host Configuration Protocol (DNS/DHCP) server for the Windows Server platforms is vulnerable to a Denial of Service attack when a certain crafted packet sequence is directed to the server. Cisco has made free software available ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco CNS Network Registrar DNS/DHCP Server Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=8449&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "33679",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "33680",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco CNS Registrar DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5428&signatureSubId=0&releaseVersion=S427&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco CNS Registrar DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5428&signatureSubId=1&releaseVersion=S427&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

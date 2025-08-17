@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20080924-sip",
+  "title": "Multiple Cisco IOS Session Initiation Protocol Denial of Service Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2008-09-24T16:00:00.000+0000",
+  "lastPublished": "2008-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-sip",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "16651,16660,cisco-amb-20080924-sip",
+  "cve": "CVE-2008-3799,CVE-2008-3800,CVE-2008-3801,CVE-2008-3802",
+  "ciscoBugId": "CSCse56800,CSCsg91306,CSCsk42759",
+  "status": "",
+  "summary": "   Multiple vulnerabilities exist in the Session Initiation Protocol (SIP) implementation in Cisco IOS that can be exploited remotely to trigger a memory leak or to cause a reload of the IOS device.   Cisco has released software updates that address these vulnerabilities. Fixed ",
+  "totalCount": 11,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Message Memory Leak Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16651&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software and Cisco Unified Communications Manager Session Initiation Protocol Message Processing Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16660&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS Software and Cisco Unified Communications Manager SIP DoS Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080924-sip"
+        }
+      ]
+    }
+  ]
+}

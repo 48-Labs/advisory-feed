@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20130717-ips",
+  "title": "Multiple Vulnerabilities in Cisco Intrusion Prevention System Software",
+  "version": "1.0",
+  "firstPublished": "2013-07-17T16:00:00.000+0000",
+  "lastPublished": "2013-07-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-ips",
+  "severity": "High",
+  "cwe": "CWE-119",
+  "erpPubIds": "30026,30025,30024,30023,29271",
+  "cve": "CVE-2013-1218,CVE-2013-1243,CVE-2013-3410,CVE-2013-3411",
+  "ciscoBugId": "CSCtx18596,CSCua61977,CSCue51272,CSCuh27460",
+  "status": "",
+  "summary": "Cisco Intrusion Prevention System (IPS) Software is affected by the following vulnerabilities:    Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability    Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability     Cisco IPS NME ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IPS IDSM-2 Malformed TCP Packets Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30026&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IPS NME Malformed IP Packets Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30025&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IPS Software Fragmented Traffic Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30024&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IPS Software Malformed IP Packets Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30023&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Intrusion Prevention System Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29271"
+        }
+      ]
+    }
+  ]
+}

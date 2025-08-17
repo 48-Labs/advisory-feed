@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20060712-cucm",
+  "title": "Multiple Cisco Unified CallManager Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2006-07-12T16:00:00.000+0000",
+  "lastPublished": "2006-07-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20060712-cucm",
+  "severity": "Critical",
+  "cwe": "CWE-119, CWE-94",
+  "erpPubIds": "11283,11284,11285",
+  "cve": "CVE-2006-3592,CVE-2006-3593,CVE-2006-3594",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Unified CallManager (CUCM) 5.0 has Command Line Interface (CLI) and Session Initiation Protocol (SIP) related vulnerabilities. There are potential privilege escalation vulnerabilities in the CLI which may allow an authenticated administrator to access the base operating system ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified CallManager Command Line Interface Privilege Escalation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11283&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified CallManager Command Line Interface File Overwrite Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11284&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified CallManager Session Initiation Protocol Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=11285&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Invalid SIP Response Code",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6515&signatureSubId=0&releaseVersion=S471&softwareVersion=6.0"
+        },
+        {
+          "name": "Non-Printable in SIP Header",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6523&signatureSubId=0&releaseVersion=S594&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

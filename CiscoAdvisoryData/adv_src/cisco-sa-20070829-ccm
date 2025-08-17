@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20070829-ccm",
+  "title": "XSS and SQL Injection in Cisco CallManager/Unified Communications Manager Logon Page",
+  "version": "1.2",
+  "firstPublished": "2007-08-29T16:00:00.000+0000",
+  "lastPublished": "2007-08-29T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070829-ccm",
+  "severity": "Medium",
+  "cwe": "CWE-200, CWE-79",
+  "erpPubIds": "13657,13658",
+  "cve": "CVE-2007-4633",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco CallManager and Unified Communications Manager are vulnerable to cross-site Scripting (XSS) and SQL Injection attacks in the lang variable of the admin and user logon pages. A successful attack may allow an attacker to run JavaScript on computer systems connecting to CallManager ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco CallManager and Unified Communications Manager Login Page Cross-Site Scripting Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13657&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Call Manager and Unified Communications Manager Login and Admin Page SQL Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13658&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "URL with XSS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5232&signatureSubId=1&releaseVersion=S585&softwareVersion=6.0"
+        },
+        {
+          "name": "SQL Query in HTTP Request",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5474&signatureSubId=0&releaseVersion=S585&softwareVersion=6.0"
+        },
+        {
+          "name": "SQL Query in HTTP Request",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5474&signatureSubId=1&releaseVersion=S472&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

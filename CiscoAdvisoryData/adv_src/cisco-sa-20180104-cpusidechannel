@@ -1,0 +1,153 @@
+{
+  "identifier": "cisco-sa-20180104-cpusidechannel",
+  "title": "CPU Side-Channel Information Disclosure Vulnerabilities",
+  "version": "1.31",
+  "firstPublished": "2018-01-04T22:20:00.000+0000",
+  "lastPublished": "2018-07-06T21:11:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180104-cpusidechannel",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-200",
+  "erpPubIds": "56357,56355,56354",
+  "cve": "CVE-2017-5715,CVE-2017-5753,CVE-2017-5754",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "On January 3, 2018, researchers disclosed three vulnerabilities that take advantage of the implementation of speculative execution of instructions on many modern microprocessor architectures to perform side-channel information disclosure attacks. These vulnerabilities could allow an unprivileged ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Intel CPU Indirect Branch Prediction Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=56357&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Intel CPU Process Prediction Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=56355&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "45357",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45358",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45359",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45360",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45361",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45362",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45363",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45364",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45365",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45366",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45367",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45368",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-04-new-1.html"
+        },
+        {
+          "name": "45443",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "45444",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51327",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51328",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51329",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "51330",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=0&releaseVersion=S1005&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=1&releaseVersion=S1005&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=2&releaseVersion=S1005&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=3&releaseVersion=S1005&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=4&releaseVersion=S1005&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=5&releaseVersion=S1016&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=6&releaseVersion=S1016&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=7&releaseVersion=S1016&softwareVersion=6.0"
+        },
+        {
+          "name": "Intel CPU Side Channel Analysis Information Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8152&signatureSubId=8&releaseVersion=S1016&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

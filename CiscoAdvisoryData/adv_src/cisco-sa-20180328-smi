@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180328-smi",
+  "title": "Cisco IOS and IOS XE Software Smart Install Denial of Service Vulnerability",
+  "version": "1.7",
+  "firstPublished": "2018-03-28T16:00:00.000+0000",
+  "lastPublished": "2022-12-15T22:19:43.347+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "erpPubIds": "ERP-66682",
+  "cve": "CVE-2018-0156",
+  "ciscoBugId": "CSCvd40673",
+  "status": "",
+  "summary": "A vulnerability in the Smart Install feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) ",
+  "totalCount": 3,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "41725",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-03-29-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-66682&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

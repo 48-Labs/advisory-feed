@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20130508-cvp",
+  "title": "Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software",
+  "version": "1.4",
+  "firstPublished": "2013-05-08T16:00:00.000+0000",
+  "lastPublished": "2016-01-05T18:20:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130508-cvp",
+  "severity": "Critical",
+  "workarounds": "Yes",
+  "cwe": "CWE-119, CWE-16, CWE-200, CWE-22",
+  "erpPubIds": "29159,29158,29157,29156,29155,29154,28982",
+  "cve": "CVE-2013-1220,CVE-2013-1221,CVE-2013-1222,CVE-2013-1223,CVE-2013-1224,CVE-2013-1225",
+  "ciscoBugId": "CSCua65148,CSCub38366,CSCub38369,CSCub38372,CSCub38379,CSCub38384",
+  "status": "",
+  "summary": "Cisco Unified Customer Voice Portal Software (Unified CVP) contains multiple vulnerabilities. Various components of Cisco Unified CVP are affected; see the 'Details' section for more information on the vulnerabilities. These vulnerabilities can be exploited independently; however, more than one ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Customer Voice Portal Software XML Entity Expansion Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29159&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Customer Voice Portal Software Path Traversal Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29158&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Customer Voice Portal Arbitrary File Access Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29157&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Customer Voice Portal Tomcat Configuration Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29156&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Customer Voice Portal Insecure Tomcat Web Applications Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29155&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Customer Voice Portal Malformed SIP INVITE Packet Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29154&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Multiple Vulnerabilities in Cisco Unified Customer Voice Portal Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=28982"
+        }
+      ]
+    }
+  ]
+}

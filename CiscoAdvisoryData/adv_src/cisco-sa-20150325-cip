@@ -1,0 +1,70 @@
+{
+  "identifier": "cisco-sa-20150325-cip",
+  "title": "Multiple Vulnerabilities in Cisco IOS Software Common Industrial Protocol",
+  "version": "1.1",
+  "firstPublished": "2015-03-25T16:00:00.000+0000",
+  "lastPublished": "2016-01-14T17:20:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150325-cip",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "erpPubIds": "37819,37818,37817,37513",
+  "cve": "CVE-2015-0647,CVE-2015-0648,CVE-2015-0649",
+  "ciscoBugId": "CSCum98371,CSCun49658,CSCun63514",
+  "status": "",
+  "summary": "The Cisco IOS Software implementation of the Common Industrial Protocol (CIP) feature contains the following vulnerabilities when processing crafted CIP packets that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition:    Cisco IOS Software ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software TCP CIP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37819&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software TCP CIP Packet Memory Leak Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37818&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software UDP CIP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=37817&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS Software UDP CIP Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=37513"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2015 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar15.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Common Industrial Protocl(CIP) stack buffer overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4956&signatureSubId=0&releaseVersion=S990&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS Software UDP CIP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5032&signatureSubId=0&releaseVersion=S858&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "identifier": "cisco-sa-20041110-dhcp",
+  "title": "Cisco IOS DHCP Blocked Interface Denial-of-Service",
+  "version": "1.2",
+  "firstPublished": "2004-11-10T17:00:00.000+0000",
+  "lastPublished": "2004-11-10T17:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20041110-dhcp",
+  "cwe": "CWE-399",
+  "erpPubIds": "8374",
+  "cve": "CVE-2004-1111",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco IOS&reg; devices running branches of Cisco IOS version 12.2S that have Dynamic Host Configuration Protocol (DHCP) server or relay agent enabled, even if not configured, are vulnerable to a denial of service where the input queue becomes blocked when receiving specifically crafted ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS DHCP Blocked Interface Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=8374&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Invalid DHCP Packet",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4619&signatureSubId=0&releaseVersion=S798&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

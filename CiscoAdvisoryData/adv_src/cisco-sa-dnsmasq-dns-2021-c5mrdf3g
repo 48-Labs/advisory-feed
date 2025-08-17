@@ -1,0 +1,42 @@
+{
+  "identifier": "cisco-sa-dnsmasq-dns-2021-c5mrdf3g",
+  "title": "Multiple Vulnerabilities in dnsmasq DNS Forwarder Affecting Cisco Products: January 2021",
+  "version": "1.4",
+  "firstPublished": "2021-01-19T12:15:00.000+0000",
+  "lastPublished": "2021-08-30T17:24:42.373+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dnsmasq-dns-2021-c5mrdf3g",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-340",
+  "cve": "CVE-2020-25681,CVE-2020-25682,CVE-2020-25683,CVE-2020-25684,CVE-2020-25685,CVE-2020-25686,CVE-2020-25687",
+  "ciscoBugId": "CSCvv83232,CSCvw00918,CSCvx17339,CSCvx20637,CSCvx66581,CSCvx66584",
+  "status": "",
+  "summary": "A set of previously unknown vulnerabilities in the DNS forwarder implementation of dnsmasq were disclosed on January 19, 2021. The vulnerabilities are collectively known as DNSpooq.Exploitation of these vulnerabilities could result in remote code execution or denial ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "57381",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "57383",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "57460",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "59104",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

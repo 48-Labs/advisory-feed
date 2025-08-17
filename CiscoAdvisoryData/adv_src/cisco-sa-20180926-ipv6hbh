@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180926-ipv6hbh",
+  "title": "Cisco IOS and IOS XE Software IPv6 Hop-by-Hop Options Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2018-09-26T16:00:00.000+0000",
+  "lastPublished": "2018-09-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180926-ipv6hbh",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-69981",
+  "cve": "CVE-2018-0467",
+  "ciscoBugId": "CSCuz28570",
+  "status": "",
+  "summary": "A vulnerability in the IPv6 processing code of Cisco IOS and IOS XE Software could allow an unauthenticated, remote attacker to cause the device to reload.The vulnerability is due to incorrect handling of specific IPv6 hop-by-hop options. An attacker could exploit this vulnerability ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "116:279:1",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2018-09-27-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-69981&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

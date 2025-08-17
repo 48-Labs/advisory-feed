@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20130327-cce",
+  "title": "Cisco IOS Software Zone-Based Policy Firewall Session Initiation Protocol Inspection Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2013-03-27T16:00:00.000+0000",
+  "lastPublished": "2013-04-11T15:36:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130327-cce",
+  "severity": "High",
+  "cwe": "CWE-119",
+  "erpPubIds": "28647",
+  "cve": "CVE-2013-1145",
+  "ciscoBugId": "CSCtl99174",
+  "status": "",
+  "summary": "Cisco IOS Software contains a memory leak vulnerability that could be triggered through the processing of malformed Session Initiation Protocol (SIP) messages.&nbsp;Exploitation of this vulnerability could cause an interruption of services. Only devices that are configured for SIP inspection are ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Zone-Based Policy Firewall Session Initiation Protocol Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28647&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar13.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Zone-based Firewall SIP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1976&signatureSubId=0&releaseVersion=S704&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

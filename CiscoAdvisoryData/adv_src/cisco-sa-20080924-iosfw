@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20080924-iosfw",
+  "title": "Cisco IOS Software Firewall Application Inspection Control Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2008-09-24T16:00:00.000+0000",
+  "lastPublished": "2008-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-iosfw",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "16661",
+  "cve": "CVE-2008-3812",
+  "ciscoBugId": "CSCsh12480",
+  "status": "",
+  "summary": "Cisco IOS software configured for IOS firewall Application Inspection Control (AIC) with a HTTP configured application-specific policy are vulnerable to a Denial of Service when processing a specific malformed HTTP transit packet. Successful exploitation of the vulnerability may result in ",
+  "totalCount": 11,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Firewall Application Inspection Control Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16661&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IOSFW HTTP Inspection Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6989&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

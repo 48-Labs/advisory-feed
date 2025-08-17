@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20161019-fpsnort",
+  "title": "Cisco Firepower Detection Engine HTTP Denial of Service Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2016-10-19T16:00:00.000+0000",
+  "lastPublished": "2016-10-26T16:34:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161019-fpsnort",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2016-6439",
+  "ciscoBugId": "CSCux61630",
+  "status": "",
+  "summary": "A vulnerability in the detection engine reassembly of HTTP packets for Cisco Firepower System Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition due to the Snort process unexpectedly restarting. The vulnerability is due to improper ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40504",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-10-20-seu.html"
+        }
+      ]
+    }
+  ]
+}

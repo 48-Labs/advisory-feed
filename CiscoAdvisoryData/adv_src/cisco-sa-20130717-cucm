@@ -1,0 +1,68 @@
+{
+  "identifier": "cisco-sa-20130717-cucm",
+  "title": "Multiple Vulnerabilities in Cisco Unified Communications Manager",
+  "version": "1.1",
+  "firstPublished": "2013-07-17T16:00:00.000+0000",
+  "lastPublished": "2013-07-17T18:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130717-cucm",
+  "severity": "Medium",
+  "cwe": "CWE-20, CWE-264, CWE-310, CWE-89",
+  "erpPubIds": "Cisco-SA-20130717-CVE-2013-3433,Cisco-SA-20130717-CVE-2013-3434,Cisco-SA-20130717-CVE-2013-3412,Cisco-SA-20130717-CVE-2013-3403,Cisco-SA-20130717-CVE-2013-3402,Cisco-SA-20130717-CVE-2013-3404,30040,29846",
+  "cve": "CVE-2013-3402,CVE-2013-3403,CVE-2013-3404,CVE-2013-3412,CVE-2013-3433,CVE-2013-3434",
+  "ciscoBugId": "CSCsc69187,CSCuh01051,CSCuh73440,CSCuh73454,CSCuh81766,CSCuh87042,CSCui01756,CSCui02242,CSCui02276",
+  "status": "",
+  "summary": "Cisco Unified Communications Manager (Unified CM) contains multiple vulnerabilities that could be used together to allow an unauthenticated, remote attacker to gather user credentials, escalate privileges, and execute commands to gain full control of the vulnerable system. A successful attack could ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager CCMEncryption Hard-Coded Encryption Key Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30040&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Unified Communications Manager",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29846"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Privilege Escalation Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130717-CVE-2013-3433"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Privilege Escalation Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130717-CVE-2013-3434"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Blind SQL Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130717-CVE-2013-3412"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Privilege Escalation Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130717-CVE-2013-3403"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Command Injection Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130717-CVE-2013-3402"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Remote Blind SQL Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130717-CVE-2013-3404"
+        }
+      ]
+    }
+  ]
+}

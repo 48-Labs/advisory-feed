@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-asa-ssh-rce-gRAuPEUF",
+  "title": "Cisco Adaptive Security Appliance Software SSH Remote Command Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2024-10-23T16:00:00.000+0000",
+  "lastPublished": "2024-10-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ssh-rce-gRAuPEUF",
+  "severity": "Critical",
+  "workarounds": "Yes",
+  "cwe": "CWE-146",
+  "erpPubIds": "ERP-75300",
+  "cve": "CVE-2024-20329",
+  "ciscoBugId": "CSCwe93558",
+  "status": "",
+  "summary": "A vulnerability in the SSH subsystem of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, remote attacker to execute operating system commands as root.This vulnerability is due to insufficient validation of user input. An attacker could exploit ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2024 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75300&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

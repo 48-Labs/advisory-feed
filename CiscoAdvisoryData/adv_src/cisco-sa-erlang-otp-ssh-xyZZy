@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-erlang-otp-ssh-xyZZy",
+  "title": "Multiple Cisco Products Unauthenticated Remote Code Execution in Erlang/OTP SSH Server: April 2025",
+  "version": "1.11",
+  "firstPublished": "2025-04-22T21:45:00.000+0000",
+  "lastPublished": "2025-06-11T14:40:37.970+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-erlang-otp-ssh-xyZZy",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-306",
+  "cve": "CVE-2025-32433",
+  "ciscoBugId": "",
+  "status": "Updated",
+  "summary": "On April 16, 2025, a critical vulnerability in the Erlang/OTP SSH server was disclosed. This vulnerability could allow an unauthenticated, remote attacker to perform remote code execution (RCE) on an affected device.The vulnerability is due to a flaw in the handling of SSH messages ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "64788",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20130619-tpc",
+  "title": "Multiple Vulnerabilities in Cisco TelePresence TC and TE Software ",
+  "version": "1.0",
+  "firstPublished": "2013-06-19T16:00:00.000+0000",
+  "lastPublished": "2013-06-19T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130619-tpc",
+  "severity": "High",
+  "cwe": "CWE-20, CWE-264",
+  "erpPubIds": "29653,29650,29649",
+  "cve": "CVE-2013-3377,CVE-2013-3378,CVE-2013-3379",
+  "ciscoBugId": "CSCts37781,CSCue01743,CSCuf89557",
+  "status": "",
+  "summary": "Cisco TelePresence TC and TE Software contain two vulnerabilities in the implementation of the Session Initiation Protocol (SIP) that could allow an unauthenticated remote attacker to cause a denial of service (DoS) condition.Additionally, Cisco TelePresence TC Software contain an adjacent ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco TelePresence TC and TE Software SIP Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29653&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC Software Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29650&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software SIP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29649&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco TelePresence TC and TE Software Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2366&signatureSubId=0&releaseVersion=S725&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco TelePresence TC and TE Software SIP Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2368&signatureSubId=0&releaseVersion=S725&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

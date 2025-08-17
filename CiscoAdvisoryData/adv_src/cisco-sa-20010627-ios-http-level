@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20010627-ios-http-level",
+  "title": "IOS HTTP Authorization Vulnerability",
+  "version": "1.8",
+  "firstPublished": "2001-06-27T15:00:00.000+0000",
+  "lastPublished": "2001-06-27T15:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20010627-ios-http-level",
+  "cwe": "CWE-287",
+  "erpPubIds": "2377",
+  "cve": "CVE-2001-0537",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   When the HTTP server is enabled and local authorization is used, it is possible, under some circumstances, to bypass the authentication and execute any command on the device. In that case, the user will be able to exercise complete control over the device. All commands will be ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS HTTP Server Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=2377&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "1250",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "IOS HTTP Unauth Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5129&signatureSubId=0&releaseVersion=S5&softwareVersion=5.1"
+        },
+        {
+          "name": "IOS HTTP Unauth Command Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5129&signatureSubId=0&releaseVersion=S5&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

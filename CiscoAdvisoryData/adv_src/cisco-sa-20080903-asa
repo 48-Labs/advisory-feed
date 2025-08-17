@@ -1,0 +1,55 @@
+{
+  "identifier": "cisco-sa-20080903-asa",
+  "title": "Remote Access VPN and SIP Vulnerabilities in Cisco PIX and Cisco ASA",
+  "version": "1.0",
+  "firstPublished": "2008-09-03T16:00:00.000+0000",
+  "lastPublished": "2008-09-03T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080903-asa",
+  "severity": "High",
+  "cwe": "CWE-200, CWE-399",
+  "erpPubIds": "16323,16327,16328,16329,16560,cisco-amb-20080903-asa",
+  "cve": "CVE-2008-2732,CVE-2008-2733,CVE-2008-2734,CVE-2008-2735,CVE-2008-2736",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Multiple vulnerabilities exist in the Cisco ASA 5500 Series Adaptive Security Appliances and Cisco PIX Security Appliances that may result in a reload of the device or disclosure of confidential information. This security advisory outlines details of the following vulnerabilities: ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco PIX and Cisco ASA Improper SIP Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16323&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX and Cisco ASA IPsec Client Authentication Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16327&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Clientless SSL VPN Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16328&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Clientless HTTP VPN Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16329&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX and Cisco ASA Clientless VPN Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16560&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Remote Access VPN and SIP Vulnerabilities in Cisco PIX and Cisco ASA",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080903-asa"
+        }
+      ]
+    }
+  ]
+}

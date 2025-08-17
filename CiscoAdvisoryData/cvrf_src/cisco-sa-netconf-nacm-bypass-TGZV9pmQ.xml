@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco IOS XE Software Model-Driven Programmability Authorization Bypass Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-netconf-nacm-bypass-TGZV9pmQ</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.0</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2025-05-07T15:53:28</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2025-05-07T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2025-05-07T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2025-05-07T16:00:57.0355094Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the Network Configuration Access Control Module (NACM) of Cisco IOS XE Software could allow an authenticated, remote attacker to obtain unauthorized read access to configuration or operational data.
+
+This vulnerability exists because a subtle change in inner API call behavior causes results to be filtered incorrectly. An attacker could exploit this vulnerability by using either NETCONF, RESTCONF, or gRPC Network Management Interface (gNMI) protocols and query data on paths that may have been denied by the NACM configuration. A successful exploit could allow the attacker to access data that should have been restricted according to the NACM configuration.
+
+Note: This vulnerability requires that the attacker obtain the credentials from a valid user with privileges lower than 15, and that NACM was configured to provide restricted read access for that user.
+
+This advisory is available at the following link:
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-netconf-nacm-bypass-TGZV9pmQ ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-netconf-nacm-bypass-TGZV9pmQ"]
+
+This advisory is part of the May 2025 release of the Cisco IOS and IOS XE Software Security Advisory Bundled Publication. For a complete list of the advisories and links to them, see Cisco Event Response: May 2025 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication ["https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75279"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">At the time of publication, this vulnerability affected Cisco devices if they were running a vulnerable release of Cisco IOS XE Software and had an NACM policy enabled that provides restricted read access to lower-privileged users.
+
+For information about which Cisco software releases are vulnerable, see the Fixed Software ["#fs"] section of this advisory.</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">Only products listed in the Vulnerable Products ["#vp"] section of this advisory are known to be affected by this vulnerability.
+
+Cisco has confirmed that this vulnerability does not affect the following Cisco products:
+
+IOS Software
+IOS XR Software
+Meraki products
+NX-OS Software</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="4">There are no workarounds that address this vulnerability.</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="5">When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
+        Cisco IOS and IOS XE Software
+To help customers determine their exposure to vulnerabilities in Cisco IOS and IOS XE Software, Cisco provides the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"]. This tool identifies any Cisco security advisories that impact a specific software release and the earliest release that fixes the vulnerabilities that are described in each advisory (���First Fixed���). If applicable, the tool also returns the earliest release that fixes all the vulnerabilities that are described in all the advisories that the Software Checker identifies (���Combined First Fixed���).
+
+To use the tool, go to the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"] page and follow the instructions. Alternatively, use the following form to determine whether a release is affected by any Cisco Security Advisory. To use the form, follow these steps:
+
+Choose which advisories the tool will search���only this advisory, only advisories with a Critical or High Security Impact Rating (SIR) ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#asr"], or all advisories.
+Enter a release number���for example, 15.9(3)M2 or 17.3.3.
+Click Check.
+
+       Only this advisory  All Critical and High advisories  All advisories</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerability that is described in this advisory.</cvrf:Note>
+    <cvrf:Note Title="Source" Type="General" Ordinal="8">This vulnerability was found during internal security testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="9">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-netconf-nacm-bypass-TGZV9pmQ</cvrf:URL>
+      <cvrf:Description>Cisco IOS XE Software Model-Driven Programmability Authorization Bypass Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75279</cvrf:URL>
+      <cvrf:Description>Cisco Event Response: May 2025 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco IOS XE Software">
+        <Branch Type="Product Version" Name="17.11">
+          <Branch Type="Service Pack" Name="17.11.1">
+            <FullProductName ProductID="CVRFPID-286799">Cisco IOS XE Software 17.11.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.11.1a">
+            <FullProductName ProductID="CVRFPID-294838">Cisco IOS XE Software 17.11.1a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.12">
+          <Branch Type="Service Pack" Name="17.12.1">
+            <FullProductName ProductID="CVRFPID-286801">Cisco IOS XE Software 17.12.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1w">
+            <FullProductName ProductID="CVRFPID-296763">Cisco IOS XE Software 17.12.1w</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1a">
+            <FullProductName ProductID="CVRFPID-300012">Cisco IOS XE Software 17.12.1a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1x">
+            <FullProductName ProductID="CVRFPID-300823">Cisco IOS XE Software 17.12.1x</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.2">
+            <FullProductName ProductID="CVRFPID-300834">Cisco IOS XE Software 17.12.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.2a">
+            <FullProductName ProductID="CVRFPID-300948">Cisco IOS XE Software 17.12.2a</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1y">
+            <FullProductName ProductID="CVRFPID-301162">Cisco IOS XE Software 17.12.1y</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1z">
+            <FullProductName ProductID="CVRFPID-301254">Cisco IOS XE Software 17.12.1z</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.12.1z1">
+            <FullProductName ProductID="CVRFPID-302758">Cisco IOS XE Software 17.12.1z1</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.13">
+          <Branch Type="Service Pack" Name="17.13.1">
+            <FullProductName ProductID="CVRFPID-295359">Cisco IOS XE Software 17.13.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="17.13.1a">
+            <FullProductName ProductID="CVRFPID-300947">Cisco IOS XE Software 17.13.1a</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="17.11SW">
+          <Branch Type="Service Pack" Name="17.11.99SW">
+            <FullProductName ProductID="CVRFPID-296860">Cisco IOS XE Software 17.11.99SW</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco IOS XE Software Model-Driven Programmability Authorization Bypass</Title>
+    <ID SystemName="Cisco Bug ID">CSCwi33204</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCwi33204</Note>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="2">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2025-20214</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-286799</ProductID>
+        <ProductID>CVRFPID-286801</ProductID>
+        <ProductID>CVRFPID-294838</ProductID>
+        <ProductID>CVRFPID-295359</ProductID>
+        <ProductID>CVRFPID-296763</ProductID>
+        <ProductID>CVRFPID-296860</ProductID>
+        <ProductID>CVRFPID-300012</ProductID>
+        <ProductID>CVRFPID-300823</ProductID>
+        <ProductID>CVRFPID-300834</ProductID>
+        <ProductID>CVRFPID-300947</ProductID>
+        <ProductID>CVRFPID-300948</ProductID>
+        <ProductID>CVRFPID-301162</ProductID>
+        <ProductID>CVRFPID-301254</ProductID>
+        <ProductID>CVRFPID-302758</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV3>
+        <BaseScoreV3>4.3</BaseScoreV3>
+        <VectorV3>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N</VectorV3>
+      </ScoreSetV3>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that address this vulnerability.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-netconf-nacm-bypass-TGZV9pmQ</URL>
+        <Description>Cisco IOS XE Software Model-Driven Programmability Authorization Bypass Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

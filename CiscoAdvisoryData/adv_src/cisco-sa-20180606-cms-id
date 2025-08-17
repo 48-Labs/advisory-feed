@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20180606-cms-id",
+  "title": "Cisco Meeting Server Information Disclosure Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2018-06-06T16:00:00.000+0000",
+  "lastPublished": "2018-06-11T20:52:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180606-cms-id",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-16",
+  "cve": "CVE-2018-0263",
+  "ciscoBugId": "CSCvg76471",
+  "status": "",
+  "summary": "A vulnerability in Cisco Meeting Server (CMS) could allow an unauthenticated, adjacent attacker to access services running on internal device interfaces of an affected system.The vulnerability is due to incorrect default configuration of the device, which can expose internal ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "46749",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-05-17-new.html"
+        },
+        {
+          "name": "46750",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-05-17-new.html"
+        }
+      ]
+    }
+  ]
+}

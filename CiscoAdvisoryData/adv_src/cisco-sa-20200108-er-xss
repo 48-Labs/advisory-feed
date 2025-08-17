@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20200108-er-xss",
+  "title": "Cisco Emergency Responder Stored Cross-Site Scripting Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2020-01-08T16:00:00.000+0000",
+  "lastPublished": "2020-01-08T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200108-er-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2019-16025",
+  "ciscoBugId": "CSCvr15545",
+  "status": "",
+  "summary": "A vulnerability in the web framework of Cisco&nbsp;Emergency Responder could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface.The vulnerability is due to insufficient validation of some parameters ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

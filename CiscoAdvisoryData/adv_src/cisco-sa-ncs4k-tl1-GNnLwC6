@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-ncs4k-tl1-GNnLwC6",
+  "title": "Cisco Network Convergence System 4000 Series TL1 Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2022-09-14T16:00:00.000+0000",
+  "lastPublished": "2022-09-14T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ncs4k-tl1-GNnLwC6",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-789",
+  "erpPubIds": "ERP-74840",
+  "cve": "CVE-2022-20845",
+  "ciscoBugId": "CSCwb01669,CSCwb16005",
+  "status": "",
+  "summary": "A vulnerability in the TL1 function of Cisco&nbsp;Network Convergence System (NCS) 4000 Series could allow an authenticated, local attacker to cause a memory leak in the TL1 process.This vulnerability is due to TL1 not freeing memory under some conditions. An attacker could exploit ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2022 Semiannual Cisco IOS XR Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-74840&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Firewall Services Module</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20111005-fwsm</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2011-10-05T16:00:00</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2012-07-14T10:13:57</cvrf:Date>
+        <cvrf:Description>Updated meta-tags for Affected Products.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2011-10-05T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-07-14T10:13:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+      <cvrf:Date>2024-07-17T13:04:16.9211026Z</cvrf:Date>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">The Cisco Firewall Services Module (FWSM) for the Cisco Catalyst 6500 Series switches and Cisco 7600 Series routers is affected by the following vulnerabilities:
+
+     Syslog Message Memory Corruption Denial of Service     Vulnerability
+     Authentication Proxy Denial of Service Vulnerability
+     TACACS+ Authentication Bypass Vulnerability
+     Sun Remote Procedure Call (SunRPC) Inspection Denial of Service     Vulnerabilities
+     Internet Locator Server (ILS) Inspection Denial of Service     Vulnerability
+
+These vulnerabilities are not interdependent; a release that is affected by one vulnerability is not necessarily affected by the others.
+
+Cisco has released software updates that address these vulnerabilities. Workarounds are available for some of the vulnerabilities disclosed in this advisory.
+
+ This advisory is posted at https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm"].
+
+ Note: Cisco ASA 5500 Series Adaptive Security Appliances and the Cisco Catalyst 6500 Series ASA Services Module are affected by some of the vulnerabilities described in this advisory. A separate Cisco Security Advisory has been published to disclose these and other vulnerabilities that affect the Cisco ASA 5500 Series Adaptive Security Appliances and the Cisco Catalyst 6500 Series ASA Services Module. The advisory is available at https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-asa ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-asa"].</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="2">The Cisco FWSM for the Cisco Catalyst 6500 Series switches and Cisco 7600 Series routers is affected by multiple vulnerabilities. Affected versions of Cisco FWSM Software vary depending on the specific vulnerability. Refer to the "Software Version and Fixes" section for specific information on vulnerable versions.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Devices running vulnerable versions of Cisco FWSM Software are affected by this vulnerability if the following conditions are satisfied:
+
+     The device has interfaces with IPv6 addresses
+     System logging is enabled (command logging     enable)
+     The device is configured in any way to generate system log message     302015 (refer to the following examples)
+
+System log message 302015 has a default severity level of 6 (informational) so, assuming that the system administrator has not changed this default severity level, the vulnerability can be triggered if the device is logging to any destination at level 6 or level 7 (debug). As an example, the following configuration is vulnerable:
+
+
+logging enable
+! logging console informational logging buffered informational [...]
+
+Using a custom message list (via the logging list command) that includes system log message 302015, either by severity or by explicitly including the message ID, is also a vulnerable configuration. For example, the following configuration is also vulnerable:
+
+
+logging enable
+! logging list MYLIST level informational &lt;and/or&gt; logging list MYLIST message 302015 ! logging trap MYLIST
+
+ Note: The default severity level of system log messages can be changed. If the default severity level of system log message 302015 is changed, and the device is configured to log to any destination at the new severity level, then the device is still vulnerable.
+ Authentication Proxy Denial of Service Vulnerability
+Devices running vulnerable versions of Cisco FWSM Software are affected by this vulnerability if they are configured to use Authentication, Authorization, and Accounting (AAA) for network access, also known as cut-through or authentication proxy. The network access authentication feature is enabled if the aaa authentication match or aaa authentication include commands are present in the configuration of an affected device.
+ TACACS+ Authentication Bypass Vulnerability
+Devices running vulnerable versions of Cisco FWSM Software are affected by this vulnerability if they are configured to use the Terminal Access Controller Access-Control System Plus (TACACS+) protocol for AAA. A device is configured for TACACS+ if an AAA server group is defined in a manner similar to the following:
+
+
+aaa-server my-tacacs-server protocol tacacs+
+aaa-server my-tacacs-server (inside) host 192.168.1.1   [...]
+
+ Note: In the preceding example, "my-tacacs-server" is the name of the AAA server group.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Devices running vulnerable versions of Cisco FWSM Software are affected by these vulnerabilities if SunRPC inspection is enabled. SunRPC inspection is enabled by default.
+
+To determine whether SunRPC inspection is enabled, issue the show service-policy | include sunrpc command and confirm that the command returns output. Example output follows:
+
+
+FWSM# show service-policy | include sunrpc
+      Inspect: sunrpc, packet 324, drop 5, reset-drop 0
+
+Alternatively, a device with SunRPC inspection enabled has a configuration similar to the following (the inspect sunrpc command is the command that actually enables SunRPC inspection, although the other commands are necessary for the Cisco FWSM to actually inspect traffic):
+
+
+class-map inspection_default
+ match default-inspection-traffic ! policy-map global_policy  class inspection_default   ...   inspect sunrpc  ! service-policy global_policy global
+
+ Note: The service policy could also be applied to a specific interface. (Global application is shown in the previous example.)
+ ILS Inspection Denial of Service Vulnerability
+Devices running vulnerable versions of Cisco FWSM Software are affected by these vulnerabilities if inspection of the ILS protocol is enabled. ILS inspection is not enabled by default.
+
+Refer to "SunRPC Inspection Denial of Service Vulnerabilities" for information on how to determine if ILS inspection is enabled. Use the configuration keyword "ils" instead of "sunrpc".
+
+
+ How to Determine the Running Software Version
+To determine the version of Cisco FWSM Software that is running on a device, issue the show module command from Cisco IOS Software or Cisco Catalyst Operating System Software to identify what modules and submodules are installed on the system.
+
+The following example shows a system with a Cisco FWSM (WS-SVC-FWM-1) installed in slot 2:
+
+
+switch&gt;show module
+Mod Ports Card Type                              Model              Serial No. --- ----- -------------------------------------- ------------------ -----------   1   16  SFM-capable 16 port 1000mb GBIC        WS-X6516-GBIC      SAL06334NS9   2    6  Firewall Module                        WS-SVC-FWM-1       SAD10360485   3    8  Intrusion Detection System             WS-SVC-IDSM-2      SAD0932089Z   4    4  SLB Application Processor Complex      WS-X6066-SLB-APC   SAD093004BD   5    2  Supervisor Engine 720 (Active)         WS-SUP720-3B       SAL0934888E  Mod MAC addresses                       Hw    Fw           Sw           Status --- ---------------------------------- ------ ------------ ------------ -------   1  0009.11e3.ade8 to 0009.11e3.adf7   5.1   6.3(1)       8.7(0.22)BUB Ok   2  0018.ba41.5092 to 0018.ba41.5099   4.0   7.2(1)       4.0(16)      Ok   3  0014.a90c.9956 to 0014.a90c.995d   5.0   7.2(1)       7.0(4)E4     Ok   4  0014.a90c.66e6 to 0014.a90c.66ed   1.7   Unknown      Unknown      PwrDown   5  0013.c42e.7fe0 to 0013.c42e.7fe3   4.4   8.1(3)       12.2(33)SXH8 Ok  [...]
+
+After locating the correct slot, issue the show module &lt;slot number&gt; command to identify the software version that is running, as shown in the following example:
+
+
+switch&gt;show module 2
+Mod Ports Card Type                              Model              Serial No. --- ----- -------------------------------------- ------------------ -----------   2    6  Firewall Module                        WS-SVC-FWM-1       SAD10360485  Mod MAC addresses                       Hw    Fw           Sw           Status --- ---------------------------------- ------ ------------ ------------ -------   2  0018.ba41.5092 to 0018.ba41.5099   4.0   7.2(1)       4.0(16)      Ok  [...]
+
+The preceding example shows that the Cisco FWSM is running software version 4.0(16) as indicated by the Sw column.
+
+ Note: Recent versions of Cisco IOS Software will show the software version of each module in the output from the show module command; therefore, executing the show module &lt;slot number&gt; command is not necessary.
+
+If a Virtual Switching System (VSS) is used to allow two physical Cisco Catalyst 6500 Series switches to operate as a single logical virtual switch, the show module switch all command can display the software version of all FWSMs that belong to switch 1 and switch 2. The output from this command will be similar to the output from show module &lt;slot number&gt; but will include module information for the modules in each switch in the VSS.
+
+Alternatively, version information can be obtained directly from the Cisco FWSM through the show version command, as shown in the following example:
+
+
+FWSM&gt; show version
+ FWSM Firewall Version 4.0(16) [...]
+
+Customers who use the Cisco Adaptive Security Device Manager (ASDM) to manage their devices can find the version of the software displayed in the table in the login window or in the upper left corner of the Cisco ASDM window. The version notation is similar to the following example:
+
+
+FWSM Version: 4.0(16)</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="3">With the exception of Cisco ASA 5500 Series Adaptive Security Appliances and the Cisco Catalyst 6500 Series ASA Services Module, no other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="4">The Cisco FWSM is a high-speed, integrated firewall module for Cisco Catalyst 6500 Series switches and Cisco 7600 Series routers. The FWSM offers firewall services with stateful packet filtering and deep packet inspection.
+
+The Cisco FWSM is affected by multiple vulnerabilities, which are described in the following sections.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+The Cisco FWSM has a system log (syslog) feature that provides information for monitoring normal operation and troubleshooting network or device issues. System log messages are assigned different severities (debugging, informational, error, critical, etc.) and can be sent to different logging destinations.
+
+A denial of service vulnerability exists in the implementation of one specific system log message (message ID 302015, "Built outbound UDP connection session-id for src-intf:IP/Port to dst-intf:IP/Port ARP-Incomplete") that can cause memory corruption and lead to a lock up or crash of the Cisco FWSM in the event that that system log message needs to be generated for IPv6 traffic that has flowed through the device. The Cisco FWSM may not recover on its own and a manual reboot may be necessary to recover.
+
+System log message 302015 has a default severity level of 6 (informational). Changing the default severity level of this system message will not prevent the issue from occurring if the system is logging to any destinations at the new severity level. The Cisco FWSM must have interfaces with IPv6 addresses otherwise the problem does not occur.
+
+This vulnerability is documented in Cisco bug ID  CSCti83875  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCti83875"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2011-3296.
+ Authentication Proxy Denial of Service Vulnerability
+The Cisco FWSM authentication proxy feature allows one to use AAA to control access to network resources. Specifically, the Cisco FWSM cut-through proxy challenges a user initially at the application layer and then authenticates against AAA servers. After the Cisco FWSM authenticates the user, it shifts the session flow, and all traffic flows directly between the user's computer and the network resource being accessed.
+
+A denial of service vulnerability exists in some versions of Cisco FWSM Software that affects devices configured to use authentication to grant users access to the network, also known as cut-through or authentication proxy. Vulnerable configurations are those that contain the aaa authentication match or aaa authentication include commands. The vulnerability may be triggered when there is a high number of network access authentication requests.
+
+This vulnerability is documented in Cisco bug ID  CSCtn15697  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtn15697"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2011-3297.
+ TACACS+ Authentication Bypass Vulnerability
+AAA enables the Cisco FWSM to determine who the user is (authentication), what the user can do (authorization), and what the user did (accounting). The Cisco FWSM supports TACACS+ authentication for VPN users, firewall sessions, and administrative access to the device.
+
+An authentication bypass vulnerability exists in the TACACS+ implementation in the Cisco FWSM. Successful exploitation could allow a remote attacker to bypass TACACS+ authentication of VPN users (the Cisco FWSM only allows VPN sessions for management), firewall sessions, or administrative access to the device.
+
+This vulnerability is documented in Cisco bug ID  CSCto74274  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCto74274"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2011-3298.
+ SunRPC Inspection Denial of Service Vulnerabilities
+The SunRPC inspection engine enables or disables application inspection for the SunRPC protocol. SunRPC is used by Network File System (NFS) and Network Information Service (NIS). SunRPC services can run on any port. When a client attempts to access a SunRPC service on a server, it must learn the port on which the service is running. The client does this by querying the port mapper process, usually rpcbind, on the well-known port of 111.
+
+The Cisco FWSM is affected by four vulnerabilities that may cause the device to reload during the processing of different crafted SunRPC messages when SunRPC inspection is enabled. These vulnerabilities are triggered only by transit traffic; traffic that is destined to the device does not trigger these vulnerabilities.
+
+These vulnerabilities are documented in Cisco bug IDs  CSCtq09972  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtq09972"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) ,  CSCtq09978  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtq09978"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) ,  CSCtq09986  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtq09986"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) , and  CSCtq09989  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtq09989"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) ; and have been assigned Common Vulnerabilities and Exposures (CVE) IDs CVE-2011-3299, CVE-2011-3300, CVE-2011-3301, and CVE-2011-3302, respectively.
+ ILS Inspection Denial of Service Vulnerability
+The ILS inspection engine provides Network Address Translation (NAT) support for Microsoft NetMeeting, SiteServer, and Active Directory products that use Lightweight Directory Access Protocol (LDAP) to exchange directory information with an ILS server.
+
+The Cisco FWSM is affected by a vulnerability when ILS inspection is enabled that may cause the device to reload during the processing of a malformed ILS message. This vulnerability is triggered by transit traffic only; traffic that is destined to the device does not trigger this vulnerability.
+
+This vulnerability is documented in Cisco bug ID  CSCtq57802  ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtq57802"] ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned CVE ID CVE-2011-3303.</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="5">This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="6">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="7">The Cisco PSIRT is not aware of any public announcements or malicious use of the vulnerabilities described in this advisory.
+
+The Syslog Message Memory Corruption Denial of Service Vulnerability, Authentication Proxy Denial of Service Vulnerability, and TACACS+ Authentication Bypass Vulnerability were discovered during the troubleshooting of customer service requests.
+
+The SunRPC Inspection Denial of Service Vulnerabilities and ILS Inspection Denial of Service Vulnerability were discovered by Cisco during internal testing.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="8">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A standalone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy and may lack important information or contain factual errors. The information in this document is intended for end users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Firewall Services Module</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Type="Vendor" Name="Cisco">
+      <Branch Type="Product Name" Name="Cisco Firewall Services Module (FWSM)">
+        <FullProductName ProductID="CVRFPID-5176">Cisco Firewall Services Module (FWSM) </FullProductName>
+      </Branch>
+      <Branch Type="Product Name" Name="Cisco Adaptive Security Appliance (ASA) Software">
+        <Branch Type="Product Version" Name="7.2">
+          <Branch Type="Service Pack" Name="7.2.2.34">
+            <FullProductName ProductID="CVRFPID-70760">Cisco Adaptive Security Appliance (ASA) Software 7.2.2.34</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.3.1">
+            <FullProductName ProductID="CVRFPID-70763">Cisco Adaptive Security Appliance (ASA) Software 7.2.3.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.2">
+            <FullProductName ProductID="CVRFPID-70764">Cisco Adaptive Security Appliance (ASA) Software 7.2.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.4">
+            <FullProductName ProductID="CVRFPID-91011">Cisco Adaptive Security Appliance (ASA) Software 7.2.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.3">
+            <FullProductName ProductID="CVRFPID-91012">Cisco Adaptive Security Appliance (ASA) Software 7.2.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.1">
+            <FullProductName ProductID="CVRFPID-91013">Cisco Adaptive Security Appliance (ASA) Software 7.2.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.4.27">
+            <FullProductName ProductID="CVRFPID-91089">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.27</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.4.30">
+            <FullProductName ProductID="CVRFPID-91090">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.30</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.5">
+            <FullProductName ProductID="CVRFPID-100027">Cisco Adaptive Security Appliance (ASA) Software 7.2.5</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="7.2.4.33">
+            <FullProductName ProductID="CVRFPID-111872">Cisco Adaptive Security Appliance (ASA) Software 7.2.4.33</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="8.0">
+          <Branch Type="Service Pack" Name="8.0.2.11">
+            <FullProductName ProductID="CVRFPID-70761">Cisco Adaptive Security Appliance (ASA) Software 8.0.2.11</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.4">
+            <FullProductName ProductID="CVRFPID-91003">Cisco Adaptive Security Appliance (ASA) Software 8.0.4</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.3">
+            <FullProductName ProductID="CVRFPID-91004">Cisco Adaptive Security Appliance (ASA) Software 8.0.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.2">
+            <FullProductName ProductID="CVRFPID-91005">Cisco Adaptive Security Appliance (ASA) Software 8.0.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.1.2">
+            <FullProductName ProductID="CVRFPID-91006">Cisco Adaptive Security Appliance (ASA) Software 8.0.1.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.4.25">
+            <FullProductName ProductID="CVRFPID-91021">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.25</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.4.28">
+            <FullProductName ProductID="CVRFPID-91022">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.28</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.4.33">
+            <FullProductName ProductID="CVRFPID-92319">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.33</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.4.32">
+            <FullProductName ProductID="CVRFPID-92322">Cisco Adaptive Security Appliance (ASA) Software 8.0.4.32</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.0.5">
+            <FullProductName ProductID="CVRFPID-97262">Cisco Adaptive Security Appliance (ASA) Software 8.0.5</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="8.2">
+          <Branch Type="Service Pack" Name="8.2.0.45">
+            <FullProductName ProductID="CVRFPID-70762">Cisco Adaptive Security Appliance (ASA) Software 8.2.0.45</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.2.1">
+            <FullProductName ProductID="CVRFPID-97260">Cisco Adaptive Security Appliance (ASA) Software 8.2.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.2.2">
+            <FullProductName ProductID="CVRFPID-97261">Cisco Adaptive Security Appliance (ASA) Software 8.2.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.2.2.10">
+            <FullProductName ProductID="CVRFPID-99994">Cisco Adaptive Security Appliance (ASA) Software 8.2.2.10</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.2.3">
+            <FullProductName ProductID="CVRFPID-108072">Cisco Adaptive Security Appliance (ASA) Software 8.2.3</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.2.4">
+            <FullProductName ProductID="CVRFPID-108074">Cisco Adaptive Security Appliance (ASA) Software 8.2.4</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="8.1">
+          <Branch Type="Service Pack" Name="8.1.1">
+            <FullProductName ProductID="CVRFPID-91009">Cisco Adaptive Security Appliance (ASA) Software 8.1.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.1.2">
+            <FullProductName ProductID="CVRFPID-91010">Cisco Adaptive Security Appliance (ASA) Software 8.1.2</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.1.2.15">
+            <FullProductName ProductID="CVRFPID-91019">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.15</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.1.2.16">
+            <FullProductName ProductID="CVRFPID-91020">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.16</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.1.2.19">
+            <FullProductName ProductID="CVRFPID-91088">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.19</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.1.2.23">
+            <FullProductName ProductID="CVRFPID-92320">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.23</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.1.2.24">
+            <FullProductName ProductID="CVRFPID-92321">Cisco Adaptive Security Appliance (ASA) Software 8.1.2.24</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="8.3">
+          <Branch Type="Service Pack" Name="8.3.1.1">
+            <FullProductName ProductID="CVRFPID-99996">Cisco Adaptive Security Appliance (ASA) Software 8.3.1.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.3.1">
+            <FullProductName ProductID="CVRFPID-99997">Cisco Adaptive Security Appliance (ASA) Software 8.3.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.3.2">
+            <FullProductName ProductID="CVRFPID-108069">Cisco Adaptive Security Appliance (ASA) Software 8.3.2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="8.4">
+          <Branch Type="Service Pack" Name="8.4.1">
+            <FullProductName ProductID="CVRFPID-108073">Cisco Adaptive Security Appliance (ASA) Software 8.4.1</FullProductName>
+          </Branch>
+          <Branch Type="Service Pack" Name="8.4.2">
+            <FullProductName ProductID="CVRFPID-112139">Cisco Adaptive Security Appliance (ASA) Software 8.4.2</FullProductName>
+          </Branch>
+        </Branch>
+        <Branch Type="Product Version" Name="8.5">
+          <Branch Type="Service Pack" Name="8.5.1">
+            <FullProductName ProductID="CVRFPID-112136">Cisco Adaptive Security Appliance (ASA) Software 8.5.1</FullProductName>
+          </Branch>
+        </Branch>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Firewall Services Module Software Syslog Message Processing Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCti83875</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCti83875</Note>
+    </Notes>
+    <CVE>CVE-2011-3296</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5176</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Firewall Services Module Firmware Authentication Proxy Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtn15697</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtn15697</Note>
+    </Notes>
+    <CVE>CVE-2011-3297</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5176</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliances Firmware TACACS+ Authentication Bypass Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCto74274</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCto74274</Note>
+    </Notes>
+    <CVE>CVE-2011-3298</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5176</ProductID>
+        <ProductID>CVRFPID-100027</ProductID>
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-111872</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-70760</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-70763</ProductID>
+        <ProductID>CVRFPID-70764</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91011</ProductID>
+        <ProductID>CVRFPID-91012</ProductID>
+        <ProductID>CVRFPID-91013</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-91089</ProductID>
+        <ProductID>CVRFPID-91090</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="4" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software SunRPC Packet Inspection Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtq09972</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtq09972,CSCtq09978,CSCtq09986,CSCtq09989</Note>
+    </Notes>
+    <CVE>CVE-2011-3299</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5176</ProductID>
+        <ProductID>CVRFPID-100027</ProductID>
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-111872</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-70760</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-70763</ProductID>
+        <ProductID>CVRFPID-70764</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91011</ProductID>
+        <ProductID>CVRFPID-91012</ProductID>
+        <ProductID>CVRFPID-91013</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-91089</ProductID>
+        <ProductID>CVRFPID-91090</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="5" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software SunRPC Packet Inspection Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtq09972</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtq09972,CSCtq09978,CSCtq09986,CSCtq09989</Note>
+    </Notes>
+    <CVE>CVE-2011-3300</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5176</ProductID>
+        <ProductID>CVRFPID-100027</ProductID>
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-111872</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-70760</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-70763</ProductID>
+        <ProductID>CVRFPID-70764</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91011</ProductID>
+        <ProductID>CVRFPID-91012</ProductID>
+        <ProductID>CVRFPID-91013</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-91089</ProductID>
+        <ProductID>CVRFPID-91090</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="6" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software SunRPC Packet Inspection Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtq09972</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtq09972,CSCtq09978,CSCtq09986,CSCtq09989</Note>
+    </Notes>
+    <CVE>CVE-2011-3301</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5176</ProductID>
+        <ProductID>CVRFPID-100027</ProductID>
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-111872</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-70760</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-70763</ProductID>
+        <ProductID>CVRFPID-70764</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91011</ProductID>
+        <ProductID>CVRFPID-91012</ProductID>
+        <ProductID>CVRFPID-91013</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-91089</ProductID>
+        <ProductID>CVRFPID-91090</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="7" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software SunRPC Packet Inspection Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtq09972</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtq09972,CSCtq09978,CSCtq09986,CSCtq09989</Note>
+    </Notes>
+    <CVE>CVE-2011-3302</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5176</ProductID>
+        <ProductID>CVRFPID-100027</ProductID>
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-111872</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-112139</ProductID>
+        <ProductID>CVRFPID-70760</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-70763</ProductID>
+        <ProductID>CVRFPID-70764</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91011</ProductID>
+        <ProductID>CVRFPID-91012</ProductID>
+        <ProductID>CVRFPID-91013</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-91089</ProductID>
+        <ProductID>CVRFPID-91090</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="8" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software Internet Locator Server Packet Inspection Denial of Service Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtq57697</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtq57697,CSCtq57802</Note>
+    </Notes>
+    <CVE>CVE-2011-3303</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-108073</ProductID>
+        <ProductID>CVRFPID-5176</ProductID>
+        <ProductID>CVRFPID-100027</ProductID>
+        <ProductID>CVRFPID-108069</ProductID>
+        <ProductID>CVRFPID-108072</ProductID>
+        <ProductID>CVRFPID-108074</ProductID>
+        <ProductID>CVRFPID-111872</ProductID>
+        <ProductID>CVRFPID-112136</ProductID>
+        <ProductID>CVRFPID-70760</ProductID>
+        <ProductID>CVRFPID-70761</ProductID>
+        <ProductID>CVRFPID-70762</ProductID>
+        <ProductID>CVRFPID-70763</ProductID>
+        <ProductID>CVRFPID-70764</ProductID>
+        <ProductID>CVRFPID-91003</ProductID>
+        <ProductID>CVRFPID-91004</ProductID>
+        <ProductID>CVRFPID-91005</ProductID>
+        <ProductID>CVRFPID-91006</ProductID>
+        <ProductID>CVRFPID-91009</ProductID>
+        <ProductID>CVRFPID-91010</ProductID>
+        <ProductID>CVRFPID-91011</ProductID>
+        <ProductID>CVRFPID-91012</ProductID>
+        <ProductID>CVRFPID-91013</ProductID>
+        <ProductID>CVRFPID-91019</ProductID>
+        <ProductID>CVRFPID-91020</ProductID>
+        <ProductID>CVRFPID-91021</ProductID>
+        <ProductID>CVRFPID-91022</ProductID>
+        <ProductID>CVRFPID-91088</ProductID>
+        <ProductID>CVRFPID-91089</ProductID>
+        <ProductID>CVRFPID-91090</ProductID>
+        <ProductID>CVRFPID-92319</ProductID>
+        <ProductID>CVRFPID-92320</ProductID>
+        <ProductID>CVRFPID-92321</ProductID>
+        <ProductID>CVRFPID-92322</ProductID>
+        <ProductID>CVRFPID-97260</ProductID>
+        <ProductID>CVRFPID-97261</ProductID>
+        <ProductID>CVRFPID-97262</ProductID>
+        <ProductID>CVRFPID-99994</ProductID>
+        <ProductID>CVRFPID-99996</ProductID>
+        <ProductID>CVRFPID-99997</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>This Cisco Security Advisory describes multiple distinct vulnerabilities. These vulnerabilities and their respective workarounds are independent of each other.
+ Syslog Message Memory Corruption Denial of Service Vulnerability
+Completely disabling syslog 302015 with the command no logging message 302015 is an effective workaround for this vulnerability.
+ Authentication Proxy Denial of Service Vulnerability
+There are no workarounds available for this vulnerability.
+ TACACS+ Authentication Bypass Vulnerability
+There are no workarounds available for this vulnerability other than using a different authentication protocol such as RADIUS and LDAP.
+ SunRPC Inspection Denial of Service Vulnerabilities
+Administrators can mitigate these vulnerabilities by disabling SunRPC inspection if it is not required. Administrators can disable SunRPC inspection by issuing the no inspect sunrpc command in class configuration sub-mode in the policy map configuration. Disabling SunRPC inspection may cause SunRPC traffic to stop transiting the security appliance.
+ ILS Inspection Denial of Service Vulnerability
+Administrators can mitigate this vulnerability by disabling ILS inspection if it is not required. Administrators can disable ILS inspection by issuing the no inspect ils command in class configuration sub-mode in the policy map configuration. Disabling ILS inspection may cause ILS traffic to stop through the security appliance.</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm</URL>
+        <Description>Multiple Vulnerabilities in Cisco Firewall Services Module</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

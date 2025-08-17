@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20130327-ike",
+  "title": "Cisco IOS Software Internet Key Exchange Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2013-03-27T16:00:00.000+0000",
+  "lastPublished": "2013-04-11T15:30:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130327-ike",
+  "severity": "High",
+  "cwe": "CWE-119",
+  "erpPubIds": "28646",
+  "cve": "CVE-2013-1144",
+  "ciscoBugId": "CSCth81055",
+  "status": "",
+  "summary": "The Cisco IOS Software Internet Key Exchange (IKE) feature contains a  denial of service (DoS) vulnerability.Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.This advisory is available ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Internet Key Exchange Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28646&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar13.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "UDP Host Flood",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4002&signatureSubId=0&releaseVersion=S572&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS XR Memory Exhaustion Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4488&signatureSubId=0&releaseVersion=S823&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

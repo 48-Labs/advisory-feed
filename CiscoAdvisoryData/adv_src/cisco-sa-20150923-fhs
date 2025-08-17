@@ -1,0 +1,44 @@
+{
+  "identifier": "cisco-sa-20150923-fhs",
+  "title": "Cisco IOS and IOS XE Software IPv6 First Hop Security Denial of Service Vulnerabilities",
+  "version": "1.2",
+  "firstPublished": "2015-09-23T16:00:00.000+0000",
+  "lastPublished": "2016-12-08T15:19:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150923-fhs",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "40941,40940",
+  "cve": "CVE-2015-6278,CVE-2015-6279",
+  "ciscoBugId": "CSCuo04400,CSCus19794",
+  "status": "",
+  "summary": "Two vulnerabilities in the IPv6 first hop security feature of Cisco IOS and IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload.Cisco has released software updates that address these vulnerabilities. There are no workarounds to ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS and IOS XE Software IPv6 Snooping Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=40941&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS and IOS XE Software IPv6 Snooping Secure Network Discovery Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=40940&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2015 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep15.html"
+        }
+      ]
+    }
+  ]
+}

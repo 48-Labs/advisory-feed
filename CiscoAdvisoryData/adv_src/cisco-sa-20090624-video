@@ -1,0 +1,60 @@
+{
+  "identifier": "cisco-sa-20090624-video",
+  "title": "Vulnerabilities in Cisco Video Surveillance Products",
+  "version": "1.0",
+  "firstPublished": "2009-06-24T16:00:00.000+0000",
+  "lastPublished": "2009-06-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090624-video",
+  "severity": "High",
+  "cwe": "CWE-200, CWE-399",
+  "erpPubIds": "18550,18551,cisco-amb-20090624-video",
+  "cve": "CVE-2009-2045,CVE-2009-2046",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Video Surveillance Stream Manager firmware for the Cisco Video Surveillance Services Platforms and Cisco Video Surveillance Integrated Services Platforms contain a denial of service (DoS) vulnerability that could result in a reboot on systems that receive a crafted packet.  ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Video Surveillance 2500 Series IP Camera Remote Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18550&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Video Surveillance Stream Manager Firmware Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18551&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Vulnerabilities in Cisco Video Surveillance Products",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090624-video"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IP Camera Info Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=16733&signatureSubId=0&releaseVersion=S797&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IP Camera Info Disclosure",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=16733&signatureSubId=1&releaseVersion=S797&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco Video Surveillance Stream Manager for Services Platforms and Integrated Services Platforms DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=16755&signatureSubId=0&releaseVersion=S801&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

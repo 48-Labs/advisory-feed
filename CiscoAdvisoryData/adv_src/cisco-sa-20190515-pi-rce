@@ -1,0 +1,46 @@
+{
+  "identifier": "cisco-sa-20190515-pi-rce",
+  "title": "Cisco Prime Infrastructure and Evolved Programmable Network Manager Remote Code Execution Vulnerabilities",
+  "version": "1.1",
+  "firstPublished": "2019-05-15T16:00:00.000+0000",
+  "lastPublished": "2019-05-15T22:58:48.860+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190515-pi-rce",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2019-1821,CVE-2019-1822,CVE-2019-1823",
+  "ciscoBugId": "CSCvo22842,CSCvo28671,CSCvo28680,CSCvo62258,CSCvo62264,CSCvo62280",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Prime Infrastructure (PI) and Cisco Evolved Programmable Network (EPN) Manager could allow a remote attacker to gain the ability to execute arbitrary code with elevated privileges on the underlying operating system. ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "46492",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-05-03-new.html"
+        },
+        {
+          "name": "46493",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-05-03-new.html"
+        },
+        {
+          "name": "46494",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-05-03-new.html"
+        },
+        {
+          "name": "49986",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-05-16-new.html"
+        },
+        {
+          "name": "49987",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-05-16-new.html"
+        }
+      ]
+    }
+  ]
+}

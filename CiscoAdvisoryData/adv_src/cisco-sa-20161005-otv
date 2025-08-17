@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20161005-otv",
+  "title": "Cisco Nexus 7000 and 7700 Series Switches Overlay Transport Virtualization Buffer Overflow Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-10-05T16:00:00.000+0000",
+  "lastPublished": "2016-10-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-otv",
+  "severity": "Critical",
+  "workarounds": "Yes",
+  "cwe": null,
+  "cve": "CVE-2016-1453",
+  "ciscoBugId": "CSCuy95701",
+  "status": "",
+  "summary": "A vulnerability in the Overlay Transport Virtualization (OTV) generic routing encapsulation (GRE) implementation of the Cisco Nexus 7000 and 7700&nbsp;Series Switches could allow an unauthenticated, adjacent&nbsp;attacker to cause a reload of the affected system or to remotely execute code.",
+  "totalCount": 5,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Nexus 7000 Overlay Transport Virtualization Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7724&signatureSubId=0&releaseVersion=S946&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

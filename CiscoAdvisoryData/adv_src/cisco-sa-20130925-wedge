@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20130925-wedge",
+  "title": "Cisco IOS Software Queue Wedge Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2013-09-25T16:00:00.000+0000",
+  "lastPublished": "2013-09-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130925-wedge",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "30700",
+  "cve": "CVE-2013-5477",
+  "ciscoBugId": "CSCub67465",
+  "status": "",
+  "summary": "A vulnerability in the T1/E1 driver queue implementation of Cisco IOS Software could allow an unauthenticated, remote attacker to cause an interface wedge condition, which could lead to loss of connectivity, loss of routing protocol adjacency, and could result in a denial of service (DoS) ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Queue Wedge Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30700&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep13.html"
+        }
+      ]
+    }
+  ]
+}

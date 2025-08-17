@@ -1,0 +1,77 @@
+{
+  "identifier": "cisco-sa-20180823-apache-struts",
+  "title": "Apache Struts Remote Code Execution Vulnerability Affecting Cisco Products: August 2018",
+  "version": "1.12",
+  "firstPublished": "2018-08-23T20:00:00.000+0000",
+  "lastPublished": "2018-09-17T18:52:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180823-apache-struts",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "58784",
+  "cve": "CVE-2018-11776",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "A vulnerability in Apache Struts could allow an unauthenticated, remote attacker to execute arbitrary code on a targeted system.The vulnerability exists because the affected software insufficiently validates user-supplied input, allowing the use of results with no namespace value ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Apache Struts Namespace Remote Code Execution Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=58784&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "29639",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39190",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "39191",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "47634",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "47649",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "47689",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "47690",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "47691",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Apache Struts2 Remote Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8251&signatureSubId=0&releaseVersion=S1024&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

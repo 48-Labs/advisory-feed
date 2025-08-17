@@ -1,0 +1,57 @@
+{
+  "identifier": "cisco-sa-20140326-sip",
+  "title": "Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2014-03-26T16:00:00.000+0000",
+  "lastPublished": "2014-03-31T13:46:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-sip",
+  "severity": "High",
+  "cwe": "CWE-20",
+  "erpPubIds": "33344,32537",
+  "cve": "CVE-2014-2106",
+  "ciscoBugId": "CSCug45898",
+  "status": "",
+  "summary": "A vulnerability in the Session Initiation Protocol (SIP) implementation in Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a reload of an affected device. To exploit this vulnerability, affected devices must be configured to process SIP ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Cisco IOS XE Software Session Initiation Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33344&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=32537"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Cisco IOS Software Security Advisory Bundled Publication March 2014",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar14.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco SIP Denail of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3864&signatureSubId=0&releaseVersion=S781&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

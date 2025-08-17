@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-snort-dos-9D3hJLuj",
+  "title": "Multiple Cisco Products Snort Modbus Denial of Service Vulnerability",
+  "version": "1.5",
+  "firstPublished": "2022-01-19T16:00:00.000+0000",
+  "lastPublished": "2022-04-26T19:41:55.287+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort-dos-9D3hJLuj",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-190",
+  "cve": "CVE-2022-20685",
+  "ciscoBugId": "CSCvz25197,CSCvz27235,CSCvz34380,CSCvz79589",
+  "status": "",
+  "summary": "A vulnerability in the Modbus preprocessor of the Snort detection engine could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.This vulnerability is due to an integer overflow while processing Modbus traffic. An attacker ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "58906-58907",
+          "url": ""
+        }
+      ]
+    }
+  ]
+}

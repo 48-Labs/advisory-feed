@@ -1,0 +1,34 @@
+{
+  "identifier": "cisco-sa-20191002-firepwr-bypass",
+  "title": "Cisco Firepower System Software Detection Engine RTF and RAR Malware and File Policy Bypass Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2019-10-02T16:00:00.000+0000",
+  "lastPublished": "2019-10-02T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20191002-firepwr-bypass",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-693",
+  "cve": "CVE-2019-12696,CVE-2019-12697",
+  "ciscoBugId": "CSCvo70545,CSCvp66222",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the Cisco Firepower System Software Detection Engine could allow an unauthenticated, remote attacker to bypass configured Malware and File Policies for RTF and RAR file types.For more information about these vulnerabilities, see the ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "20472",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        },
+        {
+          "name": "23659",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2019-10-03-new.html"
+        }
+      ]
+    }
+  ]
+}

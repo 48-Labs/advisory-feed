@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco TelePresence Immersive Endpoint Devices</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20120711-cts</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.1</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.0</cvrf:Number>
+        <cvrf:Date>2012-07-10T18:14:48</cvrf:Date>
+        <cvrf:Description>Initial public release.</cvrf:Description>
+      </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2012-09-24T14:56:45</cvrf:Date>
+        <cvrf:Description>Cisco has released software version 1.8.4, which remediates the following CVEs in the 1.8.x Train:CVE-2012-2486, CVE-2012-3074, and CVE-2012-3075</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2012-07-11T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2012-09-24T14:56:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Cisco TelePresence Endpoint devices contain the following vulnerabilities:
+
+
+    Cisco TelePresence API Remote Command Execution Vulnerability
+    Cisco TelePresence Remote Command Execution Vulnerability
+    Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability
+
+Exploitation of the API Remote Command Execution vulnerability could allow an unauthenticated, adjacent attacker to inject commands into API requests.  The injected commands will be executed by the underlying operating system in an elevated context.
+
+
+
+Exploitation of the Remote Command Execution vulnerability could allow an authenticated, remote attacker to inject commands into requests made to the Administrative Web interface.  The injected commands will be executed by the underlying operating system in an elevated context.
+
+
+
+
+Exploitation of the Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability may allow an unauthenticated, adjacent attacker to execute arbitrary code with elevated privileges.
+
+
+
+Cisco has released software updates that address these vulnerabilities. 
+
+There are no workarounds that mitigate these vulnerabilities. 
+
+
+
+This advisory is available at the following link:
+
+https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts["https://tvce.cisco.com/security/AIMS/https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts"]
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">Enter product information here.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">Cisco TelePresence Manager, Cisco TelePresence Recording Server, Cisco TelePresence Multipoint Switch, and Cisco TelePresence Immersive Endpoint System may be affected by the vulnerabilities that are described in this security advisory. The following tables contain specific information for each vulnerability.
+
+
+
+Cisco TelePresence API Remote Command Injection Vulnerability
+
+
+
+
+    
+        
+            Product
+            Affected
+        
+        
+            Cisco TelePresence Manager
+
+            
+            NO
+        
+        
+            Cisco TelePresence Recording Server
+            NO
+        
+        
+            Cisco TelePresence Multipoint Switch
+            NO
+        
+        
+            Cisco TelePresence Immersive Endpoint System
+            YES
+        
+    
+
+
+
+Cisco TelePresence Remote Command Injection Vulnerability
+
+
+
+
+    
+        
+            Product
+            Affected
+        
+        
+            Cisco TelePresence Manager
+            NO
+        
+        
+            Cisco TelePresence Recording Server
+            NO
+        
+        
+            Cisco TelePresence Multipoint Switch
+            NO
+        
+        
+            Cisco TelePresence Immersive Endpoint System
+            YES
+        
+    
+
+
+
+
+Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability 
+
+
+
+
+    
+        
+            Product
+            Affected
+        
+        
+            Cisco TelePresence Manager
+            YES
+        
+        
+            Cisco TelePresence Recording Server
+            YES
+        
+        
+            Cisco TelePresence Multipoint Switch
+            YES
+        
+        
+            Cisco TelePresence Immersive Endpoint System
+            YES
+        
+    
+
+
+
+
+
+Detailed Information about Vulnerable Product
+This security advisory is describing the vulnerabilities for the Cisco TelePresence Endpoint devices. For additional information regarding how the vulnerabilities affect other vulnerable products please refer to the specific product security advisory document following the link in the table below: 
+
+
+
+
+    
+        
+            Product
+            Security Advisory Publication Link
+        
+        
+            Cisco TelePresence Multipoint Switch
+            https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctms
+        
+        
+            Cisco TelePresence Manager
+            https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctsman
+        
+        
+            Cisco TelePresence Recording Server
+            https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-ctrs
+        
+    
+
+
+
+How To Determine The Software Version
+Cisco TelePresence Recording Server devices that are running an affected version of software are affected.
+
+To determine the current version of software that is running on Cisco TelePresence Endpoint Systems, establish an SSH connection to the device and issue the show version active and the show version inactive commands. The output should resemble the following example:
+
+
+admin: show version active
+Active Master Version: 1.7.0.0-471
+
+Active Version Installed Software Options: 
+No Installed Software Options Found.
+
+admin: show version inactive
+Inactive Master Version: 1.6.0.0-342
+
+Inactive Version Installed Software Options: 
+No Installed Software Options Found.
+
+In the preceding example, the system has versions 1.6.0 and 1.7.0 loaded on the device, and version 1.7.0 is currently active. A device is affected only by vulnerabilities that are in the active software version.
+
+
+</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">No other Cisco products are currently known to be affected by these vulnerabilities.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">Cisco TelePresence Endpoint devices provide an immersive remote presence experience.
+
+
+
+
+This section gives additional information for each of the vulnerabilities affecting Cisco TelePresence Immersive Endpoint Devices.
+
+
+
+Cisco TelePresence API Remote Command Execution Vulnerability
+
+
+
+A remote command injection vulnerability exists in one of the Cisco TelePresence APIs that are hosted on the immersive endpoint devices.  This issue if exploited could allow an unauthenticated attacker in an adjacent context to execute arbitrary commands on the underlying operating system with elevated privileges.
+
+
+
+An attacker must have the ability to submit a malformed request to TCP port 61460 from a physical or logical Layer 3 adjacent context.  A three-way handshake is required to exploit this vulnerability.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtz38382["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtz38382"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2012-3074.
+
+
+
+Cisco TelePresence Remote Command Execution Vulnerability
+
+
+
+A remote command injection vulnerability exists in the Cisco TelePresence administrative web interface that is hosted on the immersive endpoint devices.  If exploited, this issue could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system with elevated privileges.
+
+
+
+An attacker must have the ability to submit a malformed request to TCP port 443.  A three-way handshake is required to exploit this vulnerability.
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtn99724["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtn99724"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2012-3075.
+
+
+
+
+
+Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability 
+
+
+
+A remote code execution vulnerability in the implementation of the Cisco
+Discovery Protocol component could allow an unauthenticated, adjacent
+attacker to execute arbitrary code with elevated privileges. The
+vulnerability is due to a failure to properly handle malformed Cisco
+Discovery Protocol packets.  An attacker could exploit this
+vulnerability by passing malformed Cisco
+Discovery Protocol packets to an
+affected device.  Successful exploitation of this vulnerability could allow the
+attacker to execute arbitrary code with elevated privileges.
+
+
+
+Because Cisco Discovery Protocol works at the data link layer (Layer 2),
+an attacker must have a way to submit an Ethernet frame directly to an
+affected device. This action may be possible in situations where the affected
+system is part of a bridged network or connected to a non partitioned
+device, such as a network hub.
+
+
+
+
+This vulnerability is documented in Cisco bug ID CSCtz40953["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCtz40953"] (registered["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2012-2486.
+</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">There are no workarounds that mitigate these vulnerabilities.
+</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">This section gives details about affected releases and remediation for each of the vulnerabilities affecting Cisco TelePresence Immersive Endpoint Systems.
+
+
+
+Cisco TelePresence API Remote Command Execution Vulnerability
+
+
+    
+        
+            Version
+            First Fixed Release
+        
+        
+            Prior to 1.6
+
+            
+              1.8.4 or 1.9.1
+        
+        
+            1.6
+
+            
+              1.8.4 or 1.9.1
+        
+        
+            1.7
+
+            
+              1.8.4 or 1.9.1
+        
+        
+            1.8
+
+            
+              1.8.4 or 1.9.1
+        
+    
+
+
+
+
+
+Cisco TelePresence Remote Command Execution Vulnerability
+
+
+
+
+    
+        
+            Version
+            First Fixed Release
+        
+        
+            Prior to 1.6
+
+            
+             1.7.4
+        
+        
+            1.6
+
+            
+             1.7.4
+        
+        
+            1.7
+            
+             1.7.4
+        
+        
+            1.7.4 and later
+
+            
+            Not affected
+        
+        
+            1.8
+
+            
+            Not affected
+        
+    
+
+
+
+Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability
+
+
+    
+        
+            Version
+            First Fixed Release
+        
+        
+            Prior to 1.6
+
+            
+             1.8.4 or 1.9.1
+
+            
+        
+        
+            1.6
+
+            
+             1.8.4 or 1.9.1
+        
+        
+            1.7
+
+            
+             1.8.4 or 1.9.1
+        
+        
+            1.8
+
+            
+             1.8.4 or 1.9.1
+        
+    
+
+Recommended Releases
+
+
+
+The following table gives information about the releases that contains the fixes for all the vulnerabilities described in this security advisory:
+
+
+    
+        
+            Version
+            Release
+        
+        
+            Prior to 1.6
+
+            
+            Upgrade to 1.9.1 or later
+
+            
+        
+        
+            1.6
+
+            
+            Upgrade to 1.9.1 or later
+
+            
+        
+        
+            1.7
+
+            
+            Upgrade to 1.9.1 or later
+
+            
+        
+        
+            1.8
+
+            
+            Upgrade to 1.8.4 or upgrade to 1.9.1 or later
+
+            
+        
+    
+
+When considering software upgrades, customers are advised to consult the Cisco Security Advisories and Responses archive at http://www.cisco.com/go/psirt["http://www.cisco.com/go/psirt"] and review subsequent advisories to determine exposure and a complete upgrade solution. 
+
+In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and  confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers. 
+</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco Product Security Incident Response Team (PSIRT) is not aware of any public announcements or malicious use of the vulnerabilities that are described in this advisory. 
+
+These vulnerabilities were discovered during an internal security audit of the Cisco TelePresence Endpoints.
+</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco TelePresence Immersive Endpoint Devices</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco TelePresence Recording Server" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-117618">Cisco TelePresence Recording Server </FullProductName>
+      </Branch>
+      <Branch Name="Cisco TelePresence Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-117634">Cisco TelePresence Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco TelePresence Multipoint Switch" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-117644">Cisco TelePresence Multipoint Switch </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco TelePresence Cisco Discovery Protocol Remote Code Execution Vulnerability</Title>
+    <ID SystemName="Cisco Bug ID">CSCtz40947</ID>
+    <Notes>
+      <Note Title="Cisco Bug IDs" Type="Other" Ordinal="1">CSCtz40947,CSCtz40965,CSCtz40953</Note>
+    </Notes>
+    <CVE>CVE-2012-2486</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-43</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>8.3</BaseScoreV2>
+        <TemporalScoreV2>6.9</TemporalScoreV2>
+        <VectorV2>AV:A/AC:L/Au:N/C:C/I:C/A:C/E:F/RL:OF/RC:C</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts</URL>
+        <Description>Multiple Vulnerabilities in Cisco TelePresence Immersive Endpoint Devices</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco TelePresence API Remote Command Execution Vulnerability</Title>
+    <CVE>CVE-2012-3074</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts</URL>
+        <Description>Multiple Vulnerabilities in Cisco TelePresence Immersive Endpoint Devices</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco TelePresence Remote Command Execution Vulnerability</Title>
+    <CVE>CVE-2012-3075</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>There are no workarounds that mitigate these vulnerabilities.
+</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120711-cts</URL>
+        <Description>Multiple Vulnerabilities in Cisco TelePresence Immersive Endpoint Devices</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

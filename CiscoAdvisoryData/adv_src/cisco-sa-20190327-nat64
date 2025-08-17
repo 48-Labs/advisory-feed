@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20190327-nat64",
+  "title": "Cisco IOS Software NAT64 Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-03-27T16:00:00.000+0000",
+  "lastPublished": "2019-03-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190327-nat64",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "erpPubIds": "ERP-71135",
+  "cve": "CVE-2019-1751",
+  "ciscoBugId": "CSCvk61580",
+  "status": "",
+  "summary": "A vulnerability in the Network Address Translation 64 (NAT64) functions of Cisco IOS Software could allow an unauthenticated, remote attacker to cause either an interface queue wedge or a device reload.The vulnerability is due to the incorrect handling of certain IPv4 packet streams that ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "123:8:1",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-03-28-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: March 2019 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-71135&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

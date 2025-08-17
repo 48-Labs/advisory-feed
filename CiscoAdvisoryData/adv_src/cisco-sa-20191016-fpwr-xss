@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20191016-fpwr-xss",
+  "title": "Cisco Firepower Management Center Software Stored Cross-Site Scripting Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-10-16T16:00:00.000+0000",
+  "lastPublished": "2019-10-16T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20191016-fpwr-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2019-15280",
+  "ciscoBugId": "CSCvq55915,CSCvq55919,CSCvq55929,CSCvq55933,CSCvq55938,CSCvq55941,CSCvq55946,CSCvq55958,CSCvq55967",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Firepower Management Center (FMC) Software could allow an authenticated, remote attacker to conduct a stored cross-site scripting (XSS) attack against a user of the web-based management interface.The vulnerability is ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

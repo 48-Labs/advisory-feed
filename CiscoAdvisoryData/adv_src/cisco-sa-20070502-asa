@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20070502-asa",
+  "title": "LDAP and VPN Vulnerabilities in PIX and ASA Appliances",
+  "version": "1.1",
+  "firstPublished": "2007-05-02T16:00:00.000+0000",
+  "lastPublished": "2007-05-02T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070502-asa",
+  "severity": "High",
+  "cwe": "CWE-287, CWE-399",
+  "erpPubIds": "13197,13203,13205,cisco-amb-20070502-asa",
+  "cve": "CVE-2007-2462,CVE-2007-2463,CVE-2007-2464",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Multiple vulnerabilities exist in the Cisco Adaptive Security Appliance (ASA) and PIX security appliances. These vulnerabilities include two Lightweight Directory Access Protocol (LDAP) authentication bypass vulnerabilities and two denial of service (DoS) vulnerabilities.    ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Adaptive Security Appliance and PIX Security Appliance VPN Password Expiry Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13197&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Clientless SSL VPN SSL Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13203&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX/ASA LDAP Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=13205&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the LDAP and VPN Vulnerabilities in PIX and ASA Appliances",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20070502-asa"
+        }
+      ]
+    }
+  ]
+}

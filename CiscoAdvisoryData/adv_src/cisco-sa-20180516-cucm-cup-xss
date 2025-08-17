@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20180516-cucm-cup-xss",
+  "title": "Cisco Unified Communications Manager and Cisco Unified Presence Cross-Site Scripting Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2018-05-16T16:00:00.000+0000",
+  "lastPublished": "2018-05-18T15:35:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180516-cucm-cup-xss",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "cisco-amb-20060922-understanding-xss",
+  "cve": "CVE-2018-0328",
+  "ciscoBugId": "CSCvg89116",
+  "status": "",
+  "summary": "A vulnerability in the web framework of Cisco Unified Communications Manager and Cisco Unified Presence could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web interface of an affected system.The vulnerability is due to ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Understanding Cross-Site Scripting (XSS) Threat Vectors",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    }
+  ]
+}

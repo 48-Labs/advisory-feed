@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20170405-wlc3",
+  "title": "Cisco Wireless LAN Controller Management GUI Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-04-05T16:00:00.000+0000",
+  "lastPublished": "2017-04-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170405-wlc3",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "cve": "CVE-2017-3832",
+  "ciscoBugId": "CSCvb48198",
+  "status": "",
+  "summary": "A vulnerability in the web management interface of Cisco Wireless LAN Controller (WLC) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.The vulnerability is due to a missing internal handler for the specific ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "42139",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-04-06-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Wireless LAN Controller Management GUI Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7895&signatureSubId=0&releaseVersion=S976&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

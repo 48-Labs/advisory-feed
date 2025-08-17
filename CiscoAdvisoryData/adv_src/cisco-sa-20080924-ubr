@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20080924-ubr",
+  "title": "Cisco uBR10012 Series Devices SNMP Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2008-09-24T16:00:00.000+0000",
+  "lastPublished": "2008-09-24T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080924-ubr",
+  "severity": "Critical",
+  "cwe": "CWE-264",
+  "erpPubIds": "16634,cisco-amb-20080924-ipc-and-ubr",
+  "cve": "CVE-2008-3807",
+  "ciscoBugId": "CSCek57932,CSCsg60220",
+  "status": "",
+  "summary": "   Cisco uBR10012 series devices automatically enable Simple Network Management Protocol (SNMP) read/write access to the device if configured for linecard redundancy. This can be exploited by an attacker to gain complete control of the device. Only Cisco uBR10012 series devices that are ",
+  "totalCount": 11,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Linecard Redundancy Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16634&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco 10000, uBR10012, and uBR7200 Series Devices IPC Vulnerability and the Cisco uBR10012 Series Devices SNMP Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080924-ipc-and-ubr"
+        }
+      ]
+    }
+  ]
+}

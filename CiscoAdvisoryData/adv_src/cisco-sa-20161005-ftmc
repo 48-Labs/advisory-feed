@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20161005-ftmc",
+  "title": "Cisco Firepower Threat Management Console Remote Command Execution Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-10-05T16:00:00.000+0000",
+  "lastPublished": "2016-10-05T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-ftmc",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2016-6433",
+  "ciscoBugId": "CSCva30872",
+  "status": "",
+  "summary": "A vulnerability in Cisco Firepower Threat Management Console could allow an authenticated, remote attacker to execute arbitrary commands on a targeted system.The vulnerability exists because parameters sent to the web application are not properly validated. This may lead an ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "41389",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Firepower Management Console Rule Import Access",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7934&signatureSubId=0&releaseVersion=S980&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

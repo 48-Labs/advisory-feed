@@ -1,0 +1,97 @@
+{
+  "identifier": "cisco-sa-20090826-cucm",
+  "title": "Cisco Unified Communications Manager Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2009-08-26T16:00:00.000+0000",
+  "lastPublished": "2009-08-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20090826-cucm",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "cisco-sa-20100922-sip,18898,18897,18901,18902,18903,cisco-amb-20090826-cucm",
+  "cve": "CVE-2009-2050,CVE-2009-2051,CVE-2009-2052,CVE-2009-2053,CVE-2009-2054",
+  "ciscoBugId": "CSCsz43987,CSCta20040,CSCtf72678",
+  "status": "",
+  "summary": "   Cisco Unified Communications Manager (formerly CallManager) contains multiple denial of service (DoS) vulnerabilities that if exploited could cause an interruption to voice services. The Session Initiation Protocol (SIP) and Skinny Client Control Protocol (SCCP) services are affected ",
+  "totalCount": 3,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Unified Communications Manager Session Initiation Protocol INVITE Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18898&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Session Initiation Protocol Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18897&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager and Cisco Unified Presence Multiple TCP Connections Remote Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18901&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Remote Skinny Client Control Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18902&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Remote Session Initiation Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=18903&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20090826-cucm"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco IOS Software Session Initiation Protocol Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100922-sip"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20479&signatureSubId=0&releaseVersion=S772&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20479&signatureSubId=1&releaseVersion=S772&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20481&signatureSubId=0&releaseVersion=S598&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20481&signatureSubId=1&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=30059&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=30059&signatureSubId=1&releaseVersion=S598&softwareVersion=6.0"
+        },
+        {
+          "name": "CallManager TCP Connection DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6187&signatureSubId=0&releaseVersion=S858&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

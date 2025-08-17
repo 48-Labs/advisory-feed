@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20100707-snmp",
+  "title": "Hard-Coded SNMP Community Names in Cisco Industrial Ethernet 3000 Series Switches Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2010-07-07T16:00:00.000+0000",
+  "lastPublished": "2010-07-07T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100707-snmp",
+  "severity": "Critical",
+  "cwe": "CWE-287",
+  "erpPubIds": "20809",
+  "cve": "CVE-2010-1574",
+  "ciscoBugId": "CSCtf25589",
+  "status": "",
+  "summary": "Cisco Industrial Ethernet 3000 (IE 3000) Series switches running Cisco IOS&reg; Software releases 12.2(52)SE or 12.2(52)SE1, contain a vulnerability where well known SNMP community names are hard-coded for both read and write access. The hard-coded community names ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Industrial Ethernet 3000 Series Switches Default Simple Network Management Protocol Community Names Unauthorized Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20809&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "SNMP Community String Public",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4512&signatureSubId=0&releaseVersion=S579&softwareVersion=6.0"
+        },
+        {
+          "name": "SNMP Community String Private",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6003&signatureSubId=0&releaseVersion=S579&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

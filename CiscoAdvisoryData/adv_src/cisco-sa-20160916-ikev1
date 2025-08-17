@@ -1,0 +1,56 @@
+{
+  "identifier": "cisco-sa-20160916-ikev1",
+  "title": "IKEv1 Information Disclosure Vulnerability in Multiple Cisco Products",
+  "version": "1.3",
+  "firstPublished": "2016-09-16T16:00:00.000+0000",
+  "lastPublished": "2016-10-05T15:09:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160916-ikev1",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": null,
+  "cve": "CVE-2016-6415",
+  "ciscoBugId": "CSCvb29204,CSCvb36055",
+  "status": "",
+  "summary": "A vulnerability in Internet Key Exchange version 1 (IKEv1) packet processing code in Cisco IOS, Cisco IOS XE, and Cisco IOS XR Software could allow an unauthenticated, remote attacker to retrieve memory contents, which could lead to the ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "40220",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-09-16-seu.html"
+        },
+        {
+          "name": "40221",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-09-16-seu.html"
+        },
+        {
+          "name": "40222",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2016-09-16-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the IKEv1 Information Disclosure Vulnerability in Multiple Cisco Products",
+          "url": "http://www.cisco.com/c/en/us/about/security-center/identify-mitigate-exploit-ikev1-info-disclosure-vuln.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Device Internet Key Exchange Private Key Extraction",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7699&signatureSubId=0&releaseVersion=S942&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

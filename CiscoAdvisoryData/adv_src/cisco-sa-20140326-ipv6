@@ -1,0 +1,48 @@
+{
+  "identifier": "cisco-sa-20140326-ipv6",
+  "title": "Cisco IOS Software Crafted IPv6 Packet Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2014-03-26T16:00:00.000+0000",
+  "lastPublished": "2014-03-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140326-ipv6",
+  "severity": "High",
+  "cwe": "CWE-20",
+  "erpPubIds": "33351",
+  "cve": "CVE-2014-2113",
+  "ciscoBugId": "CSCui59540",
+  "status": "",
+  "summary": "A vulnerability in the implementation of the IP version 6 (IPv6) protocol stack in Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause I/O memory depletion on an affected device that has IPv6 enabled. The vulnerability is triggered when an affected ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software and Cisco IOS XE Software Crafted IPv6 Packet Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=33351&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: Cisco IOS Software Security Advisory Bundled Publication March 2014",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_mar14.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Packet Bad Length",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1250&signatureSubId=0&releaseVersion=S667&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-nxos-ebgp-dos-L3QCwVJ",
+  "title": "Cisco NX-OS Software External Border Gateway Protocol Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2024-02-28T16:00:00.000+0000",
+  "lastPublished": "2024-02-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-ebgp-dos-L3QCwVJ",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-400",
+  "erpPubIds": "ERP-75059",
+  "cve": "CVE-2024-20321",
+  "ciscoBugId": "CSCwh09703,CSCwh96478",
+  "status": "",
+  "summary": "A vulnerability in the External Border Gateway Protocol (eBGP) implementation of Cisco NX-OS Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.This vulnerability exists because eBGP traffic is mapped to a shared ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: February 2024 Semiannual Cisco FXOS and NX-OS Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75059&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

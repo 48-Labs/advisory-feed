@@ -1,0 +1,29 @@
+{
+  "identifier": "cisco-sa-20020619-unix-vpn-buffer-overflow",
+  "title": "Buffer Overflow in UNIX VPN Client",
+  "version": "1.0",
+  "firstPublished": "2002-06-19T14:00:00.000+0000",
+  "lastPublished": "2002-06-19T14:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020619-unix-vpn-buffer-overflow",
+  "cwe": "CWE-119",
+  "erpPubIds": "4032",
+  "cve": "CVE-2002-1447",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   A buffer overflow in the Cisco VPN Clients for Linux, Solaris, and Mac OS X platforms can be exploited locally to gain administrative privileges on the client system. The vulnerability can be mitigated by removing the 'setuid' permissions on the vpnclient binary executable file. The ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco VPN Client Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=4032&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

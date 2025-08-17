@@ -1,0 +1,29 @@
+{
+  "identifier": "cisco-sa-20020807-vpn5k-radius-pap",
+  "title": "Cisco VPN 5000 Series Concentrator RADIUS PAP Authentication Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2002-08-07T15:00:00.000+0000",
+  "lastPublished": "2002-08-07T15:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20020807-vpn5k-radius-pap",
+  "cwe": "CWE-200",
+  "erpPubIds": "4365",
+  "cve": "CVE-2002-0848",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   When a VPN 5000 series concentrator is configured to use a Remote Authentication Dial In User Service (RADIUS) server to authenticate client connections and the challenge type chosen is Password Authentication Protocol (PAP) or Challenge (a hybrid of PAP), the validation retry request ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco VPN 5000 Series Concentrator Authentication Information Disclosure Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=4365&typeName=Vulnerability Alert"
+        }
+      ]
+    }
+  ]
+}

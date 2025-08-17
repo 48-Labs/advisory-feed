@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20190417-wlc-csrf",
+  "title": "Cisco Wireless LAN Controller Software Cross-Site Request Forgery Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-04-17T16:00:00.000+0000",
+  "lastPublished": "2019-04-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190417-wlc-csrf",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-352",
+  "cve": "CVE-2019-1797",
+  "ciscoBugId": "CSCvj06910",
+  "status": "",
+  "summary": "A vulnerability in the web-based management interface of Cisco&nbsp;Wireless LAN Controller (WLC) Software could allow an unauthenticated, remote attacker to conduct a cross-site request forgery (CSRF) attack and perform arbitrary actions on the device with the privileges of the user, including ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "49859",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-04-18-seu.html"
+        }
+      ]
+    }
+  ]
+}

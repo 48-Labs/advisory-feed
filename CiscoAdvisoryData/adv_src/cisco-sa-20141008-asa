@@ -1,0 +1,149 @@
+{
+  "identifier": "cisco-sa-20141008-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA Software",
+  "version": "3.0",
+  "firstPublished": "2014-10-08T16:00:00.000+0000",
+  "lastPublished": "2015-07-09T15:14:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141008-asa",
+  "severity": "Critical",
+  "cwe": "CWE-16, CWE-20, CWE-287, CWE-362, CWE-399, CWE-78",
+  "erpPubIds": "Cisco-SA-20141008-CVE-2014-3394,Cisco-SA-20141008-CVE-2014-3393,Cisco-SA-20141008-CVE-2014-3391,Cisco-SA-20141008-CVE-2014-3390,35912,35916,35910,35907,35905,35908,35911,35909,35906",
+  "cve": "CVE-2014-3382,CVE-2014-3383,CVE-2014-3384,CVE-2014-3385,CVE-2014-3386,CVE-2014-3387,CVE-2014-3388,CVE-2014-3389,CVE-2014-3390,CVE-2014-3391,CVE-2014-3392,CVE-2014-3393,CVE-2014-3394",
+  "ciscoBugId": "CSCtq52661,CSCul36176,CSCum00556,CSCum46027,CSCum56399,CSCum96401,CSCun10916,CSCun11074,CSCuo68327,CSCup36829,CSCuq28582,CSCuq29136,CSCuq41510,CSCuq47574",
+  "status": "",
+  "summary": "2015-July-08 UPDATE: Cisco PSIRT is aware of disruption to someCisco customers with Cisco ASA devices affected by CVE-2014-3383, theCisco ASA VPN Denial of Service Vulnerability that was disclosed in thisSecurity Advisory. Traffic causing the disruption was isolated to ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco ASA VPN Failover Commands Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35912&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Clientless SSL VPN Information Disclosure and Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35916&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA SunRPC Inspection Engine Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35910&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA IKEv2 Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35907&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA SQL*NET Inspection Engine Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35905&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA Health and Performance Monitor Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35908&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA DNS Inspection Engine Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35911&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA GPRS Tunneling Protocol Inspection Engine Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35909&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco ASA VPN Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=35906&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco ASA Smart Call Home Digital Certificate Validation Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141008-CVE-2014-3394"
+        },
+        {
+          "name": "Cisco ASA Clientless SSL VPN Portal Customization Integrity Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141008-CVE-2014-3393"
+        },
+        {
+          "name": "Cisco ASA Local Path Inclusion Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141008-CVE-2014-3391"
+        },
+        {
+          "name": "Cisco ASA Authenticated Linux Shell Access Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141008-CVE-2014-3390"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "3:32101",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32106",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32107",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32108",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32110",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32111",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32112",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32113",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32114",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32115",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        },
+        {
+          "name": "3:32116",
+          "url": "https://www.snort.org/advisories/vrt-rules-2014-10-08"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA IKEv2 Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4718&signatureSubId=0&releaseVersion=S827&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA IKEv2 Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4718&signatureSubId=1&releaseVersion=S827&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA IKEv2 Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4718&signatureSubId=2&releaseVersion=S827&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "identifier": "cisco-sa-20121010-webex",
+  "title": "Multiple Vulnerabilities in the Cisco WebEx Recording Format Player",
+  "version": "1.0",
+  "firstPublished": "2012-10-10T16:00:00.000+0000",
+  "lastPublished": "2012-10-10T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-webex",
+  "severity": "Critical",
+  "cwe": "CWE-119",
+  "erpPubIds": "27109",
+  "cve": "CVE-2012-3936,CVE-2012-3937,CVE-2012-3938,CVE-2012-3939,CVE-2012-3940,CVE-2012-3941",
+  "ciscoBugId": "CSCtz72850,CSCtz72958,CSCtz72967,CSCtz73583,CSCua40962,CSCua61331",
+  "status": "",
+  "summary": "The Cisco WebEx Recording Format (WRF) player contains six buffer overflow vulnerabilities. In some cases, exploitation of the vulnerabilities could allow a remote attacker to execute arbitrary code on the system with the privileges of a targeted user.&nbsp;The Cisco WebEx WRF ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco WebEx Recording Format Player Multiple Buffer Overflow Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=27109&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "25303",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "25304",
+          "url": "https://www.snort.org"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WebEx Player Player Heap Buffer Overflow Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1451&signatureSubId=0&releaseVersion=S674&softwareVersion=6.0"
+        },
+        {
+          "name": "Webex Player Heap Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1475&signatureSubId=0&releaseVersion=S674&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx Recording Format Player Buffer Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1487&signatureSubId=0&releaseVersion=S674&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx Recording Format Player Overflow",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1494&signatureSubId=0&releaseVersion=S674&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx WRF Player Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1497&signatureSubId=0&releaseVersion=S892&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx WRF Player Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1497&signatureSubId=1&releaseVersion=S892&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx WRF Player Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1504&signatureSubId=0&releaseVersion=S892&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WebEx WRF Player Memory Corruption",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1504&signatureSubId=1&releaseVersion=S892&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

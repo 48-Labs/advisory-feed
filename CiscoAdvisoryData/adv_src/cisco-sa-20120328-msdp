@@ -1,0 +1,43 @@
+{
+  "identifier": "cisco-sa-20120328-msdp",
+  "title": "Cisco IOS Software Multicast Source Discovery Protocol Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2012-03-28T16:00:00.000+0000",
+  "lastPublished": "2012-03-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120328-msdp",
+  "severity": "High",
+  "cwe": null,
+  "erpPubIds": "25361",
+  "cve": "CVE-2012-0382",
+  "ciscoBugId": "CSCtr28857",
+  "status": "",
+  "summary": "A vulnerability in the Multicast Source Discovery Protocol (MSDP) implementation of Cisco IOS Software and Cisco IOS XE Software could allow a remote, unauthenticated attacker to cause a reload of an affected device. Repeated attempts to exploit this vulnerability could result in a sustained denial ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Multicast Source Discovery Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=25361&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS ISAKMP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=1127&signatureSubId=0&releaseVersion=S638&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco IOS ISAKMP Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=40986&signatureSubId=0&releaseVersion=S638&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

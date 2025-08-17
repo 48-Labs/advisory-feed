@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-20170927-nat",
+  "title": "Cisco IOS Software Network Address Translation Denial of Service Vulnerability",
+  "version": "1.1",
+  "firstPublished": "2017-09-27T16:00:00.000+0000",
+  "lastPublished": "2022-12-16T21:17:38.597+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170927-nat",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-399",
+  "erpPubIds": "ERP-63410",
+  "cve": "CVE-2017-12231",
+  "ciscoBugId": "CSCvc57217",
+  "status": "",
+  "summary": "A vulnerability in the implementation of Network Address Translation (NAT) functionality in Cisco IOS Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2017 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-63410&typeName=Event Response Page"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco IOS Software Network Address Translation Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=8046&signatureSubId=0&releaseVersion=S996&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

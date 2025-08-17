@@ -1,0 +1,47 @@
+{
+  "identifier": "cisco-sa-20130925-nat",
+  "title": "Cisco IOS Software Network Address Translation Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2013-09-25T16:00:00.000+0000",
+  "lastPublished": "2013-09-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130925-nat",
+  "severity": "High",
+  "cwe": "CWE-119",
+  "erpPubIds": "30703,30704,30702",
+  "cve": "CVE-2013-5479,CVE-2013-5480,CVE-2013-5481",
+  "ciscoBugId": "CSCtn53730,CSCtq14817,CSCuf28733",
+  "status": "",
+  "summary": "The Cisco IOS Software implementation of the network address translation (NAT) feature contains three vulnerabilities when translating IP packets that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition. Cisco ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco IOS Software Network Address Translation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30703&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Network Address Translation PPTP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30704&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco IOS Software Network Address Translation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=30702&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September Semiannual Cisco IOS Software Security Advisory Bundled Publication",
+          "url": "http://www.cisco.com/web/about/security/intelligence/Cisco_ERP_sep13.html"
+        }
+      ]
+    }
+  ]
+}

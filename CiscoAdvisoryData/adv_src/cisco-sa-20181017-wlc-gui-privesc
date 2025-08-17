@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20181017-wlc-gui-privesc",
+  "title": "Cisco Wireless LAN Controller Software GUI Privilege Escalation Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2018-10-17T16:00:00.000+0000",
+  "lastPublished": "2018-10-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181017-wlc-gui-privesc",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-264",
+  "erpPubIds": "ERP-70108",
+  "cve": "CVE-2018-0417",
+  "ciscoBugId": "CSCvh65876",
+  "status": "",
+  "summary": "A vulnerability in TACACS authentication with Cisco Wireless LAN Controller (WLC) Software could allow an authenticated, local attacker to perform certain operations within the GUI that are not normally available to that user on the CLI.The vulnerability is due to incorrect parsing of a ",
+  "totalCount": 4,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2018 Cisco Wireless LAN Controller Security Advisory Collection",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-70108&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

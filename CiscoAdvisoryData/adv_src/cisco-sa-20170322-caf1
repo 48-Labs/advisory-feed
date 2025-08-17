@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20170322-caf1",
+  "title": "Cisco Application-Hosting Framework Directory Traversal Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2017-03-22T16:00:00.000+0000",
+  "lastPublished": "2017-03-22T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170322-caf1",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-22",
+  "cve": "CVE-2017-3851",
+  "ciscoBugId": "CSCuy52302",
+  "status": "",
+  "summary": "A vulnerability in the web framework code of the Cisco&nbsp;application-hosting framework (CAF) component of the Cisco&nbsp;IOx application environment could allow an unauthenticated, remote attacker to read any file from the CAF in the virtual instance running on the affected device.",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "gid:119 sid:18",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2017-03-23-seu.html"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco Application Framework Directory Traversal",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7882&signatureSubId=0&releaseVersion=S973&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

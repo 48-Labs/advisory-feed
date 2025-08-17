@@ -1,0 +1,64 @@
+{
+  "identifier": "cisco-sa-20111005-fwsm",
+  "title": "Multiple Vulnerabilities in Cisco Firewall Services Module",
+  "version": "1.1",
+  "firstPublished": "2011-10-05T16:00:00.000+0000",
+  "lastPublished": "2012-07-14T10:13:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111005-fwsm",
+  "severity": "High",
+  "workarounds": "Yes",
+  "cwe": "CWE-287, CWE-399",
+  "erpPubIds": "24246,24242,24243,24244,24245",
+  "cve": "CVE-2011-3296,CVE-2011-3297,CVE-2011-3298,CVE-2011-3299,CVE-2011-3300,CVE-2011-3301,CVE-2011-3302,CVE-2011-3303",
+  "ciscoBugId": "CSCti83875,CSCtn15697,CSCto74274,CSCtq09972,CSCtq09978,CSCtq09986,CSCtq09989,CSCtq57697,CSCtq57802",
+  "status": "",
+  "summary": "The Cisco Firewall Services Module (FWSM) for the Cisco Catalyst 6500Series switches and Cisco 7600 Series routers is affected by the followingvulnerabilities:        Syslog Message Memory Corruption Denial of Service    Vulnerability        Authentication Proxy ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Firewall Services Module Software Syslog Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24246&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software TACACS+ Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24242&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software SunRPC Packet Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24243&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Firmware and Firewall Services Module Software Internet Locator Service Packet Inspection Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24244&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Firewall Services Module Software Authentication Proxy Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=24245&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA TACACS+ Authentication Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=38406&signatureSubId=0&releaseVersion=S600&softwareVersion=6.0"
+        },
+        {
+          "name": "SunRPC Arithmetic Inspection  Denial Of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=38446&signatureSubId=0&releaseVersion=S600&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA SunRPC Inspection Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=39366&signatureSubId=0&releaseVersion=S600&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

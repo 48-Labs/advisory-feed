@@ -1,0 +1,69 @@
+{
+  "identifier": "cisco-sa-20071017-fwsm",
+  "title": "Multiple Vulnerabilities in Firewall Services Module",
+  "version": "1.1",
+  "firstPublished": "2007-10-17T16:00:00.000+0000",
+  "lastPublished": "2007-10-17T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20071017-fwsm",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "14223,14227,14303,cisco-amb-20071017-asafwsm,cisco-sa-20071017-asa",
+  "cve": "CVE-2007-5568,CVE-2007-5570,CVE-2007-5571",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Two crafted packet vulnerabilities exist in the Cisco Firewall Services Module (FWSM) that may result in a reload of the FWSM. These vulnerabilities can be triggered during the processing of HTTPS requests, or during the processing of Media Gateway Control Protocol (MGCP) packets.   ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Firewall Services Module HTTP Request Parsing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14223&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PIX, Adaptive Security Appliance, and Firewall Services Module Media Gateway Control Protocol Packet Parsing Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14227&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Firewall Services Module ACL Corruption Issue",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=14303&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco PIX and ASA Appliances and Firewall Services Module",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20071017-asafwsm"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Multiple Vulnerabilities in Cisco PIX and ASA Appliance",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20071017-asa"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "PIX/ASA/FWSM MGCP DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5913&signatureSubId=0&releaseVersion=S396&softwareVersion=6.0"
+        },
+        {
+          "name": "PIX ASA FWSM MGCP DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5913&signatureSubId=1&releaseVersion=S612&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

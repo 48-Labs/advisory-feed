@@ -1,0 +1,85 @@
+{
+  "identifier": "cisco-sa-20130626-sma",
+  "title": "Multiple Vulnerabilities in Cisco Content Security Management Appliance",
+  "version": "1.0",
+  "firstPublished": "2013-06-26T16:00:00.000+0000",
+  "lastPublished": "2013-06-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-sma",
+  "severity": "Critical",
+  "cwe": "CWE-399, CWE-78",
+  "erpPubIds": "cisco-sa-20130626-wsa,cisco-sa-20130626-esa,29452,29746,29728,29727,29726",
+  "cve": "CVE-2013-3383,CVE-2013-3384,CVE-2013-3385,CVE-2013-3386",
+  "ciscoBugId": "CSCzv24579,CSCzv25573,CSCzv44633,CSCzv58669,CSCzv63329,CSCzv69294,CSCzv78669,CSCzv81712,CSCzv85726",
+  "status": "",
+  "summary": "Cisco IronPort AsyncOS Software for Cisco Content Security Management Appliance is affected by the following vulnerabilities:    Web Framework Authenticated Command Injection Vulnerability    IronPort Spam Quarantine Denial of Service Vulnerability    ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Web Security Appliances Security Services Framework Authenticated Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29746&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Multiple Cisco Products Management GUI Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29728&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Multiple Cisco Products IronPort Spam Quarantine Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29727&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Multiple Cisco Products Web Framework Authenticated Command Injection Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=29726&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Content Security Management, Web Security, and Email Security Appliances",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAMBAlert.x?alertId=29452"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Multiple Vulnerabilities in Cisco Web Security Appliance",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-wsa"
+        },
+        {
+          "name": "Multiple Vulnerabilities in Cisco Email Security Appliance",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130626-esa"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WSA Authenticated Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2244&signatureSubId=0&releaseVersion=S726&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco WSA, ESA, and SMA Authenticated Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2244&signatureSubId=1&releaseVersion=S726&softwareVersion=6.0"
+        },
+        {
+          "name": "Half-open SYN Attack",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=3050&signatureSubId=0&releaseVersion=S774&softwareVersion=6.0"
+        },
+        {
+          "name": "SYN Flood DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6009&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

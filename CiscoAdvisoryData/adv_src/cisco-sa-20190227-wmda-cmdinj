@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20190227-wmda-cmdinj",
+  "title": "Cisco Webex Meetings Desktop App and Cisco Webex Productivity Tools Update Service Command Injection Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2019-02-27T16:00:00.000+0000",
+  "lastPublished": "2019-02-27T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190227-wmda-cmdinj",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-78",
+  "cve": "CVE-2019-1674",
+  "ciscoBugId": "CSCvn55874",
+  "status": "",
+  "summary": "A vulnerability in the update service of Cisco Webex Meetings Desktop App and&nbsp;Cisco Webex Productivity Tools for Windows could allow an authenticated, local attacker to execute arbitrary commands as a privileged user.The vulnerability is due to insufficient validation of ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "49293",
+          "url": "https://support.sourcefire.com/supplemental/sf-rules-2019-02-28-seu.html"
+        }
+      ]
+    }
+  ]
+}

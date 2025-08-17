@@ -1,0 +1,20 @@
+{
+  "identifier": "cisco-sa-20160620-iosxe",
+  "title": "Cisco IOS XE Software SNMP Subsystem Denial of Service Vulnerability",
+  "version": "1.0",
+  "firstPublished": "2016-06-20T15:09:00.000+0000",
+  "lastPublished": "2016-06-20T15:09:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160620-iosxe",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-399",
+  "cve": "CVE-2016-1428",
+  "ciscoBugId": "CSCux13174",
+  "status": "",
+  "summary": "A vulnerability in the SNMP subsystem of Cisco IOS XE software could allow an authenticated, remote attacker to create a denial of service (DoS) condition.The vulnerability is due to an attempt to double free a region of memory when processing a series of SNMP read requests that ",
+  "totalCount": 1,
+  "relatedResource": []
+}

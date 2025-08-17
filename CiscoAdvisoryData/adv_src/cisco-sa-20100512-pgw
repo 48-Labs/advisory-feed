@@ -1,0 +1,108 @@
+{
+  "identifier": "cisco-sa-20100512-pgw",
+  "title": "Multiple Vulnerabilities in Cisco PGW Softswitch",
+  "version": "1.0",
+  "firstPublished": "2010-05-12T16:00:00.000+0000",
+  "lastPublished": "2010-05-12T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100512-pgw",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "20446,20447,20448,20449,20450,20451,20452,20453,20454,cisco-amb-20100512-pgw",
+  "cve": "CVE-2010-0601,CVE-2010-0602,CVE-2010-0603,CVE-2010-0604,CVE-2010-1561,CVE-2010-1562,CVE-2010-1563,CVE-2010-1565,CVE-2010-1567",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Multiple vulnerabilities exist in the Cisco PGW 2200 Softswitch series of products. Each vulnerability described in this advisory is independent from other. The vulnerabilities are related to processing Session Initiation Protocol (SIP) or Media Gateway Control Protocol (MGCP) messages. ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco PGW 2200 Softswitch MGCP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20446&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch SIP Packet Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20447&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch Session Attribute Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20448&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch SIP Message Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20449&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch Long SIP Message Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20450&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch SIP Contact Header Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20451&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch SIP Header Processing Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20452&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch SIP Header Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20453&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch TCP Exhaustion Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=20454&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco PGW Softswitch",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100512-pgw"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20481&signatureSubId=0&releaseVersion=S598&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=20481&signatureSubId=1&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco PGW 2200 Softswitch Malformed MGCP Packet Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=25962&signatureSubId=0&releaseVersion=S803&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=25979&signatureSubId=0&releaseVersion=S778&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Packet Denial of Service",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=25999&signatureSubId=0&releaseVersion=S598&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=30059&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        },
+        {
+          "name": "Malformed SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=30059&signatureSubId=1&releaseVersion=S598&softwareVersion=6.0"
+        },
+        {
+          "name": "Large SIP Message",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6184&signatureSubId=0&releaseVersion=S593&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

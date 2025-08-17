@@ -1,0 +1,51 @@
+{
+  "identifier": "cisco-sa-20070328-voip",
+  "title": "Multiple Cisco Unified CallManager and Presence Server Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2007-03-28T16:00:00.000+0000",
+  "lastPublished": "2007-03-28T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070328-voip",
+  "severity": "Medium",
+  "cwe": "CWE-399",
+  "erpPubIds": "12943,12944",
+  "cve": "CVE-2007-1826,CVE-2007-1833",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "Cisco Unified CallManager (CUCM) and Cisco Unified Presence Server (CUPS) contain multiple vulnerabilities which may result in the failure of CUCM or CUPS functionality, resulting in a Denial of Service (DoS) condition. There are no workarounds for these vulnerabilities. Cisco has made ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified CallManager Skinny Call Control Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12943&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified CallManager and Unified Presence Server IPSec Manager Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=12944&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "FTP 230 Reply Code",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5846&signatureSubId=0&releaseVersion=S367&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco CUCM/CUPS  Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5854&signatureSubId=0&releaseVersion=S439&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco CUCM/CUPS  Denial of Service Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=5854&signatureSubId=1&releaseVersion=S439&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

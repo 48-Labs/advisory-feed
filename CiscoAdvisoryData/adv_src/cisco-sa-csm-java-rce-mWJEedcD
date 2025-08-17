@@ -1,0 +1,66 @@
+{
+  "identifier": "cisco-sa-csm-java-rce-mWJEedcD",
+  "title": "Cisco Security Manager Java  Deserialization Vulnerabilities",
+  "version": "1.3",
+  "firstPublished": "2020-11-16T23:00:00.000+0000",
+  "lastPublished": "2021-02-08T22:00:53.043+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-csm-java-rce-mWJEedcD",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2020-27131",
+  "ciscoBugId": "CSCvu99974,CSCvv79824",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the Java deserialization function that is used by Cisco&nbsp;Security Manager could allow an unauthenticated, remote attacker to execute arbitrary commands on an affected device.These vulnerabilities are due to insecure deserialization of user-supplied ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "46937",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56406",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56407",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56408",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56409",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56410",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56411",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56412",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "56413",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "62889",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "identifier": "cisco-sa-20160831-meetings-player",
+  "title": "Cisco WebEx Meetings Player Arbitrary Code Execution Vulnerability",
+  "version": "1.2",
+  "firstPublished": "2016-08-31T16:00:00.000+0000",
+  "lastPublished": "2016-10-25T15:16:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160831-meetings-player",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-20",
+  "cve": "CVE-2016-1464",
+  "ciscoBugId": "CSCva09375",
+  "status": "",
+  "summary": "A vulnerability in Cisco WebEx Meetings Player could allow an unauthenticated, remote attacker to execute arbitrary code.The vulnerability is due to improper handling of user-supplied files. An attacker could exploit this vulnerability by persuading a user to open a malicious WRF ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco WebEx Meetings Player Arbitrary Code Execution",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=7656&signatureSubId=0&releaseVersion=S939&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

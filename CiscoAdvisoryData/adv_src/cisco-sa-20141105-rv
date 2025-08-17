@@ -1,0 +1,56 @@
+{
+  "identifier": "cisco-sa-20141105-rv",
+  "title": "Multiple Vulnerabilities in Cisco Small Business RV Series Routers",
+  "version": "1.1",
+  "firstPublished": "2014-11-05T16:00:00.000+0000",
+  "lastPublished": "2014-11-20T14:41:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv",
+  "severity": "Critical",
+  "cwe": "CWE-20, CWE-264, CWE-352",
+  "erpPubIds": "Cisco-SA-20141105-CVE-2014-2178,36242,36240",
+  "cve": "CVE-2014-2177,CVE-2014-2178,CVE-2014-2179",
+  "ciscoBugId": "CSCuh86998,CSCuh87126,CSCuh87145",
+  "status": "",
+  "summary": "The Cisco RV120W Wireless-N VPN Firewall, Cisco RV180 VPN Router, Cisco RV180W Wireless-N Multifunction VPN Router, and Cisco RV220W Wireless Network Security Firewall are affected by the following vulnerabilities:    Cisco RV Series Routers Command Injection Vulnerability  ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Small Business RV Series Routers Insecure File Upload Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=36242&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Small Business RV Series Routers Command Injection Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=36240&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Cisco Small Business RV Series Routers HTTP Referer Header Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141105-CVE-2014-2178"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco RV180W Router Command Injection",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4757&signatureSubId=0&releaseVersion=S833&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco RV180W Malicious File Upload",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=4759&signatureSubId=0&releaseVersion=S833&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

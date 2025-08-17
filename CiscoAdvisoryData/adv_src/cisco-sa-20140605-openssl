@@ -1,0 +1,91 @@
+{
+  "identifier": "cisco-sa-20140605-openssl",
+  "title": "Multiple Vulnerabilities in OpenSSL Affecting Cisco Products",
+  "version": "1.28",
+  "firstPublished": "2014-06-05T22:40:00.000+0000",
+  "lastPublished": "2015-03-27T19:50:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20140605-openssl",
+  "severity": "Critical",
+  "cwe": null,
+  "erpPubIds": "34546",
+  "cve": "CVE-2010-5298,CVE-2014-0076,CVE-2014-0195,CVE-2014-0198,CVE-2014-0221,CVE-2014-0224,CVE-2014-3470",
+  "ciscoBugId": "CSCup22590",
+  "status": "",
+  "summary": "Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to execute arbitrary code, create a denial of service (DoS) condition, or perform a man-in-the-middle attack. On June 5, 2014, the ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "OpenSSL DTLS Fragment Processing Buffer Overflow Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=34546&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "31180",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31181",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31182",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31477",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31478",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31479",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31480",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31481",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31482",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31483",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "31484",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "52487",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "52625",
+          "url": "https://www.snort.org"
+        },
+        {
+          "name": "52626",
+          "url": "https://www.snort.org"
+        }
+      ]
+    }
+  ]
+}

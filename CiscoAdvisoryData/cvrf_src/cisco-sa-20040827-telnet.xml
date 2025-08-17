@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Cisco Telnet Denial of Service Vulnerability</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20040827-telnet</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>2.5</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.1</cvrf:Number>
+        <cvrf:Date>2004-08-27T10:00:00</cvrf:Date>
+        <cvrf:Description>Added the second paragraph to the Details section. 
+		  Changed the Configuring a VTY Access Class and the Configuring
+			 Access Lists (ACLs) descriptions in the Workarounds section.</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2004-08-27T10:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2004-08-27T10:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A specifically crafted Transmission Control Protocol (TCP) connection  to a telnet or reverse telnet port of a Cisco device running Internetwork  Operating System (IOS)�� may block further telnet,  reverse telnet, Remote Shell (RSH), Secure Shell (SSH), and in some cases  Hypertext Transport Protocol (HTTP) access to the Cisco device. Data Link  Switching (DLSw) and protocol translation connections may also be affected.  Telnet, reverse telnet, RSH, SSH, DLSw and protocol translation sessions  established prior to exploitation are not affected.
+
+All other device services will operate normally. Services such as  packet forwarding (excluding DLSw and protocol translation per above), routing  protocols and all other communication to and through the device are not  affected.
+
+Cisco has made free software available to address this vulnerability.  Workarounds, identified below, are available that protect against this  vulnerability.
+
+This vulnerability is documented in Cisco bug ID  CSCef46191 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCef46191"]            ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)         .
+
+This Advisory is available at  https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040827-telnet ["https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040827-telnet"].</cvrf:Note>
+    <cvrf:Note Title="Affected Products" Type="General" Ordinal="2">This section provides details on affected products.</cvrf:Note>
+    <cvrf:Note Title="Vulnerable Products" Type="General" Ordinal="3">This vulnerability affects all Cisco devices that permit access via  telnet or reverse telnet. Any IOS train without specific fixed releases listed  in the Software Versions and Fixes ["#software"] section  should be considered vulnerable.
+
+IOS Release trains confirmed to be affected are 9.x, 10.x, 11.x and  12.x .</cvrf:Note>
+    <cvrf:Note Title="Products Confirmed Not Vulnerable" Type="General" Ordinal="4">Cisco products that do not run IOS are not affected.</cvrf:Note>
+    <cvrf:Note Title="Details" Type="General" Ordinal="5">Telnet, RSH and SSH are used for remote management of Cisco IOS  devices. The SSH protocol is also used for Secure Copy (SCP), which allows an  encryption-protected transfer of files to and from Cisco devices.
+
+Data-link switching (DLSw) provides a means of transporting IBM Systems  Network Architecture (SNA) and network basic input/output system (NetBIOS)  traffic over an IP network. It serves as an alternative to source-route  bridging (SRB), a protocol for transporting SNA and NetBIOS traffic in Token  Ring environments that was widely deployed before the introduction of DLSw.
+
+For more information on DLSw, refer to the following URL:
+
+ http://www.cisco.com/en/US/docs/internetworking/technology/handbook/DLSw.html ["http://www.cisco.com/en/US/docs/internetworking/technology/handbook/DLSw.html"]
+
+Protocol translation is a method to connect a host running one protocol  (such as Telnet with TCP/IP) to a host running another protocol (such as LAT).  This process allows devices running dissimilar protocols���such as X.25 and  TCP/IP���to communicate.
+
+For more information on protocol translation, refer to the following  URL:
+
+   http://www.cisco.com/en/US/docs/ios/11_0/access/connection/guide/xptservs.html [" http://www.cisco.com/en/US/docs/ios/11_0/access/connection/guide/xptservs.html"]
+
+Services operating over IPv4 and IPv6 are similarly affected.
+
+HTTP is also used for management of certain Cisco devices. IOS versions  prior to12.2(15)T include HTTP server version 1.0, which, if configured, will  be unresponsive on a device that is under exploitation. IOS versions after and  including 12.2(15)T include HTTP server version 1.1, which is  unaffected.
+
+To determine the version of the IOS HTTP server included with the IOS  image, the command show subsys name http can be used  (the show subsys command requires enable access to  execute):
+
+
+Router# show subsys name http
+                     Class         Version http                Protocol    1.001.001
+
+The above output shows that HTTP server version 1.1 is included.
+
+
+Router# show subsys name http
+                     Class         Version http                Protocol    1.000.001
+
+The above output shows that HTTP server version 1.0 is included.
+
+Reverse telnet is a feature that allows you to telnet to a Cisco device  and then connect to a third device through an asynchronous serial connection;  this configuration is often referred to as providing 'console server'  functionality for connected devices such as hosts and router/switches as a form  of out-of-band (OOB) management. For more information on reverse telnet,  consult the following documents:
+
+   http://www.cisco.com/en/US/docs/ios/12_0/dial/configuration/guide/dcrtelnt.html [" http://www.cisco.com/en/US/docs/ios/12_0/dial/configuration/guide/dcrtelnt.html"]
+
+ http://www.cisco.com/en/US/docs/ios/11_3/dial/configuration/guide/dcrtelnt.html ["http://www.cisco.com/en/US/docs/ios/11_3/dial/configuration/guide/dcrtelnt.html"]
+
+Cisco devices that are operating as a reverse telnet server may have  ports open in the ranges of:
+
+   2001 to 2999
+
+   3001 to 3099
+
+   6001 to 6999
+
+   7001 to 7099
+
+
+After a specially crafted TCP connection to an IOS device on TCP port  23 or the reverse telnet ports listed above, all subsequent telnet, reverse  telnet, RSH (TCP port 514), SSH, SCP (SSH and SCP use TCP port 22), DLSw (TCP  ports 2065 through 2067), protocol translation, and in some cases HTTP (TCP  port 80) connections to the device experiencing exploitation will be  unsuccessful. Any telnet, reverse telnet, RSH, SSH, SCP, DLSw, protocol  translation, and HTTP sessions that are already established with the device  will continue to function properly.
+
+In Cisco IOS, telnet, reverse telnet, RSH, SSH, SCP, DLSw, protocol  translation and some HTTP sessions are handled by a virtual terminal (VTY).  Each telnet, reverse telnet, RSH, SSH and SCP, DLSw and protocol translation  session session consumes a VTY. After successful exploitation, the Cisco device  can no longer accept any subsequent VTY connections.
+
+Though it is not possible to establish new telnet, reverse telnet, RSH,  SSH, SCP, DLSw, protocol translation or HTTP connections to the device after a  successful exploitation, the device is only vulnerable on TCP port 23 and the  reverse telnet ports listed above.
+
+A successful exploitation of this vulnerability requires a complete  3-way TCP handshake, which makes it very difficult to spoof the source IP  address.
+
+Only remote access services that use VTYs are affected. This includes  telnet, reverse telnet, RSH, SSH, SCP, DLSw, protocol translation and version  1.0 of the HTTP server. Other device services including, but not limited to,  routing protocols, TACACS/RADIUS, Voice over IP (VoIP) and packet forwarding  (excluding DLSw and protocol translation) are not affected.
+
+This vulnerability is addressed by Cisco bug ID:
+
+    CSCef46191 ["https://bst.cloudapps.cisco.com/bugsearch/bug/CSCef46191"]            ( registered ["https://sec.cloudapps.cisco.comRPF/register/register.do"] customers only)</cvrf:Note>
+    <cvrf:Note Title="Workarounds" Type="General" Ordinal="6">The effectiveness of any workaround is dependent on specific customer  situations such as product mix, network topology, traffic behavior, and  organizational mission. Customers should consult with their service provider or  support organization to ensure any applied workaround is the most appropriate  for use in the intended network before it is deployed.
+
+ Mitigation Strategies
+
+Not all of the mitigation strategies listed will work for all  customers. Some of the workarounds listed are dependent on which versions and  feature-sets of IOS you have in your network.
+
+ Enabling SSH and disabling telnet
+
+ Note: SSH support is only available in certain IOS feature sets and platforms
+
+Cisco devices that support SSH can enable it by following the steps  listed here:
+
+ http://cisco.com/en/US/docs/ios/12_2/security/configuration/guide/scfssh.html#wp1001167 ["http://cisco.com/en/US/docs/ios/12_2/security/configuration/guide/scfssh.html#wp1001167"]
+
+To disable telnet access to the device, configure the following on all  your VTY lines:
+
+
+
+Router(config)# line vty 0 4 Router(config-line)# transport input ssh
+
+ Note: Even if SSH is enabled, the IOS device is not protected until telnet access is disabled.
+
+ Configuring a VTY Access Class
+
+ Note: Cisco Catalyst switch platforms that contain any version of the Route Switch Module (RSM), Route Switch Feature Card (RSFC), Multilayer Switch Module (MSM) or Multilayer Switch Feature Card (MSFC) are able to connect to these modules from the switch Supervisor module using the 'session' command. Although the 'session' command uses telnet internally to connect to the MSM/MSFC, it is not restricted by VTY ACLs.
+
+It is possible to limit the exposure of the Cisco device by applying a  VTY access class to permit only known, trusted devices to connect to the device  via telnet, reverse telnet and SSH.
+
+For more information on restricting traffic to VTYs, please  consult:
+
+ http://www.cisco.com/en/US/products/sw/iosswrel/ps1818/products_configuration_example09186a0080204528.shtml ["http://www.cisco.com/en/US/products/sw/iosswrel/ps1818/products_configuration_example09186a0080204528.shtml"]
+
+The following example permits access to VTYs from the 192.168.1.0/24  netblock and the single IP address 172.16.1.2 while denying access from  everywhere else:
+
+
+
+Router(config)# access-list 1 permit 192.168.1.0 0.0.0.255 Router(config)# access-list 1 permit host 172.16.1.2 Router(config)# line vty 0 4 Router(config-line)# access-class 1 in
+
+For devices acting as a terminal server, to apply the access class to  reverse telnet ports, the access-list must be configured for the aux port and  terminal lines as well:
+
+
+Router(config)# line 1 &lt;x&gt;
+Router(config-line)# access-class 1 in
+
+Different Cisco platforms support different numbers of terminal lines.  Check your device's configuration to determine the correct number of terminal  lines for your platform.
+
+ Configuring Access Lists (ACLs)
+
+In addition to configuring a VTY Access Class, it may be desirable to  block all telnet and reverse telnet traffic destined to your network  infrastructure.
+
+Telnet and reverse telnet should be blocked as part of a Transit ACL  controlling all access to the trusted network. Transit ACLs are considered a  network security best practice and should be considered as a long-term addition  to good network security, as well as a workaround for this specific  vulnerability. The white paper entitled "Transit Access Control Lists:  Filtering at Your Edge" presents guidelines and recommended deployment  techniques for transit ACLs:
+
+ http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801afc76.shtml ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801afc76.shtml"]
+
+ Configuring Infrastructure Access Lists (iACLs)
+
+Although it is often difficult to block traffic transiting your  network, it is possible to identify traffic which should never be allowed to  target your infrastructure devices and block that traffic at the border of your  network. Infrastructure ACLs are considered a network security best practice  and should be considered as a long-term addition to good network security as  well as a workaround for this specific vulnerability. The white paper entitled  "Protecting Your Core: Infrastructure Protection Access Control Lists" presents  guidelines and recommended deployment techniques for infrastructure protection  ACLs:
+
+ http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"]
+
+ Configuring Receive Access Lists (rACLs)
+
+For distributed platforms, rACLs may be an option starting in Cisco IOS  Software Versions 12.0(21)S2 for the 12000 series GSR and 12.0(24)S for the  7500 series. The receive access lists protect the device from harmful traffic  before the traffic can impact the route processor. Receive path ACLs are  considered a network security best practice, and should be considered as a  long-term addition to good network security, as well as a workaround for this  specific vulnerability. The CPU load is distributed to the line card processors  and helps mitigate load on the main route processor. The white paper entitled  "GSR: Receive Access Control Lists" will help identify and allow legitimate  traffic to your device and deny all unwanted packets:
+
+ http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a0a5e.shtml ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a0a5e.shtml"]
+
+ Clearing Hung TCP Connections Using the IOS CLI
+
+The who command will show VTY connections to  the device:
+
+
+Router# who
+    Line       User       Host(s)              Idle       Location    0 con 0                192.168.10.72        00:00:00 *  2 vty 0                idle                 00:00:00 192.168.10.72    3 vty 1                idle                 00:00:04 192.168.10.10
+
+The above shows two connections on VTYs, one from 192.168.10.72, and  one from 192.168.10.10. The * indicates which VTY belongs to the current  session. In the above example, the user issuing the who command was connecting  from 192.168.10.72. To clear the session from 192.168.10.10, which is on VTY 1,  the following command is used:
+
+
+Router# clear tcp line vty 1
+[confirm]  [OK]
+
+ Note: If you are using telnet to connect to the device, accidentally clearing your TCP connection will disconnect your telnet session. If the IOS device has been exploited, it will not be possible to reconnect via telnet. Console access or a device reload will be required to restore service.
+
+ Clearing Hung TCP Connections Using SNMP
+
+It is also possible to detect and clear hung TCP connections using  SNMP. To detect a hung connection, an SNMP read-only community string must be  configured on the device. To reset a connection, an SNMP read-write community  string must be configured on the device.
+
+The following document describes, in detail, the process of detecting  and clearing hung TCP connections with SNMP:
+
+ http://www.cisco.com/en/US/tech/tk648/tk362/technologies_problem_troubleshooting09186a00802b93ef.shtml ["http://www.cisco.com/en/US/tech/tk648/tk362/technologies_problem_troubleshooting09186a00802b93ef.shtml"]</cvrf:Note>
+    <cvrf:Note Title="Fixed Software" Type="General" Ordinal="7">Cisco is providing fixes for this vulnerability in all currently  maintained IOS releases. No software upgrade is required in order to mitigate  this vulnerability. See the information below regarding the available  configuration workarounds. The software fixes are appearing in regularly  scheduled maintenance releases of IOS software.
+
+As more fixed software becomes available, Cisco will update this  section of the advisory.
+
+ To determine the software running on a Cisco product, log in to the  device and issue the show version command to display  the system banner. Cisco IOS software will identify itself as "Internetwork  Operating System Software" or simply "IOS��". On the next line of output, the  image name will be displayed between parentheses, followed by "Version" and the  IOS release name. Other Cisco devices will not have the show  version command or will give different output.
+
+ The following example identifies a Cisco product running IOS release  12.0(3) with an installed image name of C2500-IS-L:
+
+
+
+Cisco Internetwork Operating System Software IOS (TM)      2500 Software (C2500-IS-L), Version 12.0(3), RELEASE SOFTWARE
+
+The release train label is "12.0".
+
+The next example shows a product running IOS release 12.0(2a)T1 with an  image name of C2600-JS-MZ:
+
+
+
+Cisco Internetwork Operating System Software IOS (tm)  C2600 Software (C2600-JS-MZ), Version 12.0(2a)T1, RELEASE SOFTWARE (fc1)
+
+Additional information about Cisco IOS Banners is available at  http://www.cisco.com/warp/public/620/1.html#3 ["http://www.cisco.com/warp/public/620/1.html#3"].
+
+Each row of the Cisco IOS software table (below) describes a release  train and the platforms or products for which it is intended. If a given  release train is vulnerable, then the earliest possible releases that contain  the fix (the "First Fixed Release") and the anticipated date of availability  for each are listed in the "Rebuild" and "Maintenance" columns. A device  running a release in the given train that is earlier than the release in a  specific column (less than the First Fixed Release) is known to be vulnerable.  The release should be upgraded at least to the indicated release or a later  version (greater than or equal to the First Fixed Release label). When  selecting a release, keep in mind the following definitions:
+
+ Maintenance: Most heavily tested, stable, and highly  recommended release of a release train in any given row of the table.
+
+ Rebuild: Constructed from the previous maintenance or  major release in the same train, it contains the fix for a specific defect.  Although it receives less testing, it contains only the minimal changes  necessary to repair the vulnerability.
+
+In all cases, customers should exercise caution to confirm that the  devices to be upgraded contain sufficient memory and that current hardware and  software configurations will continue to be supported properly by the new  software release. If the information is not clear, contact the Cisco TAC for  assistance as shown in the Obtaining Fixed  Software ["#fixes"] section below.
+
+More information on Cisco IOS software release names and abbreviations  is available at http://www.cisco.com/warp/public/620/1.html ["http://www.cisco.com/warp/public/620/1.html"].
+
+The fixes will be available at the Software Center located at  http://www.cisco.com/tacpage/sw-center/ ["http://www.cisco.com/tacpage/sw-center/"].
+
+For software installation and upgrade procedures, see  http://www.cisco.com/en/US/products/ps6350/tsd_products_support_install_and_upgrade.html ["http://www.cisco.com/en/US/products/ps6350/tsd_products_support_install_and_upgrade.html"].
+
+For a current view of all posted and repaired images for Cisco IOS,  please check the listing available to registered Cisco.com users at:  http://www.cisco.com/tacpage/sw-center/sw-ios.shtml ["http://www.cisco.com/tacpage/sw-center/sw-ios.shtml"].
+
+ Major Release
+
+ Availability of Repaired Releases*
+
+  Affected 12.0-Based Release
+
+  Rebuild
+
+  Maintenance
+
+ 12.0
+
+12.0(5)WC11 Available on 2005-Jan-24
+
+ 12.0S
+
+12.0(26)S5
+
+12.0(27)S4
+
+12.0(28)S2
+
+12.0(30)S
+
+  Affected 12.1-Based Release
+
+  Rebuild
+
+  Maintenance
+
+ 12.1
+
+12.1(26)
+
+ 12.1E
+
+12.1(20)E5
+
+12.1(22)E3
+
+12.1(23)E1
+
+12.1(26)E Available on 2005-Jan-31
+
+ 12.1EA
+
+12.1(22)EA2
+
+  Affected 12.2-Based Release
+
+  Rebuild
+
+  Maintenance
+
+ 12.2
+
+12.2(27)
+
+ 12.2BC
+
+12.2(15)BC1f
+
+12.2(15)BC2e
+
+ 12.2EW
+
+12.2(18)EW2
+
+ 12.2JK
+
+12.2(15)JK2
+
+ 12.2S
+
+12.2(14)S12
+
+12.2(18)S6
+
+12.2(20)S6
+
+12.2(25)S1
+
+ 12.2SE
+
+12.2(20)SE3
+
+12.2(25)SE
+
+ 12.2SU
+
+12.2(14)SU2
+
+ 12.2SV
+
+12.2(24)SV
+
+ 12.2SXB
+
+12.2(17d)SXB5
+
+ 12.2SXD
+
+12.2(18)SXD1
+
+ 12.2T
+
+12.2(13)T14
+
+ 12.2XR
+
+12.2(15)XR2
+
+  Affected 12.3-Based Release
+
+  Rebuild
+
+  Maintenance
+
+ 12.3
+
+12.3(6d)
+
+12.3(9c)
+
+12.3(10a)
+
+12.3(12)
+
+ 12.3BC
+
+12.3(5a)B2
+
+12.3(9a)BC
+
+ 12.3JA
+
+12.3(2)JA
+
+ 12.3T
+
+12.3(2)T8
+
+12.3(4)T8
+
+12.3(7)T4
+
+12.3(8)T4
+
+12.3(11)T
+
+ 12.3XD
+
+12.3(4)XD4 Release date not yet determined
+
+ 12.3XG
+
+12.3(4)XG2
+
+ 12.3XI
+
+12.3(7)XI2
+
+ 12.3XK
+
+12.3(4)XK1
+
+ 12.3XR
+
+12.3(7)XR3
+
+ 12.3XU
+
+12.3(8)XU2
+
+ 12.3YD
+
+12.3(8)YD
+
+* All dates are estimated and subject to change.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="8">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="9">The Cisco PSIRT is aware of exploitation of this vulnerability and is  recommending customers take action to protect themselves.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040827-telnet</cvrf:URL>
+      <cvrf:Description>Cisco Telnet Denial of Service Vulnerability</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Telnet Denial of Service Vulnerability</Title>
+    <Notes>
+      <Note Title="Affected Product Comprehensiveness" Type="Other" Ordinal="1">Complete.</Note>
+    </Notes>
+    <CVE>CVE-2004-1464</CVE>
+    <Remediations>
+      <Remediation Type="Workaround">
+        <Description>The effectiveness of any workaround is dependent on specific customer  situations such as product mix, network topology, traffic behavior, and  organizational mission. Customers should consult with their service provider or  support organization to ensure any applied workaround is the most appropriate  for use in the intended network before it is deployed.
+
+ Mitigation Strategies
+
+Not all of the mitigation strategies listed will work for all  customers. Some of the workarounds listed are dependent on which versions and  feature-sets of IOS you have in your network.
+
+ Enabling SSH and disabling telnet
+
+ Note: SSH support is only available in certain IOS feature sets and platforms
+
+Cisco devices that support SSH can enable it by following the steps  listed here:
+
+ http://cisco.com/en/US/docs/ios/12_2/security/configuration/guide/scfssh.html#wp1001167 ["http://cisco.com/en/US/docs/ios/12_2/security/configuration/guide/scfssh.html#wp1001167"]
+
+To disable telnet access to the device, configure the following on all  your VTY lines:
+
+
+
+Router(config)# line vty 0 4 Router(config-line)# transport input ssh
+
+ Note: Even if SSH is enabled, the IOS device is not protected until telnet access is disabled.
+
+ Configuring a VTY Access Class
+
+ Note: Cisco Catalyst switch platforms that contain any version of the Route Switch Module (RSM), Route Switch Feature Card (RSFC), Multilayer Switch Module (MSM) or Multilayer Switch Feature Card (MSFC) are able to connect to these modules from the switch Supervisor module using the 'session' command. Although the 'session' command uses telnet internally to connect to the MSM/MSFC, it is not restricted by VTY ACLs.
+
+It is possible to limit the exposure of the Cisco device by applying a  VTY access class to permit only known, trusted devices to connect to the device  via telnet, reverse telnet and SSH.
+
+For more information on restricting traffic to VTYs, please  consult:
+
+ http://www.cisco.com/en/US/products/sw/iosswrel/ps1818/products_configuration_example09186a0080204528.shtml ["http://www.cisco.com/en/US/products/sw/iosswrel/ps1818/products_configuration_example09186a0080204528.shtml"]
+
+The following example permits access to VTYs from the 192.168.1.0/24  netblock and the single IP address 172.16.1.2 while denying access from  everywhere else:
+
+
+
+Router(config)# access-list 1 permit 192.168.1.0 0.0.0.255 Router(config)# access-list 1 permit host 172.16.1.2 Router(config)# line vty 0 4 Router(config-line)# access-class 1 in
+
+For devices acting as a terminal server, to apply the access class to  reverse telnet ports, the access-list must be configured for the aux port and  terminal lines as well:
+
+
+Router(config)# line 1 &lt;x&gt;
+Router(config-line)# access-class 1 in
+
+Different Cisco platforms support different numbers of terminal lines.  Check your device's configuration to determine the correct number of terminal  lines for your platform.
+
+ Configuring Access Lists (ACLs)
+
+In addition to configuring a VTY Access Class, it may be desirable to  block all telnet and reverse telnet traffic destined to your network  infrastructure.
+
+Telnet and reverse telnet should be blocked as part of a Transit ACL  controlling all access to the trusted network. Transit ACLs are considered a  network security best practice and should be considered as a long-term addition  to good network security, as well as a workaround for this specific  vulnerability. The white paper entitled "Transit Access Control Lists:  Filtering at Your Edge" presents guidelines and recommended deployment  techniques for transit ACLs:
+
+ http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801afc76.shtml ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801afc76.shtml"]
+
+ Configuring Infrastructure Access Lists (iACLs)
+
+Although it is often difficult to block traffic transiting your  network, it is possible to identify traffic which should never be allowed to  target your infrastructure devices and block that traffic at the border of your  network. Infrastructure ACLs are considered a network security best practice  and should be considered as a long-term addition to good network security as  well as a workaround for this specific vulnerability. The white paper entitled  "Protecting Your Core: Infrastructure Protection Access Control Lists" presents  guidelines and recommended deployment techniques for infrastructure protection  ACLs:
+
+ http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a1a55.shtml"]
+
+ Configuring Receive Access Lists (rACLs)
+
+For distributed platforms, rACLs may be an option starting in Cisco IOS  Software Versions 12.0(21)S2 for the 12000 series GSR and 12.0(24)S for the  7500 series. The receive access lists protect the device from harmful traffic  before the traffic can impact the route processor. Receive path ACLs are  considered a network security best practice, and should be considered as a  long-term addition to good network security, as well as a workaround for this  specific vulnerability. The CPU load is distributed to the line card processors  and helps mitigate load on the main route processor. The white paper entitled  "GSR: Receive Access Control Lists" will help identify and allow legitimate  traffic to your device and deny all unwanted packets:
+
+ http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a0a5e.shtml ["http://www.cisco.com/en/US/tech/tk648/tk361/technologies_white_paper09186a00801a0a5e.shtml"]
+
+ Clearing Hung TCP Connections Using the IOS CLI
+
+The who command will show VTY connections to  the device:
+
+
+Router# who
+    Line       User       Host(s)              Idle       Location    0 con 0                192.168.10.72        00:00:00 *  2 vty 0                idle                 00:00:00 192.168.10.72    3 vty 1                idle                 00:00:04 192.168.10.10
+
+The above shows two connections on VTYs, one from 192.168.10.72, and  one from 192.168.10.10. The * indicates which VTY belongs to the current  session. In the above example, the user issuing the who command was connecting  from 192.168.10.72. To clear the session from 192.168.10.10, which is on VTY 1,  the following command is used:
+
+
+Router# clear tcp line vty 1
+[confirm]  [OK]
+
+ Note: If you are using telnet to connect to the device, accidentally clearing your TCP connection will disconnect your telnet session. If the IOS device has been exploited, it will not be possible to reconnect via telnet. Console access or a device reload will be required to restore service.
+
+ Clearing Hung TCP Connections Using SNMP
+
+It is also possible to detect and clear hung TCP connections using  SNMP. To detect a hung connection, an SNMP read-only community string must be  configured on the device. To reset a connection, an SNMP read-write community  string must be configured on the device.
+
+The following document describes, in detail, the process of detecting  and clearing hung TCP connections with SNMP:
+
+ http://www.cisco.com/en/US/tech/tk648/tk362/technologies_problem_troubleshooting09186a00802b93ef.shtml ["http://www.cisco.com/en/US/tech/tk648/tk362/technologies_problem_troubleshooting09186a00802b93ef.shtml"]</Description>
+      </Remediation>
+    </Remediations>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20040827-telnet</URL>
+        <Description>Cisco Telnet Denial of Service Vulnerability</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

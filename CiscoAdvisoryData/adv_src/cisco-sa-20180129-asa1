@@ -1,0 +1,39 @@
+{
+  "identifier": "cisco-sa-20180129-asa1",
+  "title": "Cisco Adaptive Security Appliance Remote Code Execution and Denial of Service Vulnerability",
+  "version": "2.4",
+  "firstPublished": "2018-01-29T17:00:00.000+0000",
+  "lastPublished": "2018-05-17T17:52:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180129-asa1",
+  "severity": "Critical",
+  "workarounds": "No",
+  "cwe": "CWE-415",
+  "cve": "CVE-2018-0101",
+  "ciscoBugId": "CSCvg35618,CSCvh79732,CSCvh81737,CSCvh81870",
+  "status": "",
+  "summary": "Update from February 5, 2018: After further investigation, Cisco has identified additional attack vectors and features that are affected by this vulnerability. In addition, it was also found that the original fix was incomplete so new fixed code versions are now available. Please ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "45575",
+          "url": "https://www.cisco.com/web/software/286271056/117258/sf-rules-2018-01-31-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Blog",
+      "values": [
+        {
+          "name": "Understanding the Attack Vectors of CVE-2018-0101",
+          "url": "https://blogs.cisco.com/security/cve-2018-0101"
+        }
+      ]
+    }
+  ]
+}

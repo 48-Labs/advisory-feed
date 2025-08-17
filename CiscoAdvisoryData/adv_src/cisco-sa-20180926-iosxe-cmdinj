@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20180926-iosxe-cmdinj",
+  "title": "Cisco IOS XE Software Command Injection Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2018-09-26T16:00:00.000+0000",
+  "lastPublished": "2018-09-26T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180926-iosxe-cmdinj",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-77, CWE-78",
+  "erpPubIds": "ERP-69981",
+  "cve": "CVE-2018-0477,CVE-2018-0481",
+  "ciscoBugId": "CSCvh02919,CSCvh54202",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the CLI parser of Cisco&nbsp;IOS XE Software could allow an authenticated, local attacker to execute commands on the underlying Linux shell of an affected device with root privileges.The vulnerabilities exist because the affected software improperly ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: September 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-69981&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "identifier": "cisco-sa-20080514-cucmdos",
+  "title": "Cisco Unified Communications Manager Denial of Service Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2008-05-14T16:00:00.000+0000",
+  "lastPublished": "2008-05-14T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080514-cucmdos",
+  "severity": "High",
+  "cwe": "CWE-399",
+  "erpPubIds": "15780,15783,15785,15786,15787,15789,15823,cisco-amb-20080514-cucmdos",
+  "cve": "CVE-2008-1742,CVE-2008-1743,CVE-2008-1744,CVE-2008-1745,CVE-2008-1746,CVE-2008-1747,CVE-2008-1748",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Unified Communications Manager, formerly Cisco CallManager, contains multiple denial of service (DoS) vulnerabilities that may cause an interruption in voice services, if exploited. These vulnerabilities were discovered internally by Cisco. The following Cisco Unified ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager SNMP Trap Agent Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15780&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager CTL Provider Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15783&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager CTL Provider Memory Leak Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15785&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Session Initiation Protocol INVITE Message Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15786&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager CAPF Service Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15787&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Session Initiation Protocol Join Message Handling Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15789&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager CallManager Service Session Initiation Protocol Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=15823&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager Denial of Service Vulnerabilities",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080514-cucmdos"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "CUCM Certificate Trust List Memory Consumption DOS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6540&signatureSubId=0&releaseVersion=S469&softwareVersion=6.0"
+        },
+        {
+          "name": "CUCM SIP Stack DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6954&signatureSubId=0&releaseVersion=S509&softwareVersion=6.0"
+        },
+        {
+          "name": "CUCM SIP Stack DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6954&signatureSubId=1&releaseVersion=S509&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

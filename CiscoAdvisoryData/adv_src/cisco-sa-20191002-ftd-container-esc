@@ -1,0 +1,31 @@
+{
+  "identifier": "cisco-sa-20191002-ftd-container-esc",
+  "title": "Cisco Firepower Threat Defense Software Multi-instance Container Escape Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2019-10-02T16:00:00.000+0000",
+  "lastPublished": "2019-10-02T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20191002-ftd-container-esc",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-216",
+  "erpPubIds": "ERP-72541",
+  "cve": "CVE-2019-12674,CVE-2019-12675",
+  "ciscoBugId": "CSCvm14296,CSCvo83194",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the multi-instance feature of Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an authenticated, local attacker to escape the container for their FTD instance and execute commands with root privileges in the host namespace.These ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2019 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-72541&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

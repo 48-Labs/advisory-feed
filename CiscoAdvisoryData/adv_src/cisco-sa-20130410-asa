@@ -1,0 +1,64 @@
+{
+  "identifier": "cisco-sa-20130410-asa",
+  "title": "Multiple Vulnerabilities in Cisco ASA Software",
+  "version": "1.1",
+  "firstPublished": "2013-04-10T16:00:00.000+0000",
+  "lastPublished": "2013-05-23T14:16:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-asa",
+  "severity": "High",
+  "cwe": "CWE-399, CWE",
+  "erpPubIds": "28515,28514,28513,28512,cisco-sa-20130410-fwsm",
+  "cve": "CVE-2013-1149,CVE-2013-1150,CVE-2013-1151,CVE-2013-1152",
+  "ciscoBugId": "CSCub85692,CSCuc72408,CSCuc80080,CSCud16590,CSCud20267",
+  "status": "",
+  "summary": "Cisco ASA Software is affected by the following vulnerabilities:    IKE Version 1 Denial of Service Vulnerability     Crafted URL Denial of Service Vulnerability     Denial of Service During Validation of Crafted Certificates     DNS Inspection ",
+  "totalCount": 2,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Adaptive Security Appliance Software DNS Inspection Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28515&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Software Crafted Certificate Validation Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28514&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Adaptive Security Appliance Software Crafted URL Denial of Service Vulnerability ",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28513&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Firewall Services Module and Cisco Adaptive Security Appliance Software IKE Version 1 Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=28512&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Security Advisory",
+      "values": [
+        {
+          "name": "Multiple Vulnerabilities in Cisco Firewall Services Module Software",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130410-fwsm"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "Cisco ASA DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2033&signatureSubId=0&releaseVersion=S713&softwareVersion=6.0"
+        },
+        {
+          "name": "Cisco ASA Input Parsing Vulnerability",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=2086&signatureSubId=0&releaseVersion=S707&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

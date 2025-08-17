@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-20080625-cucm",
+  "title": "Cisco Unified Communications Manager Denial of Service and Authentication Bypass Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2008-06-25T16:00:00.000+0000",
+  "lastPublished": "2008-06-25T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20080625-cucm",
+  "severity": "High",
+  "cwe": "CWE-200, CWE-399",
+  "erpPubIds": "16125,16136,cisco-amb-20080625-cucm",
+  "cve": "CVE-2008-2061,CVE-2008-2062,CVE-2008-2730",
+  "ciscoBugId": "",
+  "status": "",
+  "summary": "   Cisco Unified Communications Manager (CUCM), formerly Cisco CallManager, contains a denial of service (DoS) vulnerability in the Computer Telephony Integration (CTI) Manager service that may cause an interruption in voice services and an authentication bypass vulnerability in the ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "Vunlerability Alert",
+      "values": [
+        {
+          "name": "Cisco Unified Communications Manager Computer Telephony Integration Manager Service Denial of Service Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16125&typeName=Vulnerability Alert"
+        },
+        {
+          "name": "Cisco Unified Communications Manager Real-Time Information Server Data Collector Service Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewAlert.x?alertId=16136&typeName=Vulnerability Alert"
+        }
+      ]
+    },
+    {
+      "type": "Cisco Applied Mitigation Bulletin",
+      "values": [
+        {
+          "name": "Identifying and Mitigating Exploitation of the Cisco Unified Communications Manager Denial of Service and Authentication Bypass",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20080625-cucm"
+        }
+      ]
+    },
+    {
+      "type": "IPS",
+      "values": [
+        {
+          "name": "CUCM CTI DoS",
+          "url": "http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=6799&signatureSubId=0&releaseVersion=S667&softwareVersion=6.0"
+        }
+      ]
+    }
+  ]
+}

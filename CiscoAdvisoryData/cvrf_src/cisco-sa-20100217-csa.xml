@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+  <cvrf:DocumentTitle>Multiple Vulnerabilities in Cisco Security Agent</cvrf:DocumentTitle>
+  <cvrf:DocumentType>Cisco Security Advisory</cvrf:DocumentType>
+  <cvrf:DocumentPublisher Type="Vendor">
+    <cvrf:ContactDetails>Emergency Support:
++1 877 228 7302 (toll-free within North America)
++1 408 525 6532 (International direct-dial)
+Non-emergency Support:
+Email: psirt@cisco.com
+Support requests that are received via e-mail are typically acknowledged within 48 hours.</cvrf:ContactDetails>
+    <cvrf:IssuingAuthority>Cisco product security incident response is the responsibility of the Cisco Product Security Incident Response Team (PSIRT). The Cisco PSIRT is a dedicated, global team that manages the receipt, investigation, and public reporting of security vulnerability information that is related to Cisco products and networks. The on-call Cisco PSIRT works 24x7 with Cisco customers, independent security researchers, consultants, industry organizations, and other vendors to identify possible security issues with Cisco products and networks.
+More information can be found in Cisco Security Vulnerability Policy available at https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html</cvrf:IssuingAuthority>
+  </cvrf:DocumentPublisher>
+  <cvrf:DocumentTracking>
+    <cvrf:Identification>
+      <cvrf:ID>cisco-sa-20100217-csa</cvrf:ID>
+    </cvrf:Identification>
+    <cvrf:Status>Final</cvrf:Status>
+    <cvrf:Version>1.2</cvrf:Version>
+    <cvrf:RevisionHistory>
+      <cvrf:Revision>
+        <cvrf:Number>1.2</cvrf:Number>
+        <cvrf:Date>2010-02-17T16:00:00</cvrf:Date>
+        <cvrf:Description>CUCM Updated Information</cvrf:Description>
+      </cvrf:Revision>
+    </cvrf:RevisionHistory>
+    <cvrf:InitialReleaseDate>2010-02-17T16:00:00</cvrf:InitialReleaseDate>
+    <cvrf:CurrentReleaseDate>2010-02-17T16:00:00</cvrf:CurrentReleaseDate>
+    <cvrf:Generator>
+      <cvrf:Engine>TVCE</cvrf:Engine>
+    </cvrf:Generator>
+  </cvrf:DocumentTracking>
+  <cvrf:DocumentNotes>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="1">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy[https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="2">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.
+
+A stand-alone copy or paraphrase of the text of this document that omits the distribution URL is an uncontrolled copy, and may lack important information or contain factual errors. The information in this document is intended for end-users of Cisco products.
+</cvrf:Note>
+  </cvrf:DocumentNotes>
+  <cvrf:DocumentReferences>
+    <cvrf:Reference>
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20100217-csa</cvrf:URL>
+      <cvrf:Description>Identifying and Mitigating Exploitation of the Multiple Vulnerabilities in Cisco Security Agent</cvrf:Description>
+    </cvrf:Reference>
+    <cvrf:Reference Type="Self">
+      <cvrf:URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100217-csa</cvrf:URL>
+      <cvrf:Description>Multiple Vulnerabilities in Cisco Security Agent</cvrf:Description>
+    </cvrf:Reference>
+  </cvrf:DocumentReferences>
+  <ProductTree xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/prod">
+    <Branch Name="Cisco" Type="Vendor">
+      <Branch Name="Cisco Intelligent Contact Manager (ICM)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2071">Cisco Intelligent Contact Manager (ICM) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unity" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-2078">Cisco Unity </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Emergency Responder" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4844">Cisco Emergency Responder </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Conference Connection" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4845">Cisco Conference Connection </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Personal Assistant" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-4846">Cisco Personal Assistant </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Internet Service Node (ISN)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5206">Cisco Internet Service Node (ISN) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Contact Center" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5239">Cisco Unified Contact Center </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Secure Access Control Server Solution Engine (ACSE)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5622">Cisco Secure Access Control Server Solution Engine (ACSE) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Security Agent " Type="Product Name">
+        <FullProductName ProductID="CVRFPID-5744">Cisco Security Agent  </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified MeetingPlace" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-7731">Cisco Unified MeetingPlace </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Customer Voice Portal (CVP)" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-8027">Cisco Unified Customer Voice Portal (CVP) </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified IP IVR" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-8028">Cisco Unified IP IVR </FullProductName>
+      </Branch>
+      <Branch Name="Cisco IP Queue Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-8044">Cisco IP Queue Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unity Bridge" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-73600">Cisco Unity Bridge </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unity Connection" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-73608">Cisco Unity Connection </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Security Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-79783">Cisco Security Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Communications Manager" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-88444">Cisco Unified Communications Manager </FullProductName>
+      </Branch>
+      <Branch Name="Cisco Unified Contact Center Express" Type="Product Name">
+        <FullProductName ProductID="CVRFPID-92631">Cisco Unified Contact Center Express </FullProductName>
+      </Branch>
+    </Branch>
+  </ProductTree>
+  <Vulnerability Ordinal="1" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Security Agent Remote Directory Traversal Vulnerability</Title>
+    <CVE>CVE-2010-0146</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5744</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>6.8</BaseScoreV2>
+        <TemporalScoreV2>5.9</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:N/A:N/E:H/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100217-csa</URL>
+        <Description>Multiple Vulnerabilities in Cisco Security Agent</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="2" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Security Agent Remote SQL Injection Vulnerability</Title>
+    <CVE>CVE-2010-0147</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-5744</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>9.0</BaseScoreV2>
+        <TemporalScoreV2>7.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:S/C:C/I:C/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100217-csa</URL>
+        <Description>Multiple Vulnerabilities in Cisco Security Agent</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+  <Vulnerability Ordinal="3" xmlns="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/vuln">
+    <Title>Cisco Security Agent Remote Denial of Service Vulnerability</Title>
+    <CVE>CVE-2010-0148</CVE>
+    <ProductStatuses>
+      <Status Type="Known Affected">
+        <ProductID>CVRFPID-88444</ProductID>
+        <ProductID>CVRFPID-4845</ProductID>
+        <ProductID>CVRFPID-4844</ProductID>
+        <ProductID>CVRFPID-2071</ProductID>
+        <ProductID>CVRFPID-5239</ProductID>
+        <ProductID>CVRFPID-8028</ProductID>
+        <ProductID>CVRFPID-8044</ProductID>
+        <ProductID>CVRFPID-4846</ProductID>
+        <ProductID>CVRFPID-5622</ProductID>
+        <ProductID>CVRFPID-5744</ProductID>
+        <ProductID>CVRFPID-79783</ProductID>
+        <ProductID>CVRFPID-92631</ProductID>
+        <ProductID>CVRFPID-8027</ProductID>
+        <ProductID>CVRFPID-7731</ProductID>
+        <ProductID>CVRFPID-2078</ProductID>
+        <ProductID>CVRFPID-73600</ProductID>
+        <ProductID>CVRFPID-73608</ProductID>
+        <ProductID>CVRFPID-5206</ProductID>
+      </Status>
+    </ProductStatuses>
+    <CVSSScoreSets>
+      <ScoreSetV2>
+        <BaseScoreV2>7.8</BaseScoreV2>
+        <TemporalScoreV2>6.4</TemporalScoreV2>
+        <VectorV2>AV:N/AC:L/Au:N/C:N/I:N/A:C/E:F/RL:OF/RC:C/CDP:N/TD:N/CR:ND/IR:ND/AR:ND</VectorV2>
+      </ScoreSetV2>
+    </CVSSScoreSets>
+    <References>
+      <Reference Type="Self">
+        <URL>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20100217-csa</URL>
+        <Description>Multiple Vulnerabilities in Cisco Security Agent</Description>
+      </Reference>
+    </References>
+  </Vulnerability>
+</cvrf:cvrfdoc>

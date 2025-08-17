@@ -1,0 +1,40 @@
+{
+  "identifier": "cisco-sa-fmc-xss-dhJxQYZs",
+  "title": "Cisco Secure Firewall Management Center Software Cross-Site Scripting Vulnerabilities",
+  "version": "1.0",
+  "firstPublished": "2024-10-23T16:00:00.000+0000",
+  "lastPublished": "2024-10-23T16:00:00.000+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-xss-dhJxQYZs",
+  "severity": "Medium",
+  "workarounds": "No",
+  "cwe": "CWE-79",
+  "erpPubIds": "ERP-75300",
+  "cve": "CVE-2024-20264,CVE-2024-20269,CVE-2024-20273,CVE-2024-20298,CVE-2024-20300,CVE-2024-20364,CVE-2024-20372,CVE-2024-20386,CVE-2024-20403,CVE-2024-20409,CVE-2024-20410,CVE-2024-20415",
+  "ciscoBugId": "CSCwf61443,CSCwh69787,CSCwh70866,CSCwi23477,CSCwi32423,CSCwi61058,CSCwi78593,CSCwi78594,CSCwi85823,CSCwj09456,CSCwj11119,CSCwj19632,CSCwj77284",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the web-based management interface of Cisco Secure Firewall Management Center (FMC) Software, formerly Firepower Management Center Software, could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface ",
+  "totalCount": 5039,
+  "relatedResource": [
+    {
+      "type": "White Paper",
+      "values": [
+        {
+          "name": "Cross-Site Scripting",
+          "url": "https://owasp.org/www-community/attacks/xss/"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: October 2024 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-75300&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "identifier": "cisco-sa-asaftd-mgcp-SUqB8VKH",
+  "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Media Gateway Control Protocol Denial of Service Vulnerabilities",
+  "version": "1.3",
+  "firstPublished": "2020-05-06T16:00:00.000+0000",
+  "lastPublished": "2020-06-02T21:04:05.750+0000",
+  "workflowStatus": null,
+  "id": 1,
+  "name": "Cisco Security Advisory",
+  "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-mgcp-SUqB8VKH",
+  "severity": "High",
+  "workarounds": "No",
+  "cwe": "CWE-400",
+  "erpPubIds": "ERP-73830",
+  "cve": "CVE-2020-3254",
+  "ciscoBugId": "CSCvp16945,CSCvp16949",
+  "status": "",
+  "summary": "Multiple vulnerabilities in the Media Gateway Control Protocol (MGCP) inspection feature of Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected ",
+  "totalCount": 1,
+  "relatedResource": [
+    {
+      "type": "Snort",
+      "values": [
+        {
+          "name": "53868",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-05-07-new.html"
+        },
+        {
+          "name": "53869",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-05-07-new.html"
+        },
+        {
+          "name": "53870",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-05-07-new.html"
+        },
+        {
+          "name": "53871",
+          "url": "https://www.cisco.com/web/software/286321931/143310/sf-rules-2020-05-07-new.html"
+        }
+      ]
+    },
+    {
+      "type": "Event Response Page",
+      "values": [
+        {
+          "name": "Cisco Event Response: May 2020 Cisco ASA, FMC, and FTD Software Security Advisory Bundled Publication",
+          "url": "https://sec.cloudapps.cisco.com/security/center/viewErp.x?alertId=ERP-73830&typeName=Event Response Page"
+        }
+      ]
+    }
+  ]
+}
