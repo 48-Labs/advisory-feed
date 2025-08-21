@@ -17,7 +17,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
       <cvrf:ID>cisco-sa-20180328-smi2</cvrf:ID>
     </cvrf:Identification>
     <cvrf:Status>Final</cvrf:Status>
-    <cvrf:Version>1.8</cvrf:Version>
+    <cvrf:Version>1.9</cvrf:Version>
     <cvrf:RevisionHistory>
       <cvrf:Revision>
         <cvrf:Number>1.0</cvrf:Number>
@@ -64,16 +64,23 @@ More information can be found in Cisco Security Vulnerability Policy available a
         <cvrf:Date>2022-12-15T22:19:55</cvrf:Date>
         <cvrf:Description>Updated exploitation information.</cvrf:Description>
       </cvrf:Revision>
+      <cvrf:Revision>
+        <cvrf:Number>1.9</cvrf:Number>
+        <cvrf:Date>2025-08-20T14:26:26</cvrf:Date>
+        <cvrf:Description>Updated information about continued exploitation activity.</cvrf:Description>
+      </cvrf:Revision>
     </cvrf:RevisionHistory>
     <cvrf:InitialReleaseDate>2018-03-28T16:00:00</cvrf:InitialReleaseDate>
-    <cvrf:CurrentReleaseDate>2022-12-15T22:19:55</cvrf:CurrentReleaseDate>
+    <cvrf:CurrentReleaseDate>2025-08-20T14:26:26</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
-      <cvrf:Date>2023-12-15T22:47:48.8096343Z</cvrf:Date>
+      <cvrf:Date>2025-08-20T14:26:28.298152Z</cvrf:Date>
     </cvrf:Generator>
   </cvrf:DocumentTracking>
   <cvrf:DocumentNotes>
-    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">A vulnerability in the Smart Install feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition, or to execute arbitrary code on an affected device.
+    <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">Update August 20, 2025: Cisco is aware of continued exploitation activity of the vulnerability that is described in this advisory and strongly recommends that customers assess their systems and upgrade to a fixed software release as soon as possible.
+
+A vulnerability in the Smart Install feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition, or to execute arbitrary code on an affected device.
 
 The vulnerability is due to improper validation of packet data. An attacker could exploit this vulnerability by sending a crafted Smart Install message to an affected device on TCP port 4786. A successful exploit could allow the attacker to cause a buffer overflow on the affected device, which could have the following impacts:
 
@@ -182,7 +189,7 @@ To determine whether a release is affected by any published Cisco Security Advis
 
 
 For a mapping of Cisco IOS XE Software releases to Cisco IOS Software releases, refer to the Cisco IOS XE 2 Release Notes ["https://www.cisco.com/c/en/us/td/docs/ios/ios_xe/2/release/notes/rnasr21/rnasr21_gen.html#wp3000032"], Cisco IOS XE 3S Release Notes ["https://www.cisco.com/c/en/us/td/docs/ios/ios_xe/3/release/notes/asr1k_rn_3s_rel_notes/asr1k_rn_3s_sys_req.html#wp3069754"], or Cisco IOS XE 3SG Release Notes ["https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/release/note/OL_24726.html#pgfId-2570252"], depending on the Cisco IOS XE Software release.</cvrf:Note>
-    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
+    <cvrf:Note Title="Vulnerability Policy" Type="General" Ordinal="7">To learn about Cisco security vulnerability disclosure policies and publications, see the Security Vulnerability Policy ["http://www.cisco.com/web/about/security/psirt/security_vulnerability_policy.html"]. This document also contains instructions for obtaining fixed software and receiving security vulnerability information from Cisco.</cvrf:Note>
     <cvrf:Note Title="Exploitation and Public Announcements" Type="General" Ordinal="8">In November 2021, the Cisco Product Security Incident Response Team (PSIRT) became aware of additional attempted exploitation of this vulnerability in the wild. Cisco continues to strongly recommend that customers upgrade to a fixed software release to remediate this vulnerability.</cvrf:Note>
     <cvrf:Note Title="Source" Type="General" Ordinal="9">Cisco would like to thank George Nosenko from Embedi for reporting this vulnerability via GeekPwn.</cvrf:Note>
     <cvrf:Note Title="Legal Disclaimer" Type="Legal Disclaimer" Ordinal="10">THIS DOCUMENT IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION ON THE DOCUMENT OR MATERIALS LINKED FROM THE DOCUMENT IS AT YOUR OWN RISK. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.

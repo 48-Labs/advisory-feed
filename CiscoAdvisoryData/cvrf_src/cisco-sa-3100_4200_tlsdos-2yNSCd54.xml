@@ -29,7 +29,7 @@ More information can be found in Cisco Security Vulnerability Policy available a
     <cvrf:CurrentReleaseDate>2025-08-14T16:00:00</cvrf:CurrentReleaseDate>
     <cvrf:Generator>
       <cvrf:Engine>TVCE</cvrf:Engine>
-      <cvrf:Date>2025-08-14T15:55:07.3790791Z</cvrf:Date>
+      <cvrf:Date>2025-08-20T21:10:39.6693316Z</cvrf:Date>
     </cvrf:Generator>
   </cvrf:DocumentTracking>
   <cvrf:DocumentNotes>
@@ -99,11 +99,11 @@ The Cisco Support and Downloads page ["https://www.cisco.com/c/en/us/support/ind
 When considering software upgrades ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#fixes"], customers are advised to regularly consult the advisories for Cisco products, which are available from the Cisco Security Advisories page ["https://www.cisco.com/go/psirt"], to determine exposure and a complete upgrade solution.
 
 In all cases, customers should ensure that the devices to be upgraded contain sufficient memory and confirm that current hardware and software configurations will continue to be supported properly by the new release. If the information is not clear, customers are advised to contact the Cisco Technical Assistance Center (TAC) or their contracted maintenance providers.
-Customers Without Service Contracts
+  Customers Without Service Contracts
 Customers who purchase directly from Cisco but do not hold a Cisco service contract and customers who make purchases through third-party vendors but are unsuccessful in obtaining fixed software through their point of sale should obtain upgrades by contacting the Cisco TAC: https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html ["https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"]
 
 Customers should have the product serial number available and be prepared to provide the URL of this advisory as evidence of entitlement to a free upgrade.
-Cisco Secure Firewall ASA, Secure FMC, and Secure FTD Software
+        Cisco Secure Firewall ASA, Secure FMC, and Secure FTD Software
 To help customers determine their exposure to vulnerabilities in Cisco Secure Firewall ASA, Secure FMC, and Secure FTD Software, Cisco provides the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"]. This tool identifies any Cisco security advisories that impact a specific software release and the earliest release that fixes the vulnerabilities that are described in each advisory (“First Fixed”). If applicable, the tool also returns the earliest release that fixes all the vulnerabilities that are described in all the advisories that the Software Checker identifies (“Combined First Fixed”).
 
 To use the tool, go to the Cisco Software Checker ["https://sec.cloudapps.cisco.com/security/center/softwarechecker.x"] page and follow the instructions. Alternatively, use the following form to search for vulnerabilities that affect a specific software release. To use the form, follow these steps:
@@ -111,16 +111,15 @@ To use the tool, go to the Cisco Software Checker ["https://sec.cloudapps.cisco.
 Choose which advisories the tool will search—all advisories, only advisories with a Critical or High Security Impact Rating (SIR) ["https://sec.cloudapps.cisco.com/security/center/resources/security_vulnerability_policy.html#asr"], or only this advisory.
 Choose the appropriate software.
 Choose the appropriate platform.
-Enter a release number—for example, 9.16.2.11 for Cisco Secure Firewall ASA Software or 6.6.7 for Cisco Secure FTD Software.
+Enter a release number—for example, 9.20.3.4 for Cisco Secure Firewall ASA Software or 7.4.2 for Cisco Secure FTD Software.
 Click Check.
-  Only this advisoryAll Critical and High advisoriesAll advisoriesCisco ASA SoftwareCisco FMC SoftwareCisco FTD SoftwareAny Platform3000 Series Industrial Security Appliances (ISA)ASA 5500-X Series FirewallsASA Service ModuleAdaptive Security Virtual Appliance (ASAv)Firepower 1000 SeriesFirepower 2100 SeriesFirepower 4100 SeriesFirepower 9000 SeriesFirepower NGFW VirtualSecure Firewall 3100 SeriesFirepower Management Center Appliances
+      Only this advisory  All Critical and High advisories  All advisories    Cisco ASA Software  Cisco FMC Software  Cisco FTD Software    Any Platform  3000 Series Industrial Security Appliances (ISA)  ASA 5500-X Series Firewalls  ASA Service Module  Adaptive Security Virtual Appliance (ASAv)  Firepower 1000 Series  Firepower 2100 Series  Firepower 4100 Series  Firepower 9000 Series  Firepower NGFW Virtual  Secure Firewall 1200 Series  Secure Firewall 3100 Series  Secure Firewall 4200 Series  Firepower Management Center Appliances
 
 
 
 
 For instructions on upgrading a Cisco Secure FTD device, see the appropriate Cisco Secure FMC upgrade guide ["https://www.cisco.com/c/en/us/support/security/defense-center/products-installation-guides-list.html"].
-
- Additional Resources
+  Additional Resources
 For help determining the best Cisco Secure Firewall ASA, Secure FMC, or Secure FTD Software release, see the following Recommended Releases documents. If a security advisory recommends a later release, Cisco recommends following the advisory guidance.
 
 Cisco Secure Firewall ASA Compatibility ["https://www.cisco.com/c/en/us/td/docs/security/asa/compatibility/asamatrx.html"]
